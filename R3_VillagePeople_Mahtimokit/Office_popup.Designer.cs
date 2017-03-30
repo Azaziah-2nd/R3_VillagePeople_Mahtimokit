@@ -153,7 +153,6 @@
             this.btn_Office_Cancel.TabIndex = 54;
             this.btn_Office_Cancel.Text = "Peruuta";
             this.btn_Office_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click);
             // 
             // lbl_Office_Description
             // 
@@ -196,7 +195,6 @@
             this.Controls.Add(this.txt_Office_Description);
             this.Controls.Add(this.txt_Office_Name);
             this.Name = "Office_popup";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Office_popup";
             this.Load += new System.EventHandler(this.Office_popup_Load);
             this.ResumeLayout(false);
