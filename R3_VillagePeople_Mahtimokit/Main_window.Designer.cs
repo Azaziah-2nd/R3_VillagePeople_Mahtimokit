@@ -133,6 +133,15 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btn_Remove_All_Files = new System.Windows.Forms.Button();
+            this.lbl_Remove_All_Files = new System.Windows.Forms.Label();
+            this.cbo_Default_Office_select = new System.Windows.Forms.ComboBox();
+            this.lbl_Default_Office = new System.Windows.Forms.Label();
+            this.lbl_Font_Example = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lbl_System_Font = new System.Windows.Forms.Label();
+            this.cbo_Language_Select = new System.Windows.Forms.ComboBox();
+            this.lbl_System_Language = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tab_Menu.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -147,6 +156,7 @@
             this.grb_Cottages.SuspendLayout();
             this.grb_Customer_Management.SuspendLayout();
             this.grb_Office.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1017,6 +1027,15 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage4.Controls.Add(this.btn_Remove_All_Files);
+            this.tabPage4.Controls.Add(this.lbl_Remove_All_Files);
+            this.tabPage4.Controls.Add(this.cbo_Default_Office_select);
+            this.tabPage4.Controls.Add(this.lbl_Default_Office);
+            this.tabPage4.Controls.Add(this.lbl_Font_Example);
+            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.lbl_System_Font);
+            this.tabPage4.Controls.Add(this.cbo_Language_Select);
+            this.tabPage4.Controls.Add(this.lbl_System_Language);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1034,6 +1053,102 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Ohjeet";
             // 
+            // btn_Remove_All_Files
+            // 
+            this.btn_Remove_All_Files.Location = new System.Drawing.Point(442, 608);
+            this.btn_Remove_All_Files.Name = "btn_Remove_All_Files";
+            this.btn_Remove_All_Files.Size = new System.Drawing.Size(94, 27);
+            this.btn_Remove_All_Files.TabIndex = 17;
+            this.btn_Remove_All_Files.Text = "POISTA";
+            this.btn_Remove_All_Files.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Remove_All_Files
+            // 
+            this.lbl_Remove_All_Files.AutoSize = true;
+            this.lbl_Remove_All_Files.Location = new System.Drawing.Point(411, 585);
+            this.lbl_Remove_All_Files.Name = "lbl_Remove_All_Files";
+            this.lbl_Remove_All_Files.Size = new System.Drawing.Size(156, 20);
+            this.lbl_Remove_All_Files.TabIndex = 16;
+            this.lbl_Remove_All_Files.Text = "Poista KAIKKI Tiedot";
+            // 
+            // cbo_Default_Office_select
+            // 
+            this.cbo_Default_Office_select.FormattingEnabled = true;
+            this.cbo_Default_Office_select.Location = new System.Drawing.Point(524, 63);
+            this.cbo_Default_Office_select.Name = "cbo_Default_Office_select";
+            this.cbo_Default_Office_select.Size = new System.Drawing.Size(178, 28);
+            this.cbo_Default_Office_select.TabIndex = 15;
+            // 
+            // lbl_Default_Office
+            // 
+            this.lbl_Default_Office.AutoSize = true;
+            this.lbl_Default_Office.Location = new System.Drawing.Point(389, 66);
+            this.lbl_Default_Office.Name = "lbl_Default_Office";
+            this.lbl_Default_Office.Size = new System.Drawing.Size(122, 20);
+            this.lbl_Default_Office.TabIndex = 14;
+            this.lbl_Default_Office.Text = "Oletustoimipiste";
+            // 
+            // lbl_Font_Example
+            // 
+            this.lbl_Font_Example.AutoSize = true;
+            this.lbl_Font_Example.Location = new System.Drawing.Point(81, 186);
+            this.lbl_Font_Example.Name = "lbl_Font_Example";
+            this.lbl_Font_Example.Size = new System.Drawing.Size(77, 20);
+            this.lbl_Font_Example.TabIndex = 13;
+            this.lbl_Font_Example.Text = "Esimerkki";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26"});
+            this.comboBox1.Location = new System.Drawing.Point(142, 115);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(64, 28);
+            this.comboBox1.TabIndex = 12;
+            this.comboBox1.Text = "12";
+            // 
+            // lbl_System_Font
+            // 
+            this.lbl_System_Font.AutoSize = true;
+            this.lbl_System_Font.Location = new System.Drawing.Point(7, 118);
+            this.lbl_System_Font.Name = "lbl_System_Font";
+            this.lbl_System_Font.Size = new System.Drawing.Size(84, 20);
+            this.lbl_System_Font.TabIndex = 11;
+            this.lbl_System_Font.Text = "Fonttikoko";
+            // 
+            // cbo_Language_Select
+            // 
+            this.cbo_Language_Select.FormattingEnabled = true;
+            this.cbo_Language_Select.Items.AddRange(new object[] {
+            "Suomi",
+            "English (TBA)"});
+            this.cbo_Language_Select.Location = new System.Drawing.Point(85, 58);
+            this.cbo_Language_Select.Name = "cbo_Language_Select";
+            this.cbo_Language_Select.Size = new System.Drawing.Size(121, 28);
+            this.cbo_Language_Select.TabIndex = 10;
+            this.cbo_Language_Select.Text = "Suomi";
+            // 
+            // lbl_System_Language
+            // 
+            this.lbl_System_Language.AutoSize = true;
+            this.lbl_System_Language.Location = new System.Drawing.Point(7, 61);
+            this.lbl_System_Language.Name = "lbl_System_Language";
+            this.lbl_System_Language.Size = new System.Drawing.Size(37, 20);
+            this.lbl_System_Language.TabIndex = 9;
+            this.lbl_System_Language.Text = "Kieli";
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(23, 25);
@@ -1108,6 +1223,8 @@
             this.grb_Customer_Management.PerformLayout();
             this.grb_Office.ResumeLayout(false);
             this.grb_Office.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1195,6 +1312,16 @@
         private System.Windows.Forms.Button btn_Office_add;
         private System.Windows.Forms.ComboBox cbo_Office_select;
         private System.Windows.Forms.Label lbl_Office;
+        private System.Windows.Forms.Button btn_Remove_All_Files;
+        private System.Windows.Forms.Label lbl_Remove_All_Files;
+        private System.Windows.Forms.ComboBox cbo_Default_Office_select;
+        private System.Windows.Forms.Label lbl_Default_Office;
+        private System.Windows.Forms.Label lbl_Font_Example;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbl_System_Font;
+        private System.Windows.Forms.ComboBox cbo_Language_Select;
+        private System.Windows.Forms.Label lbl_System_Language;
         private System.Windows.Forms.TreeView treeView1;
+
     }
 }
