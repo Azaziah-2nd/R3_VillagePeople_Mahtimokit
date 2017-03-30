@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class Customer_Edit : Form
+    public partial class Services_popup : Form
     {
-        public Customer_Edit()
+        public Services_popup()
         {
             InitializeComponent();
-        }
-
-        private void Asiakkaat_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
