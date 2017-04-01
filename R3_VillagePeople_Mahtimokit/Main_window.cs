@@ -114,5 +114,10 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+
+        private void tbl_Order_2nd_Col_Cottage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
