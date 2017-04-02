@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_window));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode85,
+            treeNode86,
+            treeNode87,
+            treeNode88,
+            treeNode89,
+            treeNode90});
+            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode92,
+            treeNode93,
+            treeNode94,
+            treeNode95});
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Asetukset");
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
             this.tbl_Order_base = new System.Windows.Forms.TableLayoutPanel();
@@ -104,6 +104,45 @@
             this.btn_Order_Summary_Next_Page = new System.Windows.Forms.Button();
             this.btn_Order_Summary_Delete_From_List = new System.Windows.Forms.Button();
             this.tab_Edit = new System.Windows.Forms.TabPage();
+            this.tbl_Edit_base = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Edit_1st_Col_Customers = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Customer_Management = new System.Windows.Forms.Label();
+            this.lsv_Customers_All = new System.Windows.Forms.ListView();
+            this.tbl_Edit_1st_Col_Customers_Search = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Customer_Search = new System.Windows.Forms.Button();
+            this.txt_Customer_Search = new System.Windows.Forms.TextBox();
+            this.tbl_Edit_1st_Col_Customers_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Customer_Delete = new System.Windows.Forms.Button();
+            this.btn_Customer_Edit = new System.Windows.Forms.Button();
+            this.btn_Customer_Add = new System.Windows.Forms.Button();
+            this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Office = new System.Windows.Forms.Label();
+            this.cbo_Office_Select = new System.Windows.Forms.ComboBox();
+            this.tbl_Edit_2nd_Col_Offices_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Office_Delete = new System.Windows.Forms.Button();
+            this.btn_Office_Edit = new System.Windows.Forms.Button();
+            this.btn_Office_Add = new System.Windows.Forms.Button();
+            this.tbl_Edit_2nd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Services = new System.Windows.Forms.Label();
+            this.lsv_Services_All = new System.Windows.Forms.ListView();
+            this.tbl_Edit_2nd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Services_Search = new System.Windows.Forms.Button();
+            this.txt_Services_Search = new System.Windows.Forms.TextBox();
+            this.tbl_Edit_2nd_Col_Services_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Services_Delete = new System.Windows.Forms.Button();
+            this.btn_Services_Edit = new System.Windows.Forms.Button();
+            this.btn_Services_Add = new System.Windows.Forms.Button();
+            this.tbl_Edit_3rd_Col_Cottages = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Cottages = new System.Windows.Forms.Label();
+            this.lsv_Cottages_All = new System.Windows.Forms.ListView();
+            this.tbl_Edit_3rd_Col_Cottages_Search = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Cottages_Search = new System.Windows.Forms.Button();
+            this.txt_Cottages_Search = new System.Windows.Forms.TextBox();
+            this.tbl_Edit_3rd_Col_Cottages_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Cottages_Delete = new System.Windows.Forms.Button();
+            this.btn_Cottages_Edit = new System.Windows.Forms.Button();
+            this.btn_Cottages_Add = new System.Windows.Forms.Button();
             this.tab_History = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -137,45 +176,6 @@
             this.lbl_System_Language = new System.Windows.Forms.Label();
             this.tab_Manual = new System.Windows.Forms.TabPage();
             this.trv_Manual = new System.Windows.Forms.TreeView();
-            this.tbl_Edit_base = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Edit_1st_Col_Customers = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Customer_Management = new System.Windows.Forms.Label();
-            this.lsv_Customers_All = new System.Windows.Forms.ListView();
-            this.tbl_Edit_1st_Col_Customers_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_Customer_Search = new System.Windows.Forms.TextBox();
-            this.btn_Customer_Search = new System.Windows.Forms.Button();
-            this.tbl_Edit_1st_Col_Customers_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Customer_Add = new System.Windows.Forms.Button();
-            this.btn_Customer_Edit = new System.Windows.Forms.Button();
-            this.btn_Customer_Delete = new System.Windows.Forms.Button();
-            this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Office = new System.Windows.Forms.Label();
-            this.cbo_Office_Select = new System.Windows.Forms.ComboBox();
-            this.tbl_Edit_2nd_Col_Offices_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Office_Add = new System.Windows.Forms.Button();
-            this.btn_Office_Edit = new System.Windows.Forms.Button();
-            this.btn_Office_Delete = new System.Windows.Forms.Button();
-            this.tbl_Edit_2nd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Services = new System.Windows.Forms.Label();
-            this.lsv_Services_All = new System.Windows.Forms.ListView();
-            this.tbl_Edit_2nd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_Services_Search = new System.Windows.Forms.TextBox();
-            this.btn_Services_Search = new System.Windows.Forms.Button();
-            this.tbl_Edit_2nd_Col_Services_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Services_Add = new System.Windows.Forms.Button();
-            this.btn_Services_Edit = new System.Windows.Forms.Button();
-            this.btn_Services_Delete = new System.Windows.Forms.Button();
-            this.tbl_Edit_3rd_Col_Cottages = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Cottages = new System.Windows.Forms.Label();
-            this.lsv_Cottages_All = new System.Windows.Forms.ListView();
-            this.tbl_Edit_3rd_Col_Cottages_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Cottages_Search = new System.Windows.Forms.Button();
-            this.txt_Cottages_Search = new System.Windows.Forms.TextBox();
-            this.tbl_Edit_3rd_Col_Cottages_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Cottages_Delete = new System.Windows.Forms.Button();
-            this.btn_Cottages_Edit = new System.Windows.Forms.Button();
-            this.btn_Cottages_Add = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -192,12 +192,6 @@
             this.tbl_Order_4th_Col_Summary_Cottage_Services.SuspendLayout();
             this.tbl_Order_Summary_Buttons.SuspendLayout();
             this.tab_Edit.SuspendLayout();
-            this.tab_History.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tab_Settings.SuspendLayout();
-            this.tab_Manual.SuspendLayout();
             this.tbl_Edit_base.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Search.SuspendLayout();
@@ -211,6 +205,12 @@
             this.tbl_Edit_3rd_Col_Cottages.SuspendLayout();
             this.tbl_Edit_3rd_Col_Cottages_Search.SuspendLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.SuspendLayout();
+            this.tab_History.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tab_Settings.SuspendLayout();
+            this.tab_Manual.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -242,7 +242,7 @@
             // 
             // tbl_Order_base
             // 
-            this.tbl_Order_base.BackColor = System.Drawing.Color.Maroon;
+            this.tbl_Order_base.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tbl_Order_base.ColumnCount = 6;
             this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
             this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
@@ -915,9 +915,571 @@
             this.tab_Edit.TabIndex = 1;
             this.tab_Edit.Text = "Tietojen Hallinta";
             // 
+            // tbl_Edit_base
+            // 
+            this.tbl_Edit_base.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.tbl_Edit_base.ColumnCount = 5;
+            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_1st_Col_Customers, 1, 1);
+            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_2nd_Col_Offices_Services, 2, 1);
+            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_3rd_Col_Cottages, 3, 1);
+            this.tbl_Edit_base.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbl_Edit_base.Location = new System.Drawing.Point(3, 3);
+            this.tbl_Edit_base.Name = "tbl_Edit_base";
+            this.tbl_Edit_base.RowCount = 3;
+            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_base.Size = new System.Drawing.Size(970, 642);
+            this.tbl_Edit_base.TabIndex = 0;
+            // 
+            // tbl_Edit_1st_Col_Customers
+            // 
+            this.tbl_Edit_1st_Col_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_1st_Col_Customers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_Edit_1st_Col_Customers.ColumnCount = 3;
+            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lbl_Customer_Management, 1, 1);
+            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lsv_Customers_All, 1, 2);
+            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Search, 1, 3);
+            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Buttons, 1, 4);
+            this.tbl_Edit_1st_Col_Customers.Location = new System.Drawing.Point(22, 15);
+            this.tbl_Edit_1st_Col_Customers.Name = "tbl_Edit_1st_Col_Customers";
+            this.tbl_Edit_1st_Col_Customers.RowCount = 6;
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_1st_Col_Customers.Size = new System.Drawing.Size(304, 610);
+            this.tbl_Edit_1st_Col_Customers.TabIndex = 0;
+            // 
+            // lbl_Customer_Management
+            // 
+            this.lbl_Customer_Management.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Customer_Management.AutoSize = true;
+            this.lbl_Customer_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Customer_Management.Location = new System.Drawing.Point(9, 15);
+            this.lbl_Customer_Management.Name = "lbl_Customer_Management";
+            this.lbl_Customer_Management.Size = new System.Drawing.Size(169, 20);
+            this.lbl_Customer_Management.TabIndex = 78;
+            this.lbl_Customer_Management.Text = "Asiakkaiden hallinta";
+            // 
+            // lsv_Customers_All
+            // 
+            this.lsv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Customers_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Customers_All.Location = new System.Drawing.Point(9, 38);
+            this.lsv_Customers_All.Name = "lsv_Customers_All";
+            this.lsv_Customers_All.Size = new System.Drawing.Size(285, 444);
+            this.lsv_Customers_All.TabIndex = 100;
+            this.lsv_Customers_All.UseCompatibleStateImageBehavior = false;
+            // 
+            // tbl_Edit_1st_Col_Customers_Search
+            // 
+            this.tbl_Edit_1st_Col_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_1st_Col_Customers_Search.ColumnCount = 2;
+            this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.btn_Customer_Search, 0, 0);
+            this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.txt_Customer_Search, 0, 0);
+            this.tbl_Edit_1st_Col_Customers_Search.Location = new System.Drawing.Point(9, 488);
+            this.tbl_Edit_1st_Col_Customers_Search.Name = "tbl_Edit_1st_Col_Customers_Search";
+            this.tbl_Edit_1st_Col_Customers_Search.RowCount = 1;
+            this.tbl_Edit_1st_Col_Customers_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_1st_Col_Customers_Search.Size = new System.Drawing.Size(285, 40);
+            this.tbl_Edit_1st_Col_Customers_Search.TabIndex = 101;
+            // 
+            // btn_Customer_Search
+            // 
+            this.btn_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Customer_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Search.BackgroundImage")));
+            this.btn_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Search.Location = new System.Drawing.Point(250, 3);
+            this.btn_Customer_Search.Name = "btn_Customer_Search";
+            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Customer_Search.TabIndex = 102;
+            this.btn_Customer_Search.UseVisualStyleBackColor = true;
+            // 
+            // txt_Customer_Search
+            // 
+            this.txt_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Customer_Search.Location = new System.Drawing.Point(3, 3);
+            this.txt_Customer_Search.Name = "txt_Customer_Search";
+            this.txt_Customer_Search.Size = new System.Drawing.Size(239, 26);
+            this.txt_Customer_Search.TabIndex = 101;
+            // 
+            // tbl_Edit_1st_Col_Customers_Buttons
+            // 
+            this.tbl_Edit_1st_Col_Customers_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnCount = 3;
+            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Delete, 0, 0);
+            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Edit, 0, 0);
+            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Add, 0, 0);
+            this.tbl_Edit_1st_Col_Customers_Buttons.Location = new System.Drawing.Point(9, 534);
+            this.tbl_Edit_1st_Col_Customers_Buttons.Name = "tbl_Edit_1st_Col_Customers_Buttons";
+            this.tbl_Edit_1st_Col_Customers_Buttons.RowCount = 1;
+            this.tbl_Edit_1st_Col_Customers_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_1st_Col_Customers_Buttons.Size = new System.Drawing.Size(285, 58);
+            this.tbl_Edit_1st_Col_Customers_Buttons.TabIndex = 102;
+            // 
+            // btn_Customer_Delete
+            // 
+            this.btn_Customer_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Customer_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Delete.BackgroundImage")));
+            this.btn_Customer_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Delete.Location = new System.Drawing.Point(234, 7);
+            this.btn_Customer_Delete.Name = "btn_Customer_Delete";
+            this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Delete.TabIndex = 110;
+            this.btn_Customer_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_Customer_Edit
+            // 
+            this.btn_Customer_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Customer_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Edit.BackgroundImage")));
+            this.btn_Customer_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Edit.Location = new System.Drawing.Point(118, 7);
+            this.btn_Customer_Edit.Name = "btn_Customer_Edit";
+            this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Edit.TabIndex = 109;
+            this.btn_Customer_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Customer_Add
+            // 
+            this.btn_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Customer_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Add.BackgroundImage")));
+            this.btn_Customer_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Add.Location = new System.Drawing.Point(3, 7);
+            this.btn_Customer_Add.Name = "btn_Customer_Add";
+            this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Add.TabIndex = 108;
+            this.btn_Customer_Add.UseVisualStyleBackColor = true;
+            // 
+            // tbl_Edit_2nd_Col_Offices_Services
+            // 
+            this.tbl_Edit_2nd_Col_Offices_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Offices_Services.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_Edit_2nd_Col_Offices_Services.ColumnCount = 3;
+            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_2nd_Col_Offices_Services.Controls.Add(this.tbl_Edit_2nd_Col_Offices, 1, 1);
+            this.tbl_Edit_2nd_Col_Offices_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services, 1, 2);
+            this.tbl_Edit_2nd_Col_Offices_Services.Location = new System.Drawing.Point(332, 15);
+            this.tbl_Edit_2nd_Col_Offices_Services.Name = "tbl_Edit_2nd_Col_Offices_Services";
+            this.tbl_Edit_2nd_Col_Offices_Services.RowCount = 4;
+            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_2nd_Col_Offices_Services.Size = new System.Drawing.Size(304, 610);
+            this.tbl_Edit_2nd_Col_Offices_Services.TabIndex = 1;
+            // 
+            // tbl_Edit_2nd_Col_Offices
+            // 
+            this.tbl_Edit_2nd_Col_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Offices.ColumnCount = 1;
+            this.tbl_Edit_2nd_Col_Offices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.lbl_Office, 0, 0);
+            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.cbo_Office_Select, 0, 1);
+            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.tbl_Edit_2nd_Col_Offices_Buttons, 0, 2);
+            this.tbl_Edit_2nd_Col_Offices.Location = new System.Drawing.Point(9, 18);
+            this.tbl_Edit_2nd_Col_Offices.Name = "tbl_Edit_2nd_Col_Offices";
+            this.tbl_Edit_2nd_Col_Offices.RowCount = 3;
+            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_Edit_2nd_Col_Offices.Size = new System.Drawing.Size(285, 112);
+            this.tbl_Edit_2nd_Col_Offices.TabIndex = 0;
+            // 
+            // lbl_Office
+            // 
+            this.lbl_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Office.AutoSize = true;
+            this.lbl_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Office.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Office.Name = "lbl_Office";
+            this.lbl_Office.Size = new System.Drawing.Size(167, 20);
+            this.lbl_Office.TabIndex = 104;
+            this.lbl_Office.Text = "Toimipisteen valinta";
+            // 
+            // cbo_Office_Select
+            // 
+            this.cbo_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_Office_Select.FormattingEnabled = true;
+            this.cbo_Office_Select.Location = new System.Drawing.Point(3, 23);
+            this.cbo_Office_Select.Name = "cbo_Office_Select";
+            this.cbo_Office_Select.Size = new System.Drawing.Size(279, 28);
+            this.cbo_Office_Select.TabIndex = 105;
+            this.cbo_Office_Select.Text = "Valitse toimipiste";
+            // 
+            // tbl_Edit_2nd_Col_Offices_Buttons
+            // 
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnCount = 3;
+            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Delete, 0, 0);
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Edit, 0, 0);
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Add, 0, 0);
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Location = new System.Drawing.Point(3, 57);
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Name = "tbl_Edit_2nd_Col_Offices_Buttons";
+            this.tbl_Edit_2nd_Col_Offices_Buttons.RowCount = 1;
+            this.tbl_Edit_2nd_Col_Offices_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Size = new System.Drawing.Size(279, 54);
+            this.tbl_Edit_2nd_Col_Offices_Buttons.TabIndex = 106;
+            // 
+            // btn_Office_Delete
+            // 
+            this.btn_Office_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Office_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Delete.BackgroundImage")));
+            this.btn_Office_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Delete.Location = new System.Drawing.Point(228, 3);
+            this.btn_Office_Delete.Name = "btn_Office_Delete";
+            this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Delete.TabIndex = 113;
+            this.btn_Office_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_Office_Edit
+            // 
+            this.btn_Office_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Office_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Edit.BackgroundImage")));
+            this.btn_Office_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Edit.Location = new System.Drawing.Point(114, 3);
+            this.btn_Office_Edit.Name = "btn_Office_Edit";
+            this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Edit.TabIndex = 112;
+            this.btn_Office_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Office_Add
+            // 
+            this.btn_Office_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Add.BackgroundImage")));
+            this.btn_Office_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Add.Location = new System.Drawing.Point(3, 3);
+            this.btn_Office_Add.Name = "btn_Office_Add";
+            this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Add.TabIndex = 111;
+            this.btn_Office_Add.UseVisualStyleBackColor = true;
+            // 
+            // tbl_Edit_2nd_Col_Services
+            // 
+            this.tbl_Edit_2nd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Services.ColumnCount = 1;
+            this.tbl_Edit_2nd_Col_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lbl_Services, 0, 0);
+            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lsv_Services_All, 0, 1);
+            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Search, 0, 2);
+            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Buttons, 0, 3);
+            this.tbl_Edit_2nd_Col_Services.Location = new System.Drawing.Point(9, 136);
+            this.tbl_Edit_2nd_Col_Services.Name = "tbl_Edit_2nd_Col_Services";
+            this.tbl_Edit_2nd_Col_Services.RowCount = 4;
+            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_Edit_2nd_Col_Services.Size = new System.Drawing.Size(285, 456);
+            this.tbl_Edit_2nd_Col_Services.TabIndex = 1;
+            // 
+            // lbl_Services
+            // 
+            this.lbl_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Services.AutoSize = true;
+            this.lbl_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Services.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Services.Name = "lbl_Services";
+            this.lbl_Services.Size = new System.Drawing.Size(177, 20);
+            this.lbl_Services.TabIndex = 78;
+            this.lbl_Services.Text = "Toimipisteen palvelut";
+            // 
+            // lsv_Services_All
+            // 
+            this.lsv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Services_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Services_All.Location = new System.Drawing.Point(3, 23);
+            this.lsv_Services_All.Name = "lsv_Services_All";
+            this.lsv_Services_All.Size = new System.Drawing.Size(279, 325);
+            this.lsv_Services_All.TabIndex = 100;
+            this.lsv_Services_All.UseCompatibleStateImageBehavior = false;
+            // 
+            // tbl_Edit_2nd_Col_Services_Search
+            // 
+            this.tbl_Edit_2nd_Col_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Services_Search.ColumnCount = 2;
+            this.tbl_Edit_2nd_Col_Services_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Services_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Edit_2nd_Col_Services_Search.Controls.Add(this.btn_Services_Search, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Search.Controls.Add(this.txt_Services_Search, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Search.Location = new System.Drawing.Point(3, 354);
+            this.tbl_Edit_2nd_Col_Services_Search.Name = "tbl_Edit_2nd_Col_Services_Search";
+            this.tbl_Edit_2nd_Col_Services_Search.RowCount = 1;
+            this.tbl_Edit_2nd_Col_Services_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_2nd_Col_Services_Search.Size = new System.Drawing.Size(279, 39);
+            this.tbl_Edit_2nd_Col_Services_Search.TabIndex = 101;
+            // 
+            // btn_Services_Search
+            // 
+            this.btn_Services_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Services_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Search.BackgroundImage")));
+            this.btn_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Search.Location = new System.Drawing.Point(244, 3);
+            this.btn_Services_Search.Name = "btn_Services_Search";
+            this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Services_Search.TabIndex = 102;
+            this.btn_Services_Search.UseVisualStyleBackColor = true;
+            // 
+            // txt_Services_Search
+            // 
+            this.txt_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Services_Search.Location = new System.Drawing.Point(3, 6);
+            this.txt_Services_Search.Name = "txt_Services_Search";
+            this.txt_Services_Search.Size = new System.Drawing.Size(233, 26);
+            this.txt_Services_Search.TabIndex = 101;
+            // 
+            // tbl_Edit_2nd_Col_Services_Buttons
+            // 
+            this.tbl_Edit_2nd_Col_Services_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnCount = 3;
+            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Delete, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Edit, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Add, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Location = new System.Drawing.Point(3, 399);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Name = "tbl_Edit_2nd_Col_Services_Buttons";
+            this.tbl_Edit_2nd_Col_Services_Buttons.RowCount = 1;
+            this.tbl_Edit_2nd_Col_Services_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_Edit_2nd_Col_Services_Buttons.Size = new System.Drawing.Size(279, 54);
+            this.tbl_Edit_2nd_Col_Services_Buttons.TabIndex = 102;
+            // 
+            // btn_Services_Delete
+            // 
+            this.btn_Services_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Services_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Delete.BackgroundImage")));
+            this.btn_Services_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Delete.Location = new System.Drawing.Point(228, 9);
+            this.btn_Services_Delete.Name = "btn_Services_Delete";
+            this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Delete.TabIndex = 110;
+            this.btn_Services_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_Services_Edit
+            // 
+            this.btn_Services_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Services_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Edit.BackgroundImage")));
+            this.btn_Services_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Edit.Location = new System.Drawing.Point(115, 9);
+            this.btn_Services_Edit.Name = "btn_Services_Edit";
+            this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Edit.TabIndex = 109;
+            this.btn_Services_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Services_Add
+            // 
+            this.btn_Services_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Services_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Add.BackgroundImage")));
+            this.btn_Services_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Add.Location = new System.Drawing.Point(3, 9);
+            this.btn_Services_Add.Name = "btn_Services_Add";
+            this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Add.TabIndex = 108;
+            this.btn_Services_Add.UseVisualStyleBackColor = true;
+            // 
+            // tbl_Edit_3rd_Col_Cottages
+            // 
+            this.tbl_Edit_3rd_Col_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_3rd_Col_Cottages.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_Edit_3rd_Col_Cottages.ColumnCount = 3;
+            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lbl_Cottages, 1, 1);
+            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lsv_Cottages_All, 1, 2);
+            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Search, 1, 3);
+            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Buttons, 1, 4);
+            this.tbl_Edit_3rd_Col_Cottages.Location = new System.Drawing.Point(642, 15);
+            this.tbl_Edit_3rd_Col_Cottages.Name = "tbl_Edit_3rd_Col_Cottages";
+            this.tbl_Edit_3rd_Col_Cottages.RowCount = 6;
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Edit_3rd_Col_Cottages.Size = new System.Drawing.Size(304, 610);
+            this.tbl_Edit_3rd_Col_Cottages.TabIndex = 2;
+            // 
+            // lbl_Cottages
+            // 
+            this.lbl_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Cottages.AutoSize = true;
+            this.lbl_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottages.Location = new System.Drawing.Point(9, 15);
+            this.lbl_Cottages.Name = "lbl_Cottages";
+            this.lbl_Cottages.Size = new System.Drawing.Size(169, 20);
+            this.lbl_Cottages.TabIndex = 78;
+            this.lbl_Cottages.Text = "Asiakkaiden hallinta";
+            // 
+            // lsv_Cottages_All
+            // 
+            this.lsv_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Cottages_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Cottages_All.Location = new System.Drawing.Point(9, 38);
+            this.lsv_Cottages_All.Name = "lsv_Cottages_All";
+            this.lsv_Cottages_All.Size = new System.Drawing.Size(285, 444);
+            this.lsv_Cottages_All.TabIndex = 100;
+            this.lsv_Cottages_All.UseCompatibleStateImageBehavior = false;
+            // 
+            // tbl_Edit_3rd_Col_Cottages_Search
+            // 
+            this.tbl_Edit_3rd_Col_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnCount = 2;
+            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Edit_3rd_Col_Cottages_Search.Controls.Add(this.btn_Cottages_Search, 0, 0);
+            this.tbl_Edit_3rd_Col_Cottages_Search.Controls.Add(this.txt_Cottages_Search, 0, 0);
+            this.tbl_Edit_3rd_Col_Cottages_Search.Location = new System.Drawing.Point(9, 488);
+            this.tbl_Edit_3rd_Col_Cottages_Search.Name = "tbl_Edit_3rd_Col_Cottages_Search";
+            this.tbl_Edit_3rd_Col_Cottages_Search.RowCount = 1;
+            this.tbl_Edit_3rd_Col_Cottages_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_3rd_Col_Cottages_Search.Size = new System.Drawing.Size(285, 40);
+            this.tbl_Edit_3rd_Col_Cottages_Search.TabIndex = 101;
+            // 
+            // btn_Cottages_Search
+            // 
+            this.btn_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cottages_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Search.BackgroundImage")));
+            this.btn_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Search.Location = new System.Drawing.Point(250, 3);
+            this.btn_Cottages_Search.Name = "btn_Cottages_Search";
+            this.btn_Cottages_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Cottages_Search.TabIndex = 102;
+            this.btn_Cottages_Search.UseVisualStyleBackColor = true;
+            // 
+            // txt_Cottages_Search
+            // 
+            this.txt_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Cottages_Search.Location = new System.Drawing.Point(3, 3);
+            this.txt_Cottages_Search.Name = "txt_Cottages_Search";
+            this.txt_Cottages_Search.Size = new System.Drawing.Size(239, 26);
+            this.txt_Cottages_Search.TabIndex = 101;
+            // 
+            // tbl_Edit_3rd_Col_Cottages_Buttons
+            // 
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnCount = 3;
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Delete, 0, 0);
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Edit, 0, 0);
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Add, 0, 0);
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Location = new System.Drawing.Point(9, 534);
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Name = "tbl_Edit_3rd_Col_Cottages_Buttons";
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.RowCount = 1;
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.Size = new System.Drawing.Size(285, 58);
+            this.tbl_Edit_3rd_Col_Cottages_Buttons.TabIndex = 102;
+            // 
+            // btn_Cottages_Delete
+            // 
+            this.btn_Cottages_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cottages_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Delete.BackgroundImage")));
+            this.btn_Cottages_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Delete.Location = new System.Drawing.Point(234, 7);
+            this.btn_Cottages_Delete.Name = "btn_Cottages_Delete";
+            this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Delete.TabIndex = 110;
+            this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cottages_Edit
+            // 
+            this.btn_Cottages_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Cottages_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Edit.BackgroundImage")));
+            this.btn_Cottages_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Edit.Location = new System.Drawing.Point(118, 7);
+            this.btn_Cottages_Edit.Name = "btn_Cottages_Edit";
+            this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Edit.TabIndex = 109;
+            this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cottages_Add
+            // 
+            this.btn_Cottages_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Cottages_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Add.BackgroundImage")));
+            this.btn_Cottages_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Add.Location = new System.Drawing.Point(3, 7);
+            this.btn_Cottages_Add.Name = "btn_Cottages_Add";
+            this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Add.TabIndex = 108;
+            this.btn_Cottages_Add.UseVisualStyleBackColor = true;
+            // 
             // tab_History
             // 
-            this.tab_History.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_History.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tab_History.Controls.Add(this.groupBox3);
             this.tab_History.Controls.Add(this.groupBox2);
             this.tab_History.Controls.Add(this.groupBox1);
@@ -1269,603 +1831,41 @@
             // 
             this.trv_Manual.Location = new System.Drawing.Point(23, 25);
             this.trv_Manual.Name = "trv_Manual";
-            treeNode1.Name = "Node4";
-            treeNode1.Text = "Toimipisteen valinta";
-            treeNode2.Name = "Node5";
-            treeNode2.Text = "Asiakkaiden valinta";
-            treeNode3.Name = "Node6";
-            treeNode3.Text = "Mökin valinta";
-            treeNode4.Name = "Node7";
-            treeNode4.Text = "Mökin yhteenveto";
-            treeNode5.Name = "Node8";
-            treeNode5.Text = "Lisäpalveluiden valinta";
-            treeNode6.Name = "Node9";
-            treeNode6.Text = "Tilauksen yhteenveto";
-            treeNode7.Name = "Node0";
-            treeNode7.Text = "Uusi varaus";
-            treeNode8.Name = "Node10";
-            treeNode8.Text = "Asiakkaiden hallinta";
-            treeNode9.Name = "Node11";
-            treeNode9.Text = "Toimipisteen valinta";
-            treeNode10.Name = "Node12";
-            treeNode10.Text = "Toimipisteen palvelut";
-            treeNode11.Name = "Node13";
-            treeNode11.Text = "Toimipisteen mökit";
-            treeNode12.Name = "Node1";
-            treeNode12.Text = "Tietojen hallinta";
-            treeNode13.Name = "Node2";
-            treeNode13.Text = "Varaushistoria";
-            treeNode14.Name = "Node3";
-            treeNode14.Text = "Asetukset";
+            treeNode85.Name = "Node4";
+            treeNode85.Text = "Toimipisteen valinta";
+            treeNode86.Name = "Node5";
+            treeNode86.Text = "Asiakkaiden valinta";
+            treeNode87.Name = "Node6";
+            treeNode87.Text = "Mökin valinta";
+            treeNode88.Name = "Node7";
+            treeNode88.Text = "Mökin yhteenveto";
+            treeNode89.Name = "Node8";
+            treeNode89.Text = "Lisäpalveluiden valinta";
+            treeNode90.Name = "Node9";
+            treeNode90.Text = "Tilauksen yhteenveto";
+            treeNode91.Name = "Node0";
+            treeNode91.Text = "Uusi varaus";
+            treeNode92.Name = "Node10";
+            treeNode92.Text = "Asiakkaiden hallinta";
+            treeNode93.Name = "Node11";
+            treeNode93.Text = "Toimipisteen valinta";
+            treeNode94.Name = "Node12";
+            treeNode94.Text = "Toimipisteen palvelut";
+            treeNode95.Name = "Node13";
+            treeNode95.Text = "Toimipisteen mökit";
+            treeNode96.Name = "Node1";
+            treeNode96.Text = "Tietojen hallinta";
+            treeNode97.Name = "Node2";
+            treeNode97.Text = "Varaushistoria";
+            treeNode98.Name = "Node3";
+            treeNode98.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode12,
-            treeNode13,
-            treeNode14});
+            treeNode91,
+            treeNode96,
+            treeNode97,
+            treeNode98});
             this.trv_Manual.Size = new System.Drawing.Size(308, 586);
             this.trv_Manual.TabIndex = 0;
-            // 
-            // tbl_Edit_base
-            // 
-            this.tbl_Edit_base.BackColor = System.Drawing.Color.Maroon;
-            this.tbl_Edit_base.ColumnCount = 5;
-            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tbl_Edit_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_1st_Col_Customers, 1, 1);
-            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_2nd_Col_Offices_Services, 2, 1);
-            this.tbl_Edit_base.Controls.Add(this.tbl_Edit_3rd_Col_Cottages, 3, 1);
-            this.tbl_Edit_base.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbl_Edit_base.Location = new System.Drawing.Point(3, 3);
-            this.tbl_Edit_base.Name = "tbl_Edit_base";
-            this.tbl_Edit_base.RowCount = 3;
-            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_Edit_base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_base.Size = new System.Drawing.Size(970, 642);
-            this.tbl_Edit_base.TabIndex = 0;
-            // 
-            // tbl_Edit_1st_Col_Customers
-            // 
-            this.tbl_Edit_1st_Col_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_1st_Col_Customers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_Edit_1st_Col_Customers.ColumnCount = 3;
-            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lbl_Customer_Management, 1, 1);
-            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lsv_Customers_All, 1, 2);
-            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Search, 1, 3);
-            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Buttons, 1, 4);
-            this.tbl_Edit_1st_Col_Customers.Location = new System.Drawing.Point(22, 15);
-            this.tbl_Edit_1st_Col_Customers.Name = "tbl_Edit_1st_Col_Customers";
-            this.tbl_Edit_1st_Col_Customers.RowCount = 6;
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_1st_Col_Customers.Size = new System.Drawing.Size(304, 610);
-            this.tbl_Edit_1st_Col_Customers.TabIndex = 0;
-            // 
-            // lbl_Customer_Management
-            // 
-            this.lbl_Customer_Management.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Customer_Management.AutoSize = true;
-            this.lbl_Customer_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Management.Location = new System.Drawing.Point(9, 15);
-            this.lbl_Customer_Management.Name = "lbl_Customer_Management";
-            this.lbl_Customer_Management.Size = new System.Drawing.Size(169, 20);
-            this.lbl_Customer_Management.TabIndex = 78;
-            this.lbl_Customer_Management.Text = "Asiakkaiden hallinta";
-            // 
-            // lsv_Customers_All
-            // 
-            this.lsv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Customers_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Customers_All.Location = new System.Drawing.Point(9, 38);
-            this.lsv_Customers_All.Name = "lsv_Customers_All";
-            this.lsv_Customers_All.Size = new System.Drawing.Size(285, 444);
-            this.lsv_Customers_All.TabIndex = 100;
-            this.lsv_Customers_All.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_Edit_1st_Col_Customers_Search
-            // 
-            this.tbl_Edit_1st_Col_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_1st_Col_Customers_Search.ColumnCount = 2;
-            this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.btn_Customer_Search, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.txt_Customer_Search, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Search.Location = new System.Drawing.Point(9, 488);
-            this.tbl_Edit_1st_Col_Customers_Search.Name = "tbl_Edit_1st_Col_Customers_Search";
-            this.tbl_Edit_1st_Col_Customers_Search.RowCount = 1;
-            this.tbl_Edit_1st_Col_Customers_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers_Search.Size = new System.Drawing.Size(285, 40);
-            this.tbl_Edit_1st_Col_Customers_Search.TabIndex = 101;
-            // 
-            // txt_Customer_Search
-            // 
-            this.txt_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Customer_Search.Location = new System.Drawing.Point(3, 3);
-            this.txt_Customer_Search.Name = "txt_Customer_Search";
-            this.txt_Customer_Search.Size = new System.Drawing.Size(239, 26);
-            this.txt_Customer_Search.TabIndex = 101;
-            // 
-            // btn_Customer_Search
-            // 
-            this.btn_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Customer_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Search.BackgroundImage")));
-            this.btn_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Search.Location = new System.Drawing.Point(250, 3);
-            this.btn_Customer_Search.Name = "btn_Customer_Search";
-            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Customer_Search.TabIndex = 102;
-            this.btn_Customer_Search.UseVisualStyleBackColor = true;
-            // 
-            // tbl_Edit_1st_Col_Customers_Buttons
-            // 
-            this.tbl_Edit_1st_Col_Customers_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnCount = 3;
-            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Delete, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Edit, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Buttons.Controls.Add(this.btn_Customer_Add, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Buttons.Location = new System.Drawing.Point(9, 534);
-            this.tbl_Edit_1st_Col_Customers_Buttons.Name = "tbl_Edit_1st_Col_Customers_Buttons";
-            this.tbl_Edit_1st_Col_Customers_Buttons.RowCount = 1;
-            this.tbl_Edit_1st_Col_Customers_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers_Buttons.Size = new System.Drawing.Size(285, 58);
-            this.tbl_Edit_1st_Col_Customers_Buttons.TabIndex = 102;
-            // 
-            // btn_Customer_Add
-            // 
-            this.btn_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Customer_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Add.BackgroundImage")));
-            this.btn_Customer_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Add.Location = new System.Drawing.Point(3, 7);
-            this.btn_Customer_Add.Name = "btn_Customer_Add";
-            this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Add.TabIndex = 108;
-            this.btn_Customer_Add.UseVisualStyleBackColor = true;
-            // 
-            // btn_Customer_Edit
-            // 
-            this.btn_Customer_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Customer_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Edit.BackgroundImage")));
-            this.btn_Customer_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Edit.Location = new System.Drawing.Point(121, 7);
-            this.btn_Customer_Edit.Name = "btn_Customer_Edit";
-            this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Edit.TabIndex = 109;
-            this.btn_Customer_Edit.UseVisualStyleBackColor = true;
-            // 
-            // btn_Customer_Delete
-            // 
-            this.btn_Customer_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Customer_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Customer_Delete.BackgroundImage")));
-            this.btn_Customer_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Delete.Location = new System.Drawing.Point(234, 7);
-            this.btn_Customer_Delete.Name = "btn_Customer_Delete";
-            this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Delete.TabIndex = 110;
-            this.btn_Customer_Delete.UseVisualStyleBackColor = true;
-            // 
-            // tbl_Edit_2nd_Col_Offices_Services
-            // 
-            this.tbl_Edit_2nd_Col_Offices_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Offices_Services.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_Edit_2nd_Col_Offices_Services.ColumnCount = 3;
-            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_Edit_2nd_Col_Offices_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_2nd_Col_Offices_Services.Controls.Add(this.tbl_Edit_2nd_Col_Offices, 1, 1);
-            this.tbl_Edit_2nd_Col_Offices_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services, 1, 2);
-            this.tbl_Edit_2nd_Col_Offices_Services.Location = new System.Drawing.Point(332, 15);
-            this.tbl_Edit_2nd_Col_Offices_Services.Name = "tbl_Edit_2nd_Col_Offices_Services";
-            this.tbl_Edit_2nd_Col_Offices_Services.RowCount = 4;
-            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Offices_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_2nd_Col_Offices_Services.Size = new System.Drawing.Size(304, 610);
-            this.tbl_Edit_2nd_Col_Offices_Services.TabIndex = 1;
-            // 
-            // tbl_Edit_2nd_Col_Offices
-            // 
-            this.tbl_Edit_2nd_Col_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Offices.ColumnCount = 1;
-            this.tbl_Edit_2nd_Col_Offices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.lbl_Office, 0, 0);
-            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.cbo_Office_Select, 0, 1);
-            this.tbl_Edit_2nd_Col_Offices.Controls.Add(this.tbl_Edit_2nd_Col_Offices_Buttons, 0, 2);
-            this.tbl_Edit_2nd_Col_Offices.Location = new System.Drawing.Point(9, 18);
-            this.tbl_Edit_2nd_Col_Offices.Name = "tbl_Edit_2nd_Col_Offices";
-            this.tbl_Edit_2nd_Col_Offices.RowCount = 3;
-            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_2nd_Col_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbl_Edit_2nd_Col_Offices.Size = new System.Drawing.Size(285, 112);
-            this.tbl_Edit_2nd_Col_Offices.TabIndex = 0;
-            // 
-            // lbl_Office
-            // 
-            this.lbl_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Office.AutoSize = true;
-            this.lbl_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Office.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Office.Name = "lbl_Office";
-            this.lbl_Office.Size = new System.Drawing.Size(167, 20);
-            this.lbl_Office.TabIndex = 104;
-            this.lbl_Office.Text = "Toimipisteen valinta";
-            // 
-            // cbo_Office_Select
-            // 
-            this.cbo_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_Office_Select.FormattingEnabled = true;
-            this.cbo_Office_Select.Location = new System.Drawing.Point(3, 23);
-            this.cbo_Office_Select.Name = "cbo_Office_Select";
-            this.cbo_Office_Select.Size = new System.Drawing.Size(279, 28);
-            this.cbo_Office_Select.TabIndex = 105;
-            this.cbo_Office_Select.Text = "Valitse toimipiste";
-            // 
-            // tbl_Edit_2nd_Col_Offices_Buttons
-            // 
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnCount = 3;
-            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Delete, 0, 0);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Edit, 0, 0);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Controls.Add(this.btn_Office_Add, 0, 0);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Location = new System.Drawing.Point(3, 57);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Name = "tbl_Edit_2nd_Col_Offices_Buttons";
-            this.tbl_Edit_2nd_Col_Offices_Buttons.RowCount = 1;
-            this.tbl_Edit_2nd_Col_Offices_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Size = new System.Drawing.Size(279, 54);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.TabIndex = 106;
-            // 
-            // btn_Office_Add
-            // 
-            this.btn_Office_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Add.BackgroundImage")));
-            this.btn_Office_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Add.Location = new System.Drawing.Point(3, 3);
-            this.btn_Office_Add.Name = "btn_Office_Add";
-            this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Add.TabIndex = 111;
-            this.btn_Office_Add.UseVisualStyleBackColor = true;
-            // 
-            // btn_Office_Edit
-            // 
-            this.btn_Office_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Office_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Edit.BackgroundImage")));
-            this.btn_Office_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Edit.Location = new System.Drawing.Point(114, 3);
-            this.btn_Office_Edit.Name = "btn_Office_Edit";
-            this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Edit.TabIndex = 112;
-            this.btn_Office_Edit.UseVisualStyleBackColor = true;
-            // 
-            // btn_Office_Delete
-            // 
-            this.btn_Office_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Office_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Office_Delete.BackgroundImage")));
-            this.btn_Office_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Delete.Location = new System.Drawing.Point(228, 3);
-            this.btn_Office_Delete.Name = "btn_Office_Delete";
-            this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Delete.TabIndex = 113;
-            this.btn_Office_Delete.UseVisualStyleBackColor = true;
-            // 
-            // tbl_Edit_2nd_Col_Services
-            // 
-            this.tbl_Edit_2nd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Services.ColumnCount = 1;
-            this.tbl_Edit_2nd_Col_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lbl_Services, 0, 0);
-            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lsv_Services_All, 0, 1);
-            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Search, 0, 2);
-            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Buttons, 0, 3);
-            this.tbl_Edit_2nd_Col_Services.Location = new System.Drawing.Point(9, 136);
-            this.tbl_Edit_2nd_Col_Services.Name = "tbl_Edit_2nd_Col_Services";
-            this.tbl_Edit_2nd_Col_Services.RowCount = 4;
-            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tbl_Edit_2nd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbl_Edit_2nd_Col_Services.Size = new System.Drawing.Size(285, 456);
-            this.tbl_Edit_2nd_Col_Services.TabIndex = 1;
-            // 
-            // lbl_Services
-            // 
-            this.lbl_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Services.AutoSize = true;
-            this.lbl_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Services.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Services.Name = "lbl_Services";
-            this.lbl_Services.Size = new System.Drawing.Size(177, 20);
-            this.lbl_Services.TabIndex = 78;
-            this.lbl_Services.Text = "Toimipisteen palvelut";
-            // 
-            // lsv_Services_All
-            // 
-            this.lsv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Services_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Services_All.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Services_All.Name = "lsv_Services_All";
-            this.lsv_Services_All.Size = new System.Drawing.Size(279, 325);
-            this.lsv_Services_All.TabIndex = 100;
-            this.lsv_Services_All.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_Edit_2nd_Col_Services_Search
-            // 
-            this.tbl_Edit_2nd_Col_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Services_Search.ColumnCount = 2;
-            this.tbl_Edit_2nd_Col_Services_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Services_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Edit_2nd_Col_Services_Search.Controls.Add(this.btn_Services_Search, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Search.Controls.Add(this.txt_Services_Search, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Search.Location = new System.Drawing.Point(3, 354);
-            this.tbl_Edit_2nd_Col_Services_Search.Name = "tbl_Edit_2nd_Col_Services_Search";
-            this.tbl_Edit_2nd_Col_Services_Search.RowCount = 1;
-            this.tbl_Edit_2nd_Col_Services_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_2nd_Col_Services_Search.Size = new System.Drawing.Size(279, 39);
-            this.tbl_Edit_2nd_Col_Services_Search.TabIndex = 101;
-            // 
-            // txt_Services_Search
-            // 
-            this.txt_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Services_Search.Location = new System.Drawing.Point(3, 6);
-            this.txt_Services_Search.Name = "txt_Services_Search";
-            this.txt_Services_Search.Size = new System.Drawing.Size(233, 26);
-            this.txt_Services_Search.TabIndex = 101;
-            // 
-            // btn_Services_Search
-            // 
-            this.btn_Services_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Services_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Search.BackgroundImage")));
-            this.btn_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Search.Location = new System.Drawing.Point(244, 3);
-            this.btn_Services_Search.Name = "btn_Services_Search";
-            this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Services_Search.TabIndex = 102;
-            this.btn_Services_Search.UseVisualStyleBackColor = true;
-            // 
-            // tbl_Edit_2nd_Col_Services_Buttons
-            // 
-            this.tbl_Edit_2nd_Col_Services_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnCount = 3;
-            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Delete, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Edit, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Add, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Buttons.Location = new System.Drawing.Point(3, 399);
-            this.tbl_Edit_2nd_Col_Services_Buttons.Name = "tbl_Edit_2nd_Col_Services_Buttons";
-            this.tbl_Edit_2nd_Col_Services_Buttons.RowCount = 1;
-            this.tbl_Edit_2nd_Col_Services_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbl_Edit_2nd_Col_Services_Buttons.Size = new System.Drawing.Size(279, 54);
-            this.tbl_Edit_2nd_Col_Services_Buttons.TabIndex = 102;
-            // 
-            // btn_Services_Add
-            // 
-            this.btn_Services_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Services_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Add.BackgroundImage")));
-            this.btn_Services_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Add.Location = new System.Drawing.Point(3, 9);
-            this.btn_Services_Add.Name = "btn_Services_Add";
-            this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Add.TabIndex = 108;
-            this.btn_Services_Add.UseVisualStyleBackColor = true;
-            // 
-            // btn_Services_Edit
-            // 
-            this.btn_Services_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Services_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Edit.BackgroundImage")));
-            this.btn_Services_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Edit.Location = new System.Drawing.Point(114, 9);
-            this.btn_Services_Edit.Name = "btn_Services_Edit";
-            this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Edit.TabIndex = 109;
-            this.btn_Services_Edit.UseVisualStyleBackColor = true;
-            // 
-            // btn_Services_Delete
-            // 
-            this.btn_Services_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Services_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Services_Delete.BackgroundImage")));
-            this.btn_Services_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Delete.Location = new System.Drawing.Point(228, 9);
-            this.btn_Services_Delete.Name = "btn_Services_Delete";
-            this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Delete.TabIndex = 110;
-            this.btn_Services_Delete.UseVisualStyleBackColor = true;
-            // 
-            // tbl_Edit_3rd_Col_Cottages
-            // 
-            this.tbl_Edit_3rd_Col_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_3rd_Col_Cottages.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_Edit_3rd_Col_Cottages.ColumnCount = 3;
-            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lbl_Cottages, 1, 1);
-            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lsv_Cottages_All, 1, 2);
-            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Search, 1, 3);
-            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Buttons, 1, 4);
-            this.tbl_Edit_3rd_Col_Cottages.Location = new System.Drawing.Point(642, 15);
-            this.tbl_Edit_3rd_Col_Cottages.Name = "tbl_Edit_3rd_Col_Cottages";
-            this.tbl_Edit_3rd_Col_Cottages.RowCount = 6;
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tbl_Edit_3rd_Col_Cottages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Edit_3rd_Col_Cottages.Size = new System.Drawing.Size(304, 610);
-            this.tbl_Edit_3rd_Col_Cottages.TabIndex = 2;
-            // 
-            // lbl_Cottages
-            // 
-            this.lbl_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Cottages.AutoSize = true;
-            this.lbl_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cottages.Location = new System.Drawing.Point(9, 15);
-            this.lbl_Cottages.Name = "lbl_Cottages";
-            this.lbl_Cottages.Size = new System.Drawing.Size(169, 20);
-            this.lbl_Cottages.TabIndex = 78;
-            this.lbl_Cottages.Text = "Asiakkaiden hallinta";
-            // 
-            // lsv_Cottages_All
-            // 
-            this.lsv_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Cottages_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Cottages_All.Location = new System.Drawing.Point(9, 38);
-            this.lsv_Cottages_All.Name = "lsv_Cottages_All";
-            this.lsv_Cottages_All.Size = new System.Drawing.Size(285, 444);
-            this.lsv_Cottages_All.TabIndex = 100;
-            this.lsv_Cottages_All.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_Edit_3rd_Col_Cottages_Search
-            // 
-            this.tbl_Edit_3rd_Col_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnCount = 2;
-            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_3rd_Col_Cottages_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Edit_3rd_Col_Cottages_Search.Controls.Add(this.btn_Cottages_Search, 0, 0);
-            this.tbl_Edit_3rd_Col_Cottages_Search.Controls.Add(this.txt_Cottages_Search, 0, 0);
-            this.tbl_Edit_3rd_Col_Cottages_Search.Location = new System.Drawing.Point(9, 488);
-            this.tbl_Edit_3rd_Col_Cottages_Search.Name = "tbl_Edit_3rd_Col_Cottages_Search";
-            this.tbl_Edit_3rd_Col_Cottages_Search.RowCount = 1;
-            this.tbl_Edit_3rd_Col_Cottages_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_3rd_Col_Cottages_Search.Size = new System.Drawing.Size(285, 40);
-            this.tbl_Edit_3rd_Col_Cottages_Search.TabIndex = 101;
-            // 
-            // btn_Cottages_Search
-            // 
-            this.btn_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottages_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Search.BackgroundImage")));
-            this.btn_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Search.Location = new System.Drawing.Point(250, 3);
-            this.btn_Cottages_Search.Name = "btn_Cottages_Search";
-            this.btn_Cottages_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Cottages_Search.TabIndex = 102;
-            this.btn_Cottages_Search.UseVisualStyleBackColor = true;
-            // 
-            // txt_Cottages_Search
-            // 
-            this.txt_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Cottages_Search.Location = new System.Drawing.Point(3, 3);
-            this.txt_Cottages_Search.Name = "txt_Cottages_Search";
-            this.txt_Cottages_Search.Size = new System.Drawing.Size(239, 26);
-            this.txt_Cottages_Search.TabIndex = 101;
-            // 
-            // tbl_Edit_3rd_Col_Cottages_Buttons
-            // 
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnCount = 3;
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Delete, 0, 0);
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Edit, 0, 0);
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Controls.Add(this.btn_Cottages_Add, 0, 0);
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Location = new System.Drawing.Point(9, 534);
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Name = "tbl_Edit_3rd_Col_Cottages_Buttons";
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.RowCount = 1;
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.Size = new System.Drawing.Size(285, 58);
-            this.tbl_Edit_3rd_Col_Cottages_Buttons.TabIndex = 102;
-            // 
-            // btn_Cottages_Delete
-            // 
-            this.btn_Cottages_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottages_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Delete.BackgroundImage")));
-            this.btn_Cottages_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Delete.Location = new System.Drawing.Point(234, 7);
-            this.btn_Cottages_Delete.Name = "btn_Cottages_Delete";
-            this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Delete.TabIndex = 110;
-            this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_Cottages_Edit
-            // 
-            this.btn_Cottages_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Cottages_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Edit.BackgroundImage")));
-            this.btn_Cottages_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Edit.Location = new System.Drawing.Point(117, 7);
-            this.btn_Cottages_Edit.Name = "btn_Cottages_Edit";
-            this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Edit.TabIndex = 109;
-            this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
-            // 
-            // btn_Cottages_Add
-            // 
-            this.btn_Cottages_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Cottages_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cottages_Add.BackgroundImage")));
-            this.btn_Cottages_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Add.Location = new System.Drawing.Point(3, 7);
-            this.btn_Cottages_Add.Name = "btn_Cottages_Add";
-            this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Add.TabIndex = 108;
-            this.btn_Cottages_Add.UseVisualStyleBackColor = true;
             // 
             // Main_window
             // 
@@ -1903,16 +1903,6 @@
             this.tbl_Order_4th_Col_Summary_Cottage_Services.PerformLayout();
             this.tbl_Order_Summary_Buttons.ResumeLayout(false);
             this.tab_Edit.ResumeLayout(false);
-            this.tab_History.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tab_Settings.ResumeLayout(false);
-            this.tab_Settings.PerformLayout();
-            this.tab_Manual.ResumeLayout(false);
             this.tbl_Edit_base.ResumeLayout(false);
             this.tbl_Edit_1st_Col_Customers.ResumeLayout(false);
             this.tbl_Edit_1st_Col_Customers.PerformLayout();
@@ -1933,6 +1923,16 @@
             this.tbl_Edit_3rd_Col_Cottages_Search.ResumeLayout(false);
             this.tbl_Edit_3rd_Col_Cottages_Search.PerformLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.ResumeLayout(false);
+            this.tab_History.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tab_Settings.ResumeLayout(false);
+            this.tab_Settings.PerformLayout();
+            this.tab_Manual.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
