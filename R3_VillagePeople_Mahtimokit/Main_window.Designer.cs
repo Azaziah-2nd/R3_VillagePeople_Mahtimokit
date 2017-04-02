@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_window));
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode57,
-            treeNode58,
-            treeNode59,
-            treeNode60,
-            treeNode61,
-            treeNode62});
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode64,
-            treeNode65,
-            treeNode66,
-            treeNode67});
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Asetukset");
             this.tab_Menu = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tab_New_Order = new System.Windows.Forms.TabPage();
             this.tbl_Order_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_1st_Col_Office_Customer = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_Customers = new System.Windows.Forms.TableLayoutPanel();
@@ -89,7 +89,21 @@
             this.lbl_Order_Services = new System.Windows.Forms.Label();
             this.lsv_Order_Services_All = new System.Windows.Forms.ListView();
             this.btn_Order_Service_add = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbl_4th_Col_Summary = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Order_4th_Col_Summary_Office_Customers = new System.Windows.Forms.TableLayoutPanel();
+            this.lsv_Order_Summary_Customers = new System.Windows.Forms.ListView();
+            this.lbl_Order_Summary = new System.Windows.Forms.Label();
+            this.lbl_Order_Summary_Office = new System.Windows.Forms.Label();
+            this.lbl_Order_Summary_Customers = new System.Windows.Forms.Label();
+            this.tbl_Order_4th_Col_Summary_Cottage_Services = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Order_Summary_Cottages = new System.Windows.Forms.Label();
+            this.lsv_Order_Summary_Cottages = new System.Windows.Forms.ListView();
+            this.lsv_Order_Summary_Services = new System.Windows.Forms.ListView();
+            this.lbl_Order_Summary_Services = new System.Windows.Forms.Label();
+            this.tbl_Order_Summary_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Order_Summary_Next_Page = new System.Windows.Forms.Button();
+            this.btn_Order_Summary_Delete_From_List = new System.Windows.Forms.Button();
+            this.tab_Edit = new System.Windows.Forms.TabPage();
             this.grb_Services = new System.Windows.Forms.GroupBox();
             this.btn_Services_delete = new System.Windows.Forms.Button();
             this.btn_Services_edit = new System.Windows.Forms.Button();
@@ -120,7 +134,7 @@
             this.btn_Office_add = new System.Windows.Forms.Button();
             this.cbo_Office_select = new System.Windows.Forms.ComboBox();
             this.lbl_Office = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tab_History = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -141,7 +155,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tab_Settings = new System.Windows.Forms.TabPage();
             this.btn_Remove_All_Files = new System.Windows.Forms.Button();
             this.lbl_Remove_All_Files = new System.Windows.Forms.Label();
             this.cbo_Default_Office_select = new System.Windows.Forms.ComboBox();
@@ -151,24 +165,10 @@
             this.lbl_System_Font = new System.Windows.Forms.Label();
             this.cbo_Language_Select = new System.Windows.Forms.ComboBox();
             this.lbl_System_Language = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.tbl_4th_Col_Summary = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Order_Summary_Office_Customers = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Order_Summary = new System.Windows.Forms.Label();
-            this.lbl_Order_Summary_Office = new System.Windows.Forms.Label();
-            this.lbl_Order_Summary_Customers = new System.Windows.Forms.Label();
-            this.lsv_Order_Summary_Customers = new System.Windows.Forms.ListView();
-            this.tbl_Order_Summary_Cottage_Services = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Order_Summary_Cottages = new System.Windows.Forms.Label();
-            this.lsv_Order_Summary_Cottages = new System.Windows.Forms.ListView();
-            this.lbl_Order_Summary_Services = new System.Windows.Forms.Label();
-            this.lsv_Order_Summary_Services = new System.Windows.Forms.ListView();
-            this.tbl_Order_Summary_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Order_Summary_Delete_From_List = new System.Windows.Forms.Button();
-            this.btn_Order_Summary_Next_Page = new System.Windows.Forms.Button();
+            this.tab_Manual = new System.Windows.Forms.TabPage();
+            this.trv_Manual = new System.Windows.Forms.TreeView();
             this.tab_Menu.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
             this.tbl_Order_1st_Col_Office_Customer.SuspendLayout();
             this.tbl_Order_1st_Col_Office.SuspendLayout();
@@ -178,30 +178,30 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary.SuspendLayout();
             this.tbl_Order_3rd_Col_Services.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tbl_4th_Col_Summary.SuspendLayout();
+            this.tbl_Order_4th_Col_Summary_Office_Customers.SuspendLayout();
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.SuspendLayout();
+            this.tbl_Order_Summary_Buttons.SuspendLayout();
+            this.tab_Edit.SuspendLayout();
             this.grb_Services.SuspendLayout();
             this.grb_Cottages.SuspendLayout();
             this.grb_Customer_Management.SuspendLayout();
             this.grb_Office.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tab_History.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tbl_4th_Col_Summary.SuspendLayout();
-            this.tbl_Order_Summary_Office_Customers.SuspendLayout();
-            this.tbl_Order_Summary_Cottage_Services.SuspendLayout();
-            this.tbl_Order_Summary_Buttons.SuspendLayout();
+            this.tab_Settings.SuspendLayout();
+            this.tab_Manual.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
             // 
-            this.tab_Menu.Controls.Add(this.tabPage1);
-            this.tab_Menu.Controls.Add(this.tabPage2);
-            this.tab_Menu.Controls.Add(this.tabPage3);
-            this.tab_Menu.Controls.Add(this.tabPage4);
-            this.tab_Menu.Controls.Add(this.tabPage5);
+            this.tab_Menu.Controls.Add(this.tab_New_Order);
+            this.tab_Menu.Controls.Add(this.tab_Edit);
+            this.tab_Menu.Controls.Add(this.tab_History);
+            this.tab_Menu.Controls.Add(this.tab_Settings);
+            this.tab_Menu.Controls.Add(this.tab_Manual);
             this.tab_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tab_Menu.Location = new System.Drawing.Point(0, 0);
@@ -210,17 +210,17 @@
             this.tab_Menu.Size = new System.Drawing.Size(984, 681);
             this.tab_Menu.TabIndex = 0;
             // 
-            // tabPage1
+            // tab_New_Order
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.Controls.Add(this.tbl_Order_base);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(976, 648);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Uusi tilaus";
+            this.tab_New_Order.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_New_Order.Controls.Add(this.tbl_Order_base);
+            this.tab_New_Order.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_New_Order.Location = new System.Drawing.Point(4, 29);
+            this.tab_New_Order.Name = "tab_New_Order";
+            this.tab_New_Order.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_New_Order.Size = new System.Drawing.Size(976, 648);
+            this.tab_New_Order.TabIndex = 0;
+            this.tab_New_Order.Text = "Uusi varaus";
             // 
             // tbl_Order_base
             // 
@@ -688,20 +688,217 @@
             this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tbl_4th_Col_Summary
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.grb_Services);
-            this.tabPage2.Controls.Add(this.grb_Cottages);
-            this.tabPage2.Controls.Add(this.grb_Customer_Management);
-            this.tabPage2.Controls.Add(this.grb_Office);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 648);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tietojen Hallinta";
+            this.tbl_4th_Col_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_4th_Col_Summary.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_4th_Col_Summary.ColumnCount = 3;
+            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_4th_Col_Summary.Controls.Add(this.tbl_Order_4th_Col_Summary_Office_Customers, 1, 1);
+            this.tbl_4th_Col_Summary.Controls.Add(this.tbl_Order_4th_Col_Summary_Cottage_Services, 1, 2);
+            this.tbl_4th_Col_Summary.Location = new System.Drawing.Point(729, 15);
+            this.tbl_4th_Col_Summary.Name = "tbl_4th_Col_Summary";
+            this.tbl_4th_Col_Summary.RowCount = 4;
+            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_4th_Col_Summary.Size = new System.Drawing.Size(226, 610);
+            this.tbl_4th_Col_Summary.TabIndex = 3;
+            // 
+            // tbl_Order_4th_Col_Summary_Office_Customers
+            // 
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Order_4th_Col_Summary_Office_Customers.ColumnCount = 1;
+            this.tbl_Order_4th_Col_Summary_Office_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Controls.Add(this.lsv_Order_Summary_Customers, 0, 3);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary, 0, 0);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary_Office, 0, 1);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary_Customers, 0, 2);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Location = new System.Drawing.Point(7, 18);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Name = "tbl_Order_4th_Col_Summary_Office_Customers";
+            this.tbl_Order_4th_Col_Summary_Office_Customers.RowCount = 4;
+            this.tbl_Order_4th_Col_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Order_4th_Col_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tbl_Order_4th_Col_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Order_4th_Col_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_4th_Col_Summary_Office_Customers.Size = new System.Drawing.Size(210, 168);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.TabIndex = 0;
+            // 
+            // lsv_Order_Summary_Customers
+            // 
+            this.lsv_Order_Summary_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Order_Summary_Customers.Location = new System.Drawing.Point(3, 98);
+            this.lsv_Order_Summary_Customers.Name = "lsv_Order_Summary_Customers";
+            this.lsv_Order_Summary_Customers.Size = new System.Drawing.Size(204, 67);
+            this.lsv_Order_Summary_Customers.TabIndex = 93;
+            this.lsv_Order_Summary_Customers.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_Order_Summary
+            // 
+            this.lbl_Order_Summary.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Order_Summary.AutoSize = true;
+            this.lbl_Order_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Order_Summary.Location = new System.Drawing.Point(3, 10);
+            this.lbl_Order_Summary.Name = "lbl_Order_Summary";
+            this.lbl_Order_Summary.Size = new System.Drawing.Size(188, 20);
+            this.lbl_Order_Summary.TabIndex = 46;
+            this.lbl_Order_Summary.Text = "Varauksen yhteenveto";
+            // 
+            // lbl_Order_Summary_Office
+            // 
+            this.lbl_Order_Summary_Office.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Order_Summary_Office.AutoSize = true;
+            this.lbl_Order_Summary_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Order_Summary_Office.Location = new System.Drawing.Point(3, 47);
+            this.lbl_Order_Summary_Office.Name = "lbl_Order_Summary_Office";
+            this.lbl_Order_Summary_Office.Size = new System.Drawing.Size(88, 20);
+            this.lbl_Order_Summary_Office.TabIndex = 91;
+            this.lbl_Order_Summary_Office.Text = "Toimipiste: ";
+            // 
+            // lbl_Order_Summary_Customers
+            // 
+            this.lbl_Order_Summary_Customers.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_Order_Summary_Customers.AutoSize = true;
+            this.lbl_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Order_Summary_Customers.Location = new System.Drawing.Point(65, 75);
+            this.lbl_Order_Summary_Customers.Name = "lbl_Order_Summary_Customers";
+            this.lbl_Order_Summary_Customers.Size = new System.Drawing.Size(79, 20);
+            this.lbl_Order_Summary_Customers.TabIndex = 92;
+            this.lbl_Order_Summary_Customers.Text = "Asiakkaat";
+            // 
+            // tbl_Order_4th_Col_Summary_Cottage_Services
+            // 
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.ColumnCount = 1;
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Controls.Add(this.lbl_Order_Summary_Cottages, 0, 0);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Controls.Add(this.lsv_Order_Summary_Cottages, 0, 1);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Controls.Add(this.lsv_Order_Summary_Services, 0, 3);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Controls.Add(this.lbl_Order_Summary_Services, 0, 2);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Controls.Add(this.tbl_Order_Summary_Buttons, 0, 4);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Location = new System.Drawing.Point(7, 192);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Name = "tbl_Order_4th_Col_Summary_Cottage_Services";
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowCount = 5;
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.63388F));
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.36612F));
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.Size = new System.Drawing.Size(210, 400);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.TabIndex = 1;
+            // 
+            // lbl_Order_Summary_Cottages
+            // 
+            this.lbl_Order_Summary_Cottages.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_Order_Summary_Cottages.AutoSize = true;
+            this.lbl_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Order_Summary_Cottages.Location = new System.Drawing.Point(71, 0);
+            this.lbl_Order_Summary_Cottages.Name = "lbl_Order_Summary_Cottages";
+            this.lbl_Order_Summary_Cottages.Size = new System.Drawing.Size(68, 20);
+            this.lbl_Order_Summary_Cottages.TabIndex = 47;
+            this.lbl_Order_Summary_Cottages.Text = "Majoitus";
+            // 
+            // lsv_Order_Summary_Cottages
+            // 
+            this.lsv_Order_Summary_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 23);
+            this.lsv_Order_Summary_Cottages.Name = "lsv_Order_Summary_Cottages";
+            this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(204, 139);
+            this.lsv_Order_Summary_Cottages.TabIndex = 50;
+            this.lsv_Order_Summary_Cottages.UseCompatibleStateImageBehavior = false;
+            // 
+            // lsv_Order_Summary_Services
+            // 
+            this.lsv_Order_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 188);
+            this.lsv_Order_Summary_Services.Name = "lsv_Order_Summary_Services";
+            this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(204, 148);
+            this.lsv_Order_Summary_Services.TabIndex = 52;
+            this.lsv_Order_Summary_Services.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_Order_Summary_Services
+            // 
+            this.lbl_Order_Summary_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_Order_Summary_Services.AutoSize = true;
+            this.lbl_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Order_Summary_Services.Location = new System.Drawing.Point(49, 165);
+            this.lbl_Order_Summary_Services.Name = "lbl_Order_Summary_Services";
+            this.lbl_Order_Summary_Services.Size = new System.Drawing.Size(112, 20);
+            this.lbl_Order_Summary_Services.TabIndex = 51;
+            this.lbl_Order_Summary_Services.Text = "Valitut palvelut";
+            // 
+            // tbl_Order_Summary_Buttons
+            // 
+            this.tbl_Order_Summary_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Order_Summary_Buttons.ColumnCount = 2;
+            this.tbl_Order_Summary_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Order_Summary_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Order_Summary_Buttons.Controls.Add(this.btn_Order_Summary_Next_Page, 0, 0);
+            this.tbl_Order_Summary_Buttons.Controls.Add(this.btn_Order_Summary_Delete_From_List, 0, 0);
+            this.tbl_Order_Summary_Buttons.Location = new System.Drawing.Point(3, 342);
+            this.tbl_Order_Summary_Buttons.Name = "tbl_Order_Summary_Buttons";
+            this.tbl_Order_Summary_Buttons.RowCount = 1;
+            this.tbl_Order_Summary_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Order_Summary_Buttons.Size = new System.Drawing.Size(204, 55);
+            this.tbl_Order_Summary_Buttons.TabIndex = 53;
+            // 
+            // btn_Order_Summary_Next_Page
+            // 
+            this.btn_Order_Summary_Next_Page.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Order_Summary_Next_Page.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Summary_Next_Page.BackgroundImage")));
+            this.btn_Order_Summary_Next_Page.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Summary_Next_Page.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Summary_Next_Page.Location = new System.Drawing.Point(153, 3);
+            this.btn_Order_Summary_Next_Page.Name = "btn_Order_Summary_Next_Page";
+            this.btn_Order_Summary_Next_Page.Size = new System.Drawing.Size(48, 48);
+            this.btn_Order_Summary_Next_Page.TabIndex = 53;
+            this.btn_Order_Summary_Next_Page.UseVisualStyleBackColor = true;
+            // 
+            // btn_Order_Summary_Delete_From_List
+            // 
+            this.btn_Order_Summary_Delete_From_List.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Summary_Delete_From_List.BackgroundImage")));
+            this.btn_Order_Summary_Delete_From_List.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Summary_Delete_From_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Summary_Delete_From_List.Location = new System.Drawing.Point(3, 3);
+            this.btn_Order_Summary_Delete_From_List.Name = "btn_Order_Summary_Delete_From_List";
+            this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
+            this.btn_Order_Summary_Delete_From_List.TabIndex = 52;
+            this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
+            // 
+            // tab_Edit
+            // 
+            this.tab_Edit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_Edit.Controls.Add(this.grb_Services);
+            this.tab_Edit.Controls.Add(this.grb_Cottages);
+            this.tab_Edit.Controls.Add(this.grb_Customer_Management);
+            this.tab_Edit.Controls.Add(this.grb_Office);
+            this.tab_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Edit.Location = new System.Drawing.Point(4, 29);
+            this.tab_Edit.Name = "tab_Edit";
+            this.tab_Edit.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Edit.Size = new System.Drawing.Size(976, 648);
+            this.tab_Edit.TabIndex = 1;
+            this.tab_Edit.Text = "Tietojen Hallinta";
             // 
             // grb_Services
             // 
@@ -1043,19 +1240,19 @@
             this.lbl_Office.TabIndex = 103;
             this.lbl_Office.Text = "Toimipisteen valinta";
             // 
-            // tabPage3
+            // tab_History
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(976, 648);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Tilaushistoria";
+            this.tab_History.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_History.Controls.Add(this.groupBox3);
+            this.tab_History.Controls.Add(this.groupBox2);
+            this.tab_History.Controls.Add(this.groupBox1);
+            this.tab_History.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_History.Location = new System.Drawing.Point(4, 29);
+            this.tab_History.Name = "tab_History";
+            this.tab_History.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_History.Size = new System.Drawing.Size(976, 648);
+            this.tab_History.TabIndex = 2;
+            this.tab_History.Text = "Varaushistoria";
             // 
             // groupBox3
             // 
@@ -1267,24 +1464,24 @@
             this.button2.Text = "Katso asiakkaan varaushistoria";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tab_Settings
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage4.Controls.Add(this.btn_Remove_All_Files);
-            this.tabPage4.Controls.Add(this.lbl_Remove_All_Files);
-            this.tabPage4.Controls.Add(this.cbo_Default_Office_select);
-            this.tabPage4.Controls.Add(this.lbl_Default_Office);
-            this.tabPage4.Controls.Add(this.lbl_Font_Example);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.lbl_System_Font);
-            this.tabPage4.Controls.Add(this.cbo_Language_Select);
-            this.tabPage4.Controls.Add(this.lbl_System_Language);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(976, 648);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Asetukset";
+            this.tab_Settings.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_Settings.Controls.Add(this.btn_Remove_All_Files);
+            this.tab_Settings.Controls.Add(this.lbl_Remove_All_Files);
+            this.tab_Settings.Controls.Add(this.cbo_Default_Office_select);
+            this.tab_Settings.Controls.Add(this.lbl_Default_Office);
+            this.tab_Settings.Controls.Add(this.lbl_Font_Example);
+            this.tab_Settings.Controls.Add(this.comboBox1);
+            this.tab_Settings.Controls.Add(this.lbl_System_Font);
+            this.tab_Settings.Controls.Add(this.cbo_Language_Select);
+            this.tab_Settings.Controls.Add(this.lbl_System_Language);
+            this.tab_Settings.Location = new System.Drawing.Point(4, 29);
+            this.tab_Settings.Name = "tab_Settings";
+            this.tab_Settings.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Settings.Size = new System.Drawing.Size(976, 648);
+            this.tab_Settings.TabIndex = 3;
+            this.tab_Settings.Text = "Asetukset";
             // 
             // btn_Remove_All_Files
             // 
@@ -1383,252 +1580,55 @@
             this.lbl_System_Language.TabIndex = 9;
             this.lbl_System_Language.Text = "Kieli";
             // 
-            // tabPage5
+            // tab_Manual
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage5.Controls.Add(this.treeView1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(976, 648);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Ohjeet";
+            this.tab_Manual.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_Manual.Controls.Add(this.trv_Manual);
+            this.tab_Manual.Location = new System.Drawing.Point(4, 29);
+            this.tab_Manual.Name = "tab_Manual";
+            this.tab_Manual.Size = new System.Drawing.Size(976, 648);
+            this.tab_Manual.TabIndex = 4;
+            this.tab_Manual.Text = "Ohjeet";
             // 
-            // treeView1
+            // trv_Manual
             // 
-            this.treeView1.Location = new System.Drawing.Point(23, 25);
-            this.treeView1.Name = "treeView1";
-            treeNode57.Name = "Node4";
-            treeNode57.Text = "Toimipisteen valinta";
-            treeNode58.Name = "Node5";
-            treeNode58.Text = "Asiakkaiden valinta";
-            treeNode59.Name = "Node6";
-            treeNode59.Text = "Mökin valinta";
-            treeNode60.Name = "Node7";
-            treeNode60.Text = "Mökin yhteenveto";
-            treeNode61.Name = "Node8";
-            treeNode61.Text = "Lisäpalveluiden valinta";
-            treeNode62.Name = "Node9";
-            treeNode62.Text = "Tilauksen yhteenveto";
-            treeNode63.Name = "Node0";
-            treeNode63.Text = "Uusi varaus";
-            treeNode64.Name = "Node10";
-            treeNode64.Text = "Asiakkaiden hallinta";
-            treeNode65.Name = "Node11";
-            treeNode65.Text = "Toimipisteen valinta";
-            treeNode66.Name = "Node12";
-            treeNode66.Text = "Toimipisteen palvelut";
-            treeNode67.Name = "Node13";
-            treeNode67.Text = "Toimipisteen mökit";
-            treeNode68.Name = "Node1";
-            treeNode68.Text = "Tietojen hallinta";
-            treeNode69.Name = "Node2";
-            treeNode69.Text = "Varaushistoria";
-            treeNode70.Name = "Node3";
-            treeNode70.Text = "Asetukset";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode63,
-            treeNode68,
-            treeNode69,
-            treeNode70});
-            this.treeView1.Size = new System.Drawing.Size(308, 586);
-            this.treeView1.TabIndex = 0;
-            // 
-            // tbl_4th_Col_Summary
-            // 
-            this.tbl_4th_Col_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_4th_Col_Summary.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_4th_Col_Summary.ColumnCount = 3;
-            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_4th_Col_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_4th_Col_Summary.Controls.Add(this.tbl_Order_Summary_Office_Customers, 1, 1);
-            this.tbl_4th_Col_Summary.Controls.Add(this.tbl_Order_Summary_Cottage_Services, 1, 2);
-            this.tbl_4th_Col_Summary.Location = new System.Drawing.Point(729, 15);
-            this.tbl_4th_Col_Summary.Name = "tbl_4th_Col_Summary";
-            this.tbl_4th_Col_Summary.RowCount = 4;
-            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_4th_Col_Summary.Size = new System.Drawing.Size(226, 610);
-            this.tbl_4th_Col_Summary.TabIndex = 3;
-            // 
-            // tbl_Order_Summary_Office_Customers
-            // 
-            this.tbl_Order_Summary_Office_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Order_Summary_Office_Customers.ColumnCount = 1;
-            this.tbl_Order_Summary_Office_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Summary_Office_Customers.Controls.Add(this.lsv_Order_Summary_Customers, 0, 3);
-            this.tbl_Order_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary, 0, 0);
-            this.tbl_Order_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary_Office, 0, 1);
-            this.tbl_Order_Summary_Office_Customers.Controls.Add(this.lbl_Order_Summary_Customers, 0, 2);
-            this.tbl_Order_Summary_Office_Customers.Location = new System.Drawing.Point(7, 18);
-            this.tbl_Order_Summary_Office_Customers.Name = "tbl_Order_Summary_Office_Customers";
-            this.tbl_Order_Summary_Office_Customers.RowCount = 4;
-            this.tbl_Order_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Order_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tbl_Order_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Office_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Summary_Office_Customers.Size = new System.Drawing.Size(209, 281);
-            this.tbl_Order_Summary_Office_Customers.TabIndex = 0;
-            // 
-            // lbl_Order_Summary
-            // 
-            this.lbl_Order_Summary.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Order_Summary.AutoSize = true;
-            this.lbl_Order_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Order_Summary.Location = new System.Drawing.Point(3, 10);
-            this.lbl_Order_Summary.Name = "lbl_Order_Summary";
-            this.lbl_Order_Summary.Size = new System.Drawing.Size(188, 20);
-            this.lbl_Order_Summary.TabIndex = 46;
-            this.lbl_Order_Summary.Text = "Varauksen yhteenveto";
-            // 
-            // lbl_Order_Summary_Office
-            // 
-            this.lbl_Order_Summary_Office.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Order_Summary_Office.AutoSize = true;
-            this.lbl_Order_Summary_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Order_Summary_Office.Location = new System.Drawing.Point(3, 47);
-            this.lbl_Order_Summary_Office.Name = "lbl_Order_Summary_Office";
-            this.lbl_Order_Summary_Office.Size = new System.Drawing.Size(88, 20);
-            this.lbl_Order_Summary_Office.TabIndex = 91;
-            this.lbl_Order_Summary_Office.Text = "Toimipiste: ";
-            // 
-            // lbl_Order_Summary_Customers
-            // 
-            this.lbl_Order_Summary_Customers.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_Order_Summary_Customers.AutoSize = true;
-            this.lbl_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Customers.Location = new System.Drawing.Point(65, 75);
-            this.lbl_Order_Summary_Customers.Name = "lbl_Order_Summary_Customers";
-            this.lbl_Order_Summary_Customers.Size = new System.Drawing.Size(79, 20);
-            this.lbl_Order_Summary_Customers.TabIndex = 92;
-            this.lbl_Order_Summary_Customers.Text = "Asiakkaat";
-            // 
-            // lsv_Order_Summary_Customers
-            // 
-            this.lsv_Order_Summary_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Customers.Location = new System.Drawing.Point(3, 98);
-            this.lsv_Order_Summary_Customers.Name = "lsv_Order_Summary_Customers";
-            this.lsv_Order_Summary_Customers.Size = new System.Drawing.Size(203, 180);
-            this.lsv_Order_Summary_Customers.TabIndex = 93;
-            this.lsv_Order_Summary_Customers.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_Order_Summary_Cottage_Services
-            // 
-            this.tbl_Order_Summary_Cottage_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Order_Summary_Cottage_Services.ColumnCount = 1;
-            this.tbl_Order_Summary_Cottage_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Summary_Cottage_Services.Controls.Add(this.lbl_Order_Summary_Cottages, 0, 0);
-            this.tbl_Order_Summary_Cottage_Services.Controls.Add(this.lsv_Order_Summary_Cottages, 0, 1);
-            this.tbl_Order_Summary_Cottage_Services.Controls.Add(this.lsv_Order_Summary_Services, 0, 3);
-            this.tbl_Order_Summary_Cottage_Services.Controls.Add(this.lbl_Order_Summary_Services, 0, 2);
-            this.tbl_Order_Summary_Cottage_Services.Controls.Add(this.tbl_Order_Summary_Buttons, 0, 4);
-            this.tbl_Order_Summary_Cottage_Services.Location = new System.Drawing.Point(8, 308);
-            this.tbl_Order_Summary_Cottage_Services.Name = "tbl_Order_Summary_Cottage_Services";
-            this.tbl_Order_Summary_Cottage_Services.RowCount = 5;
-            this.tbl_Order_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.63388F));
-            this.tbl_Order_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.36612F));
-            this.tbl_Order_Summary_Cottage_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbl_Order_Summary_Cottage_Services.Size = new System.Drawing.Size(213, 284);
-            this.tbl_Order_Summary_Cottage_Services.TabIndex = 1;
-            // 
-            // lbl_Order_Summary_Cottages
-            // 
-            this.lbl_Order_Summary_Cottages.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_Order_Summary_Cottages.AutoSize = true;
-            this.lbl_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Cottages.Location = new System.Drawing.Point(72, 0);
-            this.lbl_Order_Summary_Cottages.Name = "lbl_Order_Summary_Cottages";
-            this.lbl_Order_Summary_Cottages.Size = new System.Drawing.Size(68, 20);
-            this.lbl_Order_Summary_Cottages.TabIndex = 47;
-            this.lbl_Order_Summary_Cottages.Text = "Majoitus";
-            // 
-            // lsv_Order_Summary_Cottages
-            // 
-            this.lsv_Order_Summary_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Order_Summary_Cottages.Name = "lsv_Order_Summary_Cottages";
-            this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(207, 83);
-            this.lsv_Order_Summary_Cottages.TabIndex = 50;
-            this.lsv_Order_Summary_Cottages.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbl_Order_Summary_Services
-            // 
-            this.lbl_Order_Summary_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_Order_Summary_Services.AutoSize = true;
-            this.lbl_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Services.Location = new System.Drawing.Point(50, 109);
-            this.lbl_Order_Summary_Services.Name = "lbl_Order_Summary_Services";
-            this.lbl_Order_Summary_Services.Size = new System.Drawing.Size(112, 20);
-            this.lbl_Order_Summary_Services.TabIndex = 51;
-            this.lbl_Order_Summary_Services.Text = "Valitut palvelut";
-            // 
-            // lsv_Order_Summary_Services
-            // 
-            this.lsv_Order_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 132);
-            this.lsv_Order_Summary_Services.Name = "lsv_Order_Summary_Services";
-            this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(207, 88);
-            this.lsv_Order_Summary_Services.TabIndex = 52;
-            this.lsv_Order_Summary_Services.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_Order_Summary_Buttons
-            // 
-            this.tbl_Order_Summary_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Order_Summary_Buttons.ColumnCount = 2;
-            this.tbl_Order_Summary_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Order_Summary_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Order_Summary_Buttons.Controls.Add(this.btn_Order_Summary_Next_Page, 0, 0);
-            this.tbl_Order_Summary_Buttons.Controls.Add(this.btn_Order_Summary_Delete_From_List, 0, 0);
-            this.tbl_Order_Summary_Buttons.Location = new System.Drawing.Point(3, 226);
-            this.tbl_Order_Summary_Buttons.Name = "tbl_Order_Summary_Buttons";
-            this.tbl_Order_Summary_Buttons.RowCount = 1;
-            this.tbl_Order_Summary_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Order_Summary_Buttons.Size = new System.Drawing.Size(207, 55);
-            this.tbl_Order_Summary_Buttons.TabIndex = 53;
-            // 
-            // btn_Order_Summary_Delete_From_List
-            // 
-            this.btn_Order_Summary_Delete_From_List.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Summary_Delete_From_List.BackgroundImage")));
-            this.btn_Order_Summary_Delete_From_List.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Summary_Delete_From_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Summary_Delete_From_List.Location = new System.Drawing.Point(3, 3);
-            this.btn_Order_Summary_Delete_From_List.Name = "btn_Order_Summary_Delete_From_List";
-            this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Delete_From_List.TabIndex = 52;
-            this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
-            // 
-            // btn_Order_Summary_Next_Page
-            // 
-            this.btn_Order_Summary_Next_Page.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Order_Summary_Next_Page.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Summary_Next_Page.BackgroundImage")));
-            this.btn_Order_Summary_Next_Page.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Summary_Next_Page.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Summary_Next_Page.Location = new System.Drawing.Point(156, 3);
-            this.btn_Order_Summary_Next_Page.Name = "btn_Order_Summary_Next_Page";
-            this.btn_Order_Summary_Next_Page.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Next_Page.TabIndex = 53;
-            this.btn_Order_Summary_Next_Page.UseVisualStyleBackColor = true;
+            this.trv_Manual.Location = new System.Drawing.Point(23, 25);
+            this.trv_Manual.Name = "trv_Manual";
+            treeNode15.Name = "Node4";
+            treeNode15.Text = "Toimipisteen valinta";
+            treeNode16.Name = "Node5";
+            treeNode16.Text = "Asiakkaiden valinta";
+            treeNode17.Name = "Node6";
+            treeNode17.Text = "Mökin valinta";
+            treeNode18.Name = "Node7";
+            treeNode18.Text = "Mökin yhteenveto";
+            treeNode19.Name = "Node8";
+            treeNode19.Text = "Lisäpalveluiden valinta";
+            treeNode20.Name = "Node9";
+            treeNode20.Text = "Tilauksen yhteenveto";
+            treeNode21.Name = "Node0";
+            treeNode21.Text = "Uusi varaus";
+            treeNode22.Name = "Node10";
+            treeNode22.Text = "Asiakkaiden hallinta";
+            treeNode23.Name = "Node11";
+            treeNode23.Text = "Toimipisteen valinta";
+            treeNode24.Name = "Node12";
+            treeNode24.Text = "Toimipisteen palvelut";
+            treeNode25.Name = "Node13";
+            treeNode25.Text = "Toimipisteen mökit";
+            treeNode26.Name = "Node1";
+            treeNode26.Text = "Tietojen hallinta";
+            treeNode27.Name = "Node2";
+            treeNode27.Text = "Varaushistoria";
+            treeNode28.Name = "Node3";
+            treeNode28.Text = "Asetukset";
+            this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode21,
+            treeNode26,
+            treeNode27,
+            treeNode28});
+            this.trv_Manual.Size = new System.Drawing.Size(308, 586);
+            this.trv_Manual.TabIndex = 0;
             // 
             // Main_window
             // 
@@ -1643,7 +1643,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_window_Load);
             this.tab_Menu.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tab_New_Order.ResumeLayout(false);
             this.tbl_Order_base.ResumeLayout(false);
             this.tbl_Order_1st_Col_Office_Customer.ResumeLayout(false);
             this.tbl_Order_1st_Col_Office.ResumeLayout(false);
@@ -1659,7 +1659,13 @@
             this.tbl_Order_3rd_Col_Cottage_Summary.PerformLayout();
             this.tbl_Order_3rd_Col_Services.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tbl_4th_Col_Summary.ResumeLayout(false);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.ResumeLayout(false);
+            this.tbl_Order_4th_Col_Summary_Office_Customers.PerformLayout();
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.ResumeLayout(false);
+            this.tbl_Order_4th_Col_Summary_Cottage_Services.PerformLayout();
+            this.tbl_Order_Summary_Buttons.ResumeLayout(false);
+            this.tab_Edit.ResumeLayout(false);
             this.grb_Services.ResumeLayout(false);
             this.grb_Services.PerformLayout();
             this.grb_Cottages.ResumeLayout(false);
@@ -1668,22 +1674,16 @@
             this.grb_Customer_Management.PerformLayout();
             this.grb_Office.ResumeLayout(false);
             this.grb_Office.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.tab_History.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tbl_4th_Col_Summary.ResumeLayout(false);
-            this.tbl_Order_Summary_Office_Customers.ResumeLayout(false);
-            this.tbl_Order_Summary_Office_Customers.PerformLayout();
-            this.tbl_Order_Summary_Cottage_Services.ResumeLayout(false);
-            this.tbl_Order_Summary_Cottage_Services.PerformLayout();
-            this.tbl_Order_Summary_Buttons.ResumeLayout(false);
+            this.tab_Settings.ResumeLayout(false);
+            this.tab_Settings.PerformLayout();
+            this.tab_Manual.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1691,10 +1691,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tab_Menu;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tab_Edit;
+        private System.Windows.Forms.TabPage tab_History;
+        private System.Windows.Forms.TabPage tab_Settings;
+        private System.Windows.Forms.TabPage tab_Manual;
         private System.Windows.Forms.GroupBox grb_Services;
         private System.Windows.Forms.Button btn_Services_delete;
         private System.Windows.Forms.Button btn_Services_edit;
@@ -1734,7 +1734,7 @@
         private System.Windows.Forms.Label lbl_System_Font;
         private System.Windows.Forms.ComboBox cbo_Language_Select;
         private System.Windows.Forms.Label lbl_System_Language;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView trv_Manual;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -1755,7 +1755,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tab_New_Order;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_base;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_1st_Col_Office_Customer;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Customers;
@@ -1791,12 +1791,12 @@
         private System.Windows.Forms.Label lbl_Order_Services;
         private System.Windows.Forms.ListView lsv_Order_Services_All;
         private System.Windows.Forms.TableLayoutPanel tbl_4th_Col_Summary;
-        private System.Windows.Forms.TableLayoutPanel tbl_Order_Summary_Office_Customers;
+        private System.Windows.Forms.TableLayoutPanel tbl_Order_4th_Col_Summary_Office_Customers;
         private System.Windows.Forms.ListView lsv_Order_Summary_Customers;
         private System.Windows.Forms.Label lbl_Order_Summary;
         private System.Windows.Forms.Label lbl_Order_Summary_Office;
         private System.Windows.Forms.Label lbl_Order_Summary_Customers;
-        private System.Windows.Forms.TableLayoutPanel tbl_Order_Summary_Cottage_Services;
+        private System.Windows.Forms.TableLayoutPanel tbl_Order_4th_Col_Summary_Cottage_Services;
         private System.Windows.Forms.Label lbl_Order_Summary_Cottages;
         private System.Windows.Forms.ListView lsv_Order_Summary_Cottages;
         private System.Windows.Forms.ListView lsv_Order_Summary_Services;
