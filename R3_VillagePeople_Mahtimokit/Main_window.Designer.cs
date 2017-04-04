@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_window));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode29,
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34});
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode36,
+            treeNode37,
+            treeNode38,
+            treeNode39});
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Asetukset");
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grb_Order_Customers = new System.Windows.Forms.GroupBox();
@@ -132,7 +132,6 @@
             this.lbl_Office = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btn_Remove_All_Files = new System.Windows.Forms.Button();
             this.lbl_Remove_All_Files = new System.Windows.Forms.Label();
             this.cbo_Default_Office_select = new System.Windows.Forms.ComboBox();
@@ -142,7 +141,28 @@
             this.lbl_System_Font = new System.Windows.Forms.Label();
             this.cbo_Language_Select = new System.Windows.Forms.ComboBox();
             this.lbl_System_Language = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grb_Order_Customers.SuspendLayout();
@@ -156,8 +176,12 @@
             this.grb_Cottages.SuspendLayout();
             this.grb_Customer_Management.SuspendLayout();
             this.grb_Office.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -220,7 +244,7 @@
             this.btn_Order_Customers_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Customers_Search.BackgroundImage")));
             this.btn_Order_Customers_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(153, 442);
+            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(180, 443);
             this.btn_Order_Customers_Search.Name = "btn_Order_Customers_Search";
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 101;
@@ -231,7 +255,7 @@
             this.txt_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Customers_Search.Location = new System.Drawing.Point(19, 446);
             this.txt_Order_Customers_Search.Name = "txt_Order_Customers_Search";
-            this.txt_Order_Customers_Search.Size = new System.Drawing.Size(131, 26);
+            this.txt_Order_Customers_Search.Size = new System.Drawing.Size(155, 26);
             this.txt_Order_Customers_Search.TabIndex = 100;
             // 
             // lsv_Order_Customers_All
@@ -246,11 +270,11 @@
             // btn_Order_Customers_Add
             // 
             this.btn_Order_Customers_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Customers_Add.Location = new System.Drawing.Point(19, 483);
+            this.btn_Order_Customers_Add.Location = new System.Drawing.Point(19, 478);
             this.btn_Order_Customers_Add.Name = "btn_Order_Customers_Add";
-            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(193, 41);
+            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(193, 49);
             this.btn_Order_Customers_Add.TabIndex = 98;
-            this.btn_Order_Customers_Add.Text = "Lisää asiakas tilaukseen";
+            this.btn_Order_Customers_Add.Text = "Lisää asiakas varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
             // 
             // grb_Order_Office
@@ -378,9 +402,9 @@
             this.lbl_Order_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Order_Summary.Location = new System.Drawing.Point(18, 15);
             this.lbl_Order_Summary.Name = "lbl_Order_Summary";
-            this.lbl_Order_Summary.Size = new System.Drawing.Size(178, 20);
+            this.lbl_Order_Summary.Size = new System.Drawing.Size(188, 20);
             this.lbl_Order_Summary.TabIndex = 45;
-            this.lbl_Order_Summary.Text = "Tilauksen yhteenveto";
+            this.lbl_Order_Summary.Text = "Varauksen yhteenveto";
             // 
             // lsv_Order_Summary_Services
             // 
@@ -486,11 +510,11 @@
             // btn_Order_Service_add
             // 
             this.btn_Order_Service_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Service_add.Location = new System.Drawing.Point(6, 353);
+            this.btn_Order_Service_add.Location = new System.Drawing.Point(6, 348);
             this.btn_Order_Service_add.Name = "btn_Order_Service_add";
-            this.btn_Order_Service_add.Size = new System.Drawing.Size(185, 41);
+            this.btn_Order_Service_add.Size = new System.Drawing.Size(185, 49);
             this.btn_Order_Service_add.TabIndex = 60;
-            this.btn_Order_Service_add.Text = "Lisää palvelu tilaukseen";
+            this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
             // 
             // grb_Order_Cottage_Summary
@@ -524,9 +548,9 @@
             this.lbl_Order_Cottage_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Order_Cottage_Summary_Customers.Location = new System.Drawing.Point(12, 95);
             this.lbl_Order_Cottage_Summary_Customers.Name = "lbl_Order_Cottage_Summary_Customers";
-            this.lbl_Order_Cottage_Summary_Customers.Size = new System.Drawing.Size(139, 20);
+            this.lbl_Order_Cottage_Summary_Customers.Size = new System.Drawing.Size(149, 20);
             this.lbl_Order_Cottage_Summary_Customers.TabIndex = 82;
-            this.lbl_Order_Cottage_Summary_Customers.Text = "Tilauksen henkilöt:";
+            this.lbl_Order_Cottage_Summary_Customers.Text = "Varauksen henkilöt:";
             // 
             // lbl_Order_Cottage_Summary_End
             // 
@@ -588,9 +612,9 @@
             // Btn_Order_Cottage_Add
             // 
             this.Btn_Order_Cottage_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(6, 564);
+            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(6, 559);
             this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
-            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(233, 41);
+            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(233, 49);
             this.Btn_Order_Cottage_Add.TabIndex = 91;
             this.Btn_Order_Cottage_Add.Text = "Lisää mökki tilaukseen";
             this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
@@ -1016,6 +1040,9 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
@@ -1042,16 +1069,6 @@
             this.tabPage4.Size = new System.Drawing.Size(987, 647);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Asetukset";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage5.Controls.Add(this.treeView1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(987, 647);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Ohjeet";
             // 
             // btn_Remove_All_Files
             // 
@@ -1149,45 +1166,266 @@
             this.lbl_System_Language.Size = new System.Drawing.Size(37, 20);
             this.lbl_System_Language.TabIndex = 9;
             this.lbl_System_Language.Text = "Kieli";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage5.Controls.Add(this.treeView1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(987, 647);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Ohjeet";
+            // 
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(23, 25);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node4";
-            treeNode1.Text = "Toimipisteen valinta";
-            treeNode2.Name = "Node5";
-            treeNode2.Text = "Asiakkaiden valinta";
-            treeNode3.Name = "Node6";
-            treeNode3.Text = "Mökin valinta";
-            treeNode4.Name = "Node7";
-            treeNode4.Text = "Mökin yhteenveto";
-            treeNode5.Name = "Node8";
-            treeNode5.Text = "Lisäpalveluiden valinta";
-            treeNode6.Name = "Node9";
-            treeNode6.Text = "Tilauksen yhteenveto";
-            treeNode7.Name = "Node0";
-            treeNode7.Text = "Uusi varaus";
-            treeNode8.Name = "Node10";
-            treeNode8.Text = "Asiakkaiden hallinta";
-            treeNode9.Name = "Node11";
-            treeNode9.Text = "Toimipisteen valinta";
-            treeNode10.Name = "Node12";
-            treeNode10.Text = "Toimipisteen palvelut";
-            treeNode11.Name = "Node13";
-            treeNode11.Text = "Toimipisteen mökit";
-            treeNode12.Name = "Node1";
-            treeNode12.Text = "Tietojen hallinta";
-            treeNode13.Name = "Node2";
-            treeNode13.Text = "Varaushistoria";
-            treeNode14.Name = "Node3";
-            treeNode14.Text = "Asetukset";
+            treeNode29.Name = "Node4";
+            treeNode29.Text = "Toimipisteen valinta";
+            treeNode30.Name = "Node5";
+            treeNode30.Text = "Asiakkaiden valinta";
+            treeNode31.Name = "Node6";
+            treeNode31.Text = "Mökin valinta";
+            treeNode32.Name = "Node7";
+            treeNode32.Text = "Mökin yhteenveto";
+            treeNode33.Name = "Node8";
+            treeNode33.Text = "Lisäpalveluiden valinta";
+            treeNode34.Name = "Node9";
+            treeNode34.Text = "Tilauksen yhteenveto";
+            treeNode35.Name = "Node0";
+            treeNode35.Text = "Uusi varaus";
+            treeNode36.Name = "Node10";
+            treeNode36.Text = "Asiakkaiden hallinta";
+            treeNode37.Name = "Node11";
+            treeNode37.Text = "Toimipisteen valinta";
+            treeNode38.Name = "Node12";
+            treeNode38.Text = "Toimipisteen palvelut";
+            treeNode39.Name = "Node13";
+            treeNode39.Text = "Toimipisteen mökit";
+            treeNode40.Name = "Node1";
+            treeNode40.Text = "Tietojen hallinta";
+            treeNode41.Name = "Node2";
+            treeNode41.Text = "Varaushistoria";
+            treeNode42.Name = "Node3";
+            treeNode42.Text = "Asetukset";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode12,
-            treeNode13,
-            treeNode14});
+            treeNode35,
+            treeNode40,
+            treeNode41,
+            treeNode42});
             this.treeView1.Size = new System.Drawing.Size(308, 586);
             this.treeView1.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(659, 20);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(256, 441);
+            this.groupBox3.TabIndex = 118;
+            this.groupBox3.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 20);
+            this.label9.TabIndex = 107;
+            this.label9.Text = "Valitut lisäpalvelut:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 188);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(149, 20);
+            this.label8.TabIndex = 106;
+            this.label8.Text = "Varauksen henkilöt:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(16, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 20);
+            this.label7.TabIndex = 105;
+            this.label7.Text = "Lähtöpäivä:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 104;
+            this.label6.Text = "Tulopäivä:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(16, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 20);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "Varauksen tiedot";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Mökki:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.listView2);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Location = new System.Drawing.Point(365, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(256, 606);
+            this.groupBox2.TabIndex = 117;
+            this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 488);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(210, 20);
+            this.label3.TabIndex = 108;
+            this.label3.Text = "Hae tietyn vuoden varaukset";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(15, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 20);
+            this.label2.TabIndex = 102;
+            this.label2.Text = "Asiakkaan varaushistoria";
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button3.Location = new System.Drawing.Point(200, 511);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(32, 32);
+            this.button3.TabIndex = 101;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(19, 514);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(175, 26);
+            this.textBox2.TabIndex = 100;
+            // 
+            // listView2
+            // 
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listView2.Location = new System.Drawing.Point(19, 54);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(213, 387);
+            this.listView2.TabIndex = 99;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button4.Location = new System.Drawing.Point(19, 546);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(213, 54);
+            this.button4.TabIndex = 98;
+            this.button4.Text = "Katso varauksen tiedot";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(72, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(256, 606);
+            this.groupBox1.TabIndex = 116;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "Asiakkaiden valinta";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(200, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 32);
+            this.button1.TabIndex = 101;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(19, 514);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 26);
+            this.textBox1.TabIndex = 100;
+            // 
+            // listView1
+            // 
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listView1.Location = new System.Drawing.Point(19, 54);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(213, 387);
+            this.listView1.TabIndex = 99;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button2.Location = new System.Drawing.Point(19, 546);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(213, 54);
+            this.button2.TabIndex = 98;
+            this.button2.Text = "Katso asiakkaan varaushistoria";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main_window
             // 
@@ -1223,9 +1461,16 @@
             this.grb_Customer_Management.PerformLayout();
             this.grb_Office.ResumeLayout(false);
             this.grb_Office.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1322,6 +1567,25 @@
         private System.Windows.Forms.ComboBox cbo_Language_Select;
         private System.Windows.Forms.Label lbl_System_Language;
         private System.Windows.Forms.TreeView treeView1;
-
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button2;
     }
 }
