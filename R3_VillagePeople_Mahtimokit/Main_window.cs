@@ -119,6 +119,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+<<<<<<< HEAD
 
         private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
         {
@@ -134,5 +135,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+=======
+>>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
     }
 }

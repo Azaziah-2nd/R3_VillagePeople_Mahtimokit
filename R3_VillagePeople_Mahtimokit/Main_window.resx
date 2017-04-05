@@ -1764,7 +1764,11 @@
         gg==
 </value>
   </data>
+<<<<<<< HEAD
   <data name="btn_History_Order_Search.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+=======
+  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+>>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABNXSURBVHhe7Z11uDZFGYexuxu7AxPsRBQ7UbBQVFTU
@@ -1942,6 +1946,7 @@
         F2tQWrhrzKJoAAAAAElFTkSuQmCC
 </value>
   </data>
+<<<<<<< HEAD
   <data name="btn_History_Order_Delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -2021,4 +2026,6 @@
         sgAAAABJRU5ErkJggg==
 </value>
   </data>
+=======
+>>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
 </root>
