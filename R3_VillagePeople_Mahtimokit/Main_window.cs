@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class Main_window : Form
+    public partial class btn_History_Selected_Order_Delete : Form
     {
-        public Main_window()
+        public btn_History_Selected_Order_Delete()
         {
             InitializeComponent();
         }
@@ -126,6 +126,11 @@ namespace R3_VillagePeople_Mahtimokit
         }
 
         private void tbl_History_2nd_Col_Orders_Dates_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Remove_All_Files_Click(object sender, EventArgs e)
         {
 
         }
