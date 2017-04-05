@@ -119,5 +119,15 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tbl_History_2nd_Col_Orders_Dates_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
