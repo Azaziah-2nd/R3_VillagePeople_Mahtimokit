@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class btn_History_Selected_Order_Delete
+    partial class Main_window
     {
         /// <summary>
         /// Required designer variable.
@@ -144,26 +144,6 @@
             this.btn_Cottages_Edit = new System.Windows.Forms.Button();
             this.btn_Cottages_Add = new System.Windows.Forms.Button();
             this.tab_History = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
             this.tab_Settings = new System.Windows.Forms.TabPage();
             this.btn_Remove_All_Files = new System.Windows.Forms.Button();
             this.lbl_Remove_All_Files = new System.Windows.Forms.Label();
@@ -176,7 +156,6 @@
             this.lbl_System_Language = new System.Windows.Forms.Label();
             this.tab_Manual = new System.Windows.Forms.TabPage();
             this.trv_Manual = new System.Windows.Forms.TreeView();
-<<<<<<< HEAD
             this.tbl_History_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_2nd_Col_Orders_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -186,6 +165,17 @@
             this.btn_History_Order_Search = new System.Windows.Forms.Button();
             this.txt_History_Order_Search = new System.Windows.Forms.TextBox();
             this.tbl_History_Order_Dates_Delete = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_History_Order_delete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_History_Customer_Search = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -202,22 +192,6 @@
             this.lbl_History_Orders_Filter_Date_End = new System.Windows.Forms.Label();
             this.dtp_History_Orders_Filter_Date_Start = new System.Windows.Forms.DateTimePicker();
             this.tdp_History_Orders_Filter_Date_End = new System.Windows.Forms.DateTimePicker();
-            this.lbl_History_Order_Start = new System.Windows.Forms.Label();
-            this.lsv_History_Cottage_Details = new System.Windows.Forms.ListView();
-            this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_History_Order_End = new System.Windows.Forms.Label();
-            this.lbl_History_Selected_Order_Customers = new System.Windows.Forms.Label();
-            this.lsv_History_Selected_Order_Customers = new System.Windows.Forms.ListView();
-            this.lbl_History_Order_Services = new System.Windows.Forms.Label();
-            this.lsv_History_Order_Services = new System.Windows.Forms.ListView();
-            this.lbl_History_Order_Additional_Details = new System.Windows.Forms.Label();
-            this.lsv_History_Order_Additional_Details = new System.Windows.Forms.ListView();
-            this.tbl_History_Order_Details_Delete = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_History_Selected_Order_Details = new System.Windows.Forms.Label();
-            this.btn_History_Order_Delete = new System.Windows.Forms.Button();
-            this.lbl_History_Cottage_Details = new System.Windows.Forms.Label();
-=======
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -248,25 +222,20 @@
             this.tbl_Edit_3rd_Col_Cottages_Search.SuspendLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.SuspendLayout();
             this.tab_History.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tab_Settings.SuspendLayout();
             this.tab_Manual.SuspendLayout();
-<<<<<<< HEAD
             this.tbl_History_Base.SuspendLayout();
             this.tbl_History_2nd_Col_Orders_Dates.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tbl_History_Order_Search.SuspendLayout();
             this.tbl_History_Order_Dates_Delete.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tbl_History_1st_Col_Customers_Offices.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tbl_History_Order_Dates.SuspendLayout();
-            this.tbl_History_3th_Col_Selected_Order_Details.SuspendLayout();
-            this.tbl_History_Order_Details_Delete.SuspendLayout();
-=======
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -1423,9 +1392,9 @@
             this.lbl_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cottages.Location = new System.Drawing.Point(9, 15);
             this.lbl_Cottages.Name = "lbl_Cottages";
-            this.lbl_Cottages.Size = new System.Drawing.Size(169, 20);
+            this.lbl_Cottages.Size = new System.Drawing.Size(138, 20);
             this.lbl_Cottages.TabIndex = 78;
-            this.lbl_Cottages.Text = "Asiakkaiden hallinta";
+            this.lbl_Cottages.Text = "Mökkien hallinta";
             // 
             // lsv_Cottages_All
             // 
@@ -1535,10 +1504,8 @@
             // 
             // tab_History
             // 
-            this.tab_History.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.tab_History.Controls.Add(this.groupBox3);
-            this.tab_History.Controls.Add(this.groupBox2);
-            this.tab_History.Controls.Add(this.groupBox1);
+            this.tab_History.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_History.Controls.Add(this.tbl_History_Base);
             this.tab_History.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_History.Location = new System.Drawing.Point(4, 29);
             this.tab_History.Name = "tab_History";
@@ -1546,216 +1513,6 @@
             this.tab_History.Size = new System.Drawing.Size(976, 648);
             this.tab_History.TabIndex = 2;
             this.tab_History.Text = "Varaushistoria";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(659, 20);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(256, 441);
-            this.groupBox3.TabIndex = 118;
-            this.groupBox3.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 233);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 20);
-            this.label9.TabIndex = 107;
-            this.label9.Text = "Valitut lisäpalvelut:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 20);
-            this.label8.TabIndex = 106;
-            this.label8.Text = "Varauksen henkilöt:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 20);
-            this.label7.TabIndex = 105;
-            this.label7.Text = "Lähtöpäivä:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 20);
-            this.label6.TabIndex = 104;
-            this.label6.Text = "Tulopäivä:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(16, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 20);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "Varauksen tiedot";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "Mökki:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.listView2);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Location = new System.Drawing.Point(365, 20);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 606);
-            this.groupBox2.TabIndex = 117;
-            this.groupBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 488);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 20);
-            this.label3.TabIndex = 108;
-            this.label3.Text = "Hae tietyn vuoden varaukset";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(15, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 20);
-            this.label2.TabIndex = 102;
-            this.label2.Text = "Asiakkaan varaushistoria";
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(200, 511);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 32);
-            this.button3.TabIndex = 101;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(19, 514);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 26);
-            this.textBox2.TabIndex = 100;
-            // 
-            // listView2
-            // 
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listView2.Location = new System.Drawing.Point(19, 54);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(213, 387);
-            this.listView2.TabIndex = 99;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(19, 546);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(213, 54);
-            this.button4.TabIndex = 98;
-            this.button4.Text = "Katso varauksen tiedot";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(72, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 606);
-            this.groupBox1.TabIndex = 116;
-            this.groupBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(15, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 20);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "Asiakkaiden valinta";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(200, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 32);
-            this.button1.TabIndex = 101;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(19, 514);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 26);
-            this.textBox1.TabIndex = 100;
-            // 
-            // listView1
-            // 
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listView1.Location = new System.Drawing.Point(19, 54);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(213, 387);
-            this.listView1.TabIndex = 99;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(19, 546);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 54);
-            this.button2.TabIndex = 98;
-            this.button2.Text = "Katso asiakkaan varaushistoria";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // tab_Settings
             // 
@@ -1784,7 +1541,6 @@
             this.btn_Remove_All_Files.TabIndex = 17;
             this.btn_Remove_All_Files.Text = "POISTA";
             this.btn_Remove_All_Files.UseVisualStyleBackColor = true;
-            this.btn_Remove_All_Files.Click += new System.EventHandler(this.btn_Remove_All_Files_Click);
             // 
             // lbl_Remove_All_Files
             // 
@@ -1886,7 +1642,7 @@
             // 
             // trv_Manual
             // 
-            this.trv_Manual.Location = new System.Drawing.Point(23, 25);
+            this.trv_Manual.Location = new System.Drawing.Point(8, 15);
             this.trv_Manual.Name = "trv_Manual";
             treeNode1.Name = "Node4";
             treeNode1.Text = "Toimipisteen valinta";
@@ -1924,7 +1680,6 @@
             this.trv_Manual.Size = new System.Drawing.Size(308, 586);
             this.trv_Manual.TabIndex = 0;
             // 
-<<<<<<< HEAD
             // tbl_History_Base
             // 
             this.tbl_History_Base.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -1936,7 +1691,7 @@
             this.tbl_History_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tbl_History_Base.Controls.Add(this.tbl_History_1st_Col_Customers_Offices, 1, 1);
             this.tbl_History_Base.Controls.Add(this.tbl_History_2nd_Col_Orders_Dates, 2, 1);
-            this.tbl_History_Base.Controls.Add(this.tbl_History_3th_Col_Selected_Order_Details, 3, 1);
+            this.tbl_History_Base.Controls.Add(this.tableLayoutPanel11, 3, 1);
             this.tbl_History_Base.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbl_History_Base.Location = new System.Drawing.Point(3, 3);
             this.tbl_History_Base.Name = "tbl_History_Base";
@@ -1982,12 +1737,11 @@
             this.tableLayoutPanel8.Controls.Add(this.tbl_History_Order_Dates_Delete, 0, 3);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(9, 17);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 5;
+            this.tableLayoutPanel8.RowCount = 4;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(285, 573);
             this.tableLayoutPanel8.TabIndex = 1;
             this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
@@ -2011,7 +1765,7 @@
             this.lsv_History_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_History_Orders.Location = new System.Drawing.Point(3, 23);
             this.lsv_History_Orders.Name = "lsv_History_Orders";
-            this.lsv_History_Orders.Size = new System.Drawing.Size(279, 409);
+            this.lsv_History_Orders.Size = new System.Drawing.Size(279, 427);
             this.lsv_History_Orders.TabIndex = 100;
             this.lsv_History_Orders.UseCompatibleStateImageBehavior = false;
             // 
@@ -2025,11 +1779,11 @@
             this.tbl_History_Order_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tbl_History_Order_Search.Controls.Add(this.btn_History_Order_Search, 0, 0);
             this.tbl_History_Order_Search.Controls.Add(this.txt_History_Order_Search, 0, 0);
-            this.tbl_History_Order_Search.Location = new System.Drawing.Point(3, 438);
+            this.tbl_History_Order_Search.Location = new System.Drawing.Point(3, 456);
             this.tbl_History_Order_Search.Name = "tbl_History_Order_Search";
             this.tbl_History_Order_Search.RowCount = 1;
             this.tbl_History_Order_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_History_Order_Search.Size = new System.Drawing.Size(279, 46);
+            this.tbl_History_Order_Search.Size = new System.Drawing.Size(279, 36);
             this.tbl_History_Order_Search.TabIndex = 101;
             // 
             // btn_History_Order_Search
@@ -2038,9 +1792,9 @@
             this.btn_History_Order_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_Search.BackgroundImage")));
             this.btn_History_Order_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_History_Order_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_Search.Location = new System.Drawing.Point(244, 7);
+            this.btn_History_Order_Search.Location = new System.Drawing.Point(244, 3);
             this.btn_History_Order_Search.Name = "btn_History_Order_Search";
-            this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
             this.btn_History_Order_Search.TabIndex = 102;
             this.btn_History_Order_Search.UseVisualStyleBackColor = true;
             // 
@@ -2048,7 +1802,7 @@
             // 
             this.txt_History_Order_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_History_Order_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_History_Order_Search.Location = new System.Drawing.Point(3, 10);
+            this.txt_History_Order_Search.Location = new System.Drawing.Point(3, 5);
             this.txt_History_Order_Search.Name = "txt_History_Order_Search";
             this.txt_History_Order_Search.Size = new System.Drawing.Size(233, 26);
             this.txt_History_Order_Search.TabIndex = 101;
@@ -2058,15 +1812,172 @@
             this.tbl_History_Order_Dates_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Dates_Delete.ColumnCount = 1;
+            this.tbl_History_Order_Dates_Delete.ColumnCount = 2;
             this.tbl_History_Order_Dates_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.28674F));
+            this.tbl_History_Order_Dates_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71326F));
+            this.tbl_History_Order_Dates_Delete.Controls.Add(this.btn_History_Order_delete, 1, 0);
             this.tbl_History_Order_Dates_Delete.Controls.Add(this.tbl_History_Order_Dates, 0, 0);
-            this.tbl_History_Order_Dates_Delete.Location = new System.Drawing.Point(3, 490);
+            this.tbl_History_Order_Dates_Delete.Location = new System.Drawing.Point(3, 498);
             this.tbl_History_Order_Dates_Delete.Name = "tbl_History_Order_Dates_Delete";
             this.tbl_History_Order_Dates_Delete.RowCount = 1;
             this.tbl_History_Order_Dates_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tbl_History_Order_Dates_Delete.Size = new System.Drawing.Size(279, 72);
             this.tbl_History_Order_Dates_Delete.TabIndex = 102;
+            // 
+            // btn_History_Order_delete
+            // 
+            this.btn_History_Order_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_delete.BackgroundImage")));
+            this.btn_History_Order_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_delete.Location = new System.Drawing.Point(228, 3);
+            this.btn_History_Order_delete.Name = "btn_History_Order_delete";
+            this.btn_History_Order_delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_History_Order_delete.TabIndex = 110;
+            this.btn_History_Order_delete.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableLayoutPanel11.ColumnCount = 3;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel11.Controls.Add(this.label4, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.listView3, 1, 2);
+            this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel12, 1, 3);
+            this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel13, 1, 4);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(642, 15);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 6;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(304, 610);
+            this.tableLayoutPanel11.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 20);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Asiakkaiden hallinta";
+            // 
+            // listView3
+            // 
+            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listView3.Location = new System.Drawing.Point(9, 38);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(285, 444);
+            this.listView3.TabIndex = 100;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel12.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.textBox3, 0, 0);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(9, 488);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(285, 40);
+            this.tableLayoutPanel12.TabIndex = 101;
+            // 
+            // button12
+            // 
+            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button12.Location = new System.Drawing.Point(250, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(32, 32);
+            this.button12.TabIndex = 102;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Location = new System.Drawing.Point(3, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(239, 26);
+            this.textBox3.TabIndex = 101;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel13.ColumnCount = 3;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.Controls.Add(this.button13, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.button14, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.button15, 0, 0);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(9, 534);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(285, 58);
+            this.tableLayoutPanel13.TabIndex = 102;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button13.Location = new System.Drawing.Point(234, 7);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(48, 48);
+            this.button13.TabIndex = 110;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button14.Location = new System.Drawing.Point(118, 7);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(48, 48);
+            this.button14.TabIndex = 109;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button15.Location = new System.Drawing.Point(3, 7);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(48, 48);
+            this.button15.TabIndex = 108;
+            this.button15.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -2223,9 +2134,6 @@
             // 
             // tbl_History_Order_Dates
             // 
-            this.tbl_History_Order_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Dates.ColumnCount = 2;
             this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2238,7 +2146,7 @@
             this.tbl_History_Order_Dates.RowCount = 2;
             this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
             this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
-            this.tbl_History_Order_Dates.Size = new System.Drawing.Size(273, 66);
+            this.tbl_History_Order_Dates.Size = new System.Drawing.Size(217, 66);
             this.tbl_History_Order_Dates.TabIndex = 111;
             // 
             // lbl_History_Orders_Filter_Date_Start
@@ -2253,7 +2161,7 @@
             // lbl_History_Orders_Filter_Date_End
             // 
             this.lbl_History_Orders_Filter_Date_End.AutoSize = true;
-            this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(139, 0);
+            this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(111, 0);
             this.lbl_History_Orders_Filter_Date_End.Name = "lbl_History_Orders_Filter_Date_End";
             this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(72, 17);
             this.lbl_History_Orders_Filter_Date_End.TabIndex = 1;
@@ -2261,218 +2169,28 @@
             // 
             // dtp_History_Orders_Filter_Date_Start
             // 
-            this.dtp_History_Orders_Filter_Date_Start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_History_Orders_Filter_Date_Start.Location = new System.Drawing.Point(3, 20);
             this.dtp_History_Orders_Filter_Date_Start.Name = "dtp_History_Orders_Filter_Date_Start";
-            this.dtp_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(130, 26);
+            this.dtp_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(102, 26);
             this.dtp_History_Orders_Filter_Date_Start.TabIndex = 2;
             this.dtp_History_Orders_Filter_Date_Start.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             // 
             // tdp_History_Orders_Filter_Date_End
             // 
-            this.tdp_History_Orders_Filter_Date_End.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tdp_History_Orders_Filter_Date_End.Checked = false;
-            this.tdp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(139, 20);
+            this.tdp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(111, 20);
             this.tdp_History_Orders_Filter_Date_End.Name = "tdp_History_Orders_Filter_Date_End";
-            this.tdp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(131, 26);
+            this.tdp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(103, 26);
             this.tdp_History_Orders_Filter_Date_End.TabIndex = 3;
             // 
-            // lbl_History_Order_Start
-            // 
-            this.lbl_History_Order_Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Order_Start.AutoSize = true;
-            this.lbl_History_Order_Start.Location = new System.Drawing.Point(9, 176);
-            this.lbl_History_Order_Start.Name = "lbl_History_Order_Start";
-            this.lbl_History_Order_Start.Size = new System.Drawing.Size(105, 20);
-            this.lbl_History_Order_Start.TabIndex = 81;
-            this.lbl_History_Order_Start.Text = "Alkamispäivä:";
-            // 
-            // lsv_History_Cottage_Details
-            // 
-            this.lsv_History_Cottage_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Cottage_Details.Location = new System.Drawing.Point(9, 82);
-            this.lsv_History_Cottage_Details.Name = "lsv_History_Cottage_Details";
-            this.lsv_History_Cottage_Details.Size = new System.Drawing.Size(285, 85);
-            this.lsv_History_Cottage_Details.TabIndex = 80;
-            this.lsv_History_Cottage_Details.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_History_3th_Col_Selected_Order_Details
-            // 
-            this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_3th_Col_Selected_Order_Details.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnCount = 3;
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lsv_History_Order_Additional_Details, 1, 11);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Order_Additional_Details, 1, 10);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lsv_History_Order_Services, 1, 9);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Order_Services, 1, 8);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Cottage_Details, 1, 2);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lsv_History_Cottage_Details, 1, 3);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Order_Start, 1, 4);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Order_End, 1, 5);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lbl_History_Selected_Order_Customers, 1, 6);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.lsv_History_Selected_Order_Customers, 1, 7);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.tbl_History_Order_Details_Delete, 1, 1);
-            this.tbl_History_3th_Col_Selected_Order_Details.Location = new System.Drawing.Point(642, 15);
-            this.tbl_History_3th_Col_Selected_Order_Details.Name = "tbl_History_3th_Col_Selected_Order_Details";
-            this.tbl_History_3th_Col_Selected_Order_Details.RowCount = 13;
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_History_3th_Col_Selected_Order_Details.Size = new System.Drawing.Size(304, 610);
-            this.tbl_History_3th_Col_Selected_Order_Details.TabIndex = 2;
-            // 
-            // lbl_History_Order_End
-            // 
-            this.lbl_History_Order_End.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Order_End.AutoSize = true;
-            this.lbl_History_Order_End.Location = new System.Drawing.Point(9, 211);
-            this.lbl_History_Order_End.Name = "lbl_History_Order_End";
-            this.lbl_History_Order_End.Size = new System.Drawing.Size(119, 20);
-            this.lbl_History_Order_End.TabIndex = 82;
-            this.lbl_History_Order_End.Text = "Päättymispäivä:";
-            // 
-            // lbl_History_Selected_Order_Customers
-            // 
-            this.lbl_History_Selected_Order_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Selected_Order_Customers.AutoSize = true;
-            this.lbl_History_Selected_Order_Customers.Location = new System.Drawing.Point(9, 241);
-            this.lbl_History_Selected_Order_Customers.Name = "lbl_History_Selected_Order_Customers";
-            this.lbl_History_Selected_Order_Customers.Size = new System.Drawing.Size(67, 20);
-            this.lbl_History_Selected_Order_Customers.TabIndex = 83;
-            this.lbl_History_Selected_Order_Customers.Text = "Henkilöt";
-            // 
-            // lsv_History_Selected_Order_Customers
-            // 
-            this.lsv_History_Selected_Order_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Selected_Order_Customers.Location = new System.Drawing.Point(9, 264);
-            this.lsv_History_Selected_Order_Customers.Name = "lsv_History_Selected_Order_Customers";
-            this.lsv_History_Selected_Order_Customers.Size = new System.Drawing.Size(285, 85);
-            this.lsv_History_Selected_Order_Customers.TabIndex = 84;
-            this.lsv_History_Selected_Order_Customers.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbl_History_Order_Services
-            // 
-            this.lbl_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Order_Services.AutoSize = true;
-            this.lbl_History_Order_Services.Location = new System.Drawing.Point(9, 361);
-            this.lbl_History_Order_Services.Name = "lbl_History_Order_Services";
-            this.lbl_History_Order_Services.Size = new System.Drawing.Size(64, 20);
-            this.lbl_History_Order_Services.TabIndex = 103;
-            this.lbl_History_Order_Services.Text = "Palvelut";
-            // 
-            // lsv_History_Order_Services
-            // 
-            this.lsv_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Order_Services.Location = new System.Drawing.Point(9, 384);
-            this.lsv_History_Order_Services.Name = "lsv_History_Order_Services";
-            this.lsv_History_Order_Services.Size = new System.Drawing.Size(285, 85);
-            this.lsv_History_Order_Services.TabIndex = 103;
-            this.lsv_History_Order_Services.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbl_History_Order_Additional_Details
-            // 
-            this.lbl_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Order_Additional_Details.AutoSize = true;
-            this.lbl_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 482);
-            this.lbl_History_Order_Additional_Details.Name = "lbl_History_Order_Additional_Details";
-            this.lbl_History_Order_Additional_Details.Size = new System.Drawing.Size(81, 20);
-            this.lbl_History_Order_Additional_Details.TabIndex = 104;
-            this.lbl_History_Order_Additional_Details.Text = "Lisätietoja";
-            // 
-            // lsv_History_Order_Additional_Details
-            // 
-            this.lsv_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 505);
-            this.lsv_History_Order_Additional_Details.Name = "lsv_History_Order_Additional_Details";
-            this.lsv_History_Order_Additional_Details.Size = new System.Drawing.Size(285, 85);
-            this.lsv_History_Order_Additional_Details.TabIndex = 104;
-            this.lsv_History_Order_Additional_Details.UseCompatibleStateImageBehavior = false;
-            // 
-            // tbl_History_Order_Details_Delete
-            // 
-            this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Details_Delete.ColumnCount = 2;
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.26316F));
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.73684F));
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_Delete, 0, 0);
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.lbl_History_Selected_Order_Details, 0, 0);
-            this.tbl_History_Order_Details_Delete.Location = new System.Drawing.Point(9, 18);
-            this.tbl_History_Order_Details_Delete.Name = "tbl_History_Order_Details_Delete";
-            this.tbl_History_Order_Details_Delete.RowCount = 1;
-            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(285, 38);
-            this.tbl_History_Order_Details_Delete.TabIndex = 105;
-            // 
-            // lbl_History_Selected_Order_Details
-            // 
-            this.lbl_History_Selected_Order_Details.AutoSize = true;
-            this.lbl_History_Selected_Order_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_History_Selected_Order_Details.Location = new System.Drawing.Point(3, 0);
-            this.lbl_History_Selected_Order_Details.Name = "lbl_History_Selected_Order_Details";
-            this.lbl_History_Selected_Order_Details.Size = new System.Drawing.Size(146, 20);
-            this.lbl_History_Selected_Order_Details.TabIndex = 79;
-            this.lbl_History_Selected_Order_Details.Text = "Varauksen tiedot";
-            // 
-            // btn_History_Order_Delete
-            // 
-            this.btn_History_Order_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_Delete.BackgroundImage")));
-            this.btn_History_Order_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_Delete.Location = new System.Drawing.Point(250, 3);
-            this.btn_History_Order_Delete.Name = "btn_History_Order_Delete";
-            this.btn_History_Order_Delete.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Order_Delete.TabIndex = 114;
-            this.btn_History_Order_Delete.UseVisualStyleBackColor = true;
-            // 
-            // lbl_History_Cottage_Details
-            // 
-            this.lbl_History_Cottage_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_History_Cottage_Details.AutoSize = true;
-            this.lbl_History_Cottage_Details.Location = new System.Drawing.Point(9, 59);
-            this.lbl_History_Cottage_Details.Name = "lbl_History_Cottage_Details";
-            this.lbl_History_Cottage_Details.Size = new System.Drawing.Size(68, 20);
-            this.lbl_History_Cottage_Details.TabIndex = 79;
-            this.lbl_History_Cottage_Details.Text = "Majoitus";
-            // 
-            // btn_History_Selected_Order_Delete
-=======
             // Main_window
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 681);
             this.Controls.Add(this.tab_Menu);
-            this.Name = "btn_History_Selected_Order_Delete";
+            this.Name = "Main_window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MahtiMökit";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -2522,16 +2240,9 @@
             this.tbl_Edit_3rd_Col_Cottages_Search.PerformLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.ResumeLayout(false);
             this.tab_History.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tab_Settings.ResumeLayout(false);
             this.tab_Settings.PerformLayout();
             this.tab_Manual.ResumeLayout(false);
-<<<<<<< HEAD
             this.tbl_History_Base.ResumeLayout(false);
             this.tbl_History_2nd_Col_Orders_Dates.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -2539,6 +2250,11 @@
             this.tbl_History_Order_Search.ResumeLayout(false);
             this.tbl_History_Order_Search.PerformLayout();
             this.tbl_History_Order_Dates_Delete.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tbl_History_1st_Col_Customers_Offices.ResumeLayout(false);
@@ -2547,12 +2263,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tbl_History_Order_Dates.ResumeLayout(false);
             this.tbl_History_Order_Dates.PerformLayout();
-            this.tbl_History_3th_Col_Selected_Order_Details.ResumeLayout(false);
-            this.tbl_History_3th_Col_Selected_Order_Details.PerformLayout();
-            this.tbl_History_Order_Details_Delete.ResumeLayout(false);
-            this.tbl_History_Order_Details_Delete.PerformLayout();
-=======
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
             this.ResumeLayout(false);
 
         }
@@ -2574,26 +2284,6 @@
         private System.Windows.Forms.ComboBox cbo_Language_Select;
         private System.Windows.Forms.Label lbl_System_Language;
         private System.Windows.Forms.TreeView trv_Manual;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tab_New_Order;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_base;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_1st_Col_Office_Customer;
@@ -2682,7 +2372,6 @@
         private System.Windows.Forms.Button btn_Cottages_Delete;
         private System.Windows.Forms.Button btn_Cottages_Edit;
         private System.Windows.Forms.Button btn_Cottages_Add;
-<<<<<<< HEAD
         private System.Windows.Forms.TableLayoutPanel tbl_History_Base;
         private System.Windows.Forms.TableLayoutPanel tbl_History_1st_Col_Customers_Offices;
         private System.Windows.Forms.Label lbl_History_Customer_Selection;
@@ -2698,6 +2387,17 @@
         private System.Windows.Forms.Button btn_History_Order_Search;
         private System.Windows.Forms.TextBox txt_History_Order_Search;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Dates_Delete;
+        private System.Windows.Forms.Button btn_History_Order_delete;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button btn_History_Limit_To_Customer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button2;
@@ -2708,21 +2408,5 @@
         private System.Windows.Forms.Label lbl_History_Orders_Filter_Date_Start;
         private System.Windows.Forms.DateTimePicker dtp_History_Orders_Filter_Date_Start;
         private System.Windows.Forms.DateTimePicker tdp_History_Orders_Filter_Date_End;
-        private System.Windows.Forms.TableLayoutPanel tbl_History_3th_Col_Selected_Order_Details;
-        private System.Windows.Forms.ListView lsv_History_Cottage_Details;
-        private System.Windows.Forms.Label lbl_History_Order_Start;
-        private System.Windows.Forms.Label lbl_History_Order_End;
-        private System.Windows.Forms.Label lbl_History_Selected_Order_Customers;
-        private System.Windows.Forms.ListView lsv_History_Selected_Order_Customers;
-        private System.Windows.Forms.Label lbl_History_Order_Services;
-        private System.Windows.Forms.ListView lsv_History_Order_Services;
-        private System.Windows.Forms.ListView lsv_History_Order_Additional_Details;
-        private System.Windows.Forms.Label lbl_History_Order_Additional_Details;
-        private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Details_Delete;
-        private System.Windows.Forms.Button btn_History_Order_Delete;
-        private System.Windows.Forms.Label lbl_History_Selected_Order_Details;
-        private System.Windows.Forms.Label lbl_History_Cottage_Details;
-=======
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
     }
 }

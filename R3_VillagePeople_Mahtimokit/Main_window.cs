@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class btn_History_Selected_Order_Delete : Form
+    public partial class Main_window : Form
     {
-        public btn_History_Selected_Order_Delete()
+        public Main_window()
         {
             InitializeComponent();
         }
@@ -119,7 +119,6 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
-<<<<<<< HEAD
 
         private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
         {
@@ -130,12 +129,5 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
-
-        private void btn_Remove_All_Files_Click(object sender, EventArgs e)
-        {
-
-        }
-=======
->>>>>>> parent of 946d516... Työstetään varaushistoriaa responsiiviseksi
     }
 }
