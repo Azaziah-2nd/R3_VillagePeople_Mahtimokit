@@ -129,5 +129,29 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+
+        private void btn_Customer_Add_Click_1(object sender, EventArgs e)
+        {
+            Customer_popup frm = new Customer_popup();
+            frm.Show();
+        }
+
+        private void btn_Services_Add_Click_1(object sender, EventArgs e)
+        {
+            Services_popup frm = new Services_popup();
+            frm.Show();
+        }
+
+        private void btn_Cottages_Add_Click_1(object sender, EventArgs e)
+        {
+            Cottage_popup frm = new Cottage_popup();
+            frm.Show();
+        }
+
+        private void btn_Office_Add_Click_1(object sender, EventArgs e)
+        {
+            Office_popup frm = new Office_popup();
+            frm.Show();
+        }
     }
 }
