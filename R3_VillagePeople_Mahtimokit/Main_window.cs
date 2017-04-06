@@ -153,5 +153,10 @@ namespace R3_VillagePeople_Mahtimokit
             Office_popup frm = new Office_popup();
             frm.Show();
         }
+
+        private void tbl_Order_3rd_Col_Cottage_Summary_Services_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
