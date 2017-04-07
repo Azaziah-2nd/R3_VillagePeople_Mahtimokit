@@ -23,7 +23,12 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Common_Settings_Default_Office.SelectedIndex = cbo_Common_Settings_Default_Office.FindStringExact(default_office);
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
         }
 
         // Asiakkaan lisäys
@@ -164,6 +169,12 @@ namespace R3_VillagePeople_Mahtimokit
             // Tallennetaan valittu arvo asetuksiin.
             Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
             Properties.Settings.Default.Save();
+
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
         }
     }
 }
