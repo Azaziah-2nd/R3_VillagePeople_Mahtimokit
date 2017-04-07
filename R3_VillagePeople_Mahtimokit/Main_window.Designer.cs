@@ -2053,9 +2053,9 @@
             this.lbl_History_Order_Additional_Details.AutoSize = true;
             this.lbl_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 482);
             this.lbl_History_Order_Additional_Details.Name = "lbl_History_Order_Additional_Details";
-            this.lbl_History_Order_Additional_Details.Size = new System.Drawing.Size(81, 20);
+            this.lbl_History_Order_Additional_Details.Size = new System.Drawing.Size(78, 20);
             this.lbl_History_Order_Additional_Details.TabIndex = 104;
-            this.lbl_History_Order_Additional_Details.Text = "Lisätietoja";
+            this.lbl_History_Order_Additional_Details.Text = "Lisätiedot";
             // 
             // lsv_History_Order_Services
             // 
@@ -2518,7 +2518,7 @@
             treeNode26,
             treeNode27,
             treeNode28});
-            this.trv_Manual.Size = new System.Drawing.Size(308, 586);
+            this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
             // 
             // Main_window
