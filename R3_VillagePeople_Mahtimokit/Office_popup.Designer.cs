@@ -70,7 +70,7 @@
             this.grb_Office_Details.Size = new System.Drawing.Size(533, 269);
             this.grb_Office_Details.TabIndex = 70;
             this.grb_Office_Details.TabStop = false;
-            this.grb_Office_Details.Text = "Toimintapisteen tiedot";
+            this.grb_Office_Details.Text = "Toimipisteen tiedot";
             // 
             // lbl_Office_Description
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.grb_Office_Details);
             this.Name = "Office_popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Toimintapisteen tietojenhallinta";
+            this.Text = "Toimipisteen tietojen hallinta";
             this.Load += new System.EventHandler(this.Office_popup_Load);
             this.grb_Office_Details.ResumeLayout(false);
             this.grb_Office_Details.PerformLayout();

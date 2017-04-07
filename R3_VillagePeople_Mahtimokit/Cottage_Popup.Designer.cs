@@ -304,7 +304,7 @@
             this.Controls.Add(this.grb_Cottage_Details);
             this.Name = "Cottage_popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mökkien tietojenhallinta";
+            this.Text = "Mökkien tietojen hallinta";
             this.grb_Cottage_Details.ResumeLayout(false);
             this.grb_Cottage_Details.PerformLayout();
             this.grb_Cottage_Save_Cancel_Buttons.ResumeLayout(false);
