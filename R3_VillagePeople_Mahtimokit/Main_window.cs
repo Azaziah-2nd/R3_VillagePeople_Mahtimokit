@@ -158,5 +158,12 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+
+        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Tallennetaan valittu arvo asetuksiin.
+            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
+            Properties.Settings.Default.Save();
+        }
     }
 }
