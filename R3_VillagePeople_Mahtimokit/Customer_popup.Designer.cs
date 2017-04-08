@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.grb_Customer_Details = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_Cottage_Size = new System.Windows.Forms.ComboBox();
+            this.txt_Cottage_Country = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Country = new System.Windows.Forms.Label();
+            this.txt_Cottage_Phone_Number = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Phone_Number = new System.Windows.Forms.Label();
+            this.txt_Cottage_Email = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Email = new System.Windows.Forms.Label();
+            this.txt_Cottage_Gender = new System.Windows.Forms.ComboBox();
             this.txt_Cottage_City = new System.Windows.Forms.TextBox();
             this.txt_Cottage_Adress = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Adress = new System.Windows.Forms.Label();
             this.txt_Cottage_Postal_Code = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Postal_Code_City = new System.Windows.Forms.Label();
-            this.lbl_Cottage_Size = new System.Windows.Forms.Label();
-            this.txt_Cottage_Max_Visitors = new System.Windows.Forms.TextBox();
-            this.lbl_Cottage_Max_Visitors = new System.Windows.Forms.Label();
-            this.txt_Cottage_Price = new System.Windows.Forms.TextBox();
-            this.lbl_Cottage_Price = new System.Windows.Forms.Label();
+            this.lbl_Cottage_Gender = new System.Windows.Forms.Label();
+            this.txt_Cottage_Age = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Age = new System.Windows.Forms.Label();
+            this.txt_Cottage_Surename = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Surename = new System.Windows.Forms.Label();
             this.txt_Cottage_Name = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Name = new System.Windows.Forms.Label();
             this.grb_Customer_Save_Cancel_Buttons = new System.Windows.Forms.GroupBox();
@@ -57,23 +57,23 @@
             // 
             // grb_Customer_Details
             // 
-            this.grb_Customer_Details.Controls.Add(this.textBox1);
-            this.grb_Customer_Details.Controls.Add(this.label1);
-            this.grb_Customer_Details.Controls.Add(this.textBox2);
-            this.grb_Customer_Details.Controls.Add(this.label2);
-            this.grb_Customer_Details.Controls.Add(this.textBox3);
-            this.grb_Customer_Details.Controls.Add(this.label3);
-            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Size);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Country);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Country);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Phone_Number);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Phone_Number);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Email);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Email);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Gender);
             this.grb_Customer_Details.Controls.Add(this.txt_Cottage_City);
             this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Adress);
             this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Adress);
             this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Postal_Code);
             this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Postal_Code_City);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Size);
-            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Max_Visitors);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Max_Visitors);
-            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Price);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Price);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Gender);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Age);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Age);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Surename);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Surename);
             this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Name);
             this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Name);
             this.grb_Customer_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,72 +84,72 @@
             this.grb_Customer_Details.TabStop = false;
             this.grb_Customer_Details.Text = "Asiakkaan tiedot";
             // 
-            // textBox1
+            // txt_Cottage_Country
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(240, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 21);
-            this.textBox1.TabIndex = 125;
+            this.txt_Cottage_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Country.Location = new System.Drawing.Point(240, 230);
+            this.txt_Cottage_Country.Name = "txt_Cottage_Country";
+            this.txt_Cottage_Country.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Country.TabIndex = 125;
             // 
-            // label1
+            // lbl_Cottage_Country
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 124;
-            this.label1.Text = "Asuinmaa:";
+            this.lbl_Cottage_Country.AutoSize = true;
+            this.lbl_Cottage_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Country.Location = new System.Drawing.Point(6, 230);
+            this.lbl_Cottage_Country.Name = "lbl_Cottage_Country";
+            this.lbl_Cottage_Country.Size = new System.Drawing.Size(84, 20);
+            this.lbl_Cottage_Country.TabIndex = 124;
+            this.lbl_Cottage_Country.Text = "Asuinmaa:";
             // 
-            // textBox2
+            // txt_Cottage_Phone_Number
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(240, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(287, 21);
-            this.textBox2.TabIndex = 123;
+            this.txt_Cottage_Phone_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Phone_Number.Location = new System.Drawing.Point(240, 152);
+            this.txt_Cottage_Phone_Number.Name = "txt_Cottage_Phone_Number";
+            this.txt_Cottage_Phone_Number.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Phone_Number.TabIndex = 123;
             // 
-            // label2
+            // lbl_Cottage_Phone_Number
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
-            this.label2.TabIndex = 122;
-            this.label2.Text = "Puhelinnumero:";
+            this.lbl_Cottage_Phone_Number.AutoSize = true;
+            this.lbl_Cottage_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Phone_Number.Location = new System.Drawing.Point(6, 152);
+            this.lbl_Cottage_Phone_Number.Name = "lbl_Cottage_Phone_Number";
+            this.lbl_Cottage_Phone_Number.Size = new System.Drawing.Size(119, 20);
+            this.lbl_Cottage_Phone_Number.TabIndex = 122;
+            this.lbl_Cottage_Phone_Number.Text = "Puhelinnumero:";
             // 
-            // textBox3
+            // txt_Cottage_Email
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(240, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(287, 21);
-            this.textBox3.TabIndex = 121;
+            this.txt_Cottage_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Email.Location = new System.Drawing.Point(240, 126);
+            this.txt_Cottage_Email.Name = "txt_Cottage_Email";
+            this.txt_Cottage_Email.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Email.TabIndex = 121;
             // 
-            // label3
+            // lbl_Cottage_Email
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 20);
-            this.label3.TabIndex = 120;
-            this.label3.Text = "Sähköpostiosoite:";
+            this.lbl_Cottage_Email.AutoSize = true;
+            this.lbl_Cottage_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Email.Location = new System.Drawing.Point(6, 126);
+            this.lbl_Cottage_Email.Name = "lbl_Cottage_Email";
+            this.lbl_Cottage_Email.Size = new System.Drawing.Size(136, 20);
+            this.lbl_Cottage_Email.TabIndex = 120;
+            this.lbl_Cottage_Email.Text = "Sähköpostiosoite:";
             // 
-            // txt_Cottage_Size
+            // txt_Cottage_Gender
             // 
-            this.txt_Cottage_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cottage_Size.FormattingEnabled = true;
-            this.txt_Cottage_Size.Location = new System.Drawing.Point(240, 99);
-            this.txt_Cottage_Size.Name = "txt_Cottage_Size";
-            this.txt_Cottage_Size.Size = new System.Drawing.Size(100, 23);
-            this.txt_Cottage_Size.TabIndex = 119;
+            this.txt_Cottage_Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Gender.FormattingEnabled = true;
+            this.txt_Cottage_Gender.Location = new System.Drawing.Point(240, 99);
+            this.txt_Cottage_Gender.Name = "txt_Cottage_Gender";
+            this.txt_Cottage_Gender.Size = new System.Drawing.Size(100, 23);
+            this.txt_Cottage_Gender.TabIndex = 119;
             // 
             // txt_Cottage_City
             // 
@@ -198,53 +198,53 @@
             this.lbl_Cottage_Postal_Code_City.TabIndex = 114;
             this.lbl_Cottage_Postal_Code_City.Text = "Postinumero ja -toimipaikka:";
             // 
-            // lbl_Cottage_Size
+            // lbl_Cottage_Gender
             // 
-            this.lbl_Cottage_Size.AutoSize = true;
-            this.lbl_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cottage_Size.Location = new System.Drawing.Point(6, 100);
-            this.lbl_Cottage_Size.Name = "lbl_Cottage_Size";
-            this.lbl_Cottage_Size.Size = new System.Drawing.Size(83, 20);
-            this.lbl_Cottage_Size.TabIndex = 113;
-            this.lbl_Cottage_Size.Text = "Sukupuoli:";
+            this.lbl_Cottage_Gender.AutoSize = true;
+            this.lbl_Cottage_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Gender.Location = new System.Drawing.Point(6, 100);
+            this.lbl_Cottage_Gender.Name = "lbl_Cottage_Gender";
+            this.lbl_Cottage_Gender.Size = new System.Drawing.Size(83, 20);
+            this.lbl_Cottage_Gender.TabIndex = 113;
+            this.lbl_Cottage_Gender.Text = "Sukupuoli:";
             // 
-            // txt_Cottage_Max_Visitors
+            // txt_Cottage_Age
             // 
-            this.txt_Cottage_Max_Visitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cottage_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cottage_Max_Visitors.Location = new System.Drawing.Point(240, 74);
-            this.txt_Cottage_Max_Visitors.Name = "txt_Cottage_Max_Visitors";
-            this.txt_Cottage_Max_Visitors.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Max_Visitors.TabIndex = 112;
+            this.txt_Cottage_Age.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Age.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Age.Location = new System.Drawing.Point(240, 74);
+            this.txt_Cottage_Age.Name = "txt_Cottage_Age";
+            this.txt_Cottage_Age.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Age.TabIndex = 112;
             // 
-            // lbl_Cottage_Max_Visitors
+            // lbl_Cottage_Age
             // 
-            this.lbl_Cottage_Max_Visitors.AutoSize = true;
-            this.lbl_Cottage_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cottage_Max_Visitors.Location = new System.Drawing.Point(6, 74);
-            this.lbl_Cottage_Max_Visitors.Name = "lbl_Cottage_Max_Visitors";
-            this.lbl_Cottage_Max_Visitors.Size = new System.Drawing.Size(35, 20);
-            this.lbl_Cottage_Max_Visitors.TabIndex = 111;
-            this.lbl_Cottage_Max_Visitors.Text = "Ikä:";
+            this.lbl_Cottage_Age.AutoSize = true;
+            this.lbl_Cottage_Age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Age.Location = new System.Drawing.Point(6, 74);
+            this.lbl_Cottage_Age.Name = "lbl_Cottage_Age";
+            this.lbl_Cottage_Age.Size = new System.Drawing.Size(35, 20);
+            this.lbl_Cottage_Age.TabIndex = 111;
+            this.lbl_Cottage_Age.Text = "Ikä:";
             // 
-            // txt_Cottage_Price
+            // txt_Cottage_Surename
             // 
-            this.txt_Cottage_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cottage_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cottage_Price.Location = new System.Drawing.Point(240, 48);
-            this.txt_Cottage_Price.Name = "txt_Cottage_Price";
-            this.txt_Cottage_Price.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Price.TabIndex = 110;
+            this.txt_Cottage_Surename.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Surename.Location = new System.Drawing.Point(240, 48);
+            this.txt_Cottage_Surename.Name = "txt_Cottage_Surename";
+            this.txt_Cottage_Surename.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Surename.TabIndex = 110;
             // 
-            // lbl_Cottage_Price
+            // lbl_Cottage_Surename
             // 
-            this.lbl_Cottage_Price.AutoSize = true;
-            this.lbl_Cottage_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cottage_Price.Location = new System.Drawing.Point(6, 48);
-            this.lbl_Cottage_Price.Name = "lbl_Cottage_Price";
-            this.lbl_Cottage_Price.Size = new System.Drawing.Size(78, 20);
-            this.lbl_Cottage_Price.TabIndex = 109;
-            this.lbl_Cottage_Price.Text = "Sukunimi:";
+            this.lbl_Cottage_Surename.AutoSize = true;
+            this.lbl_Cottage_Surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Surename.Location = new System.Drawing.Point(6, 48);
+            this.lbl_Cottage_Surename.Name = "lbl_Cottage_Surename";
+            this.lbl_Cottage_Surename.Size = new System.Drawing.Size(78, 20);
+            this.lbl_Cottage_Surename.TabIndex = 109;
+            this.lbl_Cottage_Surename.Text = "Sukunimi:";
             // 
             // txt_Cottage_Name
             // 
@@ -318,23 +318,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grb_Customer_Details;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox txt_Cottage_Size;
+        private System.Windows.Forms.TextBox txt_Cottage_Country;
+        private System.Windows.Forms.Label lbl_Cottage_Country;
+        private System.Windows.Forms.TextBox txt_Cottage_Phone_Number;
+        private System.Windows.Forms.Label lbl_Cottage_Phone_Number;
+        private System.Windows.Forms.TextBox txt_Cottage_Email;
+        private System.Windows.Forms.Label lbl_Cottage_Email;
+        private System.Windows.Forms.ComboBox txt_Cottage_Gender;
         private System.Windows.Forms.TextBox txt_Cottage_City;
         private System.Windows.Forms.TextBox txt_Cottage_Adress;
         private System.Windows.Forms.Label lbl_Cottage_Adress;
         private System.Windows.Forms.TextBox txt_Cottage_Postal_Code;
         private System.Windows.Forms.Label lbl_Cottage_Postal_Code_City;
-        private System.Windows.Forms.Label lbl_Cottage_Size;
-        private System.Windows.Forms.TextBox txt_Cottage_Max_Visitors;
-        private System.Windows.Forms.Label lbl_Cottage_Max_Visitors;
-        private System.Windows.Forms.TextBox txt_Cottage_Price;
-        private System.Windows.Forms.Label lbl_Cottage_Price;
+        private System.Windows.Forms.Label lbl_Cottage_Gender;
+        private System.Windows.Forms.TextBox txt_Cottage_Age;
+        private System.Windows.Forms.Label lbl_Cottage_Age;
+        private System.Windows.Forms.TextBox txt_Cottage_Surename;
+        private System.Windows.Forms.Label lbl_Cottage_Surename;
         private System.Windows.Forms.TextBox txt_Cottage_Name;
         private System.Windows.Forms.Label lbl_Cottage_Name;
         private System.Windows.Forms.GroupBox grb_Customer_Save_Cancel_Buttons;

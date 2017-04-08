@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class AreYouSure_popup
+    partial class Popup_Are_You_Sure
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_AreYouSure = new System.Windows.Forms.Label();
+            this.lbl_Are_You_Sure = new System.Windows.Forms.Label();
             this.btn_Yes = new System.Windows.Forms.Button();
             this.btn_No = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbl_AreYouSure
+            // lbl_Are_You_Sure
             // 
-            this.lbl_AreYouSure.AutoSize = true;
-            this.lbl_AreYouSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AreYouSure.Location = new System.Drawing.Point(113, 32);
-            this.lbl_AreYouSure.Name = "lbl_AreYouSure";
-            this.lbl_AreYouSure.Size = new System.Drawing.Size(111, 20);
-            this.lbl_AreYouSure.TabIndex = 0;
-            this.lbl_AreYouSure.Text = "Oletko varma?";
+            this.lbl_Are_You_Sure.AutoSize = true;
+            this.lbl_Are_You_Sure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Are_You_Sure.Location = new System.Drawing.Point(113, 32);
+            this.lbl_Are_You_Sure.Name = "lbl_Are_You_Sure";
+            this.lbl_Are_You_Sure.Size = new System.Drawing.Size(111, 20);
+            this.lbl_Are_You_Sure.TabIndex = 0;
+            this.lbl_Are_You_Sure.Text = "Oletko varma?";
             // 
             // btn_Yes
             // 
@@ -63,15 +63,15 @@
             this.btn_No.Text = "Kyllä";
             this.btn_No.UseVisualStyleBackColor = true;
             // 
-            // AreYouSure_popup
+            // Popup_Are_You_Sure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 123);
             this.Controls.Add(this.btn_No);
             this.Controls.Add(this.btn_Yes);
-            this.Controls.Add(this.lbl_AreYouSure);
-            this.Name = "AreYouSure_popup";
+            this.Controls.Add(this.lbl_Are_You_Sure);
+            this.Name = "Popup_Are_You_Sure";
             this.Text = "Varmistus";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_AreYouSure;
+        private System.Windows.Forms.Label lbl_Are_You_Sure;
         private System.Windows.Forms.Button btn_Yes;
         private System.Windows.Forms.Button btn_No;
     }
