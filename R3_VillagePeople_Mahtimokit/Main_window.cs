@@ -23,12 +23,20 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä
             string default_office = Properties.Settings.Default["default_office"].ToString();
             cbo_Common_Settings_Default_Office.SelectedIndex = cbo_Common_Settings_Default_Office.FindStringExact(default_office);
             cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+            // Oletushistorian aikaväli
+            dtp_History_Orders_Filter_Date_Start.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+            dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+
+
+            dtp_Common_Settings_History_Start_Date.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+            dtp_Common_Settings_History_End_Date_Custom.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+
         }
 
         // Asiakkaan lisäys
@@ -169,12 +177,39 @@ namespace R3_VillagePeople_Mahtimokit
             // Tallennetaan valittu arvo asetuksiin.
             Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
             Properties.Settings.Default.Save();
-
             // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
             string default_office = Properties.Settings.Default["default_office"].ToString();
             cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+        }
+
+        private void dtp_Common_Settings_History_Start_Date_ValueChanged(object sender, EventArgs e)
+        {
+            // Poistetaan valitusta ajasta tarkka kellonaika ja tallennetaan arvo asetuksiin.
+            Properties.Settings.Default["default_history_start_date"] = DateTime.Parse(dtp_Common_Settings_History_Start_Date.Value.ToShortDateString());
+            Properties.Settings.Default.Save();
+            // Muutetaan varaushistorian filtteröinnin aloituspäivämäärä vastaamaan uutta asetusta.
+            dtp_History_Orders_Filter_Date_Start.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+        }
+
+        private void dtp_Common_Settings_History_End_Date_Custom_ValueChanged(object sender, EventArgs e)
+        {
+            // Poistetaan valitusta ajasta tarkka kellonaika
+            Properties.Settings.Default["default_history_end_date"] = DateTime.Parse(dtp_Common_Settings_History_End_Date_Custom.Value.ToShortDateString());
+            // Muutetaan nykyisen päivän käytön asetus epätodeksi ja un-chekataan sen checkboxi.
+            // chk_Common_Settings_History_End_Date_Today.Checked = false;
+            // Properties.Settings.Default["default_is_history_end_date_today"] = false;
+            // Tallennetaan muutokset asetuksiin.
+            Properties.Settings.Default.Save();
+            // Muutetaan varaushistorian filtteröinnin aloituspäivämäärä vastaamaan uutta asetusta.
+            dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+
+        }
+
+        private void chk_Common_Settings_History_End_Date_Today_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
