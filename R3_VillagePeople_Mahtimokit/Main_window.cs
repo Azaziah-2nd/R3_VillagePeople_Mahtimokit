@@ -153,5 +153,11 @@ namespace R3_VillagePeople_Mahtimokit
             Office_popup frm = new Office_popup();
             frm.Show();
         }
+
+        private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
+        {
+            Invoicing frm = new Invoicing();
+            frm.Show();
+        }
     }
 }
