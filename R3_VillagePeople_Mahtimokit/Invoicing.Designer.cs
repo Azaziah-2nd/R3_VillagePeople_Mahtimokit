@@ -304,7 +304,8 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(12, 147);
+            this.label20.Location = new System.Drawing.Point(12, 157);
+            this.label20.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(76, 16);
             this.label20.TabIndex = 1;
@@ -1186,7 +1187,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel14, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
@@ -1201,7 +1202,8 @@
             // 
             // tableLayoutPanel28
             // 
-            this.tableLayoutPanel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel28.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel28.ColumnCount = 3;
@@ -1216,7 +1218,7 @@
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(966, 1450);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(983, 1446);
             this.tableLayoutPanel28.TabIndex = 1;
             // 
             // Invoicing
@@ -1225,7 +1227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(940, 1446);
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(984, 681);
             this.Controls.Add(this.tableLayoutPanel28);
             this.Name = "Invoicing";
