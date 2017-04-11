@@ -307,7 +307,7 @@
             this.Controls.Add(this.grb_Customer_Details);
             this.Name = "Customer_popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Asiakkaan tietojenhallinta";
+            this.Text = "Asiakkaan tietojen hallinta";
             this.grb_Customer_Details.ResumeLayout(false);
             this.grb_Customer_Details.PerformLayout();
             this.grb_Customer_Save_Cancel_Buttons.ResumeLayout(false);

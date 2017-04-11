@@ -239,7 +239,7 @@
             this.Controls.Add(this.grb_Service_Details);
             this.Name = "Services_popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Palvelun tietojenhallinta";
+            this.Text = "Palvelun tietojen hallinta";
             this.Load += new System.EventHandler(this.Services_popup_Load);
             this.grb_Service_Details.ResumeLayout(false);
             this.grb_Service_Details.PerformLayout();
