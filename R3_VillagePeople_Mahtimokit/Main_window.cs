@@ -229,5 +229,11 @@ namespace R3_VillagePeople_Mahtimokit
                 dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             }
         }
+
+        private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
+        {
+            Invoicing frm = new Invoicing();
+            frm.Show();
+        }
     }
 }
