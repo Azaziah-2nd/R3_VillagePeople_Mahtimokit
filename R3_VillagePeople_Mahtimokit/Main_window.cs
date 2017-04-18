@@ -23,7 +23,27 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-
+            // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
+            // Oletustoimipiste
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Common_Settings_Default_Office.SelectedIndex = cbo_Common_Settings_Default_Office.FindStringExact(default_office);
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+            // Oletushistorian aikaväli
+            dtp_History_Orders_Filter_Date_Start.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+            dtp_Common_Settings_History_Start_Date.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+            dtp_Common_Settings_History_End_Date_Custom.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            // Tarkistetaan käytetäänkö nykyistä päivää vai määriteltyä päivää.
+            if (Convert.ToBoolean(Properties.Settings.Default["default_is_history_end_date_today"]) == false)
+            {
+                chk_Common_Settings_History_End_Date_Today.Checked = false;
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            }
+            else
+            {
+                chk_Common_Settings_History_End_Date_Today.Checked = true;
+            }
         }
 
         // Asiakkaan lisäys
@@ -157,6 +177,57 @@ namespace R3_VillagePeople_Mahtimokit
         private void tbl_Order_3rd_Col_Cottage_Summary_Services_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Tallennetaan valittu arvo asetuksiin.
+            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
+            Properties.Settings.Default.Save();
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+        }
+
+        private void dtp_Common_Settings_History_Start_Date_ValueChanged(object sender, EventArgs e)
+        {
+            // Poistetaan valitusta ajasta tarkka kellonaika ja tallennetaan arvo asetuksiin.
+            Properties.Settings.Default["default_history_start_date"] = DateTime.Parse(dtp_Common_Settings_History_Start_Date.Value.ToShortDateString());
+            Properties.Settings.Default.Save();
+            // Muutetaan varaushistorian filtteröinnin aloituspäivämäärä vastaamaan uutta asetusta.
+            dtp_History_Orders_Filter_Date_Start.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
+        }
+
+        private void dtp_Common_Settings_History_End_Date_Custom_ValueChanged(object sender, EventArgs e)
+        {
+            // Poistetaan valitusta ajasta tarkka kellonaika ja tallennetaan muutokset asetuksiin.
+            Properties.Settings.Default["default_history_end_date"] = DateTime.Parse(dtp_Common_Settings_History_End_Date_Custom.Value.ToShortDateString());
+            Properties.Settings.Default.Save();
+            // Muutetaan varaushistorian filtteröinnin aloituspäivämäärä vastaamaan uutta asetusta, jos nykyisen päivän asetus ei ole käytössä.
+            if (Convert.ToBoolean(Properties.Settings.Default["default_is_history_end_date_today"]) == false)
+            {
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            }
+        }
+
+        private void chk_Common_Settings_History_End_Date_Today_CheckedChanged(object sender, EventArgs e)
+        {
+            // Jos checkboxin tila vaihtuu tikkaamattomaksi.
+            if (chk_Common_Settings_History_End_Date_Today.Checked == false)
+            {
+                Properties.Settings.Default["default_is_history_end_date_today"] = false;
+                Properties.Settings.Default.Save();
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            }
+            else
+            {
+                // Tallennetaan asetuksiin nykyisen päivän käyttö ja muutetaan se varaushistoriaan.
+                Properties.Settings.Default["default_is_history_end_date_today"] = true;
+                Properties.Settings.Default.Save();
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
+            }
         }
     }
 }

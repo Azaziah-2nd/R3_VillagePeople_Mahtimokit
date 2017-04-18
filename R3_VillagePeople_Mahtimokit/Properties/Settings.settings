@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="R3_VillagePeople_Mahtimokit.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="default_office" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="default_history_start_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2017-01-01</Value>
+    </Setting>
+    <Setting Name="default_history_end_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2017-04-08</Value>
+    </Setting>
+    <Setting Name="default_is_history_end_date_today" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

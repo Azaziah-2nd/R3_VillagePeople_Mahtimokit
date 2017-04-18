@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.grb_Customer_Details = new System.Windows.Forms.GroupBox();
-            this.txt_Customer_Country = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Country = new System.Windows.Forms.Label();
-            this.txt_Customer_Phone_Number = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Phone_Number = new System.Windows.Forms.Label();
-            this.txt_Customer_Email = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Email = new System.Windows.Forms.Label();
-            this.txt_Customer_Size = new System.Windows.Forms.ComboBox();
-            this.txt_Customer_City = new System.Windows.Forms.TextBox();
-            this.txt_Customer_Adress = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Adress = new System.Windows.Forms.Label();
-            this.txt_Customer_Postal_Code = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Postal_Code_City = new System.Windows.Forms.Label();
-            this.lbl_Customer_Gender = new System.Windows.Forms.Label();
-            this.txt_Customer_Max_Visitors = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Age = new System.Windows.Forms.Label();
-            this.txt_Customer_Price = new System.Windows.Forms.TextBox();
-            this.lbl_customer_Surename = new System.Windows.Forms.Label();
-            this.txt_Customer_Name = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Name = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_Cottage_Size = new System.Windows.Forms.ComboBox();
+            this.txt_Cottage_City = new System.Windows.Forms.TextBox();
+            this.txt_Cottage_Adress = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Adress = new System.Windows.Forms.Label();
+            this.txt_Cottage_Postal_Code = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Postal_Code_City = new System.Windows.Forms.Label();
+            this.lbl_Cottage_Size = new System.Windows.Forms.Label();
+            this.txt_Cottage_Max_Visitors = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Max_Visitors = new System.Windows.Forms.Label();
+            this.txt_Cottage_Price = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Price = new System.Windows.Forms.Label();
+            this.txt_Cottage_Name = new System.Windows.Forms.TextBox();
+            this.lbl_Cottage_Name = new System.Windows.Forms.Label();
             this.grb_Customer_Save_Cancel_Buttons = new System.Windows.Forms.GroupBox();
             this.btn_Customer_Save = new System.Windows.Forms.Button();
             this.btn_Customer_Cancel = new System.Windows.Forms.Button();
@@ -57,25 +57,25 @@
             // 
             // grb_Customer_Details
             // 
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Country);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Country);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Phone_Number);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Phone_Number);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Email);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Email);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Size);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_City);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Adress);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Adress);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Postal_Code);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Postal_Code_City);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Gender);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Max_Visitors);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Age);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Price);
-            this.grb_Customer_Details.Controls.Add(this.lbl_customer_Surename);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Name);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Name);
+            this.grb_Customer_Details.Controls.Add(this.textBox1);
+            this.grb_Customer_Details.Controls.Add(this.label1);
+            this.grb_Customer_Details.Controls.Add(this.textBox2);
+            this.grb_Customer_Details.Controls.Add(this.label2);
+            this.grb_Customer_Details.Controls.Add(this.textBox3);
+            this.grb_Customer_Details.Controls.Add(this.label3);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Size);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_City);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Adress);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Adress);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Postal_Code);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Postal_Code_City);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Size);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Max_Visitors);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Max_Visitors);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Price);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Price);
+            this.grb_Customer_Details.Controls.Add(this.txt_Cottage_Name);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Cottage_Name);
             this.grb_Customer_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Customer_Details.Location = new System.Drawing.Point(12, 12);
             this.grb_Customer_Details.Name = "grb_Customer_Details";
@@ -84,186 +84,186 @@
             this.grb_Customer_Details.TabStop = false;
             this.grb_Customer_Details.Text = "Asiakkaan tiedot";
             // 
-            // txt_Customer_Country
+            // textBox1
             // 
-            this.txt_Customer_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Country.Location = new System.Drawing.Point(240, 230);
-            this.txt_Customer_Country.Name = "txt_Customer_Country";
-            this.txt_Customer_Country.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Country.TabIndex = 125;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(240, 230);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(287, 21);
+            this.textBox1.TabIndex = 125;
             // 
-            // lbl_Customer_Country
+            // label1
             // 
-            this.lbl_Customer_Country.AutoSize = true;
-            this.lbl_Customer_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Country.Location = new System.Drawing.Point(6, 230);
-            this.lbl_Customer_Country.Name = "lbl_Customer_Country";
-            this.lbl_Customer_Country.Size = new System.Drawing.Size(84, 20);
-            this.lbl_Customer_Country.TabIndex = 124;
-            this.lbl_Customer_Country.Text = "Asuinmaa:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 230);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 124;
+            this.label1.Text = "Asuinmaa:";
             // 
-            // txt_Customer_Phone_Number
+            // textBox2
             // 
-            this.txt_Customer_Phone_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Phone_Number.Location = new System.Drawing.Point(240, 152);
-            this.txt_Customer_Phone_Number.Name = "txt_Customer_Phone_Number";
-            this.txt_Customer_Phone_Number.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Phone_Number.TabIndex = 123;
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(240, 152);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(287, 21);
+            this.textBox2.TabIndex = 123;
             // 
-            // lbl_Customer_Phone_Number
+            // label2
             // 
-            this.lbl_Customer_Phone_Number.AutoSize = true;
-            this.lbl_Customer_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Phone_Number.Location = new System.Drawing.Point(6, 152);
-            this.lbl_Customer_Phone_Number.Name = "lbl_Customer_Phone_Number";
-            this.lbl_Customer_Phone_Number.Size = new System.Drawing.Size(119, 20);
-            this.lbl_Customer_Phone_Number.TabIndex = 122;
-            this.lbl_Customer_Phone_Number.Text = "Puhelinnumero:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 122;
+            this.label2.Text = "Puhelinnumero:";
             // 
-            // txt_Customer_Email
+            // textBox3
             // 
-            this.txt_Customer_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Email.Location = new System.Drawing.Point(240, 126);
-            this.txt_Customer_Email.Name = "txt_Customer_Email";
-            this.txt_Customer_Email.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Email.TabIndex = 121;
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(240, 126);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(287, 21);
+            this.textBox3.TabIndex = 121;
             // 
-            // lbl_Customer_Email
+            // label3
             // 
-            this.lbl_Customer_Email.AutoSize = true;
-            this.lbl_Customer_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Email.Location = new System.Drawing.Point(6, 126);
-            this.lbl_Customer_Email.Name = "lbl_Customer_Email";
-            this.lbl_Customer_Email.Size = new System.Drawing.Size(136, 20);
-            this.lbl_Customer_Email.TabIndex = 120;
-            this.lbl_Customer_Email.Text = "Sähköpostiosoite:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 20);
+            this.label3.TabIndex = 120;
+            this.label3.Text = "Sähköpostiosoite:";
             // 
-            // txt_Customer_Size
+            // txt_Cottage_Size
             // 
-            this.txt_Customer_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Size.FormattingEnabled = true;
-            this.txt_Customer_Size.Location = new System.Drawing.Point(240, 99);
-            this.txt_Customer_Size.Name = "txt_Customer_Size";
-            this.txt_Customer_Size.Size = new System.Drawing.Size(100, 23);
-            this.txt_Customer_Size.TabIndex = 119;
+            this.txt_Cottage_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Size.FormattingEnabled = true;
+            this.txt_Cottage_Size.Location = new System.Drawing.Point(240, 99);
+            this.txt_Cottage_Size.Name = "txt_Cottage_Size";
+            this.txt_Cottage_Size.Size = new System.Drawing.Size(100, 23);
+            this.txt_Cottage_Size.TabIndex = 119;
             // 
-            // txt_Customer_City
+            // txt_Cottage_City
             // 
-            this.txt_Customer_City.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_City.Location = new System.Drawing.Point(346, 204);
-            this.txt_Customer_City.Name = "txt_Customer_City";
-            this.txt_Customer_City.Size = new System.Drawing.Size(181, 21);
-            this.txt_Customer_City.TabIndex = 118;
+            this.txt_Cottage_City.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_City.Location = new System.Drawing.Point(346, 204);
+            this.txt_Cottage_City.Name = "txt_Cottage_City";
+            this.txt_Cottage_City.Size = new System.Drawing.Size(181, 21);
+            this.txt_Cottage_City.TabIndex = 118;
             // 
-            // txt_Customer_Adress
+            // txt_Cottage_Adress
             // 
-            this.txt_Customer_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Adress.Location = new System.Drawing.Point(240, 178);
-            this.txt_Customer_Adress.Name = "txt_Customer_Adress";
-            this.txt_Customer_Adress.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Adress.TabIndex = 117;
+            this.txt_Cottage_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Adress.Location = new System.Drawing.Point(240, 178);
+            this.txt_Cottage_Adress.Name = "txt_Cottage_Adress";
+            this.txt_Cottage_Adress.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Adress.TabIndex = 117;
             // 
-            // lbl_Customer_Adress
+            // lbl_Cottage_Adress
             // 
-            this.lbl_Customer_Adress.AutoSize = true;
-            this.lbl_Customer_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Adress.Location = new System.Drawing.Point(6, 178);
-            this.lbl_Customer_Adress.Name = "lbl_Customer_Adress";
-            this.lbl_Customer_Adress.Size = new System.Drawing.Size(89, 20);
-            this.lbl_Customer_Adress.TabIndex = 116;
-            this.lbl_Customer_Adress.Text = "Katuosoite:";
+            this.lbl_Cottage_Adress.AutoSize = true;
+            this.lbl_Cottage_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Adress.Location = new System.Drawing.Point(6, 178);
+            this.lbl_Cottage_Adress.Name = "lbl_Cottage_Adress";
+            this.lbl_Cottage_Adress.Size = new System.Drawing.Size(89, 20);
+            this.lbl_Cottage_Adress.TabIndex = 116;
+            this.lbl_Cottage_Adress.Text = "Katuosoite:";
             // 
-            // txt_Customer_Postal_Code
+            // txt_Cottage_Postal_Code
             // 
-            this.txt_Customer_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Postal_Code.Location = new System.Drawing.Point(240, 204);
-            this.txt_Customer_Postal_Code.Name = "txt_Customer_Postal_Code";
-            this.txt_Customer_Postal_Code.Size = new System.Drawing.Size(100, 21);
-            this.txt_Customer_Postal_Code.TabIndex = 115;
+            this.txt_Cottage_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Postal_Code.Location = new System.Drawing.Point(240, 204);
+            this.txt_Cottage_Postal_Code.Name = "txt_Cottage_Postal_Code";
+            this.txt_Cottage_Postal_Code.Size = new System.Drawing.Size(100, 21);
+            this.txt_Cottage_Postal_Code.TabIndex = 115;
             // 
-            // lbl_Customer_Postal_Code_City
+            // lbl_Cottage_Postal_Code_City
             // 
-            this.lbl_Customer_Postal_Code_City.AutoSize = true;
-            this.lbl_Customer_Postal_Code_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Postal_Code_City.Location = new System.Drawing.Point(6, 202);
-            this.lbl_Customer_Postal_Code_City.Name = "lbl_Customer_Postal_Code_City";
-            this.lbl_Customer_Postal_Code_City.Size = new System.Drawing.Size(206, 20);
-            this.lbl_Customer_Postal_Code_City.TabIndex = 114;
-            this.lbl_Customer_Postal_Code_City.Text = "Postinumero ja -toimipaikka:";
+            this.lbl_Cottage_Postal_Code_City.AutoSize = true;
+            this.lbl_Cottage_Postal_Code_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Postal_Code_City.Location = new System.Drawing.Point(6, 202);
+            this.lbl_Cottage_Postal_Code_City.Name = "lbl_Cottage_Postal_Code_City";
+            this.lbl_Cottage_Postal_Code_City.Size = new System.Drawing.Size(206, 20);
+            this.lbl_Cottage_Postal_Code_City.TabIndex = 114;
+            this.lbl_Cottage_Postal_Code_City.Text = "Postinumero ja -toimipaikka:";
             // 
-            // lbl_Customer_Gender
+            // lbl_Cottage_Size
             // 
-            this.lbl_Customer_Gender.AutoSize = true;
-            this.lbl_Customer_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Gender.Location = new System.Drawing.Point(6, 100);
-            this.lbl_Customer_Gender.Name = "lbl_Customer_Gender";
-            this.lbl_Customer_Gender.Size = new System.Drawing.Size(83, 20);
-            this.lbl_Customer_Gender.TabIndex = 113;
-            this.lbl_Customer_Gender.Text = "Sukupuoli:";
+            this.lbl_Cottage_Size.AutoSize = true;
+            this.lbl_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Size.Location = new System.Drawing.Point(6, 100);
+            this.lbl_Cottage_Size.Name = "lbl_Cottage_Size";
+            this.lbl_Cottage_Size.Size = new System.Drawing.Size(83, 20);
+            this.lbl_Cottage_Size.TabIndex = 113;
+            this.lbl_Cottage_Size.Text = "Sukupuoli:";
             // 
-            // txt_Customer_Max_Visitors
+            // txt_Cottage_Max_Visitors
             // 
-            this.txt_Customer_Max_Visitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Max_Visitors.Location = new System.Drawing.Point(240, 74);
-            this.txt_Customer_Max_Visitors.Name = "txt_Customer_Max_Visitors";
-            this.txt_Customer_Max_Visitors.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Max_Visitors.TabIndex = 112;
+            this.txt_Cottage_Max_Visitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Max_Visitors.Location = new System.Drawing.Point(240, 74);
+            this.txt_Cottage_Max_Visitors.Name = "txt_Cottage_Max_Visitors";
+            this.txt_Cottage_Max_Visitors.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Max_Visitors.TabIndex = 112;
             // 
-            // lbl_Customer_Age
+            // lbl_Cottage_Max_Visitors
             // 
-            this.lbl_Customer_Age.AutoSize = true;
-            this.lbl_Customer_Age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Age.Location = new System.Drawing.Point(6, 74);
-            this.lbl_Customer_Age.Name = "lbl_Customer_Age";
-            this.lbl_Customer_Age.Size = new System.Drawing.Size(35, 20);
-            this.lbl_Customer_Age.TabIndex = 111;
-            this.lbl_Customer_Age.Text = "Ikä:";
+            this.lbl_Cottage_Max_Visitors.AutoSize = true;
+            this.lbl_Cottage_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Max_Visitors.Location = new System.Drawing.Point(6, 74);
+            this.lbl_Cottage_Max_Visitors.Name = "lbl_Cottage_Max_Visitors";
+            this.lbl_Cottage_Max_Visitors.Size = new System.Drawing.Size(35, 20);
+            this.lbl_Cottage_Max_Visitors.TabIndex = 111;
+            this.lbl_Cottage_Max_Visitors.Text = "Ikä:";
             // 
-            // txt_Customer_Price
+            // txt_Cottage_Price
             // 
-            this.txt_Customer_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Price.Location = new System.Drawing.Point(240, 48);
-            this.txt_Customer_Price.Name = "txt_Customer_Price";
-            this.txt_Customer_Price.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Price.TabIndex = 110;
+            this.txt_Cottage_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Price.Location = new System.Drawing.Point(240, 48);
+            this.txt_Cottage_Price.Name = "txt_Cottage_Price";
+            this.txt_Cottage_Price.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Price.TabIndex = 110;
             // 
-            // lbl_customer_Surename
+            // lbl_Cottage_Price
             // 
-            this.lbl_customer_Surename.AutoSize = true;
-            this.lbl_customer_Surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_customer_Surename.Location = new System.Drawing.Point(6, 48);
-            this.lbl_customer_Surename.Name = "lbl_customer_Surename";
-            this.lbl_customer_Surename.Size = new System.Drawing.Size(78, 20);
-            this.lbl_customer_Surename.TabIndex = 109;
-            this.lbl_customer_Surename.Text = "Sukunimi:";
+            this.lbl_Cottage_Price.AutoSize = true;
+            this.lbl_Cottage_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Price.Location = new System.Drawing.Point(6, 48);
+            this.lbl_Cottage_Price.Name = "lbl_Cottage_Price";
+            this.lbl_Cottage_Price.Size = new System.Drawing.Size(78, 20);
+            this.lbl_Cottage_Price.TabIndex = 109;
+            this.lbl_Cottage_Price.Text = "Sukunimi:";
             // 
-            // txt_Customer_Name
+            // txt_Cottage_Name
             // 
-            this.txt_Customer_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Name.Location = new System.Drawing.Point(240, 22);
-            this.txt_Customer_Name.Name = "txt_Customer_Name";
-            this.txt_Customer_Name.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Name.TabIndex = 108;
+            this.txt_Cottage_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Name.Location = new System.Drawing.Point(240, 22);
+            this.txt_Cottage_Name.Name = "txt_Cottage_Name";
+            this.txt_Cottage_Name.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Name.TabIndex = 108;
             // 
-            // lbl_Customer_Name
+            // lbl_Cottage_Name
             // 
-            this.lbl_Customer_Name.AutoSize = true;
-            this.lbl_Customer_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Name.Location = new System.Drawing.Point(6, 22);
-            this.lbl_Customer_Name.Name = "lbl_Customer_Name";
-            this.lbl_Customer_Name.Size = new System.Drawing.Size(66, 20);
-            this.lbl_Customer_Name.TabIndex = 107;
-            this.lbl_Customer_Name.Text = "Etunimi:";
+            this.lbl_Cottage_Name.AutoSize = true;
+            this.lbl_Cottage_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cottage_Name.Location = new System.Drawing.Point(6, 22);
+            this.lbl_Cottage_Name.Name = "lbl_Cottage_Name";
+            this.lbl_Cottage_Name.Size = new System.Drawing.Size(66, 20);
+            this.lbl_Cottage_Name.TabIndex = 107;
+            this.lbl_Cottage_Name.Text = "Etunimi:";
             // 
             // grb_Customer_Save_Cancel_Buttons
             // 
@@ -318,25 +318,25 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grb_Customer_Details;
-        private System.Windows.Forms.TextBox txt_Customer_Country;
-        private System.Windows.Forms.Label lbl_Customer_Country;
-        private System.Windows.Forms.TextBox txt_Customer_Phone_Number;
-        private System.Windows.Forms.Label lbl_Customer_Phone_Number;
-        private System.Windows.Forms.TextBox txt_Customer_Email;
-        private System.Windows.Forms.Label lbl_Customer_Email;
-        private System.Windows.Forms.ComboBox txt_Customer_Size;
-        private System.Windows.Forms.TextBox txt_Customer_City;
-        private System.Windows.Forms.TextBox txt_Customer_Adress;
-        private System.Windows.Forms.Label lbl_Customer_Adress;
-        private System.Windows.Forms.TextBox txt_Customer_Postal_Code;
-        private System.Windows.Forms.Label lbl_Customer_Postal_Code_City;
-        private System.Windows.Forms.Label lbl_Customer_Gender;
-        private System.Windows.Forms.TextBox txt_Customer_Max_Visitors;
-        private System.Windows.Forms.Label lbl_Customer_Age;
-        private System.Windows.Forms.TextBox txt_Customer_Price;
-        private System.Windows.Forms.Label lbl_customer_Surename;
-        private System.Windows.Forms.TextBox txt_Customer_Name;
-        private System.Windows.Forms.Label lbl_Customer_Name;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox txt_Cottage_Size;
+        private System.Windows.Forms.TextBox txt_Cottage_City;
+        private System.Windows.Forms.TextBox txt_Cottage_Adress;
+        private System.Windows.Forms.Label lbl_Cottage_Adress;
+        private System.Windows.Forms.TextBox txt_Cottage_Postal_Code;
+        private System.Windows.Forms.Label lbl_Cottage_Postal_Code_City;
+        private System.Windows.Forms.Label lbl_Cottage_Size;
+        private System.Windows.Forms.TextBox txt_Cottage_Max_Visitors;
+        private System.Windows.Forms.Label lbl_Cottage_Max_Visitors;
+        private System.Windows.Forms.TextBox txt_Cottage_Price;
+        private System.Windows.Forms.Label lbl_Cottage_Price;
+        private System.Windows.Forms.TextBox txt_Cottage_Name;
+        private System.Windows.Forms.Label lbl_Cottage_Name;
         private System.Windows.Forms.GroupBox grb_Customer_Save_Cancel_Buttons;
         private System.Windows.Forms.Button btn_Customer_Save;
         private System.Windows.Forms.Button btn_Customer_Cancel;
