@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class Invoicing : Form
+    public partial class frm_Invoicing : Form
     {
-        public Invoicing()
+        public frm_Invoicing()
         {
             InitializeComponent();
         }

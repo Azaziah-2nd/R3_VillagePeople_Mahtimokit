@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class Invoicing
+    partial class frm_Invoicing
     {
         /// <summary>
         /// Required designer variable.
@@ -101,8 +101,8 @@
             this.tbl_Invoicing_Grey_Line_Under_1st_Row_Left = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_Grey_Line_Under_1st_Row_Right = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Invoicing_Village_Ppl = new System.Windows.Forms.Label();
-            this.tbl_Invoicing_Base = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Invoicing_Grey_Background = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Invoicing_Invoice_A4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Invoicing_Base_Grey_Background = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_5th_Row_Payment_Info.SuspendLayout();
             this.tbl_Invoicing_5th_Row_1st_Col.SuspendLayout();
             this.tbl_Invoicing_5th_Row_1st_Col_Receiver_Info.SuspendLayout();
@@ -127,8 +127,8 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper.SuspendLayout();
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.SuspendLayout();
             this.tbl_Invoicing_Customer_Info.SuspendLayout();
-            this.tbl_Invoicing_Base.SuspendLayout();
-            this.tbl_Invoicing_Grey_Background.SuspendLayout();
+            this.tbl_Invoicing_Invoice_A4.SuspendLayout();
+            this.tbl_Invoicing_Base_Grey_Background.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbl_Invoicing_5th_Row_Payment_Info
@@ -1190,53 +1190,53 @@
             this.lbl_Invoicing_Village_Ppl.TabIndex = 5;
             this.lbl_Invoicing_Village_Ppl.Text = "Village People Oy";
             // 
-            // tbl_Invoicing_Base
+            // tbl_Invoicing_Invoice_A4
             // 
-            this.tbl_Invoicing_Base.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbl_Invoicing_Base.BackColor = System.Drawing.Color.White;
-            this.tbl_Invoicing_Base.ColumnCount = 3;
-            this.tbl_Invoicing_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Invoicing_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_Invoicing_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_1st_Row_Invoice_Info, 1, 1);
-            this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_3rd_Row_Village_People_Info, 1, 3);
-            this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_4th_Row_Virtual_Barcode, 1, 4);
-            this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_5th_Row_Payment_Info, 1, 5);
-            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(-4, 3);
-            this.tbl_Invoicing_Base.Name = "tbl_Invoicing_Base";
-            this.tbl_Invoicing_Base.RowCount = 6;
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tbl_Invoicing_Base.Size = new System.Drawing.Size(958, 1440);
-            this.tbl_Invoicing_Base.TabIndex = 0;
-            this.tbl_Invoicing_Base.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tbl_Invoicing_Invoice_A4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbl_Invoicing_Invoice_A4.BackColor = System.Drawing.Color.White;
+            this.tbl_Invoicing_Invoice_A4.ColumnCount = 3;
+            this.tbl_Invoicing_Invoice_A4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Invoicing_Invoice_A4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_Invoicing_Invoice_A4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Invoicing_Invoice_A4.Controls.Add(this.tbl_Invoicing_1st_Row_Invoice_Info, 1, 1);
+            this.tbl_Invoicing_Invoice_A4.Controls.Add(this.tbl_Invoicing_3rd_Row_Village_People_Info, 1, 3);
+            this.tbl_Invoicing_Invoice_A4.Controls.Add(this.tbl_Invoicing_4th_Row_Virtual_Barcode, 1, 4);
+            this.tbl_Invoicing_Invoice_A4.Controls.Add(this.tbl_Invoicing_5th_Row_Payment_Info, 1, 5);
+            this.tbl_Invoicing_Invoice_A4.Location = new System.Drawing.Point(12, 3);
+            this.tbl_Invoicing_Invoice_A4.Name = "tbl_Invoicing_Invoice_A4";
+            this.tbl_Invoicing_Invoice_A4.RowCount = 6;
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Invoicing_Invoice_A4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tbl_Invoicing_Invoice_A4.Size = new System.Drawing.Size(958, 1440);
+            this.tbl_Invoicing_Invoice_A4.TabIndex = 0;
+            this.tbl_Invoicing_Invoice_A4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // tbl_Invoicing_Grey_Background
+            // tbl_Invoicing_Base_Grey_Background
             // 
-            this.tbl_Invoicing_Grey_Background.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tbl_Invoicing_Base_Grey_Background.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Invoicing_Grey_Background.BackColor = System.Drawing.Color.DimGray;
-            this.tbl_Invoicing_Grey_Background.ColumnCount = 3;
-            this.tbl_Invoicing_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 964F));
-            this.tbl_Invoicing_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.Controls.Add(this.tbl_Invoicing_Base, 1, 1);
-            this.tbl_Invoicing_Grey_Background.Location = new System.Drawing.Point(0, 0);
-            this.tbl_Invoicing_Grey_Background.Margin = new System.Windows.Forms.Padding(0);
-            this.tbl_Invoicing_Grey_Background.Name = "tbl_Invoicing_Grey_Background";
-            this.tbl_Invoicing_Grey_Background.RowCount = 3;
-            this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
-            this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(949, 1446);
-            this.tbl_Invoicing_Grey_Background.TabIndex = 1;
+            this.tbl_Invoicing_Base_Grey_Background.BackColor = System.Drawing.Color.DimGray;
+            this.tbl_Invoicing_Base_Grey_Background.ColumnCount = 3;
+            this.tbl_Invoicing_Base_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Invoicing_Base_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 964F));
+            this.tbl_Invoicing_Base_Grey_Background.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Invoicing_Base_Grey_Background.Controls.Add(this.tbl_Invoicing_Invoice_A4, 1, 1);
+            this.tbl_Invoicing_Base_Grey_Background.Location = new System.Drawing.Point(0, 0);
+            this.tbl_Invoicing_Base_Grey_Background.Margin = new System.Windows.Forms.Padding(0);
+            this.tbl_Invoicing_Base_Grey_Background.Name = "tbl_Invoicing_Base_Grey_Background";
+            this.tbl_Invoicing_Base_Grey_Background.RowCount = 3;
+            this.tbl_Invoicing_Base_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Invoicing_Base_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
+            this.tbl_Invoicing_Base_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Invoicing_Base_Grey_Background.Size = new System.Drawing.Size(983, 1446);
+            this.tbl_Invoicing_Base_Grey_Background.TabIndex = 1;
             // 
-            // Invoicing
+            // frm_Invoicing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1244,9 +1244,9 @@
             this.AutoScrollMinSize = new System.Drawing.Size(940, 1446);
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(984, 681);
-            this.Controls.Add(this.tbl_Invoicing_Grey_Background);
-            this.Name = "Invoicing";
-            this.Text = "Invoicing";
+            this.Controls.Add(this.tbl_Invoicing_Base_Grey_Background);
+            this.Name = "frm_Invoicing";
+            this.Text = "Lasku";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Invoicing_Load);
             this.tbl_Invoicing_5th_Row_Payment_Info.ResumeLayout(false);
@@ -1294,8 +1294,8 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.PerformLayout();
             this.tbl_Invoicing_Customer_Info.ResumeLayout(false);
             this.tbl_Invoicing_Customer_Info.PerformLayout();
-            this.tbl_Invoicing_Base.ResumeLayout(false);
-            this.tbl_Invoicing_Grey_Background.ResumeLayout(false);
+            this.tbl_Invoicing_Invoice_A4.ResumeLayout(false);
+            this.tbl_Invoicing_Base_Grey_Background.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1371,8 +1371,8 @@
         private System.Windows.Forms.TextBox txt_Invoicing_Customer_Name_1;
         private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Grey_Line_Under_1st_Row_Left;
         private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Grey_Line_Under_1st_Row_Right;
-        private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Base;
-        private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Grey_Background;
+        private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Invoice_A4;
+        private System.Windows.Forms.TableLayoutPanel tbl_Invoicing_Base_Grey_Background;
         private System.Windows.Forms.Label lbl_Invoicing_Village_Ppl;
         private System.Windows.Forms.Label lbl_Invoicing_Cool_Handmade_Signature_Line;
         private System.Windows.Forms.TextBox txt_Invoicing_Total;
