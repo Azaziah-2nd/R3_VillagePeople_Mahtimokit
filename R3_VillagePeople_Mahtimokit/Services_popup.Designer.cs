@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class Services_popup
+    partial class frm_Services_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -229,7 +229,7 @@
             this.grb_Service_Cancel_Save_Buttons.TabIndex = 93;
             this.grb_Service_Cancel_Save_Buttons.TabStop = false;
             // 
-            // Services_popup
+            // frm_Services_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +237,7 @@
             this.ClientSize = new System.Drawing.Size(559, 372);
             this.Controls.Add(this.grb_Service_Cancel_Save_Buttons);
             this.Controls.Add(this.grb_Service_Details);
-            this.Name = "Services_popup";
+            this.Name = "frm_Services_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Palvelun tietojen hallinta";
             this.Load += new System.EventHandler(this.Services_popup_Load);

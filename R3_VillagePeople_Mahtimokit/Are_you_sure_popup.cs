@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class AreYouSure_popup : Form
+    public partial class frm_Are_You_Sure_Popup : Form
     {
-        public AreYouSure_popup()
+        public frm_Are_You_Sure_Popup()
         {
             InitializeComponent();
         }
