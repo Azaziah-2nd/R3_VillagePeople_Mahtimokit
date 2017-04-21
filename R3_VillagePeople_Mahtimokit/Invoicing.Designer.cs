@@ -419,7 +419,7 @@
             this.txt_Invoicing_From_Account_Number.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txt_Invoicing_From_Account_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_From_Account_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_From_Account_Number.Location = new System.Drawing.Point(96, 6);
+            this.txt_Invoicing_From_Account_Number.Location = new System.Drawing.Point(96, 9);
             this.txt_Invoicing_From_Account_Number.Name = "txt_Invoicing_From_Account_Number";
             this.txt_Invoicing_From_Account_Number.Size = new System.Drawing.Size(359, 19);
             this.txt_Invoicing_From_Account_Number.TabIndex = 1;
@@ -1202,7 +1202,7 @@
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_3rd_Row_Village_People_Info, 1, 3);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_4th_Row_Virtual_Barcode, 1, 4);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_5th_Row_Payment_Info, 1, 5);
-            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(12, 3);
+            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(-4, 3);
             this.tbl_Invoicing_Base.Name = "tbl_Invoicing_Base";
             this.tbl_Invoicing_Base.RowCount = 6;
             this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
@@ -1233,7 +1233,7 @@
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(983, 1446);
+            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(949, 1446);
             this.tbl_Invoicing_Grey_Background.TabIndex = 1;
             // 
             // Invoicing

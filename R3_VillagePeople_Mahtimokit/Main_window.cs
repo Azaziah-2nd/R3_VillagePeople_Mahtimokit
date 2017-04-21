@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class Main_window : Form
+    public partial class frm_Main_Window : Form
     {
-        public Main_window()
+        public frm_Main_Window()
         {
             InitializeComponent();
         }
@@ -49,14 +49,14 @@ namespace R3_VillagePeople_Mahtimokit
         // Asiakkaan lisäys
         private void btn_Customer_add_Click(object sender, EventArgs e)
         {
-            var form = new Customer_popup();
+            var form = new frm_Customer_Popup();
             form.Show(this);
         }
 
         // Asiakkaan muokkaus
         private void btn_Customer_edit_Click(object sender, EventArgs e)
         {
-            var form = new Customer_popup();
+            var form = new frm_Customer_Popup();
             form.Show(this);
         }
 
@@ -69,14 +69,14 @@ namespace R3_VillagePeople_Mahtimokit
         // Toimipisteen lisäys
         private void btn_Office_add_Click(object sender, EventArgs e)
         {
-            var form = new Office_popup();
+            var form = new frm_Office_Popup();
             form.Show(this);
         }
 
         // Toimipisteen muokkaus
         private void btn_Office_edit_Click(object sender, EventArgs e)
         {
-            var form = new Office_popup();
+            var form = new frm_Office_Popup();
             form.Show(this);
         }
 
@@ -89,14 +89,14 @@ namespace R3_VillagePeople_Mahtimokit
         // Palvelun lisäys
         private void btn_Services_add_Click(object sender, EventArgs e)
         {
-            var form = new Services_popup();
+            var form = new frm_Services_Popup();
             form.Show(this);
         }
 
         // Palvelun muokkaus
         private void btn_Services_edit_Click(object sender, EventArgs e)
         {
-            var form = new Services_popup();
+            var form = new frm_Services_Popup();
             form.Show(this);
         }
 
@@ -109,14 +109,14 @@ namespace R3_VillagePeople_Mahtimokit
         // Mökin lisäys
         private void btn_Cottages_add_Click(object sender, EventArgs e)
         {
-            var form = new Cottage_popup();
+            var form = new frm_Cottage_Popup();
             form.Show(this);
         }
         
         // Mökin muokkaus
         private void btn_Cottages_edit_Click(object sender, EventArgs e)
         {
-            var form = new Cottage_popup();
+            var form = new frm_Cottage_Popup();
             form.Show(this);
         }
 
@@ -152,25 +152,25 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
-            Customer_popup frm = new Customer_popup();
+            frm_Customer_Popup frm = new frm_Customer_Popup();
             frm.Show();
         }
 
         private void btn_Services_Add_Click_1(object sender, EventArgs e)
         {
-            Services_popup frm = new Services_popup();
+            frm_Services_Popup frm = new frm_Services_Popup();
             frm.Show();
         }
 
         private void btn_Cottages_Add_Click_1(object sender, EventArgs e)
         {
-            Cottage_popup frm = new Cottage_popup();
+            frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Show();
         }
 
         private void btn_Office_Add_Click_1(object sender, EventArgs e)
         {
-            Office_popup frm = new Office_popup();
+            frm_Office_Popup frm = new frm_Office_Popup();
             frm.Show();
         }
 
@@ -228,12 +228,6 @@ namespace R3_VillagePeople_Mahtimokit
                 Properties.Settings.Default.Save();
                 dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             }
-        }
-
-        private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
-        {
-            Invoicing frm = new Invoicing();
-            frm.Show();
         }
     }
 }
