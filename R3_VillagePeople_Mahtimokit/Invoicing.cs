@@ -41,5 +41,15 @@ namespace R3_VillagePeople_Mahtimokit
         {
 
         }
+
+        private void lbl_Invoicing_Penalty_Interest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbl_Invoicing_1st_Row_Invoice_Info_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
