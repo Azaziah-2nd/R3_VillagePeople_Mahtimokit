@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class Customer_popup
+    partial class rfm_Customer_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -298,14 +298,14 @@
             this.btn_Customer_Cancel.UseVisualStyleBackColor = true;
             this.btn_Customer_Cancel.Click += new System.EventHandler(this.btn_Customer_Cancel_Click);
             // 
-            // Customer_popup
+            // rfm_Customer_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 364);
             this.Controls.Add(this.grb_Customer_Save_Cancel_Buttons);
             this.Controls.Add(this.grb_Customer_Details);
-            this.Name = "Customer_popup";
+            this.Name = "rfm_Customer_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asiakkaan tietojen hallinta";
             this.grb_Customer_Details.ResumeLayout(false);

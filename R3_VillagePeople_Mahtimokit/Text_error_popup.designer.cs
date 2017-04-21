@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class TextError_popup
+    partial class rfm_Error_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -53,14 +53,14 @@
             this.lbl_Error_Text.Text = "Virhe syöttäessä tietoja. \r\nTarkista, oletko syöttänyt tiedot oikein.";
             this.lbl_Error_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // TextError_popup
+            // rfm_Error_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 123);
             this.Controls.Add(this.lbl_Error_Text);
             this.Controls.Add(this.btn_Error);
-            this.Name = "TextError_popup";
+            this.Name = "rfm_Error_Popup";
             this.Text = "Virhe!";
             this.ResumeLayout(false);
             this.PerformLayout();

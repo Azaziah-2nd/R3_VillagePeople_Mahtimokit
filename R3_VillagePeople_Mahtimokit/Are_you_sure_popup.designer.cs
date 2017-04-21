@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class AreYouSure_popup
+    partial class rfm_Are_You_Sure_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             this.btn_Are_You_Sure_Yes.Text = "Kyllä";
             this.btn_Are_You_Sure_Yes.UseVisualStyleBackColor = true;
             // 
-            // AreYouSure_popup
+            // rfm_Are_You_Sure_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +71,7 @@
             this.Controls.Add(this.btn_Are_You_Sure_Yes);
             this.Controls.Add(this.btn_Are_You_Sure_No);
             this.Controls.Add(this.lbl_Are_You_Sure);
-            this.Name = "AreYouSure_popup";
+            this.Name = "rfm_Are_You_Sure_Popup";
             this.Text = "Varmistus";
             this.ResumeLayout(false);
             this.PerformLayout();
