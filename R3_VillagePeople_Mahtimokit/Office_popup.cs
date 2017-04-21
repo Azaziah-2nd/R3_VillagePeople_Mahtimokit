@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class rfm_Office_Popup : Form
+    public partial class frm_Office_Popup : Form
     {
-        public rfm_Office_Popup()
+        public frm_Office_Popup()
         {
             InitializeComponent();
         }
