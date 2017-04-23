@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreYouSure_popup.cs">
+    <Compile Include="Are_you_sure_popup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AreYouSure_popup.designer.cs">
-      <DependentUpon>AreYouSure_popup.cs</DependentUpon>
+    <Compile Include="Are_you_sure_popup.designer.cs">
+      <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </Compile>
     <Compile Include="Cottage_popup.cs">
       <SubType>Form</SubType>
@@ -103,14 +103,14 @@
     <Compile Include="Services_popup.Designer.cs">
       <DependentUpon>Services_popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="TextError_popup.cs">
+    <Compile Include="Text_error_popup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TextError_popup.designer.cs">
-      <DependentUpon>TextError_popup.cs</DependentUpon>
+    <Compile Include="Text_error_popup.designer.cs">
+      <DependentUpon>Text_error_popup.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AreYouSure_popup.resx">
-      <DependentUpon>AreYouSure_popup.cs</DependentUpon>
+    <EmbeddedResource Include="Are_you_sure_popup.resx">
+      <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cottage_Popup.resx">
       <DependentUpon>Cottage_popup.cs</DependentUpon>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="Services_popup.resx">
       <DependentUpon>Services_popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextError_popup.resx">
-      <DependentUpon>TextError_popup.cs</DependentUpon>
+    <EmbeddedResource Include="Text_error_popup.resx">
+      <DependentUpon>Text_error_popup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

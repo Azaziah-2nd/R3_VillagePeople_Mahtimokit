@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class frm_Cottage_Popup : Form
+    public partial class frm_Are_You_Sure_Popup : Form
     {
-        public frm_Cottage_Popup()
+        public frm_Are_You_Sure_Popup()
         {
             InitializeComponent();
-        }
-
-        private void btn_Cottage_Cancel_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

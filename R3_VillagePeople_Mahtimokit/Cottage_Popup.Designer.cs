@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class Cottage_popup
+    partial class frm_Cottage_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -295,14 +295,14 @@
             this.btn_Cottage_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cottage_Cancel.Click += new System.EventHandler(this.btn_Cottage_Cancel_Click_1);
             // 
-            // Cottage_popup
+            // frm_Cottage_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 438);
             this.Controls.Add(this.grb_Cottage_Save_Cancel_Buttons);
             this.Controls.Add(this.grb_Cottage_Details);
-            this.Name = "Cottage_popup";
+            this.Name = "frm_Cottage_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mökkien tietojen hallinta";
             this.grb_Cottage_Details.ResumeLayout(false);

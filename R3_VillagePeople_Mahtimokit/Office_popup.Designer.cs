@@ -1,6 +1,6 @@
 ﻿namespace R3_VillagePeople_Mahtimokit
 {
-    partial class Office_popup
+    partial class frm_Office_Popup
     {
         /// <summary>
         /// Required designer variable.
@@ -229,14 +229,14 @@
             this.btn_Office_Cancel.UseVisualStyleBackColor = true;
             this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click_1);
             // 
-            // Office_popup
+            // frm_Office_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 366);
             this.Controls.Add(this.grb_Office_Save_Cancel_Buttons);
             this.Controls.Add(this.grb_Office_Details);
-            this.Name = "Office_popup";
+            this.Name = "frm_Office_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toimipisteen tietojen hallinta";
             this.Load += new System.EventHandler(this.Office_popup_Load);
