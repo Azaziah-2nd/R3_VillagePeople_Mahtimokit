@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_window));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
@@ -82,6 +83,8 @@
 =======
 =======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
             System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Mökin valinta");
@@ -131,6 +134,9 @@
             System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Varaushistoria");
             System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Asetukset");
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
 =======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
@@ -2521,6 +2527,7 @@
             this.trv_Manual.Name = "trv_Manual";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             treeNode1.Name = "Node4";
             treeNode1.Text = "Toimipisteen valinta";
             treeNode2.Name = "Node5";
@@ -2645,6 +2652,8 @@
             treeNode112.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
 =======
+=======
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             treeNode85.Name = "Node4";
             treeNode85.Text = "Toimipisteen valinta";
             treeNode86.Name = "Node5";
@@ -2702,6 +2711,9 @@
             treeNode112.Name = "Node3";
             treeNode112.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+<<<<<<< HEAD
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             treeNode91,
             treeNode96,
@@ -2712,6 +2724,9 @@
             treeNode111,
             treeNode112});
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
 =======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
