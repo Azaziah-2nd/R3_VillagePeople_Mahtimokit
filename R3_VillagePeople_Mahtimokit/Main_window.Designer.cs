@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_window));
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
@@ -79,6 +80,8 @@
             System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Varaushistoria");
             System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Asetukset");
 =======
+=======
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
             System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Mökin valinta");
@@ -127,6 +130,9 @@
             treeNode109});
             System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Varaushistoria");
             System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Asetukset");
+<<<<<<< HEAD
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
@@ -2514,6 +2520,7 @@
             this.trv_Manual.Location = new System.Drawing.Point(8, 15);
             this.trv_Manual.Name = "trv_Manual";
 <<<<<<< HEAD
+<<<<<<< HEAD
             treeNode1.Name = "Node4";
             treeNode1.Text = "Toimipisteen valinta";
             treeNode2.Name = "Node5";
@@ -2637,6 +2644,65 @@
             treeNode112.Name = "Node3";
             treeNode112.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+=======
+            treeNode85.Name = "Node4";
+            treeNode85.Text = "Toimipisteen valinta";
+            treeNode86.Name = "Node5";
+            treeNode86.Text = "Asiakkaiden valinta";
+            treeNode87.Name = "Node6";
+            treeNode87.Text = "Mökin valinta";
+            treeNode88.Name = "Node7";
+            treeNode88.Text = "Mökin yhteenveto";
+            treeNode89.Name = "Node8";
+            treeNode89.Text = "Lisäpalveluiden valinta";
+            treeNode90.Name = "Node9";
+            treeNode90.Text = "Tilauksen yhteenveto";
+            treeNode91.Name = "Node0";
+            treeNode91.Text = "Uusi varaus";
+            treeNode92.Name = "Node10";
+            treeNode92.Text = "Asiakkaiden hallinta";
+            treeNode93.Name = "Node11";
+            treeNode93.Text = "Toimipisteen valinta";
+            treeNode94.Name = "Node12";
+            treeNode94.Text = "Toimipisteen palvelut";
+            treeNode95.Name = "Node13";
+            treeNode95.Text = "Toimipisteen mökit";
+            treeNode96.Name = "Node1";
+            treeNode96.Text = "Tietojen hallinta";
+            treeNode97.Name = "Node2";
+            treeNode97.Text = "Varaushistoria";
+            treeNode98.Name = "Node3";
+            treeNode98.Text = "Asetukset";
+            treeNode99.Name = "Node4";
+            treeNode99.Text = "Toimipisteen valinta";
+            treeNode100.Name = "Node5";
+            treeNode100.Text = "Asiakkaiden valinta";
+            treeNode101.Name = "Node6";
+            treeNode101.Text = "Mökin valinta";
+            treeNode102.Name = "Node7";
+            treeNode102.Text = "Mökin yhteenveto";
+            treeNode103.Name = "Node8";
+            treeNode103.Text = "Lisäpalveluiden valinta";
+            treeNode104.Name = "Node9";
+            treeNode104.Text = "Tilauksen yhteenveto";
+            treeNode105.Name = "Node0";
+            treeNode105.Text = "Uusi varaus";
+            treeNode106.Name = "Node10";
+            treeNode106.Text = "Asiakkaiden hallinta";
+            treeNode107.Name = "Node11";
+            treeNode107.Text = "Toimipisteen valinta";
+            treeNode108.Name = "Node12";
+            treeNode108.Text = "Toimipisteen palvelut";
+            treeNode109.Name = "Node13";
+            treeNode109.Text = "Toimipisteen mökit";
+            treeNode110.Name = "Node1";
+            treeNode110.Text = "Tietojen hallinta";
+            treeNode111.Name = "Node2";
+            treeNode111.Text = "Varaushistoria";
+            treeNode112.Name = "Node3";
+            treeNode112.Text = "Asetukset";
+            this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             treeNode91,
             treeNode96,
             treeNode97,
@@ -2645,6 +2711,9 @@
             treeNode110,
             treeNode111,
             treeNode112});
+<<<<<<< HEAD
+>>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
+=======
 >>>>>>> parent of bcb65b4... Viimeisteltiin varaushistorian päivävalitsimet
             this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
