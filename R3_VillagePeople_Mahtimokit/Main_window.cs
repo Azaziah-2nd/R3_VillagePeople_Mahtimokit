@@ -23,6 +23,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet.Asiakas' table. You can move, or remove it, as needed.
+            this.asiakasTableAdapter.Fill(this.vP_DatabaseDataSet.Asiakas);
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
