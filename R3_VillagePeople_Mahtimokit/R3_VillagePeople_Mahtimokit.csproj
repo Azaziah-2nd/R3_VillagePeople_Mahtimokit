@@ -109,6 +109,11 @@
     <Compile Include="Text_error_popup.designer.cs">
       <DependentUpon>Text_error_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="VP_Database_Asiakas_kokonimi_Order.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_Database_Asiakas_kokonimi_Order.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Are_you_sure_popup.resx">
       <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,9 +153,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VP_Database_Asiakas_kokonimi_Order.xsc">
+      <DependentUpon>VP_Database_Asiakas_kokonimi_Order.xsd</DependentUpon>
+    </None>
+    <None Include="VP_Database_Asiakas_kokonimi_Order.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_Database_Asiakas_kokonimi_Order.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_Database_Asiakas_kokonimi_Order.xss">
+      <DependentUpon>VP_Database_Asiakas_kokonimi_Order.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
