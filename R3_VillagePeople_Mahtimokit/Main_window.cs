@@ -18,13 +18,16 @@ namespace R3_VillagePeople_Mahtimokit
             InitializeComponent();
         }
 
-        public void Get_customer_names_to_grid()
-        {
-            SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+        // Määritellään tietokantayhteyden muodostin.
+        private SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
                           AttachDbFilename=|DataDirectory|\VP_Database.mdf;
                           Integrated Security=True;
                           Connect Timeout=10;
                           User Instance=False");
+
+        // DataGriedView elementtien tietojen päivitys.
+        private void Get_customer_names_to_grid()
+        {
             using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT kokonimi FROM Asiakas", database_connection))
             {
                 DataSet data_set = new DataSet();
@@ -35,10 +38,9 @@ namespace R3_VillagePeople_Mahtimokit
                     dtv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
-
         }
 
-        void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
+        private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             // Suljetaan pääformi t3 formin sulkemisen yhteydessä, 
             // näin se ei jää kummittelemaan taustalle piilotettuna.

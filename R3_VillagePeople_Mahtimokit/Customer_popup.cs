@@ -13,18 +13,16 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Customer_Popup : Form
     {
-        private readonly frm_Main_Window frm1; //readonly is optional (For safety purposes)
         public frm_Customer_Popup(frm_Main_Window frm)
         {
             InitializeComponent();
-            frm1 = frm;
         }
 
         private void btn_Customer_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+   
         private void btn_Customer_Save_Click(object sender, EventArgs e)
         {
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
@@ -48,7 +46,7 @@ namespace R3_VillagePeople_Mahtimokit
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
                 "@postitoimipaikka, @postinro, @asuinmaa, @email, @puhelinnro)");
             database_query.Connection = database_connection;
-            // Avataan yhteystietokantaan ja asetetaan tallennettavat arvot.
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
             database_query.Parameters.AddWithValue("@etunimi", etunimi);
             database_query.Parameters.AddWithValue("@sukunimi", sukunimi);
@@ -59,10 +57,9 @@ namespace R3_VillagePeople_Mahtimokit
             database_query.Parameters.AddWithValue("@asuinmaa", asuinmaa);
             database_query.Parameters.AddWithValue("@email", email);
             database_query.Parameters.AddWithValue("@puhelinnro", puhelinnro);
-            // Suoritetaan kysely ja suljetaan tietokantayhteys.
+            // Suoritetaan kysely, suljetaan tietokantayhteys ja suljetaan formi.
             database_query.ExecuteNonQuery();
             database_connection.Close();
-            // Suljetaan tämä formi.
             this.Close();
         }
     }

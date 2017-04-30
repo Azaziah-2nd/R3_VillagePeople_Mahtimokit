@@ -30,54 +30,54 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main_Window));
-            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode145 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode146 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode147 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode141,
-            treeNode142,
-            treeNode143,
-            treeNode144,
-            treeNode145,
-            treeNode146});
-            System.Windows.Forms.TreeNode treeNode148 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode149 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode150 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode151 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode152 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode148,
-            treeNode149,
-            treeNode150,
-            treeNode151});
-            System.Windows.Forms.TreeNode treeNode153 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode154 = new System.Windows.Forms.TreeNode("Asetukset");
-            System.Windows.Forms.TreeNode treeNode155 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode156 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode157 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode158 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode159 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode160 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode161 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode155,
-            treeNode156,
-            treeNode157,
-            treeNode158,
-            treeNode159,
-            treeNode160});
-            System.Windows.Forms.TreeNode treeNode162 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode163 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode164 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode165 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode166 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode162,
-            treeNode163,
-            treeNode164,
-            treeNode165});
-            System.Windows.Forms.TreeNode treeNode167 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode168 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Asetukset");
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
             this.tbl_Order_base = new System.Windows.Forms.TableLayoutPanel();
@@ -148,6 +148,8 @@
             this.btn_Customer_Delete = new System.Windows.Forms.Button();
             this.btn_Customer_Edit = new System.Windows.Forms.Button();
             this.btn_Customer_Add = new System.Windows.Forms.Button();
+            this.dtv_Customers_All = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Office = new System.Windows.Forms.Label();
@@ -241,8 +243,6 @@
             this.tab_Manual = new System.Windows.Forms.TabPage();
             this.trv_Manual = new System.Windows.Forms.TreeView();
             this.asiakasTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter();
-            this.dtv_Customers_All = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -267,6 +267,7 @@
             this.tbl_Edit_1st_Col_Customers.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Search.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_Customers_All)).BeginInit();
             this.tbl_Edit_2nd_Col_Offices_Services.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices_Buttons.SuspendLayout();
@@ -296,7 +297,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
             this.tab_Manual.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_Customers_All)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -1270,6 +1270,38 @@
             this.btn_Customer_Add.TabIndex = 108;
             this.btn_Customer_Add.UseVisualStyleBackColor = true;
             this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click_1);
+            // 
+            // dtv_Customers_All
+            // 
+            this.dtv_Customers_All.AllowUserToAddRows = false;
+            this.dtv_Customers_All.AllowUserToDeleteRows = false;
+            this.dtv_Customers_All.AllowUserToResizeColumns = false;
+            this.dtv_Customers_All.AllowUserToResizeRows = false;
+            this.dtv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtv_Customers_All.AutoGenerateColumns = false;
+            this.dtv_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtv_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dtv_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtv_Customers_All.ColumnHeadersVisible = false;
+            this.dtv_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dtv_Customers_All.DataSource = this.asiakasBindingSource;
+            this.dtv_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dtv_Customers_All.Location = new System.Drawing.Point(9, 38);
+            this.dtv_Customers_All.Name = "dtv_Customers_All";
+            this.dtv_Customers_All.ReadOnly = true;
+            this.dtv_Customers_All.RowHeadersVisible = false;
+            this.dtv_Customers_All.Size = new System.Drawing.Size(285, 444);
+            this.dtv_Customers_All.TabIndex = 107;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
+            this.dataGridViewTextBoxColumn1.HeaderText = "kokonimi";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // tbl_Edit_2nd_Col_Offices_Services
             // 
@@ -2552,109 +2584,77 @@
             // 
             this.trv_Manual.Location = new System.Drawing.Point(8, 15);
             this.trv_Manual.Name = "trv_Manual";
-            treeNode141.Name = "Node4";
-            treeNode141.Text = "Toimipisteen valinta";
-            treeNode142.Name = "Node5";
-            treeNode142.Text = "Asiakkaiden valinta";
-            treeNode143.Name = "Node6";
-            treeNode143.Text = "Mökin valinta";
-            treeNode144.Name = "Node7";
-            treeNode144.Text = "Mökin yhteenveto";
-            treeNode145.Name = "Node8";
-            treeNode145.Text = "Lisäpalveluiden valinta";
-            treeNode146.Name = "Node9";
-            treeNode146.Text = "Tilauksen yhteenveto";
-            treeNode147.Name = "Node0";
-            treeNode147.Text = "Uusi varaus";
-            treeNode148.Name = "Node10";
-            treeNode148.Text = "Asiakkaiden hallinta";
-            treeNode149.Name = "Node11";
-            treeNode149.Text = "Toimipisteen valinta";
-            treeNode150.Name = "Node12";
-            treeNode150.Text = "Toimipisteen palvelut";
-            treeNode151.Name = "Node13";
-            treeNode151.Text = "Toimipisteen mökit";
-            treeNode152.Name = "Node1";
-            treeNode152.Text = "Tietojen hallinta";
-            treeNode153.Name = "Node2";
-            treeNode153.Text = "Varaushistoria";
-            treeNode154.Name = "Node3";
-            treeNode154.Text = "Asetukset";
-            treeNode155.Name = "Node4";
-            treeNode155.Text = "Toimipisteen valinta";
-            treeNode156.Name = "Node5";
-            treeNode156.Text = "Asiakkaiden valinta";
-            treeNode157.Name = "Node6";
-            treeNode157.Text = "Mökin valinta";
-            treeNode158.Name = "Node7";
-            treeNode158.Text = "Mökin yhteenveto";
-            treeNode159.Name = "Node8";
-            treeNode159.Text = "Lisäpalveluiden valinta";
-            treeNode160.Name = "Node9";
-            treeNode160.Text = "Tilauksen yhteenveto";
-            treeNode161.Name = "Node0";
-            treeNode161.Text = "Uusi varaus";
-            treeNode162.Name = "Node10";
-            treeNode162.Text = "Asiakkaiden hallinta";
-            treeNode163.Name = "Node11";
-            treeNode163.Text = "Toimipisteen valinta";
-            treeNode164.Name = "Node12";
-            treeNode164.Text = "Toimipisteen palvelut";
-            treeNode165.Name = "Node13";
-            treeNode165.Text = "Toimipisteen mökit";
-            treeNode166.Name = "Node1";
-            treeNode166.Text = "Tietojen hallinta";
-            treeNode167.Name = "Node2";
-            treeNode167.Text = "Varaushistoria";
-            treeNode168.Name = "Node3";
-            treeNode168.Text = "Asetukset";
+            treeNode1.Name = "Node4";
+            treeNode1.Text = "Toimipisteen valinta";
+            treeNode2.Name = "Node5";
+            treeNode2.Text = "Asiakkaiden valinta";
+            treeNode3.Name = "Node6";
+            treeNode3.Text = "Mökin valinta";
+            treeNode4.Name = "Node7";
+            treeNode4.Text = "Mökin yhteenveto";
+            treeNode5.Name = "Node8";
+            treeNode5.Text = "Lisäpalveluiden valinta";
+            treeNode6.Name = "Node9";
+            treeNode6.Text = "Tilauksen yhteenveto";
+            treeNode7.Name = "Node0";
+            treeNode7.Text = "Uusi varaus";
+            treeNode8.Name = "Node10";
+            treeNode8.Text = "Asiakkaiden hallinta";
+            treeNode9.Name = "Node11";
+            treeNode9.Text = "Toimipisteen valinta";
+            treeNode10.Name = "Node12";
+            treeNode10.Text = "Toimipisteen palvelut";
+            treeNode11.Name = "Node13";
+            treeNode11.Text = "Toimipisteen mökit";
+            treeNode12.Name = "Node1";
+            treeNode12.Text = "Tietojen hallinta";
+            treeNode13.Name = "Node2";
+            treeNode13.Text = "Varaushistoria";
+            treeNode14.Name = "Node3";
+            treeNode14.Text = "Asetukset";
+            treeNode15.Name = "Node4";
+            treeNode15.Text = "Toimipisteen valinta";
+            treeNode16.Name = "Node5";
+            treeNode16.Text = "Asiakkaiden valinta";
+            treeNode17.Name = "Node6";
+            treeNode17.Text = "Mökin valinta";
+            treeNode18.Name = "Node7";
+            treeNode18.Text = "Mökin yhteenveto";
+            treeNode19.Name = "Node8";
+            treeNode19.Text = "Lisäpalveluiden valinta";
+            treeNode20.Name = "Node9";
+            treeNode20.Text = "Tilauksen yhteenveto";
+            treeNode21.Name = "Node0";
+            treeNode21.Text = "Uusi varaus";
+            treeNode22.Name = "Node10";
+            treeNode22.Text = "Asiakkaiden hallinta";
+            treeNode23.Name = "Node11";
+            treeNode23.Text = "Toimipisteen valinta";
+            treeNode24.Name = "Node12";
+            treeNode24.Text = "Toimipisteen palvelut";
+            treeNode25.Name = "Node13";
+            treeNode25.Text = "Toimipisteen mökit";
+            treeNode26.Name = "Node1";
+            treeNode26.Text = "Tietojen hallinta";
+            treeNode27.Name = "Node2";
+            treeNode27.Text = "Varaushistoria";
+            treeNode28.Name = "Node3";
+            treeNode28.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode147,
-            treeNode152,
-            treeNode153,
-            treeNode154,
-            treeNode161,
-            treeNode166,
-            treeNode167,
-            treeNode168});
+            treeNode7,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode21,
+            treeNode26,
+            treeNode27,
+            treeNode28});
             this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
             // 
             // asiakasTableAdapter
             // 
             this.asiakasTableAdapter.ClearBeforeFill = true;
-            // 
-            // dtv_Customers_All
-            // 
-            this.dtv_Customers_All.AllowUserToAddRows = false;
-            this.dtv_Customers_All.AllowUserToDeleteRows = false;
-            this.dtv_Customers_All.AllowUserToResizeColumns = false;
-            this.dtv_Customers_All.AllowUserToResizeRows = false;
-            this.dtv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtv_Customers_All.AutoGenerateColumns = false;
-            this.dtv_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtv_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dtv_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtv_Customers_All.ColumnHeadersVisible = false;
-            this.dtv_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dtv_Customers_All.DataSource = this.asiakasBindingSource;
-            this.dtv_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dtv_Customers_All.Location = new System.Drawing.Point(9, 38);
-            this.dtv_Customers_All.Name = "dtv_Customers_All";
-            this.dtv_Customers_All.ReadOnly = true;
-            this.dtv_Customers_All.RowHeadersVisible = false;
-            this.dtv_Customers_All.Size = new System.Drawing.Size(285, 444);
-            this.dtv_Customers_All.TabIndex = 107;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
-            this.dataGridViewTextBoxColumn1.HeaderText = "kokonimi";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // frm_Main_Window
             // 
@@ -2704,6 +2704,7 @@
             this.tbl_Edit_1st_Col_Customers_Search.ResumeLayout(false);
             this.tbl_Edit_1st_Col_Customers_Search.PerformLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_Customers_All)).EndInit();
             this.tbl_Edit_2nd_Col_Offices_Services.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.PerformLayout();
@@ -2749,7 +2750,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
             this.tab_Manual.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_Customers_All)).EndInit();
             this.ResumeLayout(false);
 
         }
