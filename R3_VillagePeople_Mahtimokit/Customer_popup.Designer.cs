@@ -44,10 +44,10 @@
             this.lbl_Customer_Gender = new System.Windows.Forms.Label();
             this.txt_Customer_Age = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Age = new System.Windows.Forms.Label();
-            this.txt_Customer_Surename = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Surename = new System.Windows.Forms.Label();
-            this.txt_Customer_Name = new System.Windows.Forms.TextBox();
-            this.lbl_Customer_Name = new System.Windows.Forms.Label();
+            this.txt_Customer_Surname = new System.Windows.Forms.TextBox();
+            this.lbl_Customer_Surname = new System.Windows.Forms.Label();
+            this.txt_Customer_First_Name = new System.Windows.Forms.TextBox();
+            this.lbl_Customer_First_Name = new System.Windows.Forms.Label();
             this.grb_Customer_Save_Cancel_Buttons = new System.Windows.Forms.GroupBox();
             this.btn_Customer_Save = new System.Windows.Forms.Button();
             this.btn_Customer_Cancel = new System.Windows.Forms.Button();
@@ -72,10 +72,10 @@
             this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Gender);
             this.grb_Customer_Details.Controls.Add(this.txt_Customer_Age);
             this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Age);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Surename);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Surename);
-            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Name);
-            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Name);
+            this.grb_Customer_Details.Controls.Add(this.txt_Customer_Surname);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_Surname);
+            this.grb_Customer_Details.Controls.Add(this.txt_Customer_First_Name);
+            this.grb_Customer_Details.Controls.Add(this.lbl_Customer_First_Name);
             this.grb_Customer_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Customer_Details.Location = new System.Drawing.Point(12, 12);
             this.grb_Customer_Details.Name = "grb_Customer_Details";
@@ -227,43 +227,43 @@
             this.lbl_Customer_Age.TabIndex = 111;
             this.lbl_Customer_Age.Text = "Ikä:";
             // 
-            // txt_Customer_Surename
+            // txt_Customer_Surname
             // 
-            this.txt_Customer_Surename.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Surename.Location = new System.Drawing.Point(240, 48);
-            this.txt_Customer_Surename.Name = "txt_Customer_Surename";
-            this.txt_Customer_Surename.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Surename.TabIndex = 110;
+            this.txt_Customer_Surname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Customer_Surname.Location = new System.Drawing.Point(240, 48);
+            this.txt_Customer_Surname.Name = "txt_Customer_Surname";
+            this.txt_Customer_Surname.Size = new System.Drawing.Size(287, 21);
+            this.txt_Customer_Surname.TabIndex = 110;
             // 
-            // lbl_Customer_Surename
+            // lbl_Customer_Surname
             // 
-            this.lbl_Customer_Surename.AutoSize = true;
-            this.lbl_Customer_Surename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Surename.Location = new System.Drawing.Point(6, 48);
-            this.lbl_Customer_Surename.Name = "lbl_Customer_Surename";
-            this.lbl_Customer_Surename.Size = new System.Drawing.Size(78, 20);
-            this.lbl_Customer_Surename.TabIndex = 109;
-            this.lbl_Customer_Surename.Text = "Sukunimi:";
+            this.lbl_Customer_Surname.AutoSize = true;
+            this.lbl_Customer_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Customer_Surname.Location = new System.Drawing.Point(6, 48);
+            this.lbl_Customer_Surname.Name = "lbl_Customer_Surname";
+            this.lbl_Customer_Surname.Size = new System.Drawing.Size(78, 20);
+            this.lbl_Customer_Surname.TabIndex = 109;
+            this.lbl_Customer_Surname.Text = "Sukunimi:";
             // 
-            // txt_Customer_Name
+            // txt_Customer_First_Name
             // 
-            this.txt_Customer_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customer_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Customer_Name.Location = new System.Drawing.Point(240, 22);
-            this.txt_Customer_Name.Name = "txt_Customer_Name";
-            this.txt_Customer_Name.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Name.TabIndex = 108;
+            this.txt_Customer_First_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_First_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Customer_First_Name.Location = new System.Drawing.Point(240, 22);
+            this.txt_Customer_First_Name.Name = "txt_Customer_First_Name";
+            this.txt_Customer_First_Name.Size = new System.Drawing.Size(287, 21);
+            this.txt_Customer_First_Name.TabIndex = 108;
             // 
-            // lbl_Customer_Name
+            // lbl_Customer_First_Name
             // 
-            this.lbl_Customer_Name.AutoSize = true;
-            this.lbl_Customer_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Customer_Name.Location = new System.Drawing.Point(6, 22);
-            this.lbl_Customer_Name.Name = "lbl_Customer_Name";
-            this.lbl_Customer_Name.Size = new System.Drawing.Size(66, 20);
-            this.lbl_Customer_Name.TabIndex = 107;
-            this.lbl_Customer_Name.Text = "Etunimi:";
+            this.lbl_Customer_First_Name.AutoSize = true;
+            this.lbl_Customer_First_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Customer_First_Name.Location = new System.Drawing.Point(6, 22);
+            this.lbl_Customer_First_Name.Name = "lbl_Customer_First_Name";
+            this.lbl_Customer_First_Name.Size = new System.Drawing.Size(66, 20);
+            this.lbl_Customer_First_Name.TabIndex = 107;
+            this.lbl_Customer_First_Name.Text = "Etunimi:";
             // 
             // grb_Customer_Save_Cancel_Buttons
             // 
@@ -285,6 +285,7 @@
             this.btn_Customer_Save.TabIndex = 90;
             this.btn_Customer_Save.Text = "Tallenna";
             this.btn_Customer_Save.UseVisualStyleBackColor = true;
+            this.btn_Customer_Save.Click += new System.EventHandler(this.btn_Customer_Save_Click);
             // 
             // btn_Customer_Cancel
             // 
@@ -333,10 +334,10 @@
         private System.Windows.Forms.Label lbl_Customer_Gender;
         private System.Windows.Forms.TextBox txt_Customer_Age;
         private System.Windows.Forms.Label lbl_Customer_Age;
-        private System.Windows.Forms.TextBox txt_Customer_Surename;
-        private System.Windows.Forms.Label lbl_Customer_Surename;
-        private System.Windows.Forms.TextBox txt_Customer_Name;
-        private System.Windows.Forms.Label lbl_Customer_Name;
+        private System.Windows.Forms.TextBox txt_Customer_Surname;
+        private System.Windows.Forms.Label lbl_Customer_Surname;
+        private System.Windows.Forms.TextBox txt_Customer_First_Name;
+        private System.Windows.Forms.Label lbl_Customer_First_Name;
         private System.Windows.Forms.GroupBox grb_Customer_Save_Cancel_Buttons;
         private System.Windows.Forms.Button btn_Customer_Save;
         private System.Windows.Forms.Button btn_Customer_Cancel;
