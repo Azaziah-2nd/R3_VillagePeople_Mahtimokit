@@ -36,16 +36,14 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
             // Määritellään tietokantayhteys.
-            SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
-                          AttachDbFilename=|DataDirectory|\VP_Database.mdf;
-                          Integrated Security=True;
-                          Connect Timeout=10;
-                          User Instance=False");
+            frm_Main_Window main_window = new frm_Main_Window();
+            SqlConnection database_connection = main_window.database_connection;
+
             // Määritellään komento tietojen viemiseksi tietokantaan.
             SqlCommand database_query = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
                 "@postitoimipaikka, @postinro, @asuinmaa, @email, @puhelinnro)");
-            database_query.Connection = database_connection;
+            database_query.Connection = main_window.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
             database_query.Parameters.AddWithValue("@etunimi", etunimi);

@@ -19,7 +19,7 @@ namespace R3_VillagePeople_Mahtimokit
         }
 
         // Määritellään tietokantayhteyden muodostin.
-        private SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+        public SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
                           AttachDbFilename=|DataDirectory|\VP_Database.mdf;
                           Integrated Security=True;
                           Connect Timeout=10;
@@ -55,7 +55,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet2.Palvelu' table. You can move, or remove it, as needed.
+            this.palveluTableAdapter.Fill(this.vP_DatabaseDataSet2.Palvelu);
             this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
             // Haetaan datagridvieweihin tiedot tietokannasta.
             this.Get_customer_names_to_grid();

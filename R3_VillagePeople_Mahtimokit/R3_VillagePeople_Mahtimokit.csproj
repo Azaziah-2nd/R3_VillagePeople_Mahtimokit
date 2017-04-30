@@ -119,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VP_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VP_DatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Are_you_sure_popup.resx">
       <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +184,17 @@
     </None>
     <None Include="VP_DatabaseDataSet1.xss">
       <DependentUpon>VP_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xsc">
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xss">
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
