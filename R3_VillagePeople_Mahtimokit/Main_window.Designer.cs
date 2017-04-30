@@ -472,6 +472,7 @@
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 102;
             this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
+            this.btn_Order_Customers_Search.Click += new System.EventHandler(this.btn_Order_Customers_Search_Click);
             // 
             // txt_Order_Customers_Search
             // 
@@ -482,6 +483,7 @@
             this.txt_Order_Customers_Search.Name = "txt_Order_Customers_Search";
             this.txt_Order_Customers_Search.Size = new System.Drawing.Size(140, 26);
             this.txt_Order_Customers_Search.TabIndex = 101;
+            this.txt_Order_Customers_Search.TextChanged += new System.EventHandler(this.txt_Order_Customers_Search_TextChanged);
             // 
             // lbl_Order_Customers
             // 
@@ -526,6 +528,7 @@
             this.dtv_Order_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dtv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
             this.dtv_Order_Customers_All.Name = "dtv_Order_Customers_All";
+            this.dtv_Order_Customers_All.ReadOnly = true;
             this.dtv_Order_Customers_All.RowHeadersVisible = false;
             this.dtv_Order_Customers_All.Size = new System.Drawing.Size(186, 376);
             this.dtv_Order_Customers_All.TabIndex = 106;

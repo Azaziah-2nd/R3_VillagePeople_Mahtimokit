@@ -231,5 +231,25 @@ namespace R3_VillagePeople_Mahtimokit
                 dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             }
         }
+
+        private void txt_Order_Customers_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dtv_Order_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
+            dtv_Order_Customers_All.DataSource = binding_source;
+        }
+
+        private void btn_Order_Customers_Search_Click(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dtv_Order_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
+            dtv_Order_Customers_All.DataSource = binding_source;
+        }
     }
 }
