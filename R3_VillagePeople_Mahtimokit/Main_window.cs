@@ -222,14 +222,15 @@ namespace R3_VillagePeople_Mahtimokit
         private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Tallennetaan valittu arvo asetuksiin.
-            try
-            {
-                Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
-            }
-            catch
-            {
-                Properties.Settings.Default["default_office"] = ("Helsinki");
-            }
+
+            // HUOM! Tämä toiminnallisuus on toistaiseksi rikki.
+
+            // Vanha toimiva koodi: 
+            // Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
+
+            // Uuusi koodi joka ei toimi
+            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
+            // !!!
             Properties.Settings.Default.Save();
             // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
             string default_office = Properties.Settings.Default["default_office"].ToString();
