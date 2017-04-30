@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace R3_VillagePeople_Mahtimokit
 {
@@ -16,6 +17,35 @@ namespace R3_VillagePeople_Mahtimokit
         {
             InitializeComponent();
         }
+
+        public void Get_customer_names_to_grid()
+        {
+            SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+                          AttachDbFilename=|DataDirectory|\VP_Database.mdf;
+                          Integrated Security=True;
+                          Connect Timeout=10;
+                          User Instance=False");
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT kokonimi FROM Asiakas", database_connection))
+            {
+                DataSet data_set = new DataSet();
+                database_query.Fill(data_set);
+                if (data_set.Tables.Count > 0)
+                {
+                    dtv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dtv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                }
+            }
+
+        }
+
+        void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
+        {
+            // Suljetaan pääformi t3 formin sulkemisen yhteydessä, 
+            // näin se ei jää kummittelemaan taustalle piilotettuna.
+            Get_customer_names_to_grid();
+        }
+
+
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -23,8 +53,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet.Asiakas' table. You can move, or remove it, as needed.
-            this.asiakasTableAdapter.Fill(this.vP_DatabaseDataSet.Asiakas);
+            // Haetaan datagridvieweihin tiedot tietokannasta.
+            this.Get_customer_names_to_grid();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
@@ -51,15 +81,17 @@ namespace R3_VillagePeople_Mahtimokit
         // Asiakkaan lisäys
         private void btn_Customer_add_Click(object sender, EventArgs e)
         {
-            var form = new frm_Customer_Popup();
-            form.Show(this);
+            frm_Customer_Popup frm = new frm_Customer_Popup(this);
+            frm.Show();
+            // Luodaan yhteys frm_t3:n sulkemiseen ja yhdistetään se funktioon "frm_t3_suljettiin".
+            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
         // Asiakkaan muokkaus
         private void btn_Customer_edit_Click(object sender, EventArgs e)
         {
-            var form = new frm_Customer_Popup();
-            form.Show(this);
+            frm_Customer_Popup frm = new frm_Customer_Popup(this);
+            frm.Show();
         }
 
         // Asiakkaan poisto
@@ -154,8 +186,10 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
-            frm_Customer_Popup frm = new frm_Customer_Popup();
+            frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.Show();
+            // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
         private void btn_Services_Add_Click_1(object sender, EventArgs e)
@@ -250,6 +284,30 @@ namespace R3_VillagePeople_Mahtimokit
             binding_source.DataSource = dtv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
             dtv_Order_Customers_All.DataSource = binding_source;
+        }
+
+        private void txt_Customer_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dtv_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
+            dtv_Order_Customers_All.DataSource = binding_source;
+        }
+
+        private void btn_Customer_Search_Click(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dtv_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
+            dtv_Order_Customers_All.DataSource = binding_source;
+        }
+
+        private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
+        {
         }
     }
 }

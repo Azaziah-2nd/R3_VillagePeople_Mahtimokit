@@ -13,9 +13,11 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Customer_Popup : Form
     {
-        public frm_Customer_Popup()
+        private readonly frm_Main_Window frm1; //readonly is optional (For safety purposes)
+        public frm_Customer_Popup(frm_Main_Window frm)
         {
             InitializeComponent();
+            frm1 = frm;
         }
 
         private void btn_Customer_Cancel_Click(object sender, EventArgs e)
