@@ -55,6 +55,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
+            this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
             // Haetaan datagridvieweihin tiedot tietokannasta.
             this.Get_customer_names_to_grid();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
@@ -220,7 +222,14 @@ namespace R3_VillagePeople_Mahtimokit
         private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Tallennetaan valittu arvo asetuksiin.
-            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
+            try
+            {
+                Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
+            }
+            catch
+            {
+                Properties.Settings.Default["default_office"] = ("Helsinki");
+            }
             Properties.Settings.Default.Save();
             // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
             string default_office = Properties.Settings.Default["default_office"].ToString();
