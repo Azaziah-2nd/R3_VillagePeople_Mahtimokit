@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main_Window));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
@@ -87,15 +86,12 @@
             this.cbo_Order_Office_Select = new System.Windows.Forms.ComboBox();
             this.lbl_Order_Office = new System.Windows.Forms.Label();
             this.tbl_Order_1st_Col_Customer = new System.Windows.Forms.TableLayoutPanel();
+            this.lsv_Order_Customers_All = new System.Windows.Forms.ListView();
             this.tbl_Order_Customer_Search = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Order_Customers_Search = new System.Windows.Forms.Button();
             this.txt_Order_Customers_Search = new System.Windows.Forms.TextBox();
             this.lbl_Order_Customers = new System.Windows.Forms.Label();
             this.btn_Order_Customers_Add = new System.Windows.Forms.Button();
-            this.dtv_Order_Customers_All = new System.Windows.Forms.DataGridView();
-            this.kokonimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_Database_Asiakas_kokonimi_Order = new R3_VillagePeople_Mahtimokit.VP_Database_Asiakas_kokonimi_Order();
             this.tbl_Order_2nd_Col_Cottage = new System.Windows.Forms.TableLayoutPanel();
             this.cal_Order_Cottage_Begin = new System.Windows.Forms.MonthCalendar();
             this.lbl_Order_Cottage_End = new System.Windows.Forms.Label();
@@ -241,7 +237,6 @@
             this.cbo_UI_Settings_Font_Size = new System.Windows.Forms.ComboBox();
             this.tab_Manual = new System.Windows.Forms.TabPage();
             this.trv_Manual = new System.Windows.Forms.TreeView();
-            this.asiakasTableAdapter = new R3_VillagePeople_Mahtimokit.VP_Database_Asiakas_kokonimi_OrderTableAdapters.AsiakasTableAdapter();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -249,9 +244,6 @@
             this.tbl_Order_1st_Col_Office.SuspendLayout();
             this.tbl_Order_1st_Col_Customer.SuspendLayout();
             this.tbl_Order_Customer_Search.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_Order_Customers_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_Database_Asiakas_kokonimi_Order)).BeginInit();
             this.tbl_Order_2nd_Col_Cottage.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary.SuspendLayout();
@@ -431,10 +423,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_1st_Col_Customer.ColumnCount = 1;
             this.tbl_Order_1st_Col_Customer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_1st_Col_Customer.Controls.Add(this.lsv_Order_Customers_All, 0, 1);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.tbl_Order_Customer_Search, 0, 2);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.lbl_Order_Customers, 0, 0);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.btn_Order_Customers_Add, 0, 3);
-            this.tbl_Order_1st_Col_Customer.Controls.Add(this.dtv_Order_Customers_All, 0, 1);
             this.tbl_Order_1st_Col_Customer.Location = new System.Drawing.Point(7, 88);
             this.tbl_Order_1st_Col_Customer.Name = "tbl_Order_1st_Col_Customer";
             this.tbl_Order_1st_Col_Customer.RowCount = 4;
@@ -444,6 +436,18 @@
             this.tbl_Order_1st_Col_Customer.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_1st_Col_Customer.Size = new System.Drawing.Size(192, 504);
             this.tbl_Order_1st_Col_Customer.TabIndex = 3;
+            // 
+            // lsv_Order_Customers_All
+            // 
+            this.lsv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Order_Customers_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
+            this.lsv_Order_Customers_All.Name = "lsv_Order_Customers_All";
+            this.lsv_Order_Customers_All.Size = new System.Drawing.Size(186, 376);
+            this.lsv_Order_Customers_All.TabIndex = 104;
+            this.lsv_Order_Customers_All.UseCompatibleStateImageBehavior = false;
             // 
             // tbl_Order_Customer_Search
             // 
@@ -505,42 +509,6 @@
             this.btn_Order_Customers_Add.TabIndex = 105;
             this.btn_Order_Customers_Add.Text = "Lisää asiakas varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
-            // 
-            // dtv_Order_Customers_All
-            // 
-            this.dtv_Order_Customers_All.AllowUserToAddRows = false;
-            this.dtv_Order_Customers_All.AllowUserToDeleteRows = false;
-            this.dtv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtv_Order_Customers_All.AutoGenerateColumns = false;
-            this.dtv_Order_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtv_Order_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtv_Order_Customers_All.ColumnHeadersVisible = false;
-            this.dtv_Order_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kokonimiDataGridViewTextBoxColumn});
-            this.dtv_Order_Customers_All.DataSource = this.asiakasBindingSource;
-            this.dtv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
-            this.dtv_Order_Customers_All.Name = "dtv_Order_Customers_All";
-            this.dtv_Order_Customers_All.RowHeadersVisible = false;
-            this.dtv_Order_Customers_All.Size = new System.Drawing.Size(186, 376);
-            this.dtv_Order_Customers_All.TabIndex = 106;
-            // 
-            // kokonimiDataGridViewTextBoxColumn
-            // 
-            this.kokonimiDataGridViewTextBoxColumn.DataPropertyName = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn.HeaderText = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn.Name = "kokonimiDataGridViewTextBoxColumn";
-            // 
-            // asiakasBindingSource
-            // 
-            this.asiakasBindingSource.DataMember = "Asiakas";
-            this.asiakasBindingSource.DataSource = this.vP_Database_Asiakas_kokonimi_Order;
-            // 
-            // vP_Database_Asiakas_kokonimi_Order
-            // 
-            this.vP_Database_Asiakas_kokonimi_Order.DataSetName = "VP_Database_Asiakas_kokonimi_Order";
-            this.vP_Database_Asiakas_kokonimi_Order.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_Order_2nd_Col_Cottage
             // 
@@ -2619,10 +2587,6 @@
             this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
             // 
-            // asiakasTableAdapter
-            // 
-            this.asiakasTableAdapter.ClearBeforeFill = true;
-            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2645,9 +2609,6 @@
             this.tbl_Order_1st_Col_Customer.PerformLayout();
             this.tbl_Order_Customer_Search.ResumeLayout(false);
             this.tbl_Order_Customer_Search.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_Order_Customers_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_Database_Asiakas_kokonimi_Order)).EndInit();
             this.tbl_Order_2nd_Col_Cottage.ResumeLayout(false);
             this.tbl_Order_2nd_Col_Cottage.PerformLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ResumeLayout(false);
@@ -2736,6 +2697,7 @@
         private System.Windows.Forms.Label lbl_Order_Office;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_1st_Col_Customer;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Customer_Search;
+        private System.Windows.Forms.ListView lsv_Order_Customers_All;
         private System.Windows.Forms.Button btn_Order_Customers_Search;
         private System.Windows.Forms.TextBox txt_Order_Customers_Search;
         private System.Windows.Forms.Label lbl_Order_Customers;
@@ -2881,10 +2843,5 @@
         private System.Windows.Forms.CheckBox chk_Common_Settings_History_End_Date_Today;
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
-        private System.Windows.Forms.DataGridView dtv_Order_Customers_All;
-        private VP_Database_Asiakas_kokonimi_Order vP_Database_Asiakas_kokonimi_Order;
-        private System.Windows.Forms.BindingSource asiakasBindingSource;
-        private VP_Database_Asiakas_kokonimi_OrderTableAdapters.AsiakasTableAdapter asiakasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kokonimiDataGridViewTextBoxColumn;
     }
 }
