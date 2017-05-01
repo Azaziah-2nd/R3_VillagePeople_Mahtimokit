@@ -322,5 +322,18 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
         {
         }
+
+        private void txt_Services_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dtv_Services_All.DataSource;
+            binding_source.Filter = "[nimi] Like '%" + txt_Services_Search.Text + "%'";
+            dtv_Order_Customers_All.DataSource = binding_source;
+        }
+
+        private void btn_Office_Edit_Click_1(object sender, EventArgs e)
+        {
+        }
     }
 }
