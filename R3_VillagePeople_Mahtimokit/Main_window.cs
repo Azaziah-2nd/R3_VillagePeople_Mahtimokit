@@ -321,7 +321,44 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
         {
+
+            // TÄMÄ EI VIELÄ TOIMI OIKEIN!!!
+            /*
+            foreach (DataGridViewCell oneCell in dtv_Customers_All.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    dtv_Customers_All.Rows.RemoveAt(oneCell.RowIndex);
+            }
+            */
+            int i = 0;
+            for (i = 0; i < dtv_Customers_All.CurrentRow.Cells.Count; i++)
+            {
+                DataGridViewCell cell = dtv_Customers_All.CurrentRow.Cells[i];
+                if (cell.Selected == true)
+                {
+                    int row = dtv_Customers_All.CurrentRow.Index;
+                    DataGridView dg = sender as DataGridView;
+
+                    string a = i.ToString();
+                    int lk = dtv_Customers_All.CurrentRow.Index + 1;
+                    MessageBox.Show(lk.ToString());
+                    SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE asiakas_id = @asiakas_id");
+                    database_query.Connection = database_connection;
+                    // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                    database_connection.Open();
+                    database_query.Parameters.AddWithValue("@asiakas_id", lk);
+                    MessageBox.Show(lk.ToString());
+                    // Suoritetaan kysely, suljetaan tietokantayhteys ja suljetaan formi.
+                    database_query.ExecuteNonQuery();
+                    database_connection.Close();
+                    this.Get_customer_names_to_grid();
+                }
+
+
+
+            }
         }
+
 
         private void txt_Services_Search_TextChanged(object sender, EventArgs e)
         {
