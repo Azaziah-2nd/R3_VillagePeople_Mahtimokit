@@ -193,6 +193,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
+            // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "epätosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.is_customer_edited = false;
             frm.Show();
@@ -359,10 +360,9 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Edit_Click_1(object sender, EventArgs e)
         {
+            // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
-
             frm.is_customer_edited = true;
-
             string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
             SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE kokonimi = @kokonimi");
             database_query.Connection = database_connection;
