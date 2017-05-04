@@ -272,23 +272,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grb_Customer_Details;
-        private System.Windows.Forms.TextBox txt_Customer_Country;
         private System.Windows.Forms.Label lbl_Customer_Country;
-        private System.Windows.Forms.TextBox txt_Customer_Phone_Number;
         private System.Windows.Forms.Label lbl_Customer_Phone_number;
-        private System.Windows.Forms.TextBox txt_Customer_Email;
         private System.Windows.Forms.Label lbl_Customer_Email;
-        private System.Windows.Forms.TextBox txt_Customer_City;
-        private System.Windows.Forms.TextBox txt_Customer_Adress;
         private System.Windows.Forms.Label lbl_Customer_Adress;
-        private System.Windows.Forms.TextBox txt_Customere_Postal_Code;
         private System.Windows.Forms.Label lbl_Customer_Postal_Code_City;
-        private System.Windows.Forms.TextBox txt_Customer_Surname;
         private System.Windows.Forms.Label lbl_Customer_Surname;
-        private System.Windows.Forms.TextBox txt_Customer_First_Name;
         private System.Windows.Forms.Label lbl_Customer_First_Name;
         private System.Windows.Forms.GroupBox grb_Customer_Save_Cancel_Buttons;
         private System.Windows.Forms.Button btn_Customer_Save;
         private System.Windows.Forms.Button btn_Customer_Cancel;
+        public System.Windows.Forms.TextBox txt_Customer_First_Name;
+        public System.Windows.Forms.TextBox txt_Customer_Surname;
+        public System.Windows.Forms.TextBox txt_Customer_Email;
+        public System.Windows.Forms.TextBox txt_Customer_Phone_Number;
+        public System.Windows.Forms.TextBox txt_Customer_Adress;
+        public System.Windows.Forms.TextBox txt_Customere_Postal_Code;
+        public System.Windows.Forms.TextBox txt_Customer_City;
+        public System.Windows.Forms.TextBox txt_Customer_Country;
     }
 }

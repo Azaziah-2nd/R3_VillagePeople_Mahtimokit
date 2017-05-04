@@ -36,8 +36,8 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query.Fill(data_set);
                 if (data_set.Tables.Count > 0)
                 {
-                    dtv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
-                    dtv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
         }
@@ -194,6 +194,7 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
+            frm.is_customer_edited = false;
             frm.Show();
             // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
@@ -286,9 +287,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Asiakkaiden rajaus kokonimen perusteella.
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dtv_Order_Customers_All.DataSource;
+            binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dtv_Order_Customers_All.DataSource = binding_source;
+            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
         private void btn_Order_Customers_Search_Click(object sender, EventArgs e)
@@ -296,9 +297,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Asiakkaiden rajaus kokonimen perusteella.
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dtv_Order_Customers_All.DataSource;
+            binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dtv_Order_Customers_All.DataSource = binding_source;
+            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
         private void txt_Customer_Search_TextChanged(object sender, EventArgs e)
@@ -306,9 +307,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Asiakkaiden rajaus kokonimen perusteella.
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dtv_Customers_All.DataSource;
+            binding_source.DataSource = dgv_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dtv_Order_Customers_All.DataSource = binding_source;
+            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
         private void btn_Customer_Search_Click(object sender, EventArgs e)
@@ -316,9 +317,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Asiakkaiden rajaus kokonimen perusteella.
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dtv_Customers_All.DataSource;
+            binding_source.DataSource = dgv_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dtv_Order_Customers_All.DataSource = binding_source;
+            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
 
@@ -326,9 +327,10 @@ namespace R3_VillagePeople_Mahtimokit
         {
             // Hakee nykyisen nimen ja poistaa tiedon tietokannasta sekä päivittää asiakaslistat.
             // Tämä ei toimi oikein jos tietokannassa on useita henkilöitä täsmälleen samoilla nimillä.
-            if (dtv_Customers_All.CurrentCell.Value.ToString() != "")
+            // Parempi ratkaisu olisi poistaa arvoja asiakas_id:n perusteella, mutta miten asiakas_id:n saa haettua datagridview kentän arvoista?
+            if (dgv_Customers_All.CurrentCell.Value.ToString() != "")
             {
-                string kokonimi = dtv_Customers_All.CurrentCell.Value.ToString();
+                string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
                 SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE kokonimi = @kokonimi");
                 database_query.Connection = database_connection;
                 // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
@@ -346,13 +348,54 @@ namespace R3_VillagePeople_Mahtimokit
         {
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dtv_Services_All.DataSource;
+            binding_source.DataSource = dgv_Services_All.DataSource;
             binding_source.Filter = "[nimi] Like '%" + txt_Services_Search.Text + "%'";
-            dtv_Order_Customers_All.DataSource = binding_source;
+            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
         private void btn_Office_Edit_Click_1(object sender, EventArgs e)
         {
+        }
+
+        private void btn_Customer_Edit_Click_1(object sender, EventArgs e)
+        {
+            frm_Customer_Popup frm = new frm_Customer_Popup(this);
+
+            frm.is_customer_edited = true;
+
+            string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE kokonimi = @kokonimi");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query.Parameters.AddWithValue("@kokonimi", kokonimi);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+
+            // Avataan asiakkaan tietojen muokkaus formi
+            frm.Show();
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            while (myReader.Read())
+            {
+                frm.Asiakas_id = (myReader["asiakas_id"].ToString());
+                frm.txt_Customer_First_Name.Text = (myReader["etunimi"].ToString());
+                frm.txt_Customer_Surname.Text = (myReader["sukunimi"].ToString());
+                frm.txt_Customer_Email.Text = (myReader["email"].ToString());
+                frm.txt_Customer_Phone_Number.Text = (myReader["puhelinnro"].ToString());
+                frm.txt_Customer_Adress.Text = (myReader["lahiosoite"].ToString());
+                frm.txt_Customere_Postal_Code.Text = (myReader["postinro"].ToString());
+                frm.txt_Customer_City.Text = (myReader["postitoimipaikka"].ToString());
+                frm.txt_Customer_Country.Text = (myReader["asuinmaa"].ToString());
+            }
+
+            database_connection.Close();
+            // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
     }
 }

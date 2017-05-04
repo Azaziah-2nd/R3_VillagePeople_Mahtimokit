@@ -22,8 +22,10 @@ namespace R3_VillagePeople_Mahtimokit
         {
             this.Close();
         }
-   
-        private void btn_Customer_Save_Click(object sender, EventArgs e)
+
+        public string Asiakas_id;
+        public bool is_customer_edited;
+        public void btn_Customer_Save_Click(object sender, EventArgs e)
         {
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string etunimi = txt_Customer_First_Name.Text;
@@ -39,25 +41,49 @@ namespace R3_VillagePeople_Mahtimokit
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
 
-            // Määritellään komento tietojen viemiseksi tietokantaan.
-            SqlCommand database_query = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
+            // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
+            SqlCommand database_query_new = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
                 "@postitoimipaikka, @postinro, @asuinmaa, @email, @puhelinnro)");
-            database_query.Connection = main_window.database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query.Parameters.AddWithValue("@etunimi", etunimi);
-            database_query.Parameters.AddWithValue("@sukunimi", sukunimi);
-            database_query.Parameters.AddWithValue("@kokonimi", kokonimi);
-            database_query.Parameters.AddWithValue("@lahiosoite", lahiosoite);
-            database_query.Parameters.AddWithValue("@postitoimipaikka", postitoimipaikka);
-            database_query.Parameters.AddWithValue("@postinro", postinro);
-            database_query.Parameters.AddWithValue("@asuinmaa", asuinmaa);
-            database_query.Parameters.AddWithValue("@email", email);
-            database_query.Parameters.AddWithValue("@puhelinnro", puhelinnro);
-            // Suoritetaan kysely, suljetaan tietokantayhteys ja suljetaan formi.
-            database_query.ExecuteNonQuery();
-            database_connection.Close();
+            SqlCommand database_query_update = new SqlCommand("UPDATE Asiakas SET etunimi = @etunimi, sukunimi = @sukunimi, kokonimi= @kokonimi, " +
+                "lahiosoite=@lahiosoite, postitoimipaikka=@postitoimipaikka, postinro=@postinro, asuinmaa=@asuinmaa, email=@email, " +
+                "puhelinnro=@puhelinnro WHERE asiakas_id = @asiakas_id");
+
+            if (this.is_customer_edited == true)
+            {
+                MessageBox.Show("TRui");
+                database_query_update.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_update.Parameters.AddWithValue("@asiakas_id", this.Asiakas_id);
+                database_query_update.Parameters.AddWithValue("@etunimi", etunimi);
+                database_query_update.Parameters.AddWithValue("@sukunimi", sukunimi);
+                database_query_update.Parameters.AddWithValue("@kokonimi", kokonimi);
+                database_query_update.Parameters.AddWithValue("@lahiosoite", lahiosoite);
+                database_query_update.Parameters.AddWithValue("@postitoimipaikka", postitoimipaikka);
+                database_query_update.Parameters.AddWithValue("@postinro", postinro);
+                database_query_update.Parameters.AddWithValue("@asuinmaa", asuinmaa);
+                database_query_update.Parameters.AddWithValue("@email", email);
+                database_query_update.Parameters.AddWithValue("@puhelinnro", puhelinnro);
+                database_query_update.ExecuteNonQuery();
+                database_connection.Close();
+            }
+            else
+            {
+                database_query_new.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_new.Parameters.AddWithValue("@etunimi", etunimi);
+                database_query_new.Parameters.AddWithValue("@sukunimi", sukunimi);
+                database_query_new.Parameters.AddWithValue("@kokonimi", kokonimi);
+                database_query_new.Parameters.AddWithValue("@lahiosoite", lahiosoite);
+                database_query_new.Parameters.AddWithValue("@postitoimipaikka", postitoimipaikka);
+                database_query_new.Parameters.AddWithValue("@postinro", postinro);
+                database_query_new.Parameters.AddWithValue("@asuinmaa", asuinmaa);
+                database_query_new.Parameters.AddWithValue("@email", email);
+                database_query_new.Parameters.AddWithValue("@puhelinnro", puhelinnro);
+                database_query_new.ExecuteNonQuery();
+                database_connection.Close();
+            }
+            // Suljetaan formi.
             this.Close();
         }
     }
