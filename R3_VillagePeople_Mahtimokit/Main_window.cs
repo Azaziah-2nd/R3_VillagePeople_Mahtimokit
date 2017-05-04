@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.OleDb;
+
 
 namespace R3_VillagePeople_Mahtimokit
 {
@@ -319,46 +321,26 @@ namespace R3_VillagePeople_Mahtimokit
             dtv_Order_Customers_All.DataSource = binding_source;
         }
 
+
         private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
         {
-
-            // TÄMÄ EI VIELÄ TOIMI OIKEIN!!!
-            /*
-            foreach (DataGridViewCell oneCell in dtv_Customers_All.SelectedCells)
+            // Hakee nykyisen nimen ja poistaa tiedon tietokannasta sekä päivittää asiakaslistat.
+            // Tämä ei toimi oikein jos tietokannassa on useita henkilöitä täsmälleen samoilla nimillä.
+            if (dtv_Customers_All.CurrentCell.Value.ToString() != "")
             {
-                if (oneCell.Selected)
-                    dtv_Customers_All.Rows.RemoveAt(oneCell.RowIndex);
+                string kokonimi = dtv_Customers_All.CurrentCell.Value.ToString();
+                SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE kokonimi = @kokonimi");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@kokonimi", kokonimi);
+                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                database_query.ExecuteNonQuery();
+                database_connection.Close();
+                this.Get_customer_names_to_grid();
             }
-            */
-            int i = 0;
-            for (i = 0; i < dtv_Customers_All.CurrentRow.Cells.Count; i++)
-            {
-                DataGridViewCell cell = dtv_Customers_All.CurrentRow.Cells[i];
-                if (cell.Selected == true)
-                {
-                    int row = dtv_Customers_All.CurrentRow.Index;
-                    DataGridView dg = sender as DataGridView;
-
-                    string a = i.ToString();
-                    int lk = dtv_Customers_All.CurrentRow.Index + 1;
-                    MessageBox.Show(lk.ToString());
-                    SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE asiakas_id = @asiakas_id");
-                    database_query.Connection = database_connection;
-                    // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-                    database_connection.Open();
-                    database_query.Parameters.AddWithValue("@asiakas_id", lk);
-                    MessageBox.Show(lk.ToString());
-                    // Suoritetaan kysely, suljetaan tietokantayhteys ja suljetaan formi.
-                    database_query.ExecuteNonQuery();
-                    database_connection.Close();
-                    this.Get_customer_names_to_grid();
-                }
-
-
-
-            }
+          
         }
-
 
         private void txt_Services_Search_TextChanged(object sender, EventArgs e)
         {
