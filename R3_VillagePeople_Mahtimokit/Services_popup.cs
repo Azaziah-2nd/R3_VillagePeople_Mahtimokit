@@ -40,12 +40,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Service_Name.Text;
             string kuvaus = txt_Service_Description.Text;
-            string max_osallistujat = txt_Service_Price.Text;
-            string hinta = txt_Service_Max_Visitors.Text;
+            string max_osallistujat = txt_Service_Max_Visitors.Text;
+            string hinta = txt_Service_Price.Text;
             string alv = txt_Service_alv.Text;
-
-
-
             // Apumuuttujat
             string chosen_office = cbo_Service_Office_Select.Text.ToString();
             string toimipiste_id = "";
