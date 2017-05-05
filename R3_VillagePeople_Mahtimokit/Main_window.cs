@@ -397,5 +397,61 @@ namespace R3_VillagePeople_Mahtimokit
             // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
+
+        private void cbo_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+
+
+
+
+
+            string nimi = cbo_Office_Select.Text.ToString();
+            MessageBox.Show(nimi);
+            SqlCommand database_query = new SqlCommand("SELECT toimipiste_id FROM Toimipiste WHERE nimi = @nimi");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query.Parameters.AddWithValue("@nimi", nimi);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+
+            // Alustetaan tietojen lukija
+            string tmp = "";
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            while (myReader.Read())
+            {
+                tmp = (myReader["toimipiste_id"].ToString());
+            }
+
+
+            database_connection.Close();
+
+            MessageBox.Show(tmp);
+
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+
+
+            SqlCommand select_services_by_office = new SqlCommand("SELECT toimipiste_id FROM Palvelu WHERE toimipiste_id = @toimipiste_id");
+            database_query.Connection = database_connection;
+            select_services_by_office.Connection = database_connection;
+            select_services_by_office.Parameters.AddWithValue("@toimipiste_id", tmp);
+            DataSet data_set = new DataSet();
+            select_services_by_office.Fill(data_set);
+            if (data_set.Tables.Count > 0)
+            {
+                dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
+            }
+            }
+        }
+
+        private void tbl_Order_base_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
