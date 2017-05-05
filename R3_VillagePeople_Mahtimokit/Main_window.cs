@@ -57,6 +57,21 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
+
+        private void Get_service_names_to_grid()
+        {
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM Palvelu", database_connection))
+            {
+                DataSet data_set = new DataSet();
+                database_query.Fill(data_set);
+                if (data_set.Tables.Count > 0)
+                {
+                    dgv_Order_Services_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
+                }
+            }
+        }
+
         // Tietojen päivitys formien sulkemisen yhteydessä.
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
@@ -67,7 +82,10 @@ namespace R3_VillagePeople_Mahtimokit
         {
             Get_office_names_to_combo();
         }
-
+        private void Get_service_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
+        {
+            Get_service_names_to_grid();
+        }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -77,9 +95,10 @@ namespace R3_VillagePeople_Mahtimokit
         private void Main_window_Load(object sender, EventArgs e)
         {
 
-            // Haetaan datagridvieweihin tiedot tietokannasta.
+            // Haetaan tiedot tietokannasta eri kenttiin.
             this.Get_customer_names_to_grid();
             this.Get_office_names_to_combo();
+            this.Get_service_names_to_grid();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
@@ -224,7 +243,9 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Services_Add_Click_1(object sender, EventArgs e)
         {
             frm_Services_Popup frm = new frm_Services_Popup();
+            frm.Is_service_edited = false;
             frm.Show();
+            frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
         private void btn_Cottages_Add_Click_1(object sender, EventArgs e)
@@ -236,6 +257,7 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Office_Add_Click_1(object sender, EventArgs e)
         {
             frm_Office_Popup frm = new frm_Office_Popup();
+            frm.Is_office_edited = false;
             frm.Show();
             // Luodaan yhteys formin sulkemiseen ja päivitetään toimipistelistat sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
@@ -453,6 +475,44 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
             // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
+        }
+
+        private void btn_Services_Edit_Click_1(object sender, EventArgs e)
+        {
+            frm_Services_Popup frm = new frm_Services_Popup();
+            frm.Is_service_edited = true;
+
+            string nimi = dgv_Services_All.CurrentCell.Value.ToString();
+
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE nimi = @nimi");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query.Parameters.AddWithValue("@nimi", nimi);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+
+            // Avataan asiakkaan tietojen muokkaus formi
+            frm.Show();
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            while (myReader.Read())
+            {
+                frm.Service_id = (myReader["palvelu_id"].ToString());
+                // frm.cbo_Service_Office_Select.Text = (myReader["toimipiste_id"].ToString());
+                frm.txt_Service_Name.Text = (myReader["nimi"].ToString());
+                frm.txt_Service_Description.Text = (myReader["kuvaus"].ToString());
+                frm.txt_Service_Price.Text = (myReader["hinta"].ToString());
+                frm.txt_Service_Max_Visitors.Text = (myReader["max_osallistujat"].ToString());
+                frm.txt_Service_alv.Text = (myReader["alv"].ToString());
+            }
+            database_connection.Close();
+            frm.Show();
+            frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
     }
 }
