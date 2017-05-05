@@ -481,29 +481,27 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = true;
-
             string nimi = dgv_Services_All.CurrentCell.Value.ToString();
-
             SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE nimi = @nimi");
+            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
             database_query.Parameters.AddWithValue("@nimi", nimi);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
-
             // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             myReader = database_query.ExecuteReader();
-
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
             // Huom! Customer_popup formissa textboxit = Public eikä private.
+            string toimipiste_id = "";
             while (myReader.Read())
             {
+                toimipiste_id = (myReader["toimipiste_id"].ToString());
                 frm.Service_id = (myReader["palvelu_id"].ToString());
-                // frm.cbo_Service_Office_Select.Text = (myReader["toimipiste_id"].ToString());
                 frm.txt_Service_Name.Text = (myReader["nimi"].ToString());
                 frm.txt_Service_Description.Text = (myReader["kuvaus"].ToString());
                 frm.txt_Service_Price.Text = (myReader["hinta"].ToString());
@@ -511,7 +509,19 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Service_alv.Text = (myReader["alv"].ToString());
             }
             database_connection.Close();
-            frm.Show();
+            database_query_get_toimipiste_id.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+            // Alustetaan tietojen lukija
+            myReader = database_query_get_toimipiste_id.ExecuteReader();
+            while (myReader.Read())
+            {
+                frm.cbo_Service_Office_Select.Text = (myReader["nimi"].ToString());
+            }
+            database_connection.Close();
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
     }

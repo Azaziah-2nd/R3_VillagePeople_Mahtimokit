@@ -45,7 +45,7 @@ namespace R3_VillagePeople_Mahtimokit
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
                 "@postitoimipaikka, @postinro, @asuinmaa, @email, @puhelinnro)");
-            SqlCommand database_query_update = new SqlCommand("UPDATE Asiakas SET etunimi = @etunimi, sukunimi = @sukunimi, kokonimi= @kokonimi, " +
+            SqlCommand database_query_update = new SqlCommand("UPDATE Asiakas SET etunimi=@etunimi, sukunimi=@sukunimi, kokonimi=@kokonimi, " +
                 "lahiosoite=@lahiosoite, postitoimipaikka=@postitoimipaikka, postinro=@postinro, asuinmaa=@asuinmaa, email=@email, " +
                 "puhelinnro=@puhelinnro WHERE asiakas_id = @asiakas_id");
             // Jos muokataan asiakasta.
