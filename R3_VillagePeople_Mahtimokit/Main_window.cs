@@ -193,6 +193,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
+            // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "epätosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.is_customer_edited = false;
             frm.Show();
@@ -355,14 +356,48 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Office_Edit_Click_1(object sender, EventArgs e)
         {
+            // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
+            frm_Office_Popup frm = new frm_Office_Popup();
+            frm.Is_office_edited = true;
+
+            string nimi = cbo_Office_Select.Text.ToString();
+
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Toimipiste WHERE nimi = @nimi");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query.Parameters.AddWithValue("@nimi", nimi);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+
+            // Avataan asiakkaan tietojen muokkaus formi
+            frm.Show();
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            while (myReader.Read())
+            {
+                frm.Office_id = (myReader["toimipiste_id"].ToString());
+                frm.txt_Office_Name.Text = (myReader["nimi"].ToString());
+                frm.txt_Office_Adress.Text = (myReader["lahiosoite"].ToString());
+                frm.txt_Office_Postal_Code.Text = (myReader["postinro"].ToString());
+                frm.txt_Office_City.Text = (myReader["postitoimipaikka"].ToString());
+                frm.txt_Office_Email.Text = (myReader["email"].ToString());
+                frm.txt_Office_Phone.Text = (myReader["puhelinnro"].ToString());
+            }
+            database_connection.Close();
+            // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
         private void btn_Customer_Edit_Click_1(object sender, EventArgs e)
         {
+            // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
-
             frm.is_customer_edited = true;
-
             string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
             SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE kokonimi = @kokonimi");
             database_query.Connection = database_connection;
@@ -396,62 +431,6 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
             // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
-        }
-
-        private void cbo_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Asiakkaiden rajaus kokonimen perusteella.
-
-
-
-
-
-            string nimi = cbo_Office_Select.Text.ToString();
-            MessageBox.Show(nimi);
-            SqlCommand database_query = new SqlCommand("SELECT toimipiste_id FROM Toimipiste WHERE nimi = @nimi");
-            database_query.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query.Parameters.AddWithValue("@nimi", nimi);
-            // Suoritetaan kysely
-            database_query.ExecuteNonQuery();
-
-            // Alustetaan tietojen lukija
-            string tmp = "";
-            SqlDataReader myReader = null;
-            myReader = database_query.ExecuteReader();
-
-            // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
-            while (myReader.Read())
-            {
-                tmp = (myReader["toimipiste_id"].ToString());
-            }
-
-
-            database_connection.Close();
-
-            MessageBox.Show(tmp);
-
-            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
-
-
-            SqlCommand select_services_by_office = new SqlCommand("SELECT toimipiste_id FROM Palvelu WHERE toimipiste_id = @toimipiste_id");
-            database_query.Connection = database_connection;
-            select_services_by_office.Connection = database_connection;
-            select_services_by_office.Parameters.AddWithValue("@toimipiste_id", tmp);
-            DataSet data_set = new DataSet();
-            select_services_by_office.Fill(data_set);
-            if (data_set.Tables.Count > 0)
-            {
-                dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
-            }
-            }
-        }
-
-        private void tbl_Order_base_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

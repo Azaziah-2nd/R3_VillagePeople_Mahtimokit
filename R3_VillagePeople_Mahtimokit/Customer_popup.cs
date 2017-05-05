@@ -23,6 +23,7 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
+        // Apumuuttujat asiakastietojen muokkaukseen, arvot pääikkunasta.
         public string Asiakas_id;
         public bool is_customer_edited;
         public void btn_Customer_Save_Click(object sender, EventArgs e)
@@ -40,7 +41,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
-
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
@@ -48,10 +48,10 @@ namespace R3_VillagePeople_Mahtimokit
             SqlCommand database_query_update = new SqlCommand("UPDATE Asiakas SET etunimi = @etunimi, sukunimi = @sukunimi, kokonimi= @kokonimi, " +
                 "lahiosoite=@lahiosoite, postitoimipaikka=@postitoimipaikka, postinro=@postinro, asuinmaa=@asuinmaa, email=@email, " +
                 "puhelinnro=@puhelinnro WHERE asiakas_id = @asiakas_id");
-
+            // Jos muokataan asiakasta.
             if (this.is_customer_edited == true)
             {
-                MessageBox.Show("TRui");
+                // Käytetään asiakkaan muokkauksen yhteyttä.
                 database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@asiakas_id", this.Asiakas_id);
@@ -67,8 +67,10 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
             }
+            // Jos luodaan uusi asiakas.
             else
             {
+                // Käytetään uuden asiakkaan luonnin yhteyttä.
                 database_query_new.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@etunimi", etunimi);
