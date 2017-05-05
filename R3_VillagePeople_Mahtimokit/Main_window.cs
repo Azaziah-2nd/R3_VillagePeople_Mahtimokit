@@ -41,7 +41,7 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
-
+ 
         private void Get_office_names_to_combo()
         {
             using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM toimipiste", database_connection))
@@ -71,7 +71,19 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
-
+        private void Get_cottage_names_to_grid()
+        {
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM Majoitus", database_connection))
+            {
+                DataSet data_set = new DataSet();
+                database_query.Fill(data_set);
+                if (data_set.Tables.Count > 0)
+                {
+                    dgv_Order_Cottage_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Order_Cottage_All.DataSource = data_set.Tables[0].DefaultView;
+                }
+            }
+        }
         // Tietojen päivitys formien sulkemisen yhteydessä.
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
@@ -94,11 +106,14 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet3.Majoitus' table. You can move, or remove it, as needed.
+            this.majoitusTableAdapter.Fill(this.vP_DatabaseDataSet3.Majoitus);
 
             // Haetaan tiedot tietokannasta eri kenttiin.
             this.Get_customer_names_to_grid();
             this.Get_office_names_to_combo();
             this.Get_service_names_to_grid();
+            this.Get_cottage_names_to_grid();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
@@ -523,6 +538,11 @@ namespace R3_VillagePeople_Mahtimokit
             }
             database_connection.Close();
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
+        }
+
+        private void dgv_Order_Cottage_All_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
