@@ -30,54 +30,54 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main_Window));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Asetukset");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Mökin valinta");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20});
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23,
-            treeNode24,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Varaushistoria");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode169 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode170 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode171 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode172 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode173 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode174 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode175 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode169,
+            treeNode170,
+            treeNode171,
+            treeNode172,
+            treeNode173,
+            treeNode174});
+            System.Windows.Forms.TreeNode treeNode176 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode177 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode178 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode179 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode180 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode176,
+            treeNode177,
+            treeNode178,
+            treeNode179});
+            System.Windows.Forms.TreeNode treeNode181 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode182 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode183 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode184 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode185 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode186 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode187 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode188 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode189 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode183,
+            treeNode184,
+            treeNode185,
+            treeNode186,
+            treeNode187,
+            treeNode188});
+            System.Windows.Forms.TreeNode treeNode190 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode191 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode192 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode193 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode194 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode190,
+            treeNode191,
+            treeNode192,
+            treeNode193});
+            System.Windows.Forms.TreeNode treeNode195 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode196 = new System.Windows.Forms.TreeNode("Asetukset");
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
             this.tbl_Order_base = new System.Windows.Forms.TableLayoutPanel();
@@ -2671,71 +2671,71 @@
             // 
             this.trv_Manual.Location = new System.Drawing.Point(8, 15);
             this.trv_Manual.Name = "trv_Manual";
-            treeNode1.Name = "Node4";
-            treeNode1.Text = "Toimipisteen valinta";
-            treeNode2.Name = "Node5";
-            treeNode2.Text = "Asiakkaiden valinta";
-            treeNode3.Name = "Node6";
-            treeNode3.Text = "Mökin valinta";
-            treeNode4.Name = "Node7";
-            treeNode4.Text = "Mökin yhteenveto";
-            treeNode5.Name = "Node8";
-            treeNode5.Text = "Lisäpalveluiden valinta";
-            treeNode6.Name = "Node9";
-            treeNode6.Text = "Tilauksen yhteenveto";
-            treeNode7.Name = "Node0";
-            treeNode7.Text = "Uusi varaus";
-            treeNode8.Name = "Node10";
-            treeNode8.Text = "Asiakkaiden hallinta";
-            treeNode9.Name = "Node11";
-            treeNode9.Text = "Toimipisteen valinta";
-            treeNode10.Name = "Node12";
-            treeNode10.Text = "Toimipisteen palvelut";
-            treeNode11.Name = "Node13";
-            treeNode11.Text = "Toimipisteen mökit";
-            treeNode12.Name = "Node1";
-            treeNode12.Text = "Tietojen hallinta";
-            treeNode13.Name = "Node2";
-            treeNode13.Text = "Varaushistoria";
-            treeNode14.Name = "Node3";
-            treeNode14.Text = "Asetukset";
-            treeNode15.Name = "Node4";
-            treeNode15.Text = "Toimipisteen valinta";
-            treeNode16.Name = "Node5";
-            treeNode16.Text = "Asiakkaiden valinta";
-            treeNode17.Name = "Node6";
-            treeNode17.Text = "Mökin valinta";
-            treeNode18.Name = "Node7";
-            treeNode18.Text = "Mökin yhteenveto";
-            treeNode19.Name = "Node8";
-            treeNode19.Text = "Lisäpalveluiden valinta";
-            treeNode20.Name = "Node9";
-            treeNode20.Text = "Tilauksen yhteenveto";
-            treeNode21.Name = "Node0";
-            treeNode21.Text = "Uusi varaus";
-            treeNode22.Name = "Node10";
-            treeNode22.Text = "Asiakkaiden hallinta";
-            treeNode23.Name = "Node11";
-            treeNode23.Text = "Toimipisteen valinta";
-            treeNode24.Name = "Node12";
-            treeNode24.Text = "Toimipisteen palvelut";
-            treeNode25.Name = "Node13";
-            treeNode25.Text = "Toimipisteen mökit";
-            treeNode26.Name = "Node1";
-            treeNode26.Text = "Tietojen hallinta";
-            treeNode27.Name = "Node2";
-            treeNode27.Text = "Varaushistoria";
-            treeNode28.Name = "Node3";
-            treeNode28.Text = "Asetukset";
+            treeNode169.Name = "Node4";
+            treeNode169.Text = "Toimipisteen valinta";
+            treeNode170.Name = "Node5";
+            treeNode170.Text = "Asiakkaiden valinta";
+            treeNode171.Name = "Node6";
+            treeNode171.Text = "Mökin valinta";
+            treeNode172.Name = "Node7";
+            treeNode172.Text = "Mökin yhteenveto";
+            treeNode173.Name = "Node8";
+            treeNode173.Text = "Lisäpalveluiden valinta";
+            treeNode174.Name = "Node9";
+            treeNode174.Text = "Tilauksen yhteenveto";
+            treeNode175.Name = "Node0";
+            treeNode175.Text = "Uusi varaus";
+            treeNode176.Name = "Node10";
+            treeNode176.Text = "Asiakkaiden hallinta";
+            treeNode177.Name = "Node11";
+            treeNode177.Text = "Toimipisteen valinta";
+            treeNode178.Name = "Node12";
+            treeNode178.Text = "Toimipisteen palvelut";
+            treeNode179.Name = "Node13";
+            treeNode179.Text = "Toimipisteen mökit";
+            treeNode180.Name = "Node1";
+            treeNode180.Text = "Tietojen hallinta";
+            treeNode181.Name = "Node2";
+            treeNode181.Text = "Varaushistoria";
+            treeNode182.Name = "Node3";
+            treeNode182.Text = "Asetukset";
+            treeNode183.Name = "Node4";
+            treeNode183.Text = "Toimipisteen valinta";
+            treeNode184.Name = "Node5";
+            treeNode184.Text = "Asiakkaiden valinta";
+            treeNode185.Name = "Node6";
+            treeNode185.Text = "Mökin valinta";
+            treeNode186.Name = "Node7";
+            treeNode186.Text = "Mökin yhteenveto";
+            treeNode187.Name = "Node8";
+            treeNode187.Text = "Lisäpalveluiden valinta";
+            treeNode188.Name = "Node9";
+            treeNode188.Text = "Tilauksen yhteenveto";
+            treeNode189.Name = "Node0";
+            treeNode189.Text = "Uusi varaus";
+            treeNode190.Name = "Node10";
+            treeNode190.Text = "Asiakkaiden hallinta";
+            treeNode191.Name = "Node11";
+            treeNode191.Text = "Toimipisteen valinta";
+            treeNode192.Name = "Node12";
+            treeNode192.Text = "Toimipisteen palvelut";
+            treeNode193.Name = "Node13";
+            treeNode193.Text = "Toimipisteen mökit";
+            treeNode194.Name = "Node1";
+            treeNode194.Text = "Tietojen hallinta";
+            treeNode195.Name = "Node2";
+            treeNode195.Text = "Varaushistoria";
+            treeNode196.Name = "Node3";
+            treeNode196.Text = "Asetukset";
             this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode21,
-            treeNode26,
-            treeNode27,
-            treeNode28});
+            treeNode175,
+            treeNode180,
+            treeNode181,
+            treeNode182,
+            treeNode189,
+            treeNode194,
+            treeNode195,
+            treeNode196});
             this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
             // 

@@ -42,11 +42,30 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
+        private void Get_office_names_to_combo()
+        {
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM toimipiste", database_connection))
+            {
+                DataSet data_set = new DataSet();
+                database_query.Fill(data_set);
+                if (data_set.Tables.Count > 0)
+                {
+                    cbo_Office_Select.DataSource = data_set.Tables[0].DefaultView;
+                    cbo_Order_Office_Select.DataSource = data_set.Tables[0].DefaultView;
+                    cbo_History_Office_Select.DataSource = data_set.Tables[0].DefaultView;
+                    cbo_Common_Settings_Default_Office.DataSource = data_set.Tables[0].DefaultView;
+                }
+            }
+        }
+        // Tietojen päivitys formien sulkemisen yhteydessä.
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
-            // Suljetaan pääformi t3 formin sulkemisen yhteydessä, 
-            // näin se ei jää kummittelemaan taustalle piilotettuna.
             Get_customer_names_to_grid();
+        }
+
+        private void Get_office_names_to_combo_on_close_event(object sender, FormClosedEventArgs e)
+        {
+            Get_office_names_to_combo();
         }
 
 
@@ -57,11 +76,10 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet2.Palvelu' table. You can move, or remove it, as needed.
-            this.palveluTableAdapter.Fill(this.vP_DatabaseDataSet2.Palvelu);
-            this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
+
             // Haetaan datagridvieweihin tiedot tietokannasta.
             this.Get_customer_names_to_grid();
+            this.Get_office_names_to_combo();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
@@ -90,7 +108,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.Show();
-            // Luodaan yhteys frm_t3:n sulkemiseen ja yhdistetään se funktioon "frm_t3_suljettiin".
+            // Luodaan yhteys formin sulkemiseen ja päivitetään asiakaslistat sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
@@ -99,6 +117,8 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.Show();
+            // Luodaan yhteys formin sulkemiseen ja päivitetään asiakaslistat sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
         // Asiakkaan poisto
@@ -217,6 +237,8 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Office_Popup frm = new frm_Office_Popup();
             frm.Show();
+            // Luodaan yhteys formin sulkemiseen ja päivitetään toimipistelistat sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
         private void tbl_Order_3rd_Col_Cottage_Summary_Services_Paint(object sender, PaintEventArgs e)
@@ -389,8 +411,8 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Office_Phone.Text = (myReader["puhelinnro"].ToString());
             }
             database_connection.Close();
-            // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
-            frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
+            // Luodaan yhteys formin sulkemiseen ja päivitetään toimipistelistat sulkemisen yhteydessä.
+            frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
         private void btn_Customer_Edit_Click_1(object sender, EventArgs e)
