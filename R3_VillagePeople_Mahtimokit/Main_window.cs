@@ -37,6 +37,7 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
         }
@@ -109,6 +110,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet4.Asiakas' table. You can move, or remove it, as needed.
+            this.asiakasTableAdapter1.Fill(this.vP_DatabaseDataSet4.Asiakas);
             // TODO: This line of code loads data into the 'vP_DatabaseDataSet3.Majoitus' table. You can move, or remove it, as needed.
             this.majoitusTableAdapter.Fill(this.vP_DatabaseDataSet3.Majoitus);
 
@@ -350,41 +353,34 @@ namespace R3_VillagePeople_Mahtimokit
         private void txt_Order_Customers_Search_TextChanged(object sender, EventArgs e)
         {
             // Asiakkaiden rajaus kokonimen perusteella.
+            // Aloitetaan päivittämällä asiakkaiden hallinnan ja varaushistorian tekstikentät vastaamaan hakua.
+            txt_Customer_Search.Text = txt_Order_Customers_Search.Text;
+            txt_History_Customer_Search.Text = txt_Order_Customers_Search.Text;
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
-            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
             dgv_Order_Customers_All.DataSource = binding_source;
         }
-
         private void btn_Order_Customers_Search_Click(object sender, EventArgs e)
-        {
-            // Asiakkaiden rajaus kokonimen perusteella.
-            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Order_Customers_All.DataSource;
-            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dgv_Order_Customers_All.DataSource = binding_source;
+        {  
         }
 
         private void txt_Customer_Search_TextChanged(object sender, EventArgs e)
         {
             // Asiakkaiden rajaus kokonimen perusteella.
+            // Aloitetaan päivittämällä asiakkaiden hallinnan ja varaushistorian tekstikentät vastaamaan hakua.
+            txt_Order_Customers_Search.Text = txt_Customer_Search.Text;
+            txt_History_Customer_Search.Text = txt_Customer_Search.Text;
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Customers_All.DataSource;
-            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dgv_Order_Customers_All.DataSource = binding_source;
+            binding_source.DataSource = dgv_Order_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
+            dgv_Customers_All.DataSource = binding_source;
         }
 
         private void btn_Customer_Search_Click(object sender, EventArgs e)
         {
-            // Asiakkaiden rajaus kokonimen perusteella.
-            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Customers_All.DataSource;
-            binding_source.Filter = "[kokonimi] Like '%" + txt_Order_Customers_Search.Text + "%'";
-            dgv_Order_Customers_All.DataSource = binding_source;
         }
 
 
@@ -600,6 +596,19 @@ namespace R3_VillagePeople_Mahtimokit
             }
             database_connection.Close();
             frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
+        }
+
+        private void txt_History_Customer_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Asiakkaiden rajaus kokonimen perusteella.
+            // Aloitetaan päivittämällä asiakkaiden hallinnan ja varaushistorian tekstikentät vastaamaan hakua.
+            txt_Order_Customers_Search.Text = txt_History_Customer_Search.Text;
+            txt_Customer_Search.Text = txt_History_Customer_Search.Text;
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dgv_Order_Customers_All.DataSource;
+            binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
+            dgv_History_Customers_All.DataSource = binding_source;
         }
     }
 }
