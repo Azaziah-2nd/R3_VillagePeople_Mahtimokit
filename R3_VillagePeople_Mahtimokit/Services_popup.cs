@@ -22,7 +22,6 @@ namespace R3_VillagePeople_Mahtimokit
         {
             // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
             this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
-
         }
 
         private void btn_Service_Cancel_Click_1(object sender, EventArgs e)
@@ -36,7 +35,6 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Service_Save_Click(object sender, EventArgs e)
         {
             frm_Main_Window main_window = new frm_Main_Window();
-
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Service_Name.Text;
             string kuvaus = txt_Service_Description.Text;

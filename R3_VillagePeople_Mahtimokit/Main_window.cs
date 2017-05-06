@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data.OleDb;
 
 
 namespace R3_VillagePeople_Mahtimokit
@@ -80,7 +79,7 @@ namespace R3_VillagePeople_Mahtimokit
                 if (data_set.Tables.Count > 0)
                 {
                     dgv_Order_Cottage_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Order_Cottage_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Cottages_all.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
         }
@@ -97,6 +96,10 @@ namespace R3_VillagePeople_Mahtimokit
         private void Get_service_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_service_names_to_grid();
+        }
+        private void Get_cottage_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
+        {
+            Get_cottage_names_to_grid();
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
@@ -266,7 +269,9 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Cottages_Add_Click_1(object sender, EventArgs e)
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
+            frm.Is_Cottage_edited = false;
             frm.Show();
+            frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
         }
 
         private void btn_Office_Add_Click_1(object sender, EventArgs e)
@@ -543,6 +548,58 @@ namespace R3_VillagePeople_Mahtimokit
         private void dgv_Order_Cottage_All_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_Cottages_Edit_Click_1(object sender, EventArgs e)
+        {
+            frm_Cottage_Popup frm = new frm_Cottage_Popup();
+            frm.Is_Cottage_edited = true;
+            string nimi = dgv_Cottages_all.CurrentCell.Value.ToString();
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE nimi = @nimi");
+            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query.Parameters.AddWithValue("@nimi", nimi);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+            // Avataan asiakkaan tietojen muokkaus formi
+            frm.Show();
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            string toimipiste_id = "";
+            while (myReader.Read())
+            {
+                toimipiste_id = (myReader["toimipiste_id"].ToString());
+                frm.Cottage_id = (myReader["majoitus_id"].ToString());
+                frm.txt_Cottage_Name.Text = (myReader["nimi"].ToString());
+                frm.txt_Cottage_Description.Text = (myReader["kuvaus"].ToString());
+                frm.txt_Cottage_Price.Text = (myReader["hinta"].ToString());
+                frm.txt_Cottage_Max_Visitors.Text = (myReader["max_henkilot"].ToString());
+                frm.txt_Cottage_Size.Text = (myReader["koko"].ToString());
+                if ((myReader["wlan"].ToString()) == "False")
+                {
+                    frm.rbu_Cottage_Wlan_No.Checked = true;
+                }
+            }
+            database_connection.Close();
+            database_query_get_toimipiste_id.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+            // Alustetaan tietojen lukija
+            myReader = database_query_get_toimipiste_id.ExecuteReader();
+            while (myReader.Read())
+            {
+                frm.cbo_Cottage_Office_Select.Text = (myReader["nimi"].ToString());
+            }
+            database_connection.Close();
+            frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
         }
     }
 }
