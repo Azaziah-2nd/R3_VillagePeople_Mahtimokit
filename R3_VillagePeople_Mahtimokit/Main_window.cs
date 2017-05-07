@@ -360,7 +360,6 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
-            dgv_Order_Customers_All.DataSource = binding_source;
         }
         private void btn_Order_Customers_Search_Click(object sender, EventArgs e)
         {  
@@ -376,7 +375,6 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
-            dgv_Customers_All.DataSource = binding_source;
         }
 
         private void btn_Customer_Search_Click(object sender, EventArgs e)
@@ -407,11 +405,12 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Services_Search_TextChanged(object sender, EventArgs e)
         {
+            // Palveluiden rajaus nimen perusteella.
+            txt_Order_Services_Search.Text = txt_Services_Search.Text;
             // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Services_All.DataSource;
-            binding_source.Filter = "[nimi] Like '%" + txt_Services_Search.Text + "%'";
-            dgv_Order_Customers_All.DataSource = binding_source;
+            binding_source.DataSource = dgv_Order_Services_All.DataSource;
+            binding_source.Filter = "[nimi] Like '%" + txt_Order_Services_Search.Text + "%'";
         }
 
         private void btn_Office_Edit_Click_1(object sender, EventArgs e)
@@ -608,7 +607,21 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
-            dgv_History_Customers_All.DataSource = binding_source;
+        }
+
+        private void txt_Order_Services_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Palveluiden rajaus nimen perusteella.
+            txt_Services_Search.Text = txt_Order_Services_Search.Text;
+            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dgv_Order_Services_All.DataSource;
+            binding_source.Filter = "[nimi] Like '%" + txt_Order_Services_Search.Text + "%'";
+        }
+
+        private void btn_Services_Search_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
