@@ -79,7 +79,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query.Fill(data_set);
                 if (data_set.Tables.Count > 0)
                 {
-                    dgv_Order_Cottage_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Cottages_all.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
@@ -622,6 +622,22 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Services_Search_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Order_Cottages_Search_TextChanged(object sender, EventArgs e)
+        {
+            txt_Cottages_Search.Text = txt_Order_Cottages_Search.Text;
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dgv_Order_Cottages_All.DataSource;
+            binding_source.Filter = "[nimi] Like '%" + txt_Order_Cottages_Search.Text + "%'";
+        }
+
+        private void txt_Cottages_Search_TextChanged(object sender, EventArgs e)
+        {
+            txt_Order_Cottages_Search.Text = txt_Cottages_Search.Text;
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dgv_Cottages_all.DataSource;
+            binding_source.Filter = "[nimi] Like '%" + txt_Cottages_Search.Text + "%'";
         }
     }
 }
