@@ -60,17 +60,14 @@ namespace R3_VillagePeople_Mahtimokit
             main_window.database_connection.Close();
             // Määritellään tietokantayhteys.
             SqlConnection database_connection = main_window.database_connection;
-            // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
+            // Määritellään tietokantakyselyt majoituksen lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Majoitus] ([toimipiste_id], [nimi], [kuvaus], [hinta], " +
                 "[max_henkilot], [koko], [wlan]) VALUES (@toimipiste_id, @nimi, @kuvaus, @hinta, @max_henkilot, @koko, @wlan)");
 
             SqlCommand database_query_update = new SqlCommand("UPDATE Majoitus SET toimipiste_id=@toimipiste_id, nimi=@nimi, kuvaus=@kuvaus, " +
                 "hinta=@hinta, max_henkilot=@max_henkilot, koko=@koko, wlan=@wlan WHERE majoitus_id = @majoitus_id");
-            // Jos muokataan asiakasta.
-
             if (this.Is_Cottage_edited == true)
             {
-                // Käytetään asiakkaan muokkauksen yhteyttä.
                 database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@majoitus_id", this.Cottage_id);
@@ -84,10 +81,9 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
             }
-            // Jos luodaan uusi asiakas.
+            // Jos luodaan uusi.
             else
             {
-                // Käytetään uuden asiakkaan luonnin yhteyttä.
                 database_query_new.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
