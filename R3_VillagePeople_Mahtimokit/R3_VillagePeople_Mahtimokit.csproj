@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -115,6 +115,31 @@
     <Compile Include="Text_error_popup.designer.cs">
       <DependentUpon>Text_error_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="VP_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VP_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VP_DatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VP_DatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VP_DatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VP_DatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Are_you_sure_popup.resx">
       <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +183,61 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VP_DatabaseDataSet.xsc">
+      <DependentUpon>VP_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet.xss">
+      <DependentUpon>VP_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet1.xsc">
+      <DependentUpon>VP_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet1.xss">
+      <DependentUpon>VP_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xsc">
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet2.xss">
+      <DependentUpon>VP_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet3.xsc">
+      <DependentUpon>VP_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet3.xss">
+      <DependentUpon>VP_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet4.xsc">
+      <DependentUpon>VP_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VP_DatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VP_DatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VP_DatabaseDataSet4.xss">
+      <DependentUpon>VP_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -175,7 +255,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\Aten_mahtisofta_logo.png" />
+=======
+    <Content Include="VP_Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VP_Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>VP_Database.mdf</DependentUpon>
+    </Content>
+>>>>>>> refs/remotes/Azaziah-2nd/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

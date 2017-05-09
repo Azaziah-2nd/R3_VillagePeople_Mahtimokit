@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main_Window));
+<<<<<<< HEAD
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mökin valinta");
@@ -77,6 +79,56 @@
             treeNode25});
             System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Varaushistoria");
             System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Asetukset");
+=======
+            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode57,
+            treeNode58,
+            treeNode59,
+            treeNode60,
+            treeNode61,
+            treeNode62});
+            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode64,
+            treeNode65,
+            treeNode66,
+            treeNode67});
+            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Asetukset");
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Asiakkaiden valinta");
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Mökin valinta");
+            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Mökin yhteenveto");
+            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Lisäpalveluiden valinta");
+            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Tilauksen yhteenveto");
+            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Uusi varaus", new System.Windows.Forms.TreeNode[] {
+            treeNode71,
+            treeNode72,
+            treeNode73,
+            treeNode74,
+            treeNode75,
+            treeNode76});
+            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Asiakkaiden hallinta");
+            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Toimipisteen valinta");
+            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Toimipisteen palvelut");
+            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Toimipisteen mökit");
+            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Tietojen hallinta", new System.Windows.Forms.TreeNode[] {
+            treeNode78,
+            treeNode79,
+            treeNode80,
+            treeNode81});
+            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Varaushistoria");
+            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Asetukset");
+>>>>>>> refs/remotes/Azaziah-2nd/master
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
             this.tbl_Order_base = new System.Windows.Forms.TableLayoutPanel();
@@ -84,23 +136,34 @@
             this.tbl_Order_Customers = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_1st_Col_Office = new System.Windows.Forms.TableLayoutPanel();
             this.cbo_Order_Office_Select = new System.Windows.Forms.ComboBox();
+            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1();
             this.lbl_Order_Office = new System.Windows.Forms.Label();
             this.tbl_Order_1st_Col_Customer = new System.Windows.Forms.TableLayoutPanel();
-            this.lsv_Order_Customers_All = new System.Windows.Forms.ListView();
             this.tbl_Order_Customer_Search = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Order_Customers_Search = new System.Windows.Forms.Button();
             this.txt_Order_Customers_Search = new System.Windows.Forms.TextBox();
             this.lbl_Order_Customers = new System.Windows.Forms.Label();
             this.btn_Order_Customers_Add = new System.Windows.Forms.Button();
+            this.dgv_Order_Customers_All = new System.Windows.Forms.DataGridView();
+            this.kokonimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet();
             this.tbl_Order_2nd_Col_Cottage = new System.Windows.Forms.TableLayoutPanel();
             this.cal_Order_Cottage_Begin = new System.Windows.Forms.MonthCalendar();
             this.lbl_Order_Cottage_End = new System.Windows.Forms.Label();
             this.cal_Order_Cottage_End = new System.Windows.Forms.MonthCalendar();
             this.lbl_Order_Cottage_Selection = new System.Windows.Forms.Label();
-            this.Btn_Order_Cottage_Add = new System.Windows.Forms.Button();
-            this.lsv_Order_Cottage_All = new System.Windows.Forms.ListView();
             this.lbl_Order_Cottage = new System.Windows.Forms.Label();
             this.lbl_Order_Cottage_Begin = new System.Windows.Forms.Label();
+            this.dgv_Order_Cottages_All = new System.Windows.Forms.DataGridView();
+            this.nimiDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet3 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3();
+            this.Btn_Order_Cottage_Add = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Order_Cottages_Search = new System.Windows.Forms.Button();
+            this.txt_Order_Cottages_Search = new System.Windows.Forms.TextBox();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_3rd_Col_Cottage_Summary = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Cottage_Summary_Price = new System.Windows.Forms.Label();
@@ -111,11 +174,15 @@
             this.lbl_Order_Cottage_Max_Customers = new System.Windows.Forms.Label();
             this.tbl_Order_3rd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Services = new System.Windows.Forms.Label();
-            this.lsv_Order_Services_All = new System.Windows.Forms.ListView();
             this.tbl_Order_3rd_Col_Services_Quantity = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Order_Quantity = new System.Windows.Forms.Label();
-            this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
+            this.txt_Order_Services_Search = new System.Windows.Forms.TextBox();
+            this.btn_Order_Services_Search = new System.Windows.Forms.Button();
             this.lbl_Order_Services_Quantity_Units = new System.Windows.Forms.Label();
+            this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
+            this.dgv_Order_Services_All = new System.Windows.Forms.DataGridView();
+            this.nimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.palveluBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet2 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet2();
             this.btn_Order_Service_add = new System.Windows.Forms.Button();
             this.tbl_4th_Col_Summary = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_4th_Col_Summary_Office_Customers = new System.Windows.Forms.TableLayoutPanel();
@@ -137,7 +204,6 @@
             this.tbl_Edit_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_1st_Col_Customers = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Customer_Management = new System.Windows.Forms.Label();
-            this.lsv_Customers_All = new System.Windows.Forms.ListView();
             this.tbl_Edit_1st_Col_Customers_Search = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Customer_Search = new System.Windows.Forms.Button();
             this.txt_Customer_Search = new System.Windows.Forms.TextBox();
@@ -145,6 +211,10 @@
             this.btn_Customer_Delete = new System.Windows.Forms.Button();
             this.btn_Customer_Edit = new System.Windows.Forms.Button();
             this.btn_Customer_Add = new System.Windows.Forms.Button();
+            this.dgv_Customers_All = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asiakasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vPDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Office = new System.Windows.Forms.Label();
@@ -155,7 +225,6 @@
             this.btn_Office_Add = new System.Windows.Forms.Button();
             this.tbl_Edit_2nd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Services = new System.Windows.Forms.Label();
-            this.lsv_Services_All = new System.Windows.Forms.ListView();
             this.tbl_Edit_2nd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Services_Search = new System.Windows.Forms.Button();
             this.txt_Services_Search = new System.Windows.Forms.TextBox();
@@ -163,9 +232,10 @@
             this.btn_Services_Delete = new System.Windows.Forms.Button();
             this.btn_Services_Edit = new System.Windows.Forms.Button();
             this.btn_Services_Add = new System.Windows.Forms.Button();
+            this.dgv_Services_All = new System.Windows.Forms.DataGridView();
+            this.nimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbl_Edit_3rd_Col_Cottages = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Cottages = new System.Windows.Forms.Label();
-            this.lsv_Cottages_All = new System.Windows.Forms.ListView();
             this.tbl_Edit_3rd_Col_Cottages_Search = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cottages_Search = new System.Windows.Forms.Button();
             this.txt_Cottages_Search = new System.Windows.Forms.TextBox();
@@ -173,11 +243,12 @@
             this.btn_Cottages_Delete = new System.Windows.Forms.Button();
             this.btn_Cottages_Edit = new System.Windows.Forms.Button();
             this.btn_Cottages_Add = new System.Windows.Forms.Button();
+            this.dgv_Cottages_all = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_History = new System.Windows.Forms.TabPage();
             this.tbl_History_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_1st_Col_Customers_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Customer_Selection = new System.Windows.Forms.Label();
-            this.lsv_History_Customers_All_With_Orders = new System.Windows.Forms.ListView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_History_Customer_Search = new System.Windows.Forms.Button();
             this.txt_History_Customer_Search = new System.Windows.Forms.TextBox();
@@ -186,6 +257,10 @@
             this.btn_History_Limit_To_Office = new System.Windows.Forms.Button();
             this.lbl_History_Office = new System.Windows.Forms.Label();
             this.cbo_History_Office_Select = new System.Windows.Forms.ComboBox();
+            this.dgv_History_Customers_All = new System.Windows.Forms.DataGridView();
+            this.kokonimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asiakasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet4 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet4();
             this.tbl_History_2nd_Col_Orders_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_History = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Orders = new System.Windows.Forms.Label();
@@ -237,18 +312,36 @@
             this.cbo_UI_Settings_Font_Size = new System.Windows.Forms.ComboBox();
             this.tab_Manual = new System.Windows.Forms.TabPage();
             this.trv_Manual = new System.Windows.Forms.TreeView();
+            this.asiakasTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter();
+            this.toimipisteTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter();
+            this.palveluTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet2TableAdapters.PalveluTableAdapter();
+            this.majoitusTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3TableAdapters.MajoitusTableAdapter();
+            this.asiakasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.asiakasTableAdapter1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet4TableAdapters.AsiakasTableAdapter();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
             this.tbl_Order_1st_Col_Office_Customer.SuspendLayout();
             this.tbl_Order_1st_Col_Office.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
             this.tbl_Order_1st_Col_Customer.SuspendLayout();
             this.tbl_Order_Customer_Search.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Customers_All)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet)).BeginInit();
             this.tbl_Order_2nd_Col_Cottage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Cottages_All)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary.SuspendLayout();
             this.tbl_Order_3rd_Col_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Services_Quantity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet2)).BeginInit();
             this.tbl_4th_Col_Summary.SuspendLayout();
             this.tbl_Order_4th_Col_Summary_Office_Customers.SuspendLayout();
             this.tbl_Order_4th_Col_Summary_Cottage_Services.SuspendLayout();
@@ -258,20 +351,28 @@
             this.tbl_Edit_1st_Col_Customers.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Search.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customers_All)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).BeginInit();
             this.tbl_Edit_2nd_Col_Offices_Services.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices_Buttons.SuspendLayout();
             this.tbl_Edit_2nd_Col_Services.SuspendLayout();
             this.tbl_Edit_2nd_Col_Services_Search.SuspendLayout();
             this.tbl_Edit_2nd_Col_Services_Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Services_All)).BeginInit();
             this.tbl_Edit_3rd_Col_Cottages.SuspendLayout();
             this.tbl_Edit_3rd_Col_Cottages_Search.SuspendLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cottages_all)).BeginInit();
             this.tab_History.SuspendLayout();
             this.tbl_History_Base.SuspendLayout();
             this.tbl_History_1st_Col_Customers_Offices.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet4)).BeginInit();
             this.tbl_History_2nd_Col_Orders_Dates.SuspendLayout();
             this.tbl_History_Order_History.SuspendLayout();
             this.tbl_History_Order_Search.SuspendLayout();
@@ -287,6 +388,7 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
             this.tab_Manual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -396,15 +498,24 @@
             // cbo_Order_Office_Select
             // 
             this.cbo_Order_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Order_Office_Select.DataSource = this.toimipisteBindingSource;
+            this.cbo_Order_Office_Select.DisplayMember = "nimi";
             this.cbo_Order_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Order_Office_Select.FormattingEnabled = true;
-            this.cbo_Order_Office_Select.Items.AddRange(new object[] {
-            "Joensuu"});
             this.cbo_Order_Office_Select.Location = new System.Drawing.Point(3, 28);
             this.cbo_Order_Office_Select.Name = "cbo_Order_Office_Select";
             this.cbo_Order_Office_Select.Size = new System.Drawing.Size(186, 28);
             this.cbo_Order_Office_Select.TabIndex = 105;
-            this.cbo_Order_Office_Select.Text = "Valitse toimipiste";
+            // 
+            // toimipisteBindingSource
+            // 
+            this.toimipisteBindingSource.DataMember = "Toimipiste";
+            this.toimipisteBindingSource.DataSource = this.vP_DatabaseDataSet1;
+            // 
+            // vP_DatabaseDataSet1
+            // 
+            this.vP_DatabaseDataSet1.DataSetName = "VP_DatabaseDataSet1";
+            this.vP_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_Order_Office
             // 
@@ -423,10 +534,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_1st_Col_Customer.ColumnCount = 1;
             this.tbl_Order_1st_Col_Customer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_1st_Col_Customer.Controls.Add(this.lsv_Order_Customers_All, 0, 1);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.tbl_Order_Customer_Search, 0, 2);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.lbl_Order_Customers, 0, 0);
             this.tbl_Order_1st_Col_Customer.Controls.Add(this.btn_Order_Customers_Add, 0, 3);
+            this.tbl_Order_1st_Col_Customer.Controls.Add(this.dgv_Order_Customers_All, 0, 1);
             this.tbl_Order_1st_Col_Customer.Location = new System.Drawing.Point(7, 88);
             this.tbl_Order_1st_Col_Customer.Name = "tbl_Order_1st_Col_Customer";
             this.tbl_Order_1st_Col_Customer.RowCount = 4;
@@ -436,18 +547,6 @@
             this.tbl_Order_1st_Col_Customer.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_1st_Col_Customer.Size = new System.Drawing.Size(192, 504);
             this.tbl_Order_1st_Col_Customer.TabIndex = 3;
-            // 
-            // lsv_Order_Customers_All
-            // 
-            this.lsv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Customers_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Order_Customers_All.Name = "lsv_Order_Customers_All";
-            this.lsv_Order_Customers_All.Size = new System.Drawing.Size(186, 376);
-            this.lsv_Order_Customers_All.TabIndex = 104;
-            this.lsv_Order_Customers_All.UseCompatibleStateImageBehavior = false;
             // 
             // tbl_Order_Customer_Search
             // 
@@ -459,7 +558,7 @@
             this.tbl_Order_Customer_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tbl_Order_Customer_Search.Controls.Add(this.btn_Order_Customers_Search, 0, 0);
             this.tbl_Order_Customer_Search.Controls.Add(this.txt_Order_Customers_Search, 0, 0);
-            this.tbl_Order_Customer_Search.Location = new System.Drawing.Point(3, 405);
+            this.tbl_Order_Customer_Search.Location = new System.Drawing.Point(3, 416);
             this.tbl_Order_Customer_Search.Name = "tbl_Order_Customer_Search";
             this.tbl_Order_Customer_Search.RowCount = 1;
             this.tbl_Order_Customer_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -476,6 +575,7 @@
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 102;
             this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
+            this.btn_Order_Customers_Search.Click += new System.EventHandler(this.btn_Order_Customers_Search_Click);
             // 
             // txt_Order_Customers_Search
             // 
@@ -486,6 +586,7 @@
             this.txt_Order_Customers_Search.Name = "txt_Order_Customers_Search";
             this.txt_Order_Customers_Search.Size = new System.Drawing.Size(140, 26);
             this.txt_Order_Customers_Search.TabIndex = 101;
+            this.txt_Order_Customers_Search.TextChanged += new System.EventHandler(this.txt_Order_Customers_Search_TextChanged);
             // 
             // lbl_Order_Customers
             // 
@@ -503,12 +604,54 @@
             this.btn_Order_Customers_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Order_Customers_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Customers_Add.Location = new System.Drawing.Point(3, 451);
+            this.btn_Order_Customers_Add.Location = new System.Drawing.Point(3, 462);
             this.btn_Order_Customers_Add.Name = "btn_Order_Customers_Add";
-            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(186, 50);
+            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(186, 39);
             this.btn_Order_Customers_Add.TabIndex = 105;
-            this.btn_Order_Customers_Add.Text = "Lisää asiakas varaukseen";
+            this.btn_Order_Customers_Add.Text = "Lisää varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
+            // 
+            // dgv_Order_Customers_All
+            // 
+            this.dgv_Order_Customers_All.AllowUserToAddRows = false;
+            this.dgv_Order_Customers_All.AllowUserToDeleteRows = false;
+            this.dgv_Order_Customers_All.AllowUserToResizeColumns = false;
+            this.dgv_Order_Customers_All.AllowUserToResizeRows = false;
+            this.dgv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Order_Customers_All.AutoGenerateColumns = false;
+            this.dgv_Order_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Order_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Order_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Order_Customers_All.ColumnHeadersVisible = false;
+            this.dgv_Order_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kokonimiDataGridViewTextBoxColumn});
+            this.dgv_Order_Customers_All.DataSource = this.asiakasBindingSource;
+            this.dgv_Order_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
+            this.dgv_Order_Customers_All.Name = "dgv_Order_Customers_All";
+            this.dgv_Order_Customers_All.ReadOnly = true;
+            this.dgv_Order_Customers_All.RowHeadersVisible = false;
+            this.dgv_Order_Customers_All.Size = new System.Drawing.Size(186, 387);
+            this.dgv_Order_Customers_All.TabIndex = 106;
+            // 
+            // kokonimiDataGridViewTextBoxColumn
+            // 
+            this.kokonimiDataGridViewTextBoxColumn.DataPropertyName = "kokonimi";
+            this.kokonimiDataGridViewTextBoxColumn.HeaderText = "kokonimi";
+            this.kokonimiDataGridViewTextBoxColumn.Name = "kokonimiDataGridViewTextBoxColumn";
+            this.kokonimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // asiakasBindingSource
+            // 
+            this.asiakasBindingSource.DataMember = "Asiakas";
+            this.asiakasBindingSource.DataSource = this.vP_DatabaseDataSet;
+            // 
+            // vP_DatabaseDataSet
+            // 
+            this.vP_DatabaseDataSet.DataSetName = "VP_DatabaseDataSet";
+            this.vP_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_Order_2nd_Col_Cottage
             // 
@@ -524,13 +667,14 @@
             this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.lbl_Order_Cottage_End, 1, 4);
             this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.cal_Order_Cottage_End, 1, 5);
             this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.lbl_Order_Cottage_Selection, 1, 6);
-            this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.Btn_Order_Cottage_Add, 1, 8);
-            this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.lsv_Order_Cottage_All, 1, 7);
             this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.lbl_Order_Cottage, 1, 1);
             this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.lbl_Order_Cottage_Begin, 1, 2);
+            this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.dgv_Order_Cottages_All, 1, 7);
+            this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.Btn_Order_Cottage_Add, 1, 9);
+            this.tbl_Order_2nd_Col_Cottage.Controls.Add(this.tableLayoutPanel2, 1, 8);
             this.tbl_Order_2nd_Col_Cottage.Location = new System.Drawing.Point(225, 15);
             this.tbl_Order_2nd_Col_Cottage.Name = "tbl_Order_2nd_Col_Cottage";
-            this.tbl_Order_2nd_Col_Cottage.RowCount = 10;
+            this.tbl_Order_2nd_Col_Cottage.RowCount = 11;
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -539,8 +683,9 @@
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tbl_Order_2nd_Col_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Order_2nd_Col_Cottage.Size = new System.Drawing.Size(275, 610);
             this.tbl_Order_2nd_Col_Cottage.TabIndex = 1;
             this.tbl_Order_2nd_Col_Cottage.Paint += new System.Windows.Forms.PaintEventHandler(this.tbl_Order_2nd_Col_Cottage_Paint);
@@ -579,28 +724,6 @@
             this.lbl_Order_Cottage_Selection.TabIndex = 70;
             this.lbl_Order_Cottage_Selection.Text = "Mökin valinta";
             // 
-            // Btn_Order_Cottage_Add
-            // 
-            this.Btn_Order_Cottage_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(8, 535);
-            this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
-            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(258, 57);
-            this.Btn_Order_Cottage_Add.TabIndex = 73;
-            this.Btn_Order_Cottage_Add.Text = "Lisää mökki varaukseen";
-            this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
-            // 
-            // lsv_Order_Cottage_All
-            // 
-            this.lsv_Order_Cottage_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Cottage_All.Location = new System.Drawing.Point(8, 458);
-            this.lsv_Order_Cottage_All.Name = "lsv_Order_Cottage_All";
-            this.lsv_Order_Cottage_All.Size = new System.Drawing.Size(258, 71);
-            this.lsv_Order_Cottage_All.TabIndex = 74;
-            this.lsv_Order_Cottage_All.UseCompatibleStateImageBehavior = false;
-            // 
             // lbl_Order_Cottage
             // 
             this.lbl_Order_Cottage.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -622,6 +745,99 @@
             this.lbl_Order_Cottage_Begin.TabIndex = 1;
             this.lbl_Order_Cottage_Begin.Text = "Tulopäivä";
             // 
+            // dgv_Order_Cottages_All
+            // 
+            this.dgv_Order_Cottages_All.AllowUserToAddRows = false;
+            this.dgv_Order_Cottages_All.AllowUserToDeleteRows = false;
+            this.dgv_Order_Cottages_All.AllowUserToResizeColumns = false;
+            this.dgv_Order_Cottages_All.AllowUserToResizeRows = false;
+            this.dgv_Order_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Order_Cottages_All.AutoGenerateColumns = false;
+            this.dgv_Order_Cottages_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Order_Cottages_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Order_Cottages_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Order_Cottages_All.ColumnHeadersVisible = false;
+            this.dgv_Order_Cottages_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nimiDataGridViewTextBoxColumn2});
+            this.dgv_Order_Cottages_All.DataSource = this.majoitusBindingSource;
+            this.dgv_Order_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Order_Cottages_All.Location = new System.Drawing.Point(8, 458);
+            this.dgv_Order_Cottages_All.Name = "dgv_Order_Cottages_All";
+            this.dgv_Order_Cottages_All.ReadOnly = true;
+            this.dgv_Order_Cottages_All.RowHeadersVisible = false;
+            this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(258, 43);
+            this.dgv_Order_Cottages_All.TabIndex = 107;
+            this.dgv_Order_Cottages_All.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Order_Cottage_All_CellContentClick);
+            // 
+            // nimiDataGridViewTextBoxColumn2
+            // 
+            this.nimiDataGridViewTextBoxColumn2.DataPropertyName = "nimi";
+            this.nimiDataGridViewTextBoxColumn2.HeaderText = "nimi";
+            this.nimiDataGridViewTextBoxColumn2.Name = "nimiDataGridViewTextBoxColumn2";
+            this.nimiDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // majoitusBindingSource
+            // 
+            this.majoitusBindingSource.DataMember = "Majoitus";
+            this.majoitusBindingSource.DataSource = this.vP_DatabaseDataSet3;
+            // 
+            // vP_DatabaseDataSet3
+            // 
+            this.vP_DatabaseDataSet3.DataSetName = "VP_DatabaseDataSet3";
+            this.vP_DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Btn_Order_Cottage_Add
+            // 
+            this.Btn_Order_Cottage_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(8, 549);
+            this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
+            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(258, 38);
+            this.Btn_Order_Cottage_Add.TabIndex = 73;
+            this.Btn_Order_Cottage_Add.Text = "Lisää mökki varaukseen";
+            this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_Order_Cottages_Search, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_Order_Cottages_Search, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 507);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(258, 36);
+            this.tableLayoutPanel2.TabIndex = 108;
+            // 
+            // btn_Order_Cottages_Search
+            // 
+            this.btn_Order_Cottages_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Cottages_Search.BackgroundImage")));
+            this.btn_Order_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Cottages_Search.Location = new System.Drawing.Point(221, 3);
+            this.btn_Order_Cottages_Search.Name = "btn_Order_Cottages_Search";
+            this.btn_Order_Cottages_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Order_Cottages_Search.TabIndex = 102;
+            this.btn_Order_Cottages_Search.UseVisualStyleBackColor = true;
+            // 
+            // txt_Order_Cottages_Search
+            // 
+            this.txt_Order_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Order_Cottages_Search.Location = new System.Drawing.Point(3, 3);
+            this.txt_Order_Cottages_Search.Name = "txt_Order_Cottages_Search";
+            this.txt_Order_Cottages_Search.Size = new System.Drawing.Size(212, 26);
+            this.txt_Order_Cottages_Search.TabIndex = 101;
+            this.txt_Order_Cottages_Search.TextChanged += new System.EventHandler(this.txt_Order_Cottages_Search_TextChanged);
+            // 
             // tbl_Order_3rd_Col_Cottage_Summary_Services
             // 
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -640,9 +856,9 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowCount = 6;
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Size = new System.Drawing.Size(217, 610);
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.TabIndex = 2;
@@ -743,16 +959,17 @@
             this.tbl_Order_3rd_Col_Services.ColumnCount = 1;
             this.tbl_Order_3rd_Col_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_3rd_Col_Services.Controls.Add(this.lbl_Order_Services, 0, 0);
-            this.tbl_Order_3rd_Col_Services.Controls.Add(this.lsv_Order_Services_All, 0, 1);
             this.tbl_Order_3rd_Col_Services.Controls.Add(this.tbl_Order_3rd_Col_Services_Quantity, 0, 3);
-            this.tbl_Order_3rd_Col_Services.Location = new System.Drawing.Point(7, 225);
+            this.tbl_Order_3rd_Col_Services.Controls.Add(this.dgv_Order_Services_All, 0, 1);
+            this.tbl_Order_3rd_Col_Services.Location = new System.Drawing.Point(7, 220);
             this.tbl_Order_3rd_Col_Services.Name = "tbl_Order_3rd_Col_Services";
             this.tbl_Order_3rd_Col_Services.RowCount = 4;
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tbl_Order_3rd_Col_Services.Size = new System.Drawing.Size(202, 305);
+            this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_Order_3rd_Col_Services.Size = new System.Drawing.Size(202, 326);
             this.tbl_Order_3rd_Col_Services.TabIndex = 1;
             // 
             // lbl_Order_Services
@@ -765,74 +982,118 @@
             this.lbl_Order_Services.TabIndex = 72;
             this.lbl_Order_Services.Text = "Palveluiden valinta";
             // 
-            // lsv_Order_Services_All
-            // 
-            this.lsv_Order_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Services_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Services_All.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Order_Services_All.Name = "lsv_Order_Services_All";
-            this.lsv_Order_Services_All.Size = new System.Drawing.Size(196, 243);
-            this.lsv_Order_Services_All.TabIndex = 105;
-            this.lsv_Order_Services_All.UseCompatibleStateImageBehavior = false;
-            // 
             // tbl_Order_3rd_Col_Services_Quantity
             // 
             this.tbl_Order_3rd_Col_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Order_3rd_Col_Services_Quantity.ColumnCount = 3;
+            this.tbl_Order_3rd_Col_Services_Quantity.ColumnCount = 4;
             this.tbl_Order_3rd_Col_Services_Quantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_3rd_Col_Services_Quantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tbl_Order_3rd_Col_Services_Quantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.lbl_Order_Quantity, 0, 0);
-            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.txt_Order_Services_Quantity, 1, 0);
-            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.lbl_Order_Services_Quantity_Units, 2, 0);
-            this.tbl_Order_3rd_Col_Services_Quantity.Location = new System.Drawing.Point(3, 272);
+            this.tbl_Order_3rd_Col_Services_Quantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.txt_Order_Services_Search, 0, 0);
+            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.btn_Order_Services_Search, 1, 0);
+            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.lbl_Order_Services_Quantity_Units, 3, 0);
+            this.tbl_Order_3rd_Col_Services_Quantity.Controls.Add(this.txt_Order_Services_Quantity, 2, 0);
+            this.tbl_Order_3rd_Col_Services_Quantity.Location = new System.Drawing.Point(3, 286);
             this.tbl_Order_3rd_Col_Services_Quantity.Name = "tbl_Order_3rd_Col_Services_Quantity";
             this.tbl_Order_3rd_Col_Services_Quantity.RowCount = 1;
-            this.tbl_Order_3rd_Col_Services_Quantity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_3rd_Col_Services_Quantity.Size = new System.Drawing.Size(196, 30);
+            this.tbl_Order_3rd_Col_Services_Quantity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Order_3rd_Col_Services_Quantity.Size = new System.Drawing.Size(196, 37);
             this.tbl_Order_3rd_Col_Services_Quantity.TabIndex = 107;
             // 
-            // lbl_Order_Quantity
+            // txt_Order_Services_Search
             // 
-            this.lbl_Order_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Order_Quantity.AutoSize = true;
-            this.lbl_Order_Quantity.Location = new System.Drawing.Point(68, 10);
-            this.lbl_Order_Quantity.Name = "lbl_Order_Quantity";
-            this.lbl_Order_Quantity.Size = new System.Drawing.Size(58, 20);
-            this.lbl_Order_Quantity.TabIndex = 0;
-            this.lbl_Order_Quantity.Text = "Määrä:";
+            this.txt_Order_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Order_Services_Search.Location = new System.Drawing.Point(3, 3);
+            this.txt_Order_Services_Search.Name = "txt_Order_Services_Search";
+            this.txt_Order_Services_Search.Size = new System.Drawing.Size(86, 26);
+            this.txt_Order_Services_Search.TabIndex = 101;
+            this.txt_Order_Services_Search.TextChanged += new System.EventHandler(this.txt_Order_Services_Search_TextChanged);
             // 
-            // txt_Order_Services_Quantity
+            // btn_Order_Services_Search
             // 
-            this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(132, 3);
-            this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
-            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(26, 26);
-            this.txt_Order_Services_Quantity.TabIndex = 1;
-            this.txt_Order_Services_Quantity.Text = "1";
+            this.btn_Order_Services_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Services_Search.BackgroundImage")));
+            this.btn_Order_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Services_Search.Location = new System.Drawing.Point(95, 3);
+            this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
+            this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Order_Services_Search.TabIndex = 102;
+            this.btn_Order_Services_Search.UseVisualStyleBackColor = true;
             // 
             // lbl_Order_Services_Quantity_Units
             // 
-            this.lbl_Order_Services_Quantity_Units.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Order_Services_Quantity_Units.AutoSize = true;
-            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(164, 10);
+            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(164, 0);
             this.lbl_Order_Services_Quantity_Units.Name = "lbl_Order_Services_Quantity_Units";
             this.lbl_Order_Services_Quantity_Units.Size = new System.Drawing.Size(29, 20);
             this.lbl_Order_Services_Quantity_Units.TabIndex = 2;
             this.lbl_Order_Services_Quantity_Units.Text = "kpl";
             this.lbl_Order_Services_Quantity_Units.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // txt_Order_Services_Quantity
+            // 
+            this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(133, 3);
+            this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
+            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(25, 26);
+            this.txt_Order_Services_Quantity.TabIndex = 1;
+            this.txt_Order_Services_Quantity.Text = "1";
+            // 
+            // dgv_Order_Services_All
+            // 
+            this.dgv_Order_Services_All.AllowUserToAddRows = false;
+            this.dgv_Order_Services_All.AllowUserToDeleteRows = false;
+            this.dgv_Order_Services_All.AllowUserToResizeColumns = false;
+            this.dgv_Order_Services_All.AllowUserToResizeRows = false;
+            this.dgv_Order_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Order_Services_All.AutoGenerateColumns = false;
+            this.dgv_Order_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Order_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Order_Services_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Order_Services_All.ColumnHeadersVisible = false;
+            this.dgv_Order_Services_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nimiDataGridViewTextBoxColumn1});
+            this.dgv_Order_Services_All.DataSource = this.palveluBindingSource;
+            this.dgv_Order_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Order_Services_All.Location = new System.Drawing.Point(3, 23);
+            this.dgv_Order_Services_All.Name = "dgv_Order_Services_All";
+            this.dgv_Order_Services_All.ReadOnly = true;
+            this.dgv_Order_Services_All.RowHeadersVisible = false;
+            this.dgv_Order_Services_All.Size = new System.Drawing.Size(196, 257);
+            this.dgv_Order_Services_All.TabIndex = 108;
+            // 
+            // nimiDataGridViewTextBoxColumn1
+            // 
+            this.nimiDataGridViewTextBoxColumn1.DataPropertyName = "nimi";
+            this.nimiDataGridViewTextBoxColumn1.HeaderText = "nimi";
+            this.nimiDataGridViewTextBoxColumn1.Name = "nimiDataGridViewTextBoxColumn1";
+            this.nimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // palveluBindingSource
+            // 
+            this.palveluBindingSource.DataMember = "Palvelu";
+            this.palveluBindingSource.DataSource = this.vP_DatabaseDataSet2;
+            // 
+            // vP_DatabaseDataSet2
+            // 
+            this.vP_DatabaseDataSet2.DataSetName = "VP_DatabaseDataSet2";
+            this.vP_DatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btn_Order_Service_add
             // 
-            this.btn_Order_Service_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Order_Service_add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Order_Service_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Service_add.Location = new System.Drawing.Point(7, 536);
+            this.btn_Order_Service_add.Location = new System.Drawing.Point(7, 552);
             this.btn_Order_Service_add.Name = "btn_Order_Service_add";
-            this.btn_Order_Service_add.Size = new System.Drawing.Size(202, 56);
+            this.btn_Order_Service_add.Size = new System.Drawing.Size(202, 40);
             this.btn_Order_Service_add.TabIndex = 106;
             this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
@@ -1106,9 +1367,9 @@
             this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
             this.tbl_Edit_1st_Col_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lbl_Customer_Management, 1, 1);
-            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.lsv_Customers_All, 1, 2);
             this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Search, 1, 3);
             this.tbl_Edit_1st_Col_Customers.Controls.Add(this.tbl_Edit_1st_Col_Customers_Buttons, 1, 4);
+            this.tbl_Edit_1st_Col_Customers.Controls.Add(this.dgv_Customers_All, 1, 2);
             this.tbl_Edit_1st_Col_Customers.Location = new System.Drawing.Point(22, 15);
             this.tbl_Edit_1st_Col_Customers.Name = "tbl_Edit_1st_Col_Customers";
             this.tbl_Edit_1st_Col_Customers.RowCount = 6;
@@ -1131,18 +1392,6 @@
             this.lbl_Customer_Management.Size = new System.Drawing.Size(169, 20);
             this.lbl_Customer_Management.TabIndex = 78;
             this.lbl_Customer_Management.Text = "Asiakkaiden hallinta";
-            // 
-            // lsv_Customers_All
-            // 
-            this.lsv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Customers_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Customers_All.Location = new System.Drawing.Point(9, 38);
-            this.lsv_Customers_All.Name = "lsv_Customers_All";
-            this.lsv_Customers_All.Size = new System.Drawing.Size(285, 444);
-            this.lsv_Customers_All.TabIndex = 100;
-            this.lsv_Customers_All.UseCompatibleStateImageBehavior = false;
             // 
             // tbl_Edit_1st_Col_Customers_Search
             // 
@@ -1172,6 +1421,7 @@
             this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Customer_Search.TabIndex = 102;
             this.btn_Customer_Search.UseVisualStyleBackColor = true;
+            this.btn_Customer_Search.Click += new System.EventHandler(this.btn_Customer_Search_Click);
             // 
             // txt_Customer_Search
             // 
@@ -1182,6 +1432,7 @@
             this.txt_Customer_Search.Name = "txt_Customer_Search";
             this.txt_Customer_Search.Size = new System.Drawing.Size(239, 26);
             this.txt_Customer_Search.TabIndex = 101;
+            this.txt_Customer_Search.TextChanged += new System.EventHandler(this.txt_Customer_Search_TextChanged);
             // 
             // tbl_Edit_1st_Col_Customers_Buttons
             // 
@@ -1213,6 +1464,7 @@
             this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
             this.btn_Customer_Delete.TabIndex = 110;
             this.btn_Customer_Delete.UseVisualStyleBackColor = true;
+            this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click_1);
             // 
             // btn_Customer_Edit
             // 
@@ -1225,6 +1477,7 @@
             this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Customer_Edit.TabIndex = 109;
             this.btn_Customer_Edit.UseVisualStyleBackColor = true;
+            this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click_1);
             // 
             // btn_Customer_Add
             // 
@@ -1238,6 +1491,48 @@
             this.btn_Customer_Add.TabIndex = 108;
             this.btn_Customer_Add.UseVisualStyleBackColor = true;
             this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click_1);
+            // 
+            // dgv_Customers_All
+            // 
+            this.dgv_Customers_All.AllowUserToAddRows = false;
+            this.dgv_Customers_All.AllowUserToDeleteRows = false;
+            this.dgv_Customers_All.AllowUserToResizeColumns = false;
+            this.dgv_Customers_All.AllowUserToResizeRows = false;
+            this.dgv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Customers_All.AutoGenerateColumns = false;
+            this.dgv_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Customers_All.ColumnHeadersVisible = false;
+            this.dgv_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dgv_Customers_All.DataSource = this.asiakasBindingSource1;
+            this.dgv_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Customers_All.Location = new System.Drawing.Point(9, 38);
+            this.dgv_Customers_All.Name = "dgv_Customers_All";
+            this.dgv_Customers_All.ReadOnly = true;
+            this.dgv_Customers_All.RowHeadersVisible = false;
+            this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
+            this.dgv_Customers_All.TabIndex = 107;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
+            this.dataGridViewTextBoxColumn1.HeaderText = "kokonimi";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // asiakasBindingSource1
+            // 
+            this.asiakasBindingSource1.DataMember = "Asiakas";
+            this.asiakasBindingSource1.DataSource = this.vPDatabaseDataSetBindingSource;
+            // 
+            // vPDatabaseDataSetBindingSource
+            // 
+            this.vPDatabaseDataSetBindingSource.DataSource = this.vP_DatabaseDataSet;
+            this.vPDatabaseDataSetBindingSource.Position = 0;
             // 
             // tbl_Edit_2nd_Col_Offices_Services
             // 
@@ -1287,22 +1582,21 @@
             this.lbl_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Office.Location = new System.Drawing.Point(3, 0);
             this.lbl_Office.Name = "lbl_Office";
-            this.lbl_Office.Size = new System.Drawing.Size(167, 20);
+            this.lbl_Office.Size = new System.Drawing.Size(187, 20);
             this.lbl_Office.TabIndex = 104;
-            this.lbl_Office.Text = "Toimipisteen valinta";
+            this.lbl_Office.Text = "Toimipisteiden hallinta";
             // 
             // cbo_Office_Select
             // 
             this.cbo_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Office_Select.DataSource = this.toimipisteBindingSource;
+            this.cbo_Office_Select.DisplayMember = "nimi";
             this.cbo_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Office_Select.FormattingEnabled = true;
-            this.cbo_Office_Select.Items.AddRange(new object[] {
-            "Joensuu"});
             this.cbo_Office_Select.Location = new System.Drawing.Point(3, 23);
             this.cbo_Office_Select.Name = "cbo_Office_Select";
             this.cbo_Office_Select.Size = new System.Drawing.Size(279, 28);
             this.cbo_Office_Select.TabIndex = 105;
-            this.cbo_Office_Select.Text = "Valitse toimipiste";
             // 
             // tbl_Edit_2nd_Col_Offices_Buttons
             // 
@@ -1346,6 +1640,7 @@
             this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Office_Edit.TabIndex = 112;
             this.btn_Office_Edit.UseVisualStyleBackColor = true;
+            this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click_1);
             // 
             // btn_Office_Add
             // 
@@ -1367,9 +1662,9 @@
             this.tbl_Edit_2nd_Col_Services.ColumnCount = 1;
             this.tbl_Edit_2nd_Col_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lbl_Services, 0, 0);
-            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.lsv_Services_All, 0, 1);
             this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Search, 0, 2);
             this.tbl_Edit_2nd_Col_Services.Controls.Add(this.tbl_Edit_2nd_Col_Services_Buttons, 0, 3);
+            this.tbl_Edit_2nd_Col_Services.Controls.Add(this.dgv_Services_All, 0, 1);
             this.tbl_Edit_2nd_Col_Services.Location = new System.Drawing.Point(9, 136);
             this.tbl_Edit_2nd_Col_Services.Name = "tbl_Edit_2nd_Col_Services";
             this.tbl_Edit_2nd_Col_Services.RowCount = 4;
@@ -1387,21 +1682,9 @@
             this.lbl_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Services.Location = new System.Drawing.Point(3, 0);
             this.lbl_Services.Name = "lbl_Services";
-            this.lbl_Services.Size = new System.Drawing.Size(177, 20);
+            this.lbl_Services.Size = new System.Drawing.Size(163, 20);
             this.lbl_Services.TabIndex = 78;
-            this.lbl_Services.Text = "Toimipisteen palvelut";
-            // 
-            // lsv_Services_All
-            // 
-            this.lsv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Services_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Services_All.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Services_All.Name = "lsv_Services_All";
-            this.lsv_Services_All.Size = new System.Drawing.Size(279, 325);
-            this.lsv_Services_All.TabIndex = 100;
-            this.lsv_Services_All.UseCompatibleStateImageBehavior = false;
+            this.lbl_Services.Text = "Palveluiden hallinta";
             // 
             // tbl_Edit_2nd_Col_Services_Search
             // 
@@ -1431,6 +1714,7 @@
             this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Services_Search.TabIndex = 102;
             this.btn_Services_Search.UseVisualStyleBackColor = true;
+            this.btn_Services_Search.Click += new System.EventHandler(this.btn_Services_Search_Click);
             // 
             // txt_Services_Search
             // 
@@ -1440,6 +1724,7 @@
             this.txt_Services_Search.Name = "txt_Services_Search";
             this.txt_Services_Search.Size = new System.Drawing.Size(233, 26);
             this.txt_Services_Search.TabIndex = 101;
+            this.txt_Services_Search.TextChanged += new System.EventHandler(this.txt_Services_Search_TextChanged);
             // 
             // tbl_Edit_2nd_Col_Services_Buttons
             // 
@@ -1450,8 +1735,8 @@
             this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tbl_Edit_2nd_Col_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Delete, 0, 0);
-            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Edit, 0, 0);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Delete, 2, 0);
+            this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Edit, 1, 0);
             this.tbl_Edit_2nd_Col_Services_Buttons.Controls.Add(this.btn_Services_Add, 0, 0);
             this.tbl_Edit_2nd_Col_Services_Buttons.Location = new System.Drawing.Point(3, 399);
             this.tbl_Edit_2nd_Col_Services_Buttons.Name = "tbl_Edit_2nd_Col_Services_Buttons";
@@ -1483,6 +1768,7 @@
             this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Services_Edit.TabIndex = 109;
             this.btn_Services_Edit.UseVisualStyleBackColor = true;
+            this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click_1);
             // 
             // btn_Services_Add
             // 
@@ -1497,6 +1783,38 @@
             this.btn_Services_Add.UseVisualStyleBackColor = true;
             this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click_1);
             // 
+            // dgv_Services_All
+            // 
+            this.dgv_Services_All.AllowUserToAddRows = false;
+            this.dgv_Services_All.AllowUserToDeleteRows = false;
+            this.dgv_Services_All.AllowUserToResizeColumns = false;
+            this.dgv_Services_All.AllowUserToResizeRows = false;
+            this.dgv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Services_All.AutoGenerateColumns = false;
+            this.dgv_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Services_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Services_All.ColumnHeadersVisible = false;
+            this.dgv_Services_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nimiDataGridViewTextBoxColumn});
+            this.dgv_Services_All.DataSource = this.palveluBindingSource;
+            this.dgv_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Services_All.Location = new System.Drawing.Point(3, 23);
+            this.dgv_Services_All.Name = "dgv_Services_All";
+            this.dgv_Services_All.ReadOnly = true;
+            this.dgv_Services_All.RowHeadersVisible = false;
+            this.dgv_Services_All.Size = new System.Drawing.Size(279, 325);
+            this.dgv_Services_All.TabIndex = 108;
+            // 
+            // nimiDataGridViewTextBoxColumn
+            // 
+            this.nimiDataGridViewTextBoxColumn.DataPropertyName = "nimi";
+            this.nimiDataGridViewTextBoxColumn.HeaderText = "nimi";
+            this.nimiDataGridViewTextBoxColumn.Name = "nimiDataGridViewTextBoxColumn";
+            this.nimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // tbl_Edit_3rd_Col_Cottages
             // 
             this.tbl_Edit_3rd_Col_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1508,9 +1826,9 @@
             this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
             this.tbl_Edit_3rd_Col_Cottages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lbl_Cottages, 1, 1);
-            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.lsv_Cottages_All, 1, 2);
             this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Search, 1, 3);
             this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.tbl_Edit_3rd_Col_Cottages_Buttons, 1, 4);
+            this.tbl_Edit_3rd_Col_Cottages.Controls.Add(this.dgv_Cottages_all, 1, 2);
             this.tbl_Edit_3rd_Col_Cottages.Location = new System.Drawing.Point(642, 15);
             this.tbl_Edit_3rd_Col_Cottages.Name = "tbl_Edit_3rd_Col_Cottages";
             this.tbl_Edit_3rd_Col_Cottages.RowCount = 6;
@@ -1533,18 +1851,6 @@
             this.lbl_Cottages.Size = new System.Drawing.Size(138, 20);
             this.lbl_Cottages.TabIndex = 78;
             this.lbl_Cottages.Text = "Mökkien hallinta";
-            // 
-            // lsv_Cottages_All
-            // 
-            this.lsv_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Cottages_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Cottages_All.Location = new System.Drawing.Point(9, 38);
-            this.lsv_Cottages_All.Name = "lsv_Cottages_All";
-            this.lsv_Cottages_All.Size = new System.Drawing.Size(285, 444);
-            this.lsv_Cottages_All.TabIndex = 100;
-            this.lsv_Cottages_All.UseCompatibleStateImageBehavior = false;
             // 
             // tbl_Edit_3rd_Col_Cottages_Search
             // 
@@ -1584,6 +1890,7 @@
             this.txt_Cottages_Search.Name = "txt_Cottages_Search";
             this.txt_Cottages_Search.Size = new System.Drawing.Size(239, 26);
             this.txt_Cottages_Search.TabIndex = 101;
+            this.txt_Cottages_Search.TextChanged += new System.EventHandler(this.txt_Cottages_Search_TextChanged);
             // 
             // tbl_Edit_3rd_Col_Cottages_Buttons
             // 
@@ -1627,6 +1934,7 @@
             this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Cottages_Edit.TabIndex = 109;
             this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
+            this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click_1);
             // 
             // btn_Cottages_Add
             // 
@@ -1640,6 +1948,38 @@
             this.btn_Cottages_Add.TabIndex = 108;
             this.btn_Cottages_Add.UseVisualStyleBackColor = true;
             this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click_1);
+            // 
+            // dgv_Cottages_all
+            // 
+            this.dgv_Cottages_all.AllowUserToAddRows = false;
+            this.dgv_Cottages_all.AllowUserToDeleteRows = false;
+            this.dgv_Cottages_all.AllowUserToResizeColumns = false;
+            this.dgv_Cottages_all.AllowUserToResizeRows = false;
+            this.dgv_Cottages_all.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Cottages_all.AutoGenerateColumns = false;
+            this.dgv_Cottages_all.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Cottages_all.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Cottages_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Cottages_all.ColumnHeadersVisible = false;
+            this.dgv_Cottages_all.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            this.dgv_Cottages_all.DataSource = this.majoitusBindingSource;
+            this.dgv_Cottages_all.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Cottages_all.Location = new System.Drawing.Point(9, 38);
+            this.dgv_Cottages_all.Name = "dgv_Cottages_all";
+            this.dgv_Cottages_all.ReadOnly = true;
+            this.dgv_Cottages_all.RowHeadersVisible = false;
+            this.dgv_Cottages_all.Size = new System.Drawing.Size(285, 444);
+            this.dgv_Cottages_all.TabIndex = 108;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nimi";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nimi";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // tab_History
             // 
@@ -1686,10 +2026,10 @@
             this.tbl_History_1st_Col_Customers_Offices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
             this.tbl_History_1st_Col_Customers_Offices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.lbl_History_Customer_Selection, 1, 1);
-            this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.lsv_History_Customers_All_With_Orders, 1, 2);
             this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.tableLayoutPanel3, 1, 3);
             this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.btn_History_Limit_To_Customer, 1, 4);
             this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.tableLayoutPanel1, 1, 5);
+            this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.dgv_History_Customers_All, 1, 2);
             this.tbl_History_1st_Col_Customers_Offices.Location = new System.Drawing.Point(22, 15);
             this.tbl_History_1st_Col_Customers_Offices.Name = "tbl_History_1st_Col_Customers_Offices";
             this.tbl_History_1st_Col_Customers_Offices.RowCount = 7;
@@ -1713,18 +2053,6 @@
             this.lbl_History_Customer_Selection.Size = new System.Drawing.Size(88, 20);
             this.lbl_History_Customer_Selection.TabIndex = 78;
             this.lbl_History_Customer_Selection.Text = "Asiakkaat";
-            // 
-            // lsv_History_Customers_All_With_Orders
-            // 
-            this.lsv_History_Customers_All_With_Orders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Customers_All_With_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_History_Customers_All_With_Orders.Location = new System.Drawing.Point(9, 38);
-            this.lsv_History_Customers_All_With_Orders.Name = "lsv_History_Customers_All_With_Orders";
-            this.lsv_History_Customers_All_With_Orders.Size = new System.Drawing.Size(285, 320);
-            this.lsv_History_Customers_All_With_Orders.TabIndex = 100;
-            this.lsv_History_Customers_All_With_Orders.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel3
             // 
@@ -1764,6 +2092,7 @@
             this.txt_History_Customer_Search.Name = "txt_History_Customer_Search";
             this.txt_History_Customer_Search.Size = new System.Drawing.Size(239, 26);
             this.txt_History_Customer_Search.TabIndex = 101;
+            this.txt_History_Customer_Search.TextChanged += new System.EventHandler(this.txt_History_Customer_Search_TextChanged);
             // 
             // btn_History_Limit_To_Customer
             // 
@@ -1820,16 +2149,56 @@
             // cbo_History_Office_Select
             // 
             this.cbo_History_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_History_Office_Select.DataSource = this.toimipisteBindingSource;
+            this.cbo_History_Office_Select.DisplayMember = "nimi";
             this.cbo_History_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_History_Office_Select.FormattingEnabled = true;
-            this.cbo_History_Office_Select.Items.AddRange(new object[] {
-            "",
-            "Joensuu"});
             this.cbo_History_Office_Select.Location = new System.Drawing.Point(3, 23);
             this.cbo_History_Office_Select.Name = "cbo_History_Office_Select";
             this.cbo_History_Office_Select.Size = new System.Drawing.Size(279, 28);
             this.cbo_History_Office_Select.TabIndex = 105;
-            this.cbo_History_Office_Select.Text = "Valitse toimipiste";
+            // 
+            // dgv_History_Customers_All
+            // 
+            this.dgv_History_Customers_All.AllowUserToAddRows = false;
+            this.dgv_History_Customers_All.AllowUserToDeleteRows = false;
+            this.dgv_History_Customers_All.AllowUserToResizeColumns = false;
+            this.dgv_History_Customers_All.AllowUserToResizeRows = false;
+            this.dgv_History_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_History_Customers_All.AutoGenerateColumns = false;
+            this.dgv_History_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_History_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_History_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_History_Customers_All.ColumnHeadersVisible = false;
+            this.dgv_History_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kokonimiDataGridViewTextBoxColumn1});
+            this.dgv_History_Customers_All.DataSource = this.asiakasBindingSource3;
+            this.dgv_History_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_History_Customers_All.Location = new System.Drawing.Point(9, 38);
+            this.dgv_History_Customers_All.Name = "dgv_History_Customers_All";
+            this.dgv_History_Customers_All.ReadOnly = true;
+            this.dgv_History_Customers_All.RowHeadersVisible = false;
+            this.dgv_History_Customers_All.Size = new System.Drawing.Size(285, 320);
+            this.dgv_History_Customers_All.TabIndex = 108;
+            // 
+            // kokonimiDataGridViewTextBoxColumn1
+            // 
+            this.kokonimiDataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
+            this.kokonimiDataGridViewTextBoxColumn1.HeaderText = "kokonimi";
+            this.kokonimiDataGridViewTextBoxColumn1.Name = "kokonimiDataGridViewTextBoxColumn1";
+            this.kokonimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // asiakasBindingSource3
+            // 
+            this.asiakasBindingSource3.DataMember = "Asiakas";
+            this.asiakasBindingSource3.DataSource = this.vP_DatabaseDataSet4;
+            // 
+            // vP_DatabaseDataSet4
+            // 
+            this.vP_DatabaseDataSet4.DataSetName = "VP_DatabaseDataSet4";
+            this.vP_DatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_History_2nd_Col_Orders_Dates
             // 
@@ -2283,10 +2652,9 @@
             // 
             this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Common_Settings_Default_Office.DataSource = this.toimipisteBindingSource;
+            this.cbo_Common_Settings_Default_Office.DisplayMember = "nimi";
             this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
-            this.cbo_Common_Settings_Default_Office.Items.AddRange(new object[] {
-            "",
-            "Joensuu"});
             this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 93);
             this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
             this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(280, 28);
@@ -2520,6 +2888,7 @@
             // 
             this.trv_Manual.Location = new System.Drawing.Point(8, 15);
             this.trv_Manual.Name = "trv_Manual";
+<<<<<<< HEAD
             treeNode1.Name = "Node4";
             treeNode1.Text = "Toimipisteen valinta";
             treeNode2.Name = "Node5";
@@ -2585,8 +2954,100 @@
             treeNode26,
             treeNode27,
             treeNode28});
+=======
+            treeNode57.Name = "Node4";
+            treeNode57.Text = "Toimipisteen valinta";
+            treeNode58.Name = "Node5";
+            treeNode58.Text = "Asiakkaiden valinta";
+            treeNode59.Name = "Node6";
+            treeNode59.Text = "Mökin valinta";
+            treeNode60.Name = "Node7";
+            treeNode60.Text = "Mökin yhteenveto";
+            treeNode61.Name = "Node8";
+            treeNode61.Text = "Lisäpalveluiden valinta";
+            treeNode62.Name = "Node9";
+            treeNode62.Text = "Tilauksen yhteenveto";
+            treeNode63.Name = "Node0";
+            treeNode63.Text = "Uusi varaus";
+            treeNode64.Name = "Node10";
+            treeNode64.Text = "Asiakkaiden hallinta";
+            treeNode65.Name = "Node11";
+            treeNode65.Text = "Toimipisteen valinta";
+            treeNode66.Name = "Node12";
+            treeNode66.Text = "Toimipisteen palvelut";
+            treeNode67.Name = "Node13";
+            treeNode67.Text = "Toimipisteen mökit";
+            treeNode68.Name = "Node1";
+            treeNode68.Text = "Tietojen hallinta";
+            treeNode69.Name = "Node2";
+            treeNode69.Text = "Varaushistoria";
+            treeNode70.Name = "Node3";
+            treeNode70.Text = "Asetukset";
+            treeNode71.Name = "Node4";
+            treeNode71.Text = "Toimipisteen valinta";
+            treeNode72.Name = "Node5";
+            treeNode72.Text = "Asiakkaiden valinta";
+            treeNode73.Name = "Node6";
+            treeNode73.Text = "Mökin valinta";
+            treeNode74.Name = "Node7";
+            treeNode74.Text = "Mökin yhteenveto";
+            treeNode75.Name = "Node8";
+            treeNode75.Text = "Lisäpalveluiden valinta";
+            treeNode76.Name = "Node9";
+            treeNode76.Text = "Tilauksen yhteenveto";
+            treeNode77.Name = "Node0";
+            treeNode77.Text = "Uusi varaus";
+            treeNode78.Name = "Node10";
+            treeNode78.Text = "Asiakkaiden hallinta";
+            treeNode79.Name = "Node11";
+            treeNode79.Text = "Toimipisteen valinta";
+            treeNode80.Name = "Node12";
+            treeNode80.Text = "Toimipisteen palvelut";
+            treeNode81.Name = "Node13";
+            treeNode81.Text = "Toimipisteen mökit";
+            treeNode82.Name = "Node1";
+            treeNode82.Text = "Tietojen hallinta";
+            treeNode83.Name = "Node2";
+            treeNode83.Text = "Varaushistoria";
+            treeNode84.Name = "Node3";
+            treeNode84.Text = "Asetukset";
+            this.trv_Manual.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode63,
+            treeNode68,
+            treeNode69,
+            treeNode70,
+            treeNode77,
+            treeNode82,
+            treeNode83,
+            treeNode84});
+>>>>>>> refs/remotes/Azaziah-2nd/master
             this.trv_Manual.Size = new System.Drawing.Size(413, 485);
             this.trv_Manual.TabIndex = 0;
+            // 
+            // asiakasTableAdapter
+            // 
+            this.asiakasTableAdapter.ClearBeforeFill = true;
+            // 
+            // toimipisteTableAdapter
+            // 
+            this.toimipisteTableAdapter.ClearBeforeFill = true;
+            // 
+            // palveluTableAdapter
+            // 
+            this.palveluTableAdapter.ClearBeforeFill = true;
+            // 
+            // majoitusTableAdapter
+            // 
+            this.majoitusTableAdapter.ClearBeforeFill = true;
+            // 
+            // asiakasBindingSource2
+            // 
+            this.asiakasBindingSource2.DataMember = "Asiakas";
+            this.asiakasBindingSource2.DataSource = this.vP_DatabaseDataSet;
+            // 
+            // asiakasTableAdapter1
+            // 
+            this.asiakasTableAdapter1.ClearBeforeFill = true;
             // 
             // frm_Main_Window
             // 
@@ -2606,12 +3067,22 @@
             this.tbl_Order_1st_Col_Office_Customer.ResumeLayout(false);
             this.tbl_Order_1st_Col_Office.ResumeLayout(false);
             this.tbl_Order_1st_Col_Office.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).EndInit();
             this.tbl_Order_1st_Col_Customer.ResumeLayout(false);
             this.tbl_Order_1st_Col_Customer.PerformLayout();
             this.tbl_Order_Customer_Search.ResumeLayout(false);
             this.tbl_Order_Customer_Search.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Customers_All)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet)).EndInit();
             this.tbl_Order_2nd_Col_Cottage.ResumeLayout(false);
             this.tbl_Order_2nd_Col_Cottage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Cottages_All)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Cottage_Summary.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Cottage_Summary.PerformLayout();
@@ -2619,6 +3090,9 @@
             this.tbl_Order_3rd_Col_Services.PerformLayout();
             this.tbl_Order_3rd_Col_Services_Quantity.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services_Quantity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet2)).EndInit();
             this.tbl_4th_Col_Summary.ResumeLayout(false);
             this.tbl_4th_Col_Summary.PerformLayout();
             this.tbl_Order_4th_Col_Summary_Office_Customers.ResumeLayout(false);
@@ -2633,6 +3107,9 @@
             this.tbl_Edit_1st_Col_Customers_Search.ResumeLayout(false);
             this.tbl_Edit_1st_Col_Customers_Search.PerformLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customers_All)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).EndInit();
             this.tbl_Edit_2nd_Col_Offices_Services.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.PerformLayout();
@@ -2642,11 +3119,13 @@
             this.tbl_Edit_2nd_Col_Services_Search.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Services_Search.PerformLayout();
             this.tbl_Edit_2nd_Col_Services_Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Services_All)).EndInit();
             this.tbl_Edit_3rd_Col_Cottages.ResumeLayout(false);
             this.tbl_Edit_3rd_Col_Cottages.PerformLayout();
             this.tbl_Edit_3rd_Col_Cottages_Search.ResumeLayout(false);
             this.tbl_Edit_3rd_Col_Cottages_Search.PerformLayout();
             this.tbl_Edit_3rd_Col_Cottages_Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cottages_all)).EndInit();
             this.tab_History.ResumeLayout(false);
             this.tbl_History_Base.ResumeLayout(false);
             this.tbl_History_1st_Col_Customers_Offices.ResumeLayout(false);
@@ -2655,6 +3134,9 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet4)).EndInit();
             this.tbl_History_2nd_Col_Orders_Dates.ResumeLayout(false);
             this.tbl_History_Order_History.ResumeLayout(false);
             this.tbl_History_Order_History.PerformLayout();
@@ -2678,6 +3160,7 @@
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
             this.tab_Manual.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2698,7 +3181,6 @@
         private System.Windows.Forms.Label lbl_Order_Office;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_1st_Col_Customer;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Customer_Search;
-        private System.Windows.Forms.ListView lsv_Order_Customers_All;
         private System.Windows.Forms.Button btn_Order_Customers_Search;
         private System.Windows.Forms.TextBox txt_Order_Customers_Search;
         private System.Windows.Forms.Label lbl_Order_Customers;
@@ -2710,7 +3192,6 @@
         private System.Windows.Forms.Label lbl_Order_Cottage_Selection;
         private System.Windows.Forms.MonthCalendar cal_Order_Cottage_Begin;
         private System.Windows.Forms.Button Btn_Order_Cottage_Add;
-        private System.Windows.Forms.ListView lsv_Order_Cottage_All;
         private System.Windows.Forms.Button btn_Order_Customers_Add;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Cottage_Summary_Services;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Cottage_Summary;
@@ -2734,7 +3215,6 @@
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_base;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_1st_Col_Customers;
         private System.Windows.Forms.Label lbl_Customer_Management;
-        private System.Windows.Forms.ListView lsv_Customers_All;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_1st_Col_Customers_Search;
         private System.Windows.Forms.Button btn_Customer_Search;
         private System.Windows.Forms.TextBox txt_Customer_Search;
@@ -2751,7 +3231,6 @@
         private System.Windows.Forms.Button btn_Office_Add;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_2nd_Col_Services;
         private System.Windows.Forms.Label lbl_Services;
-        private System.Windows.Forms.ListView lsv_Services_All;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_2nd_Col_Services_Search;
         private System.Windows.Forms.Button btn_Services_Search;
         private System.Windows.Forms.TextBox txt_Services_Search;
@@ -2761,7 +3240,6 @@
         private System.Windows.Forms.Button btn_Services_Add;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_3rd_Col_Cottages;
         private System.Windows.Forms.Label lbl_Cottages;
-        private System.Windows.Forms.ListView lsv_Cottages_All;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_3rd_Col_Cottages_Search;
         private System.Windows.Forms.Button btn_Cottages_Search;
         private System.Windows.Forms.TextBox txt_Cottages_Search;
@@ -2772,7 +3250,6 @@
         private System.Windows.Forms.TableLayoutPanel tbl_History_Base;
         private System.Windows.Forms.TableLayoutPanel tbl_History_1st_Col_Customers_Offices;
         private System.Windows.Forms.Label lbl_History_Customer_Selection;
-        private System.Windows.Forms.ListView lsv_History_Customers_All_With_Orders;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btn_History_Customer_Search;
         private System.Windows.Forms.TextBox txt_History_Customer_Search;
@@ -2810,11 +3287,8 @@
         private System.Windows.Forms.Button btn_Order_Service_add;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Services;
         private System.Windows.Forms.Label lbl_Order_Services;
-        private System.Windows.Forms.ListView lsv_Order_Services_All;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Services_Quantity;
-        private System.Windows.Forms.Label lbl_Order_Quantity;
         private System.Windows.Forms.TextBox txt_Order_Services_Quantity;
-        private System.Windows.Forms.Label lbl_Order_Services_Quantity_Units;
         private System.Windows.Forms.Label lbl_Order_Additional_Details;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Summary_Buttons;
         private System.Windows.Forms.Button btn_Order_Summary_Next_Page;
@@ -2844,5 +3318,43 @@
         private System.Windows.Forms.CheckBox chk_Common_Settings_History_End_Date_Today;
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
+        private System.Windows.Forms.DataGridView dgv_Order_Customers_All;
+        private VP_DatabaseDataSet vP_DatabaseDataSet;
+        private System.Windows.Forms.BindingSource asiakasBindingSource;
+        private VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter asiakasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kokonimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgv_Customers_All;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource vPDatabaseDataSetBindingSource;
+        private System.Windows.Forms.BindingSource asiakasBindingSource1;
+        private VP_DatabaseDataSet1 vP_DatabaseDataSet1;
+        private System.Windows.Forms.BindingSource toimipisteBindingSource;
+        private VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter toimipisteTableAdapter;
+        private System.Windows.Forms.DataGridView dgv_Services_All;
+        private VP_DatabaseDataSet2 vP_DatabaseDataSet2;
+        private System.Windows.Forms.BindingSource palveluBindingSource;
+        private VP_DatabaseDataSet2TableAdapters.PalveluTableAdapter palveluTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgv_Order_Services_All;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView dgv_Order_Cottages_All;
+        private VP_DatabaseDataSet3 vP_DatabaseDataSet3;
+        private System.Windows.Forms.BindingSource majoitusBindingSource;
+        private VP_DatabaseDataSet3TableAdapters.MajoitusTableAdapter majoitusTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView dgv_Cottages_all;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView dgv_History_Customers_All;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kokonimiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource asiakasBindingSource2;
+        private VP_DatabaseDataSet4 vP_DatabaseDataSet4;
+        private System.Windows.Forms.BindingSource asiakasBindingSource3;
+        private VP_DatabaseDataSet4TableAdapters.AsiakasTableAdapter asiakasTableAdapter1;
+        private System.Windows.Forms.Button btn_Order_Services_Search;
+        private System.Windows.Forms.TextBox txt_Order_Services_Search;
+        private System.Windows.Forms.Label lbl_Order_Services_Quantity_Units;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btn_Order_Cottages_Search;
+        private System.Windows.Forms.TextBox txt_Order_Cottages_Search;
     }
 }
