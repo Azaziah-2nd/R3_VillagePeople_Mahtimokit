@@ -1462,7 +1462,11 @@
             this.dgv_Customers_All.Name = "dgv_Customers_All";
             this.dgv_Customers_All.ReadOnly = true;
             this.dgv_Customers_All.RowHeadersVisible = false;
+<<<<<<< HEAD
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 447);
+=======
+            this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
+>>>>>>> refs/remotes/Azaziah-2nd/master
             this.dgv_Customers_All.TabIndex = 107;
             // 
             // dataGridViewTextBoxColumn1
