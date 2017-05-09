@@ -103,11 +103,6 @@ namespace R3_VillagePeople_Mahtimokit
             Get_cottage_names_to_grid();
         }
 
-        private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
         private void Main_window_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'vP_DatabaseDataSet4.Asiakas' table. You can move, or remove it, as needed.
@@ -159,12 +154,6 @@ namespace R3_VillagePeople_Mahtimokit
             frm.Show();
             // Luodaan yhteys formin sulkemiseen ja päivitetään asiakaslistat sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
-        }
-
-        // Asiakkaan poisto
-        private void btn_Customer_delete_Click(object sender, EventArgs e)
-        {
-
         }
 
         // Toimipisteen lisäys
@@ -227,30 +216,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         }
 
-        private void tbl_Order_Col_1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void lbl_Order_Office_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbl_Order_2nd_Col_Cottage_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tbl_History_2nd_Col_Orders_Dates_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btn_Customer_Add_Click_1(object sender, EventArgs e)
         {
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "epätosi".
@@ -286,10 +251,6 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
-        private void tbl_Order_3rd_Col_Cottage_Summary_Services_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -361,9 +322,6 @@ namespace R3_VillagePeople_Mahtimokit
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
         }
-        private void btn_Order_Customers_Search_Click(object sender, EventArgs e)
-        {  
-        }
 
         private void txt_Customer_Search_TextChanged(object sender, EventArgs e)
         {
@@ -375,10 +333,6 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Customers_All.DataSource;
             binding_source.Filter = "[kokonimi] Like '%" + txt_Customer_Search.Text + "%'";
-        }
-
-        private void btn_Customer_Search_Click(object sender, EventArgs e)
-        {
         }
 
 
@@ -540,11 +494,6 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
-        private void dgv_Order_Cottage_All_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_Cottages_Edit_Click_1(object sender, EventArgs e)
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
@@ -617,11 +566,6 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Order_Services_All.DataSource;
             binding_source.Filter = "[nimi] Like '%" + txt_Order_Services_Search.Text + "%'";
-        }
-
-        private void btn_Services_Search_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txt_Order_Cottages_Search_TextChanged(object sender, EventArgs e)

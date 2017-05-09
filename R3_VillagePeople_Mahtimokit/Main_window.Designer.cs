@@ -502,7 +502,6 @@
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 102;
             this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
-            this.btn_Order_Customers_Search.Click += new System.EventHandler(this.btn_Order_Customers_Search_Click);
             // 
             // txt_Order_Customers_Search
             // 
@@ -613,7 +612,6 @@
             this.tbl_Order_2nd_Col_Offices_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Order_2nd_Col_Offices_Cottage.Size = new System.Drawing.Size(275, 610);
             this.tbl_Order_2nd_Col_Offices_Cottage.TabIndex = 1;
-            this.tbl_Order_2nd_Col_Offices_Cottage.Paint += new System.Windows.Forms.PaintEventHandler(this.tbl_Order_2nd_Col_Cottage_Paint);
             // 
             // lbl_Order_Cottage_Selection
             // 
@@ -650,7 +648,6 @@
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(258, 380);
             this.dgv_Order_Cottages_All.TabIndex = 107;
-            this.dgv_Order_Cottages_All.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Order_Cottage_All_CellContentClick);
             // 
             // nimiDataGridViewTextBoxColumn2
             // 
@@ -742,7 +739,6 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Size = new System.Drawing.Size(217, 610);
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.TabIndex = 2;
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Paint += new System.Windows.Forms.PaintEventHandler(this.tbl_Order_3rd_Col_Cottage_Summary_Services_Paint);
             // 
             // tbl_Order_3rd_Col_Services
             // 
@@ -1219,7 +1215,6 @@
             this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Customer_Search.TabIndex = 102;
             this.btn_Customer_Search.UseVisualStyleBackColor = true;
-            this.btn_Customer_Search.Click += new System.EventHandler(this.btn_Customer_Search_Click);
             // 
             // txt_Customer_Search
             // 
@@ -1512,7 +1507,6 @@
             this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Services_Search.TabIndex = 102;
             this.btn_Services_Search.UseVisualStyleBackColor = true;
-            this.btn_Services_Search.Click += new System.EventHandler(this.btn_Services_Search_Click);
             // 
             // txt_Services_Search
             // 
@@ -2018,7 +2012,6 @@
             this.tbl_History_2nd_Col_Orders_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tbl_History_2nd_Col_Orders_Dates.Size = new System.Drawing.Size(304, 610);
             this.tbl_History_2nd_Col_Orders_Dates.TabIndex = 1;
-            this.tbl_History_2nd_Col_Orders_Dates.Paint += new System.Windows.Forms.PaintEventHandler(this.tbl_History_2nd_Col_Orders_Dates_Paint);
             // 
             // tbl_History_Order_History
             // 
@@ -2040,7 +2033,6 @@
             this.tbl_History_Order_History.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_History_Order_History.Size = new System.Drawing.Size(285, 573);
             this.tbl_History_Order_History.TabIndex = 1;
-            this.tbl_History_Order_History.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
             // lbl_History_Orders
             // 
