@@ -1324,7 +1324,7 @@
             this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tbl_Edit_1st_Col_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_Edit_1st_Col_Customers.Size = new System.Drawing.Size(304, 610);
@@ -1351,11 +1351,11 @@
             this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.btn_Customer_Search, 0, 0);
             this.tbl_Edit_1st_Col_Customers_Search.Controls.Add(this.txt_Customer_Search, 0, 0);
-            this.tbl_Edit_1st_Col_Customers_Search.Location = new System.Drawing.Point(9, 491);
+            this.tbl_Edit_1st_Col_Customers_Search.Location = new System.Drawing.Point(9, 488);
             this.tbl_Edit_1st_Col_Customers_Search.Name = "tbl_Edit_1st_Col_Customers_Search";
             this.tbl_Edit_1st_Col_Customers_Search.RowCount = 1;
             this.tbl_Edit_1st_Col_Customers_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Edit_1st_Col_Customers_Search.Size = new System.Drawing.Size(285, 37);
+            this.tbl_Edit_1st_Col_Customers_Search.Size = new System.Drawing.Size(285, 40);
             this.tbl_Edit_1st_Col_Customers_Search.TabIndex = 101;
             // 
             // btn_Customer_Search
@@ -1366,7 +1366,7 @@
             this.btn_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Customer_Search.Location = new System.Drawing.Point(250, 3);
             this.btn_Customer_Search.Name = "btn_Customer_Search";
-            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 31);
+            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Customer_Search.TabIndex = 102;
             this.btn_Customer_Search.UseVisualStyleBackColor = true;
             this.btn_Customer_Search.Click += new System.EventHandler(this.btn_Customer_Search_Click);
@@ -1462,11 +1462,7 @@
             this.dgv_Customers_All.Name = "dgv_Customers_All";
             this.dgv_Customers_All.ReadOnly = true;
             this.dgv_Customers_All.RowHeadersVisible = false;
-<<<<<<< HEAD
-            this.dgv_Customers_All.Size = new System.Drawing.Size(285, 447);
-=======
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
->>>>>>> refs/remotes/Azaziah-2nd/master
             this.dgv_Customers_All.TabIndex = 107;
             // 
             // dataGridViewTextBoxColumn1
