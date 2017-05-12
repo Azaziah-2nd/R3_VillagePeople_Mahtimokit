@@ -544,6 +544,7 @@
             this.btn_Order_Customers_Add.TabIndex = 105;
             this.btn_Order_Customers_Add.Text = "Lisää varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
+            this.btn_Order_Customers_Add.Click += new System.EventHandler(this.btn_Order_Customers_Add_Click);
             // 
             // dgv_Order_Customers_All
             // 
@@ -684,6 +685,7 @@
             this.Btn_Order_Cottage_Add.TabIndex = 73;
             this.Btn_Order_Cottage_Add.Text = "Lisää mökki varaukseen";
             this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
+            this.Btn_Order_Cottage_Add.Click += new System.EventHandler(this.Btn_Order_Cottage_Add_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -938,6 +940,7 @@
             this.btn_Order_Service_add.TabIndex = 106;
             this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
+            this.btn_Order_Service_add.Click += new System.EventHandler(this.btn_Order_Service_add_Click);
             // 
             // tbl_4th_Col_Summary
             // 
@@ -1076,6 +1079,7 @@
             this.lsv_Order_Summary_Customers.Size = new System.Drawing.Size(204, 46);
             this.lsv_Order_Summary_Customers.TabIndex = 93;
             this.lsv_Order_Summary_Customers.UseCompatibleStateImageBehavior = false;
+            this.lsv_Order_Summary_Customers.View = System.Windows.Forms.View.List;
             // 
             // lbl_Order_Summary_Customers
             // 
@@ -1110,6 +1114,7 @@
             this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(204, 46);
             this.lsv_Order_Summary_Cottages.TabIndex = 50;
             this.lsv_Order_Summary_Cottages.UseCompatibleStateImageBehavior = false;
+            this.lsv_Order_Summary_Cottages.View = System.Windows.Forms.View.List;
             // 
             // lsv_Order_Summary_Services
             // 
@@ -1122,6 +1127,7 @@
             this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(204, 46);
             this.lsv_Order_Summary_Services.TabIndex = 52;
             this.lsv_Order_Summary_Services.UseCompatibleStateImageBehavior = false;
+            this.lsv_Order_Summary_Services.View = System.Windows.Forms.View.List;
             // 
             // lbl_Order_Summary_Services
             // 

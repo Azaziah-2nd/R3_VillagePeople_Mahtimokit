@@ -614,5 +614,26 @@ namespace R3_VillagePeople_Mahtimokit
         {
             lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
         }
+
+        private void btn_Order_Customers_Add_Click(object sender, EventArgs e)
+        {
+            string[] row = {dgv_Order_Customers_All.CurrentCell.Value.ToString()};
+            var listViewItem = new ListViewItem(row);
+            lsv_Order_Summary_Customers.Items.Add(listViewItem);
+        }
+
+        private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
+        {
+            string[] row = { dgv_Order_Cottages_All.CurrentCell.Value.ToString() };
+            var listViewItem = new ListViewItem(row);
+            lsv_Order_Summary_Cottages.Items.Add(listViewItem);
+        }
+
+        private void btn_Order_Service_add_Click(object sender, EventArgs e)
+        {
+            string[] row = { dgv_Order_Services_All.CurrentCell.Value.ToString() };
+            var listViewItem = new ListViewItem(row);
+            lsv_Order_Summary_Services.Items.Add(listViewItem);
+        }
     }
 }
