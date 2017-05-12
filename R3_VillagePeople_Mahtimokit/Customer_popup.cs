@@ -13,7 +13,7 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Customer_Popup : Form
     {
-        public frm_Customer_Popup(frm_Main_Window frm)
+        public frm_Customer_Popup(txt_ frm)
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
             // Määritellään tietokantayhteys.
-            frm_Main_Window main_window = new frm_Main_Window();
+            txt_ main_window = new txt_();
             SqlConnection database_connection = main_window.database_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +

@@ -34,7 +34,7 @@ namespace R3_VillagePeople_Mahtimokit
         public bool Is_service_edited;
         private void btn_Service_Save_Click(object sender, EventArgs e)
         {
-            frm_Main_Window main_window = new frm_Main_Window();
+            txt_ main_window = new txt_();
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Service_Name.Text;
             string kuvaus = txt_Service_Description.Text;

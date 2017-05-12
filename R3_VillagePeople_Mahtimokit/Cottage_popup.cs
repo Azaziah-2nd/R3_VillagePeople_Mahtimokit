@@ -35,7 +35,7 @@ namespace R3_VillagePeople_Mahtimokit
         public bool Is_Cottage_edited;
         private void btn_Cottage_Save_Click_1(object sender, EventArgs e)
         {
-            frm_Main_Window main_window = new frm_Main_Window();
+            txt_ main_window = new txt_();
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Cottage_Name.Text;
             string kuvaus = txt_Cottage_Description.Text;

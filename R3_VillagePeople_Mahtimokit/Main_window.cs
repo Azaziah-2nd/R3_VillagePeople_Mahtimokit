@@ -638,5 +638,38 @@ namespace R3_VillagePeople_Mahtimokit
             var listViewItem = new ListViewItem(row);
             lsv_Order_Summary_Services.Items.Add(listViewItem);
         }
+
+        private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
+        {
+            // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
+            string asiakas_id = "1";
+            string toimipiste_id = "2";
+            DateTime varattu_pvm = DateTime.Now;
+            DateTime vahvistus_pvm = DateTime.Now;
+            DateTime varattu_alkupvm = dtp_Order_Start_Date.Value;
+            DateTime varattu_loppupvm = dtp_Order_End_Date.Value;
+            string lisatieto = txt_Order_Additional_Details.Text;
+            // Määritellään tietokantayhteys.
+            frm_Main_Window main_window = new frm_Main_Window();
+            SqlConnection database_connection = main_window.database_connection;
+            // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
+            SqlCommand database_query_new = new SqlCommand("INSERT INTO [Varaus] ([asiakas_id], [toimipiste_id], [varattu_pvm], " +
+                "[vahvistus_pvm], [varattu_alkupvm], [varattu_loppupvm], [lisatieto]) " + 
+                " VALUES(@asiakas_id, @toimipiste_id, @varattu_pvm, @vahvistus_pvm, " + 
+                "@varattu_alkupvm, @varattu_loppupvm, @lisatieto)");
+            // Jos muokataan asiakasta.
+            // Käytetään uuden asiakkaan luonnin yhteyttä.
+            database_query_new.Connection = main_window.database_connection;
+            database_connection.Open();
+            database_query_new.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+            database_query_new.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+            database_query_new.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
+            database_query_new.Parameters.AddWithValue("@vahvistus_pvm", vahvistus_pvm);
+            database_query_new.Parameters.AddWithValue("@varattu_alkupvm", varattu_alkupvm);
+            database_query_new.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
+            database_query_new.Parameters.AddWithValue("@lisatieto", lisatieto);
+            database_query_new.ExecuteNonQuery();
+
+        }
     }
 }

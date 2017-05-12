@@ -22,5 +22,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\VP_Database.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
+    <Setting Name="user_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Käyttäjä</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
