@@ -241,10 +241,10 @@
             // btn_Cottage_Save
             // 
             this.btn_Cottage_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottage_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cottage_Save.Location = new System.Drawing.Point(384, 454);
+            this.btn_Cottage_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cottage_Save.Location = new System.Drawing.Point(367, 454);
             this.btn_Cottage_Save.Name = "btn_Cottage_Save";
-            this.btn_Cottage_Save.Size = new System.Drawing.Size(85, 30);
+            this.btn_Cottage_Save.Size = new System.Drawing.Size(102, 30);
             this.btn_Cottage_Save.TabIndex = 126;
             this.btn_Cottage_Save.Text = "Tallenna";
             this.btn_Cottage_Save.UseVisualStyleBackColor = true;
@@ -253,10 +253,10 @@
             // btn_Cottage_Cancel
             // 
             this.btn_Cottage_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottage_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cottage_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cottage_Cancel.Location = new System.Drawing.Point(182, 454);
             this.btn_Cottage_Cancel.Name = "btn_Cottage_Cancel";
-            this.btn_Cottage_Cancel.Size = new System.Drawing.Size(85, 30);
+            this.btn_Cottage_Cancel.Size = new System.Drawing.Size(95, 30);
             this.btn_Cottage_Cancel.TabIndex = 125;
             this.btn_Cottage_Cancel.Text = "Peruuta";
             this.btn_Cottage_Cancel.UseVisualStyleBackColor = true;
