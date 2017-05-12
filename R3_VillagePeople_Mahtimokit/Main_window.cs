@@ -645,5 +645,48 @@ namespace R3_VillagePeople_Mahtimokit
             Properties.Settings.Default["user_name"] = txt_Settings_User_Name.Text.ToString();
             Properties.Settings.Default.Save();
         }
+
+        private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
+        {
+            // Määritellään tietokantayhteys.
+            frm_Main_Window main_window = new frm_Main_Window();
+            SqlConnection database_connection = main_window.database_connection;
+            // Loki taulun päivitys
+            string paivittaja = txt_Settings_User_Name.Text.ToString();
+            string lisatieto_loki = "WUBBALUBLUBDAA";
+            SqlCommand database_query_loki= new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                "VALUES(@paivittaja, @lisatieto_loki)");
+            database_query_loki.Connection = main_window.database_connection;
+            database_connection.Open();
+            database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+            database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+            database_query_loki.ExecuteNonQuery();
+            database_connection.Close();
+
+            // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
+            string asiakas_id = "1";
+            string toimipiste_id = "2";
+            DateTime varattu_pvm = DateTime.Now;
+            DateTime vahvistus_pvm = DateTime.Now;
+            DateTime varattu_alkupvm = dtp_Order_Start_Date.Value;
+            DateTime varattu_loppupvm = dtp_Order_End_Date.Value;
+            string lisatieto = txt_Order_Additional_Details.Text;
+            // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
+            SqlCommand database_query_varaus = new SqlCommand("INSERT INTO [Varaus] ([asiakas_id], [toimipiste_id], [varattu_pvm], " +
+                "[vahvistus_pvm], [varattu_alkupvm], [varattu_loppupvm], [lisatieto]) " +
+                " VALUES(@asiakas_id, @toimipiste_id, @varattu_pvm, @vahvistus_pvm, " +
+                "@varattu_alkupvm, @varattu_loppupvm, @lisatieto)");
+            database_query_varaus.Connection = main_window.database_connection;
+            database_connection.Open();
+            database_query_varaus.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+            database_query_varaus.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+            database_query_varaus.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
+            database_query_varaus.Parameters.AddWithValue("@vahvistus_pvm", vahvistus_pvm);
+            database_query_varaus.Parameters.AddWithValue("@varattu_alkupvm", varattu_alkupvm);
+            database_query_varaus.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
+            database_query_varaus.Parameters.AddWithValue("@lisatieto", lisatieto);
+            database_query_varaus.ExecuteNonQuery();
+            database_connection.Close();
+        }
     }
 }
