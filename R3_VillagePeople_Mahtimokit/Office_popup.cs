@@ -40,7 +40,7 @@ namespace R3_VillagePeople_Mahtimokit
             string email = txt_Office_Email.Text;
             string puhelinnro = txt_Office_Phone.Text;
             // Määritellään tietokantayhteys.
-            txt_ main_window = new txt_();
+            frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Toimipiste] ([nimi], [lahiosoite], [postinro], [postitoimipaikka], " +
