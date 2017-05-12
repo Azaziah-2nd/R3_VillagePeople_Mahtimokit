@@ -756,6 +756,7 @@
             this.cbo_Order_Office_Select.Name = "cbo_Order_Office_Select";
             this.cbo_Order_Office_Select.Size = new System.Drawing.Size(258, 28);
             this.cbo_Order_Office_Select.TabIndex = 110;
+            this.cbo_Order_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Order_Office_Select_SelectedIndexChanged);
             // 
             // toimipisteBindingSource
             // 

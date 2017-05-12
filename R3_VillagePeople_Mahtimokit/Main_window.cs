@@ -609,5 +609,10 @@ namespace R3_VillagePeople_Mahtimokit
         {
             Get_end_date_to_order_summary();
         }
+
+        private void cbo_Order_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
+        }
     }
 }
