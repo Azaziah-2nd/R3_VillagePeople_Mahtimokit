@@ -18,11 +18,6 @@ namespace R3_VillagePeople_Mahtimokit
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Office_popup_Load(object sender, EventArgs e)
         {
 
@@ -33,10 +28,6 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
-        private void lbl_Office_Email_Click(object sender, EventArgs e)
-        {
-
-        }
         public bool Is_office_edited;
         public string Office_id;
         private void btn_Office_Save_Click(object sender, EventArgs e)

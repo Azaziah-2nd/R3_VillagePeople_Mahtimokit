@@ -23,9 +23,17 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
+
+        private void frm_Cottage_Popup_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
+            this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
+
+        }
+
         public string Cottage_id;
         public bool Is_Cottage_edited;
-        private void btn_Cottage_Save_Click(object sender, EventArgs e)
+        private void btn_Cottage_Save_Click_1(object sender, EventArgs e)
         {
             frm_Main_Window main_window = new frm_Main_Window();
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
@@ -98,13 +106,6 @@ namespace R3_VillagePeople_Mahtimokit
             }
             // Suljetaan formi.
             this.Close();
-        }
-
-        private void frm_Cottage_Popup_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
-            this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
-
         }
     }
 }
