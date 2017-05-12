@@ -52,6 +52,8 @@
             this.btn_Cottage_Save = new System.Windows.Forms.Button();
             this.btn_Cottage_Cancel = new System.Windows.Forms.Button();
             this.lbl_Cottage_Details = new System.Windows.Forms.Label();
+            this.lbl_Euros = new System.Windows.Forms.Label();
+            this.lbl_Square_Meters = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).BeginInit();
@@ -269,12 +271,34 @@
             this.lbl_Cottage_Details.TabIndex = 127;
             this.lbl_Cottage_Details.Text = "Mökin tiedot";
             // 
+            // lbl_Euros
+            // 
+            this.lbl_Euros.AutoSize = true;
+            this.lbl_Euros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Euros.Location = new System.Drawing.Point(283, 191);
+            this.lbl_Euros.Name = "lbl_Euros";
+            this.lbl_Euros.Size = new System.Drawing.Size(18, 20);
+            this.lbl_Euros.TabIndex = 128;
+            this.lbl_Euros.Text = "€";
+            // 
+            // lbl_Square_Meters
+            // 
+            this.lbl_Square_Meters.AutoSize = true;
+            this.lbl_Square_Meters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Square_Meters.Location = new System.Drawing.Point(283, 269);
+            this.lbl_Square_Meters.Name = "lbl_Square_Meters";
+            this.lbl_Square_Meters.Size = new System.Drawing.Size(27, 20);
+            this.lbl_Square_Meters.TabIndex = 129;
+            this.lbl_Square_Meters.Text = "m²";
+            // 
             // frm_Cottage_Popup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(569, 526);
+            this.Controls.Add(this.lbl_Square_Meters);
+            this.Controls.Add(this.lbl_Euros);
             this.Controls.Add(this.lbl_Cottage_Details);
             this.Controls.Add(this.btn_Cottage_Save);
             this.Controls.Add(this.btn_Cottage_Cancel);
@@ -330,5 +354,7 @@
         private System.Windows.Forms.Button btn_Cottage_Save;
         private System.Windows.Forms.Button btn_Cottage_Cancel;
         private System.Windows.Forms.Label lbl_Cottage_Details;
+        private System.Windows.Forms.Label lbl_Euros;
+        private System.Windows.Forms.Label lbl_Square_Meters;
     }
 }
