@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public partial class frm_Invoicing : Form
+    public partial class Invoicing : Form
     {
-        public frm_Invoicing()
+        public Invoicing()
         {
             InitializeComponent();
         }
@@ -87,11 +87,6 @@ namespace R3_VillagePeople_Mahtimokit
         }
 
         private void tbl_Invoicing_1st_Row_Invoice_Info_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txt_Invoicing_3rd_Row_Village_People_Info_3_TextChanged(object sender, EventArgs e)
         {
 
         }

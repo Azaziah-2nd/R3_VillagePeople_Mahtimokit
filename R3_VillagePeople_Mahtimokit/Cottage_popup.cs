@@ -17,20 +17,15 @@ namespace R3_VillagePeople_Mahtimokit
         {
             InitializeComponent();
         }
-
         private void btn_Cottage_Cancel_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
         private void frm_Cottage_Popup_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
             this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
-
         }
-
         public string Cottage_id;
         public bool Is_Cottage_edited;
         private void btn_Cottage_Save_Click_1(object sender, EventArgs e)
@@ -71,7 +66,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Määritellään tietokantakyselyt majoituksen lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Majoitus] ([toimipiste_id], [nimi], [kuvaus], [hinta], " +
                 "[max_henkilot], [koko], [wlan]) VALUES (@toimipiste_id, @nimi, @kuvaus, @hinta, @max_henkilot, @koko, @wlan)");
-
             SqlCommand database_query_update = new SqlCommand("UPDATE Majoitus SET toimipiste_id=@toimipiste_id, nimi=@nimi, kuvaus=@kuvaus, " +
                 "hinta=@hinta, max_henkilot=@max_henkilot, koko=@koko, wlan=@wlan WHERE majoitus_id = @majoitus_id");
             if (this.Is_Cottage_edited == true)
