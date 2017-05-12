@@ -623,7 +623,9 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
         {
-            string[] row = { dgv_Order_Cottages_All.CurrentCell.Value.ToString() };
+            string selected_cottage = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
+            string selected_quantity = txt_Order_Cottage_Persons_Quantity.Text.ToString();
+            string[] row = { selected_cottage + " [" + selected_quantity + "]" };
             var listViewItem = new ListViewItem(row);
             lsv_Order_Summary_Cottages.Items.Add(listViewItem);
         }
