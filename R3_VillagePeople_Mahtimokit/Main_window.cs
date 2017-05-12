@@ -617,9 +617,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Customers_Add_Click(object sender, EventArgs e)
         {
-            string[] row = {dgv_Order_Customers_All.CurrentCell.Value.ToString()};
-            var listViewItem = new ListViewItem(row);
-            lsv_Order_Summary_Customers.Items.Add(listViewItem);
+            string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
+            lbl_Order_Summary_Customer.Text = ("Asiakas: " + customer_name);
         }
 
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)

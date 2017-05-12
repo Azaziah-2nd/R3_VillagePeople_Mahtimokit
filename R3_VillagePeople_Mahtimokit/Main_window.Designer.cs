@@ -88,8 +88,7 @@
             this.lbl_Order_Summary_End_Date = new System.Windows.Forms.Label();
             this.lbl_Order_Additional_Details = new System.Windows.Forms.Label();
             this.tbl_Order_Summary_Customers_Cottages_Services = new System.Windows.Forms.TableLayoutPanel();
-            this.lsv_Order_Summary_Customers = new System.Windows.Forms.ListView();
-            this.lbl_Order_Summary_Customers = new System.Windows.Forms.Label();
+            this.lbl_Order_Summary_Customer = new System.Windows.Forms.Label();
             this.lbl_Order_Summary_Cottages = new System.Windows.Forms.Label();
             this.lsv_Order_Summary_Cottages = new System.Windows.Forms.ListView();
             this.lsv_Order_Summary_Services = new System.Windows.Forms.ListView();
@@ -531,7 +530,7 @@
             this.lbl_Order_Customers.Name = "lbl_Order_Customers";
             this.lbl_Order_Customers.Size = new System.Drawing.Size(186, 20);
             this.lbl_Order_Customers.TabIndex = 103;
-            this.lbl_Order_Customers.Text = "Asiakkaiden valinta";
+            this.lbl_Order_Customers.Text = "Asiakkaan valinta";
             // 
             // btn_Order_Customers_Add
             // 
@@ -960,7 +959,7 @@
             this.tbl_4th_Col_Summary.Location = new System.Drawing.Point(729, 15);
             this.tbl_4th_Col_Summary.Name = "tbl_4th_Col_Summary";
             this.tbl_4th_Col_Summary.RowCount = 7;
-            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.65656F));
             this.tbl_4th_Col_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -978,16 +977,18 @@
             this.tbl_Order_Summary_Dates_Office.ColumnCount = 1;
             this.tbl_Order_Summary_Dates_Office.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_Summary_Dates_Office.Controls.Add(this.lbl_Order_Summary, 0, 0);
+            this.tbl_Order_Summary_Dates_Office.Controls.Add(this.lbl_Order_Summary_Customer, 0, 4);
             this.tbl_Order_Summary_Dates_Office.Controls.Add(this.lbl_Order_Summary_Office, 0, 3);
             this.tbl_Order_Summary_Dates_Office.Controls.Add(this.lbl_Order_Summary_Start_Date, 0, 1);
             this.tbl_Order_Summary_Dates_Office.Controls.Add(this.lbl_Order_Summary_End_Date, 0, 2);
-            this.tbl_Order_Summary_Dates_Office.Location = new System.Drawing.Point(7, 18);
+            this.tbl_Order_Summary_Dates_Office.Location = new System.Drawing.Point(7, 19);
             this.tbl_Order_Summary_Dates_Office.Name = "tbl_Order_Summary_Dates_Office";
-            this.tbl_Order_Summary_Dates_Office.RowCount = 4;
+            this.tbl_Order_Summary_Dates_Office.RowCount = 5;
             this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Order_Summary_Dates_Office.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Order_Summary_Dates_Office.Size = new System.Drawing.Size(210, 141);
             this.tbl_Order_Summary_Dates_Office.TabIndex = 0;
@@ -1008,7 +1009,7 @@
             this.lbl_Order_Summary_Office.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Order_Summary_Office.AutoSize = true;
             this.lbl_Order_Summary_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Order_Summary_Office.Location = new System.Drawing.Point(3, 104);
+            this.lbl_Order_Summary_Office.Location = new System.Drawing.Point(3, 94);
             this.lbl_Order_Summary_Office.Name = "lbl_Order_Summary_Office";
             this.lbl_Order_Summary_Office.Size = new System.Drawing.Size(88, 20);
             this.lbl_Order_Summary_Office.TabIndex = 91;
@@ -1036,7 +1037,7 @@
             // 
             this.lbl_Order_Additional_Details.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_Order_Additional_Details.AutoSize = true;
-            this.lbl_Order_Additional_Details.Location = new System.Drawing.Point(71, 393);
+            this.lbl_Order_Additional_Details.Location = new System.Drawing.Point(71, 394);
             this.lbl_Order_Additional_Details.Name = "lbl_Order_Additional_Details";
             this.lbl_Order_Additional_Details.Size = new System.Drawing.Size(81, 20);
             this.lbl_Order_Additional_Details.TabIndex = 108;
@@ -1049,55 +1050,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Summary_Customers_Cottages_Services.ColumnCount = 1;
             this.tbl_Order_Summary_Customers_Cottages_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lsv_Order_Summary_Customers, 0, 1);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lbl_Order_Summary_Customers, 0, 0);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lbl_Order_Summary_Cottages, 0, 2);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lsv_Order_Summary_Cottages, 0, 3);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lsv_Order_Summary_Services, 0, 5);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lbl_Order_Summary_Services, 0, 4);
-            this.tbl_Order_Summary_Customers_Cottages_Services.Location = new System.Drawing.Point(7, 165);
+            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lbl_Order_Summary_Cottages, 0, 0);
+            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lsv_Order_Summary_Cottages, 0, 1);
+            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lsv_Order_Summary_Services, 0, 3);
+            this.tbl_Order_Summary_Customers_Cottages_Services.Controls.Add(this.lbl_Order_Summary_Services, 0, 2);
+            this.tbl_Order_Summary_Customers_Cottages_Services.Location = new System.Drawing.Point(7, 166);
             this.tbl_Order_Summary_Customers_Cottages_Services.Name = "tbl_Order_Summary_Customers_Cottages_Services";
-            this.tbl_Order_Summary_Customers_Cottages_Services.RowCount = 7;
+            this.tbl_Order_Summary_Customers_Cottages_Services.RowCount = 5;
             this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_Order_Summary_Customers_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Order_Summary_Customers_Cottages_Services.Size = new System.Drawing.Size(210, 225);
             this.tbl_Order_Summary_Customers_Cottages_Services.TabIndex = 1;
             // 
-            // lsv_Order_Summary_Customers
+            // lbl_Order_Summary_Customer
             // 
-            this.lsv_Order_Summary_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Customers.Location = new System.Drawing.Point(3, 23);
-            this.lsv_Order_Summary_Customers.Name = "lsv_Order_Summary_Customers";
-            this.lsv_Order_Summary_Customers.Size = new System.Drawing.Size(204, 46);
-            this.lsv_Order_Summary_Customers.TabIndex = 93;
-            this.lsv_Order_Summary_Customers.UseCompatibleStateImageBehavior = false;
-            this.lsv_Order_Summary_Customers.View = System.Windows.Forms.View.List;
-            // 
-            // lbl_Order_Summary_Customers
-            // 
-            this.lbl_Order_Summary_Customers.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_Order_Summary_Customers.AutoSize = true;
-            this.lbl_Order_Summary_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Customers.Location = new System.Drawing.Point(65, 0);
-            this.lbl_Order_Summary_Customers.Name = "lbl_Order_Summary_Customers";
-            this.lbl_Order_Summary_Customers.Size = new System.Drawing.Size(79, 20);
-            this.lbl_Order_Summary_Customers.TabIndex = 92;
-            this.lbl_Order_Summary_Customers.Text = "Asiakkaat";
+            this.lbl_Order_Summary_Customer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Order_Summary_Customer.AutoSize = true;
+            this.lbl_Order_Summary_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Order_Summary_Customer.Location = new System.Drawing.Point(3, 121);
+            this.lbl_Order_Summary_Customer.Name = "lbl_Order_Summary_Customer";
+            this.lbl_Order_Summary_Customer.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Order_Summary_Customer.TabIndex = 92;
+            this.lbl_Order_Summary_Customer.Text = "Asiakas:";
             // 
             // lbl_Order_Summary_Cottages
             // 
             this.lbl_Order_Summary_Cottages.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_Order_Summary_Cottages.AutoSize = true;
             this.lbl_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Cottages.Location = new System.Drawing.Point(71, 72);
+            this.lbl_Order_Summary_Cottages.Location = new System.Drawing.Point(71, 0);
             this.lbl_Order_Summary_Cottages.Name = "lbl_Order_Summary_Cottages";
             this.lbl_Order_Summary_Cottages.Size = new System.Drawing.Size(68, 20);
             this.lbl_Order_Summary_Cottages.TabIndex = 47;
@@ -1109,9 +1095,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 95);
+            this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 23);
             this.lsv_Order_Summary_Cottages.Name = "lsv_Order_Summary_Cottages";
-            this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(204, 46);
+            this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(204, 82);
             this.lsv_Order_Summary_Cottages.TabIndex = 50;
             this.lsv_Order_Summary_Cottages.UseCompatibleStateImageBehavior = false;
             this.lsv_Order_Summary_Cottages.View = System.Windows.Forms.View.List;
@@ -1122,9 +1108,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 167);
+            this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 131);
             this.lsv_Order_Summary_Services.Name = "lsv_Order_Summary_Services";
-            this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(204, 46);
+            this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(204, 82);
             this.lsv_Order_Summary_Services.TabIndex = 52;
             this.lsv_Order_Summary_Services.UseCompatibleStateImageBehavior = false;
             this.lsv_Order_Summary_Services.View = System.Windows.Forms.View.List;
@@ -1134,7 +1120,7 @@
             this.lbl_Order_Summary_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_Order_Summary_Services.AutoSize = true;
             this.lbl_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Order_Summary_Services.Location = new System.Drawing.Point(49, 144);
+            this.lbl_Order_Summary_Services.Location = new System.Drawing.Point(49, 108);
             this.lbl_Order_Summary_Services.Name = "lbl_Order_Summary_Services";
             this.lbl_Order_Summary_Services.Size = new System.Drawing.Size(112, 20);
             this.lbl_Order_Summary_Services.TabIndex = 51;
@@ -1186,10 +1172,10 @@
             this.txt_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Additional_Details.Location = new System.Drawing.Point(7, 416);
+            this.txt_Order_Additional_Details.Location = new System.Drawing.Point(7, 417);
             this.txt_Order_Additional_Details.Multiline = true;
             this.txt_Order_Additional_Details.Name = "txt_Order_Additional_Details";
-            this.txt_Order_Additional_Details.Size = new System.Drawing.Size(210, 115);
+            this.txt_Order_Additional_Details.Size = new System.Drawing.Size(210, 114);
             this.txt_Order_Additional_Details.TabIndex = 109;
             // 
             // tab_Edit
@@ -2903,10 +2889,9 @@
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Cottage_Summary_Services;
         private System.Windows.Forms.TableLayoutPanel tbl_4th_Col_Summary;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Summary_Dates_Office;
-        private System.Windows.Forms.ListView lsv_Order_Summary_Customers;
         private System.Windows.Forms.Label lbl_Order_Summary;
         private System.Windows.Forms.Label lbl_Order_Summary_Office;
-        private System.Windows.Forms.Label lbl_Order_Summary_Customers;
+        private System.Windows.Forms.Label lbl_Order_Summary_Customer;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Summary_Customers_Cottages_Services;
         private System.Windows.Forms.Label lbl_Order_Summary_Cottages;
         private System.Windows.Forms.ListView lsv_Order_Summary_Cottages;
