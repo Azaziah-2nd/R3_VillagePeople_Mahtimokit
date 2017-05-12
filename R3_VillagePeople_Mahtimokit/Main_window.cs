@@ -631,7 +631,9 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
-            string[] row = { dgv_Order_Services_All.CurrentCell.Value.ToString() };
+            string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
+            string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
+            string[] row = { selected_service + " [" + selected_quantity + "]" };
             var listViewItem = new ListViewItem(row);
             lsv_Order_Summary_Services.Items.Add(listViewItem);
         }
