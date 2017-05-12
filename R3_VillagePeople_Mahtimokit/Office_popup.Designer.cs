@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.grb_Office_Details = new System.Windows.Forms.GroupBox();
+            this.txt_Office_Phone = new System.Windows.Forms.TextBox();
+            this.lbl_Office_Phone = new System.Windows.Forms.Label();
+            this.txt_Office_Email = new System.Windows.Forms.TextBox();
+            this.lbl_Office_Email = new System.Windows.Forms.Label();
             this.lbl_Office_Name = new System.Windows.Forms.Label();
             this.txt_Office_City = new System.Windows.Forms.TextBox();
             this.txt_Office_Adress = new System.Windows.Forms.TextBox();
@@ -39,10 +43,6 @@
             this.grb_Office_Save_Cancel_Buttons = new System.Windows.Forms.GroupBox();
             this.btn_Office_Save = new System.Windows.Forms.Button();
             this.btn_Office_Cancel = new System.Windows.Forms.Button();
-            this.txt_Office_Email = new System.Windows.Forms.TextBox();
-            this.lbl_Office_Email = new System.Windows.Forms.Label();
-            this.txt_Office_Phone = new System.Windows.Forms.TextBox();
-            this.lbl_Office_Phone = new System.Windows.Forms.Label();
             this.grb_Office_Details.SuspendLayout();
             this.grb_Office_Save_Cancel_Buttons.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,44 @@
             this.grb_Office_Details.TabStop = false;
             this.grb_Office_Details.Text = "Toimipisteen tiedot";
             // 
+            // txt_Office_Phone
+            // 
+            this.txt_Office_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Office_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Office_Phone.Location = new System.Drawing.Point(240, 161);
+            this.txt_Office_Phone.Name = "txt_Office_Phone";
+            this.txt_Office_Phone.Size = new System.Drawing.Size(287, 21);
+            this.txt_Office_Phone.TabIndex = 79;
+            // 
+            // lbl_Office_Phone
+            // 
+            this.lbl_Office_Phone.AutoSize = true;
+            this.lbl_Office_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Office_Phone.Location = new System.Drawing.Point(6, 161);
+            this.lbl_Office_Phone.Name = "lbl_Office_Phone";
+            this.lbl_Office_Phone.Size = new System.Drawing.Size(119, 20);
+            this.lbl_Office_Phone.TabIndex = 86;
+            this.lbl_Office_Phone.Text = "Puhelinnumero:";
+            // 
+            // txt_Office_Email
+            // 
+            this.txt_Office_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Office_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Office_Email.Location = new System.Drawing.Point(240, 125);
+            this.txt_Office_Email.Name = "txt_Office_Email";
+            this.txt_Office_Email.Size = new System.Drawing.Size(287, 21);
+            this.txt_Office_Email.TabIndex = 78;
+            // 
+            // lbl_Office_Email
+            // 
+            this.lbl_Office_Email.AutoSize = true;
+            this.lbl_Office_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Office_Email.Location = new System.Drawing.Point(6, 125);
+            this.lbl_Office_Email.Name = "lbl_Office_Email";
+            this.lbl_Office_Email.Size = new System.Drawing.Size(136, 20);
+            this.lbl_Office_Email.TabIndex = 84;
+            this.lbl_Office_Email.Text = "Sähköpostiosoite:";
+            // 
             // lbl_Office_Name
             // 
             this.lbl_Office_Name.AutoSize = true;
@@ -85,7 +123,7 @@
             this.txt_Office_City.Location = new System.Drawing.Point(346, 88);
             this.txt_Office_City.Name = "txt_Office_City";
             this.txt_Office_City.Size = new System.Drawing.Size(181, 21);
-            this.txt_Office_City.TabIndex = 80;
+            this.txt_Office_City.TabIndex = 77;
             // 
             // txt_Office_Adress
             // 
@@ -94,7 +132,7 @@
             this.txt_Office_Adress.Location = new System.Drawing.Point(240, 62);
             this.txt_Office_Adress.Name = "txt_Office_Adress";
             this.txt_Office_Adress.Size = new System.Drawing.Size(287, 21);
-            this.txt_Office_Adress.TabIndex = 79;
+            this.txt_Office_Adress.TabIndex = 75;
             // 
             // lbl_Office_Adress
             // 
@@ -113,7 +151,7 @@
             this.txt_Office_Postal_Code.Location = new System.Drawing.Point(240, 88);
             this.txt_Office_Postal_Code.Name = "txt_Office_Postal_Code";
             this.txt_Office_Postal_Code.Size = new System.Drawing.Size(100, 21);
-            this.txt_Office_Postal_Code.TabIndex = 77;
+            this.txt_Office_Postal_Code.TabIndex = 76;
             // 
             // lbl_Office_Postal_Code_City
             // 
@@ -132,7 +170,7 @@
             this.txt_Office_Name.Location = new System.Drawing.Point(240, 22);
             this.txt_Office_Name.Name = "txt_Office_Name";
             this.txt_Office_Name.Size = new System.Drawing.Size(287, 21);
-            this.txt_Office_Name.TabIndex = 72;
+            this.txt_Office_Name.TabIndex = 74;
             // 
             // grb_Office_Save_Cancel_Buttons
             // 
@@ -151,7 +189,7 @@
             this.btn_Office_Save.Location = new System.Drawing.Point(442, 19);
             this.btn_Office_Save.Name = "btn_Office_Save";
             this.btn_Office_Save.Size = new System.Drawing.Size(85, 30);
-            this.btn_Office_Save.TabIndex = 90;
+            this.btn_Office_Save.TabIndex = 81;
             this.btn_Office_Save.Text = "Tallenna";
             this.btn_Office_Save.UseVisualStyleBackColor = true;
             this.btn_Office_Save.Click += new System.EventHandler(this.btn_Office_Save_Click);
@@ -163,49 +201,10 @@
             this.btn_Office_Cancel.Location = new System.Drawing.Point(351, 19);
             this.btn_Office_Cancel.Name = "btn_Office_Cancel";
             this.btn_Office_Cancel.Size = new System.Drawing.Size(85, 30);
-            this.btn_Office_Cancel.TabIndex = 91;
+            this.btn_Office_Cancel.TabIndex = 80;
             this.btn_Office_Cancel.Text = "Peruuta";
             this.btn_Office_Cancel.UseVisualStyleBackColor = true;
             this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click_1);
-            // 
-            // txt_Office_Email
-            // 
-            this.txt_Office_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Office_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Office_Email.Location = new System.Drawing.Point(240, 125);
-            this.txt_Office_Email.Name = "txt_Office_Email";
-            this.txt_Office_Email.Size = new System.Drawing.Size(287, 21);
-            this.txt_Office_Email.TabIndex = 85;
-            // 
-            // lbl_Office_Email
-            // 
-            this.lbl_Office_Email.AutoSize = true;
-            this.lbl_Office_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Office_Email.Location = new System.Drawing.Point(6, 125);
-            this.lbl_Office_Email.Name = "lbl_Office_Email";
-            this.lbl_Office_Email.Size = new System.Drawing.Size(136, 20);
-            this.lbl_Office_Email.TabIndex = 84;
-            this.lbl_Office_Email.Text = "Sähköpostiosoite:";
-            this.lbl_Office_Email.Click += new System.EventHandler(this.lbl_Office_Email_Click);
-            // 
-            // txt_Office_Phone
-            // 
-            this.txt_Office_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Office_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Office_Phone.Location = new System.Drawing.Point(240, 161);
-            this.txt_Office_Phone.Name = "txt_Office_Phone";
-            this.txt_Office_Phone.Size = new System.Drawing.Size(287, 21);
-            this.txt_Office_Phone.TabIndex = 87;
-            // 
-            // lbl_Office_Phone
-            // 
-            this.lbl_Office_Phone.AutoSize = true;
-            this.lbl_Office_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Office_Phone.Location = new System.Drawing.Point(6, 161);
-            this.lbl_Office_Phone.Name = "lbl_Office_Phone";
-            this.lbl_Office_Phone.Size = new System.Drawing.Size(119, 20);
-            this.lbl_Office_Phone.TabIndex = 86;
-            this.lbl_Office_Phone.Text = "Puhelinnumero:";
             // 
             // frm_Office_Popup
             // 

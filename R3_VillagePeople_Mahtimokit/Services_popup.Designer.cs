@@ -62,7 +62,7 @@
             this.btn_Service_Save.Location = new System.Drawing.Point(442, 19);
             this.btn_Service_Save.Name = "btn_Service_Save";
             this.btn_Service_Save.Size = new System.Drawing.Size(85, 30);
-            this.btn_Service_Save.TabIndex = 90;
+            this.btn_Service_Save.TabIndex = 100;
             this.btn_Service_Save.Text = "Tallenna";
             this.btn_Service_Save.UseVisualStyleBackColor = true;
             this.btn_Service_Save.Click += new System.EventHandler(this.btn_Service_Save_Click);
@@ -74,7 +74,7 @@
             this.btn_Service_Cancel.Location = new System.Drawing.Point(351, 19);
             this.btn_Service_Cancel.Name = "btn_Service_Cancel";
             this.btn_Service_Cancel.Size = new System.Drawing.Size(85, 30);
-            this.btn_Service_Cancel.TabIndex = 91;
+            this.btn_Service_Cancel.TabIndex = 99;
             this.btn_Service_Cancel.Text = "Peruuta";
             this.btn_Service_Cancel.UseVisualStyleBackColor = true;
             this.btn_Service_Cancel.Click += new System.EventHandler(this.btn_Service_Cancel_Click_1);
@@ -121,7 +121,7 @@
             this.cbo_Service_Office_Select.Location = new System.Drawing.Point(240, 25);
             this.cbo_Service_Office_Select.Name = "cbo_Service_Office_Select";
             this.cbo_Service_Office_Select.Size = new System.Drawing.Size(287, 28);
-            this.cbo_Service_Office_Select.TabIndex = 106;
+            this.cbo_Service_Office_Select.TabIndex = 93;
             // 
             // toimipisteBindingSource
             // 
@@ -140,7 +140,7 @@
             this.txt_Service_alv.Location = new System.Drawing.Point(240, 244);
             this.txt_Service_alv.Name = "txt_Service_alv";
             this.txt_Service_alv.Size = new System.Drawing.Size(287, 21);
-            this.txt_Service_alv.TabIndex = 103;
+            this.txt_Service_alv.TabIndex = 98;
             // 
             // lbl_Service_alv
             // 
@@ -159,7 +159,7 @@
             this.txt_Service_Max_Visitors.Location = new System.Drawing.Point(240, 218);
             this.txt_Service_Max_Visitors.Name = "txt_Service_Max_Visitors";
             this.txt_Service_Max_Visitors.Size = new System.Drawing.Size(287, 21);
-            this.txt_Service_Max_Visitors.TabIndex = 99;
+            this.txt_Service_Max_Visitors.TabIndex = 97;
             // 
             // lbl_Service_Max_Visitors
             // 
@@ -178,7 +178,7 @@
             this.txt_Service_Price.Location = new System.Drawing.Point(240, 192);
             this.txt_Service_Price.Name = "txt_Service_Price";
             this.txt_Service_Price.Size = new System.Drawing.Size(100, 21);
-            this.txt_Service_Price.TabIndex = 97;
+            this.txt_Service_Price.TabIndex = 96;
             // 
             // lbl_Service_Price
             // 
@@ -217,7 +217,7 @@
             this.txt_Service_Name.Location = new System.Drawing.Point(240, 63);
             this.txt_Service_Name.Name = "txt_Service_Name";
             this.txt_Service_Name.Size = new System.Drawing.Size(287, 21);
-            this.txt_Service_Name.TabIndex = 93;
+            this.txt_Service_Name.TabIndex = 94;
             // 
             // lbl_Service_Name
             // 

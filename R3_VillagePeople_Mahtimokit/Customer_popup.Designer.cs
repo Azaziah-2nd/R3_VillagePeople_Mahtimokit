@@ -83,7 +83,7 @@
             this.txt_Customer_Country.Location = new System.Drawing.Point(240, 202);
             this.txt_Customer_Country.Name = "txt_Customer_Country";
             this.txt_Customer_Country.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Country.TabIndex = 125;
+            this.txt_Customer_Country.TabIndex = 115;
             // 
             // lbl_Customer_Country
             // 
@@ -102,7 +102,7 @@
             this.txt_Customer_Phone_Number.Location = new System.Drawing.Point(240, 124);
             this.txt_Customer_Phone_Number.Name = "txt_Customer_Phone_Number";
             this.txt_Customer_Phone_Number.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Phone_Number.TabIndex = 123;
+            this.txt_Customer_Phone_Number.TabIndex = 111;
             // 
             // lbl_Customer_Phone_number
             // 
@@ -121,7 +121,7 @@
             this.txt_Customer_Email.Location = new System.Drawing.Point(240, 98);
             this.txt_Customer_Email.Name = "txt_Customer_Email";
             this.txt_Customer_Email.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Email.TabIndex = 121;
+            this.txt_Customer_Email.TabIndex = 110;
             // 
             // lbl_Customer_Email
             // 
@@ -140,7 +140,7 @@
             this.txt_Customer_City.Location = new System.Drawing.Point(346, 176);
             this.txt_Customer_City.Name = "txt_Customer_City";
             this.txt_Customer_City.Size = new System.Drawing.Size(181, 21);
-            this.txt_Customer_City.TabIndex = 118;
+            this.txt_Customer_City.TabIndex = 114;
             // 
             // txt_Customer_Adress
             // 
@@ -149,7 +149,7 @@
             this.txt_Customer_Adress.Location = new System.Drawing.Point(240, 150);
             this.txt_Customer_Adress.Name = "txt_Customer_Adress";
             this.txt_Customer_Adress.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Adress.TabIndex = 117;
+            this.txt_Customer_Adress.TabIndex = 112;
             // 
             // lbl_Customer_Adress
             // 
@@ -168,7 +168,7 @@
             this.txt_Customere_Postal_Code.Location = new System.Drawing.Point(240, 176);
             this.txt_Customere_Postal_Code.Name = "txt_Customere_Postal_Code";
             this.txt_Customere_Postal_Code.Size = new System.Drawing.Size(100, 21);
-            this.txt_Customere_Postal_Code.TabIndex = 115;
+            this.txt_Customere_Postal_Code.TabIndex = 113;
             // 
             // lbl_Customer_Postal_Code_City
             // 
@@ -187,7 +187,7 @@
             this.txt_Customer_Surname.Location = new System.Drawing.Point(240, 67);
             this.txt_Customer_Surname.Name = "txt_Customer_Surname";
             this.txt_Customer_Surname.Size = new System.Drawing.Size(287, 21);
-            this.txt_Customer_Surname.TabIndex = 110;
+            this.txt_Customer_Surname.TabIndex = 109;
             // 
             // lbl_Customer_Surname
             // 
@@ -235,7 +235,7 @@
             this.btn_Customer_Save.Location = new System.Drawing.Point(442, 19);
             this.btn_Customer_Save.Name = "btn_Customer_Save";
             this.btn_Customer_Save.Size = new System.Drawing.Size(85, 30);
-            this.btn_Customer_Save.TabIndex = 90;
+            this.btn_Customer_Save.TabIndex = 117;
             this.btn_Customer_Save.Text = "Tallenna";
             this.btn_Customer_Save.UseVisualStyleBackColor = true;
             this.btn_Customer_Save.Click += new System.EventHandler(this.btn_Customer_Save_Click);
@@ -247,7 +247,7 @@
             this.btn_Customer_Cancel.Location = new System.Drawing.Point(351, 19);
             this.btn_Customer_Cancel.Name = "btn_Customer_Cancel";
             this.btn_Customer_Cancel.Size = new System.Drawing.Size(85, 30);
-            this.btn_Customer_Cancel.TabIndex = 91;
+            this.btn_Customer_Cancel.TabIndex = 116;
             this.btn_Customer_Cancel.Text = "Peruuta";
             this.btn_Customer_Cancel.UseVisualStyleBackColor = true;
             this.btn_Customer_Cancel.Click += new System.EventHandler(this.btn_Customer_Cancel_Click);

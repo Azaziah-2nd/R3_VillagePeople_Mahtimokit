@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grb_Cottage_Details = new System.Windows.Forms.GroupBox();
+            this.txt_Cottage_Size = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Office = new System.Windows.Forms.Label();
             this.cbo_Cottage_Office_Select = new System.Windows.Forms.ComboBox();
+            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vP_DatabaseDataSet1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1();
             this.rbu_Cottage_Wlan_No = new System.Windows.Forms.RadioButton();
             this.rbu_Cottage_Wlan_Yes = new System.Windows.Forms.RadioButton();
             this.lbl_Cottage_Wlan = new System.Windows.Forms.Label();
@@ -49,16 +52,13 @@
             this.btn_Cottage_Cancel = new System.Windows.Forms.Button();
             this.vP_DatabaseDataSet3 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3();
             this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1();
-            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toimipisteTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter();
-            this.txt_Cottage_Size = new System.Windows.Forms.TextBox();
             this.grb_Cottage_Details.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
             this.grb_Cottage_Save_Cancel_Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grb_Cottage_Details
@@ -86,6 +86,15 @@
             this.grb_Cottage_Details.TabStop = false;
             this.grb_Cottage_Details.Text = "Mökin tiedot";
             // 
+            // txt_Cottage_Size
+            // 
+            this.txt_Cottage_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cottage_Size.Location = new System.Drawing.Point(240, 277);
+            this.txt_Cottage_Size.Name = "txt_Cottage_Size";
+            this.txt_Cottage_Size.Size = new System.Drawing.Size(287, 21);
+            this.txt_Cottage_Size.TabIndex = 86;
+            // 
             // lbl_Cottage_Office
             // 
             this.lbl_Cottage_Office.AutoSize = true;
@@ -106,7 +115,17 @@
             this.cbo_Cottage_Office_Select.Location = new System.Drawing.Point(240, 48);
             this.cbo_Cottage_Office_Select.Name = "cbo_Cottage_Office_Select";
             this.cbo_Cottage_Office_Select.Size = new System.Drawing.Size(287, 28);
-            this.cbo_Cottage_Office_Select.TabIndex = 108;
+            this.cbo_Cottage_Office_Select.TabIndex = 81;
+            // 
+            // toimipisteBindingSource
+            // 
+            this.toimipisteBindingSource.DataMember = "Toimipiste";
+            this.toimipisteBindingSource.DataSource = this.vP_DatabaseDataSet1;
+            // 
+            // vP_DatabaseDataSet1
+            // 
+            this.vP_DatabaseDataSet1.DataSetName = "VP_DatabaseDataSet1";
+            this.vP_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rbu_Cottage_Wlan_No
             // 
@@ -116,7 +135,7 @@
             this.rbu_Cottage_Wlan_No.Location = new System.Drawing.Point(346, 307);
             this.rbu_Cottage_Wlan_No.Name = "rbu_Cottage_Wlan_No";
             this.rbu_Cottage_Wlan_No.Size = new System.Drawing.Size(36, 19);
-            this.rbu_Cottage_Wlan_No.TabIndex = 98;
+            this.rbu_Cottage_Wlan_No.TabIndex = 88;
             this.rbu_Cottage_Wlan_No.Text = "Ei";
             this.rbu_Cottage_Wlan_No.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +148,7 @@
             this.rbu_Cottage_Wlan_Yes.Location = new System.Drawing.Point(240, 304);
             this.rbu_Cottage_Wlan_Yes.Name = "rbu_Cottage_Wlan_Yes";
             this.rbu_Cottage_Wlan_Yes.Size = new System.Drawing.Size(51, 19);
-            this.rbu_Cottage_Wlan_Yes.TabIndex = 97;
+            this.rbu_Cottage_Wlan_Yes.TabIndex = 87;
             this.rbu_Cottage_Wlan_Yes.TabStop = true;
             this.rbu_Cottage_Wlan_Yes.Text = "Kyllä";
             this.rbu_Cottage_Wlan_Yes.UseVisualStyleBackColor = true;
@@ -161,7 +180,7 @@
             this.txt_Cottage_Max_Visitors.Location = new System.Drawing.Point(240, 252);
             this.txt_Cottage_Max_Visitors.Name = "txt_Cottage_Max_Visitors";
             this.txt_Cottage_Max_Visitors.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Max_Visitors.TabIndex = 87;
+            this.txt_Cottage_Max_Visitors.TabIndex = 85;
             // 
             // lbl_Cottage_Max_Visitors
             // 
@@ -180,7 +199,7 @@
             this.txt_Cottage_Price.Location = new System.Drawing.Point(240, 226);
             this.txt_Cottage_Price.Name = "txt_Cottage_Price";
             this.txt_Cottage_Price.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Price.TabIndex = 85;
+            this.txt_Cottage_Price.TabIndex = 84;
             // 
             // lbl_Cottage_Price
             // 
@@ -219,7 +238,7 @@
             this.txt_Cottage_Name.Location = new System.Drawing.Point(240, 97);
             this.txt_Cottage_Name.Name = "txt_Cottage_Name";
             this.txt_Cottage_Name.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Name.TabIndex = 81;
+            this.txt_Cottage_Name.TabIndex = 82;
             // 
             // lbl_Cottage_Name
             // 
@@ -260,7 +279,7 @@
             this.btn_Cottage_Cancel.Location = new System.Drawing.Point(351, 19);
             this.btn_Cottage_Cancel.Name = "btn_Cottage_Cancel";
             this.btn_Cottage_Cancel.Size = new System.Drawing.Size(85, 30);
-            this.btn_Cottage_Cancel.TabIndex = 91;
+            this.btn_Cottage_Cancel.TabIndex = 89;
             this.btn_Cottage_Cancel.Text = "Peruuta";
             this.btn_Cottage_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cottage_Cancel.Click += new System.EventHandler(this.btn_Cottage_Cancel_Click_1);
@@ -275,28 +294,9 @@
             this.majoitusBindingSource.DataMember = "Majoitus";
             this.majoitusBindingSource.DataSource = this.vP_DatabaseDataSet3;
             // 
-            // vP_DatabaseDataSet1
-            // 
-            this.vP_DatabaseDataSet1.DataSetName = "VP_DatabaseDataSet1";
-            this.vP_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // toimipisteBindingSource
-            // 
-            this.toimipisteBindingSource.DataMember = "Toimipiste";
-            this.toimipisteBindingSource.DataSource = this.vP_DatabaseDataSet1;
-            // 
             // toimipisteTableAdapter
             // 
             this.toimipisteTableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_Cottage_Size
-            // 
-            this.txt_Cottage_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cottage_Size.Location = new System.Drawing.Point(240, 277);
-            this.txt_Cottage_Size.Name = "txt_Cottage_Size";
-            this.txt_Cottage_Size.Size = new System.Drawing.Size(287, 21);
-            this.txt_Cottage_Size.TabIndex = 110;
             // 
             // frm_Cottage_Popup
             // 
@@ -311,11 +311,11 @@
             this.Load += new System.EventHandler(this.frm_Cottage_Popup_Load);
             this.grb_Cottage_Details.ResumeLayout(false);
             this.grb_Cottage_Details.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).EndInit();
             this.grb_Cottage_Save_Cancel_Buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
