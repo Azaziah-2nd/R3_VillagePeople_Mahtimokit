@@ -37,10 +37,10 @@
             this.tbl_Order_Customers = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_1st_Col_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_Date_Selection = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lbl_Order_End_Date = new System.Windows.Forms.Label();
+            this.lbl_Order_Start_Date = new System.Windows.Forms.Label();
+            this.dtp_Order_Start_Date = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Order_End_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Order_Dates = new System.Windows.Forms.Label();
             this.tbl_Order_1st_Col_Customer = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_Customer_Search = new System.Windows.Forms.TableLayoutPanel();
@@ -400,10 +400,10 @@
             this.tbl_Order_Date_Selection.ColumnCount = 2;
             this.tbl_Order_Date_Selection.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Order_Date_Selection.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Order_Date_Selection.Controls.Add(this.label1, 1, 0);
-            this.tbl_Order_Date_Selection.Controls.Add(this.label2, 0, 0);
-            this.tbl_Order_Date_Selection.Controls.Add(this.dateTimePicker1, 0, 1);
-            this.tbl_Order_Date_Selection.Controls.Add(this.dateTimePicker2, 1, 1);
+            this.tbl_Order_Date_Selection.Controls.Add(this.lbl_Order_End_Date, 1, 0);
+            this.tbl_Order_Date_Selection.Controls.Add(this.lbl_Order_Start_Date, 0, 0);
+            this.tbl_Order_Date_Selection.Controls.Add(this.dtp_Order_Start_Date, 0, 1);
+            this.tbl_Order_Date_Selection.Controls.Add(this.dtp_Order_End_Date, 1, 1);
             this.tbl_Order_Date_Selection.Location = new System.Drawing.Point(3, 26);
             this.tbl_Order_Date_Selection.Name = "tbl_Order_Date_Selection";
             this.tbl_Order_Date_Selection.RowCount = 2;
@@ -412,43 +412,45 @@
             this.tbl_Order_Date_Selection.Size = new System.Drawing.Size(186, 64);
             this.tbl_Order_Date_Selection.TabIndex = 112;
             // 
-            // label1
+            // lbl_Order_End_Date
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Päättyy";
+            this.lbl_Order_End_Date.AutoSize = true;
+            this.lbl_Order_End_Date.Location = new System.Drawing.Point(96, 0);
+            this.lbl_Order_End_Date.Name = "lbl_Order_End_Date";
+            this.lbl_Order_End_Date.Size = new System.Drawing.Size(61, 17);
+            this.lbl_Order_End_Date.TabIndex = 1;
+            this.lbl_Order_End_Date.Text = "Päättyy";
             // 
-            // label2
+            // lbl_Order_Start_Date
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Alkaa";
+            this.lbl_Order_Start_Date.AutoSize = true;
+            this.lbl_Order_Start_Date.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Order_Start_Date.Name = "lbl_Order_Start_Date";
+            this.lbl_Order_Start_Date.Size = new System.Drawing.Size(49, 17);
+            this.lbl_Order_Start_Date.TabIndex = 0;
+            this.lbl_Order_Start_Date.Text = "Alkaa";
             // 
-            // dateTimePicker1
+            // dtp_Order_Start_Date
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtp_Order_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(87, 26);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtp_Order_Start_Date.Location = new System.Drawing.Point(3, 20);
+            this.dtp_Order_Start_Date.Name = "dtp_Order_Start_Date";
+            this.dtp_Order_Start_Date.Size = new System.Drawing.Size(87, 26);
+            this.dtp_Order_Start_Date.TabIndex = 2;
+            this.dtp_Order_Start_Date.Value = new System.DateTime(2017, 5, 12, 0, 0, 0, 0);
+            this.dtp_Order_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Order_Start_Date_ValueChanged);
             // 
-            // dateTimePicker2
+            // dtp_Order_End_Date
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtp_Order_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(96, 20);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(87, 26);
-            this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
+            this.dtp_Order_End_Date.Location = new System.Drawing.Point(96, 20);
+            this.dtp_Order_End_Date.Name = "dtp_Order_End_Date";
+            this.dtp_Order_End_Date.Size = new System.Drawing.Size(87, 26);
+            this.dtp_Order_End_Date.TabIndex = 3;
+            this.dtp_Order_End_Date.Value = new System.DateTime(2017, 5, 12, 0, 0, 0, 0);
+            this.dtp_Order_End_Date.ValueChanged += new System.EventHandler(this.dtp_Order_End_Date_ValueChanged);
             // 
             // lbl_Order_Dates
             // 
@@ -3047,10 +3049,10 @@
         private System.Windows.Forms.Button btn_Order_Cottages_Search;
         private System.Windows.Forms.TextBox txt_Order_Cottages_Search;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_Date_Selection;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label lbl_Order_End_Date;
+        private System.Windows.Forms.Label lbl_Order_Start_Date;
+        private System.Windows.Forms.DateTimePicker dtp_Order_Start_Date;
+        private System.Windows.Forms.DateTimePicker dtp_Order_End_Date;
         private System.Windows.Forms.Label lbl_Order_Dates;
         private System.Windows.Forms.Label lbl_Order_Cottage;
         private System.Windows.Forms.Label lbl_Order_Office;

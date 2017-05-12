@@ -105,16 +105,14 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet4.Asiakas' table. You can move, or remove it, as needed.
-            this.asiakasTableAdapter1.Fill(this.vP_DatabaseDataSet4.Asiakas);
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet3.Majoitus' table. You can move, or remove it, as needed.
-            this.majoitusTableAdapter.Fill(this.vP_DatabaseDataSet3.Majoitus);
-
             // Haetaan tiedot tietokannasta eri kenttiin.
             this.Get_customer_names_to_grid();
             this.Get_office_names_to_combo();
             this.Get_service_names_to_grid();
             this.Get_cottage_names_to_grid();
+            // Haetaan päivämäärät varauksen yhteenvetoon.
+            Get_start_date_to_order_summary();
+            Get_end_date_to_order_summary();
             // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
             // Oletustoimipiste
             string default_office = Properties.Settings.Default["default_office"].ToString();
@@ -582,6 +580,34 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource binding_source = new BindingSource();
             binding_source.DataSource = dgv_Cottages_all.DataSource;
             binding_source.Filter = "[nimi] Like '%" + txt_Cottages_Search.Text + "%'";
+        }
+
+
+        private void Get_start_date_to_order_summary()
+        {
+            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
+            DateTime start_date = dtp_Order_Start_Date.Value;
+            string parsed_start_date = start_date.ToString("dd.MM.yyyy");
+            lbl_Order_Summary_Start_Date.Text = "Alkamispäivä: " + parsed_start_date;
+        }
+
+        private void Get_end_date_to_order_summary()
+        {
+            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
+            DateTime start_date = dtp_Order_End_Date.Value;
+            string parsed_end_date = start_date.ToString("dd.MM.yyyy");
+            lbl_Order_Summary_End_Date.Text = "Päättymispäivä: " + parsed_end_date;
+        }
+
+
+        private void dtp_Order_Start_Date_ValueChanged(object sender, EventArgs e)
+        {
+            Get_start_date_to_order_summary();
+        }
+
+        private void dtp_Order_End_Date_ValueChanged(object sender, EventArgs e)
+        {
+            Get_end_date_to_order_summary();
         }
     }
 }
