@@ -663,7 +663,7 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_loki.ExecuteNonQuery();
             database_connection.Close();
 
-            // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
+            // Varaus taulun päivitys
             string asiakas_id = "1";
             string toimipiste_id = "2";
             DateTime varattu_pvm = DateTime.Now;
@@ -686,6 +686,32 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_varaus.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
             database_query_varaus.Parameters.AddWithValue("@lisatieto", lisatieto);
             database_query_varaus.ExecuteNonQuery();
+            database_connection.Close();
+            // Varauksen_palvelut taulun päivitys
+            string varaus_id = "1";
+            string palvelu_id = "2";
+            string lkm = "1";
+            SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
+                "VALUES(@varaus_id, @palvelu_id, @lkm)");
+            database_query_Varauksen_palvelut.Connection = main_window.database_connection;
+            database_connection.Open();
+            database_query_Varauksen_palvelut.Parameters.AddWithValue("@varaus_id", varaus_id);
+            database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+            database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
+            database_query_Varauksen_palvelut.ExecuteNonQuery();
+            database_connection.Close();
+
+            // Varauksen_majoitus taulun päivitys
+            string majoitus_id = "2";
+            string majoittujien_maara = "1";
+            SqlCommand database_query_Varauksen_majoitus = new SqlCommand("INSERT INTO [Varauksen_majoitus] ([varaus_id], [majoitus_id], [majoittujien_maara]) " +
+                "VALUES(@varaus_id, @majoitus_id, @majoittujien_maara)");
+            database_query_Varauksen_majoitus.Connection = main_window.database_connection;
+            database_connection.Open();
+            database_query_Varauksen_majoitus.Parameters.AddWithValue("@varaus_id", varaus_id);
+            database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoitus_id", majoitus_id);
+            database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoittujien_maara", majoittujien_maara);
+            database_query_Varauksen_majoitus.ExecuteNonQuery();
             database_connection.Close();
         }
     }
