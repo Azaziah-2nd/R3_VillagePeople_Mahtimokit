@@ -684,25 +684,31 @@ namespace R3_VillagePeople_Mahtimokit
             lsv_Order_Summary_Cottages.Items.Add(listViewItem);
         }
 
-        int Value;
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
-            string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
-            string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
-            string[] row = { selected_service + " [" + selected_quantity + "]" };
-            var listViewItem = new ListViewItem(row);
-            //lsv_Order_Summary_Services.Items.Add(listViewItem);
-
-            // Valmistellaan asiakkaan id valmiiksi "varaus" tauluun vientiä varten.
-            foreach (DataGridViewRow selected_customer in dgv_Order_Customers_All.SelectedRows)
+            string Reservation_service_id = "";
+            if (dgv_Services_All.SelectedCells.Count > 0)
             {
-                Reservation_asiakas_id = selected_customer.Cells[0].Value.ToString();
+                int selectedrowindex = dgv_Order_Services_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Order_Services_All.Rows[selectedrowindex];
+                Reservation_service_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+                string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
+                string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
+                string[] rowas = { selected_service + " [" + selected_quantity + "]" };
+                var listViewItem = new ListViewItem(rowas);
+
+
+                Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                ListViewItem track = new ListViewItem();
+                dictionary.Add(Reservation_service_id, listViewItem.ToString());
+                track.Tag = dictionary;
+                track.Text = ("Test: 1" + " Test: 2");
+                lsv_Order_Summary_Services.Items.Add(track);
+
+
             }
 
-            List <frm_Main_Window> data = new List<frm_Main_Window>();
-            data.Add(new frm_Main_Window() { Value = 1, Text = "Some Text" });
-            data.Add(new frm_Main_Window() { Value = 2, Text = listViewItem.ToString() });
-            lsv_Order_Summary_Services.Items.Add(listViewItem);
+
 
 
         }
@@ -805,6 +811,23 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
+            string a;
+            string b = "b";
+            string c = "c";
+            string d;
+            ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
+            //fill the text boxes
+            a = item.Text;
+            b = item.SubItems[0].Text;
+            MessageBox.Show(b);
+
+            ListViewItem lit = sender as ListViewItem;
+            lit.Tag = item.Tag;
+            d = item.Tag.ToString();
+
+            MessageBox.Show(a + " " +  b  + " " + c, " D: " + d);
+
+
             foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
             {
                 string value1 = row.Cells[0].Value.ToString();
