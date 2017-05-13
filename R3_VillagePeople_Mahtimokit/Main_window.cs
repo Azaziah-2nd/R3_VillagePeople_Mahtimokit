@@ -718,28 +718,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
-
-            string blaa = "blaa blaa [153]";
-            var regex1 = new Regex("\\s[[]\\d{1,10}[]]");
-            var myCapturedText = regex1.Match(blaa).Value;
-
-            string bracked_number = myCapturedText.ToString();
-            var regex2 = new Regex("\\d{1,10}");
-            var gg = regex2.Match(bracked_number).Value;
-            MessageBox.Show("This is my captured text: " + gg);
-
-            // Erotellaan listasta palvelu ja kappalemäärä
-            foreach (var item in lsv_Order_Summary_Services.Items)
-            {
-                // Siivotaan myöhemmin
-                MessageBox.Show(item.ToString());
-                var extract_text = new Regex("^ListViewItem: {(.+) [[]\\d{1,10}[]][}]");
-                Match match = extract_text.Match(item.ToString());
-                string Service = match.Groups[1].Value;
-            }
-
-
-
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
@@ -756,6 +734,8 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
 
             // Varaus taulun päivitys
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
             string toimipiste_id = "2";
             DateTime varattu_pvm = DateTime.Now;
             DateTime vahvistus_pvm = DateTime.Now;
@@ -777,18 +757,41 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_varaus.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
             database_query_varaus.Parameters.AddWithValue("@lisatieto", lisatieto);
             database_query_varaus.ExecuteNonQuery();
+
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Varaus WHERE varattu_pvm = @varattu_pvm");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_query.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
+            // Suoritetaan kysely
+            database_query.ExecuteNonQuery();
+            myReader = database_query.ExecuteReader();
+            // Asetetaan formiin tiedot tietokannasta.
+            // Huom! Customer_popup formissa textboxit = Public eikä private.
+            string varaus_id = "";
+            while (myReader.Read())
+            {
+                varaus_id = (myReader["varaus_id"].ToString());
+                MessageBox.Show("Varaus id: " + varaus_id);
+            }
             database_connection.Close();
             // Varauksen_palvelut taulun päivitys
-            string varaus_id = "1";
-            string palvelu_id = "2";
-            string lkm = "1";
+            ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
+            string palvelu_id = item.Tag.ToString();
+            MessageBox.Show("Palvelu_id string = " + palvelu_id);
+            var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
+            Match match = find_quantity.Match(item.ToString());
+            string lkm = match.Groups[1].Value;
+            MessageBox.Show("Palveluiden lkm: " + lkm);
+
             SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
                 "VALUES(@varaus_id, @palvelu_id, @lkm)");
             database_query_Varauksen_palvelut.Connection = main_window.database_connection;
             database_connection.Open();
             database_query_Varauksen_palvelut.Parameters.AddWithValue("@varaus_id", varaus_id);
             database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+            MessageBox.Show("Palvelu ID? " + palvelu_id);
             database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
+            MessageBox.Show("Palvelu ID_? " + palvelu_id);
             database_query_Varauksen_palvelut.ExecuteNonQuery();
             database_connection.Close();
 
@@ -809,7 +812,6 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
             ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
-            //fill the text boxes
             string a = item.Tag.ToString();
             MessageBox.Show(a);
 
