@@ -26,8 +26,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void frm_Cottage_Popup_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vP_DatabaseDataSet1.Toimipiste' table. You can move, or remove it, as needed.
-            this.toimipisteTableAdapter.Fill(this.vP_DatabaseDataSet1.Toimipiste);
 
         }
 

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1();
-            this.vP_DatabaseDataSet3 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3();
-            this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toimipisteTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter();
             this.txt_Cottage_Size = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Office = new System.Windows.Forms.Label();
             this.cbo_Cottage_Office_Select = new System.Windows.Forms.ComboBox();
@@ -54,35 +49,7 @@
             this.lbl_Cottage_Details = new System.Windows.Forms.Label();
             this.lbl_Euros = new System.Windows.Forms.Label();
             this.lbl_Square_Meters = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // toimipisteBindingSource
-            // 
-            this.toimipisteBindingSource.DataMember = "Toimipiste";
-            this.toimipisteBindingSource.DataSource = this.vP_DatabaseDataSet1;
-            // 
-            // vP_DatabaseDataSet1
-            // 
-            this.vP_DatabaseDataSet1.DataSetName = "VP_DatabaseDataSet1";
-            this.vP_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vP_DatabaseDataSet3
-            // 
-            this.vP_DatabaseDataSet3.DataSetName = "VP_DatabaseDataSet3";
-            this.vP_DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // majoitusBindingSource
-            // 
-            this.majoitusBindingSource.DataMember = "Majoitus";
-            this.majoitusBindingSource.DataSource = this.vP_DatabaseDataSet3;
-            // 
-            // toimipisteTableAdapter
-            // 
-            this.toimipisteTableAdapter.ClearBeforeFill = true;
             // 
             // txt_Cottage_Size
             // 
@@ -321,10 +288,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mökin tiedot";
             this.Load += new System.EventHandler(this.frm_Cottage_Popup_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,10 +295,7 @@
 
         #endregion
         private System.Windows.Forms.BindingSource majoitusBindingSource;
-        private VP_DatabaseDataSet3 vP_DatabaseDataSet3;
-        private VP_DatabaseDataSet1 vP_DatabaseDataSet1;
         private System.Windows.Forms.BindingSource toimipisteBindingSource;
-        private VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter toimipisteTableAdapter;
         public System.Windows.Forms.TextBox txt_Cottage_Size;
         private System.Windows.Forms.Label lbl_Cottage_Office;
         public System.Windows.Forms.ComboBox cbo_Cottage_Office_Select;

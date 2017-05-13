@@ -49,13 +49,9 @@
             this.lbl_Order_Customers = new System.Windows.Forms.Label();
             this.btn_Order_Customers_Add = new System.Windows.Forms.Button();
             this.dgv_Order_Customers_All = new System.Windows.Forms.DataGridView();
-            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet();
             this.tbl_Order_2nd_Col_Offices_Cottage = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Cottage_Selection = new System.Windows.Forms.Label();
             this.dgv_Order_Cottages_All = new System.Windows.Forms.DataGridView();
-            this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet3 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3();
             this.Btn_Order_Cottage_Add = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Order_Cottages_Search = new System.Windows.Forms.Button();
@@ -63,8 +59,6 @@
             this.lbl_Order_Cottage = new System.Windows.Forms.Label();
             this.lbl_Order_Office = new System.Windows.Forms.Label();
             this.cbo_Order_Office_Select = new System.Windows.Forms.ComboBox();
-            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1();
             this.tbl_Order_Cottage_Persons = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Cottage_Persons = new System.Windows.Forms.Label();
             this.lbl_Order_Cottage_Persons_Quantity_Units = new System.Windows.Forms.Label();
@@ -78,8 +72,6 @@
             this.lbl_Order_Services_Quantity_Units = new System.Windows.Forms.Label();
             this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
             this.dgv_Order_Services_All = new System.Windows.Forms.DataGridView();
-            this.palveluBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet2 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet2();
             this.btn_Order_Service_add = new System.Windows.Forms.Button();
             this.tbl_4th_Col_Summary = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_Summary_Dates_Office = new System.Windows.Forms.TableLayoutPanel();
@@ -110,8 +102,6 @@
             this.btn_Customer_Edit = new System.Windows.Forms.Button();
             this.btn_Customer_Add = new System.Windows.Forms.Button();
             this.dgv_Customers_All = new System.Windows.Forms.DataGridView();
-            this.asiakasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vPDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Office = new System.Windows.Forms.Label();
@@ -153,8 +143,6 @@
             this.lbl_History_Office = new System.Windows.Forms.Label();
             this.cbo_History_Office_Select = new System.Windows.Forms.ComboBox();
             this.dgv_History_Customers_All = new System.Windows.Forms.DataGridView();
-            this.asiakasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.vP_DatabaseDataSet4 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet4();
             this.tbl_History_2nd_Col_Orders_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_History = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Orders = new System.Windows.Forms.Label();
@@ -202,12 +190,14 @@
             this.lbl_Settings_User = new System.Windows.Forms.Label();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.asiakasTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter();
-            this.toimipisteTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter();
-            this.palveluTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet2TableAdapters.PalveluTableAdapter();
-            this.majoitusTableAdapter = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3TableAdapters.MajoitusTableAdapter();
+            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.palveluBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asiakasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vPDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asiakasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.asiakasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.asiakasTableAdapter1 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet4TableAdapters.AsiakasTableAdapter();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -217,22 +207,14 @@
             this.tbl_Order_1st_Col_Customer.SuspendLayout();
             this.tbl_Order_Customer_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Customers_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet)).BeginInit();
             this.tbl_Order_2nd_Col_Offices_Cottage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Cottages_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).BeginInit();
             this.tbl_Order_Cottage_Persons.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Services_Quantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet2)).BeginInit();
             this.tbl_4th_Col_Summary.SuspendLayout();
             this.tbl_Order_Summary_Dates_Office.SuspendLayout();
             this.tbl_Order_Summary_Customers_Cottages_Services.SuspendLayout();
@@ -243,8 +225,6 @@
             this.tbl_Edit_1st_Col_Customers_Search.SuspendLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Customers_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).BeginInit();
             this.tbl_Edit_2nd_Col_Offices_Services.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices.SuspendLayout();
             this.tbl_Edit_2nd_Col_Offices_Buttons.SuspendLayout();
@@ -262,8 +242,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet4)).BeginInit();
             this.tbl_History_2nd_Col_Orders_Dates.SuspendLayout();
             this.tbl_History_Order_History.SuspendLayout();
             this.tbl_History_Order_Search.SuspendLayout();
@@ -278,6 +256,13 @@
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -564,16 +549,6 @@
             this.dgv_Order_Customers_All.Size = new System.Drawing.Size(186, 372);
             this.dgv_Order_Customers_All.TabIndex = 106;
             // 
-            // asiakasBindingSource
-            // 
-            this.asiakasBindingSource.DataMember = "Asiakas";
-            this.asiakasBindingSource.DataSource = this.vP_DatabaseDataSet;
-            // 
-            // vP_DatabaseDataSet
-            // 
-            this.vP_DatabaseDataSet.DataSetName = "VP_DatabaseDataSet";
-            this.vP_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tbl_Order_2nd_Col_Offices_Cottage
             // 
             this.tbl_Order_2nd_Col_Offices_Cottage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -641,16 +616,6 @@
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(258, 343);
             this.dgv_Order_Cottages_All.TabIndex = 107;
-            // 
-            // majoitusBindingSource
-            // 
-            this.majoitusBindingSource.DataMember = "Majoitus";
-            this.majoitusBindingSource.DataSource = this.vP_DatabaseDataSet3;
-            // 
-            // vP_DatabaseDataSet3
-            // 
-            this.vP_DatabaseDataSet3.DataSetName = "VP_DatabaseDataSet3";
-            this.vP_DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Btn_Order_Cottage_Add
             // 
@@ -734,16 +699,6 @@
             this.cbo_Order_Office_Select.Size = new System.Drawing.Size(258, 28);
             this.cbo_Order_Office_Select.TabIndex = 110;
             this.cbo_Order_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Order_Office_Select_SelectedIndexChanged);
-            // 
-            // toimipisteBindingSource
-            // 
-            this.toimipisteBindingSource.DataMember = "Toimipiste";
-            this.toimipisteBindingSource.DataSource = this.vP_DatabaseDataSet1;
-            // 
-            // vP_DatabaseDataSet1
-            // 
-            this.vP_DatabaseDataSet1.DataSetName = "VP_DatabaseDataSet1";
-            this.vP_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_Order_Cottage_Persons
             // 
@@ -932,16 +887,6 @@
             this.dgv_Order_Services_All.RowHeadersVisible = false;
             this.dgv_Order_Services_All.Size = new System.Drawing.Size(196, 449);
             this.dgv_Order_Services_All.TabIndex = 108;
-            // 
-            // palveluBindingSource
-            // 
-            this.palveluBindingSource.DataMember = "Palvelu";
-            this.palveluBindingSource.DataSource = this.vP_DatabaseDataSet2;
-            // 
-            // vP_DatabaseDataSet2
-            // 
-            this.vP_DatabaseDataSet2.DataSetName = "VP_DatabaseDataSet2";
-            this.vP_DatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Order_Service_add
             // 
@@ -1384,16 +1329,6 @@
             this.dgv_Customers_All.RowHeadersVisible = false;
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
             this.dgv_Customers_All.TabIndex = 107;
-            // 
-            // asiakasBindingSource1
-            // 
-            this.asiakasBindingSource1.DataMember = "Asiakas";
-            this.asiakasBindingSource1.DataSource = this.vPDatabaseDataSetBindingSource;
-            // 
-            // vPDatabaseDataSetBindingSource
-            // 
-            this.vPDatabaseDataSetBindingSource.DataSource = this.vP_DatabaseDataSet;
-            this.vPDatabaseDataSetBindingSource.Position = 0;
             // 
             // tbl_Edit_2nd_Col_Offices_Services
             // 
@@ -2012,16 +1947,6 @@
             this.dgv_History_Customers_All.RowHeadersVisible = false;
             this.dgv_History_Customers_All.Size = new System.Drawing.Size(285, 320);
             this.dgv_History_Customers_All.TabIndex = 108;
-            // 
-            // asiakasBindingSource3
-            // 
-            this.asiakasBindingSource3.DataMember = "Asiakas";
-            this.asiakasBindingSource3.DataSource = this.vP_DatabaseDataSet4;
-            // 
-            // vP_DatabaseDataSet4
-            // 
-            this.vP_DatabaseDataSet4.DataSetName = "VP_DatabaseDataSet4";
-            this.vP_DatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_History_2nd_Col_Orders_Dates
             // 
@@ -2658,31 +2583,6 @@
             this.txt_Settings_User_Name.TabIndex = 3;
             this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
-            // asiakasTableAdapter
-            // 
-            this.asiakasTableAdapter.ClearBeforeFill = true;
-            // 
-            // toimipisteTableAdapter
-            // 
-            this.toimipisteTableAdapter.ClearBeforeFill = true;
-            // 
-            // palveluTableAdapter
-            // 
-            this.palveluTableAdapter.ClearBeforeFill = true;
-            // 
-            // majoitusTableAdapter
-            // 
-            this.majoitusTableAdapter.ClearBeforeFill = true;
-            // 
-            // asiakasBindingSource2
-            // 
-            this.asiakasBindingSource2.DataMember = "Asiakas";
-            this.asiakasBindingSource2.DataSource = this.vP_DatabaseDataSet;
-            // 
-            // asiakasTableAdapter1
-            // 
-            this.asiakasTableAdapter1.ClearBeforeFill = true;
-            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2708,17 +2608,11 @@
             this.tbl_Order_Customer_Search.ResumeLayout(false);
             this.tbl_Order_Customer_Search.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Customers_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet)).EndInit();
             this.tbl_Order_2nd_Col_Offices_Cottage.ResumeLayout(false);
             this.tbl_Order_2nd_Col_Offices_Cottage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Cottages_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet3)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet1)).EndInit();
             this.tbl_Order_Cottage_Persons.ResumeLayout(false);
             this.tbl_Order_Cottage_Persons.PerformLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ResumeLayout(false);
@@ -2727,8 +2621,6 @@
             this.tbl_Order_3rd_Col_Services_Quantity.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services_Quantity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet2)).EndInit();
             this.tbl_4th_Col_Summary.ResumeLayout(false);
             this.tbl_4th_Col_Summary.PerformLayout();
             this.tbl_Order_Summary_Dates_Office.ResumeLayout(false);
@@ -2744,8 +2636,6 @@
             this.tbl_Edit_1st_Col_Customers_Search.PerformLayout();
             this.tbl_Edit_1st_Col_Customers_Buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Customers_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).EndInit();
             this.tbl_Edit_2nd_Col_Offices_Services.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.ResumeLayout(false);
             this.tbl_Edit_2nd_Col_Offices.PerformLayout();
@@ -2771,8 +2661,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vP_DatabaseDataSet4)).EndInit();
             this.tbl_History_2nd_Col_Orders_Dates.ResumeLayout(false);
             this.tbl_History_Order_History.ResumeLayout(false);
             this.tbl_History_Order_History.PerformLayout();
@@ -2795,6 +2683,13 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
@@ -2933,30 +2828,20 @@
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.DataGridView dgv_Order_Customers_All;
-        private VP_DatabaseDataSet vP_DatabaseDataSet;
         private System.Windows.Forms.BindingSource asiakasBindingSource;
-        private VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter asiakasTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Customers_All;
         private System.Windows.Forms.BindingSource vPDatabaseDataSetBindingSource;
         private System.Windows.Forms.BindingSource asiakasBindingSource1;
-        private VP_DatabaseDataSet1 vP_DatabaseDataSet1;
         private System.Windows.Forms.BindingSource toimipisteBindingSource;
-        private VP_DatabaseDataSet1TableAdapters.ToimipisteTableAdapter toimipisteTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Services_All;
-        private VP_DatabaseDataSet2 vP_DatabaseDataSet2;
         private System.Windows.Forms.BindingSource palveluBindingSource;
-        private VP_DatabaseDataSet2TableAdapters.PalveluTableAdapter palveluTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Order_Services_All;
         private System.Windows.Forms.DataGridView dgv_Order_Cottages_All;
-        private VP_DatabaseDataSet3 vP_DatabaseDataSet3;
         private System.Windows.Forms.BindingSource majoitusBindingSource;
-        private VP_DatabaseDataSet3TableAdapters.MajoitusTableAdapter majoitusTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Cottages_all;
         private System.Windows.Forms.DataGridView dgv_History_Customers_All;
         private System.Windows.Forms.BindingSource asiakasBindingSource2;
-        private VP_DatabaseDataSet4 vP_DatabaseDataSet4;
         private System.Windows.Forms.BindingSource asiakasBindingSource3;
-        private VP_DatabaseDataSet4TableAdapters.AsiakasTableAdapter asiakasTableAdapter1;
         private System.Windows.Forms.Button btn_Order_Services_Search;
         private System.Windows.Forms.TextBox txt_Order_Services_Search;
         private System.Windows.Forms.Label lbl_Order_Services_Quantity_Units;
