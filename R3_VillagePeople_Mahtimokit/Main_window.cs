@@ -29,7 +29,7 @@ namespace R3_VillagePeople_Mahtimokit
         // DataGriedView elementtien tietojen päivitys.
         private void Get_customer_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT kokonimi FROM Asiakas", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT asiakas_id, kokonimi FROM Asiakas", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);

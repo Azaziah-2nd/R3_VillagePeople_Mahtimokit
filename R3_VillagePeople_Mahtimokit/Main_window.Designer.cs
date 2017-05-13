@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main_Window));
             this.tab_Menu = new System.Windows.Forms.TabControl();
             this.tab_New_Order = new System.Windows.Forms.TabPage();
@@ -190,14 +189,6 @@
             this.lbl_Settings_User = new System.Windows.Forms.Label();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toimipisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.palveluBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asiakasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vPDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asiakasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.asiakasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -256,14 +247,6 @@
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2683,14 +2666,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.majoitusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toimipisteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.palveluBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vPDatabaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2828,20 +2803,12 @@
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.DataGridView dgv_Order_Customers_All;
-        private System.Windows.Forms.BindingSource asiakasBindingSource;
         private System.Windows.Forms.DataGridView dgv_Customers_All;
-        private System.Windows.Forms.BindingSource vPDatabaseDataSetBindingSource;
-        private System.Windows.Forms.BindingSource asiakasBindingSource1;
-        private System.Windows.Forms.BindingSource toimipisteBindingSource;
         private System.Windows.Forms.DataGridView dgv_Services_All;
-        private System.Windows.Forms.BindingSource palveluBindingSource;
         private System.Windows.Forms.DataGridView dgv_Order_Services_All;
         private System.Windows.Forms.DataGridView dgv_Order_Cottages_All;
-        private System.Windows.Forms.BindingSource majoitusBindingSource;
         private System.Windows.Forms.DataGridView dgv_Cottages_all;
         private System.Windows.Forms.DataGridView dgv_History_Customers_All;
-        private System.Windows.Forms.BindingSource asiakasBindingSource2;
-        private System.Windows.Forms.BindingSource asiakasBindingSource3;
         private System.Windows.Forms.Button btn_Order_Services_Search;
         private System.Windows.Forms.TextBox txt_Order_Services_Search;
         private System.Windows.Forms.Label lbl_Order_Services_Quantity_Units;
