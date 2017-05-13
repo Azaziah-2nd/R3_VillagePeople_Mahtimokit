@@ -714,5 +714,14 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_Varauksen_majoitus.ExecuteNonQuery();
             database_connection.Close();
         }
+
+        private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
+        {
+            //string a = dgv_Order_Customers_All.SelectedRows(0).Cells(0).Value;
+            //string a = dgv_Order_Customers_All.SelectedRows[0].Cells["asiakas_id"].Value.ToString();
+            //MessageBox.Show(a);
+
+            MessageBox.Show(dgv_Order_Customers_All.Rows[2].Cells["asiakas_id"].Value.ToString());
+        }
     }
 }

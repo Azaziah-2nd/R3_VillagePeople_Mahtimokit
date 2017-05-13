@@ -567,9 +567,11 @@
             this.dgv_Order_Customers_All.DataSource = this.asiakasBindingSource;
             this.dgv_Order_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
+            this.dgv_Order_Customers_All.MultiSelect = false;
             this.dgv_Order_Customers_All.Name = "dgv_Order_Customers_All";
             this.dgv_Order_Customers_All.ReadOnly = true;
             this.dgv_Order_Customers_All.RowHeadersVisible = false;
+            this.dgv_Order_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Customers_All.Size = new System.Drawing.Size(186, 372);
             this.dgv_Order_Customers_All.TabIndex = 106;
             // 
@@ -1222,6 +1224,7 @@
             this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
             this.btn_Order_Summary_Delete_From_List.TabIndex = 52;
             this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
+            this.btn_Order_Summary_Delete_From_List.Click += new System.EventHandler(this.btn_Order_Summary_Delete_From_List_Click);
             // 
             // txt_Order_Additional_Details
             // 
