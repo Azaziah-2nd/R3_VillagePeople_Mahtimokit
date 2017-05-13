@@ -12,6 +12,9 @@ using System.Data.SqlClient;
 
 namespace R3_VillagePeople_Mahtimokit
 {
+
+
+
     public partial class frm_Main_Window : Form
     {
         public frm_Main_Window()
@@ -25,6 +28,8 @@ namespace R3_VillagePeople_Mahtimokit
                           Integrated Security=True;
                           Connect Timeout=10;
                           User Instance=False");
+
+
 
         // DataGriedView elementtien tietojen päivitys.
         private void Get_customer_names_to_grid()
@@ -47,23 +52,33 @@ namespace R3_VillagePeople_Mahtimokit
  
         private void Get_office_names_to_combo()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM toimipiste", database_connection))
+            SqlCommand database_query = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
+            database_query.Connection = database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            database_connection.Open();
+            SqlDataReader myReader = null;
+            myReader = database_query.ExecuteReader();
+            while (myReader.Read())
             {
-                DataSet data_set = new DataSet();
-                database_query.Fill(data_set);
-                if (data_set.Tables.Count > 0)
-                {
-                    cbo_Office_Select.DataSource = data_set.Tables[0].DefaultView;
-                    cbo_Order_Office_Select.DataSource = data_set.Tables[0].DefaultView;
-                    cbo_History_Office_Select.DataSource = data_set.Tables[0].DefaultView;
-                    cbo_Common_Settings_Default_Office.DataSource = data_set.Tables[0].DefaultView;
-                }
+                Combo_box_item item = new Combo_box_item();
+                item.Text = myReader[1].ToString();
+                item.Value = myReader[0].ToString();
+                cbo_Order_Office_Select.Items.Add(item);
+                // cbo_Order_Office_Select.SelectedIndex = 0;
+                cbo_Office_Select.Items.Add(item);
+                // cbo_Office_Select.SelectedIndex = 0;
+                cbo_History_Office_Select.Items.Add(item);
+                // cbo_History_Office_Select.SelectedIndex = 0;
+                cbo_Common_Settings_Default_Office.Items.Add(item);
+                // cbo_Common_Settings_Default_Office.SelectedIndex = 0;
             }
+            database_connection.Close();
+
         }
 
         private void Get_service_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM Palvelu", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, nimi FROM Palvelu", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -71,12 +86,14 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Order_Services_All.Columns[0].Visible = false;
+                    dgv_Services_All.Columns[0].Visible = false;
                 }
             }
         }
         private void Get_cottage_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT nimi FROM Majoitus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, nimi FROM Majoitus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -84,6 +101,8 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Cottages_all.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Order_Cottages_All.Columns[0].Visible = false;
+                    dgv_Cottages_all.Columns[0].Visible = false;
                 }
             }
         }
@@ -725,7 +744,7 @@ namespace R3_VillagePeople_Mahtimokit
                 string value1 = row.Cells[0].Value.ToString();
                 string value2 = row.Cells[1].Value.ToString();
                 MessageBox.Show(value1 + "  " + value2);
-                //...
+                MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
             }
         }
     }

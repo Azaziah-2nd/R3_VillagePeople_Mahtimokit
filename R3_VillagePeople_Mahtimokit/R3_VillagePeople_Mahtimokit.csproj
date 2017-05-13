@@ -71,6 +71,7 @@
     <Compile Include="Are_you_sure_popup.designer.cs">
       <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Combo_box_item.cs" />
     <Compile Include="Cottage_popup.cs">
       <SubType>Form</SubType>
     </Compile>
