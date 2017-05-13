@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btn_Service_Save = new System.Windows.Forms.Button();
             this.btn_Service_Cancel = new System.Windows.Forms.Button();
             this.lbl_Service_Office = new System.Windows.Forms.Label();
@@ -91,7 +90,7 @@
             this.cbo_Service_Office_Select.Name = "cbo_Service_Office_Select";
             this.cbo_Service_Office_Select.Size = new System.Drawing.Size(272, 28);
             this.cbo_Service_Office_Select.TabIndex = 93;
-            //
+            // 
             // txt_Service_alv
             // 
             this.txt_Service_alv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -99,7 +98,7 @@
             this.txt_Service_alv.Location = new System.Drawing.Point(199, 295);
             this.txt_Service_alv.Name = "txt_Service_alv";
             this.txt_Service_alv.Size = new System.Drawing.Size(100, 26);
-            this.txt_Service_alv.TabIndex = 98;
+            this.txt_Service_alv.TabIndex = 97;
             // 
             // lbl_Service_alv
             // 
@@ -118,7 +117,7 @@
             this.txt_Service_Max_Visitors.Location = new System.Drawing.Point(199, 249);
             this.txt_Service_Max_Visitors.Name = "txt_Service_Max_Visitors";
             this.txt_Service_Max_Visitors.Size = new System.Drawing.Size(100, 26);
-            this.txt_Service_Max_Visitors.TabIndex = 97;
+            this.txt_Service_Max_Visitors.TabIndex = 96;
             // 
             // lbl_Service_Max_Visitors
             // 
@@ -137,7 +136,7 @@
             this.txt_Service_Price.Location = new System.Drawing.Point(199, 202);
             this.txt_Service_Price.Name = "txt_Service_Price";
             this.txt_Service_Price.Size = new System.Drawing.Size(100, 26);
-            this.txt_Service_Price.TabIndex = 96;
+            this.txt_Service_Price.TabIndex = 95;
             // 
             // lbl_Service_Price
             // 
@@ -157,7 +156,7 @@
             this.txt_Service_Description.Multiline = true;
             this.txt_Service_Description.Name = "txt_Service_Description";
             this.txt_Service_Description.Size = new System.Drawing.Size(272, 87);
-            this.txt_Service_Description.TabIndex = 95;
+            this.txt_Service_Description.TabIndex = 98;
             // 
             // lbl_Service_Description
             // 

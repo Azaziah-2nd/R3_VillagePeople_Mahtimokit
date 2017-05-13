@@ -661,10 +661,18 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
         }
 
+        string Reservation_asiakas_id = "";
         private void btn_Order_Customers_Add_Click(object sender, EventArgs e)
         {
+            // Siirretään asiakkaan nimi varausksen yhteenvetoon.
             string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
             lbl_Order_Summary_Customer.Text = ("Asiakas: " + customer_name);
+            // Valmistellaan asiakkaan id valmiiksi "varaus" tauluun vientiä varten.
+            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+            {
+                Reservation_asiakas_id = row.Cells[0].Value.ToString();
+            }
+
         }
 
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
@@ -709,7 +717,6 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
 
             // Varaus taulun päivitys
-            string asiakas_id = "1";
             string toimipiste_id = "2";
             DateTime varattu_pvm = DateTime.Now;
             DateTime vahvistus_pvm = DateTime.Now;
@@ -723,7 +730,7 @@ namespace R3_VillagePeople_Mahtimokit
                 "@varattu_alkupvm, @varattu_loppupvm, @lisatieto)");
             database_query_varaus.Connection = main_window.database_connection;
             database_connection.Open();
-            database_query_varaus.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+            database_query_varaus.Parameters.AddWithValue("@asiakas_id", Reservation_asiakas_id);
             database_query_varaus.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
             database_query_varaus.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
             database_query_varaus.Parameters.AddWithValue("@vahvistus_pvm", vahvistus_pvm);
