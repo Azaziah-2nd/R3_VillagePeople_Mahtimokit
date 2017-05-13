@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace R3_VillagePeople_Mahtimokit
@@ -672,7 +673,6 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 Reservation_asiakas_id = row.Cells[0].Value.ToString();
             }
-
         }
 
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
@@ -684,13 +684,27 @@ namespace R3_VillagePeople_Mahtimokit
             lsv_Order_Summary_Cottages.Items.Add(listViewItem);
         }
 
+        int Value;
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
             string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
             string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
             string[] row = { selected_service + " [" + selected_quantity + "]" };
             var listViewItem = new ListViewItem(row);
+            //lsv_Order_Summary_Services.Items.Add(listViewItem);
+
+            // Valmistellaan asiakkaan id valmiiksi "varaus" tauluun vientiä varten.
+            foreach (DataGridViewRow selected_customer in dgv_Order_Customers_All.SelectedRows)
+            {
+                Reservation_asiakas_id = selected_customer.Cells[0].Value.ToString();
+            }
+
+            List <frm_Main_Window> data = new List<frm_Main_Window>();
+            data.Add(new frm_Main_Window() { Value = 1, Text = "Some Text" });
+            data.Add(new frm_Main_Window() { Value = 2, Text = listViewItem.ToString() });
             lsv_Order_Summary_Services.Items.Add(listViewItem);
+
+
         }
 
         private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
@@ -701,6 +715,28 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
+
+            string blaa = "blaa blaa [153]";
+            var regex1 = new Regex("\\s[[]\\d{1,10}[]]");
+            var myCapturedText = regex1.Match(blaa).Value;
+
+            string bracked_number = myCapturedText.ToString();
+            var regex2 = new Regex("\\d{1,10}");
+            var gg = regex2.Match(bracked_number).Value;
+            MessageBox.Show("This is my captured text: " + gg);
+
+            // Erotellaan listasta palvelu ja kappalemäärä
+            foreach (var item in lsv_Order_Summary_Services.Items)
+            {
+                // Siivotaan myöhemmin
+                MessageBox.Show(item.ToString());
+                var extract_text = new Regex("^ListViewItem: {(.+) [[]\\d{1,10}[]][}]");
+                Match match = extract_text.Match(item.ToString());
+                string Service = match.Groups[1].Value;
+            }
+
+
+
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
@@ -774,7 +810,6 @@ namespace R3_VillagePeople_Mahtimokit
                 string value1 = row.Cells[0].Value.ToString();
                 string value2 = row.Cells[1].Value.ToString();
                 MessageBox.Show(value1 + "  " + value2);
-                MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
             }
         }
     }
