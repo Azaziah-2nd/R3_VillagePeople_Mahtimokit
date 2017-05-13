@@ -775,25 +775,29 @@ namespace R3_VillagePeople_Mahtimokit
             }
             database_connection.Close();
             // Varauksen_palvelut taulun päivitys
-            ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
-            string palvelu_id = item.Tag.ToString();
-            MessageBox.Show("Palvelu_id string = " + palvelu_id);
-            var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
-            Match match = find_quantity.Match(item.ToString());
-            string lkm = match.Groups[1].Value;
-            MessageBox.Show("Palveluiden lkm: " + lkm);
+            foreach (var items in lsv_Order_Summary_Services.Items)
+            {
+                // texta += item.ToString();
+                ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
+                string palvelu_id = item.Tag.ToString();
+                MessageBox.Show("Palvelu_id string = " + palvelu_id);
+                var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
+                Match match = find_quantity.Match(item.ToString());
+                string lkm = match.Groups[1].Value;
+                MessageBox.Show("Palveluiden lkm: " + lkm);
 
-            SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
-                "VALUES(@varaus_id, @palvelu_id, @lkm)");
-            database_query_Varauksen_palvelut.Connection = main_window.database_connection;
-            database_connection.Open();
-            database_query_Varauksen_palvelut.Parameters.AddWithValue("@varaus_id", varaus_id);
-            database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
-            MessageBox.Show("Palvelu ID? " + palvelu_id);
-            database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
-            MessageBox.Show("Palvelu ID_? " + palvelu_id);
-            database_query_Varauksen_palvelut.ExecuteNonQuery();
-            database_connection.Close();
+                SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
+                    "VALUES(@varaus_id, @palvelu_id, @lkm)");
+                database_query_Varauksen_palvelut.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_Varauksen_palvelut.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+                MessageBox.Show("Palvelu ID? " + palvelu_id);
+                database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
+                MessageBox.Show("Palvelu ID_? " + palvelu_id);
+                database_query_Varauksen_palvelut.ExecuteNonQuery();
+                database_connection.Close();
+            }
 
             // Varauksen_majoitus taulun päivitys
             string majoitus_id = "2";
@@ -811,17 +815,22 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
-            ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
-            string a = item.Tag.ToString();
-            MessageBox.Show(a);
 
+            string text = "";
 
-            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+            foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
             {
-                string value1 = row.Cells[0].Value.ToString();
-                string value2 = row.Cells[1].Value.ToString();
-                MessageBox.Show(value1 + "  " + value2);
+                    text += itemRow.ToString();
+                    string palvelu_id = itemRow.Tag.ToString();
+                    MessageBox.Show(text);
+                    MessageBox.Show(palvelu_id);
             }
+            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+                {
+                    string value1 = row.Cells[0].Value.ToString();
+                    string value2 = row.Cells[1].Value.ToString();
+                    MessageBox.Show(value1 + "  " + value2);
+                }
         }
     }
 }
