@@ -88,6 +88,7 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Services_All.Columns[0].Visible = false;
                     dgv_Services_All.Columns[0].Visible = false;
+
                 }
             }
         }
@@ -396,7 +397,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Office_Popup frm = new frm_Office_Popup();
             frm.Is_office_edited = true;
-
             string nimi = cbo_Office_Select.Text.ToString();
 
             SqlCommand database_query = new SqlCommand("SELECT * FROM Toimipiste WHERE nimi = @nimi");
@@ -444,7 +444,6 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 frm.Asiakas_id = row.Cells[0].Value.ToString();
             }
-            string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
             SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE asiakas_id = @asiakas_id");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
@@ -479,27 +478,31 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = true;
-            string nimi = dgv_Services_All.CurrentCell.Value.ToString();
-            SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE nimi = @nimi");
-            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+               // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
+            // Avataan asiakkaan tietojen muokkaus formi
+            frm.Show();
+            // Haetaan valitun DataGridView kentän ID.
+            if (dgv_Services_All.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
+                frm.Service_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+            }
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE palvelu_id = @palvelu_id");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
-            database_query.Parameters.AddWithValue("@nimi", nimi);
+            database_query.Parameters.AddWithValue("@palvelu_id", frm.Service_id);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
-            // Alustetaan tietojen lukija
-            SqlDataReader myReader = null;
             myReader = database_query.ExecuteReader();
-            // Avataan asiakkaan tietojen muokkaus formi
-            frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
             // Huom! Customer_popup formissa textboxit = Public eikä private.
             string toimipiste_id = "";
             while (myReader.Read())
             {
                 toimipiste_id = (myReader["toimipiste_id"].ToString());
-                frm.Service_id = (myReader["palvelu_id"].ToString());
                 frm.txt_Service_Name.Text = (myReader["nimi"].ToString());
                 frm.txt_Service_Description.Text = (myReader["kuvaus"].ToString());
                 frm.txt_Service_Price.Text = (myReader["hinta"].ToString());
@@ -507,6 +510,7 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Service_alv.Text = (myReader["alv"].ToString());
             }
             database_connection.Close();
+            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
             database_query_get_toimipiste_id.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
@@ -753,32 +757,6 @@ namespace R3_VillagePeople_Mahtimokit
                 string value2 = row.Cells[1].Value.ToString();
                 MessageBox.Show(value1 + "  " + value2);
                 MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
-                string at = "1";
-                MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
-
-                SqlCommand database_query = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
-                database_query.Connection = database_connection;
-                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-                database_connection.Open();
-                SqlDataReader myReader = null;
-                myReader = database_query.ExecuteReader();
-                while (myReader.Read())
-                {
-                    Combo_box_item item = new Combo_box_item();
-                    item.Text = myReader[1].ToString();
-                    item.Value = myReader[0].ToString();
-                    cbo_Order_Office_Select.Items.Add(item);
-                    // cbo_Order_Office_Select.SelectedIndex = 0;
-                    cbo_Office_Select.Items.Add(item);
-                    // cbo_Office_Select.SelectedIndex = 0;
-                    cbo_History_Office_Select.Items.Add(item);
-                    // cbo_History_Office_Select.SelectedIndex = 0;
-                    cbo_Common_Settings_Default_Office.Items.Add(item);
-                    // cbo_Common_Settings_Default_Office.SelectedIndex = 0;
-                }
-                database_connection.Close();
-                cbo_History_Office_Select.SelectedIndex = 0;
-
             }
         }
     }
