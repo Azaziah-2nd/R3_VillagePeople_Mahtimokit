@@ -26,7 +26,21 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void frm_Cottage_Popup_Load(object sender, EventArgs e)
         {
-
+            frm_Main_Window main_window = new frm_Main_Window();
+            SqlDataReader myReader = null;
+            SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
+            database_query_toimipiste.Connection = main_window.database_connection;
+            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+            main_window.database_connection.Open();
+            myReader = database_query_toimipiste.ExecuteReader();
+            while (myReader.Read())
+            {
+                Combo_box_item item = new Combo_box_item();
+                item.Text = myReader[1].ToString();
+                item.Value = myReader[0].ToString();
+                cbo_Cottage_Office_Select.Items.Add(item);
+            }
+            main_window.database_connection.Close();
         }
 
         public string Cottage_id;
@@ -103,6 +117,11 @@ namespace R3_VillagePeople_Mahtimokit
                 database_connection.Close();
             }
             // Suljetaan formi.
+            this.Close();
+        }
+
+        private void btn_Cottage_Cancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

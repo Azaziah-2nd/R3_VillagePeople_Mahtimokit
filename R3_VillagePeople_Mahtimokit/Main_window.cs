@@ -536,13 +536,19 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = true;
-            string nimi = dgv_Cottages_all.CurrentCell.Value.ToString();
-            SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE nimi = @nimi");
-            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+
+            // Haetaan valitun DataGridView kentän ID.
+            if (dgv_Cottages_all.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_Cottages_all.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Cottages_all.Rows[selectedrowindex];
+                frm.Cottage_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
+            }
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE majoitus_id = @majoitus_id");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
-            database_query.Parameters.AddWithValue("@nimi", nimi);
+            database_query.Parameters.AddWithValue("@majoitus_id", frm.Cottage_id);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
             // Alustetaan tietojen lukija
@@ -556,7 +562,6 @@ namespace R3_VillagePeople_Mahtimokit
             while (myReader.Read())
             {
                 toimipiste_id = (myReader["toimipiste_id"].ToString());
-                frm.Cottage_id = (myReader["majoitus_id"].ToString());
                 frm.txt_Cottage_Name.Text = (myReader["nimi"].ToString());
                 frm.txt_Cottage_Description.Text = (myReader["kuvaus"].ToString());
                 frm.txt_Cottage_Price.Text = (myReader["hinta"].ToString());
@@ -568,6 +573,7 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
             database_connection.Close();
+            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
             database_query_get_toimipiste_id.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();

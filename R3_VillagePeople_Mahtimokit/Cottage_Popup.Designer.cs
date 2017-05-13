@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txt_Cottage_Size = new System.Windows.Forms.TextBox();
             this.lbl_Cottage_Office = new System.Windows.Forms.Label();
             this.cbo_Cottage_Office_Select = new System.Windows.Forms.ComboBox();
@@ -226,6 +225,7 @@
             this.btn_Cottage_Cancel.TabIndex = 125;
             this.btn_Cottage_Cancel.Text = "Peruuta";
             this.btn_Cottage_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cottage_Cancel.Click += new System.EventHandler(this.btn_Cottage_Cancel_Click);
             // 
             // lbl_Cottage_Details
             // 
