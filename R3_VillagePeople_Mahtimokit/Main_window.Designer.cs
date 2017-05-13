@@ -49,13 +49,11 @@
             this.lbl_Order_Customers = new System.Windows.Forms.Label();
             this.btn_Order_Customers_Add = new System.Windows.Forms.Button();
             this.dgv_Order_Customers_All = new System.Windows.Forms.DataGridView();
-            this.kokonimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vP_DatabaseDataSet = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet();
             this.tbl_Order_2nd_Col_Offices_Cottage = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Cottage_Selection = new System.Windows.Forms.Label();
             this.dgv_Order_Cottages_All = new System.Windows.Forms.DataGridView();
-            this.nimiDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.majoitusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vP_DatabaseDataSet3 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet3();
             this.Btn_Order_Cottage_Add = new System.Windows.Forms.Button();
@@ -80,7 +78,6 @@
             this.lbl_Order_Services_Quantity_Units = new System.Windows.Forms.Label();
             this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
             this.dgv_Order_Services_All = new System.Windows.Forms.DataGridView();
-            this.nimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.palveluBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vP_DatabaseDataSet2 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet2();
             this.btn_Order_Service_add = new System.Windows.Forms.Button();
@@ -113,7 +110,6 @@
             this.btn_Customer_Edit = new System.Windows.Forms.Button();
             this.btn_Customer_Add = new System.Windows.Forms.Button();
             this.dgv_Customers_All = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asiakasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vPDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_Edit_2nd_Col_Offices_Services = new System.Windows.Forms.TableLayoutPanel();
@@ -134,7 +130,6 @@
             this.btn_Services_Edit = new System.Windows.Forms.Button();
             this.btn_Services_Add = new System.Windows.Forms.Button();
             this.dgv_Services_All = new System.Windows.Forms.DataGridView();
-            this.nimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbl_Edit_3rd_Col_Cottages = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Cottages = new System.Windows.Forms.Label();
             this.tbl_Edit_3rd_Col_Cottages_Search = new System.Windows.Forms.TableLayoutPanel();
@@ -145,7 +140,6 @@
             this.btn_Cottages_Edit = new System.Windows.Forms.Button();
             this.btn_Cottages_Add = new System.Windows.Forms.Button();
             this.dgv_Cottages_all = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_History = new System.Windows.Forms.TabPage();
             this.tbl_History_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_1st_Col_Customers_Offices = new System.Windows.Forms.TableLayoutPanel();
@@ -159,7 +153,6 @@
             this.lbl_History_Office = new System.Windows.Forms.Label();
             this.cbo_History_Office_Select = new System.Windows.Forms.ComboBox();
             this.dgv_History_Customers_All = new System.Windows.Forms.DataGridView();
-            this.kokonimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asiakasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.vP_DatabaseDataSet4 = new R3_VillagePeople_Mahtimokit.VP_DatabaseDataSet4();
             this.tbl_History_2nd_Col_Orders_Dates = new System.Windows.Forms.TableLayoutPanel();
@@ -557,14 +550,10 @@
             this.dgv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Order_Customers_All.AutoGenerateColumns = false;
             this.dgv_Order_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Order_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Order_Customers_All.ColumnHeadersVisible = false;
-            this.dgv_Order_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kokonimiDataGridViewTextBoxColumn});
-            this.dgv_Order_Customers_All.DataSource = this.asiakasBindingSource;
             this.dgv_Order_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Order_Customers_All.Location = new System.Drawing.Point(3, 23);
             this.dgv_Order_Customers_All.MultiSelect = false;
@@ -574,13 +563,6 @@
             this.dgv_Order_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Customers_All.Size = new System.Drawing.Size(186, 372);
             this.dgv_Order_Customers_All.TabIndex = 106;
-            // 
-            // kokonimiDataGridViewTextBoxColumn
-            // 
-            this.kokonimiDataGridViewTextBoxColumn.DataPropertyName = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn.HeaderText = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn.Name = "kokonimiDataGridViewTextBoxColumn";
-            this.kokonimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // asiakasBindingSource
             // 
@@ -648,14 +630,10 @@
             this.dgv_Order_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Order_Cottages_All.AutoGenerateColumns = false;
             this.dgv_Order_Cottages_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Cottages_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Order_Cottages_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Order_Cottages_All.ColumnHeadersVisible = false;
-            this.dgv_Order_Cottages_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nimiDataGridViewTextBoxColumn2});
-            this.dgv_Order_Cottages_All.DataSource = this.majoitusBindingSource;
             this.dgv_Order_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Order_Cottages_All.Location = new System.Drawing.Point(8, 126);
             this.dgv_Order_Cottages_All.Name = "dgv_Order_Cottages_All";
@@ -663,13 +641,6 @@
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(258, 343);
             this.dgv_Order_Cottages_All.TabIndex = 107;
-            // 
-            // nimiDataGridViewTextBoxColumn2
-            // 
-            this.nimiDataGridViewTextBoxColumn2.DataPropertyName = "nimi";
-            this.nimiDataGridViewTextBoxColumn2.HeaderText = "nimi";
-            this.nimiDataGridViewTextBoxColumn2.Name = "nimiDataGridViewTextBoxColumn2";
-            this.nimiDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // majoitusBindingSource
             // 
@@ -756,8 +727,6 @@
             // cbo_Order_Office_Select
             // 
             this.cbo_Order_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Order_Office_Select.DataSource = this.toimipisteBindingSource;
-            this.cbo_Order_Office_Select.DisplayMember = "nimi";
             this.cbo_Order_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Order_Office_Select.FormattingEnabled = true;
             this.cbo_Order_Office_Select.Location = new System.Drawing.Point(8, 55);
@@ -952,14 +921,10 @@
             this.dgv_Order_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Order_Services_All.AutoGenerateColumns = false;
             this.dgv_Order_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Order_Services_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Order_Services_All.ColumnHeadersVisible = false;
-            this.dgv_Order_Services_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nimiDataGridViewTextBoxColumn1});
-            this.dgv_Order_Services_All.DataSource = this.palveluBindingSource;
             this.dgv_Order_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Order_Services_All.Location = new System.Drawing.Point(3, 23);
             this.dgv_Order_Services_All.Name = "dgv_Order_Services_All";
@@ -967,13 +932,6 @@
             this.dgv_Order_Services_All.RowHeadersVisible = false;
             this.dgv_Order_Services_All.Size = new System.Drawing.Size(196, 449);
             this.dgv_Order_Services_All.TabIndex = 108;
-            // 
-            // nimiDataGridViewTextBoxColumn1
-            // 
-            this.nimiDataGridViewTextBoxColumn1.DataPropertyName = "nimi";
-            this.nimiDataGridViewTextBoxColumn1.HeaderText = "nimi";
-            this.nimiDataGridViewTextBoxColumn1.Name = "nimiDataGridViewTextBoxColumn1";
-            this.nimiDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // palveluBindingSource
             // 
@@ -1415,14 +1373,10 @@
             this.dgv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Customers_All.AutoGenerateColumns = false;
             this.dgv_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Customers_All.ColumnHeadersVisible = false;
-            this.dgv_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dgv_Customers_All.DataSource = this.asiakasBindingSource1;
             this.dgv_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Customers_All.Location = new System.Drawing.Point(9, 38);
             this.dgv_Customers_All.Name = "dgv_Customers_All";
@@ -1430,13 +1384,6 @@
             this.dgv_Customers_All.RowHeadersVisible = false;
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
             this.dgv_Customers_All.TabIndex = 107;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
-            this.dataGridViewTextBoxColumn1.HeaderText = "kokonimi";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // asiakasBindingSource1
             // 
@@ -1503,8 +1450,6 @@
             // cbo_Office_Select
             // 
             this.cbo_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Office_Select.DataSource = this.toimipisteBindingSource;
-            this.cbo_Office_Select.DisplayMember = "nimi";
             this.cbo_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Office_Select.FormattingEnabled = true;
             this.cbo_Office_Select.Location = new System.Drawing.Point(3, 23);
@@ -1705,14 +1650,10 @@
             this.dgv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Services_All.AutoGenerateColumns = false;
             this.dgv_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Services_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Services_All.ColumnHeadersVisible = false;
-            this.dgv_Services_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nimiDataGridViewTextBoxColumn});
-            this.dgv_Services_All.DataSource = this.palveluBindingSource;
             this.dgv_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Services_All.Location = new System.Drawing.Point(3, 23);
             this.dgv_Services_All.Name = "dgv_Services_All";
@@ -1720,13 +1661,6 @@
             this.dgv_Services_All.RowHeadersVisible = false;
             this.dgv_Services_All.Size = new System.Drawing.Size(279, 325);
             this.dgv_Services_All.TabIndex = 108;
-            // 
-            // nimiDataGridViewTextBoxColumn
-            // 
-            this.nimiDataGridViewTextBoxColumn.DataPropertyName = "nimi";
-            this.nimiDataGridViewTextBoxColumn.HeaderText = "nimi";
-            this.nimiDataGridViewTextBoxColumn.Name = "nimiDataGridViewTextBoxColumn";
-            this.nimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tbl_Edit_3rd_Col_Cottages
             // 
@@ -1871,14 +1805,10 @@
             this.dgv_Cottages_all.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Cottages_all.AutoGenerateColumns = false;
             this.dgv_Cottages_all.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Cottages_all.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Cottages_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Cottages_all.ColumnHeadersVisible = false;
-            this.dgv_Cottages_all.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
-            this.dgv_Cottages_all.DataSource = this.majoitusBindingSource;
             this.dgv_Cottages_all.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Cottages_all.Location = new System.Drawing.Point(9, 38);
             this.dgv_Cottages_all.Name = "dgv_Cottages_all";
@@ -1886,13 +1816,6 @@
             this.dgv_Cottages_all.RowHeadersVisible = false;
             this.dgv_Cottages_all.Size = new System.Drawing.Size(285, 444);
             this.dgv_Cottages_all.TabIndex = 108;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nimi";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nimi";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // tab_History
             // 
@@ -2062,8 +1985,6 @@
             // cbo_History_Office_Select
             // 
             this.cbo_History_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_History_Office_Select.DataSource = this.toimipisteBindingSource;
-            this.cbo_History_Office_Select.DisplayMember = "nimi";
             this.cbo_History_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_History_Office_Select.FormattingEnabled = true;
             this.cbo_History_Office_Select.Location = new System.Drawing.Point(3, 23);
@@ -2080,14 +2001,10 @@
             this.dgv_History_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_History_Customers_All.AutoGenerateColumns = false;
             this.dgv_History_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_History_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_History_Customers_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_History_Customers_All.ColumnHeadersVisible = false;
-            this.dgv_History_Customers_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kokonimiDataGridViewTextBoxColumn1});
-            this.dgv_History_Customers_All.DataSource = this.asiakasBindingSource3;
             this.dgv_History_Customers_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_History_Customers_All.Location = new System.Drawing.Point(9, 38);
             this.dgv_History_Customers_All.Name = "dgv_History_Customers_All";
@@ -2095,13 +2012,6 @@
             this.dgv_History_Customers_All.RowHeadersVisible = false;
             this.dgv_History_Customers_All.Size = new System.Drawing.Size(285, 320);
             this.dgv_History_Customers_All.TabIndex = 108;
-            // 
-            // kokonimiDataGridViewTextBoxColumn1
-            // 
-            this.kokonimiDataGridViewTextBoxColumn1.DataPropertyName = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn1.HeaderText = "kokonimi";
-            this.kokonimiDataGridViewTextBoxColumn1.Name = "kokonimiDataGridViewTextBoxColumn1";
-            this.kokonimiDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // asiakasBindingSource3
             // 
@@ -2563,8 +2473,6 @@
             // 
             this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Common_Settings_Default_Office.DataSource = this.toimipisteBindingSource;
-            this.cbo_Common_Settings_Default_Office.DisplayMember = "nimi";
             this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
             this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 93);
             this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
@@ -3028,9 +2936,7 @@
         private VP_DatabaseDataSet vP_DatabaseDataSet;
         private System.Windows.Forms.BindingSource asiakasBindingSource;
         private VP_DatabaseDataSetTableAdapters.AsiakasTableAdapter asiakasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kokonimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgv_Customers_All;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource vPDatabaseDataSetBindingSource;
         private System.Windows.Forms.BindingSource asiakasBindingSource1;
         private VP_DatabaseDataSet1 vP_DatabaseDataSet1;
@@ -3040,18 +2946,13 @@
         private VP_DatabaseDataSet2 vP_DatabaseDataSet2;
         private System.Windows.Forms.BindingSource palveluBindingSource;
         private VP_DatabaseDataSet2TableAdapters.PalveluTableAdapter palveluTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgv_Order_Services_All;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView dgv_Order_Cottages_All;
         private VP_DatabaseDataSet3 vP_DatabaseDataSet3;
         private System.Windows.Forms.BindingSource majoitusBindingSource;
         private VP_DatabaseDataSet3TableAdapters.MajoitusTableAdapter majoitusTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nimiDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView dgv_Cottages_all;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView dgv_History_Customers_All;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kokonimiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource asiakasBindingSource2;
         private VP_DatabaseDataSet4 vP_DatabaseDataSet4;
         private System.Windows.Forms.BindingSource asiakasBindingSource3;
