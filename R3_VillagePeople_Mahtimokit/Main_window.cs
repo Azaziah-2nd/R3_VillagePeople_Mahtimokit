@@ -52,6 +52,14 @@ namespace R3_VillagePeople_Mahtimokit
  
         private void Get_office_names_to_combo()
         {
+            for (int i = 0; i < cbo_Order_Office_Select.Items.Count; i++)
+            {
+                cbo_Order_Office_Select.Items.RemoveAt(i);
+                cbo_Office_Select.Items.RemoveAt(i);
+                cbo_History_Office_Select.Items.RemoveAt(i);
+                cbo_Common_Settings_Default_Office.Items.RemoveAt(i);
+                i--;
+            }
             SqlCommand database_query = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
@@ -64,11 +72,8 @@ namespace R3_VillagePeople_Mahtimokit
                 item.Text = myReader[1].ToString();
                 item.Value = myReader[0].ToString();
                 cbo_Order_Office_Select.Items.Add(item);
-                // cbo_Order_Office_Select.SelectedIndex = 0;
                 cbo_Office_Select.Items.Add(item);
-                // cbo_Office_Select.SelectedIndex = 0;
                 cbo_History_Office_Select.Items.Add(item);
-                // cbo_History_Office_Select.SelectedIndex = 0;
                 cbo_Common_Settings_Default_Office.Items.Add(item);
                 // cbo_Common_Settings_Default_Office.SelectedIndex = 0;
             }
@@ -478,7 +483,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = true;
-               // Alustetaan tietojen lukija
+            // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
