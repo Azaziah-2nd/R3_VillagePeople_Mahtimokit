@@ -73,7 +73,6 @@
             // cbo_Cottage_Office_Select
             // 
             this.cbo_Cottage_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Cottage_Office_Select.DataSource = this.toimipisteBindingSource;
             this.cbo_Cottage_Office_Select.DisplayMember = "nimi";
             this.cbo_Cottage_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Cottage_Office_Select.FormattingEnabled = true;
@@ -294,8 +293,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource majoitusBindingSource;
-        private System.Windows.Forms.BindingSource toimipisteBindingSource;
         public System.Windows.Forms.TextBox txt_Cottage_Size;
         private System.Windows.Forms.Label lbl_Cottage_Office;
         public System.Windows.Forms.ComboBox cbo_Cottage_Office_Select;

@@ -360,16 +360,19 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
         {
             // Hakee nykyisen nimen ja poistaa tiedon tietokannasta sekä päivittää asiakaslistat.
-            // Tämä ei toimi oikein jos tietokannassa on useita henkilöitä täsmälleen samoilla nimillä.
-            // Parempi ratkaisu olisi poistaa arvoja asiakas_id:n perusteella, mutta miten asiakas_id:n saa haettua datagridview kentän arvoista?
             if (dgv_Customers_All.CurrentCell.Value.ToString() != "")
             {
-                string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
-                SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE kokonimi = @kokonimi");
+                string asiakas_id = "";
+                // Haetaan valitun DataGridView kentän ID.
+                foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+                {
+                    asiakas_id = row.Cells[0].Value.ToString();
+                }
+                SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE asiakas_id = @asiakas_id");
                 database_query.Connection = database_connection;
                 // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
                 database_connection.Open();
-                database_query.Parameters.AddWithValue("@kokonimi", kokonimi);
+                database_query.Parameters.AddWithValue("@asiakas_id", asiakas_id);
                 // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
                 database_query.ExecuteNonQuery();
                 database_connection.Close();
@@ -408,13 +411,17 @@ namespace R3_VillagePeople_Mahtimokit
             SqlDataReader myReader = null;
             myReader = database_query.ExecuteReader();
 
+
+            frm.Office_id = (cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+
+            MessageBox.Show((cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
+
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
             // Huom! Customer_popup formissa textboxit = Public eikä private.
             while (myReader.Read())
             {
-                frm.Office_id = (myReader["toimipiste_id"].ToString());
                 frm.txt_Office_Name.Text = (myReader["nimi"].ToString());
                 frm.txt_Office_Adress.Text = (myReader["lahiosoite"].ToString());
                 frm.txt_Office_Postal_Code.Text = (myReader["postinro"].ToString());
@@ -432,26 +439,28 @@ namespace R3_VillagePeople_Mahtimokit
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
             frm.is_customer_edited = true;
+            // Haetaan valitun DataGridView kentän ID.
+            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+            {
+                frm.Asiakas_id = row.Cells[0].Value.ToString();
+            }
             string kokonimi = dgv_Customers_All.CurrentCell.Value.ToString();
-            SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE kokonimi = @kokonimi");
+            SqlCommand database_query = new SqlCommand("SELECT * FROM Asiakas WHERE asiakas_id = @asiakas_id");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
-            database_query.Parameters.AddWithValue("@kokonimi", kokonimi);
+            database_query.Parameters.AddWithValue("@asiakas_id", frm.Asiakas_id);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
-
             // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             myReader = database_query.ExecuteReader();
-
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
             // Huom! Customer_popup formissa textboxit = Public eikä private.
             while (myReader.Read())
             {
-                frm.Asiakas_id = (myReader["asiakas_id"].ToString());
                 frm.txt_Customer_First_Name.Text = (myReader["etunimi"].ToString());
                 frm.txt_Customer_Surname.Text = (myReader["sukunimi"].ToString());
                 frm.txt_Customer_Email.Text = (myReader["email"].ToString());
@@ -461,7 +470,6 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Customer_City.Text = (myReader["postitoimipaikka"].ToString());
                 frm.txt_Customer_Country.Text = (myReader["asuinmaa"].ToString());
             }
-
             database_connection.Close();
             // Luodaan yhteys Customer_Popup formiin ja päivitetään asiakaslistat sen sulkemisen yhteydessä.
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
@@ -745,6 +753,32 @@ namespace R3_VillagePeople_Mahtimokit
                 string value2 = row.Cells[1].Value.ToString();
                 MessageBox.Show(value1 + "  " + value2);
                 MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
+                string at = "1";
+                MessageBox.Show((cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
+
+                SqlCommand database_query = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                SqlDataReader myReader = null;
+                myReader = database_query.ExecuteReader();
+                while (myReader.Read())
+                {
+                    Combo_box_item item = new Combo_box_item();
+                    item.Text = myReader[1].ToString();
+                    item.Value = myReader[0].ToString();
+                    cbo_Order_Office_Select.Items.Add(item);
+                    // cbo_Order_Office_Select.SelectedIndex = 0;
+                    cbo_Office_Select.Items.Add(item);
+                    // cbo_Office_Select.SelectedIndex = 0;
+                    cbo_History_Office_Select.Items.Add(item);
+                    // cbo_History_Office_Select.SelectedIndex = 0;
+                    cbo_Common_Settings_Default_Office.Items.Add(item);
+                    // cbo_Common_Settings_Default_Office.SelectedIndex = 0;
+                }
+                database_connection.Close();
+                cbo_History_Office_Select.SelectedIndex = 0;
+
             }
         }
     }
