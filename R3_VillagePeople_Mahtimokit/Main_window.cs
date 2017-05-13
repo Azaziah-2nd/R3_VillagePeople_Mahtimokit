@@ -38,6 +38,9 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Customers_All.Columns[0].Visible = false;
+                    dgv_Order_Customers_All.Columns[0].Visible = false;
+                    dgv_History_Customers_All.Columns[0].Visible = false;
                 }
             }
         }
@@ -105,11 +108,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
-            // Haetaan tiedot tietokannasta eri kenttiin.
-            this.Get_customer_names_to_grid();
-            this.Get_office_names_to_combo();
-            this.Get_service_names_to_grid();
-            this.Get_cottage_names_to_grid();
             // Haetaan päivämäärät varauksen yhteenvetoon.
             Get_start_date_to_order_summary();
             Get_end_date_to_order_summary();
@@ -135,6 +133,11 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 chk_Common_Settings_History_End_Date_Today.Checked = true;
             }
+            // Haetaan tiedot tietokannasta eri kenttiin.
+            this.Get_customer_names_to_grid();
+            this.Get_office_names_to_combo();
+            this.Get_service_names_to_grid();
+            this.Get_cottage_names_to_grid();
         }
 
         // Asiakkaan lisäys
@@ -717,11 +720,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
-            //string a = dgv_Order_Customers_All.SelectedRows(0).Cells(0).Value;
-            //string a = dgv_Order_Customers_All.SelectedRows[0].Cells["asiakas_id"].Value.ToString();
-            //MessageBox.Show(a);
-
-            MessageBox.Show(dgv_Order_Customers_All.Rows[2].Cells["asiakas_id"].Value.ToString());
+            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+            {
+                string value1 = row.Cells[0].Value.ToString();
+                string value2 = row.Cells[1].Value.ToString();
+                MessageBox.Show(value1 + "  " + value2);
+                //...
+            }
         }
     }
 }
