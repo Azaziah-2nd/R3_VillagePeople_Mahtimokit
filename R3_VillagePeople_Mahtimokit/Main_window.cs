@@ -696,14 +696,11 @@ namespace R3_VillagePeople_Mahtimokit
                 string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
                 string[] rowas = { selected_service + " [" + selected_quantity + "]" };
                 var listViewItem = new ListViewItem(rowas);
+                listViewItem.Tag = Reservation_service_id;
 
+                MessageBox.Show(listViewItem.Tag.ToString());
 
-                Dictionary<string, string> dictionary = new Dictionary<string, string>();
-                ListViewItem track = new ListViewItem();
-                dictionary.Add(Reservation_service_id, listViewItem.ToString());
-                track.Tag = dictionary;
-                track.Text = ("Test: 1" + " Test: 2");
-                lsv_Order_Summary_Services.Items.Add(track);
+                lsv_Order_Summary_Services.Items.Add(listViewItem);
 
 
             }
@@ -811,21 +808,10 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
-            string a;
-            string b = "b";
-            string c = "c";
-            string d;
             ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
             //fill the text boxes
-            a = item.Text;
-            b = item.SubItems[0].Text;
-            MessageBox.Show(b);
-
-            ListViewItem lit = sender as ListViewItem;
-            lit.Tag = item.Tag;
-            d = item.Tag.ToString();
-
-            MessageBox.Show(a + " " +  b  + " " + c, " D: " + d);
+            string a = item.Tag.ToString();
+            MessageBox.Show(a);
 
 
             foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
