@@ -775,14 +775,14 @@ namespace R3_VillagePeople_Mahtimokit
             }
             database_connection.Close();
             // Varauksen_palvelut taulun päivitys
-            foreach (var items in lsv_Order_Summary_Services.Items)
+
+            foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
             {
+                string palvelu_id = itemRow.Tag.ToString();
                 // texta += item.ToString();
-                ListViewItem item = lsv_Order_Summary_Services.SelectedItems[0];
-                string palvelu_id = item.Tag.ToString();
                 MessageBox.Show("Palvelu_id string = " + palvelu_id);
                 var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
-                Match match = find_quantity.Match(item.ToString());
+                Match match = find_quantity.Match(itemRow.ToString());
                 string lkm = match.Groups[1].Value;
                 MessageBox.Show("Palveluiden lkm: " + lkm);
 
