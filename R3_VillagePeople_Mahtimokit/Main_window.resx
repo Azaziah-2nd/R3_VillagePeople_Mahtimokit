@@ -2120,7 +2120,7 @@
         F2tQWrhrzKJoAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_History_Order_History_Delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_History_Order_History_Del.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABHqSURBVHhe7d158H31HMfxFhpki8wUk6zRYivbD5NJ
@@ -2203,7 +2203,7 @@
         Qm6BgQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_History_Order_History_Del.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_History_Order_History_Delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABHqSURBVHhe7d158H31HMfxFhpki8wUk6zRYivbD5NJ

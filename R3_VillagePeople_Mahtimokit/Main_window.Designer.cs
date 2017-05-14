@@ -155,6 +155,22 @@
             this.dtp_History_Orders_Filter_Date_Start = new System.Windows.Forms.DateTimePicker();
             this.dtp_History_Orders_Filter_Date_End = new System.Windows.Forms.DateTimePicker();
             this.dgv_History_Orders_All = new System.Windows.Forms.DataGridView();
+            this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_History_Selected_Order_Basic_Details = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_History_Order_Details_Delete = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_History_Order_History_Del = new System.Windows.Forms.Button();
+            this.lbl_History_Selected_Order_Details = new System.Windows.Forms.Label();
+            this.lbl_History_Selected_Order_Customer = new System.Windows.Forms.Label();
+            this.lbl_History_Selected_Order_Office = new System.Windows.Forms.Label();
+            this.lbl_History_Order_Start = new System.Windows.Forms.Label();
+            this.lbl_History_Order_End = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbl_History_Selected_Order_Cottages_Services = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lsv_History_Order_Cottages = new System.Windows.Forms.ListView();
+            this.lsv_History_Order_Services = new System.Windows.Forms.ListView();
+            this.lbl_History_Order_Services = new System.Windows.Forms.Label();
+            this.txt_History_Order_Additional_Details = new System.Windows.Forms.TextBox();
             this.tab_Settings = new System.Windows.Forms.TabPage();
             this.tbl_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
@@ -175,23 +191,7 @@
             this.lbl_Settings_User = new System.Windows.Forms.Label();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_History_Selected_Order_Basic_Details = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_History_Selected_Order_Customer = new System.Windows.Forms.Label();
-            this.lbl_History_Selected_Order_Office = new System.Windows.Forms.Label();
-            this.lbl_History_Order_Start = new System.Windows.Forms.Label();
-            this.lbl_History_Order_End = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbl_History_Selected_Order_Cottages_Services = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.lsv_History_Order_Services = new System.Windows.Forms.ListView();
-            this.lbl_History_Order_Services = new System.Windows.Forms.Label();
-            this.txt_History_Order_Additional_Details = new System.Windows.Forms.TextBox();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
-            this.tbl_History_Order_Details_Delete = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_History_Selected_Order_Details = new System.Windows.Forms.Label();
-            this.btn_History_Order_History_Del = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -242,6 +242,10 @@
             this.tbl_History_Order_Dates_Delete.SuspendLayout();
             this.tbl_History_Order_Dates.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).BeginInit();
+            this.tbl_History_3th_Col_Selected_Order_Details.SuspendLayout();
+            this.tbl_History_Selected_Order_Basic_Details.SuspendLayout();
+            this.tbl_History_Order_Details_Delete.SuspendLayout();
+            this.tbl_History_Selected_Order_Cottages_Services.SuspendLayout();
             this.tab_Settings.SuspendLayout();
             this.tbl_Settings_Base.SuspendLayout();
             this.tbl_Settings_1st_Col_Common_Settings_Base.SuspendLayout();
@@ -249,10 +253,6 @@
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            this.tbl_History_3th_Col_Selected_Order_Details.SuspendLayout();
-            this.tbl_History_Selected_Order_Basic_Details.SuspendLayout();
-            this.tbl_History_Selected_Order_Cottages_Services.SuspendLayout();
-            this.tbl_History_Order_Details_Delete.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2025,6 +2025,7 @@
             this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
             this.btn_History_Order_Search.TabIndex = 102;
             this.btn_History_Order_Search.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Search.Click += new System.EventHandler(this.btn_History_Order_Search_Click);
             // 
             // txt_History_Order_Search
             // 
@@ -2127,6 +2128,227 @@
             this.dgv_History_Orders_All.ReadOnly = true;
             this.dgv_History_Orders_All.Size = new System.Drawing.Size(279, 443);
             this.dgv_History_Orders_All.TabIndex = 103;
+            this.dgv_History_Orders_All.SelectionChanged += new System.EventHandler(this.dgv_History_Orders_All_SelectionChanged);
+            // 
+            // tbl_History_3th_Col_Selected_Order_Details
+            // 
+            this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_History_3th_Col_Selected_Order_Details.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_History_3th_Col_Selected_Order_Details.ColumnCount = 3;
+            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.tbl_History_Selected_Order_Basic_Details, 1, 1);
+            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.label6, 1, 3);
+            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.tbl_History_Selected_Order_Cottages_Services, 1, 2);
+            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.txt_History_Order_Additional_Details, 1, 4);
+            this.tbl_History_3th_Col_Selected_Order_Details.Location = new System.Drawing.Point(642, 15);
+            this.tbl_History_3th_Col_Selected_Order_Details.Name = "tbl_History_3th_Col_Selected_Order_Details";
+            this.tbl_History_3th_Col_Selected_Order_Details.RowCount = 6;
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.65657F));
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.34343F));
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_History_3th_Col_Selected_Order_Details.Size = new System.Drawing.Size(304, 610);
+            this.tbl_History_3th_Col_Selected_Order_Details.TabIndex = 4;
+            // 
+            // tbl_History_Selected_Order_Basic_Details
+            // 
+            this.tbl_History_Selected_Order_Basic_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_History_Selected_Order_Basic_Details.ColumnCount = 1;
+            this.tbl_History_Selected_Order_Basic_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.tbl_History_Order_Details_Delete, 0, 0);
+            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Selected_Order_Customer, 0, 4);
+            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Selected_Order_Office, 0, 3);
+            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Order_Start, 0, 1);
+            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Order_End, 0, 2);
+            this.tbl_History_Selected_Order_Basic_Details.Location = new System.Drawing.Point(9, 12);
+            this.tbl_History_Selected_Order_Basic_Details.Name = "tbl_History_Selected_Order_Basic_Details";
+            this.tbl_History_Selected_Order_Basic_Details.RowCount = 5;
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tbl_History_Selected_Order_Basic_Details.Size = new System.Drawing.Size(285, 185);
+            this.tbl_History_Selected_Order_Basic_Details.TabIndex = 0;
+            // 
+            // tbl_History_Order_Details_Delete
+            // 
+            this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_History_Order_Details_Delete.ColumnCount = 2;
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.4767F));
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5233F));
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_History_Del, 0, 0);
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.lbl_History_Selected_Order_Details, 0, 0);
+            this.tbl_History_Order_Details_Delete.Location = new System.Drawing.Point(3, 3);
+            this.tbl_History_Order_Details_Delete.Name = "tbl_History_Order_Details_Delete";
+            this.tbl_History_Order_Details_Delete.RowCount = 1;
+            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(279, 49);
+            this.tbl_History_Order_Details_Delete.TabIndex = 107;
+            // 
+            // btn_History_Order_History_Del
+            // 
+            this.btn_History_Order_History_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_History_Del.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Del.BackgroundImage")));
+            this.btn_History_Order_History_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_History_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_History_Del.Location = new System.Drawing.Point(244, 3);
+            this.btn_History_Order_History_Del.Name = "btn_History_Order_History_Del";
+            this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
+            this.btn_History_Order_History_Del.TabIndex = 115;
+            this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
+            // 
+            // lbl_History_Selected_Order_Details
+            // 
+            this.lbl_History_Selected_Order_Details.AutoSize = true;
+            this.lbl_History_Selected_Order_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_History_Selected_Order_Details.Location = new System.Drawing.Point(3, 0);
+            this.lbl_History_Selected_Order_Details.Name = "lbl_History_Selected_Order_Details";
+            this.lbl_History_Selected_Order_Details.Size = new System.Drawing.Size(146, 20);
+            this.lbl_History_Selected_Order_Details.TabIndex = 79;
+            this.lbl_History_Selected_Order_Details.Text = "Varauksen tiedot";
+            // 
+            // lbl_History_Selected_Order_Customer
+            // 
+            this.lbl_History_Selected_Order_Customer.AutoSize = true;
+            this.lbl_History_Selected_Order_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_History_Selected_Order_Customer.Location = new System.Drawing.Point(3, 157);
+            this.lbl_History_Selected_Order_Customer.Name = "lbl_History_Selected_Order_Customer";
+            this.lbl_History_Selected_Order_Customer.Size = new System.Drawing.Size(69, 20);
+            this.lbl_History_Selected_Order_Customer.TabIndex = 92;
+            this.lbl_History_Selected_Order_Customer.Text = "Asiakas:";
+            // 
+            // lbl_History_Selected_Order_Office
+            // 
+            this.lbl_History_Selected_Order_Office.AutoSize = true;
+            this.lbl_History_Selected_Order_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_History_Selected_Order_Office.Location = new System.Drawing.Point(3, 120);
+            this.lbl_History_Selected_Order_Office.Name = "lbl_History_Selected_Order_Office";
+            this.lbl_History_Selected_Order_Office.Size = new System.Drawing.Size(88, 20);
+            this.lbl_History_Selected_Order_Office.TabIndex = 91;
+            this.lbl_History_Selected_Order_Office.Text = "Toimipiste: ";
+            // 
+            // lbl_History_Order_Start
+            // 
+            this.lbl_History_Order_Start.AutoSize = true;
+            this.lbl_History_Order_Start.Location = new System.Drawing.Point(3, 55);
+            this.lbl_History_Order_Start.Name = "lbl_History_Order_Start";
+            this.lbl_History_Order_Start.Size = new System.Drawing.Size(105, 20);
+            this.lbl_History_Order_Start.TabIndex = 94;
+            this.lbl_History_Order_Start.Text = "Alkamispäivä:";
+            // 
+            // lbl_History_Order_End
+            // 
+            this.lbl_History_Order_End.AutoSize = true;
+            this.lbl_History_Order_End.Location = new System.Drawing.Point(3, 91);
+            this.lbl_History_Order_End.Name = "lbl_History_Order_End";
+            this.lbl_History_Order_End.Size = new System.Drawing.Size(119, 20);
+            this.lbl_History_Order_End.TabIndex = 95;
+            this.lbl_History_Order_End.Text = "Päättymispäivä:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(111, 446);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 108;
+            this.label6.Text = "Lisätietoja";
+            // 
+            // tbl_History_Selected_Order_Cottages_Services
+            // 
+            this.tbl_History_Selected_Order_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_History_Selected_Order_Cottages_Services.ColumnCount = 1;
+            this.tbl_History_Selected_Order_Cottages_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.label7, 0, 0);
+            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lsv_History_Order_Cottages, 0, 1);
+            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lsv_History_Order_Services, 0, 3);
+            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lbl_History_Order_Services, 0, 2);
+            this.tbl_History_Selected_Order_Cottages_Services.Location = new System.Drawing.Point(9, 203);
+            this.tbl_History_Selected_Order_Cottages_Services.Name = "tbl_History_Selected_Order_Cottages_Services";
+            this.tbl_History_Selected_Order_Cottages_Services.RowCount = 5;
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_History_Selected_Order_Cottages_Services.Size = new System.Drawing.Size(285, 240);
+            this.tbl_History_Selected_Order_Cottages_Services.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.Location = new System.Drawing.Point(108, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 20);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Majoitus";
+            // 
+            // lsv_History_Order_Cottages
+            // 
+            this.lsv_History_Order_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_History_Order_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_History_Order_Cottages.Location = new System.Drawing.Point(3, 23);
+            this.lsv_History_Order_Cottages.Name = "lsv_History_Order_Cottages";
+            this.lsv_History_Order_Cottages.Size = new System.Drawing.Size(279, 90);
+            this.lsv_History_Order_Cottages.TabIndex = 50;
+            this.lsv_History_Order_Cottages.UseCompatibleStateImageBehavior = false;
+            this.lsv_History_Order_Cottages.View = System.Windows.Forms.View.List;
+            // 
+            // lsv_History_Order_Services
+            // 
+            this.lsv_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lsv_History_Order_Services.Location = new System.Drawing.Point(3, 139);
+            this.lsv_History_Order_Services.Name = "lsv_History_Order_Services";
+            this.lsv_History_Order_Services.Size = new System.Drawing.Size(279, 90);
+            this.lsv_History_Order_Services.TabIndex = 52;
+            this.lsv_History_Order_Services.UseCompatibleStateImageBehavior = false;
+            this.lsv_History_Order_Services.View = System.Windows.Forms.View.List;
+            // 
+            // lbl_History_Order_Services
+            // 
+            this.lbl_History_Order_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_History_Order_Services.AutoSize = true;
+            this.lbl_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_History_Order_Services.Location = new System.Drawing.Point(86, 116);
+            this.lbl_History_Order_Services.Name = "lbl_History_Order_Services";
+            this.lbl_History_Order_Services.Size = new System.Drawing.Size(112, 20);
+            this.lbl_History_Order_Services.TabIndex = 51;
+            this.lbl_History_Order_Services.Text = "Valitut palvelut";
+            // 
+            // txt_History_Order_Additional_Details
+            // 
+            this.txt_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 469);
+            this.txt_History_Order_Additional_Details.Multiline = true;
+            this.txt_History_Order_Additional_Details.Name = "txt_History_Order_Additional_Details";
+            this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(285, 122);
+            this.txt_History_Order_Additional_Details.TabIndex = 109;
             // 
             // tab_Settings
             // 
@@ -2405,187 +2627,6 @@
             this.txt_Settings_User_Name.TabIndex = 3;
             this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
-            // tbl_History_3th_Col_Selected_Order_Details
-            // 
-            this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_3th_Col_Selected_Order_Details.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnCount = 3;
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.tbl_History_3th_Col_Selected_Order_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.tbl_History_Selected_Order_Basic_Details, 1, 1);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.label6, 1, 3);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.tbl_History_Selected_Order_Cottages_Services, 1, 2);
-            this.tbl_History_3th_Col_Selected_Order_Details.Controls.Add(this.txt_History_Order_Additional_Details, 1, 4);
-            this.tbl_History_3th_Col_Selected_Order_Details.Location = new System.Drawing.Point(642, 15);
-            this.tbl_History_3th_Col_Selected_Order_Details.Name = "tbl_History_3th_Col_Selected_Order_Details";
-            this.tbl_History_3th_Col_Selected_Order_Details.RowCount = 6;
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.65657F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.34343F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_History_3th_Col_Selected_Order_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_History_3th_Col_Selected_Order_Details.Size = new System.Drawing.Size(304, 610);
-            this.tbl_History_3th_Col_Selected_Order_Details.TabIndex = 4;
-            // 
-            // tbl_History_Selected_Order_Basic_Details
-            // 
-            this.tbl_History_Selected_Order_Basic_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Selected_Order_Basic_Details.ColumnCount = 1;
-            this.tbl_History_Selected_Order_Basic_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.tbl_History_Order_Details_Delete, 0, 0);
-            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Selected_Order_Customer, 0, 4);
-            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Selected_Order_Office, 0, 3);
-            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Order_Start, 0, 1);
-            this.tbl_History_Selected_Order_Basic_Details.Controls.Add(this.lbl_History_Order_End, 0, 2);
-            this.tbl_History_Selected_Order_Basic_Details.Location = new System.Drawing.Point(9, 12);
-            this.tbl_History_Selected_Order_Basic_Details.Name = "tbl_History_Selected_Order_Basic_Details";
-            this.tbl_History_Selected_Order_Basic_Details.RowCount = 5;
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tbl_History_Selected_Order_Basic_Details.Size = new System.Drawing.Size(285, 185);
-            this.tbl_History_Selected_Order_Basic_Details.TabIndex = 0;
-            // 
-            // lbl_History_Selected_Order_Customer
-            // 
-            this.lbl_History_Selected_Order_Customer.AutoSize = true;
-            this.lbl_History_Selected_Order_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_History_Selected_Order_Customer.Location = new System.Drawing.Point(3, 157);
-            this.lbl_History_Selected_Order_Customer.Name = "lbl_History_Selected_Order_Customer";
-            this.lbl_History_Selected_Order_Customer.Size = new System.Drawing.Size(69, 20);
-            this.lbl_History_Selected_Order_Customer.TabIndex = 92;
-            this.lbl_History_Selected_Order_Customer.Text = "Asiakas:";
-            // 
-            // lbl_History_Selected_Order_Office
-            // 
-            this.lbl_History_Selected_Order_Office.AutoSize = true;
-            this.lbl_History_Selected_Order_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_History_Selected_Order_Office.Location = new System.Drawing.Point(3, 120);
-            this.lbl_History_Selected_Order_Office.Name = "lbl_History_Selected_Order_Office";
-            this.lbl_History_Selected_Order_Office.Size = new System.Drawing.Size(88, 20);
-            this.lbl_History_Selected_Order_Office.TabIndex = 91;
-            this.lbl_History_Selected_Order_Office.Text = "Toimipiste: ";
-            // 
-            // lbl_History_Order_Start
-            // 
-            this.lbl_History_Order_Start.AutoSize = true;
-            this.lbl_History_Order_Start.Location = new System.Drawing.Point(3, 55);
-            this.lbl_History_Order_Start.Name = "lbl_History_Order_Start";
-            this.lbl_History_Order_Start.Size = new System.Drawing.Size(105, 20);
-            this.lbl_History_Order_Start.TabIndex = 94;
-            this.lbl_History_Order_Start.Text = "Alkamispäivä:";
-            // 
-            // lbl_History_Order_End
-            // 
-            this.lbl_History_Order_End.AutoSize = true;
-            this.lbl_History_Order_End.Location = new System.Drawing.Point(3, 91);
-            this.lbl_History_Order_End.Name = "lbl_History_Order_End";
-            this.lbl_History_Order_End.Size = new System.Drawing.Size(119, 20);
-            this.lbl_History_Order_End.TabIndex = 95;
-            this.lbl_History_Order_End.Text = "Päättymispäivä:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(111, 446);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 108;
-            this.label6.Text = "Lisätietoja";
-            // 
-            // tbl_History_Selected_Order_Cottages_Services
-            // 
-            this.tbl_History_Selected_Order_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Selected_Order_Cottages_Services.ColumnCount = 1;
-            this.tbl_History_Selected_Order_Cottages_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.label7, 0, 0);
-            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.listView1, 0, 1);
-            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lsv_History_Order_Services, 0, 3);
-            this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lbl_History_Order_Services, 0, 2);
-            this.tbl_History_Selected_Order_Cottages_Services.Location = new System.Drawing.Point(9, 203);
-            this.tbl_History_Selected_Order_Cottages_Services.Name = "tbl_History_Selected_Order_Cottages_Services";
-            this.tbl_History_Selected_Order_Cottages_Services.RowCount = 5;
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_History_Selected_Order_Cottages_Services.Size = new System.Drawing.Size(285, 240);
-            this.tbl_History_Selected_Order_Cottages_Services.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(108, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 20);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Majoitus";
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listView1.Location = new System.Drawing.Point(3, 23);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(279, 90);
-            this.listView1.TabIndex = 50;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            // 
-            // lsv_History_Order_Services
-            // 
-            this.lsv_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_History_Order_Services.Location = new System.Drawing.Point(3, 139);
-            this.lsv_History_Order_Services.Name = "lsv_History_Order_Services";
-            this.lsv_History_Order_Services.Size = new System.Drawing.Size(279, 90);
-            this.lsv_History_Order_Services.TabIndex = 52;
-            this.lsv_History_Order_Services.UseCompatibleStateImageBehavior = false;
-            this.lsv_History_Order_Services.View = System.Windows.Forms.View.List;
-            // 
-            // lbl_History_Order_Services
-            // 
-            this.lbl_History_Order_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_History_Order_Services.AutoSize = true;
-            this.lbl_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_History_Order_Services.Location = new System.Drawing.Point(86, 116);
-            this.lbl_History_Order_Services.Name = "lbl_History_Order_Services";
-            this.lbl_History_Order_Services.Size = new System.Drawing.Size(112, 20);
-            this.lbl_History_Order_Services.TabIndex = 51;
-            this.lbl_History_Order_Services.Text = "Valitut palvelut";
-            // 
-            // txt_History_Order_Additional_Details
-            // 
-            this.txt_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 469);
-            this.txt_History_Order_Additional_Details.Multiline = true;
-            this.txt_History_Order_Additional_Details.Name = "txt_History_Order_Additional_Details";
-            this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(285, 122);
-            this.txt_History_Order_Additional_Details.TabIndex = 109;
-            // 
             // btn_History_Order_History_Delete
             // 
             this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2597,45 +2638,6 @@
             this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
-            // 
-            // tbl_History_Order_Details_Delete
-            // 
-            this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Details_Delete.ColumnCount = 2;
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.4767F));
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5233F));
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_History_Del, 0, 0);
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.lbl_History_Selected_Order_Details, 0, 0);
-            this.tbl_History_Order_Details_Delete.Location = new System.Drawing.Point(3, 3);
-            this.tbl_History_Order_Details_Delete.Name = "tbl_History_Order_Details_Delete";
-            this.tbl_History_Order_Details_Delete.RowCount = 1;
-            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(279, 49);
-            this.tbl_History_Order_Details_Delete.TabIndex = 107;
-            // 
-            // lbl_History_Selected_Order_Details
-            // 
-            this.lbl_History_Selected_Order_Details.AutoSize = true;
-            this.lbl_History_Selected_Order_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_History_Selected_Order_Details.Location = new System.Drawing.Point(3, 0);
-            this.lbl_History_Selected_Order_Details.Name = "lbl_History_Selected_Order_Details";
-            this.lbl_History_Selected_Order_Details.Size = new System.Drawing.Size(146, 20);
-            this.lbl_History_Selected_Order_Details.TabIndex = 79;
-            this.lbl_History_Selected_Order_Details.Text = "Varauksen tiedot";
-            // 
-            // btn_History_Order_History_Del
-            // 
-            this.btn_History_Order_History_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_History_Del.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Del.BackgroundImage")));
-            this.btn_History_Order_History_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_History_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_History_Del.Location = new System.Drawing.Point(244, 3);
-            this.btn_History_Order_History_Del.Name = "btn_History_Order_History_Del";
-            this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Order_History_Del.TabIndex = 115;
-            this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
             // 
             // frm_Main_Window
             // 
@@ -2724,6 +2726,14 @@
             this.tbl_History_Order_Dates.ResumeLayout(false);
             this.tbl_History_Order_Dates.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).EndInit();
+            this.tbl_History_3th_Col_Selected_Order_Details.ResumeLayout(false);
+            this.tbl_History_3th_Col_Selected_Order_Details.PerformLayout();
+            this.tbl_History_Selected_Order_Basic_Details.ResumeLayout(false);
+            this.tbl_History_Selected_Order_Basic_Details.PerformLayout();
+            this.tbl_History_Order_Details_Delete.ResumeLayout(false);
+            this.tbl_History_Order_Details_Delete.PerformLayout();
+            this.tbl_History_Selected_Order_Cottages_Services.ResumeLayout(false);
+            this.tbl_History_Selected_Order_Cottages_Services.PerformLayout();
             this.tab_Settings.ResumeLayout(false);
             this.tbl_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_1st_Col_Common_Settings_Base.ResumeLayout(false);
@@ -2734,14 +2744,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            this.tbl_History_3th_Col_Selected_Order_Details.ResumeLayout(false);
-            this.tbl_History_3th_Col_Selected_Order_Details.PerformLayout();
-            this.tbl_History_Selected_Order_Basic_Details.ResumeLayout(false);
-            this.tbl_History_Selected_Order_Basic_Details.PerformLayout();
-            this.tbl_History_Selected_Order_Cottages_Services.ResumeLayout(false);
-            this.tbl_History_Selected_Order_Cottages_Services.PerformLayout();
-            this.tbl_History_Order_Details_Delete.ResumeLayout(false);
-            this.tbl_History_Order_Details_Delete.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2903,7 +2905,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Selected_Order_Cottages_Services;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsv_History_Order_Cottages;
         private System.Windows.Forms.ListView lsv_History_Order_Services;
         private System.Windows.Forms.Label lbl_History_Order_Services;
         private System.Windows.Forms.TextBox txt_History_Order_Additional_Details;

@@ -222,6 +222,7 @@ namespace R3_VillagePeople_Mahtimokit
             Hide_datagridview_id_fields_and_reset_search();
         }
 
+
         private void Filter_order_cottages_by_office_and_text()
         {
             // Filtteröidään mökit toimipisteen + hakukentän mukaan.
@@ -882,7 +883,6 @@ namespace R3_VillagePeople_Mahtimokit
                 // ListViewItem: {Rodeo [11]}
                 var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
                 Match match = find_quantity.Match(itemRow.ToString());
-                MessageBox.Show(itemRow.ToString());
                 string lkm = match.Groups[1].Value;
                 SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
                     "VALUES(@varaus_id, @palvelu_id, @lkm)");
@@ -983,6 +983,122 @@ namespace R3_VillagePeople_Mahtimokit
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
             Filter_management_cottages_by_office_and_text();
             Filter_management_services_by_office_and_text();
+        }
+
+        private void dgv_History_Orders_All_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_History_Order_Search_Click(object sender, EventArgs e)
+        {
+            if (dgv_Order_Services_All.SelectedCells.Count > 0)
+            {
+                string varaus_id = "";
+
+                int selectedrowindex = dgv_History_Orders_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_History_Orders_All.Rows[selectedrowindex];
+                varaus_id = Convert.ToString(selectedRow.Cells["varaus_id"].Value);
+                SqlDataReader myReader = null;
+                // Varauksen perustietojen hakeminen.
+                SqlCommand database_query_order_basic_details = new SqlCommand("SELECT * FROM Varaus WHERE varaus_id = @varaus_id ");
+                database_query_order_basic_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_basic_details.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_order_basic_details.ExecuteNonQuery();
+                myReader = database_query_order_basic_details.ExecuteReader();
+                while (myReader.Read())
+                {
+                    lbl_History_Order_Start.Text = "Alkamispäivä: " + Convert.ToDateTime(myReader["varattu_alkupvm"]).ToString("dd.MM.yyyy");
+                    lbl_History_Order_End.Text = "Päättymispäivä: " + Convert.ToDateTime(myReader["varattu_loppupvm"]).ToString("dd.MM.yyyy");
+                    txt_History_Order_Additional_Details.Text = (myReader["lisatieto"].ToString());
+                }
+                database_connection.Close();
+                // Majoitustietojen haku
+                var cottage_ids_and_quantities = new Dictionary<int, int>();
+                string majoitus_nimi = "";
+                SqlCommand database_query_order_cottage_details = new SqlCommand("SELECT * FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
+                database_query_order_cottage_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_cottage_details.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_order_cottage_details.ExecuteNonQuery();
+                myReader = database_query_order_cottage_details.ExecuteReader();
+ 
+                while (myReader.Read())
+                {
+                    cottage_ids_and_quantities.Add(Convert.ToInt32((myReader["majoitus_id"])), Convert.ToInt32((myReader["majoittujien_maara"])));
+                }
+                database_connection.Close();
+                // Lisätään varauksen mökit varaushistorian yhteenvetoon
+                // Luodaan läpikäytävä lista cottage_ids_and_quantities taulusta.
+                List<int> order_cottages = new List<int>(cottage_ids_and_quantities.Keys);
+                // Käydään kaikki taulun arvot läpi.
+                foreach (int cottage_id in order_cottages)
+                {
+                    // Mökissä majoittuvien määrä
+                    int persons = cottage_ids_and_quantities[cottage_id];
+                    // Tietokantakomento on määriteltävä uudestaan jokaisessa silmukassa, muuten @majoitus_id ei ole uniikki ja johtaa virheeseen.
+                    SqlCommand database_query_order_cottage_text_details = new SqlCommand("SELECT Nimi FROM Majoitus WHERE majoitus_id = @majoitus_id");
+                    database_query_order_cottage_text_details.Connection = database_connection;
+                    database_connection.Open();
+                    // Haetaan majoitus_id:n perusteella majoituksen nimi.
+                    database_query_order_cottage_text_details.Parameters.AddWithValue("@majoitus_id", cottage_id);
+                    database_query_order_cottage_text_details.ExecuteNonQuery();
+                    myReader = database_query_order_cottage_text_details.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        majoitus_nimi = (myReader["nimi"]).ToString();
+
+                    }
+                    // Suljetaan yhteys ja lisätään varauksen mökki listview näkymään.
+                    database_connection.Close();
+                    lsv_History_Order_Cottages.Items.Add(majoitus_nimi + " [" + persons + "]");
+                }
+
+                // Palveluiden haku
+                var service_ids_and_quantities = new Dictionary<int, int>();
+                string palvelun_nimi = "";
+                SqlCommand database_query_order_service_details = new SqlCommand("SELECT * FROM Varauksen_palvelut WHERE varaus_id = @varaus_id");
+                database_query_order_service_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_service_details.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_order_service_details.ExecuteNonQuery();
+                myReader = database_query_order_service_details.ExecuteReader();
+                while (myReader.Read())
+                {
+                    service_ids_and_quantities.Add(Convert.ToInt32((myReader["palvelu_id"])), Convert.ToInt32((myReader["lkm"])));
+                }
+                database_connection.Close();
+                // Lisätään varauksen mökit varaushistorian yhteenvetoon
+                // Luodaan läpikäytävä lista cottage_ids_and_quantities taulusta.
+                List<int> order_services = new List<int>(service_ids_and_quantities.Keys);
+                // Käydään kaikki taulun arvot läpi.
+                foreach (int service_id in order_services)
+                {
+                    // Mökissä majoittuvien määrä
+                    int quantity = service_ids_and_quantities[service_id];
+                    // Tietokantakomento on määriteltävä uudestaan jokaisessa silmukassa, muuten @majoitus_id ei ole uniikki ja johtaa virheeseen.
+                    SqlCommand database_query_order_service_text_details = new SqlCommand("SELECT Nimi FROM Palvelu WHERE palvelu_id = @palvelu_id");
+                    database_query_order_service_text_details.Connection = database_connection;
+                    database_connection.Open();
+                    // Haetaan majoitus_id:n perusteella majoituksen nimi.
+                    database_query_order_service_text_details.Parameters.AddWithValue("@palvelu_id", service_id);
+                    database_query_order_service_text_details.ExecuteNonQuery();
+                    myReader = database_query_order_service_text_details.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        palvelun_nimi = (myReader["nimi"]).ToString();
+
+                    }
+                    // Suljetaan yhteys ja lisätään varauksen mökki listview näkymään.
+                    database_connection.Close();
+                    lsv_History_Order_Services.Items.Add(palvelun_nimi + " [" + quantity + "]");
+                }
+
+
+
+
+            }
         }
     }
 }
