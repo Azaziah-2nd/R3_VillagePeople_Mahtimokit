@@ -262,6 +262,7 @@
             this.tab_Menu.SelectedIndex = 0;
             this.tab_Menu.Size = new System.Drawing.Size(984, 681);
             this.tab_Menu.TabIndex = 0;
+            this.tab_Menu.SelectedIndexChanged += new System.EventHandler(this.tab_Menu_SelectedIndexChanged);
             // 
             // tab_New_Order
             // 

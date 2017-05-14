@@ -43,9 +43,6 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Customers_All.Columns[0].Visible = false;
-                    dgv_Order_Customers_All.Columns[0].Visible = false;
-                    dgv_History_Customers_All.Columns[0].Visible = false;
                 }
             }
         }
@@ -96,11 +93,6 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Order_Services_All.Columns[0].Visible = false;
-                    dgv_Services_All.Columns[0].Visible = false;
-                    dgv_Order_Services_All.Columns[1].Visible = false;
-                    dgv_Services_All.Columns[1].Visible = false;
-
                 }
             }
         }
@@ -114,10 +106,6 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Order_Cottages_All.Columns[0].Visible = false;
-                    dgv_Cottages_All.Columns[0].Visible = false;
-                    dgv_Order_Cottages_All.Columns[1].Visible = false;
-                    dgv_Cottages_All.Columns[1].Visible = false;
                 }
             }
         }
@@ -138,6 +126,41 @@ namespace R3_VillagePeople_Mahtimokit
         private void Get_cottage_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_cottage_names_to_grid();
+        }
+
+        private void Hide_datagridview_id_fields()
+        {
+            /* Tämä piilottaa datagridvieweistä asiakas_id, majoitus_id, palvelu_id 
+             * sekä toimipiste_id kenttien näkyvyyden valitun välilehden perusteella.
+             * Kenttien piilotus ei aina toimi jos ne piilotetaan tietokantojen lataamisen
+             * yhteydessä, piilottaminen välilehden mukaan varmistaa halutun lopputuloksen.
+             * tab_index arvot:
+             * 0 = Uusi varaus
+             * 1 = Tietojen hallinta
+             * 2 = Varaushistoria
+             * 3 = Asetukset
+             */
+            int tab_index = tab_Menu.SelectedIndex;
+            if (tab_index == 0)
+            {
+                dgv_Order_Customers_All.Columns[0].Visible = false;
+                dgv_Order_Services_All.Columns[0].Visible = false;
+                dgv_Order_Cottages_All.Columns[0].Visible = false;
+                dgv_Order_Services_All.Columns[1].Visible = false;
+                dgv_Order_Cottages_All.Columns[1].Visible = false;
+            }
+            else if (tab_index == 1)
+            {
+                dgv_Customers_All.Columns[0].Visible = false;
+                dgv_Services_All.Columns[0].Visible = false;
+                dgv_Services_All.Columns[1].Visible = false;
+                dgv_Cottages_All.Columns[0].Visible = false;
+                dgv_Cottages_All.Columns[1].Visible = false;
+            }
+            else if (tab_index == 2)
+            {
+                dgv_History_Customers_All.Columns[0].Visible = false;
+            }
         }
 
         private void Main_window_Load(object sender, EventArgs e)
@@ -168,11 +191,12 @@ namespace R3_VillagePeople_Mahtimokit
                 chk_Common_Settings_History_End_Date_Today.Checked = true;
             }
             // Haetaan tiedot tietokannasta eri kenttiin.
-            this.Get_customer_names_to_grid();
-            this.Get_service_names_to_grid();
-            this.Get_cottage_names_to_grid();
+            Get_customer_names_to_grid();
+            Get_service_names_to_grid();
+            Get_cottage_names_to_grid();
             // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
             this.Get_office_names_to_combo();
+            Hide_datagridview_id_fields();
         }
 
         private void Filter_order_cottages_by_office_and_text()
@@ -907,6 +931,12 @@ namespace R3_VillagePeople_Mahtimokit
                 // Filtteröidän myös varaus välilehden lista.
                 Filter_order_cottages_by_office_and_text();
             }
+        }
+
+
+        private void tab_Menu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Hide_datagridview_id_fields();
         }
     }
 }
