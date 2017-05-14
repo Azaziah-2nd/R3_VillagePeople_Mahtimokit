@@ -65,12 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Are_you_sure_popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Are_you_sure_popup.designer.cs">
-      <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Combo_box_item.cs" />
     <Compile Include="Cottage_popup.cs">
       <SubType>Form</SubType>
@@ -104,15 +98,6 @@
     <Compile Include="Services_popup.Designer.cs">
       <DependentUpon>Services_popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Text_error_popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Text_error_popup.designer.cs">
-      <DependentUpon>Text_error_popup.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Are_you_sure_popup.resx">
-      <DependentUpon>Are_you_sure_popup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cottage_Popup.resx">
       <DependentUpon>Cottage_popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Services_popup.resx">
       <DependentUpon>Services_popup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Text_error_popup.resx">
-      <DependentUpon>Text_error_popup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

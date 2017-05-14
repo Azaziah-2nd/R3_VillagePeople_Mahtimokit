@@ -73,6 +73,7 @@
             // 
             this.cbo_Cottage_Office_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbo_Cottage_Office_Select.DisplayMember = "nimi";
+            this.cbo_Cottage_Office_Select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Cottage_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Cottage_Office_Select.FormattingEnabled = true;
             this.cbo_Cottage_Office_Select.Location = new System.Drawing.Point(182, 102);
