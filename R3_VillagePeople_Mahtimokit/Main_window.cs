@@ -143,12 +143,16 @@ namespace R3_VillagePeople_Mahtimokit
             Get_cottage_names_to_grid();
         }
 
-        private void Hide_datagridview_id_fields()
+        private void Hide_datagridview_id_fields_and_reset_search()
         {
-            /* Tämä piilottaa datagridvieweistä asiakas_id, majoitus_id, palvelu_id 
+            /* Tämä resetoi haut japiilottaa datagridvieweistä asiakas_id, majoitus_id, palvelu_id 
              * sekä toimipiste_id kenttien näkyvyyden valitun välilehden perusteella.
              * Kenttien piilotus ei aina toimi jos ne piilotetaan tietokantojen lataamisen
              * yhteydessä, piilottaminen välilehden mukaan varmistaa halutun lopputuloksen.
+             * Hakujen resetointi varaus ja tietojen hallinta välilehtiin:
+             * Tietojen filtteröinti rajaa tiedot myös toisen välilehden datagrideistä,
+             * asetetaan oikeat rajaukset uudestaan välilehden vaihtuessa.
+             * 
              * tab_index arvot:
              * 0 = Uusi varaus
              * 1 = Tietojen hallinta
@@ -163,6 +167,8 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[1].Visible = false;
                 dgv_Order_Cottages_All.Columns[1].Visible = false;
+                Filter_order_cottages_by_office_and_text();
+                Filter_order_services_by_office_and_text();
             }
             else if (tab_index == 1)
             {
@@ -171,6 +177,8 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Services_All.Columns[1].Visible = false;
                 dgv_Cottages_All.Columns[0].Visible = false;
                 dgv_Cottages_All.Columns[1].Visible = false;
+                Filter_management_cottages_by_office_and_text();
+                Filter_management_services_by_office_and_text();
             }
             else if (tab_index == 2)
             {
@@ -211,13 +219,12 @@ namespace R3_VillagePeople_Mahtimokit
             Get_cottage_names_to_grid();
             // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
             this.Get_office_names_to_combo();
-            Hide_datagridview_id_fields();
+            Hide_datagridview_id_fields_and_reset_search();
         }
 
         private void Filter_order_cottages_by_office_and_text()
         {
             // Filtteröidään mökit toimipisteen + hakukentän mukaan.
-            txt_Cottages_Search.Text = txt_Order_Cottages_Search.Text;
             BindingSource cottage_list = new BindingSource();
             cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
             string filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
@@ -231,18 +238,27 @@ namespace R3_VillagePeople_Mahtimokit
             BindingSource service_list = new BindingSource();
             service_list.DataSource = dgv_Order_Services_All.DataSource;
             string filter_services = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
-            Reservation_toimipiste_id, txt_Services_Search.Text);
+            Reservation_toimipiste_id, txt_Order_Services_Search.Text);
             service_list.Filter = filter_services;
         }
 
         private void Filter_management_services_by_office_and_text()
         {
             // Filtteröidään palvelut toimipisteen + hakukentän mukaan.
-            txt_Services_Search.Text = txt_Order_Services_Search.Text;
             BindingSource service_list = new BindingSource();
-            service_list.DataSource = dgv_Order_Services_All.DataSource;
+            service_list.DataSource = dgv_Services_All.DataSource;
             string filter_services = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
-            Reservation_toimipiste_id, txt_Services_Search.Text);
+            Management_toimipiste_id, txt_Services_Search.Text);
+            service_list.Filter = filter_services;
+        }
+
+        private void Filter_management_cottages_by_office_and_text()
+        {
+            // Filtteröidään palvelut toimipisteen + hakukentän mukaan.
+            BindingSource service_list = new BindingSource();
+            service_list.DataSource = dgv_Cottages_All.DataSource;
+            string filter_services = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
+            Management_toimipiste_id, txt_Cottages_Search.Text);
             service_list.Filter = filter_services;
         }
 
@@ -469,12 +485,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Services_Search_TextChanged(object sender, EventArgs e)
         {
-            // Palveluiden rajaus nimen perusteella.
-            txt_Order_Services_Search.Text = txt_Services_Search.Text;
-            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Order_Services_All.DataSource;
-            binding_source.Filter = "[nimi] Like '%" + txt_Order_Services_Search.Text + "%'";
+            Filter_management_services_by_office_and_text();
         }
 
         private void btn_Office_Edit_Click_1(object sender, EventArgs e)
@@ -694,10 +705,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Cottages_Search_TextChanged(object sender, EventArgs e)
         {
-            txt_Order_Cottages_Search.Text = txt_Cottages_Search.Text;
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Cottages_All.DataSource;
-            binding_source.Filter = "[nimi] Like '%" + txt_Cottages_Search.Text + "%'";
+            Filter_management_cottages_by_office_and_text();
         }
 
 
@@ -732,8 +740,8 @@ namespace R3_VillagePeople_Mahtimokit
         private void cbo_Order_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_box_item item = new Combo_box_item();
-            lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            cbo_Office_Select.Text = cbo_Order_Office_Select.Text.ToString();
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
             Filter_order_cottages_by_office_and_text();
             Filter_order_services_by_office_and_text();
@@ -961,16 +969,17 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void tab_Menu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Hide_datagridview_id_fields();
+            Hide_datagridview_id_fields_and_reset_search();
         }
 
+        string Management_toimipiste_id;
         private void cbo_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_box_item item = new Combo_box_item();
-            Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            Management_toimipiste_id = (cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
-            Filter_order_cottages_by_office_and_text();
-            Filter_order_services_by_office_and_text();
+            Filter_management_cottages_by_office_and_text();
+            Filter_management_services_by_office_and_text();
         }
     }
 }

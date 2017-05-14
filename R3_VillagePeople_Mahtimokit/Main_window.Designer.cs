@@ -154,6 +154,7 @@
             this.lbl_History_Orders_Filter_Date_Start = new System.Windows.Forms.Label();
             this.dtp_History_Orders_Filter_Date_Start = new System.Windows.Forms.DateTimePicker();
             this.dtp_History_Orders_Filter_Date_End = new System.Windows.Forms.DateTimePicker();
+            this.dgv_History_Orders_All = new System.Windows.Forms.DataGridView();
             this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
             this.lsv_History_Order_Additional_Details = new System.Windows.Forms.ListView();
             this.lbl_History_Order_Additional_Details = new System.Windows.Forms.Label();
@@ -188,7 +189,6 @@
             this.lbl_Settings_User = new System.Windows.Forms.Label();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.dgv_History_Orders_All = new System.Windows.Forms.DataGridView();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -238,6 +238,7 @@
             this.tbl_History_Order_Search.SuspendLayout();
             this.tbl_History_Order_Dates_Delete.SuspendLayout();
             this.tbl_History_Order_Dates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).BeginInit();
             this.tbl_History_3th_Col_Selected_Order_Details.SuspendLayout();
             this.tbl_History_Order_Details_Delete.SuspendLayout();
             this.tab_Settings.SuspendLayout();
@@ -247,7 +248,6 @@
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2105,6 +2105,22 @@
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
             // 
+            // dgv_History_Orders_All
+            // 
+            this.dgv_History_Orders_All.AllowUserToAddRows = false;
+            this.dgv_History_Orders_All.AllowUserToDeleteRows = false;
+            this.dgv_History_Orders_All.AllowUserToResizeColumns = false;
+            this.dgv_History_Orders_All.AllowUserToResizeRows = false;
+            this.dgv_History_Orders_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_History_Orders_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_History_Orders_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_History_Orders_All.Location = new System.Drawing.Point(3, 23);
+            this.dgv_History_Orders_All.Name = "dgv_History_Orders_All";
+            this.dgv_History_Orders_All.Size = new System.Drawing.Size(279, 443);
+            this.dgv_History_Orders_All.TabIndex = 103;
+            // 
             // tbl_History_3th_Col_Selected_Order_Details
             // 
             this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2565,22 +2581,6 @@
             this.txt_Settings_User_Name.TabIndex = 3;
             this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
-            // dgv_History_Orders_All
-            // 
-            this.dgv_History_Orders_All.AllowUserToAddRows = false;
-            this.dgv_History_Orders_All.AllowUserToDeleteRows = false;
-            this.dgv_History_Orders_All.AllowUserToResizeColumns = false;
-            this.dgv_History_Orders_All.AllowUserToResizeRows = false;
-            this.dgv_History_Orders_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_History_Orders_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_History_Orders_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_History_Orders_All.Location = new System.Drawing.Point(3, 23);
-            this.dgv_History_Orders_All.Name = "dgv_History_Orders_All";
-            this.dgv_History_Orders_All.Size = new System.Drawing.Size(279, 443);
-            this.dgv_History_Orders_All.TabIndex = 103;
-            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2667,6 +2667,7 @@
             this.tbl_History_Order_Dates_Delete.ResumeLayout(false);
             this.tbl_History_Order_Dates.ResumeLayout(false);
             this.tbl_History_Order_Dates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).EndInit();
             this.tbl_History_3th_Col_Selected_Order_Details.ResumeLayout(false);
             this.tbl_History_3th_Col_Selected_Order_Details.PerformLayout();
             this.tbl_History_Order_Details_Delete.ResumeLayout(false);
@@ -2681,7 +2682,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Orders_All)).EndInit();
             this.ResumeLayout(false);
 
         }
