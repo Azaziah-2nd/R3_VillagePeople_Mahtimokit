@@ -83,7 +83,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_service_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, nimi FROM Palvelu", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, toimipiste_id, nimi FROM Palvelu", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -93,13 +93,15 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Services_All.Columns[0].Visible = false;
                     dgv_Services_All.Columns[0].Visible = false;
+                    dgv_Order_Services_All.Columns[1].Visible = false;
+                    dgv_Services_All.Columns[1].Visible = false;
 
                 }
             }
         }
         private void Get_cottage_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, nimi FROM Majoitus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi FROM Majoitus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -109,6 +111,8 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Cottages_all.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Cottages_All.Columns[0].Visible = false;
                     dgv_Cottages_all.Columns[0].Visible = false;
+                    dgv_Order_Cottages_All.Columns[1].Visible = false;
+                    dgv_Cottages_all.Columns[1].Visible = false;
                 }
             }
         }
@@ -663,6 +667,11 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
             //Reservation_cottage_id = cbo_Order_Office_Select.Value.ToString();
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            MessageBox.Show(Reservation_toimipiste_id);
+            // Rajataan mökit ja palvelut toimipisteeseen.
+            BindingSource binding_source = new BindingSource();
+            binding_source.DataSource = dgv_Order_Cottages_All.DataSource;
+            binding_source.Filter = "CONVERT(toimipiste_id, 'System.String') LIKE '%" + Reservation_toimipiste_id + "%'";
         }
 
         string Reservation_asiakas_id = "";
