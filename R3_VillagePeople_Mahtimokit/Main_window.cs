@@ -142,19 +142,23 @@ namespace R3_VillagePeople_Mahtimokit
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_customer_names_to_grid();
+            Hide_datagridview_id_fields_and_reset_search();
         }
 
         private void Get_office_names_to_combo_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_office_names_to_combo();
+            Hide_datagridview_id_fields_and_reset_search();
         }
         private void Get_service_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_service_names_to_grid();
+            Hide_datagridview_id_fields_and_reset_search();
         }
         private void Get_cottage_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
             Get_cottage_names_to_grid();
+            Hide_datagridview_id_fields_and_reset_search();
         }
 
         private void Hide_datagridview_id_fields_and_reset_search()
@@ -1015,8 +1019,11 @@ namespace R3_VillagePeople_Mahtimokit
         {
             if (dgv_Order_Services_All.SelectedCells.Count > 0)
             {
+                // Tyhjennetään nykyiset palvelut ja mökit.
+                lsv_History_Order_Cottages.Clear();
+                lsv_History_Order_Services.Clear();
+                // Alustetaan apumuuttujat ja haetaan varaus_id.
                 string varaus_id = "";
-
                 int selectedrowindex = dgv_History_Orders_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_History_Orders_All.Rows[selectedrowindex];
                 varaus_id = Convert.ToString(selectedRow.Cells["varaus_id"].Value);
@@ -1090,8 +1097,7 @@ namespace R3_VillagePeople_Mahtimokit
                     service_ids_and_quantities.Add(Convert.ToInt32((myReader["palvelu_id"])), Convert.ToInt32((myReader["lkm"])));
                 }
                 database_connection.Close();
-                // Lisätään varauksen mökit varaushistorian yhteenvetoon
-                // Luodaan läpikäytävä lista cottage_ids_and_quantities taulusta.
+                // Lisätään varauksen palvelut varaushistorian yhteenvetoon
                 List<int> order_services = new List<int>(service_ids_and_quantities.Keys);
                 // Käydään kaikki taulun arvot läpi.
                 foreach (int service_id in order_services)

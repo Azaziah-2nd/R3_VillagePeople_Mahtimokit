@@ -2354,6 +2354,7 @@
             this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(9, 469);
             this.txt_History_Order_Additional_Details.Multiline = true;
             this.txt_History_Order_Additional_Details.Name = "txt_History_Order_Additional_Details";
+            this.txt_History_Order_Additional_Details.ReadOnly = true;
             this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(285, 122);
             this.txt_History_Order_Additional_Details.TabIndex = 109;
             // 
