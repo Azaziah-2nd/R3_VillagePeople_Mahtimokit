@@ -604,6 +604,7 @@
             this.dgv_Order_Cottages_All.Name = "dgv_Order_Cottages_All";
             this.dgv_Order_Cottages_All.ReadOnly = true;
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
+            this.dgv_Order_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(243, 343);
             this.dgv_Order_Cottages_All.TabIndex = 107;
             // 
@@ -876,6 +877,7 @@
             this.dgv_Order_Services_All.Name = "dgv_Order_Services_All";
             this.dgv_Order_Services_All.ReadOnly = true;
             this.dgv_Order_Services_All.RowHeadersVisible = false;
+            this.dgv_Order_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Services_All.Size = new System.Drawing.Size(210, 449);
             this.dgv_Order_Services_All.TabIndex = 108;
             // 
@@ -1316,6 +1318,7 @@
             this.dgv_Customers_All.Name = "dgv_Customers_All";
             this.dgv_Customers_All.ReadOnly = true;
             this.dgv_Customers_All.RowHeadersVisible = false;
+            this.dgv_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
             this.dgv_Customers_All.TabIndex = 107;
             // 
@@ -1586,6 +1589,7 @@
             this.dgv_Services_All.Name = "dgv_Services_All";
             this.dgv_Services_All.ReadOnly = true;
             this.dgv_Services_All.RowHeadersVisible = false;
+            this.dgv_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Services_All.Size = new System.Drawing.Size(279, 325);
             this.dgv_Services_All.TabIndex = 108;
             // 
@@ -1742,6 +1746,7 @@
             this.dgv_Cottages_All.Name = "dgv_Cottages_All";
             this.dgv_Cottages_All.ReadOnly = true;
             this.dgv_Cottages_All.RowHeadersVisible = false;
+            this.dgv_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cottages_All.Size = new System.Drawing.Size(285, 444);
             this.dgv_Cottages_All.TabIndex = 108;
             // 
@@ -1940,6 +1945,7 @@
             this.dgv_History_Customers_All.Name = "dgv_History_Customers_All";
             this.dgv_History_Customers_All.ReadOnly = true;
             this.dgv_History_Customers_All.RowHeadersVisible = false;
+            this.dgv_History_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Customers_All.Size = new System.Drawing.Size(285, 320);
             this.dgv_History_Customers_All.TabIndex = 108;
             // 
@@ -2126,6 +2132,7 @@
             this.dgv_History_Orders_All.MultiSelect = false;
             this.dgv_History_Orders_All.Name = "dgv_History_Orders_All";
             this.dgv_History_Orders_All.ReadOnly = true;
+            this.dgv_History_Orders_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Orders_All.Size = new System.Drawing.Size(279, 443);
             this.dgv_History_Orders_All.TabIndex = 103;
             this.dgv_History_Orders_All.SelectionChanged += new System.EventHandler(this.dgv_History_Orders_All_SelectionChanged);

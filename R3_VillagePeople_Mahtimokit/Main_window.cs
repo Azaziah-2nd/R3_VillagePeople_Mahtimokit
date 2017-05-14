@@ -40,9 +40,14 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query.Fill(data_set);
                 if (data_set.Tables.Count > 0)
                 {
-                    dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
+                    // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
+                    // asiakas_id on piilotettu sarake, eli kokonimi = 1, ensimmäinen rivi listassa = 0.
+                    dgv_Order_Customers_All.CurrentCell = dgv_Order_Customers_All[1, 0];
+                    dgv_Customers_All.CurrentCell = dgv_Customers_All[1, 0];
+                    dgv_History_Customers_All.CurrentCell = dgv_History_Customers_All[1, 0];
                 }
             }
         }
@@ -93,6 +98,10 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
+                    // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
+                    // palvelu_id ja toimipiste_id ovat piilotettuja sarakeita, eli nimi = 2, ensimmäinen rivi listassa = 0.
+                    dgv_Order_Services_All.CurrentCell = dgv_Order_Services_All[2, 0];
+                    dgv_Services_All.CurrentCell = dgv_Services_All[2, 0];
                 }
             }
         }
@@ -106,6 +115,10 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
+                    // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
+                    // majoitus_id ja toimipiste_id ovat piilotettuja sarakeita, eli nimi = 2, ensimmäinen rivi listassa = 0.
+                    dgv_Order_Cottages_All.CurrentCell = dgv_Order_Cottages_All[2, 0];
+                    dgv_Cottages_All.CurrentCell = dgv_Cottages_All[2, 0];
                 }
             }
         }
@@ -119,6 +132,8 @@ namespace R3_VillagePeople_Mahtimokit
                 if (data_set.Tables.Count > 0)
                 {
                     dgv_History_Orders_All.DataSource = data_set.Tables[0].DefaultView;
+                    // Tietojen valitseminen tyhjissä tauluissa johtaa virheeseen, lisää tarkistusmekanismi!!!
+                    // dgv_History_Orders_All.CurrentCell = dgv_History_Orders_All[0, 0];
                 }
             }
         }
@@ -187,6 +202,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
+            this.Get_office_names_to_combo();
             // Haetaan päivämäärät varauksen yhteenvetoon.
             Get_start_date_to_order_summary();
             Get_end_date_to_order_summary();
@@ -217,8 +234,6 @@ namespace R3_VillagePeople_Mahtimokit
             Get_service_names_to_grid();
             Get_cottage_names_to_grid();
             Get_order_history_to_grid();
-            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
-            this.Get_office_names_to_combo();
             Hide_datagridview_id_fields_and_reset_search();
         }
 
@@ -764,11 +779,17 @@ namespace R3_VillagePeople_Mahtimokit
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
         {
             string Reservation_Cottage_id = "";
-            if (dgv_Order_Services_All.SelectedCells.Count > 0)
+            if (dgv_Order_Cottages_All.SelectedCells.Count > 0)
             {
+
+
+                foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
+                {
+                    Reservation_Cottage_id = row.Cells[0].Value.ToString();
+                }
+
                 int selectedrowindex = dgv_Order_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Cottages_All.Rows[selectedrowindex];
-                Reservation_Cottage_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
                 string selected_cottage_name = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
                 string selected_quantity = txt_Order_Cottage_Persons_Quantity.Text.ToString();
                 string[] rowas = { selected_cottage_name + " [" + selected_quantity + "]" };
