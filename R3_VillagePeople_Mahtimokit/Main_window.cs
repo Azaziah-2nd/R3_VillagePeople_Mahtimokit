@@ -742,7 +742,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
             Combo_box_item item = new Combo_box_item();
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
-            cbo_Office_Select.Text = cbo_Order_Office_Select.Text.ToString();
+            lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
             Filter_order_cottages_by_office_and_text();
             Filter_order_services_by_office_and_text();
