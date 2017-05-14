@@ -31,7 +31,6 @@ namespace R3_VillagePeople_Mahtimokit
                           User Instance=False");
 
 
-
         // DataGriedView elementtien tietojen päivitys.
         private void Get_customer_names_to_grid()
         {
@@ -50,7 +49,7 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
- 
+
         private void Get_office_names_to_combo()
         {
             for (int i = 0; i < cbo_Order_Office_Select.Items.Count; i++)
@@ -76,6 +75,12 @@ namespace R3_VillagePeople_Mahtimokit
                 cbo_Office_Select.Items.Add(item);
                 cbo_History_Office_Select.Items.Add(item);
                 cbo_Common_Settings_Default_Office.Items.Add(item);
+                // Valitaan comboboxeihin ensimmäinen toimipiste.
+                cbo_Order_Office_Select.SelectedIndex = 0;
+                cbo_Office_Select.SelectedIndex = 0;
+                cbo_History_Office_Select.SelectedIndex = 0;
+                cbo_Common_Settings_Default_Office.SelectedIndex = 0;
+
             }
             database_connection.Close();
 
@@ -164,10 +169,33 @@ namespace R3_VillagePeople_Mahtimokit
             }
             // Haetaan tiedot tietokannasta eri kenttiin.
             this.Get_customer_names_to_grid();
-            this.Get_office_names_to_combo();
             this.Get_service_names_to_grid();
             this.Get_cottage_names_to_grid();
+            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
+            this.Get_office_names_to_combo();
         }
+
+        private void Filter_order_cottages_by_office_and_text()
+        {
+            // Filtteröidään mökit toimipisteen + hakukentän mukaan.
+            txt_Cottages_Search.Text = txt_Order_Cottages_Search.Text;
+            BindingSource cottage_list = new BindingSource();
+            cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
+            string filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
+                                  Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            cottage_list.Filter = filer_cottages;
+        }
+
+        private void Filter_order_services_by_office_and_text()
+        {
+            // Filtteröidään palvelut toimipisteen + hakukentän mukaan.
+            txt_Services_Search.Text = txt_Order_Services_Search.Text;
+            BindingSource service_list = new BindingSource();
+            service_list.DataSource = dgv_Order_Services_All.DataSource;
+            string filter_services = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
+            Reservation_toimipiste_id, txt_Services_Search.Text);
+            service_list.Filter = filter_services;
+            }
 
         // Asiakkaan lisäys
         private void btn_Customer_add_Click(object sender, EventArgs e)
@@ -608,20 +636,12 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Order_Services_Search_TextChanged(object sender, EventArgs e)
         {
-            // Palveluiden rajaus nimen perusteella.
-            txt_Services_Search.Text = txt_Order_Services_Search.Text;
-            // Yhdistetään tietojen lähteeseen ja rajataan hakutuloksia hakutekstin perusteella.
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Order_Services_All.DataSource;
-            binding_source.Filter = "[nimi] Like '%" + txt_Order_Services_Search.Text + "%'";
+            Filter_order_services_by_office_and_text();
         }
 
         private void txt_Order_Cottages_Search_TextChanged(object sender, EventArgs e)
         {
-            txt_Cottages_Search.Text = txt_Order_Cottages_Search.Text;
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Order_Cottages_All.DataSource;
-            binding_source.Filter = "[nimi] Like '%" + txt_Order_Cottages_Search.Text + "%'";
+            Filter_order_cottages_by_office_and_text();
         }
 
         private void txt_Cottages_Search_TextChanged(object sender, EventArgs e)
@@ -667,11 +687,9 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
             //Reservation_cottage_id = cbo_Order_Office_Select.Value.ToString();
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
-            MessageBox.Show(Reservation_toimipiste_id);
-            // Rajataan mökit ja palvelut toimipisteeseen.
-            BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Order_Cottages_All.DataSource;
-            binding_source.Filter = "CONVERT(toimipiste_id, 'System.String') LIKE '%" + Reservation_toimipiste_id + "%'";
+            // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
+            Filter_order_cottages_by_office_and_text();
+            Filter_order_services_by_office_and_text();
         }
 
         string Reservation_asiakas_id = "";
@@ -840,6 +858,11 @@ namespace R3_VillagePeople_Mahtimokit
                     string value2 = row.Cells[1].Value.ToString();
                     MessageBox.Show(value1 + "  " + value2);
                 }
+        }
+
+        private void txt_History_Order_Search_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

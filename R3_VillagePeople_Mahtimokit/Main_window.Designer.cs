@@ -2033,6 +2033,7 @@
             this.txt_History_Order_Search.Name = "txt_History_Order_Search";
             this.txt_History_Order_Search.Size = new System.Drawing.Size(233, 26);
             this.txt_History_Order_Search.TabIndex = 101;
+            this.txt_History_Order_Search.TextChanged += new System.EventHandler(this.txt_History_Order_Search_TextChanged);
             // 
             // tbl_History_Order_Dates_Delete
             // 
