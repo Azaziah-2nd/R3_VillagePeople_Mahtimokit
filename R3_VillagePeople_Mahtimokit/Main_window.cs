@@ -76,7 +76,6 @@ namespace R3_VillagePeople_Mahtimokit
                 cbo_Office_Select.Items.Add(item);
                 cbo_History_Office_Select.Items.Add(item);
                 cbo_Common_Settings_Default_Office.Items.Add(item);
-                // cbo_Common_Settings_Default_Office.SelectedIndex = 0;
             }
             database_connection.Close();
 
@@ -657,9 +656,13 @@ namespace R3_VillagePeople_Mahtimokit
             Get_end_date_to_order_summary();
         }
 
+        String Reservation_toimipiste_id = "";
         private void cbo_Order_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Combo_box_item item = new Combo_box_item();
             lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
+            //Reservation_cottage_id = cbo_Order_Office_Select.Value.ToString();
+            Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
         }
 
         string Reservation_asiakas_id = "";
@@ -705,15 +708,8 @@ namespace R3_VillagePeople_Mahtimokit
                 string[] rowas = { selected_service + " [" + selected_quantity + "]" };
                 var listViewItem = new ListViewItem(rowas);
                 listViewItem.Tag = Reservation_service_id;
-
-                MessageBox.Show(listViewItem.Tag.ToString());
-
                 lsv_Order_Summary_Services.Items.Add(listViewItem);
             }
-
-
-
-
         }
 
         private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
@@ -741,7 +737,6 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_loki.ExecuteNonQuery();
             database_connection.Close();
             // Varaus taulun päivitys
-            string toimipiste_id = "2";
             DateTime varattu_pvm = DateTime.Now;
             DateTime vahvistus_pvm = DateTime.Now;
             DateTime varattu_alkupvm = dtp_Order_Start_Date.Value;
@@ -755,7 +750,7 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_varaus.Connection = main_window.database_connection;
             database_connection.Open();
             database_query_varaus.Parameters.AddWithValue("@asiakas_id", Reservation_asiakas_id);
-            database_query_varaus.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+            database_query_varaus.Parameters.AddWithValue("@toimipiste_id", Reservation_toimipiste_id);
             database_query_varaus.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
             database_query_varaus.Parameters.AddWithValue("@vahvistus_pvm", vahvistus_pvm);
             database_query_varaus.Parameters.AddWithValue("@varattu_alkupvm", varattu_alkupvm);
@@ -785,7 +780,6 @@ namespace R3_VillagePeople_Mahtimokit
                 var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
                 Match match = find_quantity.Match(cottage_rows.ToString());
                 string majoittujien_maara = match.Groups[1].Value;
-                MessageBox.Show("Majoitus lkm: " + majoittujien_maara);
                 SqlCommand database_query_Varauksen_majoitus = new SqlCommand("INSERT INTO [Varauksen_majoitus] ([varaus_id], [majoitus_id], " +
                     "[majoittujien_maara]) VALUES(@varaus_id, @majoitus_id, @majoittujien_maara)");
                 database_query_Varauksen_majoitus.Connection = main_window.database_connection;
