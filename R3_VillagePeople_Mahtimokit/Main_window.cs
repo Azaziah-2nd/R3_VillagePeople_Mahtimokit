@@ -113,11 +113,11 @@ namespace R3_VillagePeople_Mahtimokit
                 if (data_set.Tables.Count > 0)
                 {
                     dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Cottages_all.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Order_Cottages_All.Columns[0].Visible = false;
-                    dgv_Cottages_all.Columns[0].Visible = false;
+                    dgv_Cottages_All.Columns[0].Visible = false;
                     dgv_Order_Cottages_All.Columns[1].Visible = false;
-                    dgv_Cottages_all.Columns[1].Visible = false;
+                    dgv_Cottages_All.Columns[1].Visible = false;
                 }
             }
         }
@@ -414,9 +414,8 @@ namespace R3_VillagePeople_Mahtimokit
                 // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
                 database_query.ExecuteNonQuery();
                 database_connection.Close();
-                this.Get_customer_names_to_grid();
+                Get_customer_names_to_grid();
             }
-          
         }
 
         private void txt_Services_Search_TextChanged(object sender, EventArgs e)
@@ -570,10 +569,10 @@ namespace R3_VillagePeople_Mahtimokit
             frm.Is_Cottage_edited = true;
 
             // Haetaan valitun DataGridView kentän ID.
-            if (dgv_Cottages_all.SelectedCells.Count > 0)
+            if (dgv_Cottages_All.SelectedCells.Count > 0)
             {
-                int selectedrowindex = dgv_Cottages_all.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgv_Cottages_all.Rows[selectedrowindex];
+                int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
                 frm.Cottage_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
             }
             SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE majoitus_id = @majoitus_id");
@@ -648,7 +647,7 @@ namespace R3_VillagePeople_Mahtimokit
         {
             txt_Order_Cottages_Search.Text = txt_Cottages_Search.Text;
             BindingSource binding_source = new BindingSource();
-            binding_source.DataSource = dgv_Cottages_all.DataSource;
+            binding_source.DataSource = dgv_Cottages_All.DataSource;
             binding_source.Filter = "[nimi] Like '%" + txt_Cottages_Search.Text + "%'";
         }
 
@@ -863,6 +862,51 @@ namespace R3_VillagePeople_Mahtimokit
         private void txt_History_Order_Search_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Services_Delete_Click_1(object sender, EventArgs e)
+        {
+            if (dgv_Cottages_All.SelectedCells.Count > 0)
+            {
+                // Haetaan valitun DataGridView kentän ID.
+                int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
+                string palvelu_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+                SqlCommand database_query = new SqlCommand("DELETE FROM Palvelu WHERE palvelu_id = @palvelu_id");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                database_query.ExecuteNonQuery();
+                database_connection.Close();
+                Get_service_names_to_grid();
+                // Filtteröidän myös varaus välilehden lista
+                Filter_order_services_by_office_and_text();
+            }
+        }
+
+        private void btn_Cottages_Delete_Click_1(object sender, EventArgs e)
+        {
+            if (dgv_Cottages_All.SelectedCells.Count > 0)
+            {
+                // Haetaan valitun DataGridView kentän ID.
+                int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
+                string majoitus_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
+                // Tietokantakysely
+                SqlCommand database_query = new SqlCommand("DELETE FROM Majoitus WHERE majoitus_id = @majoitus_id");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@majoitus_id", majoitus_id);
+                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                database_query.ExecuteNonQuery();
+                database_connection.Close();
+                Get_cottage_names_to_grid();
+                // Filtteröidän myös varaus välilehden lista.
+                Filter_order_cottages_by_office_and_text();
+            }
         }
     }
 }
