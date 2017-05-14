@@ -112,14 +112,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_order_history_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi FROM Majoitus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT varaus_id FROM Varaus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
                 if (data_set.Tables.Count > 0)
                 {
-                    dgv_Order_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
-                    dgv_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_History_Orders_All.DataSource = data_set.Tables[0].DefaultView;
                 }
             }
         }
@@ -217,6 +216,7 @@ namespace R3_VillagePeople_Mahtimokit
             Get_customer_names_to_grid();
             Get_service_names_to_grid();
             Get_cottage_names_to_grid();
+            Get_order_history_to_grid();
             // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
             this.Get_office_names_to_combo();
             Hide_datagridview_id_fields_and_reset_search();
@@ -893,6 +893,9 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
                 database_query_Varauksen_palvelut.ExecuteNonQuery();
                 database_connection.Close();
+                // Päivitetään varaushistoria.
+                Get_order_history_to_grid();
+
             }
         }
 
