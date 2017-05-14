@@ -677,11 +677,19 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
         {
-            string selected_cottage = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
-            string selected_quantity = txt_Order_Cottage_Persons_Quantity.Text.ToString();
-            string[] row = { selected_cottage + " [" + selected_quantity + "]" };
-            var listViewItem = new ListViewItem(row);
-            lsv_Order_Summary_Cottages.Items.Add(listViewItem);
+            string Reservation_Cottage_id = "";
+            if (dgv_Order_Services_All.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_Order_Cottages_All.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_Order_Cottages_All.Rows[selectedrowindex];
+                Reservation_Cottage_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
+                string selected_cottage_name = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
+                string selected_quantity = txt_Order_Cottage_Persons_Quantity.Text.ToString();
+                string[] rowas = { selected_cottage_name + " [" + selected_quantity + "]" };
+                var cottage_details = new ListViewItem(rowas);
+                cottage_details.Tag = Reservation_Cottage_id;
+                lsv_Order_Summary_Cottages.Items.Add(cottage_details);
+            }
         }
 
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
@@ -701,8 +709,6 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show(listViewItem.Tag.ToString());
 
                 lsv_Order_Summary_Services.Items.Add(listViewItem);
-
-
             }
 
 
@@ -718,13 +724,15 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
+            // Alustetaan tietojen lukija
+            SqlDataReader myReader = null;
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
             // Loki taulun päivitys
             string paivittaja = txt_Settings_User_Name.Text.ToString();
             string lisatieto_loki = "WUBBALUBLUBDAA";
-            SqlCommand database_query_loki= new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+            SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
                 "VALUES(@paivittaja, @lisatieto_loki)");
             database_query_loki.Connection = main_window.database_connection;
             database_connection.Open();
@@ -732,10 +740,7 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
             database_query_loki.ExecuteNonQuery();
             database_connection.Close();
-
             // Varaus taulun päivitys
-            // Alustetaan tietojen lukija
-            SqlDataReader myReader = null;
             string toimipiste_id = "2";
             DateTime varattu_pvm = DateTime.Now;
             DateTime vahvistus_pvm = DateTime.Now;
@@ -757,60 +762,61 @@ namespace R3_VillagePeople_Mahtimokit
             database_query_varaus.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
             database_query_varaus.Parameters.AddWithValue("@lisatieto", lisatieto);
             database_query_varaus.ExecuteNonQuery();
-
+            // Valitaan tietokannasta luodun varauksen id aikaleiman perusteella.
             SqlCommand database_query = new SqlCommand("SELECT * FROM Varaus WHERE varattu_pvm = @varattu_pvm");
             database_query.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_query.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
-            // Suoritetaan kysely
             database_query.ExecuteNonQuery();
             myReader = database_query.ExecuteReader();
-            // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
             string varaus_id = "";
             while (myReader.Read())
             {
                 varaus_id = (myReader["varaus_id"].ToString());
-                MessageBox.Show("Varaus id: " + varaus_id);
             }
             database_connection.Close();
+            // Varauksen_majoitus taulun päivitys
+            // Toistetaan silmukkaa kunnes kaikki palvelut on lisätty varaukseen.
+            foreach (ListViewItem cottage_rows in lsv_Order_Summary_Cottages.Items)
+            {
+                // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
+                string majoitus_id = cottage_rows.Tag.ToString();
+                // Regex filtteröi kappalemäärän seuraavasta muodosta: 
+                // ListViewItem: {Rodeo [11]}
+                var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
+                Match match = find_quantity.Match(cottage_rows.ToString());
+                string majoittujien_maara = match.Groups[1].Value;
+                MessageBox.Show("Majoitus lkm: " + majoittujien_maara);
+                SqlCommand database_query_Varauksen_majoitus = new SqlCommand("INSERT INTO [Varauksen_majoitus] ([varaus_id], [majoitus_id], " +
+                    "[majoittujien_maara]) VALUES(@varaus_id, @majoitus_id, @majoittujien_maara)");
+                database_query_Varauksen_majoitus.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_Varauksen_majoitus.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoitus_id", majoitus_id);
+                database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoittujien_maara", majoittujien_maara);
+                database_query_Varauksen_majoitus.ExecuteNonQuery();
+                database_connection.Close();
+            }
             // Varauksen_palvelut taulun päivitys
-
+            // Toistetaan silmukkaa kunnes kaikki palvelut on lisätty varaukseen.
             foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
             {
+                // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
                 string palvelu_id = itemRow.Tag.ToString();
-                // texta += item.ToString();
-                MessageBox.Show("Palvelu_id string = " + palvelu_id);
+                // Regex filtteröi kappalemäärän seuraavasta muodosta: 
+                // ListViewItem: {Rodeo [11]}
                 var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
                 Match match = find_quantity.Match(itemRow.ToString());
                 string lkm = match.Groups[1].Value;
-                MessageBox.Show("Palveluiden lkm: " + lkm);
-
                 SqlCommand database_query_Varauksen_palvelut = new SqlCommand("INSERT INTO [Varauksen_palvelut] ([varaus_id], [palvelu_id], [lkm]) " +
                     "VALUES(@varaus_id, @palvelu_id, @lkm)");
                 database_query_Varauksen_palvelut.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@varaus_id", varaus_id);
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
-                MessageBox.Show("Palvelu ID? " + palvelu_id);
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
-                MessageBox.Show("Palvelu ID_? " + palvelu_id);
                 database_query_Varauksen_palvelut.ExecuteNonQuery();
                 database_connection.Close();
             }
-
-            // Varauksen_majoitus taulun päivitys
-            string majoitus_id = "2";
-            string majoittujien_maara = "1";
-            SqlCommand database_query_Varauksen_majoitus = new SqlCommand("INSERT INTO [Varauksen_majoitus] ([varaus_id], [majoitus_id], [majoittujien_maara]) " +
-                "VALUES(@varaus_id, @majoitus_id, @majoittujien_maara)");
-            database_query_Varauksen_majoitus.Connection = main_window.database_connection;
-            database_connection.Open();
-            database_query_Varauksen_majoitus.Parameters.AddWithValue("@varaus_id", varaus_id);
-            database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoitus_id", majoitus_id);
-            database_query_Varauksen_majoitus.Parameters.AddWithValue("@majoittujien_maara", majoittujien_maara);
-            database_query_Varauksen_majoitus.ExecuteNonQuery();
-            database_connection.Close();
         }
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
