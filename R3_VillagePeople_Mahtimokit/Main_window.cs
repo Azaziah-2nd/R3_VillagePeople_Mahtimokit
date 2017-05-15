@@ -34,12 +34,13 @@ namespace R3_VillagePeople_Mahtimokit
         {
             Load_settings_and_dates();
             // Haetaan tiedot tietokannasta eri kenttiin.
+            // Toimipisteiden haku täytyy suorittaa ensin, muuten mökkien ja palveluiden lisäys varaukseen ei toimi ennen
+            // kuin listasta valitaan manuaalisesti jokin kohde. (null error, liittyy filtteröintiin)
+            Get_office_names_to_combo();
             Get_customer_names_to_grid();
             Get_service_names_to_grid();
             Get_cottage_names_to_grid();
             Get_order_history_to_grid();
-            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
-            this.Get_office_names_to_combo();
             Hide_datagridview_id_fields_and_reset_search();
         }
 
