@@ -285,44 +285,49 @@ namespace R3_VillagePeople_Mahtimokit
             service_list.Filter = filter_services;
         }
 
+        string history_asiakas_id = "";
+        string history_toimipiste_id = "";
         private void Filter_history_orders()
         {
+            // Alustetaan tarvittavat apumuuttujat ja haetaan eri rajaus mekanismien arvot.
             string filer_order_history = "";
+            string filter_by_date = dtp_History_Orders_Filter_Date_End.Value.ToString();
+            Combo_box_item item = new Combo_box_item();
             // Filtteröidään tiedot valittujen hakuarvojen mukaan.
             BindingSource order_history_list = new BindingSource();
             order_history_list.DataSource = dgv_History_Orders_All.DataSource;
-
-            string filter_by_date = dtp_History_Orders_Filter_Date_End.Value.ToString();
-            string filer_history = string.Format("CONVERT(varattu_alkupvm, 'System.String') <= '{0:dd-MM-yyyy:}'",
-                                  filter_by_date);
-
             // Jos sekä asiakas, että toimipiste filtteröinti ovat asetettuja.
-            if (History_asiakas_id != "" && History_toimipiste_id != "")
+            if (history_asiakas_id != "" && history_toimipiste_id != "")
             {
                 filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
                     + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
                     + " AND CONVERT(varaus_id, 'System.String') LIKE '%{3}%'",
-                    History_asiakas_id, filter_by_date, History_toimipiste_id, txt_History_Order_Search.Text);
+                    history_asiakas_id, filter_by_date, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan asiakasfiltteröinti on asetettu.
-            else if (History_asiakas_id != "")
+            else if (history_asiakas_id != "")
             {
                 filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
                     + "(varaus_id, 'System.String') LIKE '%{1}%'",
-                    History_asiakas_id, txt_History_Order_Search.Text);
+                    history_asiakas_id, txt_History_Order_Search.Text);
+
+                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
+                    + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    history_asiakas_id, filter_by_date, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan  toimipiste filtteröinti on asetettu.
-            else if (History_toimipiste_id != "")
+            else if (history_toimipiste_id != "")
             {
-                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND "
-                    + "CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
-                    History_toimipiste_id, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND CONVERT"
+                    + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                     history_toimipiste_id, filter_by_date, txt_History_Order_Search.Text);
             }
             // Jos kumpikaan ei ole asetettu, tapahtuu filtteröinti pelkän hakukentän mukaan.
             else
             {
-                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') LIKE '%{0}%'",
-                txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varattu_alkupvm, 'System.String') <= '{0:dd-MM-yyyy:}' "
+                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
+                        filter_by_date, txt_History_Order_Search.Text);
             }
             // Toteutetaan filtteröinti.
             order_history_list.Filter = filer_order_history;
@@ -1191,36 +1196,33 @@ namespace R3_VillagePeople_Mahtimokit
 
         }
 
-        string History_toimipiste_id;
         private void btn_History_Limit_To_Office_Click(object sender, EventArgs e)
         {
             lbl_History_Order_Filter_Office.Text = "Toimipiste: " + cbo_History_Office_Select.Text.ToString();
-            Combo_box_item item = new Combo_box_item();
-            string History_toimipiste_id = (cbo_History_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            history_toimipiste_id = (cbo_History_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
             Filter_history_orders();
         }
 
-        string History_asiakas_id = "";
         private void btn_History_Limit_To_Customer_Click(object sender, EventArgs e)
         {
             // Asetetaan asiakkaan nimi rajoittimiin.
             string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
             lbl_History_Order_Filter_Customer.Text = ("Asiakas: " + customer_name);
-            // Haetaan asiakas_id ja lisätään se varaushistorian rajauksiin.
             foreach (DataGridViewRow row in dgv_History_Customers_All.SelectedRows)
             {
-                History_asiakas_id = row.Cells[0].Value.ToString();
+                history_asiakas_id = row.Cells[0].Value.ToString();
             }
             Filter_history_orders();
         }
 
         private void btn_History_Order_Filter_Reset_Click(object sender, EventArgs e)
         {
-            History_asiakas_id = "";
-            History_toimipiste_id = "";
+            history_asiakas_id = "";
+            history_toimipiste_id = "";
             lbl_History_Order_Filter_Customer.Text = ("Asiakas: -");
             lbl_History_Order_Filter_Office.Text = ("Toimipiste: -");
             txt_History_Order_Search.Text = "";
+            dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             Filter_history_orders();
         }
 

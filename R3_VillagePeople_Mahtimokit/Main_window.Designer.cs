@@ -1805,7 +1805,7 @@
             this.tbl_History_1st_Col_Customers_Offices.Controls.Add(this.tbl_History_Order_Filter_Summary, 1, 6);
             this.tbl_History_1st_Col_Customers_Offices.Location = new System.Drawing.Point(22, 15);
             this.tbl_History_1st_Col_Customers_Offices.Name = "tbl_History_1st_Col_Customers_Offices";
-            this.tbl_History_1st_Col_Customers_Offices.RowCount = 7;
+            this.tbl_History_1st_Col_Customers_Offices.RowCount = 8;
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1813,6 +1813,7 @@
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tbl_History_1st_Col_Customers_Offices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tbl_History_1st_Col_Customers_Offices.Size = new System.Drawing.Size(294, 610);
             this.tbl_History_1st_Col_Customers_Offices.TabIndex = 0;
             // 
@@ -1837,7 +1838,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.Controls.Add(this.btn_History_Customer_Search, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txt_History_Customer_Search, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 246);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 231);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1871,7 +1872,7 @@
             // 
             this.btn_History_Limit_To_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_History_Limit_To_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Limit_To_Customer.Location = new System.Drawing.Point(8, 293);
+            this.btn_History_Limit_To_Customer.Location = new System.Drawing.Point(8, 278);
             this.btn_History_Limit_To_Customer.Name = "btn_History_Limit_To_Customer";
             this.btn_History_Limit_To_Customer.Size = new System.Drawing.Size(276, 40);
             this.btn_History_Limit_To_Customer.TabIndex = 102;
@@ -1889,7 +1890,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl_History_Office, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbo_History_Office_Select, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_History_Limit_To_Office, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 339);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 324);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -1953,7 +1954,7 @@
             this.dgv_History_Customers_All.ReadOnly = true;
             this.dgv_History_Customers_All.RowHeadersVisible = false;
             this.dgv_History_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_History_Customers_All.Size = new System.Drawing.Size(276, 202);
+            this.dgv_History_Customers_All.Size = new System.Drawing.Size(276, 187);
             this.dgv_History_Customers_All.TabIndex = 108;
             // 
             // tbl_History_Order_Filter_Summary
@@ -1967,7 +1968,7 @@
             this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Office, 0, 2);
             this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Summary, 0, 0);
             this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Customer, 0, 1);
-            this.tbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(8, 450);
+            this.tbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(8, 435);
             this.tbl_History_Order_Filter_Summary.Name = "tbl_History_Order_Filter_Summary";
             this.tbl_History_Order_Filter_Summary.RowCount = 4;
             this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2141,8 +2142,8 @@
             this.tbl_History_Order_Dates.Location = new System.Drawing.Point(3, 3);
             this.tbl_History_Order_Dates.Name = "tbl_History_Order_Dates";
             this.tbl_History_Order_Dates.RowCount = 2;
-            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
-            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
+            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.84848F));
+            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.15151F));
             this.tbl_History_Order_Dates.Size = new System.Drawing.Size(292, 66);
             this.tbl_History_Order_Dates.TabIndex = 111;
             // 
@@ -2151,7 +2152,7 @@
             this.lbl_History_Orders_Filter_Date_End.AutoSize = true;
             this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 0);
             this.lbl_History_Orders_Filter_Date_End.Name = "lbl_History_Orders_Filter_Date_End";
-            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(276, 17);
+            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(276, 20);
             this.lbl_History_Orders_Filter_Date_End.TabIndex = 1;
             this.lbl_History_Orders_Filter_Date_End.Text = "Näytä varaukset ennen valittua päivää";
             // 
@@ -2159,7 +2160,7 @@
             // 
             this.dtp_History_Orders_Filter_Date_End.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 20);
+            this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 25);
             this.dtp_History_Orders_Filter_Date_End.Name = "dtp_History_Orders_Filter_Date_End";
             this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(286, 26);
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
