@@ -125,7 +125,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_order_history_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT varaus_id FROM Varaus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT varaus_id, asiakas_id, toimipiste_id, varattu_alkupvm FROM Varaus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -201,6 +201,8 @@ namespace R3_VillagePeople_Mahtimokit
             else if (tab_index == 2)
             {
                 dgv_History_Customers_All.Columns[0].Visible = false;
+                dgv_History_Orders_All.Columns[1].Visible = false;
+                dgv_History_Orders_All.Columns[2].Visible = false;
             }
         }
 
@@ -232,6 +234,7 @@ namespace R3_VillagePeople_Mahtimokit
             else
             {
                 chk_Common_Settings_History_End_Date_Today.Checked = true;
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             }
             // Haetaan tiedot tietokannasta eri kenttiin.
             Get_customer_names_to_grid();
@@ -280,6 +283,43 @@ namespace R3_VillagePeople_Mahtimokit
             string filter_services = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
             Management_toimipiste_id, txt_Cottages_Search.Text);
             service_list.Filter = filter_services;
+        }
+
+        private void Filter_history_orders()
+        {
+            string filer_order_history = "";
+            // Filtteröidään tiedot valittujen hakuarvojen mukaan.
+            BindingSource order_history_list = new BindingSource();
+            order_history_list.DataSource = dgv_History_Orders_All.DataSource;
+            // Jos sekä asiakas, että toimipiste filtteröinti ovat asetettuja.
+            if (History_asiakas_id != "" && History_toimipiste_id != "")
+            {
+                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND CONVERT"
+                    + "(asiakas_id, 'System.String') LIKE '%{1}%' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    History_toimipiste_id, History_asiakas_id, txt_History_Order_Search.Text);
+            }
+            // Jos ainoastaan asiakasfiltteröinti on asetettu.
+            else if (History_asiakas_id != "")
+            {
+                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
+                    + "(varaus_id, 'System.String') LIKE '%{1}%'",
+                    History_asiakas_id, txt_History_Order_Search.Text);
+            }
+            // Jos ainoastaan  toimipiste filtteröinti on asetettu.
+            else if (History_toimipiste_id != "")
+            {
+                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND "
+                    + "CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
+                    History_toimipiste_id, txt_History_Order_Search.Text);
+            }
+            // Jos kumpikaan ei ole asetettu, tapahtuu filtteröinti pelkän hakukentän mukaan.
+            else
+            {
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') LIKE '%{0}%'",
+                txt_History_Order_Search.Text);
+            }
+            // Toteutetaan filtteröinti.
+            order_history_list.Filter = filer_order_history;
         }
 
         // Asiakkaan lisäys
@@ -946,7 +986,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_History_Order_Search_TextChanged(object sender, EventArgs e)
         {
-
+            Filter_history_orders();
         }
 
         private void btn_Services_Delete_Click_1(object sender, EventArgs e)
@@ -1012,11 +1052,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dgv_History_Orders_All_SelectionChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_History_Order_Search_Click(object sender, EventArgs e)
-        {
             if (dgv_Order_Services_All.SelectedCells.Count > 0)
             {
                 // Tyhjennetään nykyiset palvelut ja mökit.
@@ -1024,10 +1059,13 @@ namespace R3_VillagePeople_Mahtimokit
                 lsv_History_Order_Services.Clear();
                 // Alustetaan apumuuttujat ja haetaan varaus_id.
                 string varaus_id = "";
-                int selectedrowindex = dgv_History_Orders_All.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgv_History_Orders_All.Rows[selectedrowindex];
-                varaus_id = Convert.ToString(selectedRow.Cells["varaus_id"].Value);
+                string toimipiste_id = "";
                 SqlDataReader myReader = null;
+                foreach (DataGridViewRow row in dgv_History_Orders_All.SelectedRows)
+                {
+                    varaus_id = row.Cells[0].Value.ToString();
+                }
+                lbl_History_Order_varaus_id.Text = "Varausnumero: " + varaus_id;
                 // Varauksen perustietojen hakeminen.
                 SqlCommand database_query_order_basic_details = new SqlCommand("SELECT * FROM Varaus WHERE varaus_id = @varaus_id ");
                 database_query_order_basic_details.Connection = database_connection;
@@ -1037,9 +1075,22 @@ namespace R3_VillagePeople_Mahtimokit
                 myReader = database_query_order_basic_details.ExecuteReader();
                 while (myReader.Read())
                 {
+                    toimipiste_id = (myReader["toimipiste_id"].ToString());
                     lbl_History_Order_Start.Text = "Alkamispäivä: " + Convert.ToDateTime(myReader["varattu_alkupvm"]).ToString("dd.MM.yyyy");
                     lbl_History_Order_End.Text = "Päättymispäivä: " + Convert.ToDateTime(myReader["varattu_loppupvm"]).ToString("dd.MM.yyyy");
                     txt_History_Order_Additional_Details.Text = (myReader["lisatieto"].ToString());
+                }
+                database_connection.Close();
+                // Toimipisteen nimen haku
+                SqlCommand database_query_order_office_name = new SqlCommand("SELECT nimi FROM toimipiste WHERE toimipiste_id = @toimipiste_id ");
+                database_query_order_office_name.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_office_name.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                database_query_order_office_name.ExecuteNonQuery();
+                myReader = database_query_order_office_name.ExecuteReader();
+                while (myReader.Read())
+                {
+                    lbl_History_Selected_Order_Office.Text = "Toimipiste: " + (myReader["nimi"].ToString());
                 }
                 database_connection.Close();
                 // Majoitustietojen haku
@@ -1051,7 +1102,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_order_cottage_details.Parameters.AddWithValue("@varaus_id", varaus_id);
                 database_query_order_cottage_details.ExecuteNonQuery();
                 myReader = database_query_order_cottage_details.ExecuteReader();
- 
+
                 while (myReader.Read())
                 {
                     cottage_ids_and_quantities.Add(Convert.ToInt32((myReader["majoitus_id"])), Convert.ToInt32((myReader["majoittujien_maara"])));
@@ -1121,11 +1172,45 @@ namespace R3_VillagePeople_Mahtimokit
                     database_connection.Close();
                     lsv_History_Order_Services.Items.Add(palvelun_nimi + " [" + quantity + "]");
                 }
-
-
-
-
             }
+        }
+
+        private void btn_History_Order_Search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        string History_toimipiste_id;
+        private void btn_History_Limit_To_Office_Click(object sender, EventArgs e)
+        {
+            lbl_History_Order_Filter_Office.Text = "Toimipiste: " + cbo_History_Office_Select.Text.ToString();
+            Combo_box_item item = new Combo_box_item();
+            string History_toimipiste_id = (cbo_History_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            Filter_history_orders();
+        }
+
+        string History_asiakas_id = "";
+        private void btn_History_Limit_To_Customer_Click(object sender, EventArgs e)
+        {
+            // Asetetaan asiakkaan nimi rajoittimiin.
+            string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
+            lbl_History_Order_Filter_Customer.Text = ("Asiakas: " + customer_name);
+            // Haetaan asiakas_id ja lisätään se varaushistorian rajauksiin.
+            foreach (DataGridViewRow row in dgv_History_Customers_All.SelectedRows)
+            {
+                History_asiakas_id = row.Cells[0].Value.ToString();
+            }
+            Filter_history_orders();
+        }
+
+        private void btn_History_Order_Filter_Reset_Click(object sender, EventArgs e)
+        {
+            History_asiakas_id = "";
+            History_toimipiste_id = "";
+            lbl_History_Order_Filter_Customer.Text = ("Asiakas: -");
+            lbl_History_Order_Filter_Office.Text = ("Toimipiste: -");
+            txt_History_Order_Search.Text = "";
+            Filter_history_orders();
         }
     }
 }
