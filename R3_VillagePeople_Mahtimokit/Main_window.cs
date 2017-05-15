@@ -136,6 +136,10 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_History_Orders_All.Columns[0].HeaderText = "Varausnumero";
                     dgv_History_Orders_All.Columns[3].HeaderText = "Varauksen alkamispäivä";
                     dgv_History_Orders_All.Columns[3].DefaultCellStyle.Format = "dd.MM.yyyy";
+                    dgv_History_Orders_All.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_History_Orders_All.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
+                    dgv_History_Orders_All.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_History_Orders_All.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
                 }
             }
         }
