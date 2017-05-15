@@ -2183,6 +2183,8 @@
             this.dgv_History_Orders_All.MultiSelect = false;
             this.dgv_History_Orders_All.Name = "dgv_History_Orders_All";
             this.dgv_History_Orders_All.ReadOnly = true;
+            this.dgv_History_Orders_All.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_History_Orders_All.RowHeadersVisible = false;
             this.dgv_History_Orders_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Orders_All.Size = new System.Drawing.Size(298, 443);
             this.dgv_History_Orders_All.TabIndex = 103;

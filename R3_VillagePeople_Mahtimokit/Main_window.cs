@@ -45,6 +45,7 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
                     // asiakas_id on piilotettu sarake, eli kokonimi = 1, ensimmäinen rivi listassa = 0.
+                    // Tietojen valitseminen tyhjissä tauluissa johtaa virheeseen, lisää tarkistusmekanismi!!!
                     dgv_Order_Customers_All.CurrentCell = dgv_Order_Customers_All[1, 0];
                     dgv_Customers_All.CurrentCell = dgv_Customers_All[1, 0];
                     dgv_History_Customers_All.CurrentCell = dgv_History_Customers_All[1, 0];
@@ -132,8 +133,9 @@ namespace R3_VillagePeople_Mahtimokit
                 if (data_set.Tables.Count > 0)
                 {
                     dgv_History_Orders_All.DataSource = data_set.Tables[0].DefaultView;
-                    // Tietojen valitseminen tyhjissä tauluissa johtaa virheeseen, lisää tarkistusmekanismi!!!
-                    // dgv_History_Orders_All.CurrentCell = dgv_History_Orders_All[0, 0];
+                    dgv_History_Orders_All.Columns[0].HeaderText = "Varausnumero";
+                    dgv_History_Orders_All.Columns[3].HeaderText = "Varauksen alkamispäivä";
+                    dgv_History_Orders_All.Columns[3].DefaultCellStyle.Format = "dd.MM.yyyy";
                 }
             }
         }
