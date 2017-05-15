@@ -23,7 +23,6 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
-
         private void frm_Cottage_Popup_Load(object sender, EventArgs e)
         {
             frm_Main_Window main_window = new frm_Main_Window();

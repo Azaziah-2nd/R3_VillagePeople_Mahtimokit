@@ -290,9 +290,9 @@
             this.tbl_Order_base.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tbl_Order_base.ColumnCount = 6;
             this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.42268F));
-            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.53608F));
+            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.8866F));
+            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.08247F));
+            this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.94845F));
             this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24F));
             this.tbl_Order_base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
             this.tbl_Order_base.Controls.Add(this.tbl_Order_1st_Col_Dates_Customers, 1, 1);
@@ -329,7 +329,7 @@
             this.tbl_Order_1st_Col_Dates_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_1st_Col_Dates_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_1st_Col_Dates_Customers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Order_1st_Col_Dates_Customers.Size = new System.Drawing.Size(207, 610);
+            this.tbl_Order_1st_Col_Dates_Customers.Size = new System.Drawing.Size(216, 610);
             this.tbl_Order_1st_Col_Dates_Customers.TabIndex = 0;
             // 
             // tbl_Order_Customers
@@ -362,7 +362,7 @@
             this.tbl_Order_1st_Col_Dates.RowCount = 2;
             this.tbl_Order_1st_Col_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tbl_Order_1st_Col_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tbl_Order_1st_Col_Dates.Size = new System.Drawing.Size(192, 83);
+            this.tbl_Order_1st_Col_Dates.Size = new System.Drawing.Size(201, 83);
             this.tbl_Order_1st_Col_Dates.TabIndex = 2;
             // 
             // tbl_Order_Date_Selection
@@ -382,13 +382,13 @@
             this.tbl_Order_Date_Selection.RowCount = 2;
             this.tbl_Order_Date_Selection.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
             this.tbl_Order_Date_Selection.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
-            this.tbl_Order_Date_Selection.Size = new System.Drawing.Size(186, 64);
+            this.tbl_Order_Date_Selection.Size = new System.Drawing.Size(195, 64);
             this.tbl_Order_Date_Selection.TabIndex = 112;
             // 
             // lbl_Order_End_Date
             // 
             this.lbl_Order_End_Date.AutoSize = true;
-            this.lbl_Order_End_Date.Location = new System.Drawing.Point(96, 0);
+            this.lbl_Order_End_Date.Location = new System.Drawing.Point(100, 0);
             this.lbl_Order_End_Date.Name = "lbl_Order_End_Date";
             this.lbl_Order_End_Date.Size = new System.Drawing.Size(61, 17);
             this.lbl_Order_End_Date.TabIndex = 1;
@@ -409,7 +409,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Order_Start_Date.Location = new System.Drawing.Point(3, 20);
             this.dtp_Order_Start_Date.Name = "dtp_Order_Start_Date";
-            this.dtp_Order_Start_Date.Size = new System.Drawing.Size(87, 26);
+            this.dtp_Order_Start_Date.Size = new System.Drawing.Size(91, 26);
             this.dtp_Order_Start_Date.TabIndex = 2;
             this.dtp_Order_Start_Date.Value = new System.DateTime(2017, 5, 12, 0, 0, 0, 0);
             this.dtp_Order_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Order_Start_Date_ValueChanged);
@@ -418,9 +418,9 @@
             // 
             this.dtp_Order_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Order_End_Date.Location = new System.Drawing.Point(96, 20);
+            this.dtp_Order_End_Date.Location = new System.Drawing.Point(100, 20);
             this.dtp_Order_End_Date.Name = "dtp_Order_End_Date";
-            this.dtp_Order_End_Date.Size = new System.Drawing.Size(87, 26);
+            this.dtp_Order_End_Date.Size = new System.Drawing.Size(92, 26);
             this.dtp_Order_End_Date.TabIndex = 3;
             this.dtp_Order_End_Date.Value = new System.DateTime(2017, 5, 12, 0, 0, 0, 0);
             this.dtp_Order_End_Date.ValueChanged += new System.EventHandler(this.dtp_Order_End_Date_ValueChanged);
@@ -453,7 +453,7 @@
             this.tbl_Order_1st_Col_Customer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_1st_Col_Customer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tbl_Order_1st_Col_Customer.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Order_1st_Col_Customer.Size = new System.Drawing.Size(192, 485);
+            this.tbl_Order_1st_Col_Customer.Size = new System.Drawing.Size(201, 485);
             this.tbl_Order_1st_Col_Customer.TabIndex = 3;
             // 
             // tbl_Order_Customer_Search
@@ -470,7 +470,7 @@
             this.tbl_Order_Customer_Search.Name = "tbl_Order_Customer_Search";
             this.tbl_Order_Customer_Search.RowCount = 1;
             this.tbl_Order_Customer_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Order_Customer_Search.Size = new System.Drawing.Size(186, 40);
+            this.tbl_Order_Customer_Search.Size = new System.Drawing.Size(195, 40);
             this.tbl_Order_Customer_Search.TabIndex = 0;
             // 
             // btn_Order_Customers_Search
@@ -478,7 +478,7 @@
             this.btn_Order_Customers_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Customers_Search.BackgroundImage")));
             this.btn_Order_Customers_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(149, 3);
+            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(158, 3);
             this.btn_Order_Customers_Search.Name = "btn_Order_Customers_Search";
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 102;
@@ -491,7 +491,7 @@
             this.txt_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Customers_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Customers_Search.Name = "txt_Order_Customers_Search";
-            this.txt_Order_Customers_Search.Size = new System.Drawing.Size(140, 26);
+            this.txt_Order_Customers_Search.Size = new System.Drawing.Size(149, 26);
             this.txt_Order_Customers_Search.TabIndex = 101;
             this.txt_Order_Customers_Search.TextChanged += new System.EventHandler(this.txt_Order_Customers_Search_TextChanged);
             // 
@@ -502,7 +502,7 @@
             this.lbl_Order_Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Order_Customers.Location = new System.Drawing.Point(3, 0);
             this.lbl_Order_Customers.Name = "lbl_Order_Customers";
-            this.lbl_Order_Customers.Size = new System.Drawing.Size(186, 20);
+            this.lbl_Order_Customers.Size = new System.Drawing.Size(195, 20);
             this.lbl_Order_Customers.TabIndex = 103;
             this.lbl_Order_Customers.Text = "Asiakkaan valinta";
             // 
@@ -513,7 +513,7 @@
             this.btn_Order_Customers_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Order_Customers_Add.Location = new System.Drawing.Point(3, 447);
             this.btn_Order_Customers_Add.Name = "btn_Order_Customers_Add";
-            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(186, 35);
+            this.btn_Order_Customers_Add.Size = new System.Drawing.Size(195, 35);
             this.btn_Order_Customers_Add.TabIndex = 105;
             this.btn_Order_Customers_Add.Text = "Lisää varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
@@ -539,7 +539,7 @@
             this.dgv_Order_Customers_All.ReadOnly = true;
             this.dgv_Order_Customers_All.RowHeadersVisible = false;
             this.dgv_Order_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Order_Customers_All.Size = new System.Drawing.Size(186, 372);
+            this.dgv_Order_Customers_All.Size = new System.Drawing.Size(195, 372);
             this.dgv_Order_Customers_All.TabIndex = 106;
             // 
             // tbl_Order_2nd_Col_Offices_Cottage
@@ -560,7 +560,7 @@
             this.tbl_Order_2nd_Col_Offices_Cottage.Controls.Add(this.lbl_Order_Office, 1, 1);
             this.tbl_Order_2nd_Col_Offices_Cottage.Controls.Add(this.cbo_Order_Office_Select, 1, 2);
             this.tbl_Order_2nd_Col_Offices_Cottage.Controls.Add(this.tbl_Order_Cottage_Persons, 1, 8);
-            this.tbl_Order_2nd_Col_Offices_Cottage.Location = new System.Drawing.Point(225, 15);
+            this.tbl_Order_2nd_Col_Offices_Cottage.Location = new System.Drawing.Point(234, 15);
             this.tbl_Order_2nd_Col_Offices_Cottage.Name = "tbl_Order_2nd_Col_Offices_Cottage";
             this.tbl_Order_2nd_Col_Offices_Cottage.RowCount = 12;
             this.tbl_Order_2nd_Col_Offices_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -575,7 +575,7 @@
             this.tbl_Order_2nd_Col_Offices_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tbl_Order_2nd_Col_Offices_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tbl_Order_2nd_Col_Offices_Cottage.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Order_2nd_Col_Offices_Cottage.Size = new System.Drawing.Size(260, 610);
+            this.tbl_Order_2nd_Col_Offices_Cottage.Size = new System.Drawing.Size(247, 610);
             this.tbl_Order_2nd_Col_Offices_Cottage.TabIndex = 1;
             // 
             // lbl_Order_Cottage_Selection
@@ -583,7 +583,7 @@
             this.lbl_Order_Cottage_Selection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Order_Cottage_Selection.AutoSize = true;
             this.lbl_Order_Cottage_Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Order_Cottage_Selection.Location = new System.Drawing.Point(8, 103);
+            this.lbl_Order_Cottage_Selection.Location = new System.Drawing.Point(7, 103);
             this.lbl_Order_Cottage_Selection.Name = "lbl_Order_Cottage_Selection";
             this.lbl_Order_Cottage_Selection.Size = new System.Drawing.Size(158, 20);
             this.lbl_Order_Cottage_Selection.TabIndex = 70;
@@ -603,21 +603,21 @@
             this.dgv_Order_Cottages_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Order_Cottages_All.ColumnHeadersVisible = false;
             this.dgv_Order_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgv_Order_Cottages_All.Location = new System.Drawing.Point(8, 126);
+            this.dgv_Order_Cottages_All.Location = new System.Drawing.Point(7, 126);
             this.dgv_Order_Cottages_All.Name = "dgv_Order_Cottages_All";
             this.dgv_Order_Cottages_All.ReadOnly = true;
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
             this.dgv_Order_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(243, 343);
+            this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(231, 343);
             this.dgv_Order_Cottages_All.TabIndex = 107;
             // 
             // Btn_Order_Cottage_Add
             // 
             this.Btn_Order_Cottage_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(8, 554);
+            this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(7, 554);
             this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
-            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(243, 38);
+            this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(231, 38);
             this.Btn_Order_Cottage_Add.TabIndex = 73;
             this.Btn_Order_Cottage_Add.Text = "Lisää mökki varaukseen";
             this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
@@ -633,11 +633,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.Controls.Add(this.btn_Order_Cottages_Search, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_Order_Cottages_Search, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 512);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 512);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(243, 36);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(231, 36);
             this.tableLayoutPanel2.TabIndex = 108;
             // 
             // btn_Order_Cottages_Search
@@ -645,7 +645,7 @@
             this.btn_Order_Cottages_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Cottages_Search.BackgroundImage")));
             this.btn_Order_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Cottages_Search.Location = new System.Drawing.Point(206, 3);
+            this.btn_Order_Cottages_Search.Location = new System.Drawing.Point(194, 3);
             this.btn_Order_Cottages_Search.Name = "btn_Order_Cottages_Search";
             this.btn_Order_Cottages_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Cottages_Search.TabIndex = 102;
@@ -658,7 +658,7 @@
             this.txt_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Cottages_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Cottages_Search.Name = "txt_Order_Cottages_Search";
-            this.txt_Order_Cottages_Search.Size = new System.Drawing.Size(197, 26);
+            this.txt_Order_Cottages_Search.Size = new System.Drawing.Size(185, 26);
             this.txt_Order_Cottages_Search.TabIndex = 101;
             this.txt_Order_Cottages_Search.TextChanged += new System.EventHandler(this.txt_Order_Cottages_Search_TextChanged);
             // 
@@ -677,7 +677,7 @@
             // 
             this.lbl_Order_Office.AutoSize = true;
             this.lbl_Order_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Order_Office.Location = new System.Drawing.Point(8, 15);
+            this.lbl_Order_Office.Location = new System.Drawing.Point(7, 15);
             this.lbl_Order_Office.Name = "lbl_Order_Office";
             this.lbl_Order_Office.Size = new System.Drawing.Size(167, 20);
             this.lbl_Order_Office.TabIndex = 109;
@@ -689,9 +689,9 @@
             this.cbo_Order_Office_Select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Order_Office_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Order_Office_Select.FormattingEnabled = true;
-            this.cbo_Order_Office_Select.Location = new System.Drawing.Point(8, 55);
+            this.cbo_Order_Office_Select.Location = new System.Drawing.Point(7, 55);
             this.cbo_Order_Office_Select.Name = "cbo_Order_Office_Select";
-            this.cbo_Order_Office_Select.Size = new System.Drawing.Size(243, 28);
+            this.cbo_Order_Office_Select.Size = new System.Drawing.Size(231, 28);
             this.cbo_Order_Office_Select.TabIndex = 110;
             this.cbo_Order_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Order_Office_Select_SelectedIndexChanged);
             // 
@@ -708,18 +708,18 @@
             this.tbl_Order_Cottage_Persons.Controls.Add(this.lbl_Order_Cottage_Persons, 1, 0);
             this.tbl_Order_Cottage_Persons.Controls.Add(this.lbl_Order_Cottage_Persons_Quantity_Units, 3, 0);
             this.tbl_Order_Cottage_Persons.Controls.Add(this.txt_Order_Cottage_Persons_Quantity, 2, 0);
-            this.tbl_Order_Cottage_Persons.Location = new System.Drawing.Point(8, 475);
+            this.tbl_Order_Cottage_Persons.Location = new System.Drawing.Point(7, 475);
             this.tbl_Order_Cottage_Persons.Name = "tbl_Order_Cottage_Persons";
             this.tbl_Order_Cottage_Persons.RowCount = 1;
             this.tbl_Order_Cottage_Persons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Cottage_Persons.Size = new System.Drawing.Size(243, 31);
+            this.tbl_Order_Cottage_Persons.Size = new System.Drawing.Size(231, 31);
             this.tbl_Order_Cottage_Persons.TabIndex = 111;
             // 
             // lbl_Order_Cottage_Persons
             // 
             this.lbl_Order_Cottage_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Order_Cottage_Persons.AutoSize = true;
-            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(27, 0);
+            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(15, 0);
             this.lbl_Order_Cottage_Persons.Name = "lbl_Order_Cottage_Persons";
             this.lbl_Order_Cottage_Persons.Size = new System.Drawing.Size(146, 20);
             this.lbl_Order_Cottage_Persons.TabIndex = 0;
@@ -729,7 +729,7 @@
             // 
             this.lbl_Order_Cottage_Persons_Quantity_Units.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Order_Cottage_Persons_Quantity_Units.AutoSize = true;
-            this.lbl_Order_Cottage_Persons_Quantity_Units.Location = new System.Drawing.Point(210, 0);
+            this.lbl_Order_Cottage_Persons_Quantity_Units.Location = new System.Drawing.Point(198, 0);
             this.lbl_Order_Cottage_Persons_Quantity_Units.Name = "lbl_Order_Cottage_Persons_Quantity_Units";
             this.lbl_Order_Cottage_Persons_Quantity_Units.Size = new System.Drawing.Size(30, 20);
             this.lbl_Order_Cottage_Persons_Quantity_Units.TabIndex = 3;
@@ -739,7 +739,7 @@
             // txt_Order_Cottage_Persons_Quantity
             // 
             this.txt_Order_Cottage_Persons_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(179, 3);
+            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(167, 3);
             this.txt_Order_Cottage_Persons_Quantity.Name = "txt_Order_Cottage_Persons_Quantity";
             this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(25, 26);
             this.txt_Order_Cottage_Persons_Quantity.TabIndex = 2;
@@ -757,7 +757,7 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Controls.Add(this.tbl_Order_3rd_Col_Services, 1, 3);
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Controls.Add(this.btn_Order_Service_add, 1, 4);
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Location = new System.Drawing.Point(491, 15);
+            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Location = new System.Drawing.Point(487, 15);
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.Name = "tbl_Order_3rd_Col_Cottage_Summary_Services";
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowCount = 6;
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -766,7 +766,7 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Size = new System.Drawing.Size(232, 610);
+            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Size = new System.Drawing.Size(236, 610);
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.TabIndex = 2;
             // 
             // tbl_Order_3rd_Col_Services
@@ -787,7 +787,7 @@
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_Order_3rd_Col_Services.Size = new System.Drawing.Size(216, 518);
+            this.tbl_Order_3rd_Col_Services.Size = new System.Drawing.Size(220, 518);
             this.tbl_Order_3rd_Col_Services.TabIndex = 1;
             // 
             // lbl_Order_Services
@@ -818,7 +818,7 @@
             this.tbl_Order_3rd_Col_Services_Quantity.Name = "tbl_Order_3rd_Col_Services_Quantity";
             this.tbl_Order_3rd_Col_Services_Quantity.RowCount = 1;
             this.tbl_Order_3rd_Col_Services_Quantity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Order_3rd_Col_Services_Quantity.Size = new System.Drawing.Size(210, 37);
+            this.tbl_Order_3rd_Col_Services_Quantity.Size = new System.Drawing.Size(214, 37);
             this.tbl_Order_3rd_Col_Services_Quantity.TabIndex = 107;
             // 
             // txt_Order_Services_Search
@@ -828,7 +828,7 @@
             this.txt_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Services_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Services_Search.Name = "txt_Order_Services_Search";
-            this.txt_Order_Services_Search.Size = new System.Drawing.Size(100, 26);
+            this.txt_Order_Services_Search.Size = new System.Drawing.Size(104, 26);
             this.txt_Order_Services_Search.TabIndex = 101;
             this.txt_Order_Services_Search.TextChanged += new System.EventHandler(this.txt_Order_Services_Search_TextChanged);
             // 
@@ -837,7 +837,7 @@
             this.btn_Order_Services_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Services_Search.BackgroundImage")));
             this.btn_Order_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Services_Search.Location = new System.Drawing.Point(109, 3);
+            this.btn_Order_Services_Search.Location = new System.Drawing.Point(113, 3);
             this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
             this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Services_Search.TabIndex = 102;
@@ -846,7 +846,7 @@
             // lbl_Order_Services_Quantity_Units
             // 
             this.lbl_Order_Services_Quantity_Units.AutoSize = true;
-            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(178, 0);
+            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(182, 0);
             this.lbl_Order_Services_Quantity_Units.Name = "lbl_Order_Services_Quantity_Units";
             this.lbl_Order_Services_Quantity_Units.Size = new System.Drawing.Size(29, 20);
             this.lbl_Order_Services_Quantity_Units.TabIndex = 2;
@@ -856,7 +856,7 @@
             // txt_Order_Services_Quantity
             // 
             this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(147, 3);
+            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(151, 3);
             this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
             this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(25, 26);
             this.txt_Order_Services_Quantity.TabIndex = 1;
@@ -881,7 +881,7 @@
             this.dgv_Order_Services_All.ReadOnly = true;
             this.dgv_Order_Services_All.RowHeadersVisible = false;
             this.dgv_Order_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Order_Services_All.Size = new System.Drawing.Size(210, 449);
+            this.dgv_Order_Services_All.Size = new System.Drawing.Size(214, 449);
             this.dgv_Order_Services_All.TabIndex = 108;
             // 
             // btn_Order_Service_add
@@ -891,7 +891,7 @@
             this.btn_Order_Service_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Order_Service_add.Location = new System.Drawing.Point(7, 552);
             this.btn_Order_Service_add.Name = "btn_Order_Service_add";
-            this.btn_Order_Service_add.Size = new System.Drawing.Size(216, 40);
+            this.btn_Order_Service_add.Size = new System.Drawing.Size(220, 40);
             this.btn_Order_Service_add.TabIndex = 106;
             this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
