@@ -811,21 +811,19 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
             // Varaus taulun päivitys
             DateTime varattu_pvm = DateTime.Now;
-            DateTime vahvistus_pvm = DateTime.Now;
             DateTime varattu_alkupvm = dtp_Order_Start_Date.Value;
             DateTime varattu_loppupvm = dtp_Order_End_Date.Value;
             string lisatieto = txt_Order_Additional_Details.Text;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_varaus = new SqlCommand("INSERT INTO [Varaus] ([asiakas_id], [toimipiste_id], [varattu_pvm], " +
-                "[vahvistus_pvm], [varattu_alkupvm], [varattu_loppupvm], [lisatieto]) " +
-                " VALUES(@asiakas_id, @toimipiste_id, @varattu_pvm, @vahvistus_pvm, " +
+                "[varattu_alkupvm], [varattu_loppupvm], [lisatieto]) " +
+                " VALUES(@asiakas_id, @toimipiste_id, @varattu_pvm,  " +
                 "@varattu_alkupvm, @varattu_loppupvm, @lisatieto)");
             database_query_varaus.Connection = main_window.database_connection;
             database_connection.Open();
             database_query_varaus.Parameters.AddWithValue("@asiakas_id", Reservation_asiakas_id);
             database_query_varaus.Parameters.AddWithValue("@toimipiste_id", Reservation_toimipiste_id);
             database_query_varaus.Parameters.AddWithValue("@varattu_pvm", varattu_pvm);
-            database_query_varaus.Parameters.AddWithValue("@vahvistus_pvm", vahvistus_pvm);
             database_query_varaus.Parameters.AddWithValue("@varattu_alkupvm", varattu_alkupvm);
             database_query_varaus.Parameters.AddWithValue("@varattu_loppupvm", varattu_loppupvm);
             database_query_varaus.Parameters.AddWithValue("@lisatieto", lisatieto);
