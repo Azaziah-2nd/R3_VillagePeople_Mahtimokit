@@ -138,10 +138,15 @@
             this.txt_History_Customer_Search = new System.Windows.Forms.TextBox();
             this.btn_History_Limit_To_Customer = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_History_Limit_To_Office = new System.Windows.Forms.Button();
             this.lbl_History_Office = new System.Windows.Forms.Label();
             this.cbo_History_Office_Select = new System.Windows.Forms.ComboBox();
+            this.btn_History_Limit_To_Office = new System.Windows.Forms.Button();
             this.dgv_History_Customers_All = new System.Windows.Forms.DataGridView();
+            this.tbl_History_Order_Filter_Summary = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_History_Order_Filter_Reset = new System.Windows.Forms.Button();
+            this.lbl_History_Order_Filter_Office = new System.Windows.Forms.Label();
+            this.lbl_History_Order_Filter_Summary = new System.Windows.Forms.Label();
+            this.lbl_History_Order_Filter_Customer = new System.Windows.Forms.Label();
             this.tbl_History_2nd_Col_Orders_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_History = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Orders = new System.Windows.Forms.Label();
@@ -164,6 +169,7 @@
             this.lbl_History_Selected_Order_Office = new System.Windows.Forms.Label();
             this.lbl_History_Order_Start = new System.Windows.Forms.Label();
             this.lbl_History_Order_End = new System.Windows.Forms.Label();
+            this.lbl_History_Order_varaus_id = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbl_History_Selected_Order_Cottages_Services = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -192,12 +198,6 @@
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
-            this.tbl_History_Order_Filter_Summary = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_History_Order_Filter_Summary = new System.Windows.Forms.Label();
-            this.lbl_History_Order_Filter_Customer = new System.Windows.Forms.Label();
-            this.lbl_History_Order_Filter_Office = new System.Windows.Forms.Label();
-            this.btn_History_Order_Filter_Reset = new System.Windows.Forms.Button();
-            this.lbl_History_Order_varaus_id = new System.Windows.Forms.Label();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -242,6 +242,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).BeginInit();
+            this.tbl_History_Order_Filter_Summary.SuspendLayout();
             this.tbl_History_2nd_Col_Orders_Dates.SuspendLayout();
             this.tbl_History_Order_History.SuspendLayout();
             this.tbl_History_Order_Search.SuspendLayout();
@@ -259,7 +260,6 @@
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            this.tbl_History_Order_Filter_Summary.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -1902,19 +1902,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 105);
             this.tableLayoutPanel1.TabIndex = 103;
             // 
-            // btn_History_Limit_To_Office
-            // 
-            this.btn_History_Limit_To_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Limit_To_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Limit_To_Office.Location = new System.Drawing.Point(3, 57);
-            this.btn_History_Limit_To_Office.Name = "btn_History_Limit_To_Office";
-            this.btn_History_Limit_To_Office.Size = new System.Drawing.Size(279, 40);
-            this.btn_History_Limit_To_Office.TabIndex = 106;
-            this.btn_History_Limit_To_Office.Text = "Rajoita toimipisteeseen";
-            this.btn_History_Limit_To_Office.UseVisualStyleBackColor = true;
-            this.btn_History_Limit_To_Office.Click += new System.EventHandler(this.btn_History_Limit_To_Office_Click);
-            // 
             // lbl_History_Office
             // 
             this.lbl_History_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1936,6 +1923,19 @@
             this.cbo_History_Office_Select.Name = "cbo_History_Office_Select";
             this.cbo_History_Office_Select.Size = new System.Drawing.Size(279, 28);
             this.cbo_History_Office_Select.TabIndex = 105;
+            // 
+            // btn_History_Limit_To_Office
+            // 
+            this.btn_History_Limit_To_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Limit_To_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Limit_To_Office.Location = new System.Drawing.Point(3, 57);
+            this.btn_History_Limit_To_Office.Name = "btn_History_Limit_To_Office";
+            this.btn_History_Limit_To_Office.Size = new System.Drawing.Size(279, 40);
+            this.btn_History_Limit_To_Office.TabIndex = 106;
+            this.btn_History_Limit_To_Office.Text = "Rajoita toimipisteeseen";
+            this.btn_History_Limit_To_Office.UseVisualStyleBackColor = true;
+            this.btn_History_Limit_To_Office.Click += new System.EventHandler(this.btn_History_Limit_To_Office_Click);
             // 
             // dgv_History_Customers_All
             // 
@@ -1959,6 +1959,69 @@
             this.dgv_History_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Customers_All.Size = new System.Drawing.Size(285, 202);
             this.dgv_History_Customers_All.TabIndex = 108;
+            // 
+            // tbl_History_Order_Filter_Summary
+            // 
+            this.tbl_History_Order_Filter_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_History_Order_Filter_Summary.ColumnCount = 1;
+            this.tbl_History_Order_Filter_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Filter_Summary.Controls.Add(this.btn_History_Order_Filter_Reset, 0, 3);
+            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Office, 0, 2);
+            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Summary, 0, 0);
+            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Customer, 0, 1);
+            this.tbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(9, 450);
+            this.tbl_History_Order_Filter_Summary.Name = "tbl_History_Order_Filter_Summary";
+            this.tbl_History_Order_Filter_Summary.RowCount = 4;
+            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tbl_History_Order_Filter_Summary.Size = new System.Drawing.Size(285, 157);
+            this.tbl_History_Order_Filter_Summary.TabIndex = 109;
+            // 
+            // btn_History_Order_Filter_Reset
+            // 
+            this.btn_History_Order_Filter_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_Filter_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_Filter_Reset.Location = new System.Drawing.Point(3, 113);
+            this.btn_History_Order_Filter_Reset.Name = "btn_History_Order_Filter_Reset";
+            this.btn_History_Order_Filter_Reset.Size = new System.Drawing.Size(279, 41);
+            this.btn_History_Order_Filter_Reset.TabIndex = 107;
+            this.btn_History_Order_Filter_Reset.Text = "Poista rajoitukset";
+            this.btn_History_Order_Filter_Reset.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Filter_Reset.Click += new System.EventHandler(this.btn_History_Order_Filter_Reset_Click);
+            // 
+            // lbl_History_Order_Filter_Office
+            // 
+            this.lbl_History_Order_Filter_Office.AutoSize = true;
+            this.lbl_History_Order_Filter_Office.Location = new System.Drawing.Point(3, 80);
+            this.lbl_History_Order_Filter_Office.Name = "lbl_History_Order_Filter_Office";
+            this.lbl_History_Order_Filter_Office.Size = new System.Drawing.Size(93, 20);
+            this.lbl_History_Order_Filter_Office.TabIndex = 2;
+            this.lbl_History_Order_Filter_Office.Text = "Toimipiste: -";
+            // 
+            // lbl_History_Order_Filter_Summary
+            // 
+            this.lbl_History_Order_Filter_Summary.AutoSize = true;
+            this.lbl_History_Order_Filter_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(3, 0);
+            this.lbl_History_Order_Filter_Summary.Name = "lbl_History_Order_Filter_Summary";
+            this.lbl_History_Order_Filter_Summary.Size = new System.Drawing.Size(234, 20);
+            this.lbl_History_Order_Filter_Summary.TabIndex = 0;
+            this.lbl_History_Order_Filter_Summary.Text = "Voimassa olevat rajoitukset:";
+            // 
+            // lbl_History_Order_Filter_Customer
+            // 
+            this.lbl_History_Order_Filter_Customer.AutoSize = true;
+            this.lbl_History_Order_Filter_Customer.Location = new System.Drawing.Point(3, 40);
+            this.lbl_History_Order_Filter_Customer.Name = "lbl_History_Order_Filter_Customer";
+            this.lbl_History_Order_Filter_Customer.Size = new System.Drawing.Size(78, 20);
+            this.lbl_History_Order_Filter_Customer.TabIndex = 1;
+            this.lbl_History_Order_Filter_Customer.Text = "Asiakas: -";
             // 
             // tbl_History_2nd_Col_Orders_Dates
             // 
@@ -2126,6 +2189,7 @@
             this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(131, 26);
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
+            this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged);
             // 
             // dgv_History_Orders_All
             // 
@@ -2276,6 +2340,15 @@
             this.lbl_History_Order_End.Size = new System.Drawing.Size(119, 20);
             this.lbl_History_Order_End.TabIndex = 95;
             this.lbl_History_Order_End.Text = "Päättymispäivä:";
+            // 
+            // lbl_History_Order_varaus_id
+            // 
+            this.lbl_History_Order_varaus_id.AutoSize = true;
+            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 55);
+            this.lbl_History_Order_varaus_id.Name = "lbl_History_Order_varaus_id";
+            this.lbl_History_Order_varaus_id.Size = new System.Drawing.Size(118, 20);
+            this.lbl_History_Order_varaus_id.TabIndex = 108;
+            this.lbl_History_Order_varaus_id.Text = "Varausnumero:";
             // 
             // label6
             // 
@@ -2660,78 +2733,6 @@
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
             // 
-            // tbl_History_Order_Filter_Summary
-            // 
-            this.tbl_History_Order_Filter_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Filter_Summary.ColumnCount = 1;
-            this.tbl_History_Order_Filter_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Filter_Summary.Controls.Add(this.btn_History_Order_Filter_Reset, 0, 3);
-            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Office, 0, 2);
-            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Summary, 0, 0);
-            this.tbl_History_Order_Filter_Summary.Controls.Add(this.lbl_History_Order_Filter_Customer, 0, 1);
-            this.tbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(9, 450);
-            this.tbl_History_Order_Filter_Summary.Name = "tbl_History_Order_Filter_Summary";
-            this.tbl_History_Order_Filter_Summary.RowCount = 4;
-            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tbl_History_Order_Filter_Summary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tbl_History_Order_Filter_Summary.Size = new System.Drawing.Size(285, 157);
-            this.tbl_History_Order_Filter_Summary.TabIndex = 109;
-            // 
-            // lbl_History_Order_Filter_Summary
-            // 
-            this.lbl_History_Order_Filter_Summary.AutoSize = true;
-            this.lbl_History_Order_Filter_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_History_Order_Filter_Summary.Location = new System.Drawing.Point(3, 0);
-            this.lbl_History_Order_Filter_Summary.Name = "lbl_History_Order_Filter_Summary";
-            this.lbl_History_Order_Filter_Summary.Size = new System.Drawing.Size(234, 20);
-            this.lbl_History_Order_Filter_Summary.TabIndex = 0;
-            this.lbl_History_Order_Filter_Summary.Text = "Voimassa olevat rajoitukset:";
-            // 
-            // lbl_History_Order_Filter_Customer
-            // 
-            this.lbl_History_Order_Filter_Customer.AutoSize = true;
-            this.lbl_History_Order_Filter_Customer.Location = new System.Drawing.Point(3, 40);
-            this.lbl_History_Order_Filter_Customer.Name = "lbl_History_Order_Filter_Customer";
-            this.lbl_History_Order_Filter_Customer.Size = new System.Drawing.Size(78, 20);
-            this.lbl_History_Order_Filter_Customer.TabIndex = 1;
-            this.lbl_History_Order_Filter_Customer.Text = "Asiakas: -";
-            // 
-            // lbl_History_Order_Filter_Office
-            // 
-            this.lbl_History_Order_Filter_Office.AutoSize = true;
-            this.lbl_History_Order_Filter_Office.Location = new System.Drawing.Point(3, 80);
-            this.lbl_History_Order_Filter_Office.Name = "lbl_History_Order_Filter_Office";
-            this.lbl_History_Order_Filter_Office.Size = new System.Drawing.Size(93, 20);
-            this.lbl_History_Order_Filter_Office.TabIndex = 2;
-            this.lbl_History_Order_Filter_Office.Text = "Toimipiste: -";
-            // 
-            // btn_History_Order_Filter_Reset
-            // 
-            this.btn_History_Order_Filter_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_Filter_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_Filter_Reset.Location = new System.Drawing.Point(3, 113);
-            this.btn_History_Order_Filter_Reset.Name = "btn_History_Order_Filter_Reset";
-            this.btn_History_Order_Filter_Reset.Size = new System.Drawing.Size(279, 41);
-            this.btn_History_Order_Filter_Reset.TabIndex = 107;
-            this.btn_History_Order_Filter_Reset.Text = "Poista rajoitukset";
-            this.btn_History_Order_Filter_Reset.UseVisualStyleBackColor = true;
-            this.btn_History_Order_Filter_Reset.Click += new System.EventHandler(this.btn_History_Order_Filter_Reset_Click);
-            // 
-            // lbl_History_Order_varaus_id
-            // 
-            this.lbl_History_Order_varaus_id.AutoSize = true;
-            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 55);
-            this.lbl_History_Order_varaus_id.Name = "lbl_History_Order_varaus_id";
-            this.lbl_History_Order_varaus_id.Size = new System.Drawing.Size(118, 20);
-            this.lbl_History_Order_varaus_id.TabIndex = 108;
-            this.lbl_History_Order_varaus_id.Text = "Varausnumero:";
-            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2810,6 +2811,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History_Customers_All)).EndInit();
+            this.tbl_History_Order_Filter_Summary.ResumeLayout(false);
+            this.tbl_History_Order_Filter_Summary.PerformLayout();
             this.tbl_History_2nd_Col_Orders_Dates.ResumeLayout(false);
             this.tbl_History_Order_History.ResumeLayout(false);
             this.tbl_History_Order_History.PerformLayout();
@@ -2837,8 +2840,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            this.tbl_History_Order_Filter_Summary.ResumeLayout(false);
-            this.tbl_History_Order_Filter_Summary.PerformLayout();
             this.ResumeLayout(false);
 
         }

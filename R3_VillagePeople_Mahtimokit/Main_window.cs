@@ -236,6 +236,8 @@ namespace R3_VillagePeople_Mahtimokit
                 chk_Common_Settings_History_End_Date_Today.Checked = true;
                 dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
             }
+            dtp_Order_Start_Date.Value = DateTime.Today;
+            dtp_Order_End_Date.Value = DateTime.Today;
             // Haetaan tiedot tietokannasta eri kenttiin.
             Get_customer_names_to_grid();
             Get_service_names_to_grid();
@@ -1211,6 +1213,20 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_History_Order_Filter_Office.Text = ("Toimipiste: -");
             txt_History_Order_Search.Text = "";
             Filter_history_orders();
+        }
+
+        private void dtp_History_Orders_Filter_Date_End_ValueChanged(object sender, EventArgs e)
+        {
+
+            BindingSource order_history_list = new BindingSource();
+            order_history_list.DataSource = dgv_History_Orders_All.DataSource;
+
+            string pva_alku = dtp_History_Orders_Filter_Date_Start.Value.ToString();
+            string pva_loppu = dtp_History_Orders_Filter_Date_End.Value.ToString();
+            MessageBox.Show(pva_loppu);
+            string filer_history = string.Format("CONVERT(varattu_alkupvm, 'System.String') <= '{0:dd-MM-yyyy:}'",
+                                  pva_loppu);
+            order_history_list.Filter = filer_history;
         }
     }
 }
