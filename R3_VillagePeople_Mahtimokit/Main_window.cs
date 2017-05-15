@@ -30,6 +30,50 @@ namespace R3_VillagePeople_Mahtimokit
                           Connect Timeout=15;
                           User Instance=False");
 
+        private void Main_window_Load(object sender, EventArgs e)
+        {
+            Load_settings_and_dates();
+            // Haetaan tiedot tietokannasta eri kenttiin.
+            Get_customer_names_to_grid();
+            Get_service_names_to_grid();
+            Get_cottage_names_to_grid();
+            Get_order_history_to_grid();
+            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
+            this.Get_office_names_to_combo();
+            Hide_datagridview_id_fields_and_reset_search();
+        }
+
+        private void Load_settings_and_dates()
+        {
+            // Haetaan päivämäärät varauksen yhteenvetoon.
+            Get_start_date_to_order_summary();
+            Get_end_date_to_order_summary();
+            // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
+            txt_Settings_User_Name.Text = Properties.Settings.Default["user_name"].ToString();
+            // Oletustoimipiste
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Common_Settings_Default_Office.SelectedIndex = cbo_Common_Settings_Default_Office.FindStringExact(default_office);
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+            // Oletushistorian aikaväli
+            dtp_Common_Settings_History_End_Date_Custom.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            // Tarkistetaan käytetäänkö nykyistä päivää vai määriteltyä päivää.
+            if (Convert.ToBoolean(Properties.Settings.Default["default_is_history_end_date_today"]) == false)
+            {
+                chk_Common_Settings_History_End_Date_Today.Checked = false;
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
+            }
+            else
+            {
+                chk_Common_Settings_History_End_Date_Today.Checked = true;
+                dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
+            }
+            dtp_Order_Start_Date.Value = DateTime.Today;
+            dtp_Order_End_Date.Value = DateTime.Today;
+        }
+
+
 
         // DataGriedView elementtien tietojen päivitys.
         private void Get_customer_names_to_grid()
@@ -169,7 +213,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Hide_datagridview_id_fields_and_reset_search()
         {
-            /* Tämä resetoi haut japiilottaa datagridvieweistä asiakas_id, majoitus_id, palvelu_id 
+            /* Tämä resetoi haut jap iilottaa datagridvieweistä asiakas_id, majoitus_id, palvelu_id 
              * sekä toimipiste_id kenttien näkyvyyden valitun välilehden perusteella.
              * Kenttien piilotus ei aina toimi jos ne piilotetaan tietokantojen lataamisen
              * yhteydessä, piilottaminen välilehden mukaan varmistaa halutun lopputuloksen.
@@ -211,45 +255,6 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_History_Orders_All.Columns[2].Visible = false;
             }
         }
-
-        private void Main_window_Load(object sender, EventArgs e)
-        {
-            // Toimipisteiden haku filtteröi varaus välilehden mökit + palvelut toimipisteen mukaan, siksi sen on oltava viimeisenä.
-            this.Get_office_names_to_combo();
-            // Haetaan päivämäärät varauksen yhteenvetoon.
-            Get_start_date_to_order_summary();
-            Get_end_date_to_order_summary();
-            // Ladataan käyttäjän asetukset ja muutetaan kentät vastaamaan niitä.
-            txt_Settings_User_Name.Text = Properties.Settings.Default["user_name"].ToString();
-            // Oletustoimipiste
-            string default_office = Properties.Settings.Default["default_office"].ToString();
-            cbo_Common_Settings_Default_Office.SelectedIndex = cbo_Common_Settings_Default_Office.FindStringExact(default_office);
-            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
-            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
-            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
-            // Oletushistorian aikaväli
-            dtp_Common_Settings_History_End_Date_Custom.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
-            // Tarkistetaan käytetäänkö nykyistä päivää vai määriteltyä päivää.
-            if (Convert.ToBoolean(Properties.Settings.Default["default_is_history_end_date_today"]) == false)
-            {
-                chk_Common_Settings_History_End_Date_Today.Checked = false;
-                dtp_History_Orders_Filter_Date_End.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
-            }
-            else
-            {
-                chk_Common_Settings_History_End_Date_Today.Checked = true;
-                dtp_History_Orders_Filter_Date_End.Value = DateTime.Today;
-            }
-            dtp_Order_Start_Date.Value = DateTime.Today;
-            dtp_Order_End_Date.Value = DateTime.Today;
-            // Haetaan tiedot tietokannasta eri kenttiin.
-            Get_customer_names_to_grid();
-            Get_service_names_to_grid();
-            Get_cottage_names_to_grid();
-            Get_order_history_to_grid();
-            Hide_datagridview_id_fields_and_reset_search();
-        }
-
 
         private void Filter_order_cottages_by_office_and_text()
         {
@@ -338,6 +343,23 @@ namespace R3_VillagePeople_Mahtimokit
             // Toteutetaan filtteröinti.
             order_history_list.Filter = filer_order_history;
         }
+
+        private void Get_start_date_to_order_summary()
+        {
+            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
+            DateTime start_date = dtp_Order_Start_Date.Value;
+            string parsed_start_date = start_date.ToString("dd.MM.yyyy");
+            lbl_Order_Summary_Start_Date.Text = "Alkamispäivä: " + parsed_start_date;
+        }
+
+        private void Get_end_date_to_order_summary()
+        {
+            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
+            DateTime start_date = dtp_Order_End_Date.Value;
+            string parsed_end_date = start_date.ToString("dd.MM.yyyy");
+            lbl_Order_Summary_End_Date.Text = "Päättymispäivä: " + parsed_end_date;
+        }
+
 
         private void btn_Customer_Add_Click(object sender, EventArgs e)
         {
@@ -484,7 +506,6 @@ namespace R3_VillagePeople_Mahtimokit
             frm_Office_Popup frm = new frm_Office_Popup();
             frm.Is_office_edited = true;
             string nimi = cbo_Office_Select.Text.ToString();
-
             SqlCommand database_query = new SqlCommand("SELECT * FROM Toimipiste WHERE nimi = @nimi");
             database_query.Connection = database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
@@ -492,20 +513,12 @@ namespace R3_VillagePeople_Mahtimokit
             database_query.Parameters.AddWithValue("@nimi", nimi);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
-
             // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             myReader = database_query.ExecuteReader();
-
-
             frm.Office_id = (cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
-
-            MessageBox.Show((cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString());
-
-            // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
             while (myReader.Read())
             {
                 frm.txt_Office_Name.Text = (myReader["nimi"].ToString());
@@ -697,24 +710,6 @@ namespace R3_VillagePeople_Mahtimokit
         {
             Filter_management_cottages_by_office_and_text();
         }
-
-
-        private void Get_start_date_to_order_summary()
-        {
-            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
-            DateTime start_date = dtp_Order_Start_Date.Value;
-            string parsed_start_date = start_date.ToString("dd.MM.yyyy");
-            lbl_Order_Summary_Start_Date.Text = "Alkamispäivä: " + parsed_start_date;
-        }
-
-        private void Get_end_date_to_order_summary()
-        {
-            // Haetaan päivämäärä ja asetetaan se varauksen päivämääräksi.
-            DateTime start_date = dtp_Order_End_Date.Value;
-            string parsed_end_date = start_date.ToString("dd.MM.yyyy");
-            lbl_Order_Summary_End_Date.Text = "Päättymispäivä: " + parsed_end_date;
-        }
-
 
         private void dtp_Order_Start_Date_ValueChanged(object sender, EventArgs e)
         {
@@ -1110,11 +1105,6 @@ namespace R3_VillagePeople_Mahtimokit
                     lsv_History_Order_Services.Items.Add(palvelun_nimi + " [" + quantity + "]");
                 }
             }
-        }
-
-        private void btn_History_Order_Search_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_History_Limit_To_Office_Click(object sender, EventArgs e)

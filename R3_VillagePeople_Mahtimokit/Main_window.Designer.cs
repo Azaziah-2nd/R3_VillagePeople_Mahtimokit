@@ -2102,7 +2102,6 @@
             this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
             this.btn_History_Order_Search.TabIndex = 102;
             this.btn_History_Order_Search.UseVisualStyleBackColor = true;
-            this.btn_History_Order_Search.Click += new System.EventHandler(this.btn_History_Order_Search_Click);
             // 
             // txt_History_Order_Search
             // 

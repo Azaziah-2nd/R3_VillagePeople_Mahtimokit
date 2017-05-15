@@ -20,6 +20,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Services_popup_Load(object sender, EventArgs e)
         {
+            // Haetaan toimipisteen comboboxiin tiedot tietokannasta.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlDataReader myReader = null;
             SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
