@@ -37,19 +37,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2017-01-01")]
-        public global::System.DateTime default_history_start_date {
-            get {
-                return ((global::System.DateTime)(this["default_history_start_date"]));
-            }
-            set {
-                this["default_history_start_date"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2017-04-08")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-05-15")]
         public global::System.DateTime default_history_end_date {
             get {
                 return ((global::System.DateTime)(this["default_history_end_date"]));

@@ -5,11 +5,8 @@
     <Setting Name="default_office" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="default_history_start_date" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2017-01-01</Value>
-    </Setting>
     <Setting Name="default_history_end_date" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2017-04-08</Value>
+      <Value Profile="(Default)">2017-05-15</Value>
     </Setting>
     <Setting Name="default_is_history_end_date_today" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
