@@ -968,22 +968,15 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Delete_From_List_Click(object sender, EventArgs e)
         {
-
-            string text = "";
-
-            foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
+            // Poistaa valitun varauksen yhteenvedon mökin tai palvelun. Jos ei valintaa, ei poistoja.
+            foreach (ListViewItem cottage in lsv_Order_Summary_Cottages.SelectedItems)
             {
-                    text += itemRow.ToString();
-                    string palvelu_id = itemRow.Tag.ToString();
-                    MessageBox.Show(text);
-                    MessageBox.Show(palvelu_id);
+                lsv_Order_Summary_Cottages.Items.Remove(cottage);
             }
-            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
-                {
-                    string value1 = row.Cells[0].Value.ToString();
-                    string value2 = row.Cells[1].Value.ToString();
-                    MessageBox.Show(value1 + "  " + value2);
-                }
+            foreach (ListViewItem service in lsv_Order_Summary_Services.SelectedItems)
+            {
+                lsv_Order_Summary_Services.Items.Remove(service);
+            }
         }
 
         private void txt_History_Order_Search_TextChanged(object sender, EventArgs e)
