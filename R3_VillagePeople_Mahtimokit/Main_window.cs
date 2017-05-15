@@ -798,17 +798,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
-            // Loki taulun päivitys
-            string paivittaja = txt_Settings_User_Name.Text.ToString();
-            string lisatieto_loki = "WUBBALUBLUBDAA";
-            SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                "VALUES(@paivittaja, @lisatieto_loki)");
-            database_query_loki.Connection = main_window.database_connection;
-            database_connection.Open();
-            database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-            database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-            database_query_loki.ExecuteNonQuery();
-            database_connection.Close();
             // Varaus taulun päivitys
             DateTime varattu_pvm = DateTime.Now;
             DateTime varattu_alkupvm = dtp_Order_Start_Date.Value;
@@ -880,6 +869,17 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@palvelu_id", palvelu_id);
                 database_query_Varauksen_palvelut.Parameters.AddWithValue("@lkm", lkm);
                 database_query_Varauksen_palvelut.ExecuteNonQuery();
+                database_connection.Close();
+                // Loki taulun päivitys
+                string paivittaja = txt_Settings_User_Name.Text.ToString();
+                string lisatieto_loki = "Luotiin varaus: " + varaus_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
                 // Päivitetään varaushistoria.
                 Get_order_history_to_grid();
@@ -1137,6 +1137,8 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dtp_History_Orders_Filter_Date_End_ValueChanged(object sender, EventArgs e)
         {
+            // Lisätään päivään kellonajaksi 23:59:59, näin kaikki valitun päivän varaukset näytetään listassa.
+            dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_End.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             Filter_history_orders();
         }
 
