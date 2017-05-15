@@ -2236,7 +2236,7 @@
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tbl_History_Selected_Order_Basic_Details.Size = new System.Drawing.Size(276, 185);
+            this.tbl_History_Selected_Order_Basic_Details.Size = new System.Drawing.Size(276, 228);
             this.tbl_History_Selected_Order_Basic_Details.TabIndex = 0;
             // 
             // tbl_History_Order_Details_Delete
@@ -2329,7 +2329,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 446);
+            this.label6.Location = new System.Drawing.Point(105, 460);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 20);
             this.label6.TabIndex = 108;
@@ -2346,7 +2346,7 @@
             this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lsv_History_Order_Cottages, 0, 1);
             this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lsv_History_Order_Services, 0, 3);
             this.tbl_History_Selected_Order_Cottages_Services.Controls.Add(this.lbl_History_Order_Services, 0, 2);
-            this.tbl_History_Selected_Order_Cottages_Services.Location = new System.Drawing.Point(8, 203);
+            this.tbl_History_Selected_Order_Cottages_Services.Location = new System.Drawing.Point(8, 246);
             this.tbl_History_Selected_Order_Cottages_Services.Name = "tbl_History_Selected_Order_Cottages_Services";
             this.tbl_History_Selected_Order_Cottages_Services.RowCount = 5;
             this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -2356,7 +2356,7 @@
             this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_History_Selected_Order_Cottages_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_History_Selected_Order_Cottages_Services.Size = new System.Drawing.Size(276, 240);
+            this.tbl_History_Selected_Order_Cottages_Services.Size = new System.Drawing.Size(276, 211);
             this.tbl_History_Selected_Order_Cottages_Services.TabIndex = 1;
             // 
             // label7
@@ -2378,7 +2378,7 @@
             this.lsv_History_Order_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_History_Order_Cottages.Location = new System.Drawing.Point(3, 23);
             this.lsv_History_Order_Cottages.Name = "lsv_History_Order_Cottages";
-            this.lsv_History_Order_Cottages.Size = new System.Drawing.Size(270, 90);
+            this.lsv_History_Order_Cottages.Size = new System.Drawing.Size(270, 75);
             this.lsv_History_Order_Cottages.TabIndex = 50;
             this.lsv_History_Order_Cottages.UseCompatibleStateImageBehavior = false;
             this.lsv_History_Order_Cottages.View = System.Windows.Forms.View.List;
@@ -2389,9 +2389,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lsv_History_Order_Services.Location = new System.Drawing.Point(3, 139);
+            this.lsv_History_Order_Services.Location = new System.Drawing.Point(3, 124);
             this.lsv_History_Order_Services.Name = "lsv_History_Order_Services";
-            this.lsv_History_Order_Services.Size = new System.Drawing.Size(270, 90);
+            this.lsv_History_Order_Services.Size = new System.Drawing.Size(270, 75);
             this.lsv_History_Order_Services.TabIndex = 52;
             this.lsv_History_Order_Services.UseCompatibleStateImageBehavior = false;
             this.lsv_History_Order_Services.View = System.Windows.Forms.View.List;
@@ -2401,7 +2401,7 @@
             this.lbl_History_Order_Services.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_History_Order_Services.AutoSize = true;
             this.lbl_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_History_Order_Services.Location = new System.Drawing.Point(82, 116);
+            this.lbl_History_Order_Services.Location = new System.Drawing.Point(82, 101);
             this.lbl_History_Order_Services.Name = "lbl_History_Order_Services";
             this.lbl_History_Order_Services.Size = new System.Drawing.Size(112, 20);
             this.lbl_History_Order_Services.TabIndex = 51;
@@ -2412,11 +2412,11 @@
             this.txt_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(8, 469);
+            this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(8, 483);
             this.txt_History_Order_Additional_Details.Multiline = true;
             this.txt_History_Order_Additional_Details.Name = "txt_History_Order_Additional_Details";
             this.txt_History_Order_Additional_Details.ReadOnly = true;
-            this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(276, 122);
+            this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(276, 108);
             this.txt_History_Order_Additional_Details.TabIndex = 109;
             // 
             // tab_Settings
