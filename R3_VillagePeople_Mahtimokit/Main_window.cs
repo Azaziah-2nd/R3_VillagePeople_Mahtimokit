@@ -170,7 +170,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_order_history_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT varaus_id, asiakas_id, toimipiste_id, varattu_alkupvm FROM Varaus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT varaus_id, asiakas_id, toimipiste_id, varattu_pvm FROM Varaus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -178,7 +178,7 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     dgv_History_Orders_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_History_Orders_All.Columns[0].HeaderText = "Varausnumero";
-                    dgv_History_Orders_All.Columns[3].HeaderText = "Varauksen alkamispäivä";
+                    dgv_History_Orders_All.Columns[3].HeaderText = "Varauksen luontipäivä";
                     dgv_History_Orders_All.Columns[3].DefaultCellStyle.Format = "dd.MM.yyyy";
                     dgv_History_Orders_All.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     dgv_History_Orders_All.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
@@ -253,6 +253,8 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_History_Customers_All.Columns[0].Visible = false;
                 dgv_History_Orders_All.Columns[1].Visible = false;
                 dgv_History_Orders_All.Columns[2].Visible = false;
+                // Varaushistoria filtteröidään tiettyyn päivään asti, oletuksena näytetään varaukset jotka on luotu ennen nykyistä päivämäärää.
+                Filter_history_orders();
             }
         }
 
@@ -311,32 +313,29 @@ namespace R3_VillagePeople_Mahtimokit
             if (history_asiakas_id != "" && history_toimipiste_id != "")
             {
                 filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
+                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
                     + " AND CONVERT(varaus_id, 'System.String') LIKE '%{3}%'",
                     history_asiakas_id, filter_by_date, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan asiakasfiltteröinti on asetettu.
             else if (history_asiakas_id != "")
             {
-                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varaus_id, 'System.String') LIKE '%{1}%'",
-                    history_asiakas_id, txt_History_Order_Search.Text);
 
                 filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
                     history_asiakas_id, filter_by_date, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan  toimipiste filtteröinti on asetettu.
             else if (history_toimipiste_id != "")
             {
                 filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_alkupvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
                      history_toimipiste_id, filter_by_date, txt_History_Order_Search.Text);
             }
             // Jos kumpikaan ei ole asetettu, tapahtuu filtteröinti pelkän hakukentän mukaan.
             else
             {
-                filer_order_history = string.Format("CONVERT(varattu_alkupvm, 'System.String') <= '{0:dd-MM-yyyy:}' "
+                filer_order_history = string.Format("CONVERT(varattu_pvm, 'System.String') <= '{0:dd-MM-yyyy:}' "
                     + "AND CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
                         filter_by_date, txt_History_Order_Search.Text);
             }
@@ -1138,6 +1137,40 @@ namespace R3_VillagePeople_Mahtimokit
         private void dtp_History_Orders_Filter_Date_End_ValueChanged(object sender, EventArgs e)
         {
             Filter_history_orders();
+        }
+
+        private void btn_History_Order_History_Del_Click(object sender, EventArgs e)
+        {
+            // Hakee varausnumeron "Varausnumero: x" labelista.
+            var find_reservation_number = new Regex("\\d");
+            Match match = find_reservation_number.Match(lbl_History_Order_varaus_id.Text);
+            string varaus_id_to_delete = match.ToString();
+            // Jos jokin varaus on valittuna:
+            if (varaus_id_to_delete != "")
+            {
+                // Varauksen_majoitus poisto
+                SqlCommand database_query_order_cottage_details = new SqlCommand("DELETE FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
+                database_query_order_cottage_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_cottage_details.Parameters.AddWithValue("@varaus_id", varaus_id_to_delete);
+                database_query_order_cottage_details.ExecuteNonQuery();
+                database_connection.Close();
+                // Varauksen_palvelut poisto
+                SqlCommand database_query_order_service_details = new SqlCommand("DELETE FROM Varauksen_palvelut WHERE varaus_id = @varaus_id");
+                database_query_order_service_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_service_details.Parameters.AddWithValue("@varaus_id", varaus_id_to_delete);
+                database_query_order_service_details.ExecuteNonQuery();
+                database_connection.Close();
+                // Varaus poisto
+                SqlCommand database_query_order_basic_details = new SqlCommand("DELETE FROM Varaus WHERE varaus_id = @varaus_id ");
+                database_query_order_basic_details.Connection = database_connection;
+                database_connection.Open();
+                database_query_order_basic_details.Parameters.AddWithValue("@varaus_id", varaus_id_to_delete);
+                database_query_order_basic_details.ExecuteNonQuery();
+                database_connection.Close();
+            }
+            Get_order_history_to_grid();
         }
     }
 }

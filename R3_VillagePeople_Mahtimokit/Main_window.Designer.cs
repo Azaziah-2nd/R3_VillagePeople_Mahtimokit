@@ -2269,6 +2269,7 @@
             this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
             this.btn_History_Order_History_Del.TabIndex = 115;
             this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
+            this.btn_History_Order_History_Del.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
             // 
             // lbl_History_Selected_Order_Details
             // 
