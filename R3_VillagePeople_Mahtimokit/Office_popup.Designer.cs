@@ -171,7 +171,7 @@
             this.btn_Office_Cancel.TabIndex = 80;
             this.btn_Office_Cancel.Text = "Peruuta";
             this.btn_Office_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click_1);
+            this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click);
             // 
             // lbl_Office_City
             // 

@@ -68,7 +68,7 @@
             this.btn_Service_Cancel.TabIndex = 99;
             this.btn_Service_Cancel.Text = "Peruuta";
             this.btn_Service_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Service_Cancel.Click += new System.EventHandler(this.btn_Service_Cancel_Click_1);
+            this.btn_Service_Cancel.Click += new System.EventHandler(this.btn_Service_Cancel_Click);
             // 
             // lbl_Service_Office
             // 

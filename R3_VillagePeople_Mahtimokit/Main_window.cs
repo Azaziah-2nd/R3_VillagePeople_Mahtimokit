@@ -339,7 +339,7 @@ namespace R3_VillagePeople_Mahtimokit
             order_history_list.Filter = filer_order_history;
         }
 
-        private void btn_Customer_Add_Click_1(object sender, EventArgs e)
+        private void btn_Customer_Add_Click(object sender, EventArgs e)
         {
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "epätosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
@@ -349,7 +349,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
-        private void btn_Services_Add_Click_1(object sender, EventArgs e)
+        private void btn_Services_Add_Click(object sender, EventArgs e)
         {
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = false;
@@ -357,7 +357,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
-        private void btn_Cottages_Add_Click_1(object sender, EventArgs e)
+        private void btn_Cottages_Add_Click(object sender, EventArgs e)
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = false;
@@ -365,7 +365,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
         }
 
-        private void btn_Office_Add_Click_1(object sender, EventArgs e)
+        private void btn_Office_Add_Click(object sender, EventArgs e)
         {
             frm_Office_Popup frm = new frm_Office_Popup();
             frm.Is_office_edited = false;
@@ -450,7 +450,7 @@ namespace R3_VillagePeople_Mahtimokit
         }
 
 
-        private void btn_Customer_Delete_Click_1(object sender, EventArgs e)
+        private void btn_Customer_Delete_Click(object sender, EventArgs e)
         {
             // Hakee nykyisen nimen ja poistaa tiedon tietokannasta sekä päivittää asiakaslistat.
             if (dgv_Customers_All.CurrentCell.Value.ToString() != "")
@@ -478,7 +478,7 @@ namespace R3_VillagePeople_Mahtimokit
             Filter_management_services_by_office_and_text();
         }
 
-        private void btn_Office_Edit_Click_1(object sender, EventArgs e)
+        private void btn_Office_Edit_Click(object sender, EventArgs e)
         {
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Office_Popup frm = new frm_Office_Popup();
@@ -520,7 +520,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
-        private void btn_Customer_Edit_Click_1(object sender, EventArgs e)
+        private void btn_Customer_Edit_Click(object sender, EventArgs e)
         {
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Customer_Popup frm = new frm_Customer_Popup(this);
@@ -560,7 +560,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_customer_names_to_grid_on_close_event);
         }
 
-        private void btn_Services_Edit_Click_1(object sender, EventArgs e)
+        private void btn_Services_Edit_Click(object sender, EventArgs e)
         {
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = true;
@@ -613,7 +613,7 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
-        private void btn_Cottages_Edit_Click_1(object sender, EventArgs e)
+        private void btn_Cottages_Edit_Click(object sender, EventArgs e)
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = true;
@@ -912,7 +912,7 @@ namespace R3_VillagePeople_Mahtimokit
             Filter_history_orders();
         }
 
-        private void btn_Services_Delete_Click_1(object sender, EventArgs e)
+        private void btn_Services_Delete_Click(object sender, EventArgs e)
         {
             if (dgv_Cottages_All.SelectedCells.Count > 0)
             {
@@ -934,7 +934,7 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
-        private void btn_Cottages_Delete_Click_1(object sender, EventArgs e)
+        private void btn_Cottages_Delete_Click(object sender, EventArgs e)
         {
             if (dgv_Cottages_All.SelectedCells.Count > 0)
             {

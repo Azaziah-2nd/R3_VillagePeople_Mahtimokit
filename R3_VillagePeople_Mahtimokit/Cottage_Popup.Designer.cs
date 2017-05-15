@@ -214,7 +214,7 @@
             this.btn_Cottage_Save.TabIndex = 126;
             this.btn_Cottage_Save.Text = "Tallenna";
             this.btn_Cottage_Save.UseVisualStyleBackColor = true;
-            this.btn_Cottage_Save.Click += new System.EventHandler(this.btn_Cottage_Save_Click_1);
+            this.btn_Cottage_Save.Click += new System.EventHandler(this.btn_Cottage_Save_Click);
             // 
             // btn_Cottage_Cancel
             // 

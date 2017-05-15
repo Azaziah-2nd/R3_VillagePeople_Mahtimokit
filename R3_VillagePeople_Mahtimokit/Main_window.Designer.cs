@@ -1275,7 +1275,7 @@
             this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
             this.btn_Customer_Delete.TabIndex = 110;
             this.btn_Customer_Delete.UseVisualStyleBackColor = true;
-            this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click_1);
+            this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click);
             // 
             // btn_Customer_Edit
             // 
@@ -1288,7 +1288,7 @@
             this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Customer_Edit.TabIndex = 109;
             this.btn_Customer_Edit.UseVisualStyleBackColor = true;
-            this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click_1);
+            this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click);
             // 
             // btn_Customer_Add
             // 
@@ -1301,7 +1301,7 @@
             this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
             this.btn_Customer_Add.TabIndex = 108;
             this.btn_Customer_Add.UseVisualStyleBackColor = true;
-            this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click_1);
+            this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click);
             // 
             // dgv_Customers_All
             // 
@@ -1431,7 +1431,7 @@
             this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Office_Edit.TabIndex = 112;
             this.btn_Office_Edit.UseVisualStyleBackColor = true;
-            this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click_1);
+            this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click);
             // 
             // btn_Office_Add
             // 
@@ -1443,7 +1443,7 @@
             this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
             this.btn_Office_Add.TabIndex = 111;
             this.btn_Office_Add.UseVisualStyleBackColor = true;
-            this.btn_Office_Add.Click += new System.EventHandler(this.btn_Office_Add_Click_1);
+            this.btn_Office_Add.Click += new System.EventHandler(this.btn_Office_Add_Click);
             // 
             // tbl_Edit_2nd_Col_Services
             // 
@@ -1546,7 +1546,7 @@
             this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
             this.btn_Services_Delete.TabIndex = 110;
             this.btn_Services_Delete.UseVisualStyleBackColor = true;
-            this.btn_Services_Delete.Click += new System.EventHandler(this.btn_Services_Delete_Click_1);
+            this.btn_Services_Delete.Click += new System.EventHandler(this.btn_Services_Delete_Click);
             // 
             // btn_Services_Edit
             // 
@@ -1559,7 +1559,7 @@
             this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Services_Edit.TabIndex = 109;
             this.btn_Services_Edit.UseVisualStyleBackColor = true;
-            this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click_1);
+            this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click);
             // 
             // btn_Services_Add
             // 
@@ -1572,7 +1572,7 @@
             this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
             this.btn_Services_Add.TabIndex = 108;
             this.btn_Services_Add.UseVisualStyleBackColor = true;
-            this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click_1);
+            this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click);
             // 
             // dgv_Services_All
             // 
@@ -1703,7 +1703,7 @@
             this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
             this.btn_Cottages_Delete.TabIndex = 110;
             this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Delete.Click += new System.EventHandler(this.btn_Cottages_Delete_Click_1);
+            this.btn_Cottages_Delete.Click += new System.EventHandler(this.btn_Cottages_Delete_Click);
             // 
             // btn_Cottages_Edit
             // 
@@ -1716,7 +1716,7 @@
             this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
             this.btn_Cottages_Edit.TabIndex = 109;
             this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click_1);
+            this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click);
             // 
             // btn_Cottages_Add
             // 
@@ -1729,7 +1729,7 @@
             this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
             this.btn_Cottages_Add.TabIndex = 108;
             this.btn_Cottages_Add.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click_1);
+            this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click);
             // 
             // dgv_Cottages_All
             // 

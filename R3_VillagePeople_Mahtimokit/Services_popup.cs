@@ -37,7 +37,7 @@ namespace R3_VillagePeople_Mahtimokit
             main_window.database_connection.Close();
         }
 
-        private void btn_Service_Cancel_Click_1(object sender, EventArgs e)
+        private void btn_Service_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

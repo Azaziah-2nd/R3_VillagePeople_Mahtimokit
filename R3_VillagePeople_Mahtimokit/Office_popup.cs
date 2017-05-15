@@ -23,7 +23,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         }
 
-        private void btn_Office_Cancel_Click_1(object sender, EventArgs e)
+        private void btn_Office_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

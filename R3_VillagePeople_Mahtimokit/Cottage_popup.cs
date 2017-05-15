@@ -18,7 +18,7 @@ namespace R3_VillagePeople_Mahtimokit
             InitializeComponent();
         }
 
-        private void btn_Cottage_Cancel_Click_1(object sender, EventArgs e)
+        private void btn_Cottage_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -44,7 +44,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         public string Cottage_id;
         public bool Is_Cottage_edited;
-        private void btn_Cottage_Save_Click_1(object sender, EventArgs e)
+        private void btn_Cottage_Save_Click(object sender, EventArgs e)
         {
             frm_Main_Window main_window = new frm_Main_Window();
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
@@ -116,11 +116,6 @@ namespace R3_VillagePeople_Mahtimokit
                 database_connection.Close();
             }
             // Suljetaan formi.
-            this.Close();
-        }
-
-        private void btn_Cottage_Cancel_Click(object sender, EventArgs e)
-        {
             this.Close();
         }
     }
