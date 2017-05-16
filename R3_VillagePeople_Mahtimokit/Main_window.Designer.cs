@@ -1144,7 +1144,7 @@
             this.tab_Edit.Padding = new System.Windows.Forms.Padding(3);
             this.tab_Edit.Size = new System.Drawing.Size(976, 648);
             this.tab_Edit.TabIndex = 1;
-            this.tab_Edit.Text = "Tietojen Hallinta";
+            this.tab_Edit.Text = "Tietojen hallinta";
             // 
             // tbl_Edit_base
             // 
