@@ -41,6 +41,7 @@ namespace R3_VillagePeople_Mahtimokit
             Get_service_names_to_grid();
             Get_cottage_names_to_grid();
             Get_order_history_to_grid();
+            Get_log_events_to_grid();
             Hide_datagridview_id_fields_and_reset_search();
         }
 
@@ -188,6 +189,26 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
+
+        private void Get_log_events_to_grid()
+        {
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT paivittaja, lisatieto FROM Loki", database_connection))
+            {
+                DataSet data_set = new DataSet();
+                database_query.Fill(data_set);
+                if (data_set.Tables.Count > 0)
+                {
+                    dgv_Log.DataSource = data_set.Tables[0].DefaultView;
+                    dgv_Log.Columns[0].HeaderText = "Käyttäjä";
+                    dgv_Log.Columns[1].HeaderText = "Selite";
+                    dgv_Log.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_Log.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
+                    dgv_Log.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgv_Log.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
+                }
+            }
+        }
+
 
         // Tietojen päivitys formien sulkemisen yhteydessä.
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
@@ -934,8 +955,9 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
                 database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
-                // Päivitetään varaushistoria.
+                // Päivitetään varaushistoria ja loki.
                 Get_order_history_to_grid();
+                Get_log_events_to_grid();
             }
 
             // Tehhään lasku
