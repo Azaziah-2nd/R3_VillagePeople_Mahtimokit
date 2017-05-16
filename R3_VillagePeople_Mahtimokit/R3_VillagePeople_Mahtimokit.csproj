@@ -104,6 +104,7 @@
     <Compile Include="Services_popup.Designer.cs">
       <DependentUpon>Services_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global_variables.cs" />
     <EmbeddedResource Include="Cottage_Popup.resx">
       <DependentUpon>Cottage_popup.cs</DependentUpon>
     </EmbeddedResource>

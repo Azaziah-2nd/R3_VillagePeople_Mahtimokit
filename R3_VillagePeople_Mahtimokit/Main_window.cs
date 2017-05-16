@@ -41,7 +41,6 @@ namespace R3_VillagePeople_Mahtimokit
             Get_service_names_to_grid();
             Get_cottage_names_to_grid();
             Get_order_history_to_grid();
-            Get_log_events_to_grid();
             Hide_datagridview_id_fields_and_reset_search();
         }
 
@@ -945,8 +944,8 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_Varauksen_palvelut.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string paivittaja = txt_Settings_User_Name.Text.ToString();
-                string lisatieto_loki = "Luotiin varaus: " + varaus_id;
+                string paivittaja = Properties.Settings.Default["user_name"].ToString();
+                string lisatieto_loki = "Luotiin varaus numero: " + varaus_id;
                 SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
                     "VALUES(@paivittaja, @lisatieto_loki)");
                 database_query_loki.Connection = main_window.database_connection;
@@ -955,9 +954,8 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
                 database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
-                // Päivitetään varaushistoria ja loki.
+                // Päivitetään varaushistoria
                 Get_order_history_to_grid();
-                Get_log_events_to_grid();
             }
 
             // Tehhään lasku
@@ -1382,6 +1380,11 @@ namespace R3_VillagePeople_Mahtimokit
                 database_connection.Close();
             }
             Get_order_history_to_grid();
+        }
+
+        private void btn_log_update_grid_Click(object sender, EventArgs e)
+        {
+            Get_log_events_to_grid();
         }
     }
 }

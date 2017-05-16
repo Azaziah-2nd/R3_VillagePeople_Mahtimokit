@@ -175,27 +175,27 @@
             this.lsv_History_Order_Services = new System.Windows.Forms.ListView();
             this.lbl_History_Order_Services = new System.Windows.Forms.Label();
             this.txt_History_Order_Additional_Details = new System.Windows.Forms.TextBox();
-            this.tab_Settings = new System.Windows.Forms.TabPage();
+            this.tab_Settings_Log = new System.Windows.Forms.TabPage();
             this.tbl_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings = new System.Windows.Forms.TableLayoutPanel();
-            this.cbo_Common_Settings_Default_Office = new System.Windows.Forms.ComboBox();
             this.lbl_Settings_Common_Settings = new System.Windows.Forms.Label();
-            this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
+            this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
+            this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
             this.tbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.Label();
             this.chk_Common_Settings_History_End_Date_Today = new System.Windows.Forms.CheckBox();
             this.dtp_Common_Settings_History_End_Date_Custom = new System.Windows.Forms.DateTimePicker();
             this.lbl_Common_Settings_History_End_Date_Custom = new System.Windows.Forms.Label();
+            this.cbo_Common_Settings_Default_Office = new System.Windows.Forms.ComboBox();
+            this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
             this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Log = new System.Windows.Forms.Label();
-            this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
-            this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
+            this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -251,7 +251,7 @@
             this.tbl_History_Selected_Order_Basic_Details.SuspendLayout();
             this.tbl_History_Order_Details_Delete.SuspendLayout();
             this.tbl_History_Selected_Order_Cottages_Services.SuspendLayout();
-            this.tab_Settings.SuspendLayout();
+            this.tab_Settings_Log.SuspendLayout();
             this.tbl_Settings_Base.SuspendLayout();
             this.tbl_Settings_1st_Col_Common_Settings_Base.SuspendLayout();
             this.tbl_Settings_1st_Col_Common_Settings.SuspendLayout();
@@ -266,7 +266,7 @@
             this.tab_Menu.Controls.Add(this.tab_New_Order);
             this.tab_Menu.Controls.Add(this.tab_Edit);
             this.tab_Menu.Controls.Add(this.tab_History);
-            this.tab_Menu.Controls.Add(this.tab_Settings);
+            this.tab_Menu.Controls.Add(this.tab_Settings_Log);
             this.tab_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tab_Menu.Location = new System.Drawing.Point(0, 0);
@@ -2426,16 +2426,16 @@
             this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(276, 108);
             this.txt_History_Order_Additional_Details.TabIndex = 109;
             // 
-            // tab_Settings
+            // tab_Settings_Log
             // 
-            this.tab_Settings.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tab_Settings.Controls.Add(this.tbl_Settings_Base);
-            this.tab_Settings.Location = new System.Drawing.Point(4, 29);
-            this.tab_Settings.Name = "tab_Settings";
-            this.tab_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Settings.Size = new System.Drawing.Size(976, 648);
-            this.tab_Settings.TabIndex = 3;
-            this.tab_Settings.Text = "Asetukset";
+            this.tab_Settings_Log.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_Settings_Log.Controls.Add(this.tbl_Settings_Base);
+            this.tab_Settings_Log.Location = new System.Drawing.Point(4, 29);
+            this.tab_Settings_Log.Name = "tab_Settings_Log";
+            this.tab_Settings_Log.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Settings_Log.Size = new System.Drawing.Size(976, 648);
+            this.tab_Settings_Log.TabIndex = 3;
+            this.tab_Settings_Log.Text = "Asetukset ja loki";
             // 
             // tbl_Settings_Base
             // 
@@ -2513,18 +2513,6 @@
             this.tbl_Settings_1st_Col_Common_Settings.Size = new System.Drawing.Size(292, 416);
             this.tbl_Settings_1st_Col_Common_Settings.TabIndex = 0;
             // 
-            // cbo_Common_Settings_Default_Office
-            // 
-            this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_Common_Settings_Default_Office.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
-            this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 175);
-            this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
-            this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(286, 28);
-            this.cbo_Common_Settings_Default_Office.TabIndex = 16;
-            this.cbo_Common_Settings_Default_Office.SelectedIndexChanged += new System.EventHandler(this.cbo_Common_Settings_Default_Office_SelectedIndexChanged);
-            // 
             // lbl_Settings_Common_Settings
             // 
             this.lbl_Settings_Common_Settings.AutoSize = true;
@@ -2535,15 +2523,25 @@
             this.lbl_Settings_Common_Settings.TabIndex = 0;
             this.lbl_Settings_Common_Settings.Text = "Yleiset asetukset";
             // 
-            // lbl_Common_Settings_Default_Office
+            // txt_Settings_User_Name
             // 
-            this.lbl_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Common_Settings_Default_Office.AutoSize = true;
-            this.lbl_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 152);
-            this.lbl_Common_Settings_Default_Office.Name = "lbl_Common_Settings_Default_Office";
-            this.lbl_Common_Settings_Default_Office.Size = new System.Drawing.Size(122, 20);
-            this.lbl_Common_Settings_Default_Office.TabIndex = 1;
-            this.lbl_Common_Settings_Default_Office.Text = "Oletustoimipiste";
+            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 98);
+            this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
+            this.txt_Settings_User_Name.Size = new System.Drawing.Size(286, 26);
+            this.txt_Settings_User_Name.TabIndex = 3;
+            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
+            // 
+            // lbl_Settings_User_Name
+            // 
+            this.lbl_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Settings_User_Name.AutoSize = true;
+            this.lbl_Settings_User_Name.Location = new System.Drawing.Point(3, 64);
+            this.lbl_Settings_User_Name.Name = "lbl_Settings_User_Name";
+            this.lbl_Settings_User_Name.Size = new System.Drawing.Size(94, 20);
+            this.lbl_Settings_User_Name.TabIndex = 2;
+            this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
             // 
             // lbl_Common_Settings_History_End_Date
             // 
@@ -2611,6 +2609,28 @@
             this.lbl_Common_Settings_History_End_Date_Custom.TabIndex = 23;
             this.lbl_Common_Settings_History_End_Date_Custom.Text = "Mukautettu päivämäärä";
             // 
+            // cbo_Common_Settings_Default_Office
+            // 
+            this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Common_Settings_Default_Office.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
+            this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 175);
+            this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
+            this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(286, 28);
+            this.cbo_Common_Settings_Default_Office.TabIndex = 16;
+            this.cbo_Common_Settings_Default_Office.SelectedIndexChanged += new System.EventHandler(this.cbo_Common_Settings_Default_Office_SelectedIndexChanged);
+            // 
+            // lbl_Common_Settings_Default_Office
+            // 
+            this.lbl_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Common_Settings_Default_Office.AutoSize = true;
+            this.lbl_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 152);
+            this.lbl_Common_Settings_Default_Office.Name = "lbl_Common_Settings_Default_Office";
+            this.lbl_Common_Settings_Default_Office.Size = new System.Drawing.Size(122, 20);
+            this.lbl_Common_Settings_Default_Office.TabIndex = 1;
+            this.lbl_Common_Settings_Default_Office.Text = "Oletustoimipiste";
+            // 
             // tbl_Settings_2nd_Col_UI_Settings_Base
             // 
             this.tbl_Settings_2nd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2660,38 +2680,6 @@
             this.lbl_Log.TabIndex = 0;
             this.lbl_Log.Text = "Loki";
             // 
-            // lbl_Settings_User_Name
-            // 
-            this.lbl_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Settings_User_Name.AutoSize = true;
-            this.lbl_Settings_User_Name.Location = new System.Drawing.Point(3, 64);
-            this.lbl_Settings_User_Name.Name = "lbl_Settings_User_Name";
-            this.lbl_Settings_User_Name.Size = new System.Drawing.Size(94, 20);
-            this.lbl_Settings_User_Name.TabIndex = 2;
-            this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
-            // 
-            // txt_Settings_User_Name
-            // 
-            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 98);
-            this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
-            this.txt_Settings_User_Name.Size = new System.Drawing.Size(286, 26);
-            this.txt_Settings_User_Name.TabIndex = 3;
-            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
-            // 
-            // btn_History_Order_History_Delete
-            // 
-            this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_History_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Delete.BackgroundImage")));
-            this.btn_History_Order_History_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_History_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_History_Delete.Location = new System.Drawing.Point(244, 3);
-            this.btn_History_Order_History_Delete.Name = "btn_History_Order_History_Delete";
-            this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
-            this.btn_History_Order_History_Delete.TabIndex = 114;
-            this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
-            // 
             // dgv_Log
             // 
             this.dgv_Log.AllowUserToAddRows = false;
@@ -2722,6 +2710,19 @@
             this.btn_log_update_grid.TabIndex = 2;
             this.btn_log_update_grid.Text = "Lataa lokitiedot";
             this.btn_log_update_grid.UseVisualStyleBackColor = true;
+            this.btn_log_update_grid.Click += new System.EventHandler(this.btn_log_update_grid_Click);
+            // 
+            // btn_History_Order_History_Delete
+            // 
+            this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_History_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Delete.BackgroundImage")));
+            this.btn_History_Order_History_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_History_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_History_Delete.Location = new System.Drawing.Point(244, 3);
+            this.btn_History_Order_History_Delete.Name = "btn_History_Order_History_Delete";
+            this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
+            this.btn_History_Order_History_Delete.TabIndex = 114;
+            this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
             // 
             // frm_Main_Window
             // 
@@ -2820,7 +2821,7 @@
             this.tbl_History_Order_Details_Delete.PerformLayout();
             this.tbl_History_Selected_Order_Cottages_Services.ResumeLayout(false);
             this.tbl_History_Selected_Order_Cottages_Services.PerformLayout();
-            this.tab_Settings.ResumeLayout(false);
+            this.tab_Settings_Log.ResumeLayout(false);
             this.tbl_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_1st_Col_Common_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_1st_Col_Common_Settings.ResumeLayout(false);
@@ -2840,7 +2841,7 @@
         private System.Windows.Forms.TabControl tab_Menu;
         private System.Windows.Forms.TabPage tab_Edit;
         private System.Windows.Forms.TabPage tab_History;
-        private System.Windows.Forms.TabPage tab_Settings;
+        private System.Windows.Forms.TabPage tab_Settings_Log;
         private System.Windows.Forms.TabPage tab_New_Order;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_base;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_1st_Col_Dates_Customers;
@@ -2977,7 +2978,6 @@
         private System.Windows.Forms.Label lbl_Order_Cottage_Persons_Quantity_Units;
         private System.Windows.Forms.TextBox txt_Order_Cottage_Persons_Quantity;
         private System.Windows.Forms.Label lbl_Settings_User_Name;
-        private System.Windows.Forms.TextBox txt_Settings_User_Name;
         private System.Windows.Forms.DataGridView dgv_History_Orders_All;
         private System.Windows.Forms.TableLayoutPanel tbl_History_3th_Col_Selected_Order_Details;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Selected_Order_Basic_Details;
@@ -3004,5 +3004,6 @@
         private System.Windows.Forms.Label lbl_History_Order_varaus_id;
         private System.Windows.Forms.DataGridView dgv_Log;
         private System.Windows.Forms.Button btn_log_update_grid;
+        public System.Windows.Forms.TextBox txt_Settings_User_Name;
     }
 }
