@@ -957,7 +957,6 @@ namespace R3_VillagePeople_Mahtimokit
                 // Päivitetään varaushistoria
                 Get_order_history_to_grid();
             }
-
             // Tehhään lasku
             frm_Invoicing Invoice = new frm_Invoicing();
             SqlCommand database_query_Customer_invoicing = new SqlCommand("SELECT etunimi, sukunimi, email, lahiosoite, postinro, postitoimipaikka, asuinmaa FROM Asiakas WHERE asiakas_id = @asiakas_id");

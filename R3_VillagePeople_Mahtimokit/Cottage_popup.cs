@@ -101,7 +101,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Muokattiin mökkiä " + nimi + "toimipisteeseen nro.: " + toimipiste_id + " mökin nro.: " + Cottage_id;
+                string lisatieto_loki = "Muokattiin mökkiä " + nimi + " toimipisteeseen nro.: " + toimipiste_id + " mökin nro.: " + Cottage_id;
                 SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
                     "VALUES(@paivittaja, @lisatieto_loki)");
                 database_query_loki.Connection = main_window.database_connection;
@@ -126,7 +126,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Luotiin mökki " + nimi + "toimipisteeseen nro.: " + toimipiste_id;
+                string lisatieto_loki = "Luotiin mökki " + nimi + " toimipisteeseen nro.: " + toimipiste_id;
                 SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
                     "VALUES(@paivittaja, @lisatieto_loki)");
                 database_query_loki.Connection = main_window.database_connection;
