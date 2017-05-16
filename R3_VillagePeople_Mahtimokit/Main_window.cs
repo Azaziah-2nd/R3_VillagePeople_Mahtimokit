@@ -721,38 +721,16 @@ namespace R3_VillagePeople_Mahtimokit
             Get_end_date_to_order_summary();
         }
 
-        // Määritellään tarvittavat muuttujat
         string Reservation_toimipiste_id = "";
         private void cbo_Order_Office_Select_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-                // Vaihdetaan toimipistettä.
-                Combo_box_item item = new Combo_box_item();
-                Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
-                lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
-                // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
-                Filter_order_cottages_by_office_and_text();
-                Filter_order_services_by_office_and_text();
+            Combo_box_item item = new Combo_box_item();
+            Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            lbl_Order_Summary_Office.Text = "Toimipiste: " + cbo_Order_Office_Select.Text.ToString();
+            // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
+            Filter_order_cottages_by_office_and_text();
+            Filter_order_services_by_office_and_text();
         }
-
-        private void cbo_Order_Office_Select_DropDownClosed(object sender, EventArgs e)
-        {
-            // Tarkistetaan onko varaukseen lisätty jo mökkejä tai palveluita.
-            if (lsv_Order_Summary_Cottages.Items.Count == 0 && lsv_Order_Summary_Services.Items.Count == 0)
-            {
-            }
-            else
-            {
-                // Asetetaan toimipisteen valinnan comboboxiin edellinen valittu toimipiste.
-                // Tämä toteutuu edellisen toimipisteen nimen perusteella.
-                cbo_Order_Office_Select.DroppedDown = false;
-                // Tulostetaan virheilmoitus
-                MessageBox.Show("Virhe! Tilaukseen on lisätty jo mökkejä tai palveluita nykyisestä toimipisteestä.\n"
-                + "Jos haluat vaihtaa toimipistettä, poista ensin varauksesta kaikki lisätyt mökit ja palvelut.");
-
-            }
-        }
-
 
         string Reservation_asiakas_id = "";
         private void btn_Order_Customers_Add_Click(object sender, EventArgs e)
@@ -785,23 +763,7 @@ namespace R3_VillagePeople_Mahtimokit
                 string[] rowas = { selected_cottage_name + " [" + selected_quantity + "]" };
                 var cottage_details = new ListViewItem(rowas);
                 cottage_details.Tag = Reservation_Cottage_id;
-                // Tarkistetaan onko varattu mökki jo varauksessa mökin id:n perusteella.
-                List<int> cottage_ids_in_order = new List<int>();
-                foreach (ListViewItem cottages_already_added in lsv_Order_Summary_Cottages.Items)
-                {
-                    // Lisätään kaikki lsitassa olevat mökit tarkistuslistaan.
-                    cottage_ids_in_order.Add(Convert.ToInt32(cottages_already_added.Tag));
-                }
-                if (cottage_ids_in_order.Contains(Convert.ToInt32(Reservation_Cottage_id)))
-                {
-                    MessageBox.Show("Virhe, mökki \"" + selected_cottage_name + "\"on jo lisätty varaukseen!\n\nJos haluat " +
-                        "muuttaa majoittujien määrää, poista mökki\nensin varauksesta ja lisää se sitten uudestaan.");
-                }
-                else
-                {
-                    // Jos mökkiä ei vielä ole listassa, lisätään se listaan.
-                    lsv_Order_Summary_Cottages.Items.Add(cottage_details);
-                }
+                lsv_Order_Summary_Cottages.Items.Add(cottage_details);
             }
         }
 
@@ -818,23 +780,7 @@ namespace R3_VillagePeople_Mahtimokit
                 string[] rowas = { selected_service + " [" + selected_quantity + "]" };
                 var listViewItem = new ListViewItem(rowas);
                 listViewItem.Tag = Reservation_service_id;
-                // Tarkistetaan onko varattu palvelu jo varauksessa palvelun id:n perusteella.
-                List<int> service_ids_in_order = new List<int>();
-                foreach (ListViewItem services_already_added in lsv_Order_Summary_Services.Items)
-                {
-                    // Lisätään kaikki lsitassa olevat palvelut tarkistuslistaan.
-                    service_ids_in_order.Add(Convert.ToInt32(services_already_added.Tag));
-                }
-                if (service_ids_in_order.Contains(Convert.ToInt32(Reservation_service_id)))
-                {
-                    MessageBox.Show("Virhe, palvelu \"" + selected_service + "\"on jo lisätty varaukseen!\n\nJos haluat muuttaa palveluiden " +
-                        "määrää, poista palvelu\nensin varauksesta ja lisää se sitten uudestaan.");
-                }
-                else
-                {
-                    // Jos palvelua ei vielä ole listassa, lisätään se listaan.
-                    lsv_Order_Summary_Services.Items.Add(listViewItem);
-                }
+                lsv_Order_Summary_Services.Items.Add(listViewItem);
             }
         }
 
