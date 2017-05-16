@@ -183,6 +183,7 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_History_Orders_All.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
                     dgv_History_Orders_All.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     dgv_History_Orders_All.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.BottomCenter;
+                    dgv_History_Orders_All.Sort(dgv_History_Orders_All.Columns[0], ListSortDirection.Descending);
                 }
             }
         }

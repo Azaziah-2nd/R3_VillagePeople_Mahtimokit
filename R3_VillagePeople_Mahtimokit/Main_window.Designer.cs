@@ -2156,9 +2156,9 @@
             this.lbl_History_Orders_Filter_Date_End.AutoSize = true;
             this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 0);
             this.lbl_History_Orders_Filter_Date_End.Name = "lbl_History_Orders_Filter_Date_End";
-            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(276, 20);
+            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(272, 20);
             this.lbl_History_Orders_Filter_Date_End.TabIndex = 1;
-            this.lbl_History_Orders_Filter_Date_End.Text = "Näytä varaukset ennen valittua päivää";
+            this.lbl_History_Orders_Filter_Date_End.Text = "Ennen pvm. luodut varaukset näkyvät";
             // 
             // dtp_History_Orders_Filter_Date_End
             // 
