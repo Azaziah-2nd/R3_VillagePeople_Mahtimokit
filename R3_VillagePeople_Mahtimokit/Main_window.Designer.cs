@@ -694,6 +694,7 @@
             this.cbo_Order_Office_Select.Size = new System.Drawing.Size(231, 28);
             this.cbo_Order_Office_Select.TabIndex = 110;
             this.cbo_Order_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Order_Office_Select_SelectedIndexChanged);
+            this.cbo_Order_Office_Select.DropDownClosed += new System.EventHandler(this.cbo_Order_Office_Select_DropDownClosed);
             // 
             // tbl_Order_Cottage_Persons
             // 

@@ -78,6 +78,12 @@
     <Compile Include="Customer_popup.Designer.cs">
       <DependentUpon>Customer_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoicing.Designer.cs">
+      <DependentUpon>Invoicing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Office_popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_popup.resx">
       <DependentUpon>Customer_popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing.resx">
+      <DependentUpon>Invoicing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Office_popup.resx">
       <DependentUpon>Office_popup.cs</DependentUpon>
