@@ -744,7 +744,7 @@ namespace R3_VillagePeople_Mahtimokit
                 Reservation_asiakas_id = row.Cells[0].Value.ToString();
             }
         }
-        //muuttujasta public, että menee laskutukseen
+        // Muuttujasta Main_window juuressa, että menee laskutukseen
         string Reservation_Cottage_id = "";
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
         {
@@ -884,9 +884,8 @@ namespace R3_VillagePeople_Mahtimokit
                 Get_order_history_to_grid();
             }
 
-            //tehhään lasku
+            // Tehhään lasku
             frm_Invoicing Invoice = new frm_Invoicing();
-
             SqlCommand database_query_Customer_invoicing = new SqlCommand("SELECT etunimi, sukunimi, email, lahiosoite, postinro, postitoimipaikka, asuinmaa FROM Asiakas WHERE asiakas_id = @asiakas_id");
             database_query_Customer_invoicing.Connection = main_window.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
@@ -907,9 +906,7 @@ namespace R3_VillagePeople_Mahtimokit
                 Invoice.customer_country = (myReader["asuinmaa"].ToString());
             }
             database_connection.Close();
-
             string[] arr_cottage = new string[6];
-
             SqlCommand database_query_Cottage_invoicing = new SqlCommand("SELECT nimi, hinta FROM Majoitus WHERE majoitus_id = @majoitus_id");
             database_query_Cottage_invoicing.Connection = database_connection;
             database_connection.Open();
@@ -925,8 +922,6 @@ namespace R3_VillagePeople_Mahtimokit
                 arr_cottage[3] = (myReader["hinta"].ToString());
             }
             database_connection.Close();
-            arr_cottage[5] = arr_cottage[3];
-
             SqlCommand database_query_Reservation_invoicing = new SqlCommand("SELECT varattu_alkupvm, varattu_loppupvm FROM Varaus WHERE varaus_id = @varaus_id");
             database_query_Reservation_invoicing.Connection = database_connection;
             database_connection.Open();
@@ -946,15 +941,15 @@ namespace R3_VillagePeople_Mahtimokit
             database_connection.Close();
             Start = Start.Date;
             End = End.Date;
-            arr_cottage[1] = Start.ToString();
-            arr_cottage[2] = End.ToString();
-            //montako päivää ollaan matkalla
+            arr_cottage[1] = Start.ToString("dd.MM.yyyy");
+            arr_cottage[2] = End.ToString("dd.MM.yyyy");
+            // Montako päivää ollaan matkalla
             double days = (End - Start).TotalDays + 1;
             arr_cottage[4] = days.ToString();
-            //päivähinta * päivät = hinta
+            // Päivähinta * päivät = hinta
             double first = double.Parse(arr_cottage[3]);
             int second = int.Parse(arr_cottage[4]);
-            arr_cottage[5] =  (first * second).ToString();
+            arr_cottage[5] =  (first * second).ToString(".00");
             if (days == 1)
             {
                 arr_cottage[4] += " päivä";
@@ -963,17 +958,13 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 arr_cottage[4] += " päivää";
             }
-
             ListViewItem itm_cottage;
             itm_cottage = new ListViewItem(arr_cottage);
             Invoice.lst_Invoicing.Items.Add(itm_cottage);
-
             foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
             {
                 string[] arr_service = new string[6];
-
                 string service_id = itemRow.Tag.ToString();
-
                 SqlCommand database_query_Palveluiden_laskutus = new SqlCommand("SELECT * FROM Palvelu WHERE palvelu_id = @palvelu_id");
                 database_query_Palveluiden_laskutus.Connection = database_connection;
                 database_connection.Open();
@@ -989,13 +980,11 @@ namespace R3_VillagePeople_Mahtimokit
                     arr_service[3] = (myReader["hinta"].ToString());
                 }
                 database_connection.Close();
-                arr_service[1] = "";
-                arr_service[2] = "";
                 var find_quantity = new Regex("[ ][[](\\d{1,10})[]][}]");
                 Match match = find_quantity.Match(itemRow.ToString());
                 string lkm = match.Groups[1].Value;
                 arr_service[4] = lkm;
-                //tehhään lukumäärästä ja hinnasta intti ja sitte kertolasku niistä
+                // Tehhään lukumäärästä ja hinnasta intti ja sitte kertolasku niistä
                 double one = double.Parse(arr_service[3]);
                 double two = double.Parse(arr_service[4]);
                 double sum = one * two;
@@ -1004,7 +993,6 @@ namespace R3_VillagePeople_Mahtimokit
                 itm_service = new ListViewItem(arr_service);
                 Invoice.lst_Invoicing.Items.Add(itm_service);
             }
-
             double total = 0;
             foreach (ListViewItem item in Invoice.lst_Invoicing.Items)
             {
@@ -1019,17 +1007,14 @@ namespace R3_VillagePeople_Mahtimokit
             alv.SubItems.Add((total - no_alv).ToString(".00"));
             Invoice.lst_Invoicing_2nd_Row_Alv.Items.Add(total_no_alv);
             Invoice.lst_Invoicing_2nd_Row_Alv.Items.Add(alv);
-
             ListViewItem total_row = new ListViewItem();
             total_row.SubItems[0].Text = varaus_id;
             total_row.SubItems[0].Font =  new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
             total_row.SubItems.Add("Lasku yhteensä euroa");
             total_row.SubItems.Add(total.ToString(".00"));
             Invoice.lst_Invoicing_Details_Summary.Items.Add(total_row);
-
             Invoice.reference_number = varaus_id;
             Invoice.total = total.ToString(".00");
-
             Invoice.Show();
         }
 

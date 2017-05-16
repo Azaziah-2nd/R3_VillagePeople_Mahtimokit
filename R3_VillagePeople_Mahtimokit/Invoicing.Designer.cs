@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
             this.tbl_Invoicing_5th_Row_Payment_Info = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_5th_Row_1st_Col = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_5th_Row_1st_Col_Receiver_Info = new System.Windows.Forms.TableLayoutPanel();
@@ -116,9 +116,9 @@
             this.Total_label = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Total_2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lst_Invoicing_2nd_Row_Alv = new System.Windows.Forms.ListView();
-            this.tbl_Invoicing_Grey_Background = new System.Windows.Forms.TableLayoutPanel();
             this.info = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbl_Invoicing_Grey_Background = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_5th_Row_Payment_Info.SuspendLayout();
             this.tbl_Invoicing_5th_Row_1st_Col.SuspendLayout();
             this.tbl_Invoicing_5th_Row_1st_Col_Receiver_Info.SuspendLayout();
@@ -1257,10 +1257,10 @@
             this.Count,
             this.Total});
             this.lst_Invoicing.GridLines = true;
-            listViewGroup10.Header = "Selite";
-            listViewGroup10.Name = "Definition";
+            listViewGroup1.Header = "Selite";
+            listViewGroup1.Name = "Definition";
             this.lst_Invoicing.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup10});
+            listViewGroup1});
             this.lst_Invoicing.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lst_Invoicing.Location = new System.Drawing.Point(3, 3);
             this.lst_Invoicing.MaximumSize = new System.Drawing.Size(913, 1000);
@@ -1275,7 +1275,7 @@
             // Definiton
             // 
             this.Definiton.Text = "Selite";
-            this.Definiton.Width = 500;
+            this.Definiton.Width = 529;
             // 
             // Start_date
             // 
@@ -1347,6 +1347,17 @@
             this.lst_Invoicing_2nd_Row_Alv.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing_2nd_Row_Alv.View = System.Windows.Forms.View.Details;
             // 
+            // info
+            // 
+            this.info.Text = "";
+            this.info.Width = 211;
+            // 
+            // amount
+            // 
+            this.amount.Text = "";
+            this.amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.amount.Width = 92;
+            // 
             // tbl_Invoicing_Grey_Background
             // 
             this.tbl_Invoicing_Grey_Background.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1369,17 +1380,6 @@
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(1179, 1446);
             this.tbl_Invoicing_Grey_Background.TabIndex = 1;
-            // 
-            // info
-            // 
-            this.info.Text = "";
-            this.info.Width = 211;
-            // 
-            // amount
-            // 
-            this.amount.Text = "";
-            this.amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.amount.Width = 92;
             // 
             // frm_Invoicing
             // 
