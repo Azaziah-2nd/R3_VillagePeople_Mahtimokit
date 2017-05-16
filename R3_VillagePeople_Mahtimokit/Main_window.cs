@@ -74,8 +74,6 @@ namespace R3_VillagePeople_Mahtimokit
             dtp_Order_End_Date.Value = DateTime.Today;
         }
 
-
-
         // DataGriedView elementtien tietojen päivitys.
         private void Get_customer_names_to_grid()
         {
@@ -495,23 +493,54 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Customer_Delete_Click(object sender, EventArgs e)
         {
             // Hakee nykyisen nimen ja poistaa tiedon tietokannasta sekä päivittää asiakaslistat.
-            if (dgv_Customers_All.CurrentCell.Value.ToString() != "")
+            // Aloitetaan tarkistamalla, että valinta ei ole tyhjä.
+            if (dgv_Customers_All.SelectedRows.Count > 0)
             {
                 string asiakas_id = "";
-                // Haetaan valitun DataGridView kentän ID.
+                // Haetaan valitun asiakkaan ID datagridviewistä.
                 foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
                 {
                     asiakas_id = row.Cells[0].Value.ToString();
                 }
-                SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE asiakas_id = @asiakas_id");
-                database_query.Connection = database_connection;
-                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-                database_connection.Open();
-                database_query.Parameters.AddWithValue("@asiakas_id", asiakas_id);
-                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
-                database_query.ExecuteNonQuery();
-                database_connection.Close();
-                Get_customer_names_to_grid();
+                // Yritetään poistaa asiakasta tietokannasta
+                try
+                {
+                    SqlCommand database_query = new SqlCommand("DELETE FROM Asiakas WHERE asiakas_id = @asiakas_id");
+                    database_query.Connection = database_connection;
+                    // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                    database_connection.Open();
+                    database_query.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+                    // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                    database_query.ExecuteNonQuery();
+                    database_connection.Close();
+                    Get_customer_names_to_grid();
+                }
+                // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
+                catch (SqlException)
+                {
+                    // Suljetaan "try" lohkossa avattu tietokantayhteys ja alustetaan tietojen lukija.
+                    database_connection.Close();
+                    SqlDataReader myReader = null;
+                    // Luodaan lista asiakkaan varausnumeroita varten.
+                    List<int> customer_orders = new List<int>();
+                    SqlCommand database_query_get_customer_reservations = new SqlCommand("SELECT varaus_id FROM Varaus WHERE asiakas_id = @asiakas_id");
+                    database_query_get_customer_reservations.Connection = database_connection;
+                    database_connection.Open();
+                    // Haetaan asiakas_id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
+                    database_query_get_customer_reservations.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+                    database_query_get_customer_reservations.ExecuteNonQuery();
+                    myReader = database_query_get_customer_reservations.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        customer_orders.Add(Convert.ToInt32((myReader["varaus_id"])));
+                    }
+                    // Suljetaan yhteys ja tulostetaan virheilmoitus.
+                    database_connection.Close();
+                    var all_customer_orders = string.Join(",  ", customer_orders);
+                    MessageBox.Show("Virhe! Asiakas on yhdistetty seuraaviin varausnumeroihin:\n\n" +
+                        all_customer_orders + "\n\nJos haluat poistaa tämän asiakkaan, on sinun ensin " +
+                        "poistettava\nkaikki tämän asiakkaan tekemät varaukset varaushistoriasta.");
+                }
             }
         }
 
@@ -1118,17 +1147,45 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
                 string palvelu_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
-                SqlCommand database_query = new SqlCommand("DELETE FROM Palvelu WHERE palvelu_id = @palvelu_id");
-                database_query.Connection = database_connection;
-                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
+                SqlDataReader myReader = null;
+                // Luodaan lista asiakkaan varausnumeroita varten.
+                List<int> service_orders = new List<int>();
+                SqlCommand database_query_get_service_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_palvelut WHERE palvelu_id = @palvelu_id");
+                database_query_get_service_reservations.Connection = database_connection;
                 database_connection.Open();
-                database_query.Parameters.AddWithValue("@palvelu_id", palvelu_id);
-                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
-                database_query.ExecuteNonQuery();
+                // Haetaan id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
+                database_query_get_service_reservations.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+                database_query_get_service_reservations.ExecuteNonQuery();
+                myReader = database_query_get_service_reservations.ExecuteReader();
+                while (myReader.Read())
+                {
+                    service_orders.Add(Convert.ToInt32((myReader["varaus_id"])));
+                }
+                // Suljetaan yhteys ja tulostetaan virheilmoitus.
                 database_connection.Close();
-                Get_service_names_to_grid();
-                // Filtteröidän myös varaus välilehden lista
-                Filter_order_services_by_office_and_text();
+                // Jos  palvelu löytyy jostakin varauksesta, tulostetaan palveluun yhdistetyt varaukset virheilmoituksessa.
+                if (service_orders.Count > 0)
+                {
+                    var all_service_orders = string.Join(",  ", service_orders);
+                    MessageBox.Show("Virhe! Palvelu on yhdistetty seuraaviin varausnumeroihin:\n\n" +
+                        all_service_orders + "\n\nJos haluat poistaa tämän palvelun, on sinun ensin " +
+                        "poistettava\nkaikki tätä palvelua sisältävät varaukset varaushistoriasta.");
+                }
+                else
+                {
+                    SqlCommand database_query = new SqlCommand("DELETE FROM Palvelu WHERE palvelu_id = @palvelu_id");
+                    database_query.Connection = database_connection;
+                    // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                    database_connection.Open();
+                    database_query.Parameters.AddWithValue("@palvelu_id", palvelu_id);
+                    // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                    database_query.ExecuteNonQuery();
+                    database_connection.Close();
+                    Get_service_names_to_grid();
+                    // Filtteröidän myös varaus välilehden lista
+                    Filter_order_services_by_office_and_text();
+                }
             }
         }
 
@@ -1140,21 +1197,46 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
                 string majoitus_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
-                // Tietokantakysely
-                SqlCommand database_query = new SqlCommand("DELETE FROM Majoitus WHERE majoitus_id = @majoitus_id");
-                database_query.Connection = database_connection;
-                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
+                SqlDataReader myReader = null;
+                List<int> service_cottages = new List<int>();
+                SqlCommand database_query_get_cottage_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_majoitus WHERE majoitus_id = @majoitus_id");
+                database_query_get_cottage_reservations.Connection = database_connection;
                 database_connection.Open();
-                database_query.Parameters.AddWithValue("@majoitus_id", majoitus_id);
-                // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
-                database_query.ExecuteNonQuery();
+                // Haetaan id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
+                database_query_get_cottage_reservations.Parameters.AddWithValue("@majoitus_id", majoitus_id);
+                database_query_get_cottage_reservations.ExecuteNonQuery();
+                myReader = database_query_get_cottage_reservations.ExecuteReader();
+                while (myReader.Read())
+                {
+                    service_cottages.Add(Convert.ToInt32((myReader["varaus_id"])));
+                }
+                // Suljetaan yhteys ja tulostetaan virheilmoitus.
                 database_connection.Close();
-                Get_cottage_names_to_grid();
-                // Filtteröidän myös varaus välilehden lista.
-                Filter_order_cottages_by_office_and_text();
+                // Jos  palvelu löytyy jostakin varauksesta, tulostetaan palveluun yhdistetyt varaukset virheilmoituksessa.
+                if (service_cottages.Count > 0)
+                {
+                    var all_service_cottages = string.Join(",  ", service_cottages);
+                    MessageBox.Show("Virhe! Mökki on yhdistetty seuraaviin varausnumeroihin:\n\n" +
+                        all_service_cottages + "\n\nJos haluat poistaa tämän mökin, on sinun ensin " +
+                        "poistettava\nkaikki tämän mökin sisältävät varaukset varaushistoriasta.");
+                }
+                else
+                {
+                    // Tietokantakysely
+                    SqlCommand database_query = new SqlCommand("DELETE FROM Majoitus WHERE majoitus_id = @majoitus_id");
+                    database_query.Connection = database_connection;
+                    // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                    database_connection.Open();
+                    database_query.Parameters.AddWithValue("@majoitus_id", majoitus_id);
+                    // Suoritetaan kysely, suljetaan tietokantayhteys ja päivitetään kentät.
+                    database_query.ExecuteNonQuery();
+                    database_connection.Close();
+                    Get_cottage_names_to_grid();
+                    Filter_order_cottages_by_office_and_text();
+                }
             }
         }
-
 
         private void tab_Menu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1237,7 +1319,6 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_order_cottage_details.Parameters.AddWithValue("@varaus_id", varaus_id);
                 database_query_order_cottage_details.ExecuteNonQuery();
                 myReader = database_query_order_cottage_details.ExecuteReader();
-
                 while (myReader.Read())
                 {
                     cottage_ids_and_quantities.Add(Convert.ToInt32((myReader["majoitus_id"])), Convert.ToInt32((myReader["majoittujien_maara"])));
@@ -1384,6 +1465,48 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_log_update_grid_Click(object sender, EventArgs e)
         {
             Get_log_events_to_grid();
+        }
+
+        private void btn_Office_Delete_Click(object sender, EventArgs e)
+        {
+            string toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            // Yritetään poistaa toimipistettä tietokannasta
+            try
+            {
+                SqlCommand database_query = new SqlCommand("DELETE FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+                database_query.Connection = database_connection;
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                database_query.ExecuteNonQuery();
+                database_connection.Close();
+                Get_office_names_to_combo();
+            }
+            // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
+            catch (SqlException)
+            {
+                // Suljetaan "try" lohkossa avattu tietokantayhteys ja alustetaan tietojen lukija.
+                database_connection.Close();
+                SqlDataReader myReader = null;
+                // Luodaan lista asiakkaan varausnumeroita varten.
+                List<int> office_orders = new List<int>();
+                SqlCommand database_query_get_office_orders = new SqlCommand("SELECT varaus_id FROM Varaus WHERE toimipiste_id = @toimipiste_id");
+                database_query_get_office_orders.Connection = database_connection;
+                database_connection.Open();
+                // Haetaan asiakas_id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
+                database_query_get_office_orders.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                database_query_get_office_orders.ExecuteNonQuery();
+                myReader = database_query_get_office_orders.ExecuteReader();
+                while (myReader.Read())
+                {
+                    office_orders.Add(Convert.ToInt32((myReader["varaus_id"])));
+                }
+                // Suljetaan yhteys ja tulostetaan virheilmoitus.
+                database_connection.Close();
+                var all_office_orders = string.Join(",  ", office_orders);
+                MessageBox.Show("Virhe! Toimipiste on yhdistetty seuraaviin varausnumeroihin:\n\n" +
+                    all_office_orders + "\n\nJos haluat poistaa tämän toimipisteen, on sinun ensin " +
+                    "poistettava\nkaikki tähän toimipisteeseen liitetyt varaukset varaushistoriasta.");
+            }
         }
     }
 }

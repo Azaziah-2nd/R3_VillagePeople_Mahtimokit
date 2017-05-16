@@ -1377,9 +1377,9 @@
             this.lbl_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Office.Location = new System.Drawing.Point(3, 0);
             this.lbl_Office.Name = "lbl_Office";
-            this.lbl_Office.Size = new System.Drawing.Size(187, 20);
+            this.lbl_Office.Size = new System.Drawing.Size(263, 20);
             this.lbl_Office.TabIndex = 104;
-            this.lbl_Office.Text = "Toimipisteiden hallinta";
+            this.lbl_Office.Text = "Toimipisteiden valinta ja hallinta";
             // 
             // cbo_Office_Select
             // 
@@ -1423,6 +1423,7 @@
             this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
             this.btn_Office_Delete.TabIndex = 113;
             this.btn_Office_Delete.UseVisualStyleBackColor = true;
+            this.btn_Office_Delete.Click += new System.EventHandler(this.btn_Office_Delete_Click);
             // 
             // btn_Office_Edit
             // 
@@ -1477,9 +1478,9 @@
             this.lbl_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Services.Location = new System.Drawing.Point(3, 0);
             this.lbl_Services.Name = "lbl_Services";
-            this.lbl_Services.Size = new System.Drawing.Size(163, 20);
+            this.lbl_Services.Size = new System.Drawing.Size(268, 20);
             this.lbl_Services.TabIndex = 78;
-            this.lbl_Services.Text = "Palveluiden hallinta";
+            this.lbl_Services.Text = "Toimipisteen palveluiden hallinta";
             // 
             // tbl_Edit_2nd_Col_Services_Search
             // 
@@ -1633,9 +1634,9 @@
             this.lbl_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cottages.Location = new System.Drawing.Point(9, 15);
             this.lbl_Cottages.Name = "lbl_Cottages";
-            this.lbl_Cottages.Size = new System.Drawing.Size(138, 20);
+            this.lbl_Cottages.Size = new System.Drawing.Size(244, 20);
             this.lbl_Cottages.TabIndex = 78;
-            this.lbl_Cottages.Text = "Mökkien hallinta";
+            this.lbl_Cottages.Text = "Toimipisteen mökkien hallinta";
             // 
             // tbl_Edit_3rd_Col_Cottages_Search
             // 
