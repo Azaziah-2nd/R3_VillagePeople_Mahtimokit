@@ -14,8 +14,6 @@ using System.Text.RegularExpressions;
 namespace R3_VillagePeople_Mahtimokit
 {
 
-
-
     public partial class frm_Main_Window : Form
     {
         public frm_Main_Window()
