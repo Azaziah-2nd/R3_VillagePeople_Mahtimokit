@@ -85,11 +85,12 @@ namespace R3_VillagePeople_Mahtimokit
 
             SqlCommand database_query_update = new SqlCommand("UPDATE Majoitus SET toimipiste_id=@toimipiste_id, nimi=@nimi, kuvaus=@kuvaus, " +
                 "hinta=@hinta, max_henkilot=@max_henkilot, koko=@koko, wlan=@wlan WHERE majoitus_id = @majoitus_id");
+            string paivittaja = Properties.Settings.Default["user_name"].ToString();
             if (this.Is_Cottage_edited == true)
             {
                 database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
-                database_query_update.Parameters.AddWithValue("@majoitus_id", this.Cottage_id);
+                database_query_update.Parameters.AddWithValue("@majoitus_id", Cottage_id);
                 database_query_update.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query_update.Parameters.AddWithValue("@nimi", nimi);
                 database_query_update.Parameters.AddWithValue("@kuvaus", kuvaus);
@@ -99,8 +100,18 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.Parameters.AddWithValue("@wlan", wlan);
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Muokattiin mökkiä " + nimi + " toimipisteeseen nro.: " + toimipiste_id + " mökin nro.: " + Cottage_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
+                database_connection.Close();
             }
-            // Jos luodaan uusi.
+            // Jos luodaan uusi
             else
             {
                 database_query_new.Connection = main_window.database_connection;
@@ -113,6 +124,16 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.Parameters.AddWithValue("@koko", koko);
                 database_query_new.Parameters.AddWithValue("@wlan", wlan);
                 database_query_new.ExecuteNonQuery();
+                database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Luotiin mökki " + nimi + " toimipisteeseen nro.: " + toimipiste_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
             }
             // Suljetaan formi.

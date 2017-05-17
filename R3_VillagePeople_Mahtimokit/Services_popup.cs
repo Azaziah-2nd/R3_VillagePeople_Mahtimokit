@@ -81,14 +81,13 @@ namespace R3_VillagePeople_Mahtimokit
 
             SqlCommand database_query_update = new SqlCommand("UPDATE Palvelu SET toimipiste_id=@toimipiste_id, nimi=@nimi, kuvaus=@kuvaus, " +
                 "max_osallistujat=@max_osallistujat, hinta=@hinta, alv=@alv WHERE palvelu_id = @palvelu_id");
-            // Jos muokataan asiakasta.
-
+            string paivittaja = Properties.Settings.Default["user_name"].ToString();
+            // Jos muokataan palvelua.
             if (this.Is_service_edited == true)
             {
-                // Käytetään asiakkaan muokkauksen yhteyttä.
                 database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
-                database_query_update.Parameters.AddWithValue("@palvelu_id", this.Service_id);
+                database_query_update.Parameters.AddWithValue("@palvelu_id", Service_id);
                 database_query_update.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query_update.Parameters.AddWithValue("@nimi", nimi);
                 database_query_update.Parameters.AddWithValue("@kuvaus", kuvaus);
@@ -97,11 +96,20 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.Parameters.AddWithValue("@alv", alv);
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Muokattiin palvelua " + nimi + " toimipisteen nro.: " + toimipiste_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
+                database_connection.Close();
             }
-            // Jos luodaan uusi asiakas.
+            // Jos luodaan uusi palvelu.
             else
             {
-                // Käytetään uuden asiakkaan luonnin yhteyttä.
                 database_query_new.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
@@ -111,6 +119,16 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.Parameters.AddWithValue("@hinta", hinta);
                 database_query_new.Parameters.AddWithValue("@alv", alv);
                 database_query_new.ExecuteNonQuery();
+                database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Luotiin palvelu " + nimi + " toimipisteen nro.: " + toimipiste_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
             }
             // Suljetaan formi.

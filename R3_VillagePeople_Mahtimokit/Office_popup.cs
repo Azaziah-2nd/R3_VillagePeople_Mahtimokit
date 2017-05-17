@@ -45,16 +45,16 @@ namespace R3_VillagePeople_Mahtimokit
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Toimipiste] ([nimi], [lahiosoite], [postinro], [postitoimipaikka], " +
                 "[email], [puhelinnro]) VALUES (@nimi, @lahiosoite, @postinro, @postitoimipaikka, @email, @puhelinnro)");
-
             SqlCommand database_query_update = new SqlCommand("UPDATE Toimipiste SET nimi = @nimi, lahiosoite=@lahiosoite, postinro=@postinro, " +
                 "postitoimipaikka=@postitoimipaikka, email=@email, puhelinnro=@puhelinnro WHERE toimipiste_id = @toimipiste_id");
+            string paivittaja = Properties.Settings.Default["user_name"].ToString();
             // Jos muokataan asiakasta.
             if (this.Is_office_edited == true)
             {
                 // Käytetään asiakkaan muokkauksen yhteyttä.
                 database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
-                database_query_update.Parameters.AddWithValue("@toimipiste_id", this.Office_id);
+                database_query_update.Parameters.AddWithValue("@toimipiste_id", Office_id);
                 database_query_update.Parameters.AddWithValue("@nimi", nimi);
                 database_query_update.Parameters.AddWithValue("@lahiosoite", lahiosoite);
                 database_query_update.Parameters.AddWithValue("@postinro", postinro);
@@ -62,6 +62,16 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.Parameters.AddWithValue("@email", email);
                 database_query_update.Parameters.AddWithValue("@puhelinnro", puhelinnro);
                 database_query_update.ExecuteNonQuery();
+                database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Muokattiin toimipistettä " + nimi + "toimipisteeseen nro.: " + Office_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
             }
             // Jos luodaan uusi asiakas.
@@ -77,6 +87,16 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.Parameters.AddWithValue("@email", email);
                 database_query_new.Parameters.AddWithValue("@puhelinnro", puhelinnro);
                 database_query_new.ExecuteNonQuery();
+                database_connection.Close();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Luotiin toimipiste: " + nimi;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = main_window.database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
             }
             // Suljetaan formi.
