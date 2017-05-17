@@ -32,6 +32,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Main_window_Load(object sender, EventArgs e)
         {
+            Load_settings_and_dates();
             // Haetaan tiedot tietokannasta eri kenttiin.
             // Toimipisteiden haku täytyy suorittaa ensin, muuten mökkien ja palveluiden lisäys varaukseen ei toimi ennen
             // kuin listasta valitaan manuaalisesti jokin kohde. (null error, liittyy filtteröintiin)
@@ -41,7 +42,6 @@ namespace R3_VillagePeople_Mahtimokit
             Get_cottage_names_to_grid();
             Get_order_history_to_grid();
             Hide_datagridview_id_fields_and_reset_search();
-            Load_settings_and_dates();
         }
 
         private void Load_settings_and_dates()
@@ -130,8 +130,6 @@ namespace R3_VillagePeople_Mahtimokit
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
             cbo_Common_Settings_Default_Office.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
-
-
         }
 
         private void Get_service_names_to_grid()
@@ -427,16 +425,7 @@ namespace R3_VillagePeople_Mahtimokit
         private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Tallennetaan valittu arvo asetuksiin.
-
-            // HUOM! Tämä toiminnallisuus on toistaiseksi rikki.
-
-            // Vanha toimiva koodi: 
-            // Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.SelectedItem.ToString();
-            MessageBox.Show("Laama " + Properties.Settings.Default["default_office"].ToString());
-            // Uuusi koodi joka ei toimi
             Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
-            MessageBox.Show("Laama " + Properties.Settings.Default["default_office"].ToString());
-            // !!!
             Properties.Settings.Default.Save();
             // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
             string default_office = Properties.Settings.Default["default_office"].ToString();
