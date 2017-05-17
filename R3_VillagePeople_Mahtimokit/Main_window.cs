@@ -772,7 +772,7 @@ namespace R3_VillagePeople_Mahtimokit
             if(dtp_Order_Start_Date.Value < DateTime.Today)
             {
                 dtp_Order_Start_Date.Value = DateTime.Today;
-                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kuluneita päiviä.");
+                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kulunutta päivää.");
             }
             Get_start_date_to_order_summary();
             // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
@@ -788,7 +788,7 @@ namespace R3_VillagePeople_Mahtimokit
             if (dtp_Order_End_Date.Value < DateTime.Today)
             {
                 dtp_Order_End_Date.Value = DateTime.Today;
-                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kuluneita päiviä.");
+                MessageBox.Show("Virhe! Et voi valita varauksen päättymispäiväksi mennyttä päivää.");
             }
             Get_end_date_to_order_summary();
             // Tarkistetaan onko  päättymispäivä alkamispäivän jälkeen.

@@ -50,7 +50,7 @@
             // 
             this.btn_Service_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Service_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Service_Save.Location = new System.Drawing.Point(375, 464);
+            this.btn_Service_Save.Location = new System.Drawing.Point(199, 464);
             this.btn_Service_Save.Name = "btn_Service_Save";
             this.btn_Service_Save.Size = new System.Drawing.Size(96, 30);
             this.btn_Service_Save.TabIndex = 100;
@@ -62,10 +62,10 @@
             // 
             this.btn_Service_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Service_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Service_Cancel.Location = new System.Drawing.Point(199, 464);
+            this.btn_Service_Cancel.Location = new System.Drawing.Point(380, 464);
             this.btn_Service_Cancel.Name = "btn_Service_Cancel";
             this.btn_Service_Cancel.Size = new System.Drawing.Size(91, 30);
-            this.btn_Service_Cancel.TabIndex = 99;
+            this.btn_Service_Cancel.TabIndex = 101;
             this.btn_Service_Cancel.Text = "Peruuta";
             this.btn_Service_Cancel.UseVisualStyleBackColor = true;
             this.btn_Service_Cancel.Click += new System.EventHandler(this.btn_Service_Cancel_Click);
