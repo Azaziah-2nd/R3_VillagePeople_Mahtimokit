@@ -1531,7 +1531,14 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_order_basic_details.ExecuteNonQuery();
                 database_connection.Close();
             }
+            // Päivitetään historia ja resetoidaan kentät.
+            lbl_History_Order_Start.Text = "Alkamispäivä";
+            lbl_History_Order_End.Text = "Päättymispäivä:";
+            lbl_History_Selected_Order_Office.Text = "Toimipiste:";
+            lbl_History_Selected_Order_Customer.Text = "Asiakas:";
+            txt_History_Order_Additional_Details.Clear();
             Get_order_history_to_grid();
+
         }
 
         private void btn_log_update_grid_Click(object sender, EventArgs e)
@@ -1541,6 +1548,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Office_Delete_Click(object sender, EventArgs e)
         {
+            // Tarkistetaan ensin,onko toimipisteeseen liitetty mökkejä tai palveluita
+            if (dgv_Cottages_All.Rows.OfType<DataGridViewRow>().Any() || dgv_Services_All.Rows.OfType<DataGridViewRow>().Any())
+            {
+                MessageBox.Show("Virhe! Toimipisteeseen on liitetty mökkejä tai palveluita.\n\n" +
+                    "Jos haluat poistaa toimipisteen, on sinun ensin poistettava sen mökit ja palvelut.");
+                return;
+            }
             string toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
             // Yritetään poistaa toimipistettä tietokannasta
             try
