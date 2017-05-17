@@ -180,8 +180,6 @@
             this.tbl_Settings_1st_Col_Common_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Settings_Common_Settings = new System.Windows.Forms.Label();
-            this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
-            this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
             this.tbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.Label();
@@ -190,6 +188,8 @@
             this.lbl_Common_Settings_History_End_Date_Custom = new System.Windows.Forms.Label();
             this.cbo_Common_Settings_Default_Office = new System.Windows.Forms.ComboBox();
             this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
+            this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
+            this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Log = new System.Windows.Forms.Label();
@@ -2528,27 +2528,6 @@
             this.lbl_Settings_Common_Settings.TabIndex = 0;
             this.lbl_Settings_Common_Settings.Text = "Yleiset asetukset";
             // 
-            // txt_Settings_User_Name
-            // 
-            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 88);
-            this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
-            this.txt_Settings_User_Name.Size = new System.Drawing.Size(286, 26);
-            this.txt_Settings_User_Name.TabIndex = 3;
-            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
-            // 
-            // lbl_Settings_User_Name
-            // 
-            this.lbl_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Settings_User_Name.AutoSize = true;
-            this.lbl_Settings_User_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Settings_User_Name.Location = new System.Drawing.Point(3, 63);
-            this.lbl_Settings_User_Name.Name = "lbl_Settings_User_Name";
-            this.lbl_Settings_User_Name.Size = new System.Drawing.Size(106, 20);
-            this.lbl_Settings_User_Name.TabIndex = 2;
-            this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
-            // 
             // lbl_Common_Settings_History_End_Date
             // 
             this.lbl_Common_Settings_History_End_Date.AutoSize = true;
@@ -2638,6 +2617,27 @@
             this.lbl_Common_Settings_Default_Office.Size = new System.Drawing.Size(138, 20);
             this.lbl_Common_Settings_Default_Office.TabIndex = 1;
             this.lbl_Common_Settings_Default_Office.Text = "Oletustoimipiste";
+            // 
+            // txt_Settings_User_Name
+            // 
+            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 88);
+            this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
+            this.txt_Settings_User_Name.Size = new System.Drawing.Size(286, 26);
+            this.txt_Settings_User_Name.TabIndex = 3;
+            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
+            // 
+            // lbl_Settings_User_Name
+            // 
+            this.lbl_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Settings_User_Name.AutoSize = true;
+            this.lbl_Settings_User_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Settings_User_Name.Location = new System.Drawing.Point(3, 63);
+            this.lbl_Settings_User_Name.Name = "lbl_Settings_User_Name";
+            this.lbl_Settings_User_Name.Size = new System.Drawing.Size(106, 20);
+            this.lbl_Settings_User_Name.TabIndex = 2;
+            this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
             // 
             // tbl_Settings_2nd_Col_UI_Settings_Base
             // 

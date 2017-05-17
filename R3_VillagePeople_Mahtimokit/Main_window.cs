@@ -395,6 +395,9 @@ namespace R3_VillagePeople_Mahtimokit
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = false;
             frm.Show();
+            // Valitaan oletuksena nykyinen toimipiste.
+            string selected_office_name = cbo_Office_Select.Text.ToString();
+            frm.cbo_Service_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindString(selected_office_name);
             frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
@@ -403,6 +406,9 @@ namespace R3_VillagePeople_Mahtimokit
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = false;
             frm.Show();
+            // Valitaan oletuksena nykyinen toimipiste.
+            string selected_office_name = cbo_Office_Select.Text.ToString();
+            frm.cbo_Cottage_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindString(selected_office_name);
             frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
         }
 
@@ -616,7 +622,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
             while (myReader.Read())
             {
                 frm.txt_Customer_First_Name.Text = (myReader["etunimi"].ToString());
@@ -642,106 +647,105 @@ namespace R3_VillagePeople_Mahtimokit
             // Avataan asiakkaan tietojen muokkaus formi
             frm.Show();
             // Haetaan valitun DataGridView kentän ID.
-            if (dgv_Services_All.SelectedCells.Count > 0)
+            if (dgv_Services_All.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
                 frm.Service_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+                SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE palvelu_id = @palvelu_id");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@palvelu_id", frm.Service_id);
+                // Suoritetaan kysely
+                database_query.ExecuteNonQuery();
+                myReader = database_query.ExecuteReader();
+                // Asetetaan formiin tiedot tietokannasta.
+                // Huom! Customer_popup formissa textboxit = Public eikä private.
+                string toimipiste_id = "";
+                while (myReader.Read())
+                {
+                    toimipiste_id = (myReader["toimipiste_id"].ToString());
+                    frm.txt_Service_Name.Text = (myReader["nimi"].ToString());
+                    frm.txt_Service_Description.Text = (myReader["kuvaus"].ToString());
+                    frm.txt_Service_Price.Text = (myReader["hinta"].ToString());
+                    frm.txt_Service_Max_Visitors.Text = (myReader["max_osallistujat"].ToString());
+                    frm.txt_Service_alv.Text = (myReader["alv"].ToString());
+                }
+                database_connection.Close();
+                SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+                database_query_get_toimipiste_id.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                // Suoritetaan kysely
+                database_query.ExecuteNonQuery();
+                // Alustetaan tietojen lukija
+                myReader = database_query_get_toimipiste_id.ExecuteReader();
+                while (myReader.Read())
+                {
+                    frm.cbo_Service_Office_Select.Text = (myReader["nimi"].ToString());
+                }
+                database_connection.Close();
+                frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
             }
-            SqlCommand database_query = new SqlCommand("SELECT * FROM Palvelu WHERE palvelu_id = @palvelu_id");
-            database_query.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query.Parameters.AddWithValue("@palvelu_id", frm.Service_id);
-            // Suoritetaan kysely
-            database_query.ExecuteNonQuery();
-            myReader = database_query.ExecuteReader();
-            // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
-            string toimipiste_id = "";
-            while (myReader.Read())
-            {
-                toimipiste_id = (myReader["toimipiste_id"].ToString());
-                frm.txt_Service_Name.Text = (myReader["nimi"].ToString());
-                frm.txt_Service_Description.Text = (myReader["kuvaus"].ToString());
-                frm.txt_Service_Price.Text = (myReader["hinta"].ToString());
-                frm.txt_Service_Max_Visitors.Text = (myReader["max_osallistujat"].ToString());
-                frm.txt_Service_alv.Text = (myReader["alv"].ToString());
-            }
-            database_connection.Close();
-            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
-            database_query_get_toimipiste_id.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
-            // Suoritetaan kysely
-            database_query.ExecuteNonQuery();
-            // Alustetaan tietojen lukija
-            myReader = database_query_get_toimipiste_id.ExecuteReader();
-            while (myReader.Read())
-            {
-                frm.cbo_Service_Office_Select.Text = (myReader["nimi"].ToString());
-            }
-            database_connection.Close();
-            frm.FormClosed += new FormClosedEventHandler(Get_service_names_to_grid_on_close_event);
         }
 
         private void btn_Cottages_Edit_Click(object sender, EventArgs e)
         {
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = true;
-
             // Haetaan valitun DataGridView kentän ID.
-            if (dgv_Cottages_All.SelectedCells.Count > 0)
+            if (dgv_Cottages_All.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
                 frm.Cottage_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
-            }
-            SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE majoitus_id = @majoitus_id");
-            database_query.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query.Parameters.AddWithValue("@majoitus_id", frm.Cottage_id);
-            // Suoritetaan kysely
-            database_query.ExecuteNonQuery();
-            // Alustetaan tietojen lukija
-            SqlDataReader myReader = null;
-            myReader = database_query.ExecuteReader();
-            // Avataan asiakkaan tietojen muokkaus formi
-            frm.Show();
-            // Asetetaan formiin tiedot tietokannasta.
-            // Huom! Customer_popup formissa textboxit = Public eikä private.
-            string toimipiste_id = "";
-            while (myReader.Read())
-            {
-                toimipiste_id = (myReader["toimipiste_id"].ToString());
-                frm.txt_Cottage_Name.Text = (myReader["nimi"].ToString());
-                frm.txt_Cottage_Description.Text = (myReader["kuvaus"].ToString());
-                frm.txt_Cottage_Price.Text = (myReader["hinta"].ToString());
-                frm.txt_Cottage_Max_Visitors.Text = (myReader["max_henkilot"].ToString());
-                frm.txt_Cottage_Size.Text = (myReader["koko"].ToString());
-                if ((myReader["wlan"].ToString()) == "False")
+                SqlCommand database_query = new SqlCommand("SELECT * FROM Majoitus WHERE majoitus_id = @majoitus_id");
+                database_query.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@majoitus_id", frm.Cottage_id);
+                // Suoritetaan kysely
+                database_query.ExecuteNonQuery();
+                // Alustetaan tietojen lukija
+                SqlDataReader myReader = null;
+                myReader = database_query.ExecuteReader();
+                // Avataan asiakkaan tietojen muokkaus formi
+                frm.Show();
+                // Asetetaan formiin tiedot tietokannasta.
+                // Huom! Customer_popup formissa textboxit = Public eikä private.
+                string toimipiste_id = "";
+                while (myReader.Read())
                 {
-                    frm.rbu_Cottage_Wlan_No.Checked = true;
+                    toimipiste_id = (myReader["toimipiste_id"].ToString());
+                    frm.txt_Cottage_Name.Text = (myReader["nimi"].ToString());
+                    frm.txt_Cottage_Description.Text = (myReader["kuvaus"].ToString());
+                    frm.txt_Cottage_Price.Text = (myReader["hinta"].ToString());
+                    frm.txt_Cottage_Max_Visitors.Text = (myReader["max_henkilot"].ToString());
+                    frm.txt_Cottage_Size.Text = (myReader["koko"].ToString());
+                    if ((myReader["wlan"].ToString()) == "False")
+                    {
+                        frm.rbu_Cottage_Wlan_No.Checked = true;
+                    }
                 }
+                database_connection.Close();
+                SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+                database_query_get_toimipiste_id.Connection = database_connection;
+                // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
+                database_connection.Open();
+                database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                // Suoritetaan kysely
+                database_query.ExecuteNonQuery();
+                // Alustetaan tietojen lukija
+                myReader = database_query_get_toimipiste_id.ExecuteReader();
+                while (myReader.Read())
+                {
+                    frm.cbo_Cottage_Office_Select.Text = (myReader["nimi"].ToString());
+                }
+                database_connection.Close();
+                frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
             }
-            database_connection.Close();
-            SqlCommand database_query_get_toimipiste_id = new SqlCommand("SELECT * FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
-            database_query_get_toimipiste_id.Connection = database_connection;
-            // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database_connection.Open();
-            database_query_get_toimipiste_id.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
-            // Suoritetaan kysely
-            database_query.ExecuteNonQuery();
-            // Alustetaan tietojen lukija
-            myReader = database_query_get_toimipiste_id.ExecuteReader();
-            while (myReader.Read())
-            {
-                frm.cbo_Cottage_Office_Select.Text = (myReader["nimi"].ToString());
-            }
-            database_connection.Close();
-            frm.FormClosed += new FormClosedEventHandler(Get_cottage_names_to_grid_on_close_event);
         }
 
         private void txt_History_Customer_Search_TextChanged(object sender, EventArgs e)
@@ -817,20 +821,23 @@ namespace R3_VillagePeople_Mahtimokit
         string Reservation_asiakas_id = "";
         private void btn_Order_Customers_Add_Click(object sender, EventArgs e)
         {
-            // Siirretään asiakkaan nimi varausksen yhteenvetoon.
-            string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
-            lbl_Order_Summary_Customer.Text = ("Asiakas: " + customer_name);
-            // Valmistellaan asiakkaan id valmiiksi "varaus" tauluun vientiä varten.
-            foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+            if (dgv_Order_Customers_All.SelectedRows.Count > 0)
             {
-                Reservation_asiakas_id = row.Cells[0].Value.ToString();
+                // Siirretään asiakkaan nimi varausksen yhteenvetoon.
+                string customer_name = dgv_Order_Customers_All.CurrentCell.Value.ToString();
+                lbl_Order_Summary_Customer.Text = ("Asiakas: " + customer_name);
+                // Valmistellaan asiakkaan id valmiiksi "varaus" tauluun vientiä varten.
+                foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
+                {
+                    Reservation_asiakas_id = row.Cells[0].Value.ToString();
+                }
             }
         }
         // Muuttujasta Main_window juuressa, että menee laskutukseen
         string Reservation_Cottage_id = "";
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
         {
-            if (dgv_Order_Cottages_All.SelectedCells.Count > 0)
+            if (dgv_Order_Cottages_All.SelectedRows.Count > 0)
             {
 
                 foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
@@ -868,7 +875,7 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
             string Reservation_service_id = "";
-            if (dgv_Services_All.SelectedCells.Count > 0)
+            if (dgv_Services_All.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgv_Order_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Services_All.Rows[selectedrowindex];
@@ -1152,7 +1159,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Services_Delete_Click(object sender, EventArgs e)
         {
-            if (dgv_Cottages_All.SelectedCells.Count > 0)
+            if (dgv_Cottages_All.SelectedRows.Count > 0)
             {
                 // Haetaan valitun DataGridView kentän ID.
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
@@ -1212,7 +1219,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Cottages_Delete_Click(object sender, EventArgs e)
         {
-            if (dgv_Cottages_All.SelectedCells.Count > 0)
+            if (dgv_Cottages_All.SelectedRows.Count > 0)
             {
                 // Haetaan valitun DataGridView kentän ID.
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
