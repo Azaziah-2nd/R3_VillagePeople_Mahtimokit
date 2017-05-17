@@ -87,12 +87,14 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Order_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_Customers_All.DataSource = data_set.Tables[0].DefaultView;
                     dgv_History_Customers_All.DataSource = data_set.Tables[0].DefaultView;
-                    // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
-                    // asiakas_id on piilotettu sarake, eli kokonimi = 1, ensimmäinen rivi listassa = 0.
-                    // Tietojen valitseminen tyhjissä tauluissa johtaa virheeseen, lisää tarkistusmekanismi!!!
-                    dgv_Order_Customers_All.CurrentCell = dgv_Order_Customers_All[1, 0];
-                    dgv_Customers_All.CurrentCell = dgv_Customers_All[1, 0];
-                    dgv_History_Customers_All.CurrentCell = dgv_History_Customers_All[1, 0];
+                    // Jos ei tyhjä datagridview, valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: 
+                    // "lisää varaukseen" tai "muokkaa" asiakas_id on piilotettu sarake, eli kokonimi = 1, ensimmäinen rivi listassa = 0.
+                    if (dgv_Order_Customers_All.Rows.OfType<DataGridViewRow>().Any())
+                    {
+                        dgv_Order_Customers_All.CurrentCell = dgv_Order_Customers_All[1, 0];
+                        dgv_Customers_All.CurrentCell = dgv_Customers_All[1, 0];
+                        dgv_History_Customers_All.CurrentCell = dgv_History_Customers_All[1, 0];
+                    }
                 }
             }
         }
@@ -124,8 +126,23 @@ namespace R3_VillagePeople_Mahtimokit
                 cbo_Common_Settings_Default_Office.Items.Add(item);
             }
             database_connection.Close();
-            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            // Tarkistetaan, onko tietokannasta haettu yhtään toimipistettä
+            if (cbo_Office_Select.Items.Count == 0)
+            {
+                // Jos ei, lopetetaan koodin suorittaminen
+                return;
+            }
             string default_office = Properties.Settings.Default["default_office"].ToString();
+            // Jos toimipistettä ei ole valittu, valitaan oletustoimipisteeksi ensimmäinen listassa oleva toimipiste.
+            if (default_office == "")
+            {
+                cbo_Common_Settings_Default_Office.SelectedIndex = 0;
+                // Tallennetaan valittu arvo asetuksiin.
+                Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
+                Properties.Settings.Default.Save();
+                default_office = Properties.Settings.Default["default_office"].ToString();
+            }
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
             cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
@@ -144,8 +161,11 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Services_All.DataSource = data_set.Tables[0].DefaultView;
                     // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
                     // palvelu_id ja toimipiste_id ovat piilotettuja sarakeita, eli nimi = 2, ensimmäinen rivi listassa = 0.
-                    dgv_Order_Services_All.CurrentCell = dgv_Order_Services_All[2, 0];
-                    dgv_Services_All.CurrentCell = dgv_Services_All[2, 0];
+                    if (dgv_Order_Services_All.Rows.OfType<DataGridViewRow>().Any())
+                    {
+                        dgv_Order_Services_All.CurrentCell = dgv_Order_Services_All[2, 0];
+                        dgv_Services_All.CurrentCell = dgv_Services_All[2, 0];
+                    }
                 }
             }
         }
@@ -161,8 +181,11 @@ namespace R3_VillagePeople_Mahtimokit
                     dgv_Cottages_All.DataSource = data_set.Tables[0].DefaultView;
                     // Valitaan rivi, ohjelma kohtaa virheen jos riviä ei ole valittu ja painetaan: "lisää varaukseen" tai "muokkaa".
                     // majoitus_id ja toimipiste_id ovat piilotettuja sarakeita, eli nimi = 2, ensimmäinen rivi listassa = 0.
-                    dgv_Order_Cottages_All.CurrentCell = dgv_Order_Cottages_All[2, 0];
-                    dgv_Cottages_All.CurrentCell = dgv_Cottages_All[2, 0];
+                    if (dgv_Order_Cottages_All.Rows.OfType<DataGridViewRow>().Any())
+                    {
+                        dgv_Order_Cottages_All.CurrentCell = dgv_Order_Cottages_All[2, 0];
+                        dgv_Cottages_All.CurrentCell = dgv_Cottages_All[2, 0];
+                    }
                 }
             }
         }
@@ -340,7 +363,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos ainoastaan asiakasfiltteröinti on asetettu.
             else if (history_asiakas_id != "")
             {
-
                 filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
                     + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
                     history_asiakas_id, filter_by_date, txt_History_Order_Search.Text);
@@ -392,6 +414,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Services_Add_Click(object sender, EventArgs e)
         {
+            // Tarkistetaan ensin, onko järjestelmässä yhtään toimipistettä.
+            if (cbo_Office_Select.Items.Count == 0)
+            {
+                // Jos ei, tulostetaan virheilmoitus ja perutaan uuden mökin luonti.
+                MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
+                return;
+            }
             frm_Services_Popup frm = new frm_Services_Popup();
             frm.Is_service_edited = false;
             frm.Show();
@@ -403,6 +432,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Cottages_Add_Click(object sender, EventArgs e)
         {
+            // Tarkistetaan ensin, onko järjestelmässä yhtään toimipistettä.
+            if (cbo_Office_Select.Items.Count == 0)
+            {
+                // Jos ei, tulostetaan virheilmoitus ja perutaan uuden mökin luonti.
+                MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
+                return;
+            }
             frm_Cottage_Popup frm = new frm_Cottage_Popup();
             frm.Is_Cottage_edited = false;
             frm.Show();
@@ -560,6 +596,13 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Office_Edit_Click(object sender, EventArgs e)
         {
+            // Tarkistetaan ensin, onko järjestelmässä yhtään toimipistettä.
+            if (cbo_Office_Select.Items.Count == 0)
+            {
+                // Jos ei, tulostetaan virheilmoitus ja perutaan uuden mökin luonti.
+                MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
+                return;
+            }
             // Yhdistetään formiin ja asetetaan is_customer_edited arvoksi "tosi".
             frm_Office_Popup frm = new frm_Office_Popup();
             frm.Is_office_edited = true;
@@ -1193,7 +1236,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Services_Delete_Click(object sender, EventArgs e)
         {
-            if (dgv_Cottages_All.SelectedRows.Count > 0)
+            if (dgv_Services_All.SelectedRows.Count > 0)
             {
                 // Haetaan valitun DataGridView kentän ID.
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
@@ -1548,14 +1591,28 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Office_Delete_Click(object sender, EventArgs e)
         {
-            // Tarkistetaan ensin,onko toimipisteeseen liitetty mökkejä tai palveluita
+            // Tarkistetaan ensin, onko järjestelmässä yhtään toimipistettä.
+            if (cbo_Office_Select.Items.Count == 0)
+            {
+                // Jos ei, tulostetaan virheilmoitus ja perutaan uuden mökin luonti.
+                MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
+                return;
+            }
+            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + cbo_Office_Select.Text.ToString() + 
+                "\"?", "Toimipisteen poistaminen", MessageBoxButtons.YesNo);
+            if (Confirm_delete == DialogResult.No)
+            {
+                return;
+            }
+            string toimipiste_id = (cbo_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            // Tarkistetaan onko toimipisteeseen liitetty mökkejä tai palveluita
             if (dgv_Cottages_All.Rows.OfType<DataGridViewRow>().Any() || dgv_Services_All.Rows.OfType<DataGridViewRow>().Any())
             {
                 MessageBox.Show("Virhe! Toimipisteeseen on liitetty mökkejä tai palveluita.\n\n" +
                     "Jos haluat poistaa toimipisteen, on sinun ensin poistettava sen mökit ja palvelut.");
                 return;
             }
-            string toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            string default_office = Properties.Settings.Default["default_office"].ToString();
             // Yritetään poistaa toimipistettä tietokannasta
             try
             {
@@ -1576,6 +1633,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
                 database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
+                Get_office_names_to_combo();
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)
