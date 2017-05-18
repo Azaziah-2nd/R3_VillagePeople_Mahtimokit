@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Combo_box_item.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="Cottage_popup.cs">
       <SubType>Form</SubType>
     </Compile>

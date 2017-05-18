@@ -173,7 +173,7 @@
             this.txt_Cottage_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Description.Location = new System.Drawing.Point(184, 352);
-            this.txt_Cottage_Description.MaxLength = 255;
+            this.txt_Cottage_Description.MaxLength = 254;
             this.txt_Cottage_Description.Multiline = true;
             this.txt_Cottage_Description.Name = "txt_Cottage_Description";
             this.txt_Cottage_Description.Size = new System.Drawing.Size(283, 79);

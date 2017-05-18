@@ -43,7 +43,7 @@ namespace R3_VillagePeople_Mahtimokit
                 // Mahdollistaa puh syötteet eroteltuina väleillä yms.
                 var verify_phone = new Regex("^[\\d,\\s\\-]+$");
                 Match find_match = verify_phone.Match(phone_number);
-                if(find_match.Success)
+                if (find_match.Success)
                 {
                     return_value = true;
                 }

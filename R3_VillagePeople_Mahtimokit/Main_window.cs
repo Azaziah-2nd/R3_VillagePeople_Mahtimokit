@@ -820,14 +820,14 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dtp_Order_Start_Date_ValueChanged(object sender, EventArgs e)
         {
-            if(dtp_Order_Start_Date.Value < DateTime.Today)
+            if (dtp_Order_Start_Date.Value < DateTime.Today)
             {
                 dtp_Order_Start_Date.Value = DateTime.Today;
                 MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kulunutta päivää.");
             }
             Get_start_date_to_order_summary();
             // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
-            if(dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
+            if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
             {
                 // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
                 dtp_Order_End_Date.Value = dtp_Order_Start_Date.Value.AddDays(1);
@@ -846,7 +846,7 @@ namespace R3_VillagePeople_Mahtimokit
             if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
             {
                 // Jos ei, muutetaan alkamispäiväksi päättymispäivä  - 1 päivä.
-                dtp_Order_Start_Date.Value  = dtp_Order_End_Date.Value.AddDays(-1);
+                dtp_Order_Start_Date.Value = dtp_Order_End_Date.Value.AddDays(-1);
             }
         }
 
@@ -908,7 +908,7 @@ namespace R3_VillagePeople_Mahtimokit
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);
             // Jos lkm on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
-            if(is_quantity_valid == false)
+            if (is_quantity_valid == false)
             {
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
@@ -1155,7 +1155,7 @@ namespace R3_VillagePeople_Mahtimokit
             // Päivähinta * päivät = hinta
             double first = double.Parse(arr_cottage[3]);
             int second = int.Parse(arr_cottage[4]);
-            arr_cottage[5] =  (first * second).ToString(".00");
+            arr_cottage[5] = (first * second).ToString(".00");
             if (days == 1)
             {
                 arr_cottage[4] += " päivä";
@@ -1215,7 +1215,7 @@ namespace R3_VillagePeople_Mahtimokit
             Invoice.lst_Invoicing_2nd_Row_Alv.Items.Add(alv);
             ListViewItem total_row = new ListViewItem();
             total_row.SubItems[0].Text = varaus_id;
-            total_row.SubItems[0].Font =  new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
+            total_row.SubItems[0].Font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
             total_row.SubItems.Add("Lasku yhteensä euroa");
             total_row.SubItems.Add(total.ToString(".00"));
             Invoice.lst_Invoicing_Details_Summary.Items.Add(total_row);
@@ -1607,7 +1607,7 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
                 return;
             }
-            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + cbo_Office_Select.Text.ToString() + 
+            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + cbo_Office_Select.Text.ToString() +
                 "\"?", "Toimipisteen poistaminen", MessageBoxButtons.YesNo);
             if (Confirm_delete == DialogResult.No)
             {
@@ -1674,6 +1674,25 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Options_Save_Invoicing_Click(object sender, EventArgs e)
         {
+            Common_methods common_methods = new Common_methods();
+            string penalty_intrest = txt_Options_Penalty_Interest.Text.ToString();
+            string remark_time = txt_Options_Remark_Time.Text.ToString();
+            // Tietojen tarkistus
+            decimal parsed_decimal;
+            bool is_penalty_valid = decimal.TryParse(penalty_intrest, out parsed_decimal);
+            // Jos syöte on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
+            if (is_penalty_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + penalty_intrest + "\" ei ole kelvollinen numero!");
+                return;
+            }
+            int parsed_int;
+            bool is_remark_valid = int.TryParse(remark_time, out parsed_int);
+            if (is_remark_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + remark_time + "\" ei ole kelvollinen numero!");
+                return;
+            }
             Properties.Settings.Default["default_penalty_interest"] = txt_Options_Penalty_Interest.Text.ToString() + "%";
             Properties.Settings.Default["default_remark_time"] = txt_Options_Remark_Time.Text.ToString() + " pv";
             Properties.Settings.Default["default_infobox_1"] = txt_Options_Infobox_1.Text.ToString();

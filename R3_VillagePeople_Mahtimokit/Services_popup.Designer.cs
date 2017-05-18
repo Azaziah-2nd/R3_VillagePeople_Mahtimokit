@@ -157,7 +157,7 @@
             this.txt_Service_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_Description.Location = new System.Drawing.Point(199, 349);
-            this.txt_Service_Description.MaxLength = 255;
+            this.txt_Service_Description.MaxLength = 254;
             this.txt_Service_Description.Multiline = true;
             this.txt_Service_Description.Name = "txt_Service_Description";
             this.txt_Service_Description.Size = new System.Drawing.Size(272, 87);
