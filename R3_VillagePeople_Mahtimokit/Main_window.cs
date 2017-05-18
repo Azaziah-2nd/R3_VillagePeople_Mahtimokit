@@ -228,7 +228,6 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
-
         // Tietojen päivitys formien sulkemisen yhteydessä.
         private void Get_customer_names_to_grid_on_close_event(object sender, FormClosedEventArgs e)
         {
@@ -903,6 +902,7 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
             }
+
             if (dgv_Order_Cottages_All.SelectedRows.Count > 0)
             {
 
@@ -1632,6 +1632,63 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
                 Get_office_names_to_combo();
+            }
+            // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
+            catch (SqlException)
+            {
+                // Suljetaan "try" lohkossa avattu tietokantayhteys ja alustetaan tietojen lukija.
+                database_connection.Close();
+                SqlDataReader myReader = null;
+                // Luodaan lista asiakkaan varausnumeroita varten.
+                List<int> office_orders = new List<int>();
+                SqlCommand database_query_get_office_orders = new SqlCommand("SELECT varaus_id FROM Varaus WHERE toimipiste_id = @toimipiste_id");
+                database_query_get_office_orders.Connection = database_connection;
+                database_connection.Open();
+                // Haetaan asiakas_id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
+                database_query_get_office_orders.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                database_query_get_office_orders.ExecuteNonQuery();
+                myReader = database_query_get_office_orders.ExecuteReader();
+                while (myReader.Read())
+                {
+                    office_orders.Add(Convert.ToInt32((myReader["varaus_id"])));
+                }
+                // Suljetaan yhteys ja tulostetaan virheilmoitus.
+                database_connection.Close();
+                var all_office_orders = string.Join(",  ", office_orders);
+                MessageBox.Show("Virhe! Toimipiste on yhdistetty seuraaviin varausnumeroihin:\n\n" +
+                    all_office_orders + "\n\nJos haluat poistaa tämän toimipisteen, on sinun ensin " +
+                    "poistettava\nkaikki tähän toimipisteeseen liitetyt varaukset varaushistoriasta.");
+            }
+        }
+
+        private void btn_log_update_grid_Click(object sender, EventArgs e)
+        {
+            Get_log_events_to_grid();
+        }
+
+        private void btn_Office_Delete_Click(object sender, EventArgs e)
+        {
+            string toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
+            // Yritetään poistaa toimipistettä tietokannasta
+            try
+            {
+                SqlCommand database_query = new SqlCommand("DELETE FROM Toimipiste WHERE toimipiste_id = @toimipiste_id");
+                database_query.Connection = database_connection;
+                database_connection.Open();
+                database_query.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
+                database_query.ExecuteNonQuery();
+                database_connection.Close();
+                Get_office_names_to_combo();
+                // Loki taulun päivitys
+                string lisatieto_loki = "Poistettiin toimipiste nro: " + toimipiste_id;
+                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
+                    "VALUES(@paivittaja, @lisatieto_loki)");
+                database_query_loki.Connection = database_connection;
+                database_connection.Open();
+                database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
+                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
+                database_query_loki.ExecuteNonQuery();
+                database_connection.Close();
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)
