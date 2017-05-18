@@ -2665,6 +2665,7 @@
             this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
             this.txt_Settings_User_Name.Size = new System.Drawing.Size(252, 26);
             this.txt_Settings_User_Name.TabIndex = 3;
+            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
             // lbl_Settings_User_Name
             // 
@@ -3250,6 +3251,7 @@
             this.btn_log_update_grid.TabIndex = 2;
             this.btn_log_update_grid.Text = "Lataa lokitiedot";
             this.btn_log_update_grid.UseVisualStyleBackColor = true;
+            this.btn_log_update_grid.Click += new System.EventHandler(this.btn_log_update_grid_Click);
             // 
             // btn_History_Order_History_Delete
             // 

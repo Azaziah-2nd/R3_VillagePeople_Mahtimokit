@@ -991,12 +991,6 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
-        private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default["user_name"] = txt_Settings_User_Name.Text.ToString();
-            Properties.Settings.Default.Save();
-        }
-
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
             // Alustetaan tietojen lukija
@@ -1590,12 +1584,10 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_History_Selected_Order_Customer.Text = "Asiakas:";
             txt_History_Order_Additional_Details.Clear();
             Get_order_history_to_grid();
-
-        }
-
-        private void btn_log_update_grid_Click(object sender, EventArgs e)
-        {
-            Get_log_events_to_grid();
+            // Lokin päivitys
+            Common_methods common_methods = new Common_methods();
+            string lisatieto_loki = "Poistettiin varaus nro.: " + varaus_id_to_delete;
+            common_methods.Update_log(lisatieto_loki);
         }
 
         private void btn_Office_Delete_Click(object sender, EventArgs e)
@@ -1714,6 +1706,24 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
             txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
             txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
+        }
+
+        private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
+        {
+            // Haetaan käyttäjänimi asetuksiin.
+            string user_name = txt_Settings_User_Name.Text.ToString();
+            if(string.IsNullOrWhiteSpace(user_name))
+            {
+                // Jos nimi on tyhjä asetetaan nimeksi "Määrittelemätön".
+                user_name = "Määrittelemätön";
+            }
+            Properties.Settings.Default["user_name"] = user_name;
+            Properties.Settings.Default.Save();
+        }
+
+        private void btn_log_update_grid_Click(object sender, EventArgs e)
+        {
+            Get_log_events_to_grid();
         }
     }
 }
