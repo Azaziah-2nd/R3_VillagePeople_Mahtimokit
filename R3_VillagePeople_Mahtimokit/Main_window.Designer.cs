@@ -176,6 +176,7 @@
             this.lbl_History_Order_Services = new System.Windows.Forms.Label();
             this.txt_History_Order_Additional_Details = new System.Windows.Forms.TextBox();
             this.tab_Settings_Log = new System.Windows.Forms.TabPage();
+            this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.tbl_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings = new System.Windows.Forms.TableLayoutPanel();
@@ -195,7 +196,42 @@
             this.lbl_Log = new System.Windows.Forms.Label();
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
-            this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_Options_Receiver = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_Options_BIC = new System.Windows.Forms.TextBox();
+            this.txt_Options_Infobox_5 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_Options_Infobox_4 = new System.Windows.Forms.TextBox();
+            this.txt_Options_Infobox_3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_Options_Remark_Time = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_Options_Penalty_Interest = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_Options_Infobox_2 = new System.Windows.Forms.TextBox();
+            this.txt_Options_Infobox_1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Options_IBAN = new System.Windows.Forms.Label();
+            this.txt_Options_IBAN = new System.Windows.Forms.TextBox();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -259,6 +295,18 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2442,28 +2490,43 @@
             this.tab_Settings_Log.TabIndex = 3;
             this.tab_Settings_Log.Text = "Asetukset ja loki";
             // 
+            // btn_History_Order_History_Delete
+            // 
+            this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_History_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Delete.BackgroundImage")));
+            this.btn_History_Order_History_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_History_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_History_Delete.Location = new System.Drawing.Point(244, 3);
+            this.btn_History_Order_History_Delete.Name = "btn_History_Order_History_Delete";
+            this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
+            this.btn_History_Order_History_Delete.TabIndex = 114;
+            this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
+            // 
             // tbl_Settings_Base
             // 
             this.tbl_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_Base.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.tbl_Settings_Base.ColumnCount = 5;
-            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.615385F));
-            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.65385F));
-            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.846154F));
-            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.26923F));
-            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.615385F));
+            this.tbl_Settings_Base.ColumnCount = 7;
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_1st_Col_Common_Settings_Base, 1, 1);
             this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings_Base, 3, 1);
-            this.tbl_Settings_Base.Location = new System.Drawing.Point(-4, 0);
+            this.tbl_Settings_Base.Controls.Add(this.tableLayoutPanel4, 5, 1);
+            this.tbl_Settings_Base.Location = new System.Drawing.Point(-3, -1);
             this.tbl_Settings_Base.Name = "tbl_Settings_Base";
             this.tbl_Settings_Base.RowCount = 3;
-            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tbl_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tbl_Settings_Base.Size = new System.Drawing.Size(983, 651);
-            this.tbl_Settings_Base.TabIndex = 0;
+            this.tbl_Settings_Base.TabIndex = 1;
             // 
             // tbl_Settings_1st_Col_Common_Settings_Base
             // 
@@ -2476,13 +2539,13 @@
             this.tbl_Settings_1st_Col_Common_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
             this.tbl_Settings_1st_Col_Common_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tbl_Settings_1st_Col_Common_Settings_Base.Controls.Add(this.tbl_Settings_1st_Col_Common_Settings, 1, 1);
-            this.tbl_Settings_1st_Col_Common_Settings_Base.Location = new System.Drawing.Point(97, 68);
+            this.tbl_Settings_1st_Col_Common_Settings_Base.Location = new System.Drawing.Point(32, 35);
             this.tbl_Settings_1st_Col_Common_Settings_Base.Name = "tbl_Settings_1st_Col_Common_Settings_Base";
             this.tbl_Settings_1st_Col_Common_Settings_Base.RowCount = 3;
             this.tbl_Settings_1st_Col_Common_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tbl_Settings_1st_Col_Common_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
             this.tbl_Settings_1st_Col_Common_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_1st_Col_Common_Settings_Base.Size = new System.Drawing.Size(324, 514);
+            this.tbl_Settings_1st_Col_Common_Settings_Base.Size = new System.Drawing.Size(288, 579);
             this.tbl_Settings_1st_Col_Common_Settings_Base.TabIndex = 2;
             // 
             // tbl_Settings_1st_Col_Common_Settings
@@ -2501,7 +2564,7 @@
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_Default_Office, 0, 4);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.txt_Settings_User_Name, 0, 3);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Settings_User_Name, 0, 2);
-            this.tbl_Settings_1st_Col_Common_Settings.Location = new System.Drawing.Point(15, 18);
+            this.tbl_Settings_1st_Col_Common_Settings.Location = new System.Drawing.Point(14, 20);
             this.tbl_Settings_1st_Col_Common_Settings.Name = "tbl_Settings_1st_Col_Common_Settings";
             this.tbl_Settings_1st_Col_Common_Settings.RowCount = 11;
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -2515,7 +2578,7 @@
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tbl_Settings_1st_Col_Common_Settings.Size = new System.Drawing.Size(292, 477);
+            this.tbl_Settings_1st_Col_Common_Settings.Size = new System.Drawing.Size(258, 538);
             this.tbl_Settings_1st_Col_Common_Settings.TabIndex = 0;
             // 
             // lbl_Settings_Common_Settings
@@ -2534,7 +2597,7 @@
             this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 222);
             this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
-            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(259, 20);
+            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(140, 27);
             this.lbl_Common_Settings_History_End_Date.TabIndex = 19;
             this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päättymispäivä";
             // 
@@ -2549,16 +2612,16 @@
             this.tbl_Common_Settings_History_End_Date_Today.Name = "tbl_Common_Settings_History_End_Date_Today";
             this.tbl_Common_Settings_History_End_Date_Today.RowCount = 1;
             this.tbl_Common_Settings_History_End_Date_Today.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(280, 37);
+            this.tbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(252, 37);
             this.tbl_Common_Settings_History_End_Date_Today.TabIndex = 22;
             // 
             // lbl_Common_Settings_History_End_Date_Today
             // 
             this.lbl_Common_Settings_History_End_Date_Today.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Common_Settings_History_End_Date_Today.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 8);
+            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 0);
             this.lbl_Common_Settings_History_End_Date_Today.Name = "lbl_Common_Settings_History_End_Date_Today";
-            this.lbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(163, 20);
+            this.lbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(113, 37);
             this.lbl_Common_Settings_History_End_Date_Today.TabIndex = 0;
             this.lbl_Common_Settings_History_End_Date_Today.Text = "Käytä nykyistä päivää:";
             // 
@@ -2568,12 +2631,11 @@
             this.chk_Common_Settings_History_End_Date_Today.AutoSize = true;
             this.chk_Common_Settings_History_End_Date_Today.Checked = true;
             this.chk_Common_Settings_History_End_Date_Today.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(174, 11);
+            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(157, 11);
             this.chk_Common_Settings_History_End_Date_Today.Name = "chk_Common_Settings_History_End_Date_Today";
             this.chk_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(15, 14);
             this.chk_Common_Settings_History_End_Date_Today.TabIndex = 1;
             this.chk_Common_Settings_History_End_Date_Today.UseVisualStyleBackColor = true;
-            this.chk_Common_Settings_History_End_Date_Today.CheckedChanged += new System.EventHandler(this.chk_Common_Settings_History_End_Date_Today_CheckedChanged);
             // 
             // dtp_Common_Settings_History_End_Date_Custom
             // 
@@ -2581,9 +2643,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 325);
             this.dtp_Common_Settings_History_End_Date_Custom.Name = "dtp_Common_Settings_History_End_Date_Custom";
-            this.dtp_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(286, 26);
+            this.dtp_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(252, 26);
             this.dtp_Common_Settings_History_End_Date_Custom.TabIndex = 21;
-            this.dtp_Common_Settings_History_End_Date_Custom.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_End_Date_Custom_ValueChanged);
             // 
             // lbl_Common_Settings_History_End_Date_Custom
             // 
@@ -2603,9 +2664,8 @@
             this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
             this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 170);
             this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
-            this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(286, 28);
+            this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(252, 28);
             this.cbo_Common_Settings_Default_Office.TabIndex = 16;
-            this.cbo_Common_Settings_Default_Office.SelectedIndexChanged += new System.EventHandler(this.cbo_Common_Settings_Default_Office_SelectedIndexChanged);
             // 
             // lbl_Common_Settings_Default_Office
             // 
@@ -2624,9 +2684,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 88);
             this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
-            this.txt_Settings_User_Name.Size = new System.Drawing.Size(286, 26);
+            this.txt_Settings_User_Name.Size = new System.Drawing.Size(252, 26);
             this.txt_Settings_User_Name.TabIndex = 3;
-            this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
             // lbl_Settings_User_Name
             // 
@@ -2650,13 +2709,13 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(464, 68);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(345, 35);
             this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(419, 514);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(288, 579);
             this.tbl_Settings_2nd_Col_UI_Settings_Base.TabIndex = 3;
             // 
             // tbl_Settings_2nd_Col_UI_Settings
@@ -2669,13 +2728,13 @@
             this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.lbl_Log, 0, 0);
             this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.dgv_Log, 0, 1);
             this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.btn_log_update_grid, 0, 2);
-            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(19, 18);
+            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(14, 20);
             this.tbl_Settings_2nd_Col_UI_Settings.Name = "tbl_Settings_2nd_Col_UI_Settings";
             this.tbl_Settings_2nd_Col_UI_Settings.RowCount = 3;
             this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.971154F));
             this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.02885F));
             this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(379, 477);
+            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(258, 538);
             this.tbl_Settings_2nd_Col_UI_Settings.TabIndex = 1;
             // 
             // lbl_Log
@@ -2700,11 +2759,11 @@
             this.dgv_Log.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Log.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Log.Location = new System.Drawing.Point(3, 33);
+            this.dgv_Log.Location = new System.Drawing.Point(3, 37);
             this.dgv_Log.Name = "dgv_Log";
             this.dgv_Log.ReadOnly = true;
             this.dgv_Log.RowHeadersVisible = false;
-            this.dgv_Log.Size = new System.Drawing.Size(373, 400);
+            this.dgv_Log.Size = new System.Drawing.Size(252, 457);
             this.dgv_Log.TabIndex = 1;
             // 
             // btn_log_update_grid
@@ -2712,25 +2771,482 @@
             this.btn_log_update_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 439);
+            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
             this.btn_log_update_grid.Name = "btn_log_update_grid";
-            this.btn_log_update_grid.Size = new System.Drawing.Size(373, 35);
+            this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
             this.btn_log_update_grid.TabIndex = 2;
             this.btn_log_update_grid.Text = "Lataa lokitiedot";
             this.btn_log_update_grid.UseVisualStyleBackColor = true;
-            this.btn_log_update_grid.Click += new System.EventHandler(this.btn_log_update_grid_Click);
             // 
-            // btn_History_Order_History_Delete
+            // tableLayoutPanel4
             // 
-            this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_History_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_History_Order_History_Delete.BackgroundImage")));
-            this.btn_History_Order_History_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_History_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_History_Delete.Location = new System.Drawing.Point(244, 3);
-            this.btn_History_Order_History_Delete.Name = "btn_History_Order_History_Delete";
-            this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
-            this.btn_History_Order_History_Delete.TabIndex = 114;
-            this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(658, 35);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(288, 579);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.btn_Options_Save_Invoicing, 0, 11);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel15, 0, 10);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel13, 0, 8);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 0, 7);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 6);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel10, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel14, 0, 9);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(14, 20);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 12;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(258, 538);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // btn_Options_Save_Invoicing
+            // 
+            this.btn_Options_Save_Invoicing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 500);
+            this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
+            this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 35);
+            this.btn_Options_Save_Invoicing.TabIndex = 14;
+            this.btn_Options_Save_Invoicing.Text = "Tallenna laskuinfo";
+            this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
+            this.btn_Options_Save_Invoicing.Click += new System.EventHandler(this.btn_Options_Save_Invoicing_Click);
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
+            this.tableLayoutPanel15.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.txt_Options_Receiver, 1, 0);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 460);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel15.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 34);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Vastaanottaja:";
+            // 
+            // txt_Options_Receiver
+            // 
+            this.txt_Options_Receiver.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Receiver.Location = new System.Drawing.Point(62, 3);
+            this.txt_Options_Receiver.Name = "txt_Options_Receiver";
+            this.txt_Options_Receiver.Size = new System.Drawing.Size(187, 26);
+            this.txt_Options_Receiver.TabIndex = 1;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel13.ColumnCount = 2;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Controls.Add(this.txt_Options_BIC, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.txt_Options_Infobox_5, 0, 0);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 361);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(252, 53);
+            this.tableLayoutPanel13.TabIndex = 11;
+            // 
+            // txt_Options_BIC
+            // 
+            this.txt_Options_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_BIC.Location = new System.Drawing.Point(129, 3);
+            this.txt_Options_BIC.Name = "txt_Options_BIC";
+            this.txt_Options_BIC.Size = new System.Drawing.Size(120, 26);
+            this.txt_Options_BIC.TabIndex = 6;
+            // 
+            // txt_Options_Infobox_5
+            // 
+            this.txt_Options_Infobox_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Infobox_5.Location = new System.Drawing.Point(3, 3);
+            this.txt_Options_Infobox_5.Multiline = true;
+            this.txt_Options_Infobox_5.Name = "txt_Options_Infobox_5";
+            this.txt_Options_Infobox_5.Size = new System.Drawing.Size(120, 47);
+            this.txt_Options_Infobox_5.TabIndex = 5;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Controls.Add(this.label12, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.label13, 0, 0);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 321);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel12.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(129, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 34);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "BIC:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 20);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Infolaatikko5:";
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.txt_Options_Infobox_4, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.txt_Options_Infobox_3, 0, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 262);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(252, 53);
+            this.tableLayoutPanel11.TabIndex = 9;
+            // 
+            // txt_Options_Infobox_4
+            // 
+            this.txt_Options_Infobox_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Infobox_4.Location = new System.Drawing.Point(129, 3);
+            this.txt_Options_Infobox_4.Multiline = true;
+            this.txt_Options_Infobox_4.Name = "txt_Options_Infobox_4";
+            this.txt_Options_Infobox_4.Size = new System.Drawing.Size(120, 47);
+            this.txt_Options_Infobox_4.TabIndex = 6;
+            // 
+            // txt_Options_Infobox_3
+            // 
+            this.txt_Options_Infobox_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Infobox_3.Location = new System.Drawing.Point(3, 3);
+            this.txt_Options_Infobox_3.Multiline = true;
+            this.txt_Options_Infobox_3.Name = "txt_Options_Infobox_3";
+            this.txt_Options_Infobox_3.Size = new System.Drawing.Size(120, 47);
+            this.txt_Options_Infobox_3.TabIndex = 5;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.label10, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 222);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel10.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(129, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 20);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Infolaatikko4:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 20);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Infolaatikko3:";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel7.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.txt_Options_Remark_Time, 1, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 83);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(209, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "pv";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Huomautusaika:";
+            // 
+            // txt_Options_Remark_Time
+            // 
+            this.txt_Options_Remark_Time.Location = new System.Drawing.Point(172, 3);
+            this.txt_Options_Remark_Time.Name = "txt_Options_Remark_Time";
+            this.txt_Options_Remark_Time.Size = new System.Drawing.Size(31, 26);
+            this.txt_Options_Remark_Time.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Laskutus asetukset";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel6.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txt_Options_Penalty_Interest, 1, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 43);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(209, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "%";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Viivästyskorko:";
+            // 
+            // txt_Options_Penalty_Interest
+            // 
+            this.txt_Options_Penalty_Interest.Location = new System.Drawing.Point(173, 3);
+            this.txt_Options_Penalty_Interest.Name = "txt_Options_Penalty_Interest";
+            this.txt_Options_Penalty_Interest.Size = new System.Drawing.Size(30, 26);
+            this.txt_Options_Penalty_Interest.TabIndex = 2;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.label9, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 123);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel8.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(129, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(104, 20);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Infolaatikko2:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Infolaatikko1:";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.txt_Options_Infobox_2, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.txt_Options_Infobox_1, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 163);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(252, 53);
+            this.tableLayoutPanel9.TabIndex = 7;
+            // 
+            // txt_Options_Infobox_2
+            // 
+            this.txt_Options_Infobox_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Infobox_2.Location = new System.Drawing.Point(129, 3);
+            this.txt_Options_Infobox_2.Multiline = true;
+            this.txt_Options_Infobox_2.Name = "txt_Options_Infobox_2";
+            this.txt_Options_Infobox_2.Size = new System.Drawing.Size(120, 47);
+            this.txt_Options_Infobox_2.TabIndex = 6;
+            // 
+            // txt_Options_Infobox_1
+            // 
+            this.txt_Options_Infobox_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Infobox_1.Location = new System.Drawing.Point(3, 3);
+            this.txt_Options_Infobox_1.Multiline = true;
+            this.txt_Options_Infobox_1.Name = "txt_Options_Infobox_1";
+            this.txt_Options_Infobox_1.Size = new System.Drawing.Size(120, 47);
+            this.txt_Options_Infobox_1.TabIndex = 5;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
+            this.tableLayoutPanel14.Controls.Add(this.lbl_Options_IBAN, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.txt_Options_IBAN, 1, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 420);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel14.TabIndex = 12;
+            // 
+            // lbl_Options_IBAN
+            // 
+            this.lbl_Options_IBAN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Options_IBAN.AutoSize = true;
+            this.lbl_Options_IBAN.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Options_IBAN.Name = "lbl_Options_IBAN";
+            this.lbl_Options_IBAN.Size = new System.Drawing.Size(53, 34);
+            this.lbl_Options_IBAN.TabIndex = 0;
+            this.lbl_Options_IBAN.Text = "IBAN:";
+            // 
+            // txt_Options_IBAN
+            // 
+            this.txt_Options_IBAN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_IBAN.Location = new System.Drawing.Point(62, 3);
+            this.txt_Options_IBAN.Name = "txt_Options_IBAN";
+            this.txt_Options_IBAN.Size = new System.Drawing.Size(187, 26);
+            this.txt_Options_IBAN.TabIndex = 1;
             // 
             // frm_Main_Window
             // 
@@ -2840,6 +3356,29 @@
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel13.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2938,23 +3477,8 @@
         private System.Windows.Forms.Button btn_Order_Summary_Next_Page;
         private System.Windows.Forms.Button btn_Order_Summary_Delete_From_List;
         private System.Windows.Forms.TextBox txt_Order_Additional_Details;
-        private System.Windows.Forms.TableLayoutPanel tbl_Settings_Base;
-        private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings_Base;
-        private System.Windows.Forms.TableLayoutPanel tbl_Settings_2nd_Col_UI_Settings_Base;
-        private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings;
-        private System.Windows.Forms.Label lbl_Settings_Common_Settings;
-        private System.Windows.Forms.Label lbl_Common_Settings_Default_Office;
-        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
-        private System.Windows.Forms.TableLayoutPanel tbl_Settings_2nd_Col_UI_Settings;
-        private System.Windows.Forms.Label lbl_Log;
-        private System.Windows.Forms.ComboBox cbo_Common_Settings_Default_Office;
         private System.Windows.Forms.ComboBox cbo_History_Office_Select;
         private System.Windows.Forms.ComboBox cbo_Office_Select;
-        private System.Windows.Forms.TableLayoutPanel tbl_Common_Settings_History_End_Date_Today;
-        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Today;
-        private System.Windows.Forms.CheckBox chk_Common_Settings_History_End_Date_Today;
-        private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
-        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
         private System.Windows.Forms.DataGridView dgv_Order_Customers_All;
         private System.Windows.Forms.DataGridView dgv_Customers_All;
         private System.Windows.Forms.DataGridView dgv_Services_All;
@@ -2983,7 +3507,6 @@
         private System.Windows.Forms.Label lbl_Order_Cottage_Persons;
         private System.Windows.Forms.Label lbl_Order_Cottage_Persons_Quantity_Units;
         private System.Windows.Forms.TextBox txt_Order_Cottage_Persons_Quantity;
-        private System.Windows.Forms.Label lbl_Settings_User_Name;
         private System.Windows.Forms.DataGridView dgv_History_Orders_All;
         private System.Windows.Forms.TableLayoutPanel tbl_History_3th_Col_Selected_Order_Details;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Selected_Order_Basic_Details;
@@ -3008,10 +3531,62 @@
         private System.Windows.Forms.Label lbl_History_Order_Filter_Customer;
         private System.Windows.Forms.Button btn_History_Order_Filter_Reset;
         private System.Windows.Forms.Label lbl_History_Order_varaus_id;
-        private System.Windows.Forms.DataGridView dgv_Log;
-        private System.Windows.Forms.Button btn_log_update_grid;
-        public System.Windows.Forms.TextBox txt_Settings_User_Name;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_3rd_Col_Services;
         private System.Windows.Forms.TableLayoutPanel tbl_Edit_Services_Buttons;
+        private System.Windows.Forms.TableLayoutPanel tbl_Settings_Base;
+        private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings_Base;
+        private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings;
+        private System.Windows.Forms.Label lbl_Settings_Common_Settings;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
+        private System.Windows.Forms.TableLayoutPanel tbl_Common_Settings_History_End_Date_Today;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Today;
+        private System.Windows.Forms.CheckBox chk_Common_Settings_History_End_Date_Today;
+        private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_End_Date_Custom;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Custom;
+        private System.Windows.Forms.ComboBox cbo_Common_Settings_Default_Office;
+        private System.Windows.Forms.Label lbl_Common_Settings_Default_Office;
+        public System.Windows.Forms.TextBox txt_Settings_User_Name;
+        private System.Windows.Forms.Label lbl_Settings_User_Name;
+        private System.Windows.Forms.TableLayoutPanel tbl_Settings_2nd_Col_UI_Settings_Base;
+        private System.Windows.Forms.TableLayoutPanel tbl_Settings_2nd_Col_UI_Settings;
+        private System.Windows.Forms.Label lbl_Log;
+        private System.Windows.Forms.DataGridView dgv_Log;
+        private System.Windows.Forms.Button btn_log_update_grid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button btn_Options_Save_Invoicing;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_Options_Receiver;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TextBox txt_Options_BIC;
+        private System.Windows.Forms.TextBox txt_Options_Infobox_5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.TextBox txt_Options_Infobox_4;
+        private System.Windows.Forms.TextBox txt_Options_Infobox_3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_Options_Remark_Time;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_Options_Penalty_Interest;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TextBox txt_Options_Infobox_2;
+        private System.Windows.Forms.TextBox txt_Options_Infobox_1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Label lbl_Options_IBAN;
+        private System.Windows.Forms.TextBox txt_Options_IBAN;
     }
 }

@@ -71,6 +71,17 @@ namespace R3_VillagePeople_Mahtimokit
             // Varaus välilehden päivät.
             dtp_Order_Start_Date.Value = DateTime.Today;
             dtp_Order_End_Date.Value = DateTime.Today.AddDays(1);
+            // Isketään arvot laskutusasetuksiin
+            txt_Options_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString().Trim('%');
+            txt_Options_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString().Trim(' ', 'p', 'v');
+            txt_Options_Infobox_1.Text = Properties.Settings.Default["default_infobox_1"].ToString();
+            txt_Options_Infobox_2.Text = Properties.Settings.Default["default_infobox_2"].ToString();
+            txt_Options_Infobox_3.Text = Properties.Settings.Default["default_infobox_3"].ToString();
+            txt_Options_Infobox_4.Text = Properties.Settings.Default["default_infobox_4"].ToString();
+            txt_Options_Infobox_5.Text = Properties.Settings.Default["default_infobox_5"].ToString();
+            txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
+            txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
+            txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
         }
 
         // DataGriedView elementtien tietojen päivitys.
@@ -1659,6 +1670,31 @@ namespace R3_VillagePeople_Mahtimokit
                     all_office_orders + "\n\nJos haluat poistaa tämän toimipisteen, on sinun ensin " +
                     "poistettava\nkaikki tähän toimipisteeseen liitetyt varaukset varaushistoriasta.");
             }
+        }
+
+        private void btn_Options_Save_Invoicing_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default["default_penalty_interest"] = txt_Options_Penalty_Interest.Text.ToString() + "%";
+            Properties.Settings.Default["default_remark_time"] = txt_Options_Remark_Time.Text.ToString() + " pv";
+            Properties.Settings.Default["default_infobox_1"] = txt_Options_Infobox_1.Text.ToString();
+            Properties.Settings.Default["default_infobox_2"] = txt_Options_Infobox_2.Text.ToString();
+            Properties.Settings.Default["default_infobox_3"] = txt_Options_Infobox_3.Text.ToString();
+            Properties.Settings.Default["default_infobox_4"] = txt_Options_Infobox_4.Text.ToString();
+            Properties.Settings.Default["default_infobox_5"] = txt_Options_Infobox_5.Text.ToString();
+            Properties.Settings.Default["default_IBAN"] = txt_Options_IBAN.Text.ToString();
+            Properties.Settings.Default["default_BIC"] = txt_Options_BIC.Text.ToString();
+            Properties.Settings.Default["default_receiver"] = txt_Options_Receiver.Text.ToString();
+            Properties.Settings.Default.Save();
+            txt_Options_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString().Trim('%');
+            txt_Options_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString().Trim(' ', 'p', 'v');
+            txt_Options_Infobox_1.Text = Properties.Settings.Default["default_infobox_1"].ToString();
+            txt_Options_Infobox_2.Text = Properties.Settings.Default["default_infobox_2"].ToString();
+            txt_Options_Infobox_3.Text = Properties.Settings.Default["default_infobox_3"].ToString();
+            txt_Options_Infobox_4.Text = Properties.Settings.Default["default_infobox_4"].ToString();
+            txt_Options_Infobox_5.Text = Properties.Settings.Default["default_infobox_5"].ToString();
+            txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
+            txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
+            txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
         }
     }
 }
