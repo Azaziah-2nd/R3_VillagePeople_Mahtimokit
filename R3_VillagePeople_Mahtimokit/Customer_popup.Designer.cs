@@ -54,6 +54,7 @@
             this.txt_Customer_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Country.Location = new System.Drawing.Point(226, 387);
+            this.txt_Customer_Country.MaxLength = 20;
             this.txt_Customer_Country.Name = "txt_Customer_Country";
             this.txt_Customer_Country.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Country.TabIndex = 115;
@@ -74,6 +75,7 @@
             this.txt_Customer_Phone_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Phone_Number.Location = new System.Drawing.Point(226, 225);
+            this.txt_Customer_Phone_Number.MaxLength = 15;
             this.txt_Customer_Phone_Number.Name = "txt_Customer_Phone_Number";
             this.txt_Customer_Phone_Number.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Phone_Number.TabIndex = 111;
@@ -93,6 +95,7 @@
             this.txt_Customer_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Email.Location = new System.Drawing.Point(226, 184);
+            this.txt_Customer_Email.MaxLength = 50;
             this.txt_Customer_Email.Name = "txt_Customer_Email";
             this.txt_Customer_Email.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Email.TabIndex = 110;
@@ -112,6 +115,7 @@
             this.txt_Customer_City.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_City.Location = new System.Drawing.Point(226, 344);
+            this.txt_Customer_City.MaxLength = 30;
             this.txt_Customer_City.Name = "txt_Customer_City";
             this.txt_Customer_City.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_City.TabIndex = 114;
@@ -121,6 +125,7 @@
             this.txt_Customer_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Adress.Location = new System.Drawing.Point(226, 267);
+            this.txt_Customer_Adress.MaxLength = 40;
             this.txt_Customer_Adress.Name = "txt_Customer_Adress";
             this.txt_Customer_Adress.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Adress.TabIndex = 112;
@@ -160,6 +165,7 @@
             this.txt_Customer_Surname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Surname.Location = new System.Drawing.Point(226, 143);
+            this.txt_Customer_Surname.MaxLength = 40;
             this.txt_Customer_Surname.Name = "txt_Customer_Surname";
             this.txt_Customer_Surname.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Surname.TabIndex = 109;
@@ -179,6 +185,7 @@
             this.txt_Customer_First_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_First_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_First_Name.Location = new System.Drawing.Point(226, 107);
+            this.txt_Customer_First_Name.MaxLength = 20;
             this.txt_Customer_First_Name.Name = "txt_Customer_First_Name";
             this.txt_Customer_First_Name.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_First_Name.TabIndex = 108;

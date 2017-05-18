@@ -50,6 +50,7 @@
             this.txt_Office_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_Phone.Location = new System.Drawing.Point(203, 342);
+            this.txt_Office_Phone.MaxLength = 15;
             this.txt_Office_Phone.Name = "txt_Office_Phone";
             this.txt_Office_Phone.Size = new System.Drawing.Size(287, 26);
             this.txt_Office_Phone.TabIndex = 79;
@@ -69,6 +70,7 @@
             this.txt_Office_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_Email.Location = new System.Drawing.Point(203, 296);
+            this.txt_Office_Email.MaxLength = 50;
             this.txt_Office_Email.Name = "txt_Office_Email";
             this.txt_Office_Email.Size = new System.Drawing.Size(287, 26);
             this.txt_Office_Email.TabIndex = 78;
@@ -98,6 +100,7 @@
             this.txt_Office_City.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_City.Location = new System.Drawing.Point(203, 249);
+            this.txt_Office_City.MaxLength = 30;
             this.txt_Office_City.Name = "txt_Office_City";
             this.txt_Office_City.Size = new System.Drawing.Size(287, 26);
             this.txt_Office_City.TabIndex = 77;
@@ -107,6 +110,7 @@
             this.txt_Office_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_Adress.Location = new System.Drawing.Point(203, 155);
+            this.txt_Office_Adress.MaxLength = 40;
             this.txt_Office_Adress.Name = "txt_Office_Adress";
             this.txt_Office_Adress.Size = new System.Drawing.Size(287, 26);
             this.txt_Office_Adress.TabIndex = 75;
@@ -126,6 +130,7 @@
             this.txt_Office_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_Postal_Code.Location = new System.Drawing.Point(203, 202);
+            this.txt_Office_Postal_Code.MaxLength = 5;
             this.txt_Office_Postal_Code.Name = "txt_Office_Postal_Code";
             this.txt_Office_Postal_Code.Size = new System.Drawing.Size(125, 26);
             this.txt_Office_Postal_Code.TabIndex = 76;
@@ -145,6 +150,7 @@
             this.txt_Office_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Office_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Office_Name.Location = new System.Drawing.Point(203, 111);
+            this.txt_Office_Name.MaxLength = 40;
             this.txt_Office_Name.Name = "txt_Office_Name";
             this.txt_Office_Name.Size = new System.Drawing.Size(287, 26);
             this.txt_Office_Name.TabIndex = 74;

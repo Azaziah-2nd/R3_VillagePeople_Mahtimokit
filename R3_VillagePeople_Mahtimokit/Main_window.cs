@@ -951,7 +951,7 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
             // Haetaan lukumäärä
-            string selected_quantity = txt_Order_Services_Quantity.Text.ToString(); ;
+            string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
             // Tarkistetaan, onko lukumäärä kelvollinen.
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);

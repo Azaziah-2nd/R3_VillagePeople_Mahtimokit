@@ -55,6 +55,26 @@ namespace R3_VillagePeople_Mahtimokit
             string max_osallistujat = txt_Service_Max_Visitors.Text;
             string hinta = txt_Service_Price.Text;
             string alv = txt_Service_alv.Text;
+            // Tietojen tarkistus
+            Common_methods common_methods = new Common_methods();
+            if (string.IsNullOrWhiteSpace(nimi))
+            {
+                MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
+                return;
+            }
+            decimal decimal_parse;
+            bool is_hinta_valid = decimal.TryParse(hinta, out decimal_parse);
+            if (is_hinta_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + hinta + "\" ei ole kelvollinen numero!");
+                return;
+            }
+            bool is_alv_valid = decimal.TryParse(alv, out decimal_parse);
+            if (is_hinta_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + hinta + "\" ei ole kelvollinen numero!");
+                return;
+            }
             // Apumuuttujat
             string chosen_office = cbo_Service_Office_Select.Text.ToString();
             string toimipiste_id = "";
