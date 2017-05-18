@@ -672,7 +672,7 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Customer_Email.Text = (myReader["email"].ToString());
                 frm.txt_Customer_Phone_Number.Text = (myReader["puhelinnro"].ToString());
                 frm.txt_Customer_Adress.Text = (myReader["lahiosoite"].ToString());
-                frm.txt_Customere_Postal_Code.Text = (myReader["postinro"].ToString());
+                frm.txt_Customer_Postal_Code.Text = (myReader["postinro"].ToString());
                 frm.txt_Customer_City.Text = (myReader["postitoimipaikka"].ToString());
                 frm.txt_Customer_Country.Text = (myReader["asuinmaa"].ToString());
             }

@@ -36,7 +36,7 @@ namespace R3_VillagePeople_Mahtimokit
             string email = txt_Customer_Email.Text;
             string puhelinnro = txt_Customer_Phone_Number.Text;
             string lahiosoite = txt_Customer_Adress.Text;
-            string postinro = txt_Customere_Postal_Code.Text;
+            string postinro = txt_Customer_Postal_Code.Text;
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
             // Tietojen tarkastus
@@ -50,15 +50,39 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Sukunimi ei voi olla tyhjä!");
                 return;
             }
+            // Sähköpostin tarkistus.
             Common_methods common_methods = new Common_methods();
-            bool is_mail_valid = common_methods.Verify_email(email);
-            if(is_mail_valid == false)
+            // Jos sähköposti ei ole tyhjä.
+            if (email.Length > 0)
             {
-                MessageBox.Show("Virhe! Annettu sähköpostiosoite on virheellinen!");
+                // Sähköpostin oikeellisuus tarkistetaan Verify_email metodilla.
+                if (common_methods.Is_email_valid(email) == false)
+                { 
+                    return;
+                }
+            }
+            // Puhelinnumeron tarkistus
+            if (puhelinnro.Length > 0)
+            {
+                if (common_methods.Is_phone_valid(puhelinnro) == false)
+                {
+                    return;
+                }
+            }
+            // Osoitteen tarkistus
+            if (common_methods.Is_adress_valid(lahiosoite) == false)
+            {
                 return;
             }
-
-
+            if (common_methods.Is_zip_code_valid(postinro) == false)
+            {
+                return;
+            }
+            // Postitoimipaikan tarkistus
+            if (common_methods.Is_post_office_valid(postitoimipaikka) == false)
+            {
+                return;
+            }
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;

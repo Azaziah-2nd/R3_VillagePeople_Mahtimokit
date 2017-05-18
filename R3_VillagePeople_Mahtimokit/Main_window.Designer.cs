@@ -180,7 +180,6 @@
             this.tbl_Settings_1st_Col_Common_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_1st_Col_Common_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Settings_Common_Settings = new System.Windows.Forms.Label();
-            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
             this.tbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Common_Settings_History_End_Date_Today = new System.Windows.Forms.Label();
             this.chk_Common_Settings_History_End_Date_Today = new System.Windows.Forms.CheckBox();
@@ -190,6 +189,7 @@
             this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
+            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
             this.tbl_Settings_3rd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_3rd_Col_Invoice_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
@@ -2580,16 +2580,6 @@
             this.lbl_Settings_Common_Settings.TabIndex = 0;
             this.lbl_Settings_Common_Settings.Text = "Yleiset asetukset";
             // 
-            // lbl_Common_Settings_History_End_Date
-            // 
-            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 222);
-            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
-            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(232, 20);
-            this.lbl_Common_Settings_History_End_Date.TabIndex = 19;
-            this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päivämäärä";
-            // 
             // tbl_Common_Settings_History_End_Date_Today
             // 
             this.tbl_Common_Settings_History_End_Date_Today.ColumnCount = 2;
@@ -2686,6 +2676,16 @@
             this.lbl_Settings_User_Name.Size = new System.Drawing.Size(106, 20);
             this.lbl_Settings_User_Name.TabIndex = 2;
             this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
+            // 
+            // lbl_Common_Settings_History_End_Date
+            // 
+            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
+            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 222);
+            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
+            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(232, 20);
+            this.lbl_Common_Settings_History_End_Date.TabIndex = 19;
+            this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päivämäärä";
             // 
             // tbl_Settings_3rd_Col_UI_Settings_Base
             // 

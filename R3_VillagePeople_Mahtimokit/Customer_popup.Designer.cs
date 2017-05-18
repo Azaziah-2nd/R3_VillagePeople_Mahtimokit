@@ -37,7 +37,7 @@
             this.txt_Customer_City = new System.Windows.Forms.TextBox();
             this.txt_Customer_Adress = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Adress = new System.Windows.Forms.Label();
-            this.txt_Customere_Postal_Code = new System.Windows.Forms.TextBox();
+            this.txt_Customer_Postal_Code = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Postal_Code = new System.Windows.Forms.Label();
             this.txt_Customer_Surname = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Surname = new System.Windows.Forms.Label();
@@ -135,14 +135,15 @@
             this.lbl_Customer_Adress.TabIndex = 116;
             this.lbl_Customer_Adress.Text = "Katuosoite:";
             // 
-            // txt_Customere_Postal_Code
+            // txt_Customer_Postal_Code
             // 
-            this.txt_Customere_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customere_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Customere_Postal_Code.Location = new System.Drawing.Point(226, 306);
-            this.txt_Customere_Postal_Code.Name = "txt_Customere_Postal_Code";
-            this.txt_Customere_Postal_Code.Size = new System.Drawing.Size(124, 26);
-            this.txt_Customere_Postal_Code.TabIndex = 113;
+            this.txt_Customer_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Customer_Postal_Code.Location = new System.Drawing.Point(226, 306);
+            this.txt_Customer_Postal_Code.MaxLength = 5;
+            this.txt_Customer_Postal_Code.Name = "txt_Customer_Postal_Code";
+            this.txt_Customer_Postal_Code.Size = new System.Drawing.Size(124, 26);
+            this.txt_Customer_Postal_Code.TabIndex = 113;
             // 
             // lbl_Customer_Postal_Code
             // 
@@ -260,7 +261,7 @@
             this.Controls.Add(this.txt_Customer_Adress);
             this.Controls.Add(this.lbl_Customer_Postal_Code);
             this.Controls.Add(this.lbl_Customer_Adress);
-            this.Controls.Add(this.txt_Customere_Postal_Code);
+            this.Controls.Add(this.txt_Customer_Postal_Code);
             this.Name = "frm_Customer_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Henkilön tiedot";
@@ -284,7 +285,7 @@
         public System.Windows.Forms.TextBox txt_Customer_Email;
         public System.Windows.Forms.TextBox txt_Customer_Phone_Number;
         public System.Windows.Forms.TextBox txt_Customer_Adress;
-        public System.Windows.Forms.TextBox txt_Customere_Postal_Code;
+        public System.Windows.Forms.TextBox txt_Customer_Postal_Code;
         public System.Windows.Forms.TextBox txt_Customer_City;
         public System.Windows.Forms.TextBox txt_Customer_Country;
         private System.Windows.Forms.Label lbl_Customer_Details;
