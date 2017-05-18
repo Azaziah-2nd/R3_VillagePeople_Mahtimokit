@@ -262,23 +262,27 @@
             // 
             // txt_Invoicing_Receiver_IBAN
             // 
+            this.txt_Invoicing_Receiver_IBAN.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Receiver_IBAN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Receiver_IBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Receiver_IBAN.Location = new System.Drawing.Point(15, 39);
             this.txt_Invoicing_Receiver_IBAN.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Receiver_IBAN.Name = "txt_Invoicing_Receiver_IBAN";
+            this.txt_Invoicing_Receiver_IBAN.ReadOnly = true;
             this.txt_Invoicing_Receiver_IBAN.Size = new System.Drawing.Size(347, 19);
             this.txt_Invoicing_Receiver_IBAN.TabIndex = 1;
             this.txt_Invoicing_Receiver_IBAN.Text = "FI43 1234432 53123461 413";
             // 
             // txt_Invoicing_Receiver
             // 
+            this.txt_Invoicing_Receiver.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Receiver.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Receiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Receiver.Location = new System.Drawing.Point(108, 77);
             this.txt_Invoicing_Receiver.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Receiver.Multiline = true;
             this.txt_Invoicing_Receiver.Name = "txt_Invoicing_Receiver";
+            this.txt_Invoicing_Receiver.ReadOnly = true;
             this.txt_Invoicing_Receiver.Size = new System.Drawing.Size(347, 66);
             this.txt_Invoicing_Receiver.TabIndex = 4;
             this.txt_Invoicing_Receiver.Text = "Village People Oy";
@@ -352,11 +356,13 @@
             this.txt_Invoicing_Customer_Postal_Info_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Postal_Info_2.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Postal_Info_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Postal_Info_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Postal_Info_2.Location = new System.Drawing.Point(15, 43);
             this.txt_Invoicing_Customer_Postal_Info_2.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Postal_Info_2.Name = "txt_Invoicing_Customer_Postal_Info_2";
+            this.txt_Invoicing_Customer_Postal_Info_2.ReadOnly = true;
             this.txt_Invoicing_Customer_Postal_Info_2.Size = new System.Drawing.Size(350, 19);
             this.txt_Invoicing_Customer_Postal_Info_2.TabIndex = 4;
             this.txt_Invoicing_Customer_Postal_Info_2.Text = "80100 Joensuu";
@@ -366,11 +372,13 @@
             this.txt_Invoicing_Customer_Name_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Name_2.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Name_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Name_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Name_2.Location = new System.Drawing.Point(15, 3);
             this.txt_Invoicing_Customer_Name_2.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Name_2.Name = "txt_Invoicing_Customer_Name_2";
+            this.txt_Invoicing_Customer_Name_2.ReadOnly = true;
             this.txt_Invoicing_Customer_Name_2.Size = new System.Drawing.Size(350, 19);
             this.txt_Invoicing_Customer_Name_2.TabIndex = 2;
             this.txt_Invoicing_Customer_Name_2.Text = "Etunimi Sukunimi";
@@ -380,11 +388,13 @@
             this.txt_Invoicing_Customer_Address_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Address_2.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Address_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Address_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Address_2.Location = new System.Drawing.Point(15, 23);
             this.txt_Invoicing_Customer_Address_2.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Address_2.Name = "txt_Invoicing_Customer_Address_2";
+            this.txt_Invoicing_Customer_Address_2.ReadOnly = true;
             this.txt_Invoicing_Customer_Address_2.Size = new System.Drawing.Size(350, 19);
             this.txt_Invoicing_Customer_Address_2.TabIndex = 3;
             this.txt_Invoicing_Customer_Address_2.Text = "Katuosoite 1 a 2";
@@ -549,10 +559,12 @@
             // txt_Invoicing_Total
             // 
             this.txt_Invoicing_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Total.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Total.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Total.Location = new System.Drawing.Point(48, 11);
             this.txt_Invoicing_Total.Name = "txt_Invoicing_Total";
+            this.txt_Invoicing_Total.ReadOnly = true;
             this.txt_Invoicing_Total.Size = new System.Drawing.Size(109, 19);
             this.txt_Invoicing_Total.TabIndex = 1;
             this.txt_Invoicing_Total.Text = "999,95";
@@ -561,11 +573,13 @@
             // txt_Invoicing_Due_Date_2
             // 
             this.txt_Invoicing_Due_Date_2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Invoicing_Due_Date_2.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Due_Date_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Due_Date_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Due_Date_2.Location = new System.Drawing.Point(16, 8);
             this.txt_Invoicing_Due_Date_2.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Due_Date_2.Name = "txt_Invoicing_Due_Date_2";
+            this.txt_Invoicing_Due_Date_2.ReadOnly = true;
             this.txt_Invoicing_Due_Date_2.Size = new System.Drawing.Size(162, 19);
             this.txt_Invoicing_Due_Date_2.TabIndex = 1;
             this.txt_Invoicing_Due_Date_2.Text = "24.12.2921";
@@ -624,11 +638,13 @@
             // 
             // txt_Invoicing_Receiver_BIC
             // 
+            this.txt_Invoicing_Receiver_BIC.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Receiver_BIC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Receiver_BIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Receiver_BIC.Location = new System.Drawing.Point(15, 39);
             this.txt_Invoicing_Receiver_BIC.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Receiver_BIC.Name = "txt_Invoicing_Receiver_BIC";
+            this.txt_Invoicing_Receiver_BIC.ReadOnly = true;
             this.txt_Invoicing_Receiver_BIC.Size = new System.Drawing.Size(435, 19);
             this.txt_Invoicing_Receiver_BIC.TabIndex = 2;
             this.txt_Invoicing_Receiver_BIC.Text = "AHASFAFIHH";
@@ -677,10 +693,12 @@
             // txt_Invoicing_Virtual_Barcode
             // 
             this.txt_Invoicing_Virtual_Barcode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Invoicing_Virtual_Barcode.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Virtual_Barcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Virtual_Barcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Virtual_Barcode.Location = new System.Drawing.Point(154, 9);
             this.txt_Invoicing_Virtual_Barcode.Name = "txt_Invoicing_Virtual_Barcode";
+            this.txt_Invoicing_Virtual_Barcode.ReadOnly = true;
             this.txt_Invoicing_Virtual_Barcode.Size = new System.Drawing.Size(528, 19);
             this.txt_Invoicing_Virtual_Barcode.TabIndex = 1;
             this.txt_Invoicing_Virtual_Barcode.Text = "3524618737416374169763176517615";
@@ -714,11 +732,13 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Location = new System.Drawing.Point(3, 3);
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Multiline = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Name = "txt_Invoicing_3rd_Row_Village_People_Info_1";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_1.ReadOnly = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Size = new System.Drawing.Size(176, 60);
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.TabIndex = 0;
             this.txt_Invoicing_3rd_Row_Village_People_Info_1.Text = "Village People Oy\r\nY-tunnus: 72671638\r\nwww.villageppl.fi";
@@ -728,11 +748,13 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_2.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Location = new System.Drawing.Point(185, 3);
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Multiline = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Name = "txt_Invoicing_3rd_Row_Village_People_Info_2";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_2.ReadOnly = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Size = new System.Drawing.Size(176, 60);
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.TabIndex = 1;
             this.txt_Invoicing_3rd_Row_Village_People_Info_2.Text = "pienestikakkakatu 3\r\n89304 Kakkala";
@@ -742,11 +764,13 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_3.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Location = new System.Drawing.Point(367, 3);
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Multiline = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Name = "txt_Invoicing_3rd_Row_Village_People_Info_3";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_3.ReadOnly = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Size = new System.Drawing.Size(176, 60);
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.TabIndex = 2;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Text = "Puhelin\r\n+358 40 123 456 789";
@@ -756,11 +780,13 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Location = new System.Drawing.Point(549, 3);
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Multiline = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Name = "txt_Invoicing_3rd_Row_Village_People_Info_4";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.ReadOnly = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Size = new System.Drawing.Size(176, 60);
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.TabIndex = 3;
             this.txt_Invoicing_3rd_Row_Village_People_Info_4.Text = "Fax\r\n+358 40 123 654 789";
@@ -770,11 +796,13 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_5.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Location = new System.Drawing.Point(731, 3);
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Multiline = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Name = "txt_Invoicing_3rd_Row_Village_People_Info_5";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_5.ReadOnly = true;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Size = new System.Drawing.Size(179, 60);
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.TabIndex = 4;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Text = "Pankki\r\nOP over powered\r\nIBAN FI17 681 737 1171\r\nBIC LULULUFIHH";
@@ -854,11 +882,13 @@
             // 
             // txt_Invoicing_Invoice_Number
             // 
+            this.txt_Invoicing_Invoice_Number.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Invoice_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Invoice_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Invoice_Number.Location = new System.Drawing.Point(15, 19);
             this.txt_Invoicing_Invoice_Number.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Invoice_Number.Name = "txt_Invoicing_Invoice_Number";
+            this.txt_Invoicing_Invoice_Number.ReadOnly = true;
             this.txt_Invoicing_Invoice_Number.Size = new System.Drawing.Size(201, 19);
             this.txt_Invoicing_Invoice_Number.TabIndex = 1;
             this.txt_Invoicing_Invoice_Number.Text = "lasku_id";
@@ -893,11 +923,13 @@
             // 
             // txt_Invoicing_Customer_Y_Id
             // 
+            this.txt_Invoicing_Customer_Y_Id.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Y_Id.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Y_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Y_Id.Location = new System.Drawing.Point(15, 19);
             this.txt_Invoicing_Customer_Y_Id.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Customer_Y_Id.Name = "txt_Invoicing_Customer_Y_Id";
+            this.txt_Invoicing_Customer_Y_Id.ReadOnly = true;
             this.txt_Invoicing_Customer_Y_Id.Size = new System.Drawing.Size(201, 19);
             this.txt_Invoicing_Customer_Y_Id.TabIndex = 1;
             this.txt_Invoicing_Customer_Y_Id.Text = "1235769?";
@@ -932,11 +964,13 @@
             // 
             // txt_Invoicing_Penalty_Interest
             // 
+            this.txt_Invoicing_Penalty_Interest.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Penalty_Interest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Penalty_Interest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Penalty_Interest.Location = new System.Drawing.Point(15, 20);
             this.txt_Invoicing_Penalty_Interest.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Penalty_Interest.Name = "txt_Invoicing_Penalty_Interest";
+            this.txt_Invoicing_Penalty_Interest.ReadOnly = true;
             this.txt_Invoicing_Penalty_Interest.Size = new System.Drawing.Size(201, 19);
             this.txt_Invoicing_Penalty_Interest.TabIndex = 1;
             this.txt_Invoicing_Penalty_Interest.Text = "8.0%";
@@ -971,11 +1005,13 @@
             // 
             // txt_Invoicing_Due_Date_1
             // 
+            this.txt_Invoicing_Due_Date_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Due_Date_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Due_Date_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Due_Date_1.Location = new System.Drawing.Point(15, 19);
             this.txt_Invoicing_Due_Date_1.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Due_Date_1.Name = "txt_Invoicing_Due_Date_1";
+            this.txt_Invoicing_Due_Date_1.ReadOnly = true;
             this.txt_Invoicing_Due_Date_1.Size = new System.Drawing.Size(202, 19);
             this.txt_Invoicing_Due_Date_1.TabIndex = 1;
             this.txt_Invoicing_Due_Date_1.Text = "24.12.2921";
@@ -1010,11 +1046,13 @@
             // 
             // txt_Invoicing_Remark_Time
             // 
+            this.txt_Invoicing_Remark_Time.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Remark_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Remark_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Remark_Time.Location = new System.Drawing.Point(15, 20);
             this.txt_Invoicing_Remark_Time.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Remark_Time.Name = "txt_Invoicing_Remark_Time";
+            this.txt_Invoicing_Remark_Time.ReadOnly = true;
             this.txt_Invoicing_Remark_Time.Size = new System.Drawing.Size(202, 19);
             this.txt_Invoicing_Remark_Time.TabIndex = 1;
             this.txt_Invoicing_Remark_Time.Text = "14 pv";
@@ -1080,11 +1118,13 @@
             // 
             // txt_Invoicing_Invoice_Date
             // 
+            this.txt_Invoicing_Invoice_Date.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Invoice_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Invoice_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Invoice_Date.Location = new System.Drawing.Point(15, 33);
             this.txt_Invoicing_Invoice_Date.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Invoice_Date.Name = "txt_Invoicing_Invoice_Date";
+            this.txt_Invoicing_Invoice_Date.ReadOnly = true;
             this.txt_Invoicing_Invoice_Date.Size = new System.Drawing.Size(201, 19);
             this.txt_Invoicing_Invoice_Date.TabIndex = 1;
             this.txt_Invoicing_Invoice_Date.Text = "01.01.1986";
@@ -1116,11 +1156,13 @@
             this.txt_Invoicing_Customer_Address_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Address_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Address_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Address_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Address_1.Location = new System.Drawing.Point(15, 55);
             this.txt_Invoicing_Customer_Address_1.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Address_1.Name = "txt_Invoicing_Customer_Address_1";
+            this.txt_Invoicing_Customer_Address_1.ReadOnly = true;
             this.txt_Invoicing_Customer_Address_1.Size = new System.Drawing.Size(432, 19);
             this.txt_Invoicing_Customer_Address_1.TabIndex = 2;
             this.txt_Invoicing_Customer_Address_1.Text = "Katuosoite 1 a 2";
@@ -1130,11 +1172,13 @@
             this.txt_Invoicing_Customer_Postal_Info_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Postal_Info_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Postal_Info_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Postal_Info_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Postal_Info_1.Location = new System.Drawing.Point(15, 81);
             this.txt_Invoicing_Customer_Postal_Info_1.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Postal_Info_1.Name = "txt_Invoicing_Customer_Postal_Info_1";
+            this.txt_Invoicing_Customer_Postal_Info_1.ReadOnly = true;
             this.txt_Invoicing_Customer_Postal_Info_1.Size = new System.Drawing.Size(432, 19);
             this.txt_Invoicing_Customer_Postal_Info_1.TabIndex = 3;
             this.txt_Invoicing_Customer_Postal_Info_1.Text = "80100 Joensuu";
@@ -1157,11 +1201,13 @@
             this.txt_Invoicing_Customer_Name_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_Customer_Name_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Name_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Name_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Invoicing_Customer_Name_1.Location = new System.Drawing.Point(15, 29);
             this.txt_Invoicing_Customer_Name_1.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Customer_Name_1.Name = "txt_Invoicing_Customer_Name_1";
+            this.txt_Invoicing_Customer_Name_1.ReadOnly = true;
             this.txt_Invoicing_Customer_Name_1.Size = new System.Drawing.Size(432, 19);
             this.txt_Invoicing_Customer_Name_1.TabIndex = 1;
             this.txt_Invoicing_Customer_Name_1.Text = "Etunimi Sukunimi";
@@ -1217,7 +1263,7 @@
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_4th_Row_Virtual_Barcode, 1, 4);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_5th_Row_Payment_Info, 1, 5);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_2nd_Row_Details, 1, 2);
-            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(102, 3);
+            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(93, 3);
             this.tbl_Invoicing_Base.Name = "tbl_Invoicing_Base";
             this.tbl_Invoicing_Base.RowCount = 6;
             this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
@@ -1378,7 +1424,7 @@
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(1162, 1446);
+            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(1145, 1446);
             this.tbl_Invoicing_Grey_Background.TabIndex = 1;
             // 
             // frm_Invoicing
