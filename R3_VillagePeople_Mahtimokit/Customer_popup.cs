@@ -49,7 +49,6 @@ namespace R3_VillagePeople_Mahtimokit
                 "lahiosoite=@lahiosoite, postitoimipaikka=@postitoimipaikka, postinro=@postinro, asuinmaa=@asuinmaa, email=@email, " +
                 "puhelinnro=@puhelinnro WHERE asiakas_id = @asiakas_id");
             string paivittaja = Properties.Settings.Default["user_name"].ToString();
-            MessageBox.Show(paivittaja);
             // Jos muokataan asiakasta.
             if (this.is_customer_edited == true)
             {

@@ -723,7 +723,7 @@
             // 
             this.lbl_Order_Cottage_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Order_Cottage_Persons.AutoSize = true;
-            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(15, 0);
+            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(6, 0);
             this.lbl_Order_Cottage_Persons.Name = "lbl_Order_Cottage_Persons";
             this.lbl_Order_Cottage_Persons.Size = new System.Drawing.Size(146, 20);
             this.lbl_Order_Cottage_Persons.TabIndex = 0;
@@ -743,9 +743,10 @@
             // txt_Order_Cottage_Persons_Quantity
             // 
             this.txt_Order_Cottage_Persons_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(167, 3);
+            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(158, 3);
+            this.txt_Order_Cottage_Persons_Quantity.MaxLength = 3;
             this.txt_Order_Cottage_Persons_Quantity.Name = "txt_Order_Cottage_Persons_Quantity";
-            this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(25, 26);
+            this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(34, 26);
             this.txt_Order_Cottage_Persons_Quantity.TabIndex = 2;
             this.txt_Order_Cottage_Persons_Quantity.Text = "1";
             // 
@@ -832,7 +833,7 @@
             this.txt_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Services_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Services_Search.Name = "txt_Order_Services_Search";
-            this.txt_Order_Services_Search.Size = new System.Drawing.Size(104, 26);
+            this.txt_Order_Services_Search.Size = new System.Drawing.Size(95, 26);
             this.txt_Order_Services_Search.TabIndex = 101;
             this.txt_Order_Services_Search.TextChanged += new System.EventHandler(this.txt_Order_Services_Search_TextChanged);
             // 
@@ -841,7 +842,7 @@
             this.btn_Order_Services_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Order_Services_Search.BackgroundImage")));
             this.btn_Order_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Services_Search.Location = new System.Drawing.Point(113, 3);
+            this.btn_Order_Services_Search.Location = new System.Drawing.Point(104, 3);
             this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
             this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Services_Search.TabIndex = 102;
@@ -860,9 +861,10 @@
             // txt_Order_Services_Quantity
             // 
             this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(151, 3);
+            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(142, 3);
+            this.txt_Order_Services_Quantity.MaxLength = 3;
             this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
-            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(25, 26);
+            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(34, 26);
             this.txt_Order_Services_Quantity.TabIndex = 1;
             this.txt_Order_Services_Quantity.Text = "1";
             // 
@@ -1589,7 +1591,6 @@
             this.dgv_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Cottages_All.Location = new System.Drawing.Point(3, 38);
             this.dgv_Cottages_All.Name = "dgv_Cottages_All";
-            this.dgv_Cottages_All.ReadOnly = true;
             this.dgv_Cottages_All.RowHeadersVisible = false;
             this.dgv_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cottages_All.Size = new System.Drawing.Size(279, 307);
@@ -1756,7 +1757,6 @@
             this.dgv_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Services_All.Location = new System.Drawing.Point(9, 40);
             this.dgv_Services_All.Name = "dgv_Services_All";
-            this.dgv_Services_All.ReadOnly = true;
             this.dgv_Services_All.RowHeadersVisible = false;
             this.dgv_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Services_All.Size = new System.Drawing.Size(285, 439);

@@ -196,7 +196,7 @@
             // 
             this.btn_Customer_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Customer_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer_Save.Location = new System.Drawing.Point(373, 447);
+            this.btn_Customer_Save.Location = new System.Drawing.Point(226, 447);
             this.btn_Customer_Save.Name = "btn_Customer_Save";
             this.btn_Customer_Save.Size = new System.Drawing.Size(97, 30);
             this.btn_Customer_Save.TabIndex = 117;
@@ -208,7 +208,7 @@
             // 
             this.btn_Customer_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Customer_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer_Cancel.Location = new System.Drawing.Point(226, 447);
+            this.btn_Customer_Cancel.Location = new System.Drawing.Point(371, 447);
             this.btn_Customer_Cancel.Name = "btn_Customer_Cancel";
             this.btn_Customer_Cancel.Size = new System.Drawing.Size(99, 30);
             this.btn_Customer_Cancel.TabIndex = 116;
