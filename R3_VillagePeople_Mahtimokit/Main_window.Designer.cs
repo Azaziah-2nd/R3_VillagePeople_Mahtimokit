@@ -190,11 +190,6 @@
             this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Log = new System.Windows.Forms.Label();
-            this.dgv_Log = new System.Windows.Forms.DataGridView();
-            this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.tbl_Settings_3rd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_3rd_Col_Invoice_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
@@ -232,6 +227,11 @@
             this.tbl_Invoice_Settings_IBAN_lbl_txt = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_IBAN = new System.Windows.Forms.Label();
             this.txt_Options_IBAN = new System.Windows.Forms.TextBox();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Log = new System.Windows.Forms.Label();
+            this.dgv_Log = new System.Windows.Forms.DataGridView();
+            this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
@@ -293,9 +293,6 @@
             this.tbl_Settings_1st_Col_Common_Settings_Base.SuspendLayout();
             this.tbl_Settings_1st_Col_Common_Settings.SuspendLayout();
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
             this.tbl_Settings_3rd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_3rd_Col_Invoice_Settings.SuspendLayout();
             this.tbl_Invoice_Settings_Receiver_lbl_txt.SuspendLayout();
@@ -308,6 +305,9 @@
             this.tbl_Invoice_Settings_Infobox_lbl_1_2.SuspendLayout();
             this.tbl_Invoice_Settings_Infobox_txt_1_2.SuspendLayout();
             this.tbl_Invoice_Settings_IBAN_lbl_txt.SuspendLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -363,8 +363,8 @@
             // 
             // tbl_Order_1st_Col_Dates_Customers
             // 
-            this.tbl_Order_1st_Col_Dates_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_1st_Col_Dates_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_1st_Col_Dates_Customers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Order_1st_Col_Dates_Customers.ColumnCount = 3;
@@ -386,8 +386,8 @@
             // 
             // tbl_Order_Customers
             // 
-            this.tbl_Order_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Customers.ColumnCount = 2;
             this.tbl_Order_Customers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 97F));
@@ -402,8 +402,8 @@
             // 
             // tbl_Order_1st_Col_Dates
             // 
-            this.tbl_Order_1st_Col_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_1st_Col_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_1st_Col_Dates.ColumnCount = 1;
             this.tbl_Order_1st_Col_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -419,8 +419,8 @@
             // 
             // tbl_Order_Date_Selection
             // 
-            this.tbl_Order_Date_Selection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Date_Selection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Date_Selection.ColumnCount = 2;
             this.tbl_Order_Date_Selection.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -457,7 +457,7 @@
             // 
             // dtp_Order_Start_Date
             // 
-            this.dtp_Order_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtp_Order_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Order_Start_Date.Location = new System.Drawing.Point(3, 20);
             this.dtp_Order_Start_Date.Name = "dtp_Order_Start_Date";
@@ -468,7 +468,7 @@
             // 
             // dtp_Order_End_Date
             // 
-            this.dtp_Order_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtp_Order_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Order_End_Date.Location = new System.Drawing.Point(100, 20);
             this.dtp_Order_End_Date.Name = "dtp_Order_End_Date";
@@ -489,8 +489,8 @@
             // 
             // tbl_Order_1st_Col_Customer
             // 
-            this.tbl_Order_1st_Col_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_1st_Col_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_1st_Col_Customer.ColumnCount = 1;
             this.tbl_Order_1st_Col_Customer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -510,8 +510,8 @@
             // 
             // tbl_Order_Customer_Search
             // 
-            this.tbl_Order_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Customer_Search.ColumnCount = 2;
             this.tbl_Order_Customer_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -538,7 +538,7 @@
             // 
             // txt_Order_Customers_Search
             // 
-            this.txt_Order_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Order_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Customers_Search.Location = new System.Drawing.Point(3, 3);
@@ -560,7 +560,7 @@
             // 
             // btn_Order_Customers_Add
             // 
-            this.btn_Order_Customers_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_Order_Customers_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Order_Customers_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Order_Customers_Add.Location = new System.Drawing.Point(3, 447);
@@ -577,8 +577,8 @@
             this.dgv_Order_Customers_All.AllowUserToDeleteRows = false;
             this.dgv_Order_Customers_All.AllowUserToResizeColumns = false;
             this.dgv_Order_Customers_All.AllowUserToResizeRows = false;
-            this.dgv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Order_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Order_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -596,8 +596,8 @@
             // 
             // tbl_Order_2nd_Col_Offices_Cottage
             // 
-            this.tbl_Order_2nd_Col_Offices_Cottage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_2nd_Col_Offices_Cottage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_2nd_Col_Offices_Cottage.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Order_2nd_Col_Offices_Cottage.ColumnCount = 3;
@@ -647,8 +647,8 @@
             this.dgv_Order_Cottages_All.AllowUserToDeleteRows = false;
             this.dgv_Order_Cottages_All.AllowUserToResizeColumns = false;
             this.dgv_Order_Cottages_All.AllowUserToResizeRows = false;
-            this.dgv_Order_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Order_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Order_Cottages_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Cottages_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -665,7 +665,7 @@
             // 
             // Btn_Order_Cottage_Add
             // 
-            this.Btn_Order_Cottage_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.Btn_Order_Cottage_Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(7, 554);
             this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
@@ -677,8 +677,8 @@
             // 
             // tbl_Cottage_Search
             // 
-            this.tbl_Cottage_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Cottage_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Cottage_Search.ColumnCount = 2;
             this.tbl_Cottage_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -705,7 +705,7 @@
             // 
             // txt_Order_Cottages_Search
             // 
-            this.txt_Order_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Order_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Cottages_Search.Location = new System.Drawing.Point(3, 3);
@@ -750,8 +750,8 @@
             // 
             // tbl_Order_Cottage_Persons
             // 
-            this.tbl_Order_Cottage_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Cottage_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Cottage_Persons.ColumnCount = 4;
             this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -801,8 +801,8 @@
             // 
             // tbl_Order_3rd_Col_Cottage_Summary_Services
             // 
-            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_3rd_Col_Cottage_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ColumnCount = 3;
@@ -825,8 +825,8 @@
             // 
             // tbl_Order_3rd_Col_Services
             // 
-            this.tbl_Order_3rd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_3rd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_3rd_Col_Services.ColumnCount = 1;
             this.tbl_Order_3rd_Col_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -856,8 +856,8 @@
             // 
             // tbl_Order_3rd_Col_Services_Quantity
             // 
-            this.tbl_Order_3rd_Col_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_3rd_Col_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_3rd_Col_Services_Quantity.ColumnCount = 4;
             this.tbl_Order_3rd_Col_Services_Quantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -877,7 +877,7 @@
             // 
             // txt_Order_Services_Search
             // 
-            this.txt_Order_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Order_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Order_Services_Search.Location = new System.Drawing.Point(3, 3);
@@ -923,8 +923,8 @@
             this.dgv_Order_Services_All.AllowUserToDeleteRows = false;
             this.dgv_Order_Services_All.AllowUserToResizeColumns = false;
             this.dgv_Order_Services_All.AllowUserToResizeRows = false;
-            this.dgv_Order_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Order_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Order_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Order_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -941,7 +941,7 @@
             // 
             // btn_Order_Service_add
             // 
-            this.btn_Order_Service_add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_Order_Service_add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Order_Service_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Order_Service_add.Location = new System.Drawing.Point(7, 554);
@@ -954,8 +954,8 @@
             // 
             // tbl_4th_Col_Summary
             // 
-            this.tbl_4th_Col_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_4th_Col_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_4th_Col_Summary.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_4th_Col_Summary.ColumnCount = 3;
@@ -982,8 +982,8 @@
             // 
             // tbl_Order_Summary_Dates_Office
             // 
-            this.tbl_Order_Summary_Dates_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Summary_Dates_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Summary_Dates_Office.ColumnCount = 1;
             this.tbl_Order_Summary_Dates_Office.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1065,8 +1065,8 @@
             // 
             // tbl_Order_Summary_Customers_Cottages_Services
             // 
-            this.tbl_Order_Summary_Customers_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Summary_Customers_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Summary_Customers_Cottages_Services.ColumnCount = 1;
             this.tbl_Order_Summary_Customers_Cottages_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1100,8 +1100,8 @@
             // 
             // lsv_Order_Summary_Cottages
             // 
-            this.lsv_Order_Summary_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lsv_Order_Summary_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_Order_Summary_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 23);
@@ -1113,8 +1113,8 @@
             // 
             // lsv_Order_Summary_Services
             // 
-            this.lsv_Order_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lsv_Order_Summary_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_Order_Summary_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 123);
@@ -1137,8 +1137,8 @@
             // 
             // tbl_Order_Summary_Buttons
             // 
-            this.tbl_Order_Summary_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Order_Summary_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Order_Summary_Buttons.ColumnCount = 2;
             this.tbl_Order_Summary_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1180,8 +1180,8 @@
             // 
             // txt_Order_Additional_Details
             // 
-            this.txt_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Order_Additional_Details.Location = new System.Drawing.Point(7, 425);
             this.txt_Order_Additional_Details.Multiline = true;
@@ -1225,8 +1225,8 @@
             // 
             // tbl_Edit_1st_Col_Customers
             // 
-            this.tbl_Edit_1st_Col_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_1st_Col_Customers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_1st_Col_Customers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Edit_1st_Col_Customers.ColumnCount = 3;
@@ -1262,8 +1262,8 @@
             // 
             // tbl_Edit_1st_Col_Customers_Search
             // 
-            this.tbl_Edit_1st_Col_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_1st_Col_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_1st_Col_Customers_Search.ColumnCount = 2;
             this.tbl_Edit_1st_Col_Customers_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1291,7 +1291,7 @@
             // 
             // txt_Customer_Search
             // 
-            this.txt_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Search.Location = new System.Drawing.Point(3, 3);
@@ -1302,8 +1302,8 @@
             // 
             // tbl_Edit_1st_Col_Customers_Buttons
             // 
-            this.tbl_Edit_1st_Col_Customers_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_1st_Col_Customers_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_1st_Col_Customers_Buttons.ColumnCount = 3;
             this.tbl_Edit_1st_Col_Customers_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1364,8 +1364,8 @@
             this.dgv_Customers_All.AllowUserToDeleteRows = false;
             this.dgv_Customers_All.AllowUserToResizeColumns = false;
             this.dgv_Customers_All.AllowUserToResizeRows = false;
-            this.dgv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1382,8 +1382,8 @@
             // 
             // tbl_Edit_2nd_Col_Offices_Cottages
             // 
-            this.tbl_Edit_2nd_Col_Offices_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_2nd_Col_Offices_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_2nd_Col_Offices_Cottages.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Edit_2nd_Col_Offices_Cottages.ColumnCount = 3;
@@ -1404,8 +1404,8 @@
             // 
             // tbl_Edit_2nd_Col_Offices
             // 
-            this.tbl_Edit_2nd_Col_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_2nd_Col_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_2nd_Col_Offices.ColumnCount = 1;
             this.tbl_Edit_2nd_Col_Offices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1446,8 +1446,8 @@
             // 
             // tbl_Edit_2nd_Col_Offices_Buttons
             // 
-            this.tbl_Edit_2nd_Col_Offices_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_2nd_Col_Offices_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnCount = 3;
             this.tbl_Edit_2nd_Col_Offices_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1503,8 +1503,8 @@
             // 
             // tbl_Edit_Cottages
             // 
-            this.tbl_Edit_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_Cottages.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Edit_Cottages.ColumnCount = 1;
@@ -1528,8 +1528,8 @@
             // 
             // tbl_Edit_3rd_Col_Cottages_Search
             // 
-            this.tbl_Edit_3rd_Col_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_3rd_Col_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_3rd_Col_Cottages_Search.ColumnCount = 2;
             this.tbl_Edit_3rd_Col_Cottages_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1557,7 +1557,7 @@
             // 
             // txt_Cottages_Search
             // 
-            this.txt_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottages_Search.Location = new System.Drawing.Point(3, 3);
@@ -1568,8 +1568,8 @@
             // 
             // tbl_Edit_Cottages_Buttons
             // 
-            this.tbl_Edit_Cottages_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_Cottages_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_Cottages_Buttons.ColumnCount = 3;
             this.tbl_Edit_Cottages_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1630,8 +1630,8 @@
             this.dgv_Cottages_All.AllowUserToDeleteRows = false;
             this.dgv_Cottages_All.AllowUserToResizeColumns = false;
             this.dgv_Cottages_All.AllowUserToResizeRows = false;
-            this.dgv_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Cottages_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Cottages_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Cottages_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1658,8 +1658,8 @@
             // 
             // tbl_Edit_3rd_Col_Services
             // 
-            this.tbl_Edit_3rd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_3rd_Col_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_3rd_Col_Services.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Edit_3rd_Col_Services.ColumnCount = 3;
@@ -1695,8 +1695,8 @@
             // 
             // tbl_Edit_Services_Buttons
             // 
-            this.tbl_Edit_Services_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_Services_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_Services_Buttons.ColumnCount = 3;
             this.tbl_Edit_Services_Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1753,8 +1753,8 @@
             // 
             // tbl_Edit_2nd_Col_Services_Search
             // 
-            this.tbl_Edit_2nd_Col_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Edit_2nd_Col_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Edit_2nd_Col_Services_Search.ColumnCount = 2;
             this.tbl_Edit_2nd_Col_Services_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1796,8 +1796,8 @@
             this.dgv_Services_All.AllowUserToDeleteRows = false;
             this.dgv_Services_All.AllowUserToResizeColumns = false;
             this.dgv_Services_All.AllowUserToResizeRows = false;
-            this.dgv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_Services_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Services_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Services_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1847,8 +1847,8 @@
             // 
             // tbl_History_1st_Col_Customers_Offices
             // 
-            this.tbl_History_1st_Col_Customers_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_1st_Col_Customers_Offices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_1st_Col_Customers_Offices.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_History_1st_Col_Customers_Offices.ColumnCount = 3;
@@ -1888,8 +1888,8 @@
             // 
             // tbl_History_Customer_Search
             // 
-            this.tbl_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Customer_Search.ColumnCount = 2;
             this.tbl_History_Customer_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1917,7 +1917,7 @@
             // 
             // txt_History_Customer_Search
             // 
-            this.txt_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_History_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_History_Customer_Search.Location = new System.Drawing.Point(3, 3);
@@ -1940,8 +1940,8 @@
             // 
             // tbl_History_Office
             // 
-            this.tbl_History_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Office.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Office.ColumnCount = 1;
             this.tbl_History_Office.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1981,7 +1981,7 @@
             // 
             // btn_History_Limit_To_Office
             // 
-            this.btn_History_Limit_To_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_History_Limit_To_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_History_Limit_To_Office.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_History_Limit_To_Office.Location = new System.Drawing.Point(3, 57);
@@ -1998,8 +1998,8 @@
             this.dgv_History_Customers_All.AllowUserToDeleteRows = false;
             this.dgv_History_Customers_All.AllowUserToResizeColumns = false;
             this.dgv_History_Customers_All.AllowUserToResizeRows = false;
-            this.dgv_History_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_History_Customers_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_History_Customers_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_History_Customers_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2017,8 +2017,8 @@
             // 
             // tbl_History_Order_Filter_Summary
             // 
-            this.tbl_History_Order_Filter_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_Filter_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Filter_Summary.ColumnCount = 1;
             this.tbl_History_Order_Filter_Summary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2038,8 +2038,8 @@
             // 
             // btn_History_Order_Filter_Reset
             // 
-            this.btn_History_Order_Filter_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_History_Order_Filter_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_History_Order_Filter_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_History_Order_Filter_Reset.Location = new System.Drawing.Point(3, 113);
@@ -2080,8 +2080,8 @@
             // 
             // tbl_History_2nd_Col_Orders_Dates
             // 
-            this.tbl_History_2nd_Col_Orders_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_2nd_Col_Orders_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_2nd_Col_Orders_Dates.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_History_2nd_Col_Orders_Dates.ColumnCount = 3;
@@ -2101,8 +2101,8 @@
             // 
             // tbl_History_Order_History
             // 
-            this.tbl_History_Order_History.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_History.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_History.ColumnCount = 1;
             this.tbl_History_Order_History.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2134,8 +2134,8 @@
             // 
             // tbl_History_Order_Search
             // 
-            this.tbl_History_Order_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Search.ColumnCount = 2;
             this.tbl_History_Order_Search.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2173,8 +2173,8 @@
             // 
             // tbl_History_Order_Dates_Delete
             // 
-            this.tbl_History_Order_Dates_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_Dates_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Dates_Delete.ColumnCount = 1;
             this.tbl_History_Order_Dates_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.28674F));
@@ -2188,8 +2188,8 @@
             // 
             // tbl_History_Order_Dates
             // 
-            this.tbl_History_Order_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Dates.ColumnCount = 1;
             this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2215,7 +2215,7 @@
             // 
             // dtp_History_Orders_Filter_Date_End
             // 
-            this.dtp_History_Orders_Filter_Date_End.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtp_History_Orders_Filter_Date_End.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 25);
             this.dtp_History_Orders_Filter_Date_End.Name = "dtp_History_Orders_Filter_Date_End";
@@ -2230,8 +2230,8 @@
             this.dgv_History_Orders_All.AllowUserToDeleteRows = false;
             this.dgv_History_Orders_All.AllowUserToResizeColumns = false;
             this.dgv_History_Orders_All.AllowUserToResizeRows = false;
-            this.dgv_History_Orders_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv_History_Orders_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_History_Orders_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_History_Orders_All.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2249,8 +2249,8 @@
             // 
             // tbl_History_3th_Col_Selected_Order_Details
             // 
-            this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_3th_Col_Selected_Order_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_3th_Col_Selected_Order_Details.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_History_3th_Col_Selected_Order_Details.ColumnCount = 3;
@@ -2276,8 +2276,8 @@
             // 
             // tbl_History_Selected_Order_Basic_Details
             // 
-            this.tbl_History_Selected_Order_Basic_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Selected_Order_Basic_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Selected_Order_Basic_Details.ColumnCount = 1;
             this.tbl_History_Selected_Order_Basic_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2301,8 +2301,8 @@
             // 
             // tbl_History_Order_Details_Delete
             // 
-            this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Order_Details_Delete.ColumnCount = 2;
             this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.4767F));
@@ -2398,8 +2398,8 @@
             // 
             // tbl_History_Selected_Order_Cottages_Services
             // 
-            this.tbl_History_Selected_Order_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_History_Selected_Order_Cottages_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_History_Selected_Order_Cottages_Services.ColumnCount = 1;
             this.tbl_History_Selected_Order_Cottages_Services.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2433,8 +2433,8 @@
             // 
             // lsv_History_Order_Cottages
             // 
-            this.lsv_History_Order_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lsv_History_Order_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_History_Order_Cottages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_History_Order_Cottages.Location = new System.Drawing.Point(3, 23);
@@ -2446,8 +2446,8 @@
             // 
             // lsv_History_Order_Services
             // 
-            this.lsv_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lsv_History_Order_Services.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_History_Order_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lsv_History_Order_Services.Location = new System.Drawing.Point(3, 124);
@@ -2470,8 +2470,8 @@
             // 
             // txt_History_Order_Additional_Details
             // 
-            this.txt_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_History_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_History_Order_Additional_Details.Location = new System.Drawing.Point(8, 483);
             this.txt_History_Order_Additional_Details.Multiline = true;
@@ -2493,8 +2493,8 @@
             // 
             // tbl_Settings_Base
             // 
-            this.tbl_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_Base.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tbl_Settings_Base.ColumnCount = 7;
@@ -2519,8 +2519,8 @@
             // 
             // tbl_Settings_1st_Col_Common_Settings_Base
             // 
-            this.tbl_Settings_1st_Col_Common_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Settings_1st_Col_Common_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_1st_Col_Common_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Settings_1st_Col_Common_Settings_Base.ColumnCount = 3;
@@ -2539,13 +2539,12 @@
             // 
             // tbl_Settings_1st_Col_Common_Settings
             // 
-            this.tbl_Settings_1st_Col_Common_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Settings_1st_Col_Common_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_1st_Col_Common_Settings.ColumnCount = 1;
             this.tbl_Settings_1st_Col_Common_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Settings_Common_Settings, 0, 0);
-            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date, 0, 6);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.tbl_Common_Settings_History_End_Date_Today, 0, 7);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.dtp_Common_Settings_History_End_Date_Custom, 0, 9);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date_Custom, 0, 8);
@@ -2553,6 +2552,7 @@
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_Default_Office, 0, 4);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.txt_Settings_User_Name, 0, 3);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Settings_User_Name, 0, 2);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date, 0, 6);
             this.tbl_Settings_1st_Col_Common_Settings.Location = new System.Drawing.Point(14, 20);
             this.tbl_Settings_1st_Col_Common_Settings.Name = "tbl_Settings_1st_Col_Common_Settings";
             this.tbl_Settings_1st_Col_Common_Settings.RowCount = 11;
@@ -2586,15 +2586,15 @@
             this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 222);
             this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
-            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(140, 27);
+            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(232, 20);
             this.lbl_Common_Settings_History_End_Date.TabIndex = 19;
-            this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päättymispäivä";
+            this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päivämäärä";
             // 
             // tbl_Common_Settings_History_End_Date_Today
             // 
             this.tbl_Common_Settings_History_End_Date_Today.ColumnCount = 2;
-            this.tbl_Common_Settings_History_End_Date_Today.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.42857F));
-            this.tbl_Common_Settings_History_End_Date_Today.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.57143F));
+            this.tbl_Common_Settings_History_End_Date_Today.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.25397F));
+            this.tbl_Common_Settings_History_End_Date_Today.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.74603F));
             this.tbl_Common_Settings_History_End_Date_Today.Controls.Add(this.lbl_Common_Settings_History_End_Date_Today, 0, 0);
             this.tbl_Common_Settings_History_End_Date_Today.Controls.Add(this.chk_Common_Settings_History_End_Date_Today, 1, 0);
             this.tbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 252);
@@ -2608,9 +2608,9 @@
             // 
             this.lbl_Common_Settings_History_End_Date_Today.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Common_Settings_History_End_Date_Today.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 8);
             this.lbl_Common_Settings_History_End_Date_Today.Name = "lbl_Common_Settings_History_End_Date_Today";
-            this.lbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(113, 37);
+            this.lbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(163, 20);
             this.lbl_Common_Settings_History_End_Date_Today.TabIndex = 0;
             this.lbl_Common_Settings_History_End_Date_Today.Text = "Käytä nykyistä päivää:";
             // 
@@ -2620,7 +2620,7 @@
             this.chk_Common_Settings_History_End_Date_Today.AutoSize = true;
             this.chk_Common_Settings_History_End_Date_Today.Checked = true;
             this.chk_Common_Settings_History_End_Date_Today.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(157, 11);
+            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(174, 11);
             this.chk_Common_Settings_History_End_Date_Today.Name = "chk_Common_Settings_History_End_Date_Today";
             this.chk_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(15, 14);
             this.chk_Common_Settings_History_End_Date_Today.TabIndex = 1;
@@ -2628,7 +2628,7 @@
             // 
             // dtp_Common_Settings_History_End_Date_Custom
             // 
-            this.dtp_Common_Settings_History_End_Date_Custom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtp_Common_Settings_History_End_Date_Custom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 325);
             this.dtp_Common_Settings_History_End_Date_Custom.Name = "dtp_Common_Settings_History_End_Date_Custom";
@@ -2647,7 +2647,7 @@
             // 
             // cbo_Common_Settings_Default_Office
             // 
-            this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cbo_Common_Settings_Default_Office.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbo_Common_Settings_Default_Office.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Common_Settings_Default_Office.FormattingEnabled = true;
@@ -2669,7 +2669,7 @@
             // 
             // txt_Settings_User_Name
             // 
-            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Settings_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 88);
             this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
@@ -2687,90 +2687,10 @@
             this.lbl_Settings_User_Name.TabIndex = 2;
             this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
             // 
-            // tbl_Settings_2nd_Col_UI_Settings_Base
-            // 
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(288, 579);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.TabIndex = 3;
-            // 
-            // tbl_Settings_2nd_Col_UI_Settings
-            // 
-            this.tbl_Settings_2nd_Col_UI_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Settings_2nd_Col_UI_Settings.ColumnCount = 1;
-            this.tbl_Settings_2nd_Col_UI_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.lbl_Log, 0, 0);
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.dgv_Log, 0, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.btn_log_update_grid, 0, 2);
-            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(14, 20);
-            this.tbl_Settings_2nd_Col_UI_Settings.Name = "tbl_Settings_2nd_Col_UI_Settings";
-            this.tbl_Settings_2nd_Col_UI_Settings.RowCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.971154F));
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.02885F));
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(258, 538);
-            this.tbl_Settings_2nd_Col_UI_Settings.TabIndex = 1;
-            // 
-            // lbl_Log
-            // 
-            this.lbl_Log.AutoSize = true;
-            this.lbl_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_Log.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Log.Name = "lbl_Log";
-            this.lbl_Log.Size = new System.Drawing.Size(48, 24);
-            this.lbl_Log.TabIndex = 0;
-            this.lbl_Log.Text = "Loki";
-            // 
-            // dgv_Log
-            // 
-            this.dgv_Log.AllowUserToAddRows = false;
-            this.dgv_Log.AllowUserToDeleteRows = false;
-            this.dgv_Log.AllowUserToResizeColumns = false;
-            this.dgv_Log.AllowUserToResizeRows = false;
-            this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Log.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Log.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Log.Location = new System.Drawing.Point(3, 37);
-            this.dgv_Log.Name = "dgv_Log";
-            this.dgv_Log.ReadOnly = true;
-            this.dgv_Log.RowHeadersVisible = false;
-            this.dgv_Log.Size = new System.Drawing.Size(252, 457);
-            this.dgv_Log.TabIndex = 1;
-            // 
-            // btn_log_update_grid
-            // 
-            this.btn_log_update_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
-            this.btn_log_update_grid.Name = "btn_log_update_grid";
-            this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
-            this.btn_log_update_grid.TabIndex = 2;
-            this.btn_log_update_grid.Text = "Lataa lokitiedot";
-            this.btn_log_update_grid.UseVisualStyleBackColor = true;
-            // 
             // tbl_Settings_3rd_Col_UI_Settings_Base
             // 
-            this.tbl_Settings_3rd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Settings_3rd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_3rd_Col_UI_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tbl_Settings_3rd_Col_UI_Settings_Base.ColumnCount = 3;
@@ -2789,8 +2709,8 @@
             // 
             // tbl_Settings_3rd_Col_Invoice_Settings
             // 
-            this.tbl_Settings_3rd_Col_Invoice_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Settings_3rd_Col_Invoice_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_3rd_Col_Invoice_Settings.ColumnCount = 1;
             this.tbl_Settings_3rd_Col_Invoice_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2828,31 +2748,31 @@
             // 
             // btn_Options_Save_Invoicing
             // 
-            this.btn_Options_Save_Invoicing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_Options_Save_Invoicing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 501);
             this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
             this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 34);
             this.btn_Options_Save_Invoicing.TabIndex = 14;
-            this.btn_Options_Save_Invoicing.Text = "Tallenna laskuinfo";
+            this.btn_Options_Save_Invoicing.Text = "Tallenna tiedot";
             this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
             this.btn_Options_Save_Invoicing.Click += new System.EventHandler(this.btn_Options_Save_Invoicing_Click);
             // 
             // tbl_Invoice_Settings_Receiver_lbl_txt
             // 
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnCount = 2;
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.lbl_Receiver, 0, 0);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.txt_Options_Receiver, 1, 0);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Location = new System.Drawing.Point(3, 461);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Name = "tbl_Invoice_Settings_Receiver_lbl_txt";
             this.tbl_Invoice_Settings_Receiver_lbl_txt.RowCount = 1;
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Size = new System.Drawing.Size(252, 34);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.TabIndex = 13;
             // 
@@ -2860,24 +2780,24 @@
             // 
             this.lbl_Receiver.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Receiver.AutoSize = true;
-            this.lbl_Receiver.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Receiver.Location = new System.Drawing.Point(3, 7);
             this.lbl_Receiver.Name = "lbl_Receiver";
-            this.lbl_Receiver.Size = new System.Drawing.Size(51, 34);
+            this.lbl_Receiver.Size = new System.Drawing.Size(113, 20);
             this.lbl_Receiver.TabIndex = 0;
             this.lbl_Receiver.Text = "Vastaanottaja:";
             // 
             // txt_Options_Receiver
             // 
-            this.txt_Options_Receiver.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txt_Options_Receiver.Location = new System.Drawing.Point(62, 4);
+            this.txt_Options_Receiver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Options_Receiver.Location = new System.Drawing.Point(122, 4);
             this.txt_Options_Receiver.Name = "txt_Options_Receiver";
-            this.txt_Options_Receiver.Size = new System.Drawing.Size(187, 26);
+            this.txt_Options_Receiver.Size = new System.Drawing.Size(127, 26);
             this.txt_Options_Receiver.TabIndex = 1;
             // 
             // tbl_Invoice_Settings_Infobox_txt_5_txt_BIC
             // 
-            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2893,8 +2813,8 @@
             // 
             // txt_Options_BIC
             // 
-            this.txt_Options_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_BIC.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_BIC.Name = "txt_Options_BIC";
@@ -2903,8 +2823,8 @@
             // 
             // txt_Options_Infobox_5
             // 
-            this.txt_Options_Infobox_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_Infobox_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_Infobox_5.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_5.Multiline = true;
@@ -2914,8 +2834,8 @@
             // 
             // tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC
             // 
-            this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2951,8 +2871,8 @@
             // 
             // tbl_Invoice_Settings_Infobox_txt_3_4
             // 
-            this.tbl_Invoice_Settings_Infobox_txt_3_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_txt_3_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_txt_3_4.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_txt_3_4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2968,8 +2888,8 @@
             // 
             // txt_Options_Infobox_4
             // 
-            this.txt_Options_Infobox_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_Infobox_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_Infobox_4.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_Infobox_4.Multiline = true;
@@ -2979,8 +2899,8 @@
             // 
             // txt_Options_Infobox_3
             // 
-            this.txt_Options_Infobox_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_Infobox_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_Infobox_3.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_3.Multiline = true;
@@ -2990,8 +2910,8 @@
             // 
             // tbl_Invoice_Settings_Infobox_lbl_3_4
             // 
-            this.tbl_Invoice_Settings_Infobox_lbl_3_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_lbl_3_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3027,13 +2947,12 @@
             // 
             // tbl_Invoice_Settings_Remark_Time
             // 
-            this.tbl_Invoice_Settings_Remark_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Invoice_Settings_Remark_Time.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tbl_Invoice_Settings_Remark_Time.ColumnCount = 3;
             this.tbl_Invoice_Settings_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoice_Settings_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tbl_Invoice_Settings_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tbl_Invoice_Settings_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tbl_Invoice_Settings_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tbl_Invoice_Settings_Remark_Time.Controls.Add(this.lbl_pv, 2, 0);
             this.tbl_Invoice_Settings_Remark_Time.Controls.Add(this.lbl_Remark_Time, 0, 0);
             this.tbl_Invoice_Settings_Remark_Time.Controls.Add(this.txt_Options_Remark_Time, 1, 0);
@@ -3048,7 +2967,7 @@
             // 
             this.lbl_pv.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_pv.AutoSize = true;
-            this.lbl_pv.Location = new System.Drawing.Point(209, 7);
+            this.lbl_pv.Location = new System.Drawing.Point(208, 7);
             this.lbl_pv.Name = "lbl_pv";
             this.lbl_pv.Size = new System.Drawing.Size(25, 20);
             this.lbl_pv.TabIndex = 0;
@@ -3067,10 +2986,10 @@
             // txt_Options_Remark_Time
             // 
             this.txt_Options_Remark_Time.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txt_Options_Remark_Time.Location = new System.Drawing.Point(158, 4);
+            this.txt_Options_Remark_Time.Location = new System.Drawing.Point(141, 4);
             this.txt_Options_Remark_Time.MaxLength = 3;
             this.txt_Options_Remark_Time.Name = "txt_Options_Remark_Time";
-            this.txt_Options_Remark_Time.Size = new System.Drawing.Size(45, 26);
+            this.txt_Options_Remark_Time.Size = new System.Drawing.Size(61, 26);
             this.txt_Options_Remark_Time.TabIndex = 2;
             // 
             // lbl_Invoicing_Options
@@ -3085,12 +3004,11 @@
             // 
             // tbl_Invoice_Settings_Penalty_Interest
             // 
-            this.tbl_Invoice_Settings_Penalty_Interest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Invoice_Settings_Penalty_Interest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tbl_Invoice_Settings_Penalty_Interest.ColumnCount = 3;
             this.tbl_Invoice_Settings_Penalty_Interest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoice_Settings_Penalty_Interest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tbl_Invoice_Settings_Penalty_Interest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tbl_Invoice_Settings_Penalty_Interest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tbl_Invoice_Settings_Penalty_Interest.Controls.Add(this.lbl_Percent, 2, 0);
             this.tbl_Invoice_Settings_Penalty_Interest.Controls.Add(this.lbl_Penalty_Interest, 0, 0);
@@ -3125,10 +3043,10 @@
             // txt_Options_Penalty_Interest
             // 
             this.txt_Options_Penalty_Interest.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txt_Options_Penalty_Interest.Location = new System.Drawing.Point(159, 4);
+            this.txt_Options_Penalty_Interest.Location = new System.Drawing.Point(142, 4);
             this.txt_Options_Penalty_Interest.MaxLength = 5;
             this.txt_Options_Penalty_Interest.Name = "txt_Options_Penalty_Interest";
-            this.txt_Options_Penalty_Interest.Size = new System.Drawing.Size(44, 26);
+            this.txt_Options_Penalty_Interest.Size = new System.Drawing.Size(61, 26);
             this.txt_Options_Penalty_Interest.TabIndex = 2;
             // 
             // lbl_Company_Invoicing_Info
@@ -3138,14 +3056,14 @@
             this.lbl_Company_Invoicing_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Company_Invoicing_Info.Location = new System.Drawing.Point(3, 130);
             this.lbl_Company_Invoicing_Info.Name = "lbl_Company_Invoicing_Info";
-            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(178, 20);
+            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(134, 20);
             this.lbl_Company_Invoicing_Info.TabIndex = 15;
-            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tietosarake";
+            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tiedot";
             // 
             // tbl_Invoice_Settings_Infobox_lbl_1_2
             // 
-            this.tbl_Invoice_Settings_Infobox_lbl_1_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_lbl_1_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_lbl_1_2.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_lbl_1_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3181,8 +3099,8 @@
             // 
             // tbl_Invoice_Settings_Infobox_txt_1_2
             // 
-            this.tbl_Invoice_Settings_Infobox_txt_1_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_Infobox_txt_1_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Infobox_txt_1_2.ColumnCount = 2;
             this.tbl_Invoice_Settings_Infobox_txt_1_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3198,8 +3116,8 @@
             // 
             // txt_Options_Infobox_2
             // 
-            this.txt_Options_Infobox_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_Infobox_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_Infobox_2.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_Infobox_2.Multiline = true;
@@ -3209,8 +3127,8 @@
             // 
             // txt_Options_Infobox_1
             // 
-            this.txt_Options_Infobox_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_Options_Infobox_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_Infobox_1.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_1.Multiline = true;
@@ -3220,8 +3138,8 @@
             // 
             // tbl_Invoice_Settings_IBAN_lbl_txt
             // 
-            this.tbl_Invoice_Settings_IBAN_lbl_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tbl_Invoice_Settings_IBAN_lbl_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_IBAN_lbl_txt.ColumnCount = 2;
             this.tbl_Invoice_Settings_IBAN_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
@@ -3247,11 +3165,91 @@
             // 
             // txt_Options_IBAN
             // 
-            this.txt_Options_IBAN.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Options_IBAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Options_IBAN.Location = new System.Drawing.Point(62, 4);
             this.txt_Options_IBAN.Name = "txt_Options_IBAN";
             this.txt_Options_IBAN.Size = new System.Drawing.Size(187, 26);
             this.txt_Options_IBAN.TabIndex = 1;
+            // 
+            // tbl_Settings_2nd_Col_UI_Settings_Base
+            // 
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(288, 579);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.TabIndex = 3;
+            // 
+            // tbl_Settings_2nd_Col_UI_Settings
+            // 
+            this.tbl_Settings_2nd_Col_UI_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Settings_2nd_Col_UI_Settings.ColumnCount = 1;
+            this.tbl_Settings_2nd_Col_UI_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.lbl_Log, 0, 0);
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.dgv_Log, 0, 1);
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.btn_log_update_grid, 0, 2);
+            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(14, 20);
+            this.tbl_Settings_2nd_Col_UI_Settings.Name = "tbl_Settings_2nd_Col_UI_Settings";
+            this.tbl_Settings_2nd_Col_UI_Settings.RowCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.971154F));
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.02885F));
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(258, 538);
+            this.tbl_Settings_2nd_Col_UI_Settings.TabIndex = 1;
+            // 
+            // lbl_Log
+            // 
+            this.lbl_Log.AutoSize = true;
+            this.lbl_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_Log.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Log.Name = "lbl_Log";
+            this.lbl_Log.Size = new System.Drawing.Size(48, 24);
+            this.lbl_Log.TabIndex = 0;
+            this.lbl_Log.Text = "Loki";
+            // 
+            // dgv_Log
+            // 
+            this.dgv_Log.AllowUserToAddRows = false;
+            this.dgv_Log.AllowUserToDeleteRows = false;
+            this.dgv_Log.AllowUserToResizeColumns = false;
+            this.dgv_Log.AllowUserToResizeRows = false;
+            this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Log.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Log.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Log.Location = new System.Drawing.Point(3, 37);
+            this.dgv_Log.Name = "dgv_Log";
+            this.dgv_Log.ReadOnly = true;
+            this.dgv_Log.RowHeadersVisible = false;
+            this.dgv_Log.Size = new System.Drawing.Size(252, 457);
+            this.dgv_Log.TabIndex = 1;
+            // 
+            // btn_log_update_grid
+            // 
+            this.btn_log_update_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
+            this.btn_log_update_grid.Name = "btn_log_update_grid";
+            this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
+            this.btn_log_update_grid.TabIndex = 2;
+            this.btn_log_update_grid.Text = "Lataa lokitiedot";
+            this.btn_log_update_grid.UseVisualStyleBackColor = true;
             // 
             // btn_History_Order_History_Delete
             // 
@@ -3369,10 +3367,6 @@
             this.tbl_Settings_1st_Col_Common_Settings.PerformLayout();
             this.tbl_Common_Settings_History_End_Date_Today.ResumeLayout(false);
             this.tbl_Common_Settings_History_End_Date_Today.PerformLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
-            this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
-            this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
             this.tbl_Settings_3rd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_3rd_Col_Invoice_Settings.ResumeLayout(false);
             this.tbl_Settings_3rd_Col_Invoice_Settings.PerformLayout();
@@ -3396,6 +3390,10 @@
             this.tbl_Invoice_Settings_Infobox_txt_1_2.PerformLayout();
             this.tbl_Invoice_Settings_IBAN_lbl_txt.ResumeLayout(false);
             this.tbl_Invoice_Settings_IBAN_lbl_txt.PerformLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
+            this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
+            this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
             this.ResumeLayout(false);
 
         }
