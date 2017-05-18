@@ -190,11 +190,6 @@
             this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Log = new System.Windows.Forms.Label();
-            this.dgv_Log = new System.Windows.Forms.DataGridView();
-            this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.tbl_Settings_3rd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_3rd_Col_Invoice_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
@@ -232,6 +227,11 @@
             this.tbl_Invoice_Settings_IBAN_lbl_txt = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_IBAN = new System.Windows.Forms.Label();
             this.txt_Options_IBAN = new System.Windows.Forms.TextBox();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Settings_2nd_Col_UI_Settings = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Log = new System.Windows.Forms.Label();
+            this.dgv_Log = new System.Windows.Forms.DataGridView();
+            this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
@@ -293,9 +293,6 @@
             this.tbl_Settings_1st_Col_Common_Settings_Base.SuspendLayout();
             this.tbl_Settings_1st_Col_Common_Settings.SuspendLayout();
             this.tbl_Common_Settings_History_End_Date_Today.SuspendLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
             this.tbl_Settings_3rd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_3rd_Col_Invoice_Settings.SuspendLayout();
             this.tbl_Invoice_Settings_Receiver_lbl_txt.SuspendLayout();
@@ -308,6 +305,9 @@
             this.tbl_Invoice_Settings_Infobox_lbl_1_2.SuspendLayout();
             this.tbl_Invoice_Settings_Infobox_txt_1_2.SuspendLayout();
             this.tbl_Invoice_Settings_IBAN_lbl_txt.SuspendLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2687,86 +2687,6 @@
             this.lbl_Settings_User_Name.TabIndex = 2;
             this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
             // 
-            // tbl_Settings_2nd_Col_UI_Settings_Base
-            // 
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(288, 579);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.TabIndex = 3;
-            // 
-            // tbl_Settings_2nd_Col_UI_Settings
-            // 
-            this.tbl_Settings_2nd_Col_UI_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Settings_2nd_Col_UI_Settings.ColumnCount = 1;
-            this.tbl_Settings_2nd_Col_UI_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.lbl_Log, 0, 0);
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.dgv_Log, 0, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.btn_log_update_grid, 0, 2);
-            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(14, 20);
-            this.tbl_Settings_2nd_Col_UI_Settings.Name = "tbl_Settings_2nd_Col_UI_Settings";
-            this.tbl_Settings_2nd_Col_UI_Settings.RowCount = 3;
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.971154F));
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.02885F));
-            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(258, 538);
-            this.tbl_Settings_2nd_Col_UI_Settings.TabIndex = 1;
-            // 
-            // lbl_Log
-            // 
-            this.lbl_Log.AutoSize = true;
-            this.lbl_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_Log.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Log.Name = "lbl_Log";
-            this.lbl_Log.Size = new System.Drawing.Size(48, 24);
-            this.lbl_Log.TabIndex = 0;
-            this.lbl_Log.Text = "Loki";
-            // 
-            // dgv_Log
-            // 
-            this.dgv_Log.AllowUserToAddRows = false;
-            this.dgv_Log.AllowUserToDeleteRows = false;
-            this.dgv_Log.AllowUserToResizeColumns = false;
-            this.dgv_Log.AllowUserToResizeRows = false;
-            this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Log.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Log.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Log.Location = new System.Drawing.Point(3, 37);
-            this.dgv_Log.Name = "dgv_Log";
-            this.dgv_Log.ReadOnly = true;
-            this.dgv_Log.RowHeadersVisible = false;
-            this.dgv_Log.Size = new System.Drawing.Size(252, 457);
-            this.dgv_Log.TabIndex = 1;
-            // 
-            // btn_log_update_grid
-            // 
-            this.btn_log_update_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
-            this.btn_log_update_grid.Name = "btn_log_update_grid";
-            this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
-            this.btn_log_update_grid.TabIndex = 2;
-            this.btn_log_update_grid.Text = "Lataa lokitiedot";
-            this.btn_log_update_grid.UseVisualStyleBackColor = true;
-            // 
             // tbl_Settings_3rd_Col_UI_Settings_Base
             // 
             this.tbl_Settings_3rd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2835,7 +2755,7 @@
             this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
             this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 34);
             this.btn_Options_Save_Invoicing.TabIndex = 14;
-            this.btn_Options_Save_Invoicing.Text = "Tallenna laskuinfo";
+            this.btn_Options_Save_Invoicing.Text = "Tallenna tiedot";
             this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
             this.btn_Options_Save_Invoicing.Click += new System.EventHandler(this.btn_Options_Save_Invoicing_Click);
             // 
@@ -2845,8 +2765,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnCount = 2;
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.61905F));
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.38095F));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.lbl_Receiver, 0, 0);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.txt_Options_Receiver, 1, 0);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Location = new System.Drawing.Point(3, 461);
@@ -2860,18 +2780,18 @@
             // 
             this.lbl_Receiver.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Receiver.AutoSize = true;
-            this.lbl_Receiver.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Receiver.Location = new System.Drawing.Point(3, 7);
             this.lbl_Receiver.Name = "lbl_Receiver";
-            this.lbl_Receiver.Size = new System.Drawing.Size(51, 34);
+            this.lbl_Receiver.Size = new System.Drawing.Size(113, 20);
             this.lbl_Receiver.TabIndex = 0;
             this.lbl_Receiver.Text = "Vastaanottaja:";
             // 
             // txt_Options_Receiver
             // 
             this.txt_Options_Receiver.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txt_Options_Receiver.Location = new System.Drawing.Point(62, 4);
+            this.txt_Options_Receiver.Location = new System.Drawing.Point(123, 4);
             this.txt_Options_Receiver.Name = "txt_Options_Receiver";
-            this.txt_Options_Receiver.Size = new System.Drawing.Size(187, 26);
+            this.txt_Options_Receiver.Size = new System.Drawing.Size(126, 26);
             this.txt_Options_Receiver.TabIndex = 1;
             // 
             // tbl_Invoice_Settings_Infobox_txt_5_txt_BIC
@@ -3138,9 +3058,9 @@
             this.lbl_Company_Invoicing_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Company_Invoicing_Info.Location = new System.Drawing.Point(3, 130);
             this.lbl_Company_Invoicing_Info.Name = "lbl_Company_Invoicing_Info";
-            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(178, 20);
+            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(134, 20);
             this.lbl_Company_Invoicing_Info.TabIndex = 15;
-            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tietosarake";
+            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tiedot";
             // 
             // tbl_Invoice_Settings_Infobox_lbl_1_2
             // 
@@ -3252,6 +3172,86 @@
             this.txt_Options_IBAN.Name = "txt_Options_IBAN";
             this.txt_Options_IBAN.Size = new System.Drawing.Size(187, 26);
             this.txt_Options_IBAN.TabIndex = 1;
+            // 
+            // tbl_Settings_2nd_Col_UI_Settings_Base
+            // 
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Size = new System.Drawing.Size(288, 579);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.TabIndex = 3;
+            // 
+            // tbl_Settings_2nd_Col_UI_Settings
+            // 
+            this.tbl_Settings_2nd_Col_UI_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Settings_2nd_Col_UI_Settings.ColumnCount = 1;
+            this.tbl_Settings_2nd_Col_UI_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.lbl_Log, 0, 0);
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.dgv_Log, 0, 1);
+            this.tbl_Settings_2nd_Col_UI_Settings.Controls.Add(this.btn_log_update_grid, 0, 2);
+            this.tbl_Settings_2nd_Col_UI_Settings.Location = new System.Drawing.Point(14, 20);
+            this.tbl_Settings_2nd_Col_UI_Settings.Name = "tbl_Settings_2nd_Col_UI_Settings";
+            this.tbl_Settings_2nd_Col_UI_Settings.RowCount = 3;
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.971154F));
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.02885F));
+            this.tbl_Settings_2nd_Col_UI_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Settings_2nd_Col_UI_Settings.Size = new System.Drawing.Size(258, 538);
+            this.tbl_Settings_2nd_Col_UI_Settings.TabIndex = 1;
+            // 
+            // lbl_Log
+            // 
+            this.lbl_Log.AutoSize = true;
+            this.lbl_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_Log.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Log.Name = "lbl_Log";
+            this.lbl_Log.Size = new System.Drawing.Size(48, 24);
+            this.lbl_Log.TabIndex = 0;
+            this.lbl_Log.Text = "Loki";
+            // 
+            // dgv_Log
+            // 
+            this.dgv_Log.AllowUserToAddRows = false;
+            this.dgv_Log.AllowUserToDeleteRows = false;
+            this.dgv_Log.AllowUserToResizeColumns = false;
+            this.dgv_Log.AllowUserToResizeRows = false;
+            this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Log.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Log.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Log.Location = new System.Drawing.Point(3, 37);
+            this.dgv_Log.Name = "dgv_Log";
+            this.dgv_Log.ReadOnly = true;
+            this.dgv_Log.RowHeadersVisible = false;
+            this.dgv_Log.Size = new System.Drawing.Size(252, 457);
+            this.dgv_Log.TabIndex = 1;
+            // 
+            // btn_log_update_grid
+            // 
+            this.btn_log_update_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
+            this.btn_log_update_grid.Name = "btn_log_update_grid";
+            this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
+            this.btn_log_update_grid.TabIndex = 2;
+            this.btn_log_update_grid.Text = "Lataa lokitiedot";
+            this.btn_log_update_grid.UseVisualStyleBackColor = true;
             // 
             // btn_History_Order_History_Delete
             // 
@@ -3369,10 +3369,6 @@
             this.tbl_Settings_1st_Col_Common_Settings.PerformLayout();
             this.tbl_Common_Settings_History_End_Date_Today.ResumeLayout(false);
             this.tbl_Common_Settings_History_End_Date_Today.PerformLayout();
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
-            this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
-            this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
             this.tbl_Settings_3rd_Col_UI_Settings_Base.ResumeLayout(false);
             this.tbl_Settings_3rd_Col_Invoice_Settings.ResumeLayout(false);
             this.tbl_Settings_3rd_Col_Invoice_Settings.PerformLayout();
@@ -3396,6 +3392,10 @@
             this.tbl_Invoice_Settings_Infobox_txt_1_2.PerformLayout();
             this.tbl_Invoice_Settings_IBAN_lbl_txt.ResumeLayout(false);
             this.tbl_Invoice_Settings_IBAN_lbl_txt.PerformLayout();
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.ResumeLayout(false);
+            this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
+            this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
             this.ResumeLayout(false);
 
         }
