@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Customer_Popup : Form
@@ -23,8 +24,8 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
-        // Apumuuttujat asiakastietojen muokkaukseen, arvot pääikkunasta.
-        public string Asiakas_id;
+    // Apumuuttujat asiakastietojen muokkaukseen, arvot pääikkunasta.
+    public string Asiakas_id;
         public bool is_customer_edited;
         public void btn_Customer_Save_Click(object sender, EventArgs e)
         {
@@ -38,6 +39,26 @@ namespace R3_VillagePeople_Mahtimokit
             string postinro = txt_Customere_Postal_Code.Text;
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
+            // Tietojen tarkastus
+            if (string.IsNullOrWhiteSpace(etunimi))
+            {
+                MessageBox.Show("Virhe! Etunimi ei voi olla tyhjä!");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(sukunimi))
+            {
+                MessageBox.Show("Virhe! Sukunimi ei voi olla tyhjä!");
+                return;
+            }
+            Common_methods common_methods = new Common_methods();
+            bool is_mail_valid = common_methods.Verify_email(email);
+            if(is_mail_valid == false)
+            {
+                MessageBox.Show("Virhe! Annettu sähköpostiosoite on virheellinen!");
+                return;
+            }
+
+
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;

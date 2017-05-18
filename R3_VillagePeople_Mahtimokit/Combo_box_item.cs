@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Mail;
 
 namespace R3_VillagePeople_Mahtimokit
 {
@@ -16,4 +17,21 @@ namespace R3_VillagePeople_Mahtimokit
             return Text;
         }
     }
+    public class Common_methods
+    {
+        public bool Verify_email(string email)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+    }
+
 }
