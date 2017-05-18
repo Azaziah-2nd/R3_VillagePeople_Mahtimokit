@@ -71,7 +71,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Varaus välilehden päivät.
             dtp_Order_Start_Date.Value = DateTime.Today;
             dtp_Order_End_Date.Value = DateTime.Today.AddDays(1);
-
             // Isketään arvot laskutusasetuksiin
             txt_Options_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString().Trim('%');
             txt_Options_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString().Trim(' ', 'p', 'v');
