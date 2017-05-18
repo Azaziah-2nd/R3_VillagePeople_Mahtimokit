@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="R3_VillagePeople_Mahtimokit.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="default_office" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="default_history_end_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2017-05-15</Value>
+    </Setting>
+    <Setting Name="default_is_history_end_date_today" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="user_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Käyttäjä</Value>
+    </Setting>
+    <Setting Name="VP_DatabaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\VP_Database.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\VP_Database.mdf;Integrated Security=True;Connect Timeout=30</Value>
+    </Setting>
+    <Setting Name="default_penalty_interest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8.0%</Value>
+    </Setting>
+    <Setting Name="default_remark_time" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12 pv</Value>
+    </Setting>
+    <Setting Name="default_infobox_1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Village People
+Y-tunnus: 123
+www.vpp.fi</Value>
+    </Setting>
+    <Setting Name="default_infobox_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tiekatutie 1
+29019 tiekatula
+</Value>
+    </Setting>
+    <Setting Name="default_infobox_3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">puhelin
+040 000 000 00
+</Value>
+    </Setting>
+    <Setting Name="default_infobox_4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Fax
+040 1200 00 
+</Value>
+    </Setting>
+    <Setting Name="default_infobox_5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pankki
+ossuus pankki
+bleb</Value>
+    </Setting>
+    <Setting Name="default_IBAN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FI32 1515 1613 13</Value>
+    </Setting>
+    <Setting Name="default_BIC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FAFIFAFHIFF</Value>
+    </Setting>
+    <Setting Name="default_receiver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Village peiple ay</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
