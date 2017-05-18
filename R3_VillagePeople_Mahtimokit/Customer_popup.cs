@@ -40,6 +40,7 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
             // Tietojen tarkastus
+            Common_methods common_methods = new Common_methods();
             if (string.IsNullOrWhiteSpace(etunimi))
             {
                 MessageBox.Show("Virhe! Etunimi ei voi olla tyhjä!");
@@ -51,7 +52,6 @@ namespace R3_VillagePeople_Mahtimokit
                 return;
             }
             // Sähköpostin tarkistus.
-            Common_methods common_methods = new Common_methods();
             // Jos sähköposti ei ole tyhjä.
             if (email.Length > 0)
             {

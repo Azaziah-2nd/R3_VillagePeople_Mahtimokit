@@ -39,6 +39,43 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Office_City.Text;
             string email = txt_Office_Email.Text;
             string puhelinnro = txt_Office_Phone.Text;
+            // Tietojen tarkistus
+            Common_methods common_methods = new Common_methods();
+            if (string.IsNullOrWhiteSpace(nimi))
+            {
+                MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
+                return;
+            }
+            // Osoitteen tarkistus
+            if (common_methods.Is_adress_valid(lahiosoite) == false)
+            {
+                return;
+            }
+            if (common_methods.Is_zip_code_valid(postinro) == false)
+            {
+                return;
+            }
+            if (common_methods.Is_post_office_valid(postitoimipaikka) == false)
+            {
+                return;
+            }
+            // Sähköpostin ja puhelinnumeroiden tarkistus (voivat olla tyhjiä)
+            if (email.Length > 0)
+            {
+                // Sähköpostin oikeellisuus tarkistetaan Verify_email metodilla.
+                if (common_methods.Is_email_valid(email) == false)
+                {
+                    return;
+                }
+            }
+            // Puhelinnumeron tarkistus
+            if (puhelinnro.Length > 0)
+            {
+                if (common_methods.Is_phone_valid(puhelinnro) == false)
+                {
+                    return;
+                }
+            }
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
