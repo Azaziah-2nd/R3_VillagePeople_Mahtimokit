@@ -153,7 +153,7 @@
             // 
             this.btn_Office_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Office_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Office_Save.Location = new System.Drawing.Point(391, 421);
+            this.btn_Office_Save.Location = new System.Drawing.Point(203, 400);
             this.btn_Office_Save.Name = "btn_Office_Save";
             this.btn_Office_Save.Size = new System.Drawing.Size(99, 30);
             this.btn_Office_Save.TabIndex = 81;
@@ -165,10 +165,10 @@
             // 
             this.btn_Office_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Office_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Office_Cancel.Location = new System.Drawing.Point(203, 421);
+            this.btn_Office_Cancel.Location = new System.Drawing.Point(383, 400);
             this.btn_Office_Cancel.Name = "btn_Office_Cancel";
             this.btn_Office_Cancel.Size = new System.Drawing.Size(107, 30);
-            this.btn_Office_Cancel.TabIndex = 80;
+            this.btn_Office_Cancel.TabIndex = 82;
             this.btn_Office_Cancel.Text = "Peruuta";
             this.btn_Office_Cancel.UseVisualStyleBackColor = true;
             this.btn_Office_Cancel.Click += new System.EventHandler(this.btn_Office_Cancel_Click);
