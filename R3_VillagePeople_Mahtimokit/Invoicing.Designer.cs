@@ -1263,7 +1263,7 @@
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_4th_Row_Virtual_Barcode, 1, 4);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_5th_Row_Payment_Info, 1, 5);
             this.tbl_Invoicing_Base.Controls.Add(this.tbl_Invoicing_2nd_Row_Details, 1, 2);
-            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(93, 3);
+            this.tbl_Invoicing_Base.Location = new System.Drawing.Point(85, 3);
             this.tbl_Invoicing_Base.Name = "tbl_Invoicing_Base";
             this.tbl_Invoicing_Base.RowCount = 6;
             this.tbl_Invoicing_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
@@ -1424,7 +1424,7 @@
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1446F));
             this.tbl_Invoicing_Grey_Background.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(1145, 1446);
+            this.tbl_Invoicing_Grey_Background.Size = new System.Drawing.Size(1128, 1446);
             this.tbl_Invoicing_Grey_Background.TabIndex = 1;
             // 
             // frm_Invoicing

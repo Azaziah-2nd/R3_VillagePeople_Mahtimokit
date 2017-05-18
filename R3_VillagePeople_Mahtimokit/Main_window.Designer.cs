@@ -222,6 +222,7 @@
             this.lbl_Percent = new System.Windows.Forms.Label();
             this.lbl_Penalty_Interest = new System.Windows.Forms.Label();
             this.txt_Options_Penalty_Interest = new System.Windows.Forms.TextBox();
+            this.lbl_Company_Invoicing_Info = new System.Windows.Forms.Label();
             this.tbl_Invoice_Settings_Infobox_lbl_1_2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Infobox2 = new System.Windows.Forms.Label();
             this.lbl_Infobox1 = new System.Windows.Forms.Label();
@@ -232,7 +233,6 @@
             this.lbl_IBAN = new System.Windows.Forms.Label();
             this.txt_Options_IBAN = new System.Windows.Forms.TextBox();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
-            this.lbl_Company_Invoicing_Info = new System.Windows.Forms.Label();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -2506,8 +2506,8 @@
             this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tbl_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_1st_Col_Common_Settings_Base, 1, 1);
-            this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings_Base, 3, 1);
-            this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_3rd_Col_UI_Settings_Base, 5, 1);
+            this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_3rd_Col_UI_Settings_Base, 3, 1);
+            this.tbl_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings_Base, 5, 1);
             this.tbl_Settings_Base.Location = new System.Drawing.Point(-3, -1);
             this.tbl_Settings_Base.Name = "tbl_Settings_Base";
             this.tbl_Settings_Base.RowCount = 3;
@@ -2698,7 +2698,7 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tbl_Settings_2nd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_2nd_Col_UI_Settings, 1, 1);
-            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(345, 35);
+            this.tbl_Settings_2nd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
             this.tbl_Settings_2nd_Col_UI_Settings_Base.Name = "tbl_Settings_2nd_Col_UI_Settings_Base";
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowCount = 3;
             this.tbl_Settings_2nd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
@@ -2778,7 +2778,7 @@
             this.tbl_Settings_3rd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92F));
             this.tbl_Settings_3rd_Col_UI_Settings_Base.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tbl_Settings_3rd_Col_UI_Settings_Base.Controls.Add(this.tbl_Settings_3rd_Col_Invoice_Settings, 1, 1);
-            this.tbl_Settings_3rd_Col_UI_Settings_Base.Location = new System.Drawing.Point(658, 35);
+            this.tbl_Settings_3rd_Col_UI_Settings_Base.Location = new System.Drawing.Point(345, 35);
             this.tbl_Settings_3rd_Col_UI_Settings_Base.Name = "tbl_Settings_3rd_Col_UI_Settings_Base";
             this.tbl_Settings_3rd_Col_UI_Settings_Base.RowCount = 3;
             this.tbl_Settings_3rd_Col_UI_Settings_Base.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
@@ -2831,9 +2831,9 @@
             this.btn_Options_Save_Invoicing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 498);
+            this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 501);
             this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
-            this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 37);
+            this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 34);
             this.btn_Options_Save_Invoicing.TabIndex = 14;
             this.btn_Options_Save_Invoicing.Text = "Tallenna laskuinfo";
             this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
@@ -2849,7 +2849,7 @@
             this.tbl_Invoice_Settings_Receiver_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.lbl_Receiver, 0, 0);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Controls.Add(this.txt_Options_Receiver, 1, 0);
-            this.tbl_Invoice_Settings_Receiver_lbl_txt.Location = new System.Drawing.Point(3, 458);
+            this.tbl_Invoice_Settings_Receiver_lbl_txt.Location = new System.Drawing.Point(3, 461);
             this.tbl_Invoice_Settings_Receiver_lbl_txt.Name = "tbl_Invoice_Settings_Receiver_lbl_txt";
             this.tbl_Invoice_Settings_Receiver_lbl_txt.RowCount = 1;
             this.tbl_Invoice_Settings_Receiver_lbl_txt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2884,11 +2884,11 @@
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Controls.Add(this.txt_Options_BIC, 1, 0);
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Controls.Add(this.txt_Options_Infobox_5, 0, 0);
-            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Location = new System.Drawing.Point(3, 373);
+            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Location = new System.Drawing.Point(3, 375);
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Name = "tbl_Invoice_Settings_Infobox_txt_5_txt_BIC";
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.RowCount = 1;
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Size = new System.Drawing.Size(252, 39);
+            this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.Size = new System.Drawing.Size(252, 40);
             this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC.TabIndex = 11;
             // 
             // txt_Options_BIC
@@ -2909,7 +2909,7 @@
             this.txt_Options_Infobox_5.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_5.Multiline = true;
             this.txt_Options_Infobox_5.Name = "txt_Options_Infobox_5";
-            this.txt_Options_Infobox_5.Size = new System.Drawing.Size(120, 33);
+            this.txt_Options_Infobox_5.Size = new System.Drawing.Size(120, 34);
             this.txt_Options_Infobox_5.TabIndex = 5;
             // 
             // tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC
@@ -2922,7 +2922,7 @@
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Controls.Add(this.lbl_BIC, 1, 0);
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Controls.Add(this.lbl_Infobox5, 0, 0);
-            this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Location = new System.Drawing.Point(3, 333);
+            this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Location = new System.Drawing.Point(3, 335);
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.Name = "tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC";
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.RowCount = 1;
             this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2959,11 +2959,11 @@
             this.tbl_Invoice_Settings_Infobox_txt_3_4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoice_Settings_Infobox_txt_3_4.Controls.Add(this.txt_Options_Infobox_4, 1, 0);
             this.tbl_Invoice_Settings_Infobox_txt_3_4.Controls.Add(this.txt_Options_Infobox_3, 0, 0);
-            this.tbl_Invoice_Settings_Infobox_txt_3_4.Location = new System.Drawing.Point(3, 288);
+            this.tbl_Invoice_Settings_Infobox_txt_3_4.Location = new System.Drawing.Point(3, 289);
             this.tbl_Invoice_Settings_Infobox_txt_3_4.Name = "tbl_Invoice_Settings_Infobox_txt_3_4";
             this.tbl_Invoice_Settings_Infobox_txt_3_4.RowCount = 1;
             this.tbl_Invoice_Settings_Infobox_txt_3_4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoice_Settings_Infobox_txt_3_4.Size = new System.Drawing.Size(252, 39);
+            this.tbl_Invoice_Settings_Infobox_txt_3_4.Size = new System.Drawing.Size(252, 40);
             this.tbl_Invoice_Settings_Infobox_txt_3_4.TabIndex = 9;
             // 
             // txt_Options_Infobox_4
@@ -2974,7 +2974,7 @@
             this.txt_Options_Infobox_4.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_Infobox_4.Multiline = true;
             this.txt_Options_Infobox_4.Name = "txt_Options_Infobox_4";
-            this.txt_Options_Infobox_4.Size = new System.Drawing.Size(120, 33);
+            this.txt_Options_Infobox_4.Size = new System.Drawing.Size(120, 34);
             this.txt_Options_Infobox_4.TabIndex = 6;
             // 
             // txt_Options_Infobox_3
@@ -2985,7 +2985,7 @@
             this.txt_Options_Infobox_3.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_3.Multiline = true;
             this.txt_Options_Infobox_3.Name = "txt_Options_Infobox_3";
-            this.txt_Options_Infobox_3.Size = new System.Drawing.Size(120, 33);
+            this.txt_Options_Infobox_3.Size = new System.Drawing.Size(120, 34);
             this.txt_Options_Infobox_3.TabIndex = 5;
             // 
             // tbl_Invoice_Settings_Infobox_lbl_3_4
@@ -2998,7 +2998,7 @@
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.Controls.Add(this.lbl_Infobox4, 1, 0);
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.Controls.Add(this.lbl_Infobox3, 0, 0);
-            this.tbl_Invoice_Settings_Infobox_lbl_3_4.Location = new System.Drawing.Point(3, 248);
+            this.tbl_Invoice_Settings_Infobox_lbl_3_4.Location = new System.Drawing.Point(3, 249);
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.Name = "tbl_Invoice_Settings_Infobox_lbl_3_4";
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.RowCount = 1;
             this.tbl_Invoice_Settings_Infobox_lbl_3_4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3131,6 +3131,17 @@
             this.txt_Options_Penalty_Interest.Size = new System.Drawing.Size(44, 26);
             this.txt_Options_Penalty_Interest.TabIndex = 2;
             // 
+            // lbl_Company_Invoicing_Info
+            // 
+            this.lbl_Company_Invoicing_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Company_Invoicing_Info.AutoSize = true;
+            this.lbl_Company_Invoicing_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Company_Invoicing_Info.Location = new System.Drawing.Point(3, 130);
+            this.lbl_Company_Invoicing_Info.Name = "lbl_Company_Invoicing_Info";
+            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(178, 20);
+            this.lbl_Company_Invoicing_Info.TabIndex = 15;
+            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tietosarake";
+            // 
             // tbl_Invoice_Settings_Infobox_lbl_1_2
             // 
             this.tbl_Invoice_Settings_Infobox_lbl_1_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -3182,7 +3193,7 @@
             this.tbl_Invoice_Settings_Infobox_txt_1_2.Name = "tbl_Invoice_Settings_Infobox_txt_1_2";
             this.tbl_Invoice_Settings_Infobox_txt_1_2.RowCount = 1;
             this.tbl_Invoice_Settings_Infobox_txt_1_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoice_Settings_Infobox_txt_1_2.Size = new System.Drawing.Size(252, 39);
+            this.tbl_Invoice_Settings_Infobox_txt_1_2.Size = new System.Drawing.Size(252, 40);
             this.tbl_Invoice_Settings_Infobox_txt_1_2.TabIndex = 7;
             // 
             // txt_Options_Infobox_2
@@ -3193,7 +3204,7 @@
             this.txt_Options_Infobox_2.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_Infobox_2.Multiline = true;
             this.txt_Options_Infobox_2.Name = "txt_Options_Infobox_2";
-            this.txt_Options_Infobox_2.Size = new System.Drawing.Size(120, 33);
+            this.txt_Options_Infobox_2.Size = new System.Drawing.Size(120, 34);
             this.txt_Options_Infobox_2.TabIndex = 6;
             // 
             // txt_Options_Infobox_1
@@ -3204,7 +3215,7 @@
             this.txt_Options_Infobox_1.Location = new System.Drawing.Point(3, 3);
             this.txt_Options_Infobox_1.Multiline = true;
             this.txt_Options_Infobox_1.Name = "txt_Options_Infobox_1";
-            this.txt_Options_Infobox_1.Size = new System.Drawing.Size(120, 33);
+            this.txt_Options_Infobox_1.Size = new System.Drawing.Size(120, 34);
             this.txt_Options_Infobox_1.TabIndex = 5;
             // 
             // tbl_Invoice_Settings_IBAN_lbl_txt
@@ -3217,7 +3228,7 @@
             this.tbl_Invoice_Settings_IBAN_lbl_txt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
             this.tbl_Invoice_Settings_IBAN_lbl_txt.Controls.Add(this.lbl_IBAN, 0, 0);
             this.tbl_Invoice_Settings_IBAN_lbl_txt.Controls.Add(this.txt_Options_IBAN, 1, 0);
-            this.tbl_Invoice_Settings_IBAN_lbl_txt.Location = new System.Drawing.Point(3, 418);
+            this.tbl_Invoice_Settings_IBAN_lbl_txt.Location = new System.Drawing.Point(3, 421);
             this.tbl_Invoice_Settings_IBAN_lbl_txt.Name = "tbl_Invoice_Settings_IBAN_lbl_txt";
             this.tbl_Invoice_Settings_IBAN_lbl_txt.RowCount = 1;
             this.tbl_Invoice_Settings_IBAN_lbl_txt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3253,17 +3264,6 @@
             this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
-            // 
-            // lbl_Company_Invoicing_Info
-            // 
-            this.lbl_Company_Invoicing_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Company_Invoicing_Info.AutoSize = true;
-            this.lbl_Company_Invoicing_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Company_Invoicing_Info.Location = new System.Drawing.Point(3, 130);
-            this.lbl_Company_Invoicing_Info.Name = "lbl_Company_Invoicing_Info";
-            this.lbl_Company_Invoicing_Info.Size = new System.Drawing.Size(178, 20);
-            this.lbl_Company_Invoicing_Info.TabIndex = 15;
-            this.lbl_Company_Invoicing_Info.Text = "Yrityksen tietosarake";
             // 
             // frm_Main_Window
             // 
