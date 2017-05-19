@@ -160,7 +160,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_service_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, toimipiste_id, nimi FROM Palvelu", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, toimipiste_id, nimi, max_osallistujat FROM Palvelu", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -283,8 +283,9 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 dgv_Order_Customers_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[0].Visible = false;
-                dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[1].Visible = false;
+                dgv_Order_Services_All.Columns[3].Visible = false;
+                dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Cottages_All.Columns[1].Visible = false;
                 dgv_Order_Cottages_All.Columns[3].Visible = false;
                 Filter_order_cottages_by_office_and_text();
@@ -295,6 +296,7 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Customers_All.Columns[0].Visible = false;
                 dgv_Services_All.Columns[0].Visible = false;
                 dgv_Services_All.Columns[1].Visible = false;
+                dgv_Services_All.Columns[3].Visible = false;
                 dgv_Cottages_All.Columns[0].Visible = false;
                 dgv_Cottages_All.Columns[1].Visible = false;
                 dgv_Cottages_All.Columns[3].Visible = false;
@@ -321,6 +323,22 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
+        private void dgv_Order_Services_All_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Get_Service_Max_Quantity();
+        }
+
+        private void Get_Service_Max_Quantity()
+        {
+            foreach (DataGridViewRow row in dgv_Order_Services_All.SelectedRows)
+            {
+                //  Cell 3 = Max majoittujat.
+                int service_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                lbl_Order_Services_Max_Quantity.Text = "Max kpl: " + service_max_quantity;
+            }
+        }
+
+
         private void dgv_Order_Cottages_All_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             Get_Cottage_Max_Quantity();
@@ -335,6 +353,7 @@ namespace R3_VillagePeople_Mahtimokit
                                   Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
             cottage_list.Filter = filer_cottages;
             Get_Cottage_Max_Quantity();
+            Get_Service_Max_Quantity();
         }
 
         private void Filter_order_services_by_office_and_text()
