@@ -195,6 +195,9 @@
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
             this.lbl_Common_Settings_History_Dates = new System.Windows.Forms.Label();
+            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
+            this.lbl_Common_Settings_History_Start_Date = new System.Windows.Forms.Label();
+            this.dtp_Common_Settings_History_Start_Date = new System.Windows.Forms.DateTimePicker();
             this.tbl_Settings_3rd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_3rd_Col_Invoice_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
@@ -238,9 +241,6 @@
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
-            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
-            this.lbl_Common_Settings_History_Start_Date = new System.Windows.Forms.Label();
-            this.dtp_Common_Settings_History_Start_Date = new System.Windows.Forms.DateTimePicker();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -2286,6 +2286,7 @@
             this.dtp_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(140, 26);
             this.dtp_History_Orders_Filter_Date_Start.TabIndex = 2;
             this.dtp_History_Orders_Filter_Date_Start.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtp_History_Orders_Filter_Date_Start.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_Start_ValueChanged);
             // 
             // dtp_History_Orders_Filter_Date_End
             // 
@@ -2296,6 +2297,7 @@
             this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(140, 26);
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
+            this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged_1);
             // 
             // dgv_History_Orders_All
             // 
@@ -2766,6 +2768,38 @@
             this.lbl_Common_Settings_History_Dates.Size = new System.Drawing.Size(238, 22);
             this.lbl_Common_Settings_History_Dates.TabIndex = 19;
             this.lbl_Common_Settings_History_Dates.Text = "Varaushistorian näkyvyys";
+            // 
+            // lbl_Common_Settings_History_End_Date
+            // 
+            this.lbl_Common_Settings_History_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
+            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 332);
+            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
+            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(205, 20);
+            this.lbl_Common_Settings_History_End_Date.TabIndex = 24;
+            this.lbl_Common_Settings_History_End_Date.Text = "Historian päättymispäivä";
+            // 
+            // lbl_Common_Settings_History_Start_Date
+            // 
+            this.lbl_Common_Settings_History_Start_Date.AutoSize = true;
+            this.lbl_Common_Settings_History_Start_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 264);
+            this.lbl_Common_Settings_History_Start_Date.Name = "lbl_Common_Settings_History_Start_Date";
+            this.lbl_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(188, 20);
+            this.lbl_Common_Settings_History_Start_Date.TabIndex = 25;
+            this.lbl_Common_Settings_History_Start_Date.Text = "Historian alkamispäivä";
+            // 
+            // dtp_Common_Settings_History_Start_Date
+            // 
+            this.dtp_Common_Settings_History_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 291);
+            this.dtp_Common_Settings_History_Start_Date.Name = "dtp_Common_Settings_History_Start_Date";
+            this.dtp_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(252, 26);
+            this.dtp_Common_Settings_History_Start_Date.TabIndex = 26;
+            this.dtp_Common_Settings_History_Start_Date.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtp_Common_Settings_History_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_Start_Date_ValueChanged);
             // 
             // tbl_Settings_3rd_Col_UI_Settings_Base
             // 
@@ -3343,38 +3377,6 @@
             this.btn_History_Order_History_Delete.Size = new System.Drawing.Size(32, 8);
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
-            // 
-            // lbl_Common_Settings_History_End_Date
-            // 
-            this.lbl_Common_Settings_History_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 332);
-            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
-            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(205, 20);
-            this.lbl_Common_Settings_History_End_Date.TabIndex = 24;
-            this.lbl_Common_Settings_History_End_Date.Text = "Historian päättymispäivä";
-            // 
-            // lbl_Common_Settings_History_Start_Date
-            // 
-            this.lbl_Common_Settings_History_Start_Date.AutoSize = true;
-            this.lbl_Common_Settings_History_Start_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 264);
-            this.lbl_Common_Settings_History_Start_Date.Name = "lbl_Common_Settings_History_Start_Date";
-            this.lbl_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(188, 20);
-            this.lbl_Common_Settings_History_Start_Date.TabIndex = 25;
-            this.lbl_Common_Settings_History_Start_Date.Text = "Historian alkamispäivä";
-            // 
-            // dtp_Common_Settings_History_Start_Date
-            // 
-            this.dtp_Common_Settings_History_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 291);
-            this.dtp_Common_Settings_History_Start_Date.Name = "dtp_Common_Settings_History_Start_Date";
-            this.dtp_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(252, 26);
-            this.dtp_Common_Settings_History_Start_Date.TabIndex = 26;
-            this.dtp_Common_Settings_History_Start_Date.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            this.dtp_Common_Settings_History_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_Start_Date_ValueChanged);
             // 
             // frm_Main_Window
             // 

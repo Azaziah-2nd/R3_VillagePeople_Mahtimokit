@@ -359,6 +359,26 @@ namespace R3_VillagePeople_Mahtimokit
             Get_Cottage_Max_Quantity();
         }
 
+        public string Orders_within_dates = "";
+        private void Get_history_orders_within_dates()
+        {
+            // Haetaan tietokannasta valitun aikavälin varaukset
+            SqlDataReader myReader = null;
+            List<string> orders_within_dates = new List<string>();
+            SqlCommand database_query_get_orders_in_dates = new SqlCommand("SELECT varaus_id FROM Varaus WHERE varattu_pvm  >= @start AND varattu_pvm <= @end");
+            database_query_get_orders_in_dates.Connection = database_connection;
+            database_connection.Open();
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@start", dtp_History_Orders_Filter_Date_Start.Value);
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@end", dtp_History_Orders_Filter_Date_End.Value);
+            database_query_get_orders_in_dates.ExecuteNonQuery();
+            myReader = database_query_get_orders_in_dates.ExecuteReader();
+            while (myReader.Read())
+            {
+                orders_within_dates.Add("'" + (myReader["varaus_id"].ToString() + "'"));
+            }
+            database_connection.Close();
+            Orders_within_dates = string.Join(",", orders_within_dates.ToArray());
+        }
 
         public string Cottages_within_orders = "";
         private void Get_order_cottages_within_dates()
@@ -458,6 +478,7 @@ namespace R3_VillagePeople_Mahtimokit
         string history_toimipiste_id = "";
         private void Filter_history_orders()
         {
+            Get_history_orders_within_dates();
             // Alustetaan tarvittavat apumuuttujat ja haetaan eri rajaus mekanismien arvot.
             string filer_order_history = "";
             string filter_by_date = dtp_History_Orders_Filter_Date_End.Value.ToString();
@@ -468,34 +489,46 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos sekä asiakas, että toimipiste filtteröinti ovat asetettuja.
             if (history_asiakas_id != "" && history_toimipiste_id != "")
             {
-                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(asiakas_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
                     + " AND CONVERT(varaus_id, 'System.String') LIKE '%{3}%'",
-                    history_asiakas_id, filter_by_date, history_toimipiste_id, txt_History_Order_Search.Text);
+                     Orders_within_dates, history_asiakas_id, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan asiakasfiltteröinti on asetettu.
             else if (history_asiakas_id != "")
             {
-                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
-                    history_asiakas_id, filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(asiakas_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    Orders_within_dates, history_asiakas_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan  toimipiste filtteröinti on asetettu.
             else if (history_toimipiste_id != "")
             {
-                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
-                     history_toimipiste_id, filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(toimipiste_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                     Orders_within_dates, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos kumpikaan ei ole asetettu, tapahtuu filtteröinti pelkän hakukentän mukaan.
             else
             {
-                filer_order_history = string.Format("CONVERT(varattu_pvm, 'System.String') <= '{0:dd-MM-yyyy:}' "
-                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
-                        filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT "
+                    + "(varaus_id, 'System.String') LIKE '%{1}%'",
+                        Orders_within_dates, txt_History_Order_Search.Text);
             }
             // Toteutetaan filtteröinti.
-            order_history_list.Filter = filer_order_history;
+            try
+            {
+                order_history_list.Filter = filer_order_history;
+            }
+            catch(SyntaxErrorException)
+            {
+                // Valitulla aikavälillä ei löytynyt yhtään varausta > string arvo "" > syntaxerror.
+                // Asetetaan varaus id:n fillteriksi = -1, näin voimme tyhjentää listan hakutuloksista.
+                string hide_all_rows = "-1";
+                filer_order_history = string.Format("CONVERT (varaus_id, 'System.String') LIKE '%{0}%'",
+                    hide_all_rows);
+                order_history_list.Filter = filer_order_history;
+            }
         }
 
         private void Get_start_date_to_order_summary()
@@ -1861,29 +1894,14 @@ namespace R3_VillagePeople_Mahtimokit
             Get_log_events_to_grid();
         }
 
-        private void taika()
+        private void dtp_History_Orders_Filter_Date_End_ValueChanged_1(object sender, EventArgs e)
         {
+            Filter_history_orders();
+        }
 
-            // Filtteröidään mökit toimipisteen + hakukentän mukaan.
-            BindingSource cottage_list = new BindingSource();
-            cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
-            List<string> list = new List<string>();
-            list.Add("'2'");
-            list.Add("'3'");
-            list.Add("'7'");
-            list.Add("'8'");
-            list.Add("'9'");
-            list.Add("'1'");
-            list.Add("'11'");
-            string jama = string.Join(", ", list.ToArray());
-            MessageBox.Show(jama);
-            string filer_cottages = string.Format("CONVERT(majoitus_id, 'System.String') IN ({0}) ",
-                                  jama);
-            cottage_list.Filter = filer_cottages;
-            Get_Cottage_Max_Quantity();
-            Get_Service_Max_Quantity();
-
-
+        private void dtp_History_Orders_Filter_Date_Start_ValueChanged(object sender, EventArgs e)
+        {
+            Filter_history_orders();
         }
     }
 }
