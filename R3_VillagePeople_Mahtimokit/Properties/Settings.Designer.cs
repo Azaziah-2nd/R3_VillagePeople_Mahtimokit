@@ -12,7 +12,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -71,17 +71,6 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VP_Database.m" +
-            "df;Integrated Security=True;Connect Timeout=30")]
-        public string VP_DatabaseConnectionString {
-            get {
-                return ((string)(this["VP_DatabaseConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8.0%")]
@@ -108,7 +97,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Village People\r\nY-tunnus: 123\r\nwww.vpp.fi")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Village People\nY-tunnus: 123\nwww.vpp.fi")]
         public string default_infobox_1 {
             get {
                 return ((string)(this["default_infobox_1"]));
@@ -120,7 +109,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("tiekatutie 1\r\n29019 tiekatula\r\n")]
+        [global::System.Configuration.DefaultSettingValueAttribute("tiekatutie 1\n29019 tiekatula\n")]
         public string default_infobox_2 {
             get {
                 return ((string)(this["default_infobox_2"]));
@@ -132,7 +121,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("puhelin\r\n040 000 000 00\r\n")]
+        [global::System.Configuration.DefaultSettingValueAttribute("puhelin\n040 000 000 00\n")]
         public string default_infobox_3 {
             get {
                 return ((string)(this["default_infobox_3"]));
@@ -144,7 +133,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Fax\r\n040 1200 00 \r\n")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Fax\n040 1200 00 \n")]
         public string default_infobox_4 {
             get {
                 return ((string)(this["default_infobox_4"]));
@@ -156,7 +145,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Pankki\r\nossuus pankki\r\nbleb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Pankki\nossuus pankki\nbleb")]
         public string default_infobox_5 {
             get {
                 return ((string)(this["default_infobox_5"]));
@@ -199,6 +188,29 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
             }
             set {
                 this["default_receiver"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VP_Database.m" +
+            "df;Integrated Security=True;Connect Timeout=30")]
+        public string VP_DatabaseConnectionString {
+            get {
+                return ((string)(this["VP_DatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-05-01")]
+        public global::System.DateTime default_history_start_date {
+            get {
+                return ((global::System.DateTime)(this["default_history_start_date"]));
+            }
+            set {
+                this["default_history_start_date"] = value;
             }
         }
     }

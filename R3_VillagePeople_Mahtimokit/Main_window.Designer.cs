@@ -159,6 +159,8 @@
             this.tbl_History_Order_Dates_Delete = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_Dates = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Orders_Filter_Date_End = new System.Windows.Forms.Label();
+            this.lbl_History_Orders_Filter_Date_Start = new System.Windows.Forms.Label();
+            this.dtp_History_Orders_Filter_Date_Start = new System.Windows.Forms.DateTimePicker();
             this.dtp_History_Orders_Filter_Date_End = new System.Windows.Forms.DateTimePicker();
             this.dgv_History_Orders_All = new System.Windows.Forms.DataGridView();
             this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
@@ -192,7 +194,7 @@
             this.lbl_Common_Settings_Default_Office = new System.Windows.Forms.Label();
             this.txt_Settings_User_Name = new System.Windows.Forms.TextBox();
             this.lbl_Settings_User_Name = new System.Windows.Forms.Label();
-            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
+            this.lbl_Common_Settings_History_Dates = new System.Windows.Forms.Label();
             this.tbl_Settings_3rd_Col_UI_Settings_Base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Settings_3rd_Col_Invoice_Settings = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Options_Save_Invoicing = new System.Windows.Forms.Button();
@@ -236,6 +238,9 @@
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
+            this.lbl_Common_Settings_History_End_Date = new System.Windows.Forms.Label();
+            this.lbl_Common_Settings_History_Start_Date = new System.Windows.Forms.Label();
+            this.dtp_Common_Settings_History_Start_Date = new System.Windows.Forms.DateTimePicker();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -2239,38 +2244,58 @@
             this.tbl_History_Order_Dates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Dates.ColumnCount = 1;
-            this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_History_Order_Dates.Controls.Add(this.lbl_History_Orders_Filter_Date_End, 0, 0);
-            this.tbl_History_Order_Dates.Controls.Add(this.dtp_History_Orders_Filter_Date_End, 0, 1);
+            this.tbl_History_Order_Dates.ColumnCount = 2;
+            this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Dates.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbl_History_Order_Dates.Controls.Add(this.lbl_History_Orders_Filter_Date_End, 1, 0);
+            this.tbl_History_Order_Dates.Controls.Add(this.lbl_History_Orders_Filter_Date_Start, 0, 0);
+            this.tbl_History_Order_Dates.Controls.Add(this.dtp_History_Orders_Filter_Date_Start, 0, 1);
+            this.tbl_History_Order_Dates.Controls.Add(this.dtp_History_Orders_Filter_Date_End, 1, 1);
             this.tbl_History_Order_Dates.Location = new System.Drawing.Point(3, 3);
             this.tbl_History_Order_Dates.Name = "tbl_History_Order_Dates";
             this.tbl_History_Order_Dates.RowCount = 2;
-            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.84848F));
-            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.15151F));
+            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
+            this.tbl_History_Order_Dates.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
             this.tbl_History_Order_Dates.Size = new System.Drawing.Size(292, 66);
-            this.tbl_History_Order_Dates.TabIndex = 111;
+            this.tbl_History_Order_Dates.TabIndex = 112;
             // 
             // lbl_History_Orders_Filter_Date_End
             // 
             this.lbl_History_Orders_Filter_Date_End.AutoSize = true;
-            this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 0);
+            this.lbl_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(149, 0);
             this.lbl_History_Orders_Filter_Date_End.Name = "lbl_History_Orders_Filter_Date_End";
-            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(272, 20);
+            this.lbl_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(72, 17);
             this.lbl_History_Orders_Filter_Date_End.TabIndex = 1;
-            this.lbl_History_Orders_Filter_Date_End.Text = "Ennen pvm. luodut varaukset näkyvät";
+            this.lbl_History_Orders_Filter_Date_End.Text = "Pvm. asti";
+            // 
+            // lbl_History_Orders_Filter_Date_Start
+            // 
+            this.lbl_History_Orders_Filter_Date_Start.AutoSize = true;
+            this.lbl_History_Orders_Filter_Date_Start.Location = new System.Drawing.Point(3, 0);
+            this.lbl_History_Orders_Filter_Date_Start.Name = "lbl_History_Orders_Filter_Date_Start";
+            this.lbl_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(94, 17);
+            this.lbl_History_Orders_Filter_Date_Start.TabIndex = 0;
+            this.lbl_History_Orders_Filter_Date_Start.Text = "Pvm. alkaen";
+            // 
+            // dtp_History_Orders_Filter_Date_Start
+            // 
+            this.dtp_History_Orders_Filter_Date_Start.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_History_Orders_Filter_Date_Start.Location = new System.Drawing.Point(3, 20);
+            this.dtp_History_Orders_Filter_Date_Start.Name = "dtp_History_Orders_Filter_Date_Start";
+            this.dtp_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(140, 26);
+            this.dtp_History_Orders_Filter_Date_Start.TabIndex = 2;
+            this.dtp_History_Orders_Filter_Date_Start.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             // 
             // dtp_History_Orders_Filter_Date_End
             // 
             this.dtp_History_Orders_Filter_Date_End.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(3, 25);
+            this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(149, 20);
             this.dtp_History_Orders_Filter_Date_End.Name = "dtp_History_Orders_Filter_Date_End";
-            this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(286, 26);
+            this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(140, 26);
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
-            this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged);
             // 
             // dgv_History_Orders_All
             // 
@@ -2593,28 +2618,34 @@
             this.tbl_Settings_1st_Col_Common_Settings.ColumnCount = 1;
             this.tbl_Settings_1st_Col_Common_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Settings_Common_Settings, 0, 0);
-            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.tbl_Common_Settings_History_End_Date_Today, 0, 7);
-            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.dtp_Common_Settings_History_End_Date_Custom, 0, 9);
-            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date_Custom, 0, 8);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.tbl_Common_Settings_History_End_Date_Today, 0, 10);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.dtp_Common_Settings_History_End_Date_Custom, 0, 12);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date_Custom, 0, 11);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.cbo_Common_Settings_Default_Office, 0, 5);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_Default_Office, 0, 4);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.txt_Settings_User_Name, 0, 3);
             this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Settings_User_Name, 0, 2);
-            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date, 0, 6);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_Dates, 0, 6);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_End_Date, 0, 9);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.lbl_Common_Settings_History_Start_Date, 0, 7);
+            this.tbl_Settings_1st_Col_Common_Settings.Controls.Add(this.dtp_Common_Settings_History_Start_Date, 0, 8);
             this.tbl_Settings_1st_Col_Common_Settings.Location = new System.Drawing.Point(14, 20);
             this.tbl_Settings_1st_Col_Common_Settings.Name = "tbl_Settings_1st_Col_Common_Settings";
-            this.tbl_Settings_1st_Col_Common_Settings.RowCount = 11;
+            this.tbl_Settings_1st_Col_Common_Settings.RowCount = 14;
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tbl_Settings_1st_Col_Common_Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tbl_Settings_1st_Col_Common_Settings.Size = new System.Drawing.Size(258, 538);
             this.tbl_Settings_1st_Col_Common_Settings.TabIndex = 0;
             // 
@@ -2635,18 +2666,18 @@
             this.tbl_Common_Settings_History_End_Date_Today.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.74603F));
             this.tbl_Common_Settings_History_End_Date_Today.Controls.Add(this.lbl_Common_Settings_History_End_Date_Today, 0, 0);
             this.tbl_Common_Settings_History_End_Date_Today.Controls.Add(this.chk_Common_Settings_History_End_Date_Today, 1, 0);
-            this.tbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 252);
+            this.tbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 355);
             this.tbl_Common_Settings_History_End_Date_Today.Name = "tbl_Common_Settings_History_End_Date_Today";
             this.tbl_Common_Settings_History_End_Date_Today.RowCount = 1;
             this.tbl_Common_Settings_History_End_Date_Today.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(252, 37);
+            this.tbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(252, 33);
             this.tbl_Common_Settings_History_End_Date_Today.TabIndex = 22;
             // 
             // lbl_Common_Settings_History_End_Date_Today
             // 
             this.lbl_Common_Settings_History_End_Date_Today.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Common_Settings_History_End_Date_Today.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 8);
+            this.lbl_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(3, 6);
             this.lbl_Common_Settings_History_End_Date_Today.Name = "lbl_Common_Settings_History_End_Date_Today";
             this.lbl_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(163, 20);
             this.lbl_Common_Settings_History_End_Date_Today.TabIndex = 0;
@@ -2658,7 +2689,7 @@
             this.chk_Common_Settings_History_End_Date_Today.AutoSize = true;
             this.chk_Common_Settings_History_End_Date_Today.Checked = true;
             this.chk_Common_Settings_History_End_Date_Today.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(174, 11);
+            this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(174, 9);
             this.chk_Common_Settings_History_End_Date_Today.Name = "chk_Common_Settings_History_End_Date_Today";
             this.chk_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(15, 14);
             this.chk_Common_Settings_History_End_Date_Today.TabIndex = 1;
@@ -2668,7 +2699,7 @@
             // 
             this.dtp_Common_Settings_History_End_Date_Custom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 325);
+            this.dtp_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 419);
             this.dtp_Common_Settings_History_End_Date_Custom.Name = "dtp_Common_Settings_History_End_Date_Custom";
             this.dtp_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(252, 26);
             this.dtp_Common_Settings_History_End_Date_Custom.TabIndex = 21;
@@ -2677,7 +2708,7 @@
             // 
             this.lbl_Common_Settings_History_End_Date_Custom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Common_Settings_History_End_Date_Custom.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 302);
+            this.lbl_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 396);
             this.lbl_Common_Settings_History_End_Date_Custom.Name = "lbl_Common_Settings_History_End_Date_Custom";
             this.lbl_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(176, 20);
             this.lbl_Common_Settings_History_End_Date_Custom.TabIndex = 23;
@@ -2726,15 +2757,15 @@
             this.lbl_Settings_User_Name.TabIndex = 2;
             this.lbl_Settings_User_Name.Text = "Käyttäjänimi";
             // 
-            // lbl_Common_Settings_History_End_Date
+            // lbl_Common_Settings_History_Dates
             // 
-            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
-            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 222);
-            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
-            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(232, 20);
-            this.lbl_Common_Settings_History_End_Date.TabIndex = 19;
-            this.lbl_Common_Settings_History_End_Date.Text = "Varaushistorian päivämäärä";
+            this.lbl_Common_Settings_History_Dates.AutoSize = true;
+            this.lbl_Common_Settings_History_Dates.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_Dates.Location = new System.Drawing.Point(3, 222);
+            this.lbl_Common_Settings_History_Dates.Name = "lbl_Common_Settings_History_Dates";
+            this.lbl_Common_Settings_History_Dates.Size = new System.Drawing.Size(238, 22);
+            this.lbl_Common_Settings_History_Dates.TabIndex = 19;
+            this.lbl_Common_Settings_History_Dates.Text = "Varaushistorian näkyvyys";
             // 
             // tbl_Settings_3rd_Col_UI_Settings_Base
             // 
@@ -3313,6 +3344,38 @@
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
             // 
+            // lbl_Common_Settings_History_End_Date
+            // 
+            this.lbl_Common_Settings_History_End_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Common_Settings_History_End_Date.AutoSize = true;
+            this.lbl_Common_Settings_History_End_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_End_Date.Location = new System.Drawing.Point(3, 332);
+            this.lbl_Common_Settings_History_End_Date.Name = "lbl_Common_Settings_History_End_Date";
+            this.lbl_Common_Settings_History_End_Date.Size = new System.Drawing.Size(205, 20);
+            this.lbl_Common_Settings_History_End_Date.TabIndex = 24;
+            this.lbl_Common_Settings_History_End_Date.Text = "Historian päättymispäivä";
+            // 
+            // lbl_Common_Settings_History_Start_Date
+            // 
+            this.lbl_Common_Settings_History_Start_Date.AutoSize = true;
+            this.lbl_Common_Settings_History_Start_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 264);
+            this.lbl_Common_Settings_History_Start_Date.Name = "lbl_Common_Settings_History_Start_Date";
+            this.lbl_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(188, 20);
+            this.lbl_Common_Settings_History_Start_Date.TabIndex = 25;
+            this.lbl_Common_Settings_History_Start_Date.Text = "Historian alkamispäivä";
+            // 
+            // dtp_Common_Settings_History_Start_Date
+            // 
+            this.dtp_Common_Settings_History_Start_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 291);
+            this.dtp_Common_Settings_History_Start_Date.Name = "dtp_Common_Settings_History_Start_Date";
+            this.dtp_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(252, 26);
+            this.dtp_Common_Settings_History_Start_Date.TabIndex = 26;
+            this.dtp_Common_Settings_History_Start_Date.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtp_Common_Settings_History_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_Start_Date_ValueChanged);
+            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3531,9 +3594,6 @@
         private System.Windows.Forms.TableLayoutPanel tbl_History_Office;
         private System.Windows.Forms.Button btn_History_Limit_To_Office;
         private System.Windows.Forms.Label lbl_History_Office;
-        private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Dates;
-        private System.Windows.Forms.Label lbl_History_Orders_Filter_Date_End;
-        private System.Windows.Forms.DateTimePicker dtp_History_Orders_Filter_Date_End;
         private System.Windows.Forms.Button btn_Order_Service_add;
         private System.Windows.Forms.TableLayoutPanel tbl_Order_3rd_Col_Services;
         private System.Windows.Forms.Label lbl_Order_Services;
@@ -3602,7 +3662,7 @@
         private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings_Base;
         private System.Windows.Forms.TableLayoutPanel tbl_Settings_1st_Col_Common_Settings;
         private System.Windows.Forms.Label lbl_Settings_Common_Settings;
-        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_Dates;
         private System.Windows.Forms.TableLayoutPanel tbl_Common_Settings_History_End_Date_Today;
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date_Today;
         private System.Windows.Forms.CheckBox chk_Common_Settings_History_End_Date_Today;
@@ -3659,5 +3719,13 @@
         private System.Windows.Forms.Label lbl_Order_Services_Quantity_Units;
         private System.Windows.Forms.TextBox txt_Order_Services_Quantity;
         private System.Windows.Forms.Label lbl_Order_Services_Max_Quantity;
+        private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Dates;
+        private System.Windows.Forms.Label lbl_History_Orders_Filter_Date_End;
+        private System.Windows.Forms.Label lbl_History_Orders_Filter_Date_Start;
+        private System.Windows.Forms.DateTimePicker dtp_History_Orders_Filter_Date_Start;
+        private System.Windows.Forms.DateTimePicker dtp_History_Orders_Filter_Date_End;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
+        private System.Windows.Forms.Label lbl_Common_Settings_History_Start_Date;
+        private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_Start_Date;
     }
 }
