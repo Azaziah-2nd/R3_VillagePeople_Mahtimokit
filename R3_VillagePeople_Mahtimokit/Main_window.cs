@@ -180,7 +180,7 @@ namespace R3_VillagePeople_Mahtimokit
         }
         private void Get_cottage_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi FROM Majoitus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi, max_henkilot FROM Majoitus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -286,6 +286,7 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[1].Visible = false;
                 dgv_Order_Cottages_All.Columns[1].Visible = false;
+                dgv_Order_Cottages_All.Columns[3].Visible = false;
                 Filter_order_cottages_by_office_and_text();
                 Filter_order_services_by_office_and_text();
             }
@@ -296,6 +297,7 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Services_All.Columns[1].Visible = false;
                 dgv_Cottages_All.Columns[0].Visible = false;
                 dgv_Cottages_All.Columns[1].Visible = false;
+                dgv_Cottages_All.Columns[3].Visible = false;
                 Filter_management_cottages_by_office_and_text();
                 Filter_management_services_by_office_and_text();
             }
@@ -309,6 +311,21 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
+        private void Get_Cottage_Max_Quantity()
+        {
+            foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
+            {
+                //  Cell 3 = Max majoittujat.
+                int cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                lbl_Order_Cottage_Max_Persons.Text = "Max hlö: " + cottage_max_quantity;
+            }
+        }
+
+        private void dgv_Order_Cottages_All_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Get_Cottage_Max_Quantity();
+        }
+
         private void Filter_order_cottages_by_office_and_text()
         {
             // Filtteröidään mökit toimipisteen + hakukentän mukaan.
@@ -317,6 +334,7 @@ namespace R3_VillagePeople_Mahtimokit
             string filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
                                   Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
             cottage_list.Filter = filer_cottages;
+            Get_Cottage_Max_Quantity();
         }
 
         private void Filter_order_services_by_office_and_text()
@@ -898,6 +916,8 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
+
+
         // Muuttujasta Main_window juuressa, että menee laskutukseen
         string Reservation_Cottage_id = "";
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
@@ -913,18 +933,24 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
             }
-
+            int cottage_max_quantity = 0;
             if (dgv_Order_Cottages_All.SelectedRows.Count > 0)
             {
 
                 foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
                 {
+                    // Cell 0 = id, Cell 3 = Max majoittujat.
                     Reservation_Cottage_id = row.Cells[0].Value.ToString();
+                    cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
                 }
-
                 int selectedrowindex = dgv_Order_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Cottages_All.Rows[selectedrowindex];
                 string selected_cottage_name = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
+                if (selected_quantity_int > cottage_max_quantity)
+                {
+                    MessageBox.Show("Virhe! Mökissä \"" + selected_cottage_name + "\" voi majoittua enintään " + cottage_max_quantity + " henkilöä.");
+                    return;
+                }
                 string[] rowas = { selected_cottage_name + " [" + selected_quantity + "]" };
                 var cottage_details = new ListViewItem(rowas);
                 cottage_details.Tag = Reservation_Cottage_id;

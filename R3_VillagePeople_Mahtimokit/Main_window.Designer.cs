@@ -62,6 +62,7 @@
             this.lbl_Order_Cottage_Persons = new System.Windows.Forms.Label();
             this.lbl_Order_Cottage_Persons_Quantity_Units = new System.Windows.Forms.Label();
             this.txt_Order_Cottage_Persons_Quantity = new System.Windows.Forms.TextBox();
+            this.lbl_Order_Cottage_Max_Persons = new System.Windows.Forms.Label();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_3rd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Order_Services = new System.Windows.Forms.Label();
@@ -662,6 +663,7 @@
             this.dgv_Order_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(231, 343);
             this.dgv_Order_Cottages_All.TabIndex = 107;
+            this.dgv_Order_Cottages_All.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Order_Cottages_All_CellEnter);
             // 
             // Btn_Order_Cottage_Add
             // 
@@ -756,11 +758,12 @@
             this.tbl_Order_Cottage_Persons.ColumnCount = 4;
             this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tbl_Order_Cottage_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tbl_Order_Cottage_Persons.Controls.Add(this.lbl_Order_Cottage_Persons, 1, 0);
             this.tbl_Order_Cottage_Persons.Controls.Add(this.lbl_Order_Cottage_Persons_Quantity_Units, 3, 0);
             this.tbl_Order_Cottage_Persons.Controls.Add(this.txt_Order_Cottage_Persons_Quantity, 2, 0);
+            this.tbl_Order_Cottage_Persons.Controls.Add(this.lbl_Order_Cottage_Max_Persons, 0, 0);
             this.tbl_Order_Cottage_Persons.Location = new System.Drawing.Point(7, 475);
             this.tbl_Order_Cottage_Persons.Name = "tbl_Order_Cottage_Persons";
             this.tbl_Order_Cottage_Persons.RowCount = 1;
@@ -772,11 +775,11 @@
             // 
             this.lbl_Order_Cottage_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Order_Cottage_Persons.AutoSize = true;
-            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(6, 0);
+            this.lbl_Order_Cottage_Persons.Location = new System.Drawing.Point(121, 0);
             this.lbl_Order_Cottage_Persons.Name = "lbl_Order_Cottage_Persons";
-            this.lbl_Order_Cottage_Persons.Size = new System.Drawing.Size(146, 20);
+            this.lbl_Order_Cottage_Persons.Size = new System.Drawing.Size(35, 20);
             this.lbl_Order_Cottage_Persons.TabIndex = 0;
-            this.lbl_Order_Cottage_Persons.Text = "Majoittuvien määrä:";
+            this.lbl_Order_Cottage_Persons.Text = "Kpl:";
             // 
             // lbl_Order_Cottage_Persons_Quantity_Units
             // 
@@ -792,12 +795,21 @@
             // txt_Order_Cottage_Persons_Quantity
             // 
             this.txt_Order_Cottage_Persons_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(158, 3);
+            this.txt_Order_Cottage_Persons_Quantity.Location = new System.Drawing.Point(162, 3);
             this.txt_Order_Cottage_Persons_Quantity.MaxLength = 3;
             this.txt_Order_Cottage_Persons_Quantity.Name = "txt_Order_Cottage_Persons_Quantity";
-            this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(34, 26);
+            this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(30, 26);
             this.txt_Order_Cottage_Persons_Quantity.TabIndex = 2;
             this.txt_Order_Cottage_Persons_Quantity.Text = "1";
+            // 
+            // lbl_Order_Cottage_Max_Persons
+            // 
+            this.lbl_Order_Cottage_Max_Persons.AutoSize = true;
+            this.lbl_Order_Cottage_Max_Persons.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Order_Cottage_Max_Persons.Name = "lbl_Order_Cottage_Max_Persons";
+            this.lbl_Order_Cottage_Max_Persons.Size = new System.Drawing.Size(71, 20);
+            this.lbl_Order_Cottage_Max_Persons.TabIndex = 4;
+            this.lbl_Order_Cottage_Max_Persons.Text = "Max hlö: ";
             // 
             // tbl_Order_3rd_Col_Cottage_Summary_Services
             // 
@@ -3606,5 +3618,6 @@
         private System.Windows.Forms.Label lbl_IBAN;
         private System.Windows.Forms.TextBox txt_Options_IBAN;
         private System.Windows.Forms.Label lbl_Company_Invoicing_Info;
+        private System.Windows.Forms.Label lbl_Order_Cottage_Max_Persons;
     }
 }
