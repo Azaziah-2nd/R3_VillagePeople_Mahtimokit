@@ -288,7 +288,7 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Cottages_All.Columns[1].Visible = false;
                 dgv_Order_Cottages_All.Columns[3].Visible = false;
-                Filter_order_cottages_by_office_and_text();
+                Filter_order_cottages_by_dates_office_and_text();
                 Filter_order_services_by_office_and_text();
             }
             else if (tab_index == 1)
@@ -358,16 +358,69 @@ namespace R3_VillagePeople_Mahtimokit
             Get_Cottage_Max_Quantity();
         }
 
-        private void Filter_order_cottages_by_office_and_text()
+
+        public string Cottages_within_orders = "";
+        private void Get_order_cottages_within_dates()
         {
+            // Haetaan tietokannasta valitun aikavälin varaukset
+            SqlDataReader myReader = null;
+            List<int> orders_within_dates = new List<int>();
+            List<string> cottages_within_orders = new List<string>();
+            SqlCommand database_query_get_orders_in_dates = new SqlCommand("SELECT varaus_id FROM Varaus WHERE varattu_loppupvm  >= @start AND varattu_loppupvm <= @end");
+            database_query_get_orders_in_dates.Connection = database_connection;
+            database_connection.Open();
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@start", dtp_Order_Start_Date.Value);
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@end", dtp_Order_End_Date.Value);
+            database_query_get_orders_in_dates.ExecuteNonQuery();
+            myReader = database_query_get_orders_in_dates.ExecuteReader();
+            while (myReader.Read())
+            {
+                orders_within_dates.Add(Convert.ToInt32((myReader["varaus_id"])));
+            }
+            database_connection.Close();
+            foreach (int varaus_id in orders_within_dates)
+            {
+                SqlCommand database_query_get_cottage_ids = new SqlCommand("SELECT majoitus_id FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
+                database_query_get_cottage_ids.Connection = database_connection;
+                database_connection.Open();
+                database_query_get_cottage_ids.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_get_cottage_ids.ExecuteNonQuery();
+                myReader = database_query_get_cottage_ids.ExecuteReader();
+                while (myReader.Read())
+                {
+                    cottages_within_orders.Add("'" + (myReader["majoitus_id"].ToString() + "'"));
+
+                }
+                database_connection.Close();
+            }
+            Cottages_within_orders = string.Join(", ", cottages_within_orders.ToArray());
+        }
+
+
+        private void Filter_order_cottages_by_dates_office_and_text()
+        {
+            // Tarkistetaan mökkien saatavuus päivien perusteella.
+            Get_order_cottages_within_dates();
             // Filtteröidään mökit toimipisteen + hakukentän mukaan.
             BindingSource cottage_list = new BindingSource();
             cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
-            string filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
-                                  Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            string filer_cottages = "";
+            if (Cottages_within_orders != "")
+            {
+                // Jos mökkejä on yhdistetty varauksiin valitulla aikavälillä.
+                filer_cottages = string.Format("CONVERT(majoitus_id, 'System.String') NOT IN ({0}) AND CONVERT(toimipiste_id, 'System.String') LIKE '%{1}%' AND nimi LIKE '%{2}%'",
+                                      Cottages_within_orders, Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            }
+            else
+            {                
+                // Jos ei ole yhdistetty varauksiin valitulla aikavälillä.
+                filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
+                                      Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            }
             cottage_list.Filter = filer_cottages;
             Get_Cottage_Max_Quantity();
             Get_Service_Max_Quantity();
+
         }
 
         private void Filter_order_services_by_office_and_text()
@@ -861,7 +914,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Order_Cottages_Search_TextChanged(object sender, EventArgs e)
         {
-            Filter_order_cottages_by_office_and_text();
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         private void txt_Cottages_Search_TextChanged(object sender, EventArgs e)
@@ -883,6 +936,8 @@ namespace R3_VillagePeople_Mahtimokit
                 // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
                 dtp_Order_End_Date.Value = dtp_Order_Start_Date.Value.AddDays(1);
             }
+            // Päivitetään myös mökkien näkyvyys, siten että vain vapaat mökit näytetään.
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         private void dtp_Order_End_Date_ValueChanged(object sender, EventArgs e)
@@ -899,65 +954,8 @@ namespace R3_VillagePeople_Mahtimokit
                 // Jos ei, muutetaan alkamispäiväksi päättymispäivä  - 1 päivä.
                 dtp_Order_Start_Date.Value = dtp_Order_End_Date.Value.AddDays(-1);
             }
-            // Haetaan tietokannasta valitun aikavälin varaukset
-            SqlDataReader myReader = null;
-            SqlCommand database_query_get_orders_in_dates= new SqlCommand("SELECT varaus_id FROM Varaus WHERE varattu_loppupvm  >= @start AND varattu_loppupvm <= @end");
-            database_query_get_orders_in_dates.Connection = database_connection;
-            database_connection.Open();
-            database_query_get_orders_in_dates.Parameters.AddWithValue("@start", dtp_Order_Start_Date.Value);
-            database_query_get_orders_in_dates.Parameters.AddWithValue("@end", dtp_Order_End_Date.Value);
-            // Haetaan id:n perusteella tietokannasta varaukset ja lisätään ne listaan.
-            database_query_get_orders_in_dates.ExecuteNonQuery();
-            myReader = database_query_get_orders_in_dates.ExecuteReader();
-            List<int> orders_within_dates = new List<int>();
-            while (myReader.Read())
-            {
-                orders_within_dates.Add(Convert.ToInt32((myReader["varaus_id"])));
-            }
-            database_connection.Close();
-            // Suljetaan yhteys ja tulostetaan lista.
-            if (orders_within_dates.Count > 0)
-            {
-                var all_service_orders = string.Join(",", orders_within_dates);
-                MessageBox.Show(all_service_orders);
-                //
-                List<string> cottages_within_orders = new List<string>();
-                foreach (int varaus_id in orders_within_dates)
-                {
-                    // Tietokantakomento on määriteltävä uudestaan jokaisessa silmukassa, muuten @majoitus_id ei ole uniikki ja johtaa virheeseen.
-                    SqlCommand database_query_order_cottage_text_details = new SqlCommand("SELECT majoitus_id FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
-                    database_query_order_cottage_text_details.Connection = database_connection;
-                    database_connection.Open();
-                    // Haetaan majoitus_id:n perusteella majoituksen nimi.
-                    database_query_order_cottage_text_details.Parameters.AddWithValue("@varaus_id", varaus_id);
-                    database_query_order_cottage_text_details.ExecuteNonQuery();
-                    myReader = database_query_order_cottage_text_details.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        cottages_within_orders.Add("'" + (myReader["majoitus_id"].ToString() + "'"));
-
-                    }
-                    // Suljetaan yhteys ja lisätään varauksen mökki listview näkymään.
-                    database_connection.Close();
-                }
-                var all_service_cottages = string.Join(",", cottages_within_orders);
-                MessageBox.Show(all_service_cottages);
-
-                // Filtteröidään mökit toimipisteen + hakukentän mukaan.
-                BindingSource cottage_list = new BindingSource();
-                cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
-                string jama = string.Join(", ", cottages_within_orders.ToArray());
-                MessageBox.Show(jama);
-                string filer_cottages = string.Format("CONVERT(majoitus_id, 'System.String') IN ({0}) ",
-                                      jama);
-                cottage_list.Filter = filer_cottages;
-                Get_Cottage_Max_Quantity();
-                Get_Service_Max_Quantity();
-
-
-            }
-            // Taikaa
-
+            // Päivitetään myös mökkien näkyvyys, siten että vain vapaat mökit näytetään.
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         string Reservation_toimipiste_id = "";
@@ -969,7 +967,7 @@ namespace R3_VillagePeople_Mahtimokit
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
             lbl_Order_Summary_Office.Text = "Toimipiste: " + office_name;
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
-            Filter_order_cottages_by_office_and_text();
+            Filter_order_cottages_by_dates_office_and_text();
             Filter_order_services_by_office_and_text();
 
         }
