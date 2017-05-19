@@ -65,6 +65,10 @@
             this.lbl_Order_Cottage_Max_Persons = new System.Windows.Forms.Label();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_3rd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
+            this.tbl_Order_Service_Persons = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Order_Services_Quantity_Units = new System.Windows.Forms.Label();
+            this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
+            this.lbl_Order_Services_Max_Quantity = new System.Windows.Forms.Label();
             this.lbl_Order_Services = new System.Windows.Forms.Label();
             this.tbl_Order_3rd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
             this.txt_Order_Services_Search = new System.Windows.Forms.TextBox();
@@ -232,10 +236,6 @@
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
-            this.tbl_Order_Service_Persons = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Order_Services_Quantity_Units = new System.Windows.Forms.Label();
-            this.txt_Order_Services_Quantity = new System.Windows.Forms.TextBox();
-            this.lbl_Order_Services_Max_Quantity = new System.Windows.Forms.Label();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -251,6 +251,7 @@
             this.tbl_Order_Cottage_Persons.SuspendLayout();
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.SuspendLayout();
             this.tbl_Order_3rd_Col_Services.SuspendLayout();
+            this.tbl_Order_Service_Persons.SuspendLayout();
             this.tbl_Order_3rd_Col_Services_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).BeginInit();
             this.tbl_4th_Col_Summary.SuspendLayout();
@@ -311,7 +312,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
-            this.tbl_Order_Service_Persons.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -860,6 +860,56 @@
             this.tbl_Order_3rd_Col_Services.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Order_3rd_Col_Services.Size = new System.Drawing.Size(220, 520);
             this.tbl_Order_3rd_Col_Services.TabIndex = 1;
+            // 
+            // tbl_Order_Service_Persons
+            // 
+            this.tbl_Order_Service_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Order_Service_Persons.ColumnCount = 3;
+            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl_Order_Service_Persons.Controls.Add(this.lbl_Order_Services_Quantity_Units, 2, 0);
+            this.tbl_Order_Service_Persons.Controls.Add(this.txt_Order_Services_Quantity, 1, 0);
+            this.tbl_Order_Service_Persons.Controls.Add(this.lbl_Order_Services_Max_Quantity, 0, 0);
+            this.tbl_Order_Service_Persons.Location = new System.Drawing.Point(3, 448);
+            this.tbl_Order_Service_Persons.Name = "tbl_Order_Service_Persons";
+            this.tbl_Order_Service_Persons.RowCount = 1;
+            this.tbl_Order_Service_Persons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Order_Service_Persons.Size = new System.Drawing.Size(214, 28);
+            this.tbl_Order_Service_Persons.TabIndex = 112;
+            // 
+            // lbl_Order_Services_Quantity_Units
+            // 
+            this.lbl_Order_Services_Quantity_Units.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Order_Services_Quantity_Units.AutoSize = true;
+            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(182, 0);
+            this.lbl_Order_Services_Quantity_Units.Name = "lbl_Order_Services_Quantity_Units";
+            this.lbl_Order_Services_Quantity_Units.Size = new System.Drawing.Size(29, 20);
+            this.lbl_Order_Services_Quantity_Units.TabIndex = 3;
+            this.lbl_Order_Services_Quantity_Units.Text = "kpl";
+            this.lbl_Order_Services_Quantity_Units.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_Order_Services_Quantity
+            // 
+            this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(146, 3);
+            this.txt_Order_Services_Quantity.MaxLength = 3;
+            this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
+            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(30, 26);
+            this.txt_Order_Services_Quantity.TabIndex = 2;
+            this.txt_Order_Services_Quantity.Text = "1";
+            // 
+            // lbl_Order_Services_Max_Quantity
+            // 
+            this.lbl_Order_Services_Max_Quantity.AutoSize = true;
+            this.lbl_Order_Services_Max_Quantity.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Order_Services_Max_Quantity.Name = "lbl_Order_Services_Max_Quantity";
+            this.lbl_Order_Services_Max_Quantity.Size = new System.Drawing.Size(70, 20);
+            this.lbl_Order_Services_Max_Quantity.TabIndex = 4;
+            this.lbl_Order_Services_Max_Quantity.Text = "Max kpl: ";
             // 
             // lbl_Order_Services
             // 
@@ -3261,56 +3311,6 @@
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
             // 
-            // tbl_Order_Service_Persons
-            // 
-            this.tbl_Order_Service_Persons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Order_Service_Persons.ColumnCount = 3;
-            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tbl_Order_Service_Persons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tbl_Order_Service_Persons.Controls.Add(this.lbl_Order_Services_Quantity_Units, 2, 0);
-            this.tbl_Order_Service_Persons.Controls.Add(this.txt_Order_Services_Quantity, 1, 0);
-            this.tbl_Order_Service_Persons.Controls.Add(this.lbl_Order_Services_Max_Quantity, 0, 0);
-            this.tbl_Order_Service_Persons.Location = new System.Drawing.Point(3, 448);
-            this.tbl_Order_Service_Persons.Name = "tbl_Order_Service_Persons";
-            this.tbl_Order_Service_Persons.RowCount = 1;
-            this.tbl_Order_Service_Persons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Order_Service_Persons.Size = new System.Drawing.Size(214, 28);
-            this.tbl_Order_Service_Persons.TabIndex = 112;
-            // 
-            // lbl_Order_Services_Quantity_Units
-            // 
-            this.lbl_Order_Services_Quantity_Units.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Order_Services_Quantity_Units.AutoSize = true;
-            this.lbl_Order_Services_Quantity_Units.Location = new System.Drawing.Point(182, 0);
-            this.lbl_Order_Services_Quantity_Units.Name = "lbl_Order_Services_Quantity_Units";
-            this.lbl_Order_Services_Quantity_Units.Size = new System.Drawing.Size(29, 20);
-            this.lbl_Order_Services_Quantity_Units.TabIndex = 3;
-            this.lbl_Order_Services_Quantity_Units.Text = "kpl";
-            this.lbl_Order_Services_Quantity_Units.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txt_Order_Services_Quantity
-            // 
-            this.txt_Order_Services_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Order_Services_Quantity.Location = new System.Drawing.Point(146, 3);
-            this.txt_Order_Services_Quantity.MaxLength = 3;
-            this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
-            this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(30, 26);
-            this.txt_Order_Services_Quantity.TabIndex = 2;
-            this.txt_Order_Services_Quantity.Text = "1";
-            // 
-            // lbl_Order_Services_Max_Quantity
-            // 
-            this.lbl_Order_Services_Max_Quantity.AutoSize = true;
-            this.lbl_Order_Services_Max_Quantity.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Order_Services_Max_Quantity.Name = "lbl_Order_Services_Max_Quantity";
-            this.lbl_Order_Services_Max_Quantity.Size = new System.Drawing.Size(70, 20);
-            this.lbl_Order_Services_Max_Quantity.TabIndex = 4;
-            this.lbl_Order_Services_Max_Quantity.Text = "Max kpl: ";
-            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3346,6 +3346,8 @@
             this.tbl_Order_3rd_Col_Cottage_Summary_Services.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services.PerformLayout();
+            this.tbl_Order_Service_Persons.ResumeLayout(false);
+            this.tbl_Order_Service_Persons.PerformLayout();
             this.tbl_Order_3rd_Col_Services_Search.ResumeLayout(false);
             this.tbl_Order_3rd_Col_Services_Search.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order_Services_All)).EndInit();
@@ -3442,8 +3444,6 @@
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
-            this.tbl_Order_Service_Persons.ResumeLayout(false);
-            this.tbl_Order_Service_Persons.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -947,7 +947,7 @@ namespace R3_VillagePeople_Mahtimokit
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);
             // Jos lkm on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
-            if (is_quantity_valid == false)
+            if (is_quantity_valid == false || selected_quantity_int < 1)
             {
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
@@ -1001,18 +1001,26 @@ namespace R3_VillagePeople_Mahtimokit
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);
             // Jos lkm on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
-            if (is_quantity_valid == false)
+            if (is_quantity_valid == false || selected_quantity_int < 1)
             {
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
             }
             string Reservation_service_id = "";
+            int service_max_quantity = 0;
             if (dgv_Services_All.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgv_Order_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Services_All.Rows[selectedrowindex];
                 Reservation_service_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+                service_max_quantity = Convert.ToInt32(selectedRow.Cells["max_osallistujat"].Value.ToString());
                 string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
+
+                if (selected_quantity_int > service_max_quantity)
+                {
+                    MessageBox.Show("Virhe! Palveluun \"" + selected_service + "\" voi osallistua enintään " + service_max_quantity + " henkilöä.");
+                    return;
+                }
                 string[] rowas = { selected_service + " [" + selected_quantity + "]" };
                 var listViewItem = new ListViewItem(rowas);
                 listViewItem.Tag = Reservation_service_id;
