@@ -1686,6 +1686,7 @@
             this.dgv_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Cottages_All.Location = new System.Drawing.Point(3, 38);
             this.dgv_Cottages_All.Name = "dgv_Cottages_All";
+            this.dgv_Cottages_All.ReadOnly = true;
             this.dgv_Cottages_All.RowHeadersVisible = false;
             this.dgv_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cottages_All.Size = new System.Drawing.Size(279, 307);
@@ -1852,6 +1853,7 @@
             this.dgv_Services_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Services_All.Location = new System.Drawing.Point(9, 40);
             this.dgv_Services_All.Name = "dgv_Services_All";
+            this.dgv_Services_All.ReadOnly = true;
             this.dgv_Services_All.RowHeadersVisible = false;
             this.dgv_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Services_All.Size = new System.Drawing.Size(285, 439);

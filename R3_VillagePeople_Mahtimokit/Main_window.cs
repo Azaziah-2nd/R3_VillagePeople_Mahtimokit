@@ -317,9 +317,16 @@ namespace R3_VillagePeople_Mahtimokit
         {
             foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
             {
-                //  Cell 3 = Max majoittujat.
-                int cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
-                lbl_Order_Cottage_Max_Persons.Text = "Max hlö: " + cottage_max_quantity;
+                try
+                {
+                    //  Cell 3 = Max majoittujat.
+                    int cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                    lbl_Order_Cottage_Max_Persons.Text = "Max hlö: " + cottage_max_quantity;
+                }
+                catch (NullReferenceException)
+                {
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua.
+                }
             }
         }
 
@@ -332,9 +339,16 @@ namespace R3_VillagePeople_Mahtimokit
         {
             foreach (DataGridViewRow row in dgv_Order_Services_All.SelectedRows)
             {
-                //  Cell 3 = Max majoittujat.
-                int service_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
-                lbl_Order_Services_Max_Quantity.Text = "Max kpl: " + service_max_quantity;
+                try
+                {
+                    //  Cell 3 = Max majoittujat.
+                    int service_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                    lbl_Order_Services_Max_Quantity.Text = "Max kpl: " + service_max_quantity;
+                }
+                catch (NullReferenceException)
+                {
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua.
+                }
             }
         }
 
