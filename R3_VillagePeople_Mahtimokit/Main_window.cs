@@ -700,15 +700,9 @@ namespace R3_VillagePeople_Mahtimokit
                     database_connection.Close();
                     Get_customer_names_to_grid();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin asiakas nro: " + asiakas_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
                 // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
                 catch (SqlException)
@@ -1463,15 +1457,9 @@ namespace R3_VillagePeople_Mahtimokit
                     // Filtteröidän myös varaus välilehden lista
                     Filter_management_services_by_office_and_text();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin palvelu nro: " + palvelu_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1534,15 +1522,9 @@ namespace R3_VillagePeople_Mahtimokit
                     Get_cottage_names_to_grid();
                     Filter_management_cottages_by_office_and_text();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin mökki nro: " + majoitus_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1830,15 +1812,9 @@ namespace R3_VillagePeople_Mahtimokit
                 }
                 Get_office_names_to_combo();
                 // Loki taulun päivitys
+                Common_methods common_methods = new Common_methods();
                 string lisatieto_loki = "Poistettiin toimipiste nro: " + toimipiste_id;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                common_methods.Update_log(lisatieto_loki);
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)

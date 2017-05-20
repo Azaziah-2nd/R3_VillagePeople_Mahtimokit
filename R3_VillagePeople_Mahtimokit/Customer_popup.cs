@@ -93,8 +93,8 @@ namespace R3_VillagePeople_Mahtimokit
             SqlCommand database_query_update = new SqlCommand("UPDATE Asiakas SET etunimi=@etunimi, sukunimi=@sukunimi, kokonimi=@kokonimi, " +
                 "lahiosoite=@lahiosoite, postitoimipaikka=@postitoimipaikka, postinro=@postinro, asuinmaa=@asuinmaa, email=@email, " +
                 "puhelinnro=@puhelinnro WHERE asiakas_id = @asiakas_id");
-            string paivittaja = Properties.Settings.Default["user_name"].ToString();
             // Jos muokataan asiakasta.
+            string lisatieto_loki = "";
             if (this.is_customer_edited == true)
             {
                 // Käytetään asiakkaan muokkauksen yhteyttä.
@@ -112,16 +112,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.Parameters.AddWithValue("@puhelinnro", puhelinnro);
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
-                // Loki taulun päivitys
-                string lisatieto_loki = "Muokattiin asiakasta: " + kokonimi + " (asiakas nro.: " + Asiakas_id +")";
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Muokattiin asiakasta: " + kokonimi + " (asiakas nro.: " + Asiakas_id +")";
             }
             // Jos luodaan uusi asiakas.
             else
@@ -140,17 +131,10 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.Parameters.AddWithValue("@puhelinnro", puhelinnro);
                 database_query_new.ExecuteNonQuery();
                 database_connection.Close();
-                // Loki taulun päivitys
-                string lisatieto_loki = "Luotiin asiakas: " + kokonimi;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Luotiin asiakas: " + kokonimi;
             }
+            // Loki taulun päivitys
+            common_methods.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }
