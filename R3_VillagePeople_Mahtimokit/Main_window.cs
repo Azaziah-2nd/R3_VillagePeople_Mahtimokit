@@ -143,10 +143,11 @@ namespace R3_VillagePeople_Mahtimokit
                 return;
             }
             string default_office = Properties.Settings.Default["default_office"].ToString();
+            // Jos asiakas poistaa toimipisteen, joka ei ole oletustoimipiste, ei seuraavaa toimipistettä valita ilman seuraavaa riviä.
+            cbo_Common_Settings_Default_Office.SelectedIndex = 0;
             // Jos toimipistettä ei ole valittu, valitaan oletustoimipisteeksi ensimmäinen listassa oleva toimipiste.
             if (default_office == "")
             {
-                cbo_Common_Settings_Default_Office.SelectedIndex = 0;
                 // Tallennetaan valittu arvo asetuksiin.
                 Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
                 Properties.Settings.Default.Save();
@@ -603,19 +604,6 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
-
-        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Tallennetaan valittu arvo asetuksiin.
-            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
-            Properties.Settings.Default.Save();
-            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
-            string default_office = Properties.Settings.Default["default_office"].ToString();
-            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
-            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
-            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
-        }
-
         private void dtp_Common_Settings_History_Start_Date_ValueChanged(object sender, EventArgs e)
         {
             // Poistetaan valitusta ajasta tarkka kellonaika ja tallennetaan arvo asetuksiin.
@@ -692,6 +680,13 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     asiakas_id = row.Cells[0].Value.ToString();
                 }
+                // Tarkistetaan, onko asiakas yhdistetty uuteen varaukseen.
+                if(asiakas_id == Reservation_asiakas_id)
+                {
+                    MessageBox.Show("Virhe! Olet luomassa asiakkaalle uutta varausta.\nJos haluat poista asiakkaan, muuta ensin varauksen asiakasta.");
+                    return;
+                }
+
                 // Yritetään poistaa asiakasta tietokannasta
                 try
                 {
@@ -1012,7 +1007,6 @@ namespace R3_VillagePeople_Mahtimokit
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
             Filter_order_cottages_by_dates_office_and_text();
             Filter_order_services_by_office_and_text();
-
         }
 
 
@@ -1161,6 +1155,11 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
+            if (lsv_Order_Summary_Cottages.Items.Count == 0 || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
+            {
+                MessageBox.Show("Virhe! Tilauksessa on oltava vähintään 1 mökki, asiakas ja toimipiste.");
+                return;
+            }
             // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             // Määritellään tietokantayhteys.
@@ -1413,9 +1412,21 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
                 string palvelu_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
-                // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
+
+                // Tarkistetaan, onko palvelu yhdistetty uuteen varaukseen.
+                List<int> services_in_new_order = new List<int>();
+                foreach (ListViewItem service_rows in lsv_Order_Summary_Services.Items)
+                {
+                    // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
+                    services_in_new_order.Add(int.Parse(service_rows.Tag.ToString()));
+                }
+                if (services_in_new_order.Contains(int.Parse(palvelu_id)))
+                {
+                    MessageBox.Show("Virhe! Tämä palvelu on lisätty uuteen varaukseen.\nJos haluat poistaa sen, poista se ensin varauksesta.");
+                    return;
+                }
+                // Tarkistetaan, onko valittu palvelu liitetty mihinkään varaukseen
                 SqlDataReader myReader = null;
-                // Luodaan lista asiakkaan varausnumeroita varten.
                 List<int> service_orders = new List<int>();
                 SqlCommand database_query_get_service_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_palvelut WHERE palvelu_id = @palvelu_id");
                 database_query_get_service_reservations.Connection = database_connection;
@@ -1473,9 +1484,21 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
                 string majoitus_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
+                // Tarkistetaan, onko mökki yhdistetty uuteen varaukseen.
+                List<int> cottages_in_new_order = new List<int>();
+                foreach (ListViewItem cottage_rows in lsv_Order_Summary_Cottages.Items)
+                {
+                    // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
+                    cottages_in_new_order.Add(int.Parse(cottage_rows.Tag.ToString()));
+                }
+                if(cottages_in_new_order.Contains(int.Parse(majoitus_id)))
+                {
+                    MessageBox.Show("Virhe! Tämä mökki on lisätty uuteen varaukseen.\nJos haluat poistaa sen, poista se ensin varauksesta.");
+                    return;
+                }
                 // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
                 SqlDataReader myReader = null;
-                List<int> service_cottages = new List<int>();
+                List<int> orders_cottages = new List<int>();
                 SqlCommand database_query_get_cottage_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_majoitus WHERE majoitus_id = @majoitus_id");
                 database_query_get_cottage_reservations.Connection = database_connection;
                 database_connection.Open();
@@ -1485,14 +1508,14 @@ namespace R3_VillagePeople_Mahtimokit
                 myReader = database_query_get_cottage_reservations.ExecuteReader();
                 while (myReader.Read())
                 {
-                    service_cottages.Add(Convert.ToInt32((myReader["varaus_id"])));
+                    orders_cottages.Add(Convert.ToInt32((myReader["varaus_id"])));
                 }
                 // Suljetaan yhteys ja tulostetaan virheilmoitus.
                 database_connection.Close();
                 // Jos  palvelu löytyy jostakin varauksesta, tulostetaan palveluun yhdistetyt varaukset virheilmoituksessa.
-                if (service_cottages.Count > 0)
+                if (orders_cottages.Count > 0)
                 {
-                    var all_service_cottages = string.Join(",  ", service_cottages);
+                    var all_service_cottages = string.Join(",  ", orders_cottages);
                     MessageBox.Show("Virhe! Mökki on yhdistetty seuraaviin varausnumeroihin:\n\n" +
                         all_service_cottages + "\n\nJos haluat poistaa tämän mökin, on sinun ensin " +
                         "poistettava\nkaikki tämän mökin sisältävät varaukset varaushistoriasta.");
@@ -1767,7 +1790,8 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
                 return;
             }
-            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + cbo_Office_Select.Text.ToString() +
+            string office_name = cbo_Office_Select.Text.ToString();
+            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + office_name +
                 "\"?", "Toimipisteen poistaminen", MessageBoxButtons.YesNo);
             if (Confirm_delete == DialogResult.No)
             {
@@ -1781,7 +1805,6 @@ namespace R3_VillagePeople_Mahtimokit
                     "Jos haluat poistaa toimipisteen, on sinun ensin poistettava sen mökit ja palvelut.");
                 return;
             }
-            string default_office = Properties.Settings.Default["default_office"].ToString();
             // Yritetään poistaa toimipistettä tietokannasta
             try
             {
@@ -1791,6 +1814,20 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query.ExecuteNonQuery();
                 database_connection.Close();
+                // Tarkistetaan, oliko toimipiste oletustoimipiste ja muutetaan asetus jos oli.
+                string default_office = Properties.Settings.Default["default_office"].ToString();
+                MessageBox.Show(default_office + "\n office:name: " + office_name);
+                if (default_office == office_name)
+                {
+                    // Tallennetaan tyhjä arvo asetuksiin, toimipisteiden haku alustaa jonkin arvon mikäli järjestelmässä on toimipisteitä.
+                    Properties.Settings.Default["default_office"] = "";
+                    Properties.Settings.Default.Save();
+                }
+                // Tarkistetaan, oliko toimipiste liitetty uuteen varaukseen.
+                if (lbl_Order_Summary_Office.Text.Contains(office_name))
+                {
+                    lbl_Order_Summary_Office.Text = "Toimipiste:";
+                }
                 Get_office_names_to_combo();
                 // Loki taulun päivitys
                 string lisatieto_loki = "Poistettiin toimipiste nro: " + toimipiste_id;
@@ -1802,7 +1839,6 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
                 database_query_loki.ExecuteNonQuery();
                 database_connection.Close();
-                Get_office_names_to_combo();
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)
@@ -1902,6 +1938,18 @@ namespace R3_VillagePeople_Mahtimokit
         private void dtp_History_Orders_Filter_Date_Start_ValueChanged(object sender, EventArgs e)
         {
             Filter_history_orders();
+        }
+
+        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Tallennetaan valittu arvo asetuksiin.
+            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
+            Properties.Settings.Default.Save();
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
         }
     }
 }
