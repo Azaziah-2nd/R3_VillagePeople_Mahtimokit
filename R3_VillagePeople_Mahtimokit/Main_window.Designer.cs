@@ -2696,6 +2696,7 @@
             this.chk_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(15, 14);
             this.chk_Common_Settings_History_End_Date_Today.TabIndex = 1;
             this.chk_Common_Settings_History_End_Date_Today.UseVisualStyleBackColor = true;
+            this.chk_Common_Settings_History_End_Date_Today.CheckedChanged += new System.EventHandler(this.chk_Common_Settings_History_End_Date_Today_CheckedChanged);
             // 
             // dtp_Common_Settings_History_End_Date_Custom
             // 
@@ -2705,6 +2706,7 @@
             this.dtp_Common_Settings_History_End_Date_Custom.Name = "dtp_Common_Settings_History_End_Date_Custom";
             this.dtp_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(252, 26);
             this.dtp_Common_Settings_History_End_Date_Custom.TabIndex = 21;
+            this.dtp_Common_Settings_History_End_Date_Custom.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_End_Date_Custom_ValueChanged);
             // 
             // lbl_Common_Settings_History_End_Date_Custom
             // 
