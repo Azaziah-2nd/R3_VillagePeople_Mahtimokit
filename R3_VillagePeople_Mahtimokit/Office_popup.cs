@@ -79,7 +79,7 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
             // Määritellään tietokantayhteys.
-            SqlConnection database_connection = main_window.database_connection;
+            SqlConnection database_connection = database.db_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Toimipiste] ([nimi], [lahiosoite], [postinro], [postitoimipaikka], " +
                 "[email], [puhelinnro]) VALUES (@nimi, @lahiosoite, @postinro, @postitoimipaikka, @email, @puhelinnro)");
@@ -90,7 +90,7 @@ namespace R3_VillagePeople_Mahtimokit
             if (this.Is_office_edited == true)
             {
                 // Käytetään asiakkaan muokkauksen yhteyttä.
-                database_query_update.Connection = main_window.database_connection;
+                database_query_update.Connection = database.db_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@toimipiste_id", Office_id);
                 database_query_update.Parameters.AddWithValue("@nimi", nimi);
@@ -109,7 +109,7 @@ namespace R3_VillagePeople_Mahtimokit
             else
             {
                 // Käytetään uuden asiakkaan luonnin yhteyttä.
-                database_query_new.Connection = main_window.database_connection;
+                database_query_new.Connection = database.db_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@nimi", nimi);
                 database_query_new.Parameters.AddWithValue("@lahiosoite", lahiosoite);
