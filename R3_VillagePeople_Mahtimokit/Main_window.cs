@@ -1267,22 +1267,6 @@ namespace R3_VillagePeople_Mahtimokit
                 Invoice.customer_country = (myReader["asuinmaa"].ToString());
             }
             database_connection.Close();
-            string[] arr_cottage = new string[6];
-            SqlCommand database_query_Cottage_invoicing = new SqlCommand("SELECT nimi, hinta FROM Majoitus WHERE majoitus_id = @majoitus_id");
-            database_query_Cottage_invoicing.Connection = database_connection;
-            database_connection.Open();
-            database_query_Cottage_invoicing.Parameters.AddWithValue("@majoitus_id", Reservation_Cottage_id);
-            // Suoritetaan kysely
-            database_query_Cottage_invoicing.ExecuteNonQuery();
-            // Alustetaan tietojen lukija
-            myReader = null;
-            myReader = database_query_Cottage_invoicing.ExecuteReader();
-            while (myReader.Read())
-            {
-                arr_cottage[0] = (myReader["nimi"].ToString());
-                arr_cottage[3] = (myReader["hinta"].ToString());
-            }
-            database_connection.Close();
             SqlCommand database_query_Reservation_invoicing = new SqlCommand("SELECT varattu_alkupvm, varattu_loppupvm FROM Varaus WHERE varaus_id = @varaus_id");
             database_query_Reservation_invoicing.Connection = database_connection;
             database_connection.Open();
@@ -1300,28 +1284,49 @@ namespace R3_VillagePeople_Mahtimokit
                 DateTime.TryParse(myReader["varattu_loppupvm"].ToString(), out End);
             }
             database_connection.Close();
-            Start = Start.Date;
-            End = End.Date;
-            arr_cottage[1] = Start.ToString("dd.MM.yyyy");
-            arr_cottage[2] = End.ToString("dd.MM.yyyy");
-            // Montako päivää ollaan matkalla
-            double days = (End - Start).TotalDays + 1;
-            arr_cottage[4] = days.ToString();
-            // Päivähinta * päivät = hinta
-            double first = double.Parse(arr_cottage[3]);
-            int second = int.Parse(arr_cottage[4]);
-            arr_cottage[5] = (first * second).ToString(".00");
-            if (days == 1)
+
+            foreach (ListViewItem itemRow in lsv_Order_Summary_Cottages.Items)
             {
-                arr_cottage[4] += " päivä";
+                string[] arr_cottage = new string[6];
+                SqlCommand database_query_Cottage_invoicing = new SqlCommand("SELECT nimi, hinta FROM Majoitus WHERE majoitus_id = @majoitus_id");
+                database_query_Cottage_invoicing.Connection = database_connection;
+                database_connection.Open();
+                database_query_Cottage_invoicing.Parameters.AddWithValue("@majoitus_id", itemRow.Tag);
+                // Suoritetaan kysely
+                database_query_Cottage_invoicing.ExecuteNonQuery();
+                // Alustetaan tietojen lukija
+                myReader = null;
+                myReader = database_query_Cottage_invoicing.ExecuteReader();
+                while (myReader.Read())
+                {
+                    arr_cottage[0] = (myReader["nimi"].ToString());
+                    arr_cottage[3] = (myReader["hinta"].ToString());
+                }
+                database_connection.Close();
+
+                Start = Start.Date;
+                End = End.Date;
+                arr_cottage[1] = Start.ToString("dd.MM.yyyy");
+                arr_cottage[2] = End.ToString("dd.MM.yyyy");
+                // Montako päivää ollaan matkalla
+                double days = (End - Start).TotalDays + 1;
+                arr_cottage[4] = days.ToString();
+                // Päivähinta * päivät = hinta
+                double first = double.Parse(arr_cottage[3]);
+                int second = int.Parse(arr_cottage[4]);
+                arr_cottage[5] = (first * second).ToString(".00");
+                if (days == 1)
+                {
+                    arr_cottage[4] += " päivä";
+                }
+                else
+                {
+                    arr_cottage[4] += " päivää";
+                }
+                ListViewItem itm_cottage;
+                itm_cottage = new ListViewItem(arr_cottage);
+                Invoice.lst_Invoicing.Items.Add(itm_cottage);
             }
-            else
-            {
-                arr_cottage[4] += " päivää";
-            }
-            ListViewItem itm_cottage;
-            itm_cottage = new ListViewItem(arr_cottage);
-            Invoice.lst_Invoicing.Items.Add(itm_cottage);
             foreach (ListViewItem itemRow in lsv_Order_Summary_Services.Items)
             {
                 string[] arr_service = new string[6];

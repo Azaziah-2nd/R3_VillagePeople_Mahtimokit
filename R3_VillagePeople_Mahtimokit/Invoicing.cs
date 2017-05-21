@@ -32,6 +32,8 @@ namespace R3_VillagePeople_Mahtimokit
         public string reference_number;
         public string total;
 
+        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
+        private PrintDocument printDocument1 = new PrintDocument();
         public frm_Invoicing()
         {
             InitializeComponent();
@@ -70,7 +72,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Invoicing_Total.Text = total;
 
             //tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
-            lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 13);
+            lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 16);
             
         }
 
@@ -81,31 +83,40 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Invoice_Print_Click(object sender, EventArgs e)
         {
-            // Tulostaa laskun
-            // Tulostuksen koko: 794 x 1123	 = A4 = 96 DPI. (Koko ulkoasusta.)
-            PrintDocument to_print = new PrintDocument();
-            to_print.PrintPage += this.Print_document;
+            PrintDocument doc = new PrintDocument();
+            doc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 2480, 3508);
+            doc.PrintPage += this.Doc_PrintPage;
             PrintDialog dlgSettings = new PrintDialog();
-            dlgSettings.Document = to_print;
+            dlgSettings.Document = doc;
             if (dlgSettings.ShowDialog() == DialogResult.OK)
             {
+                //Disable the printing document pop-up dialog shown during printing.
                 PrintController printController = new StandardPrintController();
-                to_print.PrintController = printController;
-                // Määritellään tulosteen marginaaleiksi "0".
-                to_print.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
-                to_print.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
-                to_print.Print();
+                doc.PrintController = printController;
+
+                //For testing only: Hardcoded set paper size to particular paper.
+                //pd.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+                //pd.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+
+                doc.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+                doc.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+
+                doc.Print();
             }
 
         }
 
-        private void Print_document(object sender, PrintPageEventArgs e)
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Luodaan laskusta tulostettava sivu.
             float x = e.MarginBounds.Left;
             float y = e.MarginBounds.Top;
+
+
             Bitmap bmp = new Bitmap(this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height);
             this.tbl_Invoice_Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height));
+
+
+
             e.Graphics.DrawImage((Image)bmp, x, y);
         }
     }

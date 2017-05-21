@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
             this.tbl_Invoicing_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoice_Invoice = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_1st_Row_Invoice_Info = new System.Windows.Forms.TableLayoutPanel();
@@ -111,12 +111,14 @@
             this.End_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsv_Invoicing_Details_Summary = new System.Windows.Forms.ListView();
-            this.Total_label = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Total_2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SummaryTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lst_Invoicing_2nd_Row_Alv = new System.Windows.Forms.ListView();
             this.info = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lsv_Invoicing_Details_Summary = new System.Windows.Forms.ListView();
+            this.ReferenceNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Total_label = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Total_2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbl_Invoicing_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Invoice_Print = new System.Windows.Forms.Button();
             this.btn_Invoice_Close = new System.Windows.Forms.Button();
@@ -253,12 +255,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Controls.Add(this.lbl_Invoicing_Invoice_Number, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Controls.Add(this.txt_Invoicing_Invoice_Number, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Location = new System.Drawing.Point(3, 3);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Location = new System.Drawing.Point(0, 0);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Name = "tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number";
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Size = new System.Drawing.Size(179, 27);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.Size = new System.Drawing.Size(185, 33);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Number.TabIndex = 0;
             // 
             // lbl_Invoicing_Invoice_Number
@@ -268,7 +271,7 @@
             this.lbl_Invoicing_Invoice_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Invoicing_Invoice_Number.Location = new System.Drawing.Point(3, 0);
             this.lbl_Invoicing_Invoice_Number.Name = "lbl_Invoicing_Invoice_Number";
-            this.lbl_Invoicing_Invoice_Number.Size = new System.Drawing.Size(99, 13);
+            this.lbl_Invoicing_Invoice_Number.Size = new System.Drawing.Size(99, 16);
             this.lbl_Invoicing_Invoice_Number.TabIndex = 0;
             this.lbl_Invoicing_Invoice_Number.Text = "Laskun numero";
             // 
@@ -277,7 +280,7 @@
             this.txt_Invoicing_Invoice_Number.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Invoice_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Invoice_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Invoice_Number.Location = new System.Drawing.Point(15, 13);
+            this.txt_Invoicing_Invoice_Number.Location = new System.Drawing.Point(15, 16);
             this.txt_Invoicing_Invoice_Number.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Invoice_Number.Name = "txt_Invoicing_Invoice_Number";
             this.txt_Invoicing_Invoice_Number.ReadOnly = true;
@@ -294,12 +297,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Controls.Add(this.lbl_Invoicing_Customer_Y_Id, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Controls.Add(this.txt_Invoicing_Customer_Y_Id, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Location = new System.Drawing.Point(3, 36);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Location = new System.Drawing.Point(0, 33);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Name = "tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id";
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Size = new System.Drawing.Size(179, 27);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.Size = new System.Drawing.Size(185, 33);
             this.tbl_Invoicing_1st_Row_2nd_Col_Customer_Y_Id.TabIndex = 1;
             // 
             // lbl_Invoicing_Customer_Y_Id
@@ -309,7 +313,7 @@
             this.lbl_Invoicing_Customer_Y_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Invoicing_Customer_Y_Id.Location = new System.Drawing.Point(3, 0);
             this.lbl_Invoicing_Customer_Y_Id.Name = "lbl_Invoicing_Customer_Y_Id";
-            this.lbl_Invoicing_Customer_Y_Id.Size = new System.Drawing.Size(126, 13);
+            this.lbl_Invoicing_Customer_Y_Id.Size = new System.Drawing.Size(126, 16);
             this.lbl_Invoicing_Customer_Y_Id.TabIndex = 0;
             this.lbl_Invoicing_Customer_Y_Id.Text = "Asiakkaan Y-tunnus";
             // 
@@ -318,7 +322,7 @@
             this.txt_Invoicing_Customer_Y_Id.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Customer_Y_Id.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Customer_Y_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Customer_Y_Id.Location = new System.Drawing.Point(15, 13);
+            this.txt_Invoicing_Customer_Y_Id.Location = new System.Drawing.Point(15, 16);
             this.txt_Invoicing_Customer_Y_Id.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Customer_Y_Id.Name = "txt_Invoicing_Customer_Y_Id";
             this.txt_Invoicing_Customer_Y_Id.ReadOnly = true;
@@ -335,12 +339,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Controls.Add(this.lbl_Invoicing_Penalty_Interest, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Controls.Add(this.txt_Invoicing_Penalty_Interest, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Location = new System.Drawing.Point(3, 69);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Location = new System.Drawing.Point(0, 66);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Name = "tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest";
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Size = new System.Drawing.Size(179, 29);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.Size = new System.Drawing.Size(185, 35);
             this.tbl_Invoicing_1st_Row_2nd_Col_Penalty_Interest.TabIndex = 2;
             // 
             // lbl_Invoicing_Penalty_Interest
@@ -348,9 +353,9 @@
             this.lbl_Invoicing_Penalty_Interest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Invoicing_Penalty_Interest.AutoSize = true;
             this.lbl_Invoicing_Penalty_Interest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Invoicing_Penalty_Interest.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Invoicing_Penalty_Interest.Location = new System.Drawing.Point(3, 1);
             this.lbl_Invoicing_Penalty_Interest.Name = "lbl_Invoicing_Penalty_Interest";
-            this.lbl_Invoicing_Penalty_Interest.Size = new System.Drawing.Size(96, 14);
+            this.lbl_Invoicing_Penalty_Interest.Size = new System.Drawing.Size(96, 16);
             this.lbl_Invoicing_Penalty_Interest.TabIndex = 0;
             this.lbl_Invoicing_Penalty_Interest.Text = "Viivästyskorko";
             // 
@@ -359,7 +364,7 @@
             this.txt_Invoicing_Penalty_Interest.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Penalty_Interest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Penalty_Interest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Penalty_Interest.Location = new System.Drawing.Point(15, 14);
+            this.txt_Invoicing_Penalty_Interest.Location = new System.Drawing.Point(15, 17);
             this.txt_Invoicing_Penalty_Interest.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Penalty_Interest.Name = "txt_Invoicing_Penalty_Interest";
             this.txt_Invoicing_Penalty_Interest.ReadOnly = true;
@@ -376,12 +381,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Controls.Add(this.lbl_Invoicing_Due_Date_1, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Controls.Add(this.txt_Invoicing_Due_Date_1, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Location = new System.Drawing.Point(188, 36);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Location = new System.Drawing.Point(185, 33);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Name = "tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date";
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Size = new System.Drawing.Size(179, 27);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.Size = new System.Drawing.Size(185, 33);
             this.tbl_Invoicing_1st_Row_2nd_Col_Upper_Due_Date.TabIndex = 3;
             // 
             // lbl_Invoicing_Due_Date_1
@@ -391,7 +397,7 @@
             this.lbl_Invoicing_Due_Date_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Invoicing_Due_Date_1.Location = new System.Drawing.Point(3, 0);
             this.lbl_Invoicing_Due_Date_1.Name = "lbl_Invoicing_Due_Date_1";
-            this.lbl_Invoicing_Due_Date_1.Size = new System.Drawing.Size(63, 13);
+            this.lbl_Invoicing_Due_Date_1.Size = new System.Drawing.Size(63, 16);
             this.lbl_Invoicing_Due_Date_1.TabIndex = 0;
             this.lbl_Invoicing_Due_Date_1.Text = "Eräpäivä";
             // 
@@ -400,7 +406,7 @@
             this.txt_Invoicing_Due_Date_1.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Due_Date_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Due_Date_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Due_Date_1.Location = new System.Drawing.Point(15, 13);
+            this.txt_Invoicing_Due_Date_1.Location = new System.Drawing.Point(15, 16);
             this.txt_Invoicing_Due_Date_1.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Due_Date_1.Name = "txt_Invoicing_Due_Date_1";
             this.txt_Invoicing_Due_Date_1.ReadOnly = true;
@@ -417,12 +423,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Controls.Add(this.lbl_Invoicing_Remark_Time, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Controls.Add(this.txt_Invoicing_Remark_Time, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Location = new System.Drawing.Point(188, 69);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Location = new System.Drawing.Point(185, 66);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Name = "tbl_Invoicing_1st_Row_2nd_Col_Remark_Time";
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Size = new System.Drawing.Size(179, 29);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.Size = new System.Drawing.Size(185, 35);
             this.tbl_Invoicing_1st_Row_2nd_Col_Remark_Time.TabIndex = 4;
             // 
             // lbl_Invoicing_Remark_Time
@@ -430,9 +437,9 @@
             this.lbl_Invoicing_Remark_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Invoicing_Remark_Time.AutoSize = true;
             this.lbl_Invoicing_Remark_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Invoicing_Remark_Time.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Invoicing_Remark_Time.Location = new System.Drawing.Point(3, 1);
             this.lbl_Invoicing_Remark_Time.Name = "lbl_Invoicing_Remark_Time";
-            this.lbl_Invoicing_Remark_Time.Size = new System.Drawing.Size(102, 14);
+            this.lbl_Invoicing_Remark_Time.Size = new System.Drawing.Size(102, 16);
             this.lbl_Invoicing_Remark_Time.TabIndex = 0;
             this.lbl_Invoicing_Remark_Time.Text = "Huomautusaika";
             // 
@@ -441,7 +448,7 @@
             this.txt_Invoicing_Remark_Time.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Remark_Time.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Remark_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Remark_Time.Location = new System.Drawing.Point(15, 14);
+            this.txt_Invoicing_Remark_Time.Location = new System.Drawing.Point(15, 17);
             this.txt_Invoicing_Remark_Time.Margin = new System.Windows.Forms.Padding(15, 0, 3, 3);
             this.txt_Invoicing_Remark_Time.Name = "txt_Invoicing_Remark_Time";
             this.txt_Invoicing_Remark_Time.ReadOnly = true;
@@ -489,12 +496,13 @@
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Controls.Add(this.lbl_Invoicing_Invoice_Date, 0, 0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Controls.Add(this.txt_Invoicing_Invoice_Date, 0, 1);
-            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Location = new System.Drawing.Point(3, 53);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Location = new System.Drawing.Point(0, 50);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Name = "tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date";
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.RowCount = 2;
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Size = new System.Drawing.Size(179, 45);
+            this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.Size = new System.Drawing.Size(185, 51);
             this.tbl_Invoicing_1st_Row_2nd_Col_Invoice_Date.TabIndex = 1;
             // 
             // lbl_Invoicing_Invoice_Date
@@ -502,7 +510,7 @@
             this.lbl_Invoicing_Invoice_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Invoicing_Invoice_Date.AutoSize = true;
             this.lbl_Invoicing_Invoice_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Invoicing_Invoice_Date.Location = new System.Drawing.Point(3, 6);
+            this.lbl_Invoicing_Invoice_Date.Location = new System.Drawing.Point(3, 9);
             this.lbl_Invoicing_Invoice_Date.Name = "lbl_Invoicing_Invoice_Date";
             this.lbl_Invoicing_Invoice_Date.Size = new System.Drawing.Size(127, 16);
             this.lbl_Invoicing_Invoice_Date.TabIndex = 0;
@@ -513,7 +521,7 @@
             this.txt_Invoicing_Invoice_Date.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Invoice_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Invoice_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Invoice_Date.Location = new System.Drawing.Point(15, 25);
+            this.txt_Invoicing_Invoice_Date.Location = new System.Drawing.Point(15, 28);
             this.txt_Invoicing_Invoice_Date.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Invoice_Date.Name = "txt_Invoicing_Invoice_Date";
             this.txt_Invoicing_Invoice_Date.ReadOnly = true;
@@ -654,8 +662,8 @@
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_1, 0, 0);
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_2, 1, 0);
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_3, 2, 0);
-            this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_4, 3, 0);
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_5, 4, 0);
+            this.tbl_Invoicing_3rd_Row_Village_People_Info.Controls.Add(this.txt_Invoicing_3rd_Row_Village_People_Info_4, 3, 0);
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Location = new System.Drawing.Point(18, 672);
             this.tbl_Invoicing_3rd_Row_Village_People_Info.Name = "tbl_Invoicing_3rd_Row_Village_People_Info";
             this.tbl_Invoicing_3rd_Row_Village_People_Info.RowCount = 1;
@@ -750,16 +758,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.ColumnCount = 2;
+            this.tbl_Invoicing_4th_Row_Virtual_Barcode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Invoicing_4th_Row_Virtual_Barcode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 762F));
-            this.tbl_Invoicing_4th_Row_Virtual_Barcode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.Controls.Add(this.lbl_Invoicing_Virtual_Barcode, 0, 0);
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.Controls.Add(this.txt_Invoicing_Virtual_Barcode, 1, 0);
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.Location = new System.Drawing.Point(18, 727);
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.Name = "tbl_Invoicing_4th_Row_Virtual_Barcode";
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.RowCount = 1;
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Invoicing_4th_Row_Virtual_Barcode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.Size = new System.Drawing.Size(752, 27);
             this.tbl_Invoicing_4th_Row_Virtual_Barcode.TabIndex = 2;
             // 
@@ -770,9 +776,9 @@
             this.lbl_Invoicing_Virtual_Barcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Invoicing_Virtual_Barcode.Location = new System.Drawing.Point(3, 3);
             this.lbl_Invoicing_Virtual_Barcode.Name = "lbl_Invoicing_Virtual_Barcode";
-            this.lbl_Invoicing_Virtual_Barcode.Size = new System.Drawing.Size(1, 20);
+            this.lbl_Invoicing_Virtual_Barcode.Size = new System.Drawing.Size(137, 20);
             this.lbl_Invoicing_Virtual_Barcode.TabIndex = 0;
-            this.lbl_Invoicing_Virtual_Barcode.Text = "Virtuaaliviivakoodi";
+            this.lbl_Invoicing_Virtual_Barcode.Text = "Virtuaaliviivakoodi:";
             // 
             // txt_Invoicing_Virtual_Barcode
             // 
@@ -780,7 +786,7 @@
             this.txt_Invoicing_Virtual_Barcode.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Virtual_Barcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Virtual_Barcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Virtual_Barcode.Location = new System.Drawing.Point(-7, 4);
+            this.txt_Invoicing_Virtual_Barcode.Location = new System.Drawing.Point(146, 4);
             this.txt_Invoicing_Virtual_Barcode.Name = "txt_Invoicing_Virtual_Barcode";
             this.txt_Invoicing_Virtual_Barcode.ReadOnly = true;
             this.txt_Invoicing_Virtual_Barcode.Size = new System.Drawing.Size(528, 19);
@@ -1118,8 +1124,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.ColumnCount = 2;
-            this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.87234F));
+            this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.12766F));
             this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.Controls.Add(this.lbl_Invoicing_Reference_Number, 0, 0);
             this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.Controls.Add(this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total, 1, 1);
             this.tbl_Invoicing_5th_Row_2nd_Col_Refnum_Duedate_Total.Controls.Add(this.lbl_Invoicing_Due_Date_2, 0, 1);
@@ -1143,7 +1149,7 @@
             this.lbl_Invoicing_Reference_Number.Location = new System.Drawing.Point(4, 6);
             this.lbl_Invoicing_Reference_Number.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lbl_Invoicing_Reference_Number.Name = "lbl_Invoicing_Reference_Number";
-            this.lbl_Invoicing_Reference_Number.Size = new System.Drawing.Size(68, 22);
+            this.lbl_Invoicing_Reference_Number.Size = new System.Drawing.Size(79, 22);
             this.lbl_Invoicing_Reference_Number.TabIndex = 0;
             this.lbl_Invoicing_Reference_Number.Text = "Viitenumero";
             // 
@@ -1158,12 +1164,12 @@
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Controls.Add(this.tbl_Invoicing_5th_Row_2nd_Col_Total, 1, 0);
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Controls.Add(this.txt_Invoicing_Due_Date_2, 0, 0);
-            this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Location = new System.Drawing.Point(76, 29);
+            this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Location = new System.Drawing.Point(87, 29);
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Name = "tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total";
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.RowCount = 1;
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Size = new System.Drawing.Size(300, 28);
+            this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.Size = new System.Drawing.Size(289, 28);
             this.tbl_Invoicing_5th_Row_2nd_Col_Due_Date_Total.TabIndex = 1;
             // 
             // tbl_Invoicing_5th_Row_2nd_Col_Total
@@ -1171,18 +1177,17 @@
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnCount = 3;
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.125F));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.875F));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnCount = 2;
+            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.85906F));
+            this.tbl_Invoicing_5th_Row_2nd_Col_Total.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.14094F));
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.Controls.Add(this.lbl_Invoicing_Currency, 0, 0);
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.Controls.Add(this.txt_Invoicing_Total, 1, 0);
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.Location = new System.Drawing.Point(150, 1);
+            this.tbl_Invoicing_5th_Row_2nd_Col_Total.Location = new System.Drawing.Point(145, 1);
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.Name = "tbl_Invoicing_5th_Row_2nd_Col_Total";
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.RowCount = 1;
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.39394F));
-            this.tbl_Invoicing_5th_Row_2nd_Col_Total.Size = new System.Drawing.Size(149, 26);
+            this.tbl_Invoicing_5th_Row_2nd_Col_Total.Size = new System.Drawing.Size(143, 26);
             this.tbl_Invoicing_5th_Row_2nd_Col_Total.TabIndex = 0;
             // 
             // lbl_Invoicing_Currency
@@ -1201,10 +1206,10 @@
             this.txt_Invoicing_Total.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Total.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Total.Location = new System.Drawing.Point(38, 4);
+            this.txt_Invoicing_Total.Location = new System.Drawing.Point(52, 4);
             this.txt_Invoicing_Total.Name = "txt_Invoicing_Total";
             this.txt_Invoicing_Total.ReadOnly = true;
-            this.txt_Invoicing_Total.Size = new System.Drawing.Size(83, 19);
+            this.txt_Invoicing_Total.Size = new System.Drawing.Size(88, 19);
             this.txt_Invoicing_Total.TabIndex = 1;
             this.txt_Invoicing_Total.Text = "999,95";
             this.txt_Invoicing_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1219,7 +1224,7 @@
             this.txt_Invoicing_Due_Date_2.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Due_Date_2.Name = "txt_Invoicing_Due_Date_2";
             this.txt_Invoicing_Due_Date_2.ReadOnly = true;
-            this.txt_Invoicing_Due_Date_2.Size = new System.Drawing.Size(130, 19);
+            this.txt_Invoicing_Due_Date_2.Size = new System.Drawing.Size(125, 19);
             this.txt_Invoicing_Due_Date_2.TabIndex = 1;
             this.txt_Invoicing_Due_Date_2.Text = "24.12.2921";
             // 
@@ -1233,19 +1238,21 @@
             this.lbl_Invoicing_Due_Date_2.Location = new System.Drawing.Point(4, 34);
             this.lbl_Invoicing_Due_Date_2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lbl_Invoicing_Due_Date_2.Name = "lbl_Invoicing_Due_Date_2";
-            this.lbl_Invoicing_Due_Date_2.Size = new System.Drawing.Size(68, 23);
+            this.lbl_Invoicing_Due_Date_2.Size = new System.Drawing.Size(79, 23);
             this.lbl_Invoicing_Due_Date_2.TabIndex = 2;
             this.lbl_Invoicing_Due_Date_2.Text = "Eräpäivä";
             // 
             // txt_Invoicing_Reference_Number
             // 
             this.txt_Invoicing_Reference_Number.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Invoicing_Reference_Number.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Invoicing_Reference_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Invoicing_Reference_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_Reference_Number.Location = new System.Drawing.Point(91, 5);
+            this.txt_Invoicing_Reference_Number.Location = new System.Drawing.Point(102, 5);
             this.txt_Invoicing_Reference_Number.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.txt_Invoicing_Reference_Number.Name = "txt_Invoicing_Reference_Number";
-            this.txt_Invoicing_Reference_Number.Size = new System.Drawing.Size(282, 19);
+            this.txt_Invoicing_Reference_Number.ReadOnly = true;
+            this.txt_Invoicing_Reference_Number.Size = new System.Drawing.Size(271, 19);
             this.txt_Invoicing_Reference_Number.TabIndex = 3;
             this.txt_Invoicing_Reference_Number.Text = "5217678752741";
             // 
@@ -1304,8 +1311,8 @@
             this.tbl_Invoicing_2nd_Row_Details.ColumnCount = 1;
             this.tbl_Invoicing_2nd_Row_Details.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Invoicing_2nd_Row_Details.Controls.Add(this.lst_Invoicing, 0, 0);
-            this.tbl_Invoicing_2nd_Row_Details.Controls.Add(this.lsv_Invoicing_Details_Summary, 0, 2);
             this.tbl_Invoicing_2nd_Row_Details.Controls.Add(this.lst_Invoicing_2nd_Row_Alv, 0, 1);
+            this.tbl_Invoicing_2nd_Row_Details.Controls.Add(this.lsv_Invoicing_Details_Summary, 0, 2);
             this.tbl_Invoicing_2nd_Row_Details.Location = new System.Drawing.Point(15, 245);
             this.tbl_Invoicing_2nd_Row_Details.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_2nd_Row_Details.Name = "tbl_Invoicing_2nd_Row_Details";
@@ -1324,12 +1331,14 @@
             this.Start_date,
             this.End_date,
             this.Price,
-            this.Count});
+            this.Count,
+            this.SummaryTotal});
+            this.lst_Invoicing.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing.GridLines = true;
-            listViewGroup1.Header = "Selite";
-            listViewGroup1.Name = "Definition";
+            listViewGroup3.Header = "Selite";
+            listViewGroup3.Name = "Definition";
             this.lst_Invoicing.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup3});
             this.lst_Invoicing.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lst_Invoicing.Location = new System.Drawing.Point(3, 3);
             this.lst_Invoicing.MaximumSize = new System.Drawing.Size(913, 1000);
@@ -1344,7 +1353,7 @@
             // Definiton
             // 
             this.Definiton.Text = "Selite";
-            this.Definiton.Width = 411;
+            this.Definiton.Width = 343;
             // 
             // Start_date
             // 
@@ -1363,32 +1372,13 @@
             // Count
             // 
             this.Count.Text = "Määrä";
+            this.Count.Width = 79;
             // 
-            // lsv_Invoicing_Details_Summary
+            // SummaryTotal
             // 
-            this.lsv_Invoicing_Details_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsv_Invoicing_Details_Summary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lsv_Invoicing_Details_Summary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Total_label,
-            this.Total_2});
-            this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(52, 110);
-            this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
-            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(703, 54);
-            this.lsv_Invoicing_Details_Summary.TabIndex = 5;
-            this.lsv_Invoicing_Details_Summary.UseCompatibleStateImageBehavior = false;
-            this.lsv_Invoicing_Details_Summary.View = System.Windows.Forms.View.Details;
-            // 
-            // Total_label
-            // 
-            this.Total_label.Text = "";
-            this.Total_label.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Total_label.Width = 256;
-            // 
-            // Total_2
-            // 
-            this.Total_2.Text = "";
-            this.Total_2.Width = 113;
+            this.SummaryTotal.Text = "Yhteensä";
+            this.SummaryTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SummaryTotal.Width = 70;
             // 
             // lst_Invoicing_2nd_Row_Alv
             // 
@@ -1416,6 +1406,39 @@
             this.amount.Text = "";
             this.amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.amount.Width = 92;
+            // 
+            // lsv_Invoicing_Details_Summary
+            // 
+            this.lsv_Invoicing_Details_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Invoicing_Details_Summary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsv_Invoicing_Details_Summary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ReferenceNumber,
+            this.Total_label,
+            this.Total_2});
+            this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(225, 110);
+            this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
+            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(530, 54);
+            this.lsv_Invoicing_Details_Summary.TabIndex = 5;
+            this.lsv_Invoicing_Details_Summary.UseCompatibleStateImageBehavior = false;
+            this.lsv_Invoicing_Details_Summary.View = System.Windows.Forms.View.Details;
+            // 
+            // ReferenceNumber
+            // 
+            this.ReferenceNumber.Text = "Viitenumero";
+            this.ReferenceNumber.Width = 217;
+            // 
+            // Total_label
+            // 
+            this.Total_label.Text = "";
+            this.Total_label.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Total_label.Width = 221;
+            // 
+            // Total_2
+            // 
+            this.Total_2.Text = "";
+            this.Total_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Total_2.Width = 90;
             // 
             // tbl_Invoicing_Buttons
             // 
@@ -1616,5 +1639,7 @@
         public System.Windows.Forms.ListView lst_Invoicing_2nd_Row_Alv;
         private System.Windows.Forms.ColumnHeader info;
         private System.Windows.Forms.ColumnHeader amount;
+        private System.Windows.Forms.ColumnHeader ReferenceNumber;
+        private System.Windows.Forms.ColumnHeader SummaryTotal;
     }
 }
