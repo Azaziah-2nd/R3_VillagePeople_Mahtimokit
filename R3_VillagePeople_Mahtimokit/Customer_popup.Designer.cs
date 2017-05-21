@@ -37,7 +37,7 @@
             this.txt_Customer_City = new System.Windows.Forms.TextBox();
             this.txt_Customer_Adress = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Adress = new System.Windows.Forms.Label();
-            this.txt_Customere_Postal_Code = new System.Windows.Forms.TextBox();
+            this.txt_Customer_Postal_Code = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Postal_Code = new System.Windows.Forms.Label();
             this.txt_Customer_Surname = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Surname = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.txt_Customer_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Country.Location = new System.Drawing.Point(226, 387);
+            this.txt_Customer_Country.MaxLength = 20;
             this.txt_Customer_Country.Name = "txt_Customer_Country";
             this.txt_Customer_Country.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Country.TabIndex = 115;
@@ -74,6 +75,7 @@
             this.txt_Customer_Phone_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Phone_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Phone_Number.Location = new System.Drawing.Point(226, 225);
+            this.txt_Customer_Phone_Number.MaxLength = 15;
             this.txt_Customer_Phone_Number.Name = "txt_Customer_Phone_Number";
             this.txt_Customer_Phone_Number.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Phone_Number.TabIndex = 111;
@@ -93,6 +95,7 @@
             this.txt_Customer_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Email.Location = new System.Drawing.Point(226, 184);
+            this.txt_Customer_Email.MaxLength = 50;
             this.txt_Customer_Email.Name = "txt_Customer_Email";
             this.txt_Customer_Email.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Email.TabIndex = 110;
@@ -112,6 +115,7 @@
             this.txt_Customer_City.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_City.Location = new System.Drawing.Point(226, 344);
+            this.txt_Customer_City.MaxLength = 30;
             this.txt_Customer_City.Name = "txt_Customer_City";
             this.txt_Customer_City.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_City.TabIndex = 114;
@@ -121,6 +125,7 @@
             this.txt_Customer_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Adress.Location = new System.Drawing.Point(226, 267);
+            this.txt_Customer_Adress.MaxLength = 40;
             this.txt_Customer_Adress.Name = "txt_Customer_Adress";
             this.txt_Customer_Adress.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Adress.TabIndex = 112;
@@ -135,14 +140,15 @@
             this.lbl_Customer_Adress.TabIndex = 116;
             this.lbl_Customer_Adress.Text = "Katuosoite:";
             // 
-            // txt_Customere_Postal_Code
+            // txt_Customer_Postal_Code
             // 
-            this.txt_Customere_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Customere_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Customere_Postal_Code.Location = new System.Drawing.Point(226, 306);
-            this.txt_Customere_Postal_Code.Name = "txt_Customere_Postal_Code";
-            this.txt_Customere_Postal_Code.Size = new System.Drawing.Size(124, 26);
-            this.txt_Customere_Postal_Code.TabIndex = 113;
+            this.txt_Customer_Postal_Code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_Postal_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_Customer_Postal_Code.Location = new System.Drawing.Point(226, 306);
+            this.txt_Customer_Postal_Code.MaxLength = 5;
+            this.txt_Customer_Postal_Code.Name = "txt_Customer_Postal_Code";
+            this.txt_Customer_Postal_Code.Size = new System.Drawing.Size(124, 26);
+            this.txt_Customer_Postal_Code.TabIndex = 113;
             // 
             // lbl_Customer_Postal_Code
             // 
@@ -159,6 +165,7 @@
             this.txt_Customer_Surname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_Surname.Location = new System.Drawing.Point(226, 143);
+            this.txt_Customer_Surname.MaxLength = 40;
             this.txt_Customer_Surname.Name = "txt_Customer_Surname";
             this.txt_Customer_Surname.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_Surname.TabIndex = 109;
@@ -178,6 +185,7 @@
             this.txt_Customer_First_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Customer_First_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Customer_First_Name.Location = new System.Drawing.Point(226, 107);
+            this.txt_Customer_First_Name.MaxLength = 20;
             this.txt_Customer_First_Name.Name = "txt_Customer_First_Name";
             this.txt_Customer_First_Name.Size = new System.Drawing.Size(244, 26);
             this.txt_Customer_First_Name.TabIndex = 108;
@@ -199,7 +207,7 @@
             this.btn_Customer_Save.Location = new System.Drawing.Point(226, 447);
             this.btn_Customer_Save.Name = "btn_Customer_Save";
             this.btn_Customer_Save.Size = new System.Drawing.Size(97, 30);
-            this.btn_Customer_Save.TabIndex = 117;
+            this.btn_Customer_Save.TabIndex = 116;
             this.btn_Customer_Save.Text = "Tallenna";
             this.btn_Customer_Save.UseVisualStyleBackColor = true;
             this.btn_Customer_Save.Click += new System.EventHandler(this.btn_Customer_Save_Click);
@@ -211,7 +219,7 @@
             this.btn_Customer_Cancel.Location = new System.Drawing.Point(371, 447);
             this.btn_Customer_Cancel.Name = "btn_Customer_Cancel";
             this.btn_Customer_Cancel.Size = new System.Drawing.Size(99, 30);
-            this.btn_Customer_Cancel.TabIndex = 116;
+            this.btn_Customer_Cancel.TabIndex = 117;
             this.btn_Customer_Cancel.Text = "Peruuta";
             this.btn_Customer_Cancel.UseVisualStyleBackColor = true;
             this.btn_Customer_Cancel.Click += new System.EventHandler(this.btn_Customer_Cancel_Click);
@@ -260,7 +268,7 @@
             this.Controls.Add(this.txt_Customer_Adress);
             this.Controls.Add(this.lbl_Customer_Postal_Code);
             this.Controls.Add(this.lbl_Customer_Adress);
-            this.Controls.Add(this.txt_Customere_Postal_Code);
+            this.Controls.Add(this.txt_Customer_Postal_Code);
             this.Name = "frm_Customer_Popup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Henkilön tiedot";
@@ -284,7 +292,7 @@
         public System.Windows.Forms.TextBox txt_Customer_Email;
         public System.Windows.Forms.TextBox txt_Customer_Phone_Number;
         public System.Windows.Forms.TextBox txt_Customer_Adress;
-        public System.Windows.Forms.TextBox txt_Customere_Postal_Code;
+        public System.Windows.Forms.TextBox txt_Customer_Postal_Code;
         public System.Windows.Forms.TextBox txt_Customer_City;
         public System.Windows.Forms.TextBox txt_Customer_Country;
         private System.Windows.Forms.Label lbl_Customer_Details;

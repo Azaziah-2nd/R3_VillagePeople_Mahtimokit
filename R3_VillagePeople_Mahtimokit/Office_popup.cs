@@ -39,6 +39,43 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Office_City.Text;
             string email = txt_Office_Email.Text;
             string puhelinnro = txt_Office_Phone.Text;
+            // Tietojen tarkistus
+            Common_methods common_methods = new Common_methods();
+            if (string.IsNullOrWhiteSpace(nimi))
+            {
+                MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
+                return;
+            }
+            // Osoitteen tarkistus
+            if (common_methods.Is_adress_valid(lahiosoite) == false)
+            {
+                return;
+            }
+            if (common_methods.Is_zip_code_valid(postinro) == false)
+            {
+                return;
+            }
+            if (common_methods.Is_post_office_valid(postitoimipaikka) == false)
+            {
+                return;
+            }
+            // Sähköpostin ja puhelinnumeroiden tarkistus (voivat olla tyhjiä)
+            if (email.Length > 0)
+            {
+                // Sähköpostin oikeellisuus tarkistetaan Verify_email metodilla.
+                if (common_methods.Is_email_valid(email) == false)
+                {
+                    return;
+                }
+            }
+            // Puhelinnumeron tarkistus
+            if (puhelinnro.Length > 0)
+            {
+                if (common_methods.Is_phone_valid(puhelinnro) == false)
+                {
+                    return;
+                }
+            }
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
@@ -47,7 +84,7 @@ namespace R3_VillagePeople_Mahtimokit
                 "[email], [puhelinnro]) VALUES (@nimi, @lahiosoite, @postinro, @postitoimipaikka, @email, @puhelinnro)");
             SqlCommand database_query_update = new SqlCommand("UPDATE Toimipiste SET nimi = @nimi, lahiosoite=@lahiosoite, postinro=@postinro, " +
                 "postitoimipaikka=@postitoimipaikka, email=@email, puhelinnro=@puhelinnro WHERE toimipiste_id = @toimipiste_id");
-            string paivittaja = Properties.Settings.Default["user_name"].ToString();
+            string lisatieto_loki = "";
             // Jos muokataan asiakasta.
             if (this.Is_office_edited == true)
             {
@@ -64,15 +101,8 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Muokattiin toimipistettä " + nimi + "toimipisteeseen nro.: " + Office_id;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Muokattiin toimipistettä " + nimi + "toimipisteeseen nro.: " + Office_id;
+
             }
             // Jos luodaan uusi asiakas.
             else
@@ -89,16 +119,11 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Luotiin toimipiste: " + nimi;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Luotiin toimipiste: " + nimi;
             }
+
+            // Loki taulun päivitys
+            common_methods.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }

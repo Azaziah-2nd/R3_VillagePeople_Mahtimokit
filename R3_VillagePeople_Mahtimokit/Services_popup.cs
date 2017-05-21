@@ -55,6 +55,26 @@ namespace R3_VillagePeople_Mahtimokit
             string max_osallistujat = txt_Service_Max_Visitors.Text;
             string hinta = txt_Service_Price.Text;
             string alv = txt_Service_alv.Text;
+            // Tietojen tarkistus
+            Common_methods common_methods = new Common_methods();
+            if (string.IsNullOrWhiteSpace(nimi))
+            {
+                MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
+                return;
+            }
+            decimal decimal_parse;
+            bool is_hinta_valid = decimal.TryParse(hinta, out decimal_parse);
+            if (is_hinta_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + hinta + "\" ei ole kelvollinen numero!");
+                return;
+            }
+            bool is_alv_valid = decimal.TryParse(alv, out decimal_parse);
+            if (is_hinta_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + hinta + "\" ei ole kelvollinen numero!");
+                return;
+            }
             // Apumuuttujat
             string chosen_office = cbo_Service_Office_Select.Text.ToString();
             string toimipiste_id = "";
@@ -81,7 +101,7 @@ namespace R3_VillagePeople_Mahtimokit
 
             SqlCommand database_query_update = new SqlCommand("UPDATE Palvelu SET toimipiste_id=@toimipiste_id, nimi=@nimi, kuvaus=@kuvaus, " +
                 "max_osallistujat=@max_osallistujat, hinta=@hinta, alv=@alv WHERE palvelu_id = @palvelu_id");
-            string paivittaja = Properties.Settings.Default["user_name"].ToString();
+            string lisatieto_loki = "";
             // Jos muokataan palvelua.
             if (this.Is_service_edited == true)
             {
@@ -97,15 +117,7 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_update.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Muokattiin palvelua " + nimi + " toimipisteen nro.: " + toimipiste_id;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Muokattiin palvelua " + nimi + " toimipisteen nro.: " + toimipiste_id;
             }
             // Jos luodaan uusi palvelu.
             else
@@ -121,16 +133,10 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query_new.ExecuteNonQuery();
                 database_connection.Close();
                 // Loki taulun päivitys
-                string lisatieto_loki = "Luotiin palvelu " + nimi + " toimipisteen nro.: " + toimipiste_id;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = main_window.database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", paivittaja);
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
+                lisatieto_loki = "Luotiin palvelu " + nimi + " toimipisteen nro.: " + toimipiste_id;
             }
+            // Loki taulun päivitys
+            common_methods.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }

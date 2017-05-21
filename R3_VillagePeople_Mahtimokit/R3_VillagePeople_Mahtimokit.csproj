@@ -65,7 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Combo_box_item.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="Cottage_popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +98,11 @@
     <Compile Include="Main_window.Designer.cs">
       <DependentUpon>Main_window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services_popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,13 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Main_window.resx">
       <DependentUpon>Main_window.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -158,6 +159,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\remove-close.png" />
+    <None Include="Icons\next.png" />
+    <None Include="Icons\add.png" />
+    <None Include="Icons\edit.png" />
+    <None Include="Icons\trash.png" />
+    <None Include="Icons\search.png" />
     <Content Include="VP_Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -166,6 +173,7 @@
       <DependentUpon>VP_Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

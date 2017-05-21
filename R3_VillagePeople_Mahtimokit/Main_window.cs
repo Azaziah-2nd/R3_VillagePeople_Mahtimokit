@@ -56,6 +56,7 @@ namespace R3_VillagePeople_Mahtimokit
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
             // Oletushistorian aikaväli
+            dtp_Common_Settings_History_Start_Date.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
             dtp_Common_Settings_History_End_Date_Custom.Value = DateTime.Parse(Properties.Settings.Default["default_history_end_date"].ToString());
             // Tarkistetaan käytetäänkö nykyistä päivää vai määriteltyä päivää.
             if (Convert.ToBoolean(Properties.Settings.Default["default_is_history_end_date_today"]) == false)
@@ -142,10 +143,11 @@ namespace R3_VillagePeople_Mahtimokit
                 return;
             }
             string default_office = Properties.Settings.Default["default_office"].ToString();
+            // Jos asiakas poistaa toimipisteen, joka ei ole oletustoimipiste, ei seuraavaa toimipistettä valita ilman seuraavaa riviä.
+            cbo_Common_Settings_Default_Office.SelectedIndex = 0;
             // Jos toimipistettä ei ole valittu, valitaan oletustoimipisteeksi ensimmäinen listassa oleva toimipiste.
             if (default_office == "")
             {
-                cbo_Common_Settings_Default_Office.SelectedIndex = 0;
                 // Tallennetaan valittu arvo asetuksiin.
                 Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
                 Properties.Settings.Default.Save();
@@ -160,7 +162,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Get_service_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, toimipiste_id, nimi FROM Palvelu", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT palvelu_id, toimipiste_id, nimi, max_osallistujat FROM Palvelu", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -180,7 +182,7 @@ namespace R3_VillagePeople_Mahtimokit
         }
         private void Get_cottage_names_to_grid()
         {
-            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi FROM Majoitus", database_connection))
+            using (SqlDataAdapter database_query = new SqlDataAdapter("SELECT majoitus_id, toimipiste_id, nimi, max_henkilot FROM Majoitus", database_connection))
             {
                 DataSet data_set = new DataSet();
                 database_query.Fill(data_set);
@@ -283,10 +285,12 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 dgv_Order_Customers_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[0].Visible = false;
-                dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Services_All.Columns[1].Visible = false;
+                dgv_Order_Services_All.Columns[3].Visible = false;
+                dgv_Order_Cottages_All.Columns[0].Visible = false;
                 dgv_Order_Cottages_All.Columns[1].Visible = false;
-                Filter_order_cottages_by_office_and_text();
+                dgv_Order_Cottages_All.Columns[3].Visible = false;
+                Filter_order_cottages_by_dates_office_and_text();
                 Filter_order_services_by_office_and_text();
             }
             else if (tab_index == 1)
@@ -294,8 +298,10 @@ namespace R3_VillagePeople_Mahtimokit
                 dgv_Customers_All.Columns[0].Visible = false;
                 dgv_Services_All.Columns[0].Visible = false;
                 dgv_Services_All.Columns[1].Visible = false;
+                dgv_Services_All.Columns[3].Visible = false;
                 dgv_Cottages_All.Columns[0].Visible = false;
                 dgv_Cottages_All.Columns[1].Visible = false;
+                dgv_Cottages_All.Columns[3].Visible = false;
                 Filter_management_cottages_by_office_and_text();
                 Filter_management_services_by_office_and_text();
             }
@@ -309,14 +315,134 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
-        private void Filter_order_cottages_by_office_and_text()
+        private void Get_Cottage_Max_Quantity()
         {
+            foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
+            {
+                try
+                {
+                    //  Cell 3 = Max majoittujat.
+                    int cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                    lbl_Order_Cottage_Max_Persons.Text = "Max hlö: " + cottage_max_quantity;
+                }
+                catch (NullReferenceException)
+                {
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua.
+                }
+            }
+        }
+
+        private void dgv_Order_Services_All_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Get_Service_Max_Quantity();
+        }
+
+        private void Get_Service_Max_Quantity()
+        {
+            foreach (DataGridViewRow row in dgv_Order_Services_All.SelectedRows)
+            {
+                try
+                {
+                    //  Cell 3 = Max majoittujat.
+                    int service_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+                    lbl_Order_Services_Max_Quantity.Text = "Max kpl: " + service_max_quantity;
+                }
+                catch (NullReferenceException)
+                {
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua.
+                }
+            }
+        }
+
+
+        private void dgv_Order_Cottages_All_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Get_Cottage_Max_Quantity();
+        }
+
+        public string Orders_within_dates = "";
+        private void Get_history_orders_within_dates()
+        {
+            // Haetaan tietokannasta valitun aikavälin varaukset
+            SqlDataReader myReader = null;
+            List<string> orders_within_dates = new List<string>();
+            SqlCommand database_query_get_orders_in_dates = new SqlCommand("SELECT varaus_id FROM Varaus WHERE varattu_pvm  >= @start AND varattu_pvm <= @end");
+            database_query_get_orders_in_dates.Connection = database_connection;
+            database_connection.Open();
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@start", dtp_History_Orders_Filter_Date_Start.Value);
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@end", dtp_History_Orders_Filter_Date_End.Value);
+            database_query_get_orders_in_dates.ExecuteNonQuery();
+            myReader = database_query_get_orders_in_dates.ExecuteReader();
+            while (myReader.Read())
+            {
+                orders_within_dates.Add("'" + (myReader["varaus_id"].ToString() + "'"));
+            }
+            database_connection.Close();
+            Orders_within_dates = string.Join(",", orders_within_dates.ToArray());
+        }
+
+        public string Cottages_within_orders = "";
+        private void Get_order_cottages_within_dates()
+        {
+            // Haetaan tietokannasta valitun aikavälin varaukset
+            SqlDataReader myReader = null;
+            List<int> orders_within_dates = new List<int>();
+            List<string> cottages_within_orders = new List<string>();
+            SqlCommand database_query_get_orders_in_dates = new SqlCommand("SELECT varaus_id FROM Varaus WHERE varattu_loppupvm  >= @start AND varattu_loppupvm <= @end");
+            database_query_get_orders_in_dates.Connection = database_connection;
+            database_connection.Open();
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@start", dtp_Order_Start_Date.Value);
+            database_query_get_orders_in_dates.Parameters.AddWithValue("@end", dtp_Order_End_Date.Value);
+            database_query_get_orders_in_dates.ExecuteNonQuery();
+            myReader = database_query_get_orders_in_dates.ExecuteReader();
+            while (myReader.Read())
+            {
+                orders_within_dates.Add(Convert.ToInt32((myReader["varaus_id"])));
+            }
+            database_connection.Close();
+            foreach (int varaus_id in orders_within_dates)
+            {
+                SqlCommand database_query_get_cottage_ids = new SqlCommand("SELECT majoitus_id FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
+                database_query_get_cottage_ids.Connection = database_connection;
+                database_connection.Open();
+                database_query_get_cottage_ids.Parameters.AddWithValue("@varaus_id", varaus_id);
+                database_query_get_cottage_ids.ExecuteNonQuery();
+                myReader = database_query_get_cottage_ids.ExecuteReader();
+                while (myReader.Read())
+                {
+                    cottages_within_orders.Add("'" + (myReader["majoitus_id"].ToString() + "'"));
+
+                }
+                database_connection.Close();
+            }
+            Cottages_within_orders = string.Join(", ", cottages_within_orders.ToArray());
+        }
+
+
+        private void Filter_order_cottages_by_dates_office_and_text()
+        {
+            // Tarkistetaan mökkien saatavuus päivien perusteella.
+            Get_order_cottages_within_dates();
             // Filtteröidään mökit toimipisteen + hakukentän mukaan.
             BindingSource cottage_list = new BindingSource();
             cottage_list.DataSource = dgv_Order_Cottages_All.DataSource;
-            string filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
-                                  Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            string filer_cottages = "";
+            if (Cottages_within_orders != "")
+            {
+                // Jos mökkejä on yhdistetty varauksiin valitulla aikavälillä.
+                filer_cottages = string.Format("CONVERT(majoitus_id, 'System.String') NOT IN ({0}) AND CONVERT(toimipiste_id, 'System.String') LIKE '%{1}%' AND nimi LIKE '%{2}%'",
+                                      Cottages_within_orders, Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            }
+            else
+            {                
+                // Jos ei ole yhdistetty varauksiin valitulla aikavälillä.
+                filer_cottages = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND nimi LIKE '%{1}%'",
+                                      Reservation_toimipiste_id, txt_Order_Cottages_Search.Text);
+            }
             cottage_list.Filter = filer_cottages;
+            Get_Cottage_Max_Quantity();
+            Get_Service_Max_Quantity();
+
         }
 
         private void Filter_order_services_by_office_and_text()
@@ -353,6 +479,7 @@ namespace R3_VillagePeople_Mahtimokit
         string history_toimipiste_id = "";
         private void Filter_history_orders()
         {
+            Get_history_orders_within_dates();
             // Alustetaan tarvittavat apumuuttujat ja haetaan eri rajaus mekanismien arvot.
             string filer_order_history = "";
             string filter_by_date = dtp_History_Orders_Filter_Date_End.Value.ToString();
@@ -363,34 +490,46 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos sekä asiakas, että toimipiste filtteröinti ovat asetettuja.
             if (history_asiakas_id != "" && history_toimipiste_id != "")
             {
-                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(asiakas_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(toimipiste_id, 'System.String') LIKE '%{2}%'"
                     + " AND CONVERT(varaus_id, 'System.String') LIKE '%{3}%'",
-                    history_asiakas_id, filter_by_date, history_toimipiste_id, txt_History_Order_Search.Text);
+                     Orders_within_dates, history_asiakas_id, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan asiakasfiltteröinti on asetettu.
             else if (history_asiakas_id != "")
             {
-                filer_order_history = string.Format("CONVERT(asiakas_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
-                    history_asiakas_id, filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(asiakas_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                    Orders_within_dates, history_asiakas_id, txt_History_Order_Search.Text);
             }
             // Jos ainoastaan  toimipiste filtteröinti on asetettu.
             else if (history_toimipiste_id != "")
             {
-                filer_order_history = string.Format("CONVERT(toimipiste_id, 'System.String') LIKE '%{0}%' AND CONVERT"
-                    + "(varattu_pvm, 'System.String') <= '{1:dd-MM-yyyy:}' AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
-                     history_toimipiste_id, filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT(toimipiste_id, 'System.String') LIKE '%{1}%' "
+                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{2}%'",
+                     Orders_within_dates, history_toimipiste_id, txt_History_Order_Search.Text);
             }
             // Jos kumpikaan ei ole asetettu, tapahtuu filtteröinti pelkän hakukentän mukaan.
             else
             {
-                filer_order_history = string.Format("CONVERT(varattu_pvm, 'System.String') <= '{0:dd-MM-yyyy:}' "
-                    + "AND CONVERT(varaus_id, 'System.String') LIKE '%{1}%'",
-                        filter_by_date, txt_History_Order_Search.Text);
+                filer_order_history = string.Format("CONVERT(varaus_id, 'System.String') IN ({0}) AND CONVERT "
+                    + "(varaus_id, 'System.String') LIKE '%{1}%'",
+                        Orders_within_dates, txt_History_Order_Search.Text);
             }
             // Toteutetaan filtteröinti.
-            order_history_list.Filter = filer_order_history;
+            try
+            {
+                order_history_list.Filter = filer_order_history;
+            }
+            catch(SyntaxErrorException)
+            {
+                // Valitulla aikavälillä ei löytynyt yhtään varausta > string arvo "" > syntaxerror.
+                // Asetetaan varaus id:n fillteriksi = -1, näin voimme tyhjentää listan hakutuloksista.
+                string hide_all_rows = "-1";
+                filer_order_history = string.Format("CONVERT (varaus_id, 'System.String') LIKE '%{0}%'",
+                    hide_all_rows);
+                order_history_list.Filter = filer_order_history;
+            }
         }
 
         private void Get_start_date_to_order_summary()
@@ -465,17 +604,13 @@ namespace R3_VillagePeople_Mahtimokit
             frm.FormClosed += new FormClosedEventHandler(Get_office_names_to_combo_on_close_event);
         }
 
-
-        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
+        private void dtp_Common_Settings_History_Start_Date_ValueChanged(object sender, EventArgs e)
         {
-            // Tallennetaan valittu arvo asetuksiin.
-            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
+            // Poistetaan valitusta ajasta tarkka kellonaika ja tallennetaan arvo asetuksiin.
+            Properties.Settings.Default["default_history_start_date"] = DateTime.Parse(dtp_Common_Settings_History_Start_Date.Value.ToShortDateString());
             Properties.Settings.Default.Save();
-            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
-            string default_office = Properties.Settings.Default["default_office"].ToString();
-            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
-            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
-            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
+            // Muutetaan varaushistorian filtteröinnin aloituspäivämäärä vastaamaan uutta asetusta.
+            dtp_History_Orders_Filter_Date_Start.Value = DateTime.Parse(Properties.Settings.Default["default_history_start_date"].ToString());
         }
 
         private void dtp_Common_Settings_History_End_Date_Custom_ValueChanged(object sender, EventArgs e)
@@ -545,6 +680,13 @@ namespace R3_VillagePeople_Mahtimokit
                 {
                     asiakas_id = row.Cells[0].Value.ToString();
                 }
+                // Tarkistetaan, onko asiakas yhdistetty uuteen varaukseen.
+                if(asiakas_id == Reservation_asiakas_id)
+                {
+                    MessageBox.Show("Virhe! Olet luomassa asiakkaalle uutta varausta.\nJos haluat poista asiakkaan, muuta ensin varauksen asiakasta.");
+                    return;
+                }
+
                 // Yritetään poistaa asiakasta tietokannasta
                 try
                 {
@@ -558,15 +700,9 @@ namespace R3_VillagePeople_Mahtimokit
                     database_connection.Close();
                     Get_customer_names_to_grid();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin asiakas nro: " + asiakas_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
                 // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
                 catch (SqlException)
@@ -672,7 +808,7 @@ namespace R3_VillagePeople_Mahtimokit
                 frm.txt_Customer_Email.Text = (myReader["email"].ToString());
                 frm.txt_Customer_Phone_Number.Text = (myReader["puhelinnro"].ToString());
                 frm.txt_Customer_Adress.Text = (myReader["lahiosoite"].ToString());
-                frm.txt_Customere_Postal_Code.Text = (myReader["postinro"].ToString());
+                frm.txt_Customer_Postal_Code.Text = (myReader["postinro"].ToString());
                 frm.txt_Customer_City.Text = (myReader["postitoimipaikka"].ToString());
                 frm.txt_Customer_Country.Text = (myReader["asuinmaa"].ToString());
             }
@@ -810,7 +946,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void txt_Order_Cottages_Search_TextChanged(object sender, EventArgs e)
         {
-            Filter_order_cottages_by_office_and_text();
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         private void txt_Cottages_Search_TextChanged(object sender, EventArgs e)
@@ -820,18 +956,20 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dtp_Order_Start_Date_ValueChanged(object sender, EventArgs e)
         {
-            if(dtp_Order_Start_Date.Value < DateTime.Today)
+            if (dtp_Order_Start_Date.Value < DateTime.Today)
             {
                 dtp_Order_Start_Date.Value = DateTime.Today;
-                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kulunutta päivää.");
+                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi mennyttä päivää.");
             }
-            Get_start_date_to_order_summary();
             // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
-            if(dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
+            if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
             {
                 // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
                 dtp_Order_End_Date.Value = dtp_Order_Start_Date.Value.AddDays(1);
             }
+            Get_start_date_to_order_summary();
+            // Päivitetään myös mökkien näkyvyys, siten että vain vapaat mökit näytetään.
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         private void dtp_Order_End_Date_ValueChanged(object sender, EventArgs e)
@@ -846,8 +984,10 @@ namespace R3_VillagePeople_Mahtimokit
             if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
             {
                 // Jos ei, muutetaan alkamispäiväksi päättymispäivä  - 1 päivä.
-                dtp_Order_Start_Date.Value  = dtp_Order_End_Date.Value.AddDays(-1);
+                dtp_Order_Start_Date.Value = dtp_Order_End_Date.Value.AddDays(-1);
             }
+            // Päivitetään myös mökkien näkyvyys, siten että vain vapaat mökit näytetään.
+            Filter_order_cottages_by_dates_office_and_text();
         }
 
         string Reservation_toimipiste_id = "";
@@ -859,7 +999,7 @@ namespace R3_VillagePeople_Mahtimokit
             Reservation_toimipiste_id = (cbo_Order_Office_Select.SelectedItem as Combo_box_item).Value.ToString();
             lbl_Order_Summary_Office.Text = "Toimipiste: " + office_name;
             // Filtteröidään mökit ja palvelut toimipisteen + hakukentän mukaan.
-            Filter_order_cottages_by_office_and_text();
+            Filter_order_cottages_by_dates_office_and_text();
             Filter_order_services_by_office_and_text();
         }
 
@@ -898,6 +1038,8 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
         }
+
+
         // Muuttujasta Main_window juuressa, että menee laskutukseen
         string Reservation_Cottage_id = "";
         private void Btn_Order_Cottage_Add_Click(object sender, EventArgs e)
@@ -908,23 +1050,29 @@ namespace R3_VillagePeople_Mahtimokit
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);
             // Jos lkm on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
-            if(is_quantity_valid == false)
+            if (is_quantity_valid == false || selected_quantity_int < 1)
             {
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
             }
-
+            int cottage_max_quantity = 0;
             if (dgv_Order_Cottages_All.SelectedRows.Count > 0)
             {
 
                 foreach (DataGridViewRow row in dgv_Order_Cottages_All.SelectedRows)
                 {
+                    // Cell 0 = id, Cell 3 = Max majoittujat.
                     Reservation_Cottage_id = row.Cells[0].Value.ToString();
+                    cottage_max_quantity = Convert.ToInt32(row.Cells[3].Value.ToString());
                 }
-
                 int selectedrowindex = dgv_Order_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Cottages_All.Rows[selectedrowindex];
                 string selected_cottage_name = dgv_Order_Cottages_All.CurrentCell.Value.ToString();
+                if (selected_quantity_int > cottage_max_quantity)
+                {
+                    MessageBox.Show("Virhe! Mökissä \"" + selected_cottage_name + "\" voi majoittua enintään " + cottage_max_quantity + " henkilöä.");
+                    return;
+                }
                 string[] rowas = { selected_cottage_name + " [" + selected_quantity + "]" };
                 var cottage_details = new ListViewItem(rowas);
                 cottage_details.Tag = Reservation_Cottage_id;
@@ -951,23 +1099,31 @@ namespace R3_VillagePeople_Mahtimokit
         private void btn_Order_Service_add_Click(object sender, EventArgs e)
         {
             // Haetaan lukumäärä
-            string selected_quantity = txt_Order_Services_Quantity.Text.ToString(); ;
+            string selected_quantity = txt_Order_Services_Quantity.Text.ToString();
             // Tarkistetaan, onko lukumäärä kelvollinen.
             int selected_quantity_int;
             bool is_quantity_valid = int.TryParse(selected_quantity, out selected_quantity_int);
             // Jos lkm on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
-            if (is_quantity_valid == false)
+            if (is_quantity_valid == false || selected_quantity_int < 1)
             {
                 MessageBox.Show("Virhe! Syöte: \"" + selected_quantity + "\" ei ole kelvollinen numero!");
                 return;
             }
             string Reservation_service_id = "";
+            int service_max_quantity = 0;
             if (dgv_Services_All.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgv_Order_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Order_Services_All.Rows[selectedrowindex];
                 Reservation_service_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
+                service_max_quantity = Convert.ToInt32(selectedRow.Cells["max_osallistujat"].Value.ToString());
                 string selected_service = dgv_Order_Services_All.CurrentCell.Value.ToString();
+
+                if (selected_quantity_int > service_max_quantity)
+                {
+                    MessageBox.Show("Virhe! Palveluun \"" + selected_service + "\" voi osallistua enintään " + service_max_quantity + " henkilöä.");
+                    return;
+                }
                 string[] rowas = { selected_service + " [" + selected_quantity + "]" };
                 var listViewItem = new ListViewItem(rowas);
                 listViewItem.Tag = Reservation_service_id;
@@ -991,14 +1147,13 @@ namespace R3_VillagePeople_Mahtimokit
             }
         }
 
-        private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default["user_name"] = txt_Settings_User_Name.Text.ToString();
-            Properties.Settings.Default.Save();
-        }
-
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
+            if (lsv_Order_Summary_Cottages.Items.Count == 0 || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
+            {
+                MessageBox.Show("Virhe! Tilauksessa on oltava vähintään 1 mökki, asiakas ja toimipiste.");
+                return;
+            }
             // Alustetaan tietojen lukija
             SqlDataReader myReader = null;
             // Määritellään tietokantayhteys.
@@ -1155,7 +1310,7 @@ namespace R3_VillagePeople_Mahtimokit
             // Päivähinta * päivät = hinta
             double first = double.Parse(arr_cottage[3]);
             int second = int.Parse(arr_cottage[4]);
-            arr_cottage[5] =  (first * second).ToString(".00");
+            arr_cottage[5] = (first * second).ToString(".00");
             if (days == 1)
             {
                 arr_cottage[4] += " päivä";
@@ -1215,10 +1370,10 @@ namespace R3_VillagePeople_Mahtimokit
             Invoice.lst_Invoicing_2nd_Row_Alv.Items.Add(alv);
             ListViewItem total_row = new ListViewItem();
             total_row.SubItems[0].Text = varaus_id;
-            total_row.SubItems[0].Font =  new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
+            total_row.SubItems[0].Font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
             total_row.SubItems.Add("Lasku yhteensä euroa");
             total_row.SubItems.Add(total.ToString(".00"));
-            Invoice.lst_Invoicing_Details_Summary.Items.Add(total_row);
+            Invoice.lsv_Invoicing_Details_Summary.Items.Add(total_row);
             Invoice.reference_number = varaus_id;
             Invoice.total = total.ToString(".00");
             Invoice.Show();
@@ -1251,9 +1406,21 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
                 string palvelu_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
-                // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
+
+                // Tarkistetaan, onko palvelu yhdistetty uuteen varaukseen.
+                List<int> services_in_new_order = new List<int>();
+                foreach (ListViewItem service_rows in lsv_Order_Summary_Services.Items)
+                {
+                    // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
+                    services_in_new_order.Add(int.Parse(service_rows.Tag.ToString()));
+                }
+                if (services_in_new_order.Contains(int.Parse(palvelu_id)))
+                {
+                    MessageBox.Show("Virhe! Tämä palvelu on lisätty uuteen varaukseen.\nJos haluat poistaa sen, poista se ensin varauksesta.");
+                    return;
+                }
+                // Tarkistetaan, onko valittu palvelu liitetty mihinkään varaukseen
                 SqlDataReader myReader = null;
-                // Luodaan lista asiakkaan varausnumeroita varten.
                 List<int> service_orders = new List<int>();
                 SqlCommand database_query_get_service_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_palvelut WHERE palvelu_id = @palvelu_id");
                 database_query_get_service_reservations.Connection = database_connection;
@@ -1290,15 +1457,9 @@ namespace R3_VillagePeople_Mahtimokit
                     // Filtteröidän myös varaus välilehden lista
                     Filter_management_services_by_office_and_text();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin palvelu nro: " + palvelu_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1311,9 +1472,21 @@ namespace R3_VillagePeople_Mahtimokit
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
                 string majoitus_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
+                // Tarkistetaan, onko mökki yhdistetty uuteen varaukseen.
+                List<int> cottages_in_new_order = new List<int>();
+                foreach (ListViewItem cottage_rows in lsv_Order_Summary_Cottages.Items)
+                {
+                    // Haetaan palvelun_id listan riviin liitetystä "Tag" arvosta.
+                    cottages_in_new_order.Add(int.Parse(cottage_rows.Tag.ToString()));
+                }
+                if(cottages_in_new_order.Contains(int.Parse(majoitus_id)))
+                {
+                    MessageBox.Show("Virhe! Tämä mökki on lisätty uuteen varaukseen.\nJos haluat poistaa sen, poista se ensin varauksesta.");
+                    return;
+                }
                 // Tarkistetaan, onko valittu mökki liitetty mihinkään varaukseen
                 SqlDataReader myReader = null;
-                List<int> service_cottages = new List<int>();
+                List<int> orders_cottages = new List<int>();
                 SqlCommand database_query_get_cottage_reservations = new SqlCommand("SELECT varaus_id FROM Varauksen_majoitus WHERE majoitus_id = @majoitus_id");
                 database_query_get_cottage_reservations.Connection = database_connection;
                 database_connection.Open();
@@ -1323,14 +1496,14 @@ namespace R3_VillagePeople_Mahtimokit
                 myReader = database_query_get_cottage_reservations.ExecuteReader();
                 while (myReader.Read())
                 {
-                    service_cottages.Add(Convert.ToInt32((myReader["varaus_id"])));
+                    orders_cottages.Add(Convert.ToInt32((myReader["varaus_id"])));
                 }
                 // Suljetaan yhteys ja tulostetaan virheilmoitus.
                 database_connection.Close();
                 // Jos  palvelu löytyy jostakin varauksesta, tulostetaan palveluun yhdistetyt varaukset virheilmoituksessa.
-                if (service_cottages.Count > 0)
+                if (orders_cottages.Count > 0)
                 {
-                    var all_service_cottages = string.Join(",  ", service_cottages);
+                    var all_service_cottages = string.Join(",  ", orders_cottages);
                     MessageBox.Show("Virhe! Mökki on yhdistetty seuraaviin varausnumeroihin:\n\n" +
                         all_service_cottages + "\n\nJos haluat poistaa tämän mökin, on sinun ensin " +
                         "poistettava\nkaikki tämän mökin sisältävät varaukset varaushistoriasta.");
@@ -1349,15 +1522,9 @@ namespace R3_VillagePeople_Mahtimokit
                     Get_cottage_names_to_grid();
                     Filter_management_cottages_by_office_and_text();
                     // Loki taulun päivitys
+                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin mökki nro: " + majoitus_id;
-                    SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                        "VALUES(@paivittaja, @lisatieto_loki)");
-                    database_query_loki.Connection = database_connection;
-                    database_connection.Open();
-                    database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                    database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                    database_query_loki.ExecuteNonQuery();
-                    database_connection.Close();
+                    common_methods.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1590,12 +1757,10 @@ namespace R3_VillagePeople_Mahtimokit
             lbl_History_Selected_Order_Customer.Text = "Asiakas:";
             txt_History_Order_Additional_Details.Clear();
             Get_order_history_to_grid();
-
-        }
-
-        private void btn_log_update_grid_Click(object sender, EventArgs e)
-        {
-            Get_log_events_to_grid();
+            // Lokin päivitys
+            Common_methods common_methods = new Common_methods();
+            string lisatieto_loki = "Poistettiin varaus nro.: " + varaus_id_to_delete;
+            common_methods.Update_log(lisatieto_loki);
         }
 
         private void btn_Office_Delete_Click(object sender, EventArgs e)
@@ -1607,7 +1772,8 @@ namespace R3_VillagePeople_Mahtimokit
                 MessageBox.Show("Virhe! Järjestelmässä ei ole yhtään toimipistettä, lisää ensin toimipiste.");
                 return;
             }
-            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + cbo_Office_Select.Text.ToString() + 
+            string office_name = cbo_Office_Select.Text.ToString();
+            DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + office_name +
                 "\"?", "Toimipisteen poistaminen", MessageBoxButtons.YesNo);
             if (Confirm_delete == DialogResult.No)
             {
@@ -1621,7 +1787,6 @@ namespace R3_VillagePeople_Mahtimokit
                     "Jos haluat poistaa toimipisteen, on sinun ensin poistettava sen mökit ja palvelut.");
                 return;
             }
-            string default_office = Properties.Settings.Default["default_office"].ToString();
             // Yritetään poistaa toimipistettä tietokannasta
             try
             {
@@ -1631,18 +1796,25 @@ namespace R3_VillagePeople_Mahtimokit
                 database_query.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query.ExecuteNonQuery();
                 database_connection.Close();
+                // Tarkistetaan, oliko toimipiste oletustoimipiste ja muutetaan asetus jos oli.
+                string default_office = Properties.Settings.Default["default_office"].ToString();
+                MessageBox.Show(default_office + "\n office:name: " + office_name);
+                if (default_office == office_name)
+                {
+                    // Tallennetaan tyhjä arvo asetuksiin, toimipisteiden haku alustaa jonkin arvon mikäli järjestelmässä on toimipisteitä.
+                    Properties.Settings.Default["default_office"] = "";
+                    Properties.Settings.Default.Save();
+                }
+                // Tarkistetaan, oliko toimipiste liitetty uuteen varaukseen.
+                if (lbl_Order_Summary_Office.Text.Contains(office_name))
+                {
+                    lbl_Order_Summary_Office.Text = "Toimipiste:";
+                }
                 Get_office_names_to_combo();
                 // Loki taulun päivitys
+                Common_methods common_methods = new Common_methods();
                 string lisatieto_loki = "Poistettiin toimipiste nro: " + toimipiste_id;
-                SqlCommand database_query_loki = new SqlCommand("INSERT INTO [Loki] ([paivittaja], [lisatieto]) " +
-                    "VALUES(@paivittaja, @lisatieto_loki)");
-                database_query_loki.Connection = database_connection;
-                database_connection.Open();
-                database_query_loki.Parameters.AddWithValue("@paivittaja", Properties.Settings.Default["user_name"].ToString());
-                database_query_loki.Parameters.AddWithValue("@lisatieto_loki", lisatieto_loki);
-                database_query_loki.ExecuteNonQuery();
-                database_connection.Close();
-                Get_office_names_to_combo();
+                common_methods.Update_log(lisatieto_loki);
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)
@@ -1674,6 +1846,25 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Options_Save_Invoicing_Click(object sender, EventArgs e)
         {
+            Common_methods common_methods = new Common_methods();
+            string penalty_intrest = txt_Options_Penalty_Interest.Text.ToString();
+            string remark_time = txt_Options_Remark_Time.Text.ToString();
+            // Tietojen tarkistus
+            decimal parsed_decimal;
+            bool is_penalty_valid = decimal.TryParse(penalty_intrest, out parsed_decimal);
+            // Jos syöte on virheellinen, tulostetaan virheilmoitus ja keskeytetään metodin suoritus(return).
+            if (is_penalty_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + penalty_intrest + "\" ei ole kelvollinen numero!");
+                return;
+            }
+            int parsed_int;
+            bool is_remark_valid = int.TryParse(remark_time, out parsed_int);
+            if (is_remark_valid == false)
+            {
+                MessageBox.Show("Virhe! Syöte: \"" + remark_time + "\" ei ole kelvollinen numero!");
+                return;
+            }
             Properties.Settings.Default["default_penalty_interest"] = txt_Options_Penalty_Interest.Text.ToString() + "%";
             Properties.Settings.Default["default_remark_time"] = txt_Options_Remark_Time.Text.ToString() + " pv";
             Properties.Settings.Default["default_infobox_1"] = txt_Options_Infobox_1.Text.ToString();
@@ -1695,6 +1886,60 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
             txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
             txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
+        }
+
+        private void txt_Settings_User_Name_TextChanged(object sender, EventArgs e)
+        {
+            // Haetaan käyttäjänimi asetuksiin.
+            string user_name = txt_Settings_User_Name.Text.ToString();
+            if(string.IsNullOrWhiteSpace(user_name))
+            {
+                // Jos nimi on tyhjä asetetaan nimeksi "Määrittelemätön".
+                user_name = "Määrittelemätön";
+            }
+            Properties.Settings.Default["user_name"] = user_name;
+            Properties.Settings.Default.Save();
+        }
+
+        private void btn_log_update_grid_Click(object sender, EventArgs e)
+        {
+            Get_log_events_to_grid();
+        }
+
+        private void dtp_History_Orders_Filter_Date_End_ValueChanged_1(object sender, EventArgs e)
+        {
+            // Tarkistetaan onko  päättymispäivä alkamispäivän jälkeen.
+            if (dtp_History_Orders_Filter_Date_Start.Value > dtp_History_Orders_Filter_Date_End.Value)
+            {
+                // Jos ei, muutetaan alkamispäiväksi päättymispäivä  - 1 päivä.
+                dtp_History_Orders_Filter_Date_Start.Value = dtp_History_Orders_Filter_Date_End.Value.AddDays(-1);
+            }
+            // Lisätään päättymisaikaan 23:59:59, näin samana päivänä luodut varaukser mäytetään.
+            dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_End.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            Filter_history_orders();
+        }
+
+        private void dtp_History_Orders_Filter_Date_Start_ValueChanged(object sender, EventArgs e)
+        {
+            // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
+            if (dtp_History_Orders_Filter_Date_Start.Value > dtp_History_Orders_Filter_Date_End.Value)
+            {
+                // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
+                dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_Start.Value.AddDays(1);
+            }
+            Filter_history_orders();
+        }
+
+        private void cbo_Common_Settings_Default_Office_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Tallennetaan valittu arvo asetuksiin.
+            Properties.Settings.Default["default_office"] = cbo_Common_Settings_Default_Office.Text.ToString();
+            Properties.Settings.Default.Save();
+            // Asetetaan toimipistevalintakenttien arvot vastaamaan oletustoimipistettä.
+            string default_office = Properties.Settings.Default["default_office"].ToString();
+            cbo_Order_Office_Select.SelectedIndex = cbo_Order_Office_Select.FindStringExact(default_office);
+            cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
+            cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
         }
     }
 }

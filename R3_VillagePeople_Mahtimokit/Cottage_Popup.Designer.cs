@@ -55,6 +55,7 @@
             this.txt_Cottage_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Size.Location = new System.Drawing.Point(182, 266);
+            this.txt_Cottage_Size.MaxLength = 4;
             this.txt_Cottage_Size.Name = "txt_Cottage_Size";
             this.txt_Cottage_Size.Size = new System.Drawing.Size(95, 26);
             this.txt_Cottage_Size.TabIndex = 118;
@@ -132,6 +133,7 @@
             this.txt_Cottage_Max_Visitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Max_Visitors.Location = new System.Drawing.Point(182, 224);
+            this.txt_Cottage_Max_Visitors.MaxLength = 4;
             this.txt_Cottage_Max_Visitors.Name = "txt_Cottage_Max_Visitors";
             this.txt_Cottage_Max_Visitors.Size = new System.Drawing.Size(95, 26);
             this.txt_Cottage_Max_Visitors.TabIndex = 117;
@@ -151,6 +153,7 @@
             this.txt_Cottage_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Price.Location = new System.Drawing.Point(182, 188);
+            this.txt_Cottage_Price.MaxLength = 11;
             this.txt_Cottage_Price.Name = "txt_Cottage_Price";
             this.txt_Cottage_Price.Size = new System.Drawing.Size(95, 26);
             this.txt_Cottage_Price.TabIndex = 115;
@@ -170,6 +173,7 @@
             this.txt_Cottage_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Description.Location = new System.Drawing.Point(184, 352);
+            this.txt_Cottage_Description.MaxLength = 254;
             this.txt_Cottage_Description.Multiline = true;
             this.txt_Cottage_Description.Name = "txt_Cottage_Description";
             this.txt_Cottage_Description.Size = new System.Drawing.Size(283, 79);
@@ -190,6 +194,7 @@
             this.txt_Cottage_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Cottage_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Cottage_Name.Location = new System.Drawing.Point(182, 142);
+            this.txt_Cottage_Name.MaxLength = 60;
             this.txt_Cottage_Name.Name = "txt_Cottage_Name";
             this.txt_Cottage_Name.Size = new System.Drawing.Size(285, 26);
             this.txt_Cottage_Name.TabIndex = 113;

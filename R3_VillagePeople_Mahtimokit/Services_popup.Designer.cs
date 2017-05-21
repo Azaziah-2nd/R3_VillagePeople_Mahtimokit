@@ -97,6 +97,7 @@
             this.txt_Service_alv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_alv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_alv.Location = new System.Drawing.Point(199, 295);
+            this.txt_Service_alv.MaxLength = 2;
             this.txt_Service_alv.Name = "txt_Service_alv";
             this.txt_Service_alv.Size = new System.Drawing.Size(100, 26);
             this.txt_Service_alv.TabIndex = 97;
@@ -116,6 +117,7 @@
             this.txt_Service_Max_Visitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_Max_Visitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_Max_Visitors.Location = new System.Drawing.Point(199, 249);
+            this.txt_Service_Max_Visitors.MaxLength = 4;
             this.txt_Service_Max_Visitors.Name = "txt_Service_Max_Visitors";
             this.txt_Service_Max_Visitors.Size = new System.Drawing.Size(100, 26);
             this.txt_Service_Max_Visitors.TabIndex = 96;
@@ -135,6 +137,7 @@
             this.txt_Service_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_Price.Location = new System.Drawing.Point(199, 202);
+            this.txt_Service_Price.MaxLength = 11;
             this.txt_Service_Price.Name = "txt_Service_Price";
             this.txt_Service_Price.Size = new System.Drawing.Size(100, 26);
             this.txt_Service_Price.TabIndex = 95;
@@ -154,6 +157,7 @@
             this.txt_Service_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_Description.Location = new System.Drawing.Point(199, 349);
+            this.txt_Service_Description.MaxLength = 254;
             this.txt_Service_Description.Multiline = true;
             this.txt_Service_Description.Name = "txt_Service_Description";
             this.txt_Service_Description.Size = new System.Drawing.Size(272, 87);
@@ -174,6 +178,7 @@
             this.txt_Service_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Service_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Service_Name.Location = new System.Drawing.Point(199, 154);
+            this.txt_Service_Name.MaxLength = 40;
             this.txt_Service_Name.Name = "txt_Service_Name";
             this.txt_Service_Name.Size = new System.Drawing.Size(272, 26);
             this.txt_Service_Name.TabIndex = 94;
