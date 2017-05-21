@@ -959,7 +959,7 @@ namespace R3_VillagePeople_Mahtimokit
             if (dtp_Order_Start_Date.Value < DateTime.Today)
             {
                 dtp_Order_Start_Date.Value = DateTime.Today;
-                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kulunutta päivää.");
+                MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi mennyttä päivää.");
             }
             // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
             if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
