@@ -32,8 +32,6 @@ namespace R3_VillagePeople_Mahtimokit
         public string reference_number;
         public string total;
 
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
-        private PrintDocument printDocument1 = new PrintDocument();
         public frm_Invoicing()
         {
             InitializeComponent();
@@ -83,40 +81,29 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Invoice_Print_Click(object sender, EventArgs e)
         {
-            PrintDocument doc = new PrintDocument();
-            doc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 2480, 3508);
-            doc.PrintPage += this.Doc_PrintPage;
+            PrintDocument to_print = new PrintDocument();
+            to_print.PrintPage += this.Print_document;
             PrintDialog dlgSettings = new PrintDialog();
-            dlgSettings.Document = doc;
+            dlgSettings.Document = to_print;
             if (dlgSettings.ShowDialog() == DialogResult.OK)
             {
                 //Disable the printing document pop-up dialog shown during printing.
                 PrintController printController = new StandardPrintController();
-                doc.PrintController = printController;
-
-                //For testing only: Hardcoded set paper size to particular paper.
-                //pd.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
-                //pd.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
-
-                doc.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
-                doc.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
-
-                doc.Print();
+                to_print.PrintController = printController;
+                // Määritellään tulosteen marginaaleiksi "0".
+                to_print.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+                to_print.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+                to_print.Print();
             }
 
         }
 
-        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
+        private void Print_document(object sender, PrintPageEventArgs e)
         {
             float x = e.MarginBounds.Left;
             float y = e.MarginBounds.Top;
-
-
             Bitmap bmp = new Bitmap(this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height);
             this.tbl_Invoice_Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height));
-
-
-
             e.Graphics.DrawImage((Image)bmp, x, y);
         }
     }
