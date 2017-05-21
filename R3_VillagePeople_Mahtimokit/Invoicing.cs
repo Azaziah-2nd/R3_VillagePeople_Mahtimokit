@@ -81,13 +81,14 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void btn_Invoice_Print_Click(object sender, EventArgs e)
         {
+            // Tulostaa laskun
+            // Tulostuksen koko: 794 x 1123	 = A4 = 96 DPI. (Koko ulkoasusta.)
             PrintDocument to_print = new PrintDocument();
             to_print.PrintPage += this.Print_document;
             PrintDialog dlgSettings = new PrintDialog();
             dlgSettings.Document = to_print;
             if (dlgSettings.ShowDialog() == DialogResult.OK)
             {
-                //Disable the printing document pop-up dialog shown during printing.
                 PrintController printController = new StandardPrintController();
                 to_print.PrintController = printController;
                 // Määritellään tulosteen marginaaleiksi "0".
@@ -100,6 +101,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void Print_document(object sender, PrintPageEventArgs e)
         {
+            // Luodaan laskusta tulostettava sivu.
             float x = e.MarginBounds.Left;
             float y = e.MarginBounds.Top;
             Bitmap bmp = new Bitmap(this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height);
