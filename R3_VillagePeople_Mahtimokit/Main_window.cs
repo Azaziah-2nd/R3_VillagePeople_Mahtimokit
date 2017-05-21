@@ -1373,7 +1373,7 @@ namespace R3_VillagePeople_Mahtimokit
             total_row.SubItems[0].Font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Regular);
             total_row.SubItems.Add("Lasku yhteensä euroa");
             total_row.SubItems.Add(total.ToString(".00"));
-            Invoice.lst_Invoicing_Details_Summary.Items.Add(total_row);
+            Invoice.lsv_Invoicing_Details_Summary.Items.Add(total_row);
             Invoice.reference_number = varaus_id;
             Invoice.total = total.ToString(".00");
             Invoice.Show();

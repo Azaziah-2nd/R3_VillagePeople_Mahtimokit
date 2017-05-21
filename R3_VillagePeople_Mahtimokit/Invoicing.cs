@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,9 +31,14 @@ namespace R3_VillagePeople_Mahtimokit
         public string receiver_bic;
         public string reference_number;
         public string total;
+
+        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
+        private PrintDocument printDocument1 = new PrintDocument();
         public frm_Invoicing()
         {
             InitializeComponent();
+
+
         }
         private void Invoicing_Load(object sender, EventArgs e)
         {
@@ -68,6 +74,50 @@ namespace R3_VillagePeople_Mahtimokit
             //tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
             lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 13);
             
+        }
+
+        private void btn_Invoice_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Invoice_Print_Click(object sender, EventArgs e)
+        {
+            PrintDocument doc = new PrintDocument();
+            doc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 2480, 3508);
+            doc.PrintPage += this.Doc_PrintPage;
+            PrintDialog dlgSettings = new PrintDialog();
+            dlgSettings.Document = doc;
+            if (dlgSettings.ShowDialog() == DialogResult.OK)
+            {
+                //Disable the printing document pop-up dialog shown during printing.
+                PrintController printController = new StandardPrintController();
+                doc.PrintController = printController;
+
+                //For testing only: Hardcoded set paper size to particular paper.
+                //pd.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+                //pd.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+
+                doc.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+                doc.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+
+                doc.Print();
+            }
+
+        }
+
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            float x = e.MarginBounds.Left;
+            float y = e.MarginBounds.Top;
+
+
+            Bitmap bmp = new Bitmap(this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height);
+            this.tbl_Invoice_Invoice.DrawToBitmap(bmp, new Rectangle(0, 0, this.tbl_Invoice_Invoice.Width, this.tbl_Invoice_Invoice.Height));
+
+
+
+            e.Graphics.DrawImage((Image)bmp, x, y);
         }
     }
 }
