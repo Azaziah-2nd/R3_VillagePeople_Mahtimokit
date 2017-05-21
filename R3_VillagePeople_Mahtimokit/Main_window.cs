@@ -19,7 +19,11 @@ namespace R3_VillagePeople_Mahtimokit
         public frm_Main_Window()
         {
             InitializeComponent();
+
+
         }
+
+        public Db_queries database = new Db_queries();
 
         // Määritellään tietokantayhteyden muodostin.
         public SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
@@ -700,9 +704,8 @@ namespace R3_VillagePeople_Mahtimokit
                     database_connection.Close();
                     Get_customer_names_to_grid();
                     // Loki taulun päivitys
-                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin asiakas nro: " + asiakas_id;
-                    common_methods.Update_log(lisatieto_loki);
+                    database.Update_log(lisatieto_loki);
                 }
                 // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
                 catch (SqlException)
@@ -1457,9 +1460,8 @@ namespace R3_VillagePeople_Mahtimokit
                     // Filtteröidän myös varaus välilehden lista
                     Filter_management_services_by_office_and_text();
                     // Loki taulun päivitys
-                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin palvelu nro: " + palvelu_id;
-                    common_methods.Update_log(lisatieto_loki);
+                    database.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1522,9 +1524,8 @@ namespace R3_VillagePeople_Mahtimokit
                     Get_cottage_names_to_grid();
                     Filter_management_cottages_by_office_and_text();
                     // Loki taulun päivitys
-                    Common_methods common_methods = new Common_methods();
                     string lisatieto_loki = "Poistettiin mökki nro: " + majoitus_id;
-                    common_methods.Update_log(lisatieto_loki);
+                    database.Update_log(lisatieto_loki);
                 }
             }
         }
@@ -1758,9 +1759,8 @@ namespace R3_VillagePeople_Mahtimokit
             txt_History_Order_Additional_Details.Clear();
             Get_order_history_to_grid();
             // Lokin päivitys
-            Common_methods common_methods = new Common_methods();
             string lisatieto_loki = "Poistettiin varaus nro.: " + varaus_id_to_delete;
-            common_methods.Update_log(lisatieto_loki);
+            database.Update_log(lisatieto_loki);
         }
 
         private void btn_Office_Delete_Click(object sender, EventArgs e)
@@ -1812,9 +1812,8 @@ namespace R3_VillagePeople_Mahtimokit
                 }
                 Get_office_names_to_combo();
                 // Loki taulun päivitys
-                Common_methods common_methods = new Common_methods();
                 string lisatieto_loki = "Poistettiin toimipiste nro: " + toimipiste_id;
-                common_methods.Update_log(lisatieto_loki);
+                database.Update_log(lisatieto_loki);
             }
             // Yritys epäonnistuu tietokannan viite-eheyden rikkoutumiseen.
             catch (SqlException)

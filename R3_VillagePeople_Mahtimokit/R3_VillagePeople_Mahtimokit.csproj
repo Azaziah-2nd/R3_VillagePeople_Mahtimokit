@@ -78,6 +78,9 @@
     <Compile Include="Customer_popup.Designer.cs">
       <DependentUpon>Customer_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Db_queries.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Invoicing.cs">
       <SubType>Form</SubType>
     </Compile>
