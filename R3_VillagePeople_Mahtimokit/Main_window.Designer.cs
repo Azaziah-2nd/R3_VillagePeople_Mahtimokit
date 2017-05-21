@@ -471,7 +471,7 @@
             this.dtp_Order_Start_Date.Location = new System.Drawing.Point(3, 20);
             this.dtp_Order_Start_Date.Name = "dtp_Order_Start_Date";
             this.dtp_Order_Start_Date.Size = new System.Drawing.Size(91, 26);
-            this.dtp_Order_Start_Date.TabIndex = 2;
+            this.dtp_Order_Start_Date.TabIndex = 1;
             this.dtp_Order_Start_Date.Value = new System.DateTime(2017, 5, 12, 0, 0, 0, 0);
             this.dtp_Order_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Order_Start_Date_ValueChanged);
             // 
@@ -543,6 +543,7 @@
             this.btn_Order_Customers_Search.Name = "btn_Order_Customers_Search";
             this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Customers_Search.TabIndex = 102;
+            this.btn_Order_Customers_Search.TabStop = false;
             this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Order_Customers_Search
@@ -553,7 +554,7 @@
             this.txt_Order_Customers_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Customers_Search.Name = "txt_Order_Customers_Search";
             this.txt_Order_Customers_Search.Size = new System.Drawing.Size(149, 26);
-            this.txt_Order_Customers_Search.TabIndex = 101;
+            this.txt_Order_Customers_Search.TabIndex = 7;
             this.txt_Order_Customers_Search.TextChanged += new System.EventHandler(this.txt_Order_Customers_Search_TextChanged);
             // 
             // lbl_Order_Customers
@@ -575,7 +576,7 @@
             this.btn_Order_Customers_Add.Location = new System.Drawing.Point(3, 447);
             this.btn_Order_Customers_Add.Name = "btn_Order_Customers_Add";
             this.btn_Order_Customers_Add.Size = new System.Drawing.Size(195, 35);
-            this.btn_Order_Customers_Add.TabIndex = 105;
+            this.btn_Order_Customers_Add.TabIndex = 9;
             this.btn_Order_Customers_Add.Text = "Lisää varaukseen";
             this.btn_Order_Customers_Add.UseVisualStyleBackColor = true;
             this.btn_Order_Customers_Add.Click += new System.EventHandler(this.btn_Order_Customers_Add_Click);
@@ -601,7 +602,8 @@
             this.dgv_Order_Customers_All.RowHeadersVisible = false;
             this.dgv_Order_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Customers_All.Size = new System.Drawing.Size(195, 372);
-            this.dgv_Order_Customers_All.TabIndex = 106;
+            this.dgv_Order_Customers_All.StandardTab = true;
+            this.dgv_Order_Customers_All.TabIndex = 5;
             // 
             // tbl_Order_2nd_Col_Offices_Cottage
             // 
@@ -670,7 +672,8 @@
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;
             this.dgv_Order_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Cottages_All.Size = new System.Drawing.Size(231, 343);
-            this.dgv_Order_Cottages_All.TabIndex = 107;
+            this.dgv_Order_Cottages_All.StandardTab = true;
+            this.dgv_Order_Cottages_All.TabIndex = 13;
             this.dgv_Order_Cottages_All.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Order_Cottages_All_CellEnter);
             // 
             // Btn_Order_Cottage_Add
@@ -680,7 +683,7 @@
             this.Btn_Order_Cottage_Add.Location = new System.Drawing.Point(7, 554);
             this.Btn_Order_Cottage_Add.Name = "Btn_Order_Cottage_Add";
             this.Btn_Order_Cottage_Add.Size = new System.Drawing.Size(231, 38);
-            this.Btn_Order_Cottage_Add.TabIndex = 73;
+            this.Btn_Order_Cottage_Add.TabIndex = 19;
             this.Btn_Order_Cottage_Add.Text = "Lisää mökki varaukseen";
             this.Btn_Order_Cottage_Add.UseVisualStyleBackColor = true;
             this.Btn_Order_Cottage_Add.Click += new System.EventHandler(this.Btn_Order_Cottage_Add_Click);
@@ -711,6 +714,7 @@
             this.btn_Order_Cottages_Search.Name = "btn_Order_Cottages_Search";
             this.btn_Order_Cottages_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Cottages_Search.TabIndex = 102;
+            this.btn_Order_Cottages_Search.TabStop = false;
             this.btn_Order_Cottages_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Order_Cottages_Search
@@ -721,7 +725,7 @@
             this.txt_Order_Cottages_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Cottages_Search.Name = "txt_Order_Cottages_Search";
             this.txt_Order_Cottages_Search.Size = new System.Drawing.Size(185, 26);
-            this.txt_Order_Cottages_Search.TabIndex = 101;
+            this.txt_Order_Cottages_Search.TabIndex = 17;
             this.txt_Order_Cottages_Search.TextChanged += new System.EventHandler(this.txt_Order_Cottages_Search_TextChanged);
             // 
             // lbl_Order_Cottage
@@ -754,7 +758,7 @@
             this.cbo_Order_Office_Select.Location = new System.Drawing.Point(7, 55);
             this.cbo_Order_Office_Select.Name = "cbo_Order_Office_Select";
             this.cbo_Order_Office_Select.Size = new System.Drawing.Size(231, 28);
-            this.cbo_Order_Office_Select.TabIndex = 110;
+            this.cbo_Order_Office_Select.TabIndex = 11;
             this.cbo_Order_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Order_Office_Select_SelectedIndexChanged);
             this.cbo_Order_Office_Select.DropDownClosed += new System.EventHandler(this.cbo_Order_Office_Select_DropDownClosed);
             // 
@@ -807,7 +811,7 @@
             this.txt_Order_Cottage_Persons_Quantity.MaxLength = 3;
             this.txt_Order_Cottage_Persons_Quantity.Name = "txt_Order_Cottage_Persons_Quantity";
             this.txt_Order_Cottage_Persons_Quantity.Size = new System.Drawing.Size(30, 26);
-            this.txt_Order_Cottage_Persons_Quantity.TabIndex = 2;
+            this.txt_Order_Cottage_Persons_Quantity.TabIndex = 15;
             this.txt_Order_Cottage_Persons_Quantity.Text = "1";
             // 
             // lbl_Order_Cottage_Max_Persons
@@ -904,7 +908,7 @@
             this.txt_Order_Services_Quantity.MaxLength = 3;
             this.txt_Order_Services_Quantity.Name = "txt_Order_Services_Quantity";
             this.txt_Order_Services_Quantity.Size = new System.Drawing.Size(30, 26);
-            this.txt_Order_Services_Quantity.TabIndex = 2;
+            this.txt_Order_Services_Quantity.TabIndex = 23;
             this.txt_Order_Services_Quantity.Text = "1";
             // 
             // lbl_Order_Services_Max_Quantity
@@ -953,7 +957,7 @@
             this.txt_Order_Services_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Order_Services_Search.Name = "txt_Order_Services_Search";
             this.txt_Order_Services_Search.Size = new System.Drawing.Size(170, 26);
-            this.txt_Order_Services_Search.TabIndex = 101;
+            this.txt_Order_Services_Search.TabIndex = 25;
             this.txt_Order_Services_Search.TextChanged += new System.EventHandler(this.txt_Order_Services_Search_TextChanged);
             // 
             // btn_Order_Services_Search
@@ -965,6 +969,7 @@
             this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
             this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Order_Services_Search.TabIndex = 102;
+            this.btn_Order_Services_Search.TabStop = false;
             this.btn_Order_Services_Search.UseVisualStyleBackColor = true;
             // 
             // dgv_Order_Services_All
@@ -987,7 +992,8 @@
             this.dgv_Order_Services_All.RowHeadersVisible = false;
             this.dgv_Order_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Order_Services_All.Size = new System.Drawing.Size(214, 419);
-            this.dgv_Order_Services_All.TabIndex = 108;
+            this.dgv_Order_Services_All.StandardTab = true;
+            this.dgv_Order_Services_All.TabIndex = 21;
             this.dgv_Order_Services_All.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Order_Services_All_CellEnter);
             // 
             // btn_Order_Service_add
@@ -998,7 +1004,7 @@
             this.btn_Order_Service_add.Location = new System.Drawing.Point(7, 554);
             this.btn_Order_Service_add.Name = "btn_Order_Service_add";
             this.btn_Order_Service_add.Size = new System.Drawing.Size(220, 38);
-            this.btn_Order_Service_add.TabIndex = 106;
+            this.btn_Order_Service_add.TabIndex = 27;
             this.btn_Order_Service_add.Text = "Lisää palvelu varaukseen";
             this.btn_Order_Service_add.UseVisualStyleBackColor = true;
             this.btn_Order_Service_add.Click += new System.EventHandler(this.btn_Order_Service_add_Click);
@@ -1158,7 +1164,7 @@
             this.lsv_Order_Summary_Cottages.Location = new System.Drawing.Point(3, 23);
             this.lsv_Order_Summary_Cottages.Name = "lsv_Order_Summary_Cottages";
             this.lsv_Order_Summary_Cottages.Size = new System.Drawing.Size(204, 74);
-            this.lsv_Order_Summary_Cottages.TabIndex = 50;
+            this.lsv_Order_Summary_Cottages.TabIndex = 29;
             this.lsv_Order_Summary_Cottages.UseCompatibleStateImageBehavior = false;
             this.lsv_Order_Summary_Cottages.View = System.Windows.Forms.View.List;
             // 
@@ -1171,7 +1177,7 @@
             this.lsv_Order_Summary_Services.Location = new System.Drawing.Point(3, 123);
             this.lsv_Order_Summary_Services.Name = "lsv_Order_Summary_Services";
             this.lsv_Order_Summary_Services.Size = new System.Drawing.Size(204, 74);
-            this.lsv_Order_Summary_Services.TabIndex = 52;
+            this.lsv_Order_Summary_Services.TabIndex = 31;
             this.lsv_Order_Summary_Services.UseCompatibleStateImageBehavior = false;
             this.lsv_Order_Summary_Services.View = System.Windows.Forms.View.List;
             // 
@@ -1213,7 +1219,7 @@
             this.btn_Order_Summary_Next_Page.Location = new System.Drawing.Point(159, 3);
             this.btn_Order_Summary_Next_Page.Name = "btn_Order_Summary_Next_Page";
             this.btn_Order_Summary_Next_Page.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Next_Page.TabIndex = 53;
+            this.btn_Order_Summary_Next_Page.TabIndex = 37;
             this.btn_Order_Summary_Next_Page.UseVisualStyleBackColor = true;
             this.btn_Order_Summary_Next_Page.Click += new System.EventHandler(this.btn_Order_Summary_Next_Page_Click);
             // 
@@ -1225,7 +1231,7 @@
             this.btn_Order_Summary_Delete_From_List.Location = new System.Drawing.Point(3, 3);
             this.btn_Order_Summary_Delete_From_List.Name = "btn_Order_Summary_Delete_From_List";
             this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Delete_From_List.TabIndex = 52;
+            this.btn_Order_Summary_Delete_From_List.TabIndex = 35;
             this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
             this.btn_Order_Summary_Delete_From_List.Click += new System.EventHandler(this.btn_Order_Summary_Delete_From_List_Click);
             // 
@@ -1238,7 +1244,7 @@
             this.txt_Order_Additional_Details.Multiline = true;
             this.txt_Order_Additional_Details.Name = "txt_Order_Additional_Details";
             this.txt_Order_Additional_Details.Size = new System.Drawing.Size(210, 106);
-            this.txt_Order_Additional_Details.TabIndex = 109;
+            this.txt_Order_Additional_Details.TabIndex = 33;
             // 
             // tab_Edit
             // 
@@ -1338,6 +1344,7 @@
             this.btn_Customer_Search.Name = "btn_Customer_Search";
             this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Customer_Search.TabIndex = 102;
+            this.btn_Customer_Search.TabStop = false;
             this.btn_Customer_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Customer_Search
@@ -1348,7 +1355,7 @@
             this.txt_Customer_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Customer_Search.Name = "txt_Customer_Search";
             this.txt_Customer_Search.Size = new System.Drawing.Size(239, 26);
-            this.txt_Customer_Search.TabIndex = 101;
+            this.txt_Customer_Search.TabIndex = 42;
             this.txt_Customer_Search.TextChanged += new System.EventHandler(this.txt_Customer_Search_TextChanged);
             // 
             // tbl_Edit_1st_Col_Customers_Buttons
@@ -1379,7 +1386,7 @@
             this.btn_Customer_Delete.Location = new System.Drawing.Point(234, 7);
             this.btn_Customer_Delete.Name = "btn_Customer_Delete";
             this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Delete.TabIndex = 110;
+            this.btn_Customer_Delete.TabIndex = 48;
             this.btn_Customer_Delete.UseVisualStyleBackColor = true;
             this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click);
             // 
@@ -1392,7 +1399,7 @@
             this.btn_Customer_Edit.Location = new System.Drawing.Point(118, 7);
             this.btn_Customer_Edit.Name = "btn_Customer_Edit";
             this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Edit.TabIndex = 109;
+            this.btn_Customer_Edit.TabIndex = 46;
             this.btn_Customer_Edit.UseVisualStyleBackColor = true;
             this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click);
             // 
@@ -1405,7 +1412,7 @@
             this.btn_Customer_Add.Location = new System.Drawing.Point(3, 7);
             this.btn_Customer_Add.Name = "btn_Customer_Add";
             this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Add.TabIndex = 108;
+            this.btn_Customer_Add.TabIndex = 44;
             this.btn_Customer_Add.UseVisualStyleBackColor = true;
             this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click);
             // 
@@ -1429,7 +1436,8 @@
             this.dgv_Customers_All.RowHeadersVisible = false;
             this.dgv_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Customers_All.Size = new System.Drawing.Size(285, 444);
-            this.dgv_Customers_All.TabIndex = 107;
+            this.dgv_Customers_All.StandardTab = true;
+            this.dgv_Customers_All.TabIndex = 40;
             // 
             // tbl_Edit_2nd_Col_Offices_Cottages
             // 
@@ -1492,7 +1500,7 @@
             this.cbo_Office_Select.Location = new System.Drawing.Point(3, 23);
             this.cbo_Office_Select.Name = "cbo_Office_Select";
             this.cbo_Office_Select.Size = new System.Drawing.Size(279, 28);
-            this.cbo_Office_Select.TabIndex = 105;
+            this.cbo_Office_Select.TabIndex = 50;
             this.cbo_Office_Select.SelectedIndexChanged += new System.EventHandler(this.cbo_Office_Select_SelectedIndexChanged);
             // 
             // tbl_Edit_2nd_Col_Offices_Buttons
@@ -1512,7 +1520,7 @@
             this.tbl_Edit_2nd_Col_Offices_Buttons.RowCount = 1;
             this.tbl_Edit_2nd_Col_Offices_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tbl_Edit_2nd_Col_Offices_Buttons.Size = new System.Drawing.Size(279, 54);
-            this.tbl_Edit_2nd_Col_Offices_Buttons.TabIndex = 106;
+            this.tbl_Edit_2nd_Col_Offices_Buttons.TabIndex = 52;
             // 
             // btn_Office_Delete
             // 
@@ -1523,7 +1531,7 @@
             this.btn_Office_Delete.Location = new System.Drawing.Point(228, 3);
             this.btn_Office_Delete.Name = "btn_Office_Delete";
             this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Delete.TabIndex = 113;
+            this.btn_Office_Delete.TabIndex = 56;
             this.btn_Office_Delete.UseVisualStyleBackColor = true;
             this.btn_Office_Delete.Click += new System.EventHandler(this.btn_Office_Delete_Click);
             // 
@@ -1536,7 +1544,7 @@
             this.btn_Office_Edit.Location = new System.Drawing.Point(114, 3);
             this.btn_Office_Edit.Name = "btn_Office_Edit";
             this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Edit.TabIndex = 112;
+            this.btn_Office_Edit.TabIndex = 54;
             this.btn_Office_Edit.UseVisualStyleBackColor = true;
             this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click);
             // 
@@ -1548,7 +1556,7 @@
             this.btn_Office_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Office_Add.Name = "btn_Office_Add";
             this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Add.TabIndex = 111;
+            this.btn_Office_Add.TabIndex = 52;
             this.btn_Office_Add.UseVisualStyleBackColor = true;
             this.btn_Office_Add.Click += new System.EventHandler(this.btn_Office_Add_Click);
             // 
@@ -1604,6 +1612,7 @@
             this.btn_Cottages_Search.Name = "btn_Cottages_Search";
             this.btn_Cottages_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_Cottages_Search.TabIndex = 102;
+            this.btn_Cottages_Search.TabStop = false;
             this.btn_Cottages_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Cottages_Search
@@ -1614,7 +1623,7 @@
             this.txt_Cottages_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_Cottages_Search.Name = "txt_Cottages_Search";
             this.txt_Cottages_Search.Size = new System.Drawing.Size(233, 26);
-            this.txt_Cottages_Search.TabIndex = 101;
+            this.txt_Cottages_Search.TabIndex = 60;
             this.txt_Cottages_Search.TextChanged += new System.EventHandler(this.txt_Cottages_Search_TextChanged);
             // 
             // tbl_Edit_Cottages_Buttons
@@ -1645,7 +1654,7 @@
             this.btn_Cottages_Delete.Location = new System.Drawing.Point(228, 7);
             this.btn_Cottages_Delete.Name = "btn_Cottages_Delete";
             this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Delete.TabIndex = 110;
+            this.btn_Cottages_Delete.TabIndex = 66;
             this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
             this.btn_Cottages_Delete.Click += new System.EventHandler(this.btn_Cottages_Delete_Click);
             // 
@@ -1658,7 +1667,7 @@
             this.btn_Cottages_Edit.Location = new System.Drawing.Point(115, 7);
             this.btn_Cottages_Edit.Name = "btn_Cottages_Edit";
             this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Edit.TabIndex = 109;
+            this.btn_Cottages_Edit.TabIndex = 64;
             this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
             this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click);
             // 
@@ -1671,7 +1680,7 @@
             this.btn_Cottages_Add.Location = new System.Drawing.Point(3, 7);
             this.btn_Cottages_Add.Name = "btn_Cottages_Add";
             this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Add.TabIndex = 108;
+            this.btn_Cottages_Add.TabIndex = 62;
             this.btn_Cottages_Add.UseVisualStyleBackColor = true;
             this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click);
             // 
@@ -1695,7 +1704,8 @@
             this.dgv_Cottages_All.RowHeadersVisible = false;
             this.dgv_Cottages_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cottages_All.Size = new System.Drawing.Size(279, 307);
-            this.dgv_Cottages_All.TabIndex = 108;
+            this.dgv_Cottages_All.StandardTab = true;
+            this.dgv_Cottages_All.TabIndex = 58;
             // 
             // lbl_Cottages
             // 
@@ -1773,7 +1783,7 @@
             this.btn_Services_Add.Location = new System.Drawing.Point(3, 11);
             this.btn_Services_Add.Name = "btn_Services_Add";
             this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Add.TabIndex = 108;
+            this.btn_Services_Add.TabIndex = 74;
             this.btn_Services_Add.UseVisualStyleBackColor = true;
             this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click);
             // 
@@ -1786,7 +1796,7 @@
             this.btn_Services_Edit.Location = new System.Drawing.Point(118, 11);
             this.btn_Services_Edit.Name = "btn_Services_Edit";
             this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Edit.TabIndex = 109;
+            this.btn_Services_Edit.TabIndex = 76;
             this.btn_Services_Edit.UseVisualStyleBackColor = true;
             this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click);
             // 
@@ -1799,7 +1809,7 @@
             this.btn_Services_Delete.Location = new System.Drawing.Point(234, 11);
             this.btn_Services_Delete.Name = "btn_Services_Delete";
             this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Delete.TabIndex = 110;
+            this.btn_Services_Delete.TabIndex = 78;
             this.btn_Services_Delete.UseVisualStyleBackColor = true;
             this.btn_Services_Delete.Click += new System.EventHandler(this.btn_Services_Delete_Click);
             // 
@@ -1829,7 +1839,8 @@
             this.btn_Services_Search.Location = new System.Drawing.Point(250, 3);
             this.btn_Services_Search.Name = "btn_Services_Search";
             this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Services_Search.TabIndex = 102;
+            this.btn_Services_Search.TabIndex = 72;
+            this.btn_Services_Search.TabStop = false;
             this.btn_Services_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Services_Search
@@ -1839,7 +1850,7 @@
             this.txt_Services_Search.Location = new System.Drawing.Point(3, 6);
             this.txt_Services_Search.Name = "txt_Services_Search";
             this.txt_Services_Search.Size = new System.Drawing.Size(241, 26);
-            this.txt_Services_Search.TabIndex = 101;
+            this.txt_Services_Search.TabIndex = 70;
             this.txt_Services_Search.TextChanged += new System.EventHandler(this.txt_Services_Search_TextChanged);
             // 
             // dgv_Services_All
@@ -1862,7 +1873,8 @@
             this.dgv_Services_All.RowHeadersVisible = false;
             this.dgv_Services_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Services_All.Size = new System.Drawing.Size(285, 439);
-            this.dgv_Services_All.TabIndex = 108;
+            this.dgv_Services_All.StandardTab = true;
+            this.dgv_Services_All.TabIndex = 68;
             // 
             // tab_History
             // 
@@ -1966,6 +1978,7 @@
             this.btn_History_Customer_Search.Name = "btn_History_Customer_Search";
             this.btn_History_Customer_Search.Size = new System.Drawing.Size(32, 32);
             this.btn_History_Customer_Search.TabIndex = 102;
+            this.btn_History_Customer_Search.TabStop = false;
             this.btn_History_Customer_Search.UseVisualStyleBackColor = true;
             // 
             // txt_History_Customer_Search
@@ -1976,7 +1989,7 @@
             this.txt_History_Customer_Search.Location = new System.Drawing.Point(3, 3);
             this.txt_History_Customer_Search.Name = "txt_History_Customer_Search";
             this.txt_History_Customer_Search.Size = new System.Drawing.Size(230, 26);
-            this.txt_History_Customer_Search.TabIndex = 101;
+            this.txt_History_Customer_Search.TabIndex = 82;
             this.txt_History_Customer_Search.TextChanged += new System.EventHandler(this.txt_History_Customer_Search_TextChanged);
             // 
             // btn_History_Limit_To_Customer
@@ -1986,7 +1999,7 @@
             this.btn_History_Limit_To_Customer.Location = new System.Drawing.Point(8, 278);
             this.btn_History_Limit_To_Customer.Name = "btn_History_Limit_To_Customer";
             this.btn_History_Limit_To_Customer.Size = new System.Drawing.Size(276, 40);
-            this.btn_History_Limit_To_Customer.TabIndex = 102;
+            this.btn_History_Limit_To_Customer.TabIndex = 84;
             this.btn_History_Limit_To_Customer.Text = "Rajoita varaushistoria asiakkaaseen";
             this.btn_History_Limit_To_Customer.UseVisualStyleBackColor = true;
             this.btn_History_Limit_To_Customer.Click += new System.EventHandler(this.btn_History_Limit_To_Customer_Click);
@@ -2030,7 +2043,7 @@
             this.cbo_History_Office_Select.Location = new System.Drawing.Point(3, 23);
             this.cbo_History_Office_Select.Name = "cbo_History_Office_Select";
             this.cbo_History_Office_Select.Size = new System.Drawing.Size(270, 28);
-            this.cbo_History_Office_Select.TabIndex = 105;
+            this.cbo_History_Office_Select.TabIndex = 86;
             // 
             // btn_History_Limit_To_Office
             // 
@@ -2040,7 +2053,7 @@
             this.btn_History_Limit_To_Office.Location = new System.Drawing.Point(3, 57);
             this.btn_History_Limit_To_Office.Name = "btn_History_Limit_To_Office";
             this.btn_History_Limit_To_Office.Size = new System.Drawing.Size(270, 40);
-            this.btn_History_Limit_To_Office.TabIndex = 106;
+            this.btn_History_Limit_To_Office.TabIndex = 88;
             this.btn_History_Limit_To_Office.Text = "Rajoita toimipisteeseen";
             this.btn_History_Limit_To_Office.UseVisualStyleBackColor = true;
             this.btn_History_Limit_To_Office.Click += new System.EventHandler(this.btn_History_Limit_To_Office_Click);
@@ -2066,7 +2079,8 @@
             this.dgv_History_Customers_All.RowHeadersVisible = false;
             this.dgv_History_Customers_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Customers_All.Size = new System.Drawing.Size(276, 187);
-            this.dgv_History_Customers_All.TabIndex = 108;
+            this.dgv_History_Customers_All.StandardTab = true;
+            this.dgv_History_Customers_All.TabIndex = 80;
             // 
             // tbl_History_Order_Filter_Summary
             // 
@@ -2098,7 +2112,7 @@
             this.btn_History_Order_Filter_Reset.Location = new System.Drawing.Point(3, 113);
             this.btn_History_Order_Filter_Reset.Name = "btn_History_Order_Filter_Reset";
             this.btn_History_Order_Filter_Reset.Size = new System.Drawing.Size(270, 41);
-            this.btn_History_Order_Filter_Reset.TabIndex = 107;
+            this.btn_History_Order_Filter_Reset.TabIndex = 90;
             this.btn_History_Order_Filter_Reset.Text = "Poista rajoitukset";
             this.btn_History_Order_Filter_Reset.UseVisualStyleBackColor = true;
             this.btn_History_Order_Filter_Reset.Click += new System.EventHandler(this.btn_History_Order_Filter_Reset_Click);
@@ -2212,6 +2226,7 @@
             this.btn_History_Order_Search.Name = "btn_History_Order_Search";
             this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
             this.btn_History_Order_Search.TabIndex = 102;
+            this.btn_History_Order_Search.TabStop = false;
             this.btn_History_Order_Search.UseVisualStyleBackColor = true;
             // 
             // txt_History_Order_Search
@@ -2221,7 +2236,7 @@
             this.txt_History_Order_Search.Location = new System.Drawing.Point(3, 5);
             this.txt_History_Order_Search.Name = "txt_History_Order_Search";
             this.txt_History_Order_Search.Size = new System.Drawing.Size(252, 26);
-            this.txt_History_Order_Search.TabIndex = 101;
+            this.txt_History_Order_Search.TabIndex = 94;
             this.txt_History_Order_Search.TextChanged += new System.EventHandler(this.txt_History_Order_Search_TextChanged);
             // 
             // tbl_History_Order_Dates_Delete
@@ -2284,7 +2299,7 @@
             this.dtp_History_Orders_Filter_Date_Start.Location = new System.Drawing.Point(3, 20);
             this.dtp_History_Orders_Filter_Date_Start.Name = "dtp_History_Orders_Filter_Date_Start";
             this.dtp_History_Orders_Filter_Date_Start.Size = new System.Drawing.Size(140, 26);
-            this.dtp_History_Orders_Filter_Date_Start.TabIndex = 2;
+            this.dtp_History_Orders_Filter_Date_Start.TabIndex = 96;
             this.dtp_History_Orders_Filter_Date_Start.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dtp_History_Orders_Filter_Date_Start.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_Start_ValueChanged);
             // 
@@ -2295,7 +2310,7 @@
             this.dtp_History_Orders_Filter_Date_End.Location = new System.Drawing.Point(149, 20);
             this.dtp_History_Orders_Filter_Date_End.Name = "dtp_History_Orders_Filter_Date_End";
             this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(140, 26);
-            this.dtp_History_Orders_Filter_Date_End.TabIndex = 3;
+            this.dtp_History_Orders_Filter_Date_End.TabIndex = 98;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
             this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged_1);
             // 
@@ -2319,7 +2334,7 @@
             this.dgv_History_Orders_All.RowHeadersVisible = false;
             this.dgv_History_Orders_All.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_History_Orders_All.Size = new System.Drawing.Size(298, 443);
-            this.dgv_History_Orders_All.TabIndex = 103;
+            this.dgv_History_Orders_All.TabIndex = 92;
             this.dgv_History_Orders_All.SelectionChanged += new System.EventHandler(this.dgv_History_Orders_All_SelectionChanged);
             // 
             // tbl_History_3th_Col_Selected_Order_Details
@@ -2400,7 +2415,7 @@
             this.btn_History_Order_History_Del.Location = new System.Drawing.Point(235, 3);
             this.btn_History_Order_History_Del.Name = "btn_History_Order_History_Del";
             this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Order_History_Del.TabIndex = 115;
+            this.btn_History_Order_History_Del.TabIndex = 100;
             this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
             this.btn_History_Order_History_Del.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
             // 
@@ -2516,6 +2531,7 @@
             this.lsv_History_Order_Cottages.Name = "lsv_History_Order_Cottages";
             this.lsv_History_Order_Cottages.Size = new System.Drawing.Size(270, 75);
             this.lsv_History_Order_Cottages.TabIndex = 50;
+            this.lsv_History_Order_Cottages.TabStop = false;
             this.lsv_History_Order_Cottages.UseCompatibleStateImageBehavior = false;
             this.lsv_History_Order_Cottages.View = System.Windows.Forms.View.List;
             // 
@@ -2529,6 +2545,7 @@
             this.lsv_History_Order_Services.Name = "lsv_History_Order_Services";
             this.lsv_History_Order_Services.Size = new System.Drawing.Size(270, 75);
             this.lsv_History_Order_Services.TabIndex = 52;
+            this.lsv_History_Order_Services.TabStop = false;
             this.lsv_History_Order_Services.UseCompatibleStateImageBehavior = false;
             this.lsv_History_Order_Services.View = System.Windows.Forms.View.List;
             // 
@@ -2554,6 +2571,7 @@
             this.txt_History_Order_Additional_Details.ReadOnly = true;
             this.txt_History_Order_Additional_Details.Size = new System.Drawing.Size(276, 108);
             this.txt_History_Order_Additional_Details.TabIndex = 109;
+            this.txt_History_Order_Additional_Details.TabStop = false;
             // 
             // tab_Settings_Log
             // 
@@ -2694,7 +2712,7 @@
             this.chk_Common_Settings_History_End_Date_Today.Location = new System.Drawing.Point(174, 9);
             this.chk_Common_Settings_History_End_Date_Today.Name = "chk_Common_Settings_History_End_Date_Today";
             this.chk_Common_Settings_History_End_Date_Today.Size = new System.Drawing.Size(15, 14);
-            this.chk_Common_Settings_History_End_Date_Today.TabIndex = 1;
+            this.chk_Common_Settings_History_End_Date_Today.TabIndex = 108;
             this.chk_Common_Settings_History_End_Date_Today.UseVisualStyleBackColor = true;
             this.chk_Common_Settings_History_End_Date_Today.CheckedChanged += new System.EventHandler(this.chk_Common_Settings_History_End_Date_Today_CheckedChanged);
             // 
@@ -2705,7 +2723,7 @@
             this.dtp_Common_Settings_History_End_Date_Custom.Location = new System.Drawing.Point(3, 419);
             this.dtp_Common_Settings_History_End_Date_Custom.Name = "dtp_Common_Settings_History_End_Date_Custom";
             this.dtp_Common_Settings_History_End_Date_Custom.Size = new System.Drawing.Size(252, 26);
-            this.dtp_Common_Settings_History_End_Date_Custom.TabIndex = 21;
+            this.dtp_Common_Settings_History_End_Date_Custom.TabIndex = 110;
             this.dtp_Common_Settings_History_End_Date_Custom.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_End_Date_Custom_ValueChanged);
             // 
             // lbl_Common_Settings_History_End_Date_Custom
@@ -2727,7 +2745,7 @@
             this.cbo_Common_Settings_Default_Office.Location = new System.Drawing.Point(3, 170);
             this.cbo_Common_Settings_Default_Office.Name = "cbo_Common_Settings_Default_Office";
             this.cbo_Common_Settings_Default_Office.Size = new System.Drawing.Size(252, 28);
-            this.cbo_Common_Settings_Default_Office.TabIndex = 16;
+            this.cbo_Common_Settings_Default_Office.TabIndex = 104;
             this.cbo_Common_Settings_Default_Office.SelectedIndexChanged += new System.EventHandler(this.cbo_Common_Settings_Default_Office_SelectedIndexChanged);
             // 
             // lbl_Common_Settings_Default_Office
@@ -2748,7 +2766,7 @@
             this.txt_Settings_User_Name.Location = new System.Drawing.Point(3, 88);
             this.txt_Settings_User_Name.Name = "txt_Settings_User_Name";
             this.txt_Settings_User_Name.Size = new System.Drawing.Size(252, 26);
-            this.txt_Settings_User_Name.TabIndex = 3;
+            this.txt_Settings_User_Name.TabIndex = 102;
             this.txt_Settings_User_Name.TextChanged += new System.EventHandler(this.txt_Settings_User_Name_TextChanged);
             // 
             // lbl_Settings_User_Name
@@ -2800,7 +2818,7 @@
             this.dtp_Common_Settings_History_Start_Date.Location = new System.Drawing.Point(3, 291);
             this.dtp_Common_Settings_History_Start_Date.Name = "dtp_Common_Settings_History_Start_Date";
             this.dtp_Common_Settings_History_Start_Date.Size = new System.Drawing.Size(252, 26);
-            this.dtp_Common_Settings_History_Start_Date.TabIndex = 26;
+            this.dtp_Common_Settings_History_Start_Date.TabIndex = 106;
             this.dtp_Common_Settings_History_Start_Date.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dtp_Common_Settings_History_Start_Date.ValueChanged += new System.EventHandler(this.dtp_Common_Settings_History_Start_Date_ValueChanged);
             // 
@@ -2871,7 +2889,7 @@
             this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 501);
             this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
             this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 34);
-            this.btn_Options_Save_Invoicing.TabIndex = 14;
+            this.btn_Options_Save_Invoicing.TabIndex = 132;
             this.btn_Options_Save_Invoicing.Text = "Tallenna tiedot";
             this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
             this.btn_Options_Save_Invoicing.Click += new System.EventHandler(this.btn_Options_Save_Invoicing_Click);
@@ -2909,7 +2927,7 @@
             this.txt_Options_Receiver.Location = new System.Drawing.Point(122, 4);
             this.txt_Options_Receiver.Name = "txt_Options_Receiver";
             this.txt_Options_Receiver.Size = new System.Drawing.Size(127, 26);
-            this.txt_Options_Receiver.TabIndex = 1;
+            this.txt_Options_Receiver.TabIndex = 130;
             // 
             // tbl_Invoice_Settings_Infobox_txt_5_txt_BIC
             // 
@@ -2936,7 +2954,7 @@
             this.txt_Options_BIC.Location = new System.Drawing.Point(129, 3);
             this.txt_Options_BIC.Name = "txt_Options_BIC";
             this.txt_Options_BIC.Size = new System.Drawing.Size(120, 26);
-            this.txt_Options_BIC.TabIndex = 6;
+            this.txt_Options_BIC.TabIndex = 126;
             // 
             // txt_Options_Infobox_5
             // 
@@ -2947,7 +2965,7 @@
             this.txt_Options_Infobox_5.Multiline = true;
             this.txt_Options_Infobox_5.Name = "txt_Options_Infobox_5";
             this.txt_Options_Infobox_5.Size = new System.Drawing.Size(120, 34);
-            this.txt_Options_Infobox_5.TabIndex = 5;
+            this.txt_Options_Infobox_5.TabIndex = 124;
             // 
             // tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC
             // 
@@ -3012,7 +3030,7 @@
             this.txt_Options_Infobox_4.Multiline = true;
             this.txt_Options_Infobox_4.Name = "txt_Options_Infobox_4";
             this.txt_Options_Infobox_4.Size = new System.Drawing.Size(120, 34);
-            this.txt_Options_Infobox_4.TabIndex = 6;
+            this.txt_Options_Infobox_4.TabIndex = 122;
             // 
             // txt_Options_Infobox_3
             // 
@@ -3023,7 +3041,7 @@
             this.txt_Options_Infobox_3.Multiline = true;
             this.txt_Options_Infobox_3.Name = "txt_Options_Infobox_3";
             this.txt_Options_Infobox_3.Size = new System.Drawing.Size(120, 34);
-            this.txt_Options_Infobox_3.TabIndex = 5;
+            this.txt_Options_Infobox_3.TabIndex = 120;
             // 
             // tbl_Invoice_Settings_Infobox_lbl_3_4
             // 
@@ -3107,7 +3125,7 @@
             this.txt_Options_Remark_Time.MaxLength = 3;
             this.txt_Options_Remark_Time.Name = "txt_Options_Remark_Time";
             this.txt_Options_Remark_Time.Size = new System.Drawing.Size(61, 26);
-            this.txt_Options_Remark_Time.TabIndex = 2;
+            this.txt_Options_Remark_Time.TabIndex = 114;
             // 
             // lbl_Invoicing_Options
             // 
@@ -3164,7 +3182,7 @@
             this.txt_Options_Penalty_Interest.MaxLength = 5;
             this.txt_Options_Penalty_Interest.Name = "txt_Options_Penalty_Interest";
             this.txt_Options_Penalty_Interest.Size = new System.Drawing.Size(61, 26);
-            this.txt_Options_Penalty_Interest.TabIndex = 2;
+            this.txt_Options_Penalty_Interest.TabIndex = 112;
             // 
             // lbl_Company_Invoicing_Info
             // 
@@ -3240,7 +3258,7 @@
             this.txt_Options_Infobox_2.Multiline = true;
             this.txt_Options_Infobox_2.Name = "txt_Options_Infobox_2";
             this.txt_Options_Infobox_2.Size = new System.Drawing.Size(120, 34);
-            this.txt_Options_Infobox_2.TabIndex = 6;
+            this.txt_Options_Infobox_2.TabIndex = 118;
             // 
             // txt_Options_Infobox_1
             // 
@@ -3251,7 +3269,7 @@
             this.txt_Options_Infobox_1.Multiline = true;
             this.txt_Options_Infobox_1.Name = "txt_Options_Infobox_1";
             this.txt_Options_Infobox_1.Size = new System.Drawing.Size(120, 34);
-            this.txt_Options_Infobox_1.TabIndex = 5;
+            this.txt_Options_Infobox_1.TabIndex = 116;
             // 
             // tbl_Invoice_Settings_IBAN_lbl_txt
             // 
@@ -3286,7 +3304,7 @@
             this.txt_Options_IBAN.Location = new System.Drawing.Point(62, 4);
             this.txt_Options_IBAN.Name = "txt_Options_IBAN";
             this.txt_Options_IBAN.Size = new System.Drawing.Size(187, 26);
-            this.txt_Options_IBAN.TabIndex = 1;
+            this.txt_Options_IBAN.TabIndex = 128;
             // 
             // tbl_Settings_2nd_Col_UI_Settings_Base
             // 
@@ -3364,7 +3382,7 @@
             this.btn_log_update_grid.Location = new System.Drawing.Point(3, 500);
             this.btn_log_update_grid.Name = "btn_log_update_grid";
             this.btn_log_update_grid.Size = new System.Drawing.Size(252, 35);
-            this.btn_log_update_grid.TabIndex = 2;
+            this.btn_log_update_grid.TabIndex = 134;
             this.btn_log_update_grid.Text = "Lataa lokitiedot";
             this.btn_log_update_grid.UseVisualStyleBackColor = true;
             this.btn_log_update_grid.Click += new System.EventHandler(this.btn_log_update_grid_Click);

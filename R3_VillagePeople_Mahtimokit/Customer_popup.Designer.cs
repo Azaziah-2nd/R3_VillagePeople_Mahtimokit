@@ -207,7 +207,7 @@
             this.btn_Customer_Save.Location = new System.Drawing.Point(226, 447);
             this.btn_Customer_Save.Name = "btn_Customer_Save";
             this.btn_Customer_Save.Size = new System.Drawing.Size(97, 30);
-            this.btn_Customer_Save.TabIndex = 117;
+            this.btn_Customer_Save.TabIndex = 116;
             this.btn_Customer_Save.Text = "Tallenna";
             this.btn_Customer_Save.UseVisualStyleBackColor = true;
             this.btn_Customer_Save.Click += new System.EventHandler(this.btn_Customer_Save_Click);
@@ -219,7 +219,7 @@
             this.btn_Customer_Cancel.Location = new System.Drawing.Point(371, 447);
             this.btn_Customer_Cancel.Name = "btn_Customer_Cancel";
             this.btn_Customer_Cancel.Size = new System.Drawing.Size(99, 30);
-            this.btn_Customer_Cancel.TabIndex = 116;
+            this.btn_Customer_Cancel.TabIndex = 117;
             this.btn_Customer_Cancel.Text = "Peruuta";
             this.btn_Customer_Cancel.UseVisualStyleBackColor = true;
             this.btn_Customer_Cancel.Click += new System.EventHandler(this.btn_Customer_Cancel_Click);
