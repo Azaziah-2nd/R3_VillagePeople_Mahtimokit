@@ -70,7 +70,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Invoicing_Total.Text = total;
 
             //tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
-            lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 13);
+            lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 16);
             
         }
 
@@ -84,16 +84,23 @@ namespace R3_VillagePeople_Mahtimokit
             // Tulostaa laskun
             // Tulostuksen koko: 794 x 1123	 = A4 = 96 DPI. (Koko ulkoasusta.)
             PrintDocument to_print = new PrintDocument();
+            to_print.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 2480, 3508);
             to_print.PrintPage += this.Print_document;
             PrintDialog dlgSettings = new PrintDialog();
             dlgSettings.Document = to_print;
             if (dlgSettings.ShowDialog() == DialogResult.OK)
             {
+                //Disable the printing document pop-up dialog shown during printing.
                 PrintController printController = new StandardPrintController();
                 to_print.PrintController = printController;
-                // Määritellään tulosteen marginaaleiksi "0".
+
+                //For testing only: Hardcoded set paper size to particular paper.
+                //pd.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+                //pd.DefaultPageSettings.PaperSize = new PaperSize("Custom 6x4", 720, 478);
+
                 to_print.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
                 to_print.PrinterSettings.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+
                 to_print.Print();
             }
 
