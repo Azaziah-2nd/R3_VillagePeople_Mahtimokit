@@ -961,13 +961,13 @@ namespace R3_VillagePeople_Mahtimokit
                 dtp_Order_Start_Date.Value = DateTime.Today;
                 MessageBox.Show("Virhe! Et voi valita varauksen alkamispäiväksi kulunutta päivää.");
             }
-            Get_start_date_to_order_summary();
             // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
             if (dtp_Order_Start_Date.Value > dtp_Order_End_Date.Value)
             {
                 // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
                 dtp_Order_End_Date.Value = dtp_Order_Start_Date.Value.AddDays(1);
             }
+            Get_start_date_to_order_summary();
             // Päivitetään myös mökkien näkyvyys, siten että vain vapaat mökit näytetään.
             Filter_order_cottages_by_dates_office_and_text();
         }
@@ -1908,11 +1908,25 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dtp_History_Orders_Filter_Date_End_ValueChanged_1(object sender, EventArgs e)
         {
+            // Tarkistetaan onko  päättymispäivä alkamispäivän jälkeen.
+            if (dtp_History_Orders_Filter_Date_Start.Value > dtp_History_Orders_Filter_Date_End.Value)
+            {
+                // Jos ei, muutetaan alkamispäiväksi päättymispäivä  - 1 päivä.
+                dtp_History_Orders_Filter_Date_Start.Value = dtp_History_Orders_Filter_Date_End.Value.AddDays(-1);
+            }
+            // Lisätään päättymisaikaan 23:59:59, näin samana päivänä luodut varaukser mäytetään.
+            dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_End.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             Filter_history_orders();
         }
 
         private void dtp_History_Orders_Filter_Date_Start_ValueChanged(object sender, EventArgs e)
         {
+            // Tarkistetaan onko alkamispäivä päättymispäivän jälkeen.
+            if (dtp_History_Orders_Filter_Date_Start.Value > dtp_History_Orders_Filter_Date_End.Value)
+            {
+                // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
+                dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_Start.Value.AddDays(1);
+            }
             Filter_history_orders();
         }
 
