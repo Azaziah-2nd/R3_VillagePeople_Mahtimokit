@@ -159,6 +159,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\remove-close.png" />
+    <None Include="Icons\next.png" />
+    <None Include="Icons\add.png" />
+    <None Include="Icons\edit.png" />
+    <None Include="Icons\trash.png" />
+    <None Include="Icons\search.png" />
     <Content Include="VP_Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -167,9 +173,7 @@
       <DependentUpon>VP_Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
