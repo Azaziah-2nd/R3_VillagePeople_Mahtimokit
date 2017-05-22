@@ -1883,5 +1883,11 @@ namespace R3_VillagePeople_Mahtimokit
                 database.Generate_invoice(Varaus_id);
             }
         }
+
+        private void btn_Invoicing_Testview_Click(object sender, EventArgs e)
+        {
+            Form frm = new frm_Invoicing();
+            frm.Show();
+        }
     }
 }
