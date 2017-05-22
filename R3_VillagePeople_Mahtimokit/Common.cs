@@ -7,20 +7,11 @@ using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using System.Security.Permissions;
 
 namespace R3_VillagePeople_Mahtimokit
 {
-    public class Combo_box_item
-    {
-        public string Text { get; set; }
-        public object Value { get; set; }
-
-        public override string ToString()
-        {
-            return Text;
-        }
-    }
-
     public class Common_methods
     {
         public bool Is_email_valid(string email)
@@ -126,6 +117,16 @@ namespace R3_VillagePeople_Mahtimokit
                 }
                 return return_value;
             }
+        }
+    }
+    public class Combo_box_item
+    {
+        public string Text { get; set; }
+        public object Value { get; set; }
+
+        public override string ToString()
+        {
+            return Text;
         }
     }
 }
