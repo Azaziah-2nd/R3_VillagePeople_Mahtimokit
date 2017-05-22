@@ -668,6 +668,7 @@
             this.dgv_Order_Cottages_All.ColumnHeadersVisible = false;
             this.dgv_Order_Cottages_All.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Order_Cottages_All.Location = new System.Drawing.Point(7, 126);
+            this.dgv_Order_Cottages_All.MultiSelect = false;
             this.dgv_Order_Cottages_All.Name = "dgv_Order_Cottages_All";
             this.dgv_Order_Cottages_All.ReadOnly = true;
             this.dgv_Order_Cottages_All.RowHeadersVisible = false;

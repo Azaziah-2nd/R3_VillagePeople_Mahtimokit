@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
             this.tbl_Invoicing_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoice_Invoice = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_1st_Row_Invoice_Info = new System.Windows.Forms.TableLayoutPanel();
@@ -1335,17 +1335,17 @@
             this.SummaryTotal});
             this.lst_Invoicing.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing.GridLines = true;
-            listViewGroup3.Header = "Selite";
-            listViewGroup3.Name = "Definition";
+            listViewGroup5.Header = "Selite";
+            listViewGroup5.Name = "Definition";
             this.lst_Invoicing.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3});
+            listViewGroup5});
             this.lst_Invoicing.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lst_Invoicing.Location = new System.Drawing.Point(3, 3);
             this.lst_Invoicing.MaximumSize = new System.Drawing.Size(913, 1000);
             this.lst_Invoicing.Name = "lst_Invoicing";
             this.lst_Invoicing.Scrollable = false;
             this.lst_Invoicing.ShowGroups = false;
-            this.lst_Invoicing.Size = new System.Drawing.Size(752, 70);
+            this.lst_Invoicing.Size = new System.Drawing.Size(752, 42);
             this.lst_Invoicing.TabIndex = 4;
             this.lst_Invoicing.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing.View = System.Windows.Forms.View.Details;
@@ -1388,7 +1388,7 @@
             this.amount});
             this.lst_Invoicing_2nd_Row_Alv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing_2nd_Row_Alv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(382, 79);
+            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(382, 51);
             this.lst_Invoicing_2nd_Row_Alv.Name = "lst_Invoicing_2nd_Row_Alv";
             this.lst_Invoicing_2nd_Row_Alv.Scrollable = false;
             this.lst_Invoicing_2nd_Row_Alv.Size = new System.Drawing.Size(373, 58);
@@ -1416,8 +1416,12 @@
             this.Total_label,
             this.Total_2});
             this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(190, 143);
+            this.lsv_Invoicing_Details_Summary.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(190, 115);
+            this.lsv_Invoicing_Details_Summary.MultiSelect = false;
             this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
+            this.lsv_Invoicing_Details_Summary.Scrollable = false;
+            this.lsv_Invoicing_Details_Summary.ShowGroups = false;
             this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(565, 55);
             this.lsv_Invoicing_Details_Summary.TabIndex = 5;
             this.lsv_Invoicing_Details_Summary.UseCompatibleStateImageBehavior = false;

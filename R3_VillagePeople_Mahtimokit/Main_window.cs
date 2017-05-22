@@ -1155,7 +1155,7 @@ namespace R3_VillagePeople_Mahtimokit
         public string Varaus_id = "";
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
-            if (lsv_Order_Summary_Cottages.Items.Count == 0 || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
+            if ((lsv_Order_Summary_Cottages.Items.Count == 0 && lsv_Order_Summary_Services.Items.Count == 0) || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
             {
                 MessageBox.Show("Virhe! Tilauksessa on oltava vähintään 1 mökki, asiakas ja toimipiste.");
                 return;
