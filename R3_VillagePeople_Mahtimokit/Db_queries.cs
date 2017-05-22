@@ -170,13 +170,9 @@ namespace R3_VillagePeople_Mahtimokit
                     ListViewItem itm_service;
                     itm_service = new ListViewItem(arr_service);
                     Invoice.lst_Invoicing.Items.Add(itm_service);
-                    MessageBox.Show("Palvelut!");
 
                 }
                 // Viimeistellään laskun tiedot
-
-                Invoice.Show();
-                MessageBox.Show("Viimeistely!");
                 double total = 0;
                 foreach (ListViewItem item in Invoice.lst_Invoicing.Items)
                 {
@@ -199,7 +195,7 @@ namespace R3_VillagePeople_Mahtimokit
                 Invoice.lsv_Invoicing_Details_Summary.Items.Add(total_row);
                 Invoice.reference_number = Varaus_id;
                 Invoice.total = total.ToString(".00");
-
+                Invoice.Show();
             }
         }
 }
