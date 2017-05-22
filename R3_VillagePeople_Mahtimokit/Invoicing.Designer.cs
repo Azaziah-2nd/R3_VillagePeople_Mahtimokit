@@ -1490,7 +1490,7 @@
             this.ClientSize = new System.Drawing.Size(998, 744);
             this.Controls.Add(this.tbl_Invoicing_base);
             this.Name = "frm_Invoicing";
-            this.Text = "Invoicing";
+            this.Text = "Lasku";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Invoicing_Load);
             this.tbl_Invoicing_base.ResumeLayout(false);

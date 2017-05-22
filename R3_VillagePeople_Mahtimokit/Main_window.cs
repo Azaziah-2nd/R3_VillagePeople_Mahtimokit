@@ -1250,7 +1250,7 @@ namespace R3_VillagePeople_Mahtimokit
             }
             // Tehhään lasku
             frm_Invoicing Invoice = new frm_Invoicing();
-            SqlCommand database_query_Customer_invoicing = new SqlCommand("SELECT etunimi, sukunimi, email, lahiosoite, postinro, postitoimipaikka, asuinmaa FROM Asiakas WHERE asiakas_id = @asiakas_id");
+            SqlCommand database_query_Customer_invoicing = new SqlCommand("SELECT kokonimi, email, lahiosoite, postinro, postitoimipaikka, asuinmaa FROM Asiakas WHERE asiakas_id = @asiakas_id");
             database_query_Customer_invoicing.Connection = main_window.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
             database_connection.Open();
