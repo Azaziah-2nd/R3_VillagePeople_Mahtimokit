@@ -1811,5 +1811,17 @@ namespace R3_VillagePeople_Mahtimokit
             cbo_Office_Select.SelectedIndex = cbo_Office_Select.FindStringExact(default_office);
             cbo_History_Office_Select.SelectedIndex = cbo_History_Office_Select.FindStringExact(default_office);
         }
+
+        private void btn_History_Order_Print_Click(object sender, EventArgs e)
+        {
+            if (dgv_History_Orders_All.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgv_History_Orders_All.SelectedRows)
+                {
+                    Varaus_id = row.Cells[0].Value.ToString();
+                }
+                database.Generate_invoice(Varaus_id);
+            }
+        }
     }
 }

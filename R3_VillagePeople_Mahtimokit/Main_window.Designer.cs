@@ -43,7 +43,6 @@
             this.lbl_Order_Dates = new System.Windows.Forms.Label();
             this.tbl_Order_1st_Col_Customer = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Order_Customer_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Order_Customers_Search = new System.Windows.Forms.Button();
             this.txt_Order_Customers_Search = new System.Windows.Forms.TextBox();
             this.lbl_Order_Customers = new System.Windows.Forms.Label();
             this.btn_Order_Customers_Add = new System.Windows.Forms.Button();
@@ -53,7 +52,6 @@
             this.dgv_Order_Cottages_All = new System.Windows.Forms.DataGridView();
             this.Btn_Order_Cottage_Add = new System.Windows.Forms.Button();
             this.tbl_Cottage_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Order_Cottages_Search = new System.Windows.Forms.Button();
             this.txt_Order_Cottages_Search = new System.Windows.Forms.TextBox();
             this.lbl_Order_Cottage = new System.Windows.Forms.Label();
             this.lbl_Order_Office = new System.Windows.Forms.Label();
@@ -72,7 +70,6 @@
             this.lbl_Order_Services = new System.Windows.Forms.Label();
             this.tbl_Order_3rd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
             this.txt_Order_Services_Search = new System.Windows.Forms.TextBox();
-            this.btn_Order_Services_Search = new System.Windows.Forms.Button();
             this.dgv_Order_Services_All = new System.Windows.Forms.DataGridView();
             this.btn_Order_Service_add = new System.Windows.Forms.Button();
             this.tbl_4th_Col_Summary = new System.Windows.Forms.TableLayoutPanel();
@@ -89,47 +86,30 @@
             this.lsv_Order_Summary_Services = new System.Windows.Forms.ListView();
             this.lbl_Order_Summary_Services = new System.Windows.Forms.Label();
             this.tbl_Order_Summary_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Order_Summary_Next_Page = new System.Windows.Forms.Button();
-            this.btn_Order_Summary_Delete_From_List = new System.Windows.Forms.Button();
             this.txt_Order_Additional_Details = new System.Windows.Forms.TextBox();
             this.tab_Edit = new System.Windows.Forms.TabPage();
             this.tbl_Edit_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_1st_Col_Customers = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Customer_Management = new System.Windows.Forms.Label();
             this.tbl_Edit_1st_Col_Customers_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Customer_Search = new System.Windows.Forms.Button();
             this.txt_Customer_Search = new System.Windows.Forms.TextBox();
             this.tbl_Edit_1st_Col_Customers_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Customer_Delete = new System.Windows.Forms.Button();
-            this.btn_Customer_Edit = new System.Windows.Forms.Button();
-            this.btn_Customer_Add = new System.Windows.Forms.Button();
             this.dgv_Customers_All = new System.Windows.Forms.DataGridView();
             this.tbl_Edit_2nd_Col_Offices_Cottages = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_2nd_Col_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Office = new System.Windows.Forms.Label();
             this.cbo_Office_Select = new System.Windows.Forms.ComboBox();
             this.tbl_Edit_2nd_Col_Offices_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Office_Delete = new System.Windows.Forms.Button();
-            this.btn_Office_Edit = new System.Windows.Forms.Button();
-            this.btn_Office_Add = new System.Windows.Forms.Button();
             this.tbl_Edit_Cottages = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Edit_3rd_Col_Cottages_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Cottages_Search = new System.Windows.Forms.Button();
             this.txt_Cottages_Search = new System.Windows.Forms.TextBox();
             this.tbl_Edit_Cottages_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Cottages_Delete = new System.Windows.Forms.Button();
-            this.btn_Cottages_Edit = new System.Windows.Forms.Button();
-            this.btn_Cottages_Add = new System.Windows.Forms.Button();
             this.dgv_Cottages_All = new System.Windows.Forms.DataGridView();
             this.lbl_Cottages = new System.Windows.Forms.Label();
             this.tbl_Edit_3rd_Col_Services = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Services = new System.Windows.Forms.Label();
             this.tbl_Edit_Services_Buttons = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Services_Add = new System.Windows.Forms.Button();
-            this.btn_Services_Edit = new System.Windows.Forms.Button();
-            this.btn_Services_Delete = new System.Windows.Forms.Button();
             this.tbl_Edit_2nd_Col_Services_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Services_Search = new System.Windows.Forms.Button();
             this.txt_Services_Search = new System.Windows.Forms.TextBox();
             this.dgv_Services_All = new System.Windows.Forms.DataGridView();
             this.tab_History = new System.Windows.Forms.TabPage();
@@ -137,7 +117,6 @@
             this.tbl_History_1st_Col_Customers_Offices = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Customer_Selection = new System.Windows.Forms.Label();
             this.tbl_History_Customer_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_History_Customer_Search = new System.Windows.Forms.Button();
             this.txt_History_Customer_Search = new System.Windows.Forms.TextBox();
             this.btn_History_Limit_To_Customer = new System.Windows.Forms.Button();
             this.tbl_History_Office = new System.Windows.Forms.TableLayoutPanel();
@@ -154,7 +133,6 @@
             this.tbl_History_Order_History = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_History_Orders = new System.Windows.Forms.Label();
             this.tbl_History_Order_Search = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_History_Order_Search = new System.Windows.Forms.Button();
             this.txt_History_Order_Search = new System.Windows.Forms.TextBox();
             this.tbl_History_Order_Dates_Delete = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_Dates = new System.Windows.Forms.TableLayoutPanel();
@@ -166,7 +144,6 @@
             this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Selected_Order_Basic_Details = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_Details_Delete = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_History_Order_History_Del = new System.Windows.Forms.Button();
             this.lbl_History_Selected_Order_Details = new System.Windows.Forms.Label();
             this.lbl_History_Selected_Order_Customer = new System.Windows.Forms.Label();
             this.lbl_History_Selected_Order_Office = new System.Windows.Forms.Label();
@@ -240,6 +217,30 @@
             this.lbl_Log = new System.Windows.Forms.Label();
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
+            this.btn_Order_Customers_Search = new System.Windows.Forms.Button();
+            this.btn_Order_Cottages_Search = new System.Windows.Forms.Button();
+            this.btn_Order_Services_Search = new System.Windows.Forms.Button();
+            this.btn_Order_Summary_Next_Page = new System.Windows.Forms.Button();
+            this.btn_Order_Summary_Delete_From_List = new System.Windows.Forms.Button();
+            this.btn_Customer_Search = new System.Windows.Forms.Button();
+            this.btn_Customer_Delete = new System.Windows.Forms.Button();
+            this.btn_Customer_Edit = new System.Windows.Forms.Button();
+            this.btn_Customer_Add = new System.Windows.Forms.Button();
+            this.btn_Office_Delete = new System.Windows.Forms.Button();
+            this.btn_Office_Edit = new System.Windows.Forms.Button();
+            this.btn_Office_Add = new System.Windows.Forms.Button();
+            this.btn_Cottages_Search = new System.Windows.Forms.Button();
+            this.btn_Cottages_Delete = new System.Windows.Forms.Button();
+            this.btn_Cottages_Edit = new System.Windows.Forms.Button();
+            this.btn_Cottages_Add = new System.Windows.Forms.Button();
+            this.btn_Services_Add = new System.Windows.Forms.Button();
+            this.btn_Services_Edit = new System.Windows.Forms.Button();
+            this.btn_Services_Delete = new System.Windows.Forms.Button();
+            this.btn_Services_Search = new System.Windows.Forms.Button();
+            this.btn_History_Customer_Search = new System.Windows.Forms.Button();
+            this.btn_History_Order_Search = new System.Windows.Forms.Button();
+            this.btn_History_Order_Delete = new System.Windows.Forms.Button();
+            this.btn_History_Order_Print = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
@@ -534,18 +535,6 @@
             this.tbl_Order_Customer_Search.Size = new System.Drawing.Size(195, 40);
             this.tbl_Order_Customer_Search.TabIndex = 0;
             // 
-            // btn_Order_Customers_Search
-            // 
-            this.btn_Order_Customers_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Order_Customers_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(158, 3);
-            this.btn_Order_Customers_Search.Name = "btn_Order_Customers_Search";
-            this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Order_Customers_Search.TabIndex = 102;
-            this.btn_Order_Customers_Search.TabStop = false;
-            this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
-            // 
             // txt_Order_Customers_Search
             // 
             this.txt_Order_Customers_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -704,18 +693,6 @@
             this.tbl_Cottage_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tbl_Cottage_Search.Size = new System.Drawing.Size(231, 38);
             this.tbl_Cottage_Search.TabIndex = 108;
-            // 
-            // btn_Order_Cottages_Search
-            // 
-            this.btn_Order_Cottages_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Order_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Cottages_Search.Location = new System.Drawing.Point(194, 3);
-            this.btn_Order_Cottages_Search.Name = "btn_Order_Cottages_Search";
-            this.btn_Order_Cottages_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Order_Cottages_Search.TabIndex = 102;
-            this.btn_Order_Cottages_Search.TabStop = false;
-            this.btn_Order_Cottages_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Order_Cottages_Search
             // 
@@ -960,18 +937,6 @@
             this.txt_Order_Services_Search.TabIndex = 25;
             this.txt_Order_Services_Search.TextChanged += new System.EventHandler(this.txt_Order_Services_Search_TextChanged);
             // 
-            // btn_Order_Services_Search
-            // 
-            this.btn_Order_Services_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Order_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Services_Search.Location = new System.Drawing.Point(179, 3);
-            this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
-            this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Order_Services_Search.TabIndex = 102;
-            this.btn_Order_Services_Search.TabStop = false;
-            this.btn_Order_Services_Search.UseVisualStyleBackColor = true;
-            // 
             // dgv_Order_Services_All
             // 
             this.dgv_Order_Services_All.AllowUserToAddRows = false;
@@ -1210,31 +1175,6 @@
             this.tbl_Order_Summary_Buttons.Size = new System.Drawing.Size(210, 54);
             this.tbl_Order_Summary_Buttons.TabIndex = 54;
             // 
-            // btn_Order_Summary_Next_Page
-            // 
-            this.btn_Order_Summary_Next_Page.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Order_Summary_Next_Page.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.next;
-            this.btn_Order_Summary_Next_Page.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Summary_Next_Page.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Summary_Next_Page.Location = new System.Drawing.Point(159, 3);
-            this.btn_Order_Summary_Next_Page.Name = "btn_Order_Summary_Next_Page";
-            this.btn_Order_Summary_Next_Page.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Next_Page.TabIndex = 37;
-            this.btn_Order_Summary_Next_Page.UseVisualStyleBackColor = true;
-            this.btn_Order_Summary_Next_Page.Click += new System.EventHandler(this.btn_Order_Summary_Next_Page_Click);
-            // 
-            // btn_Order_Summary_Delete_From_List
-            // 
-            this.btn_Order_Summary_Delete_From_List.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.remove_close;
-            this.btn_Order_Summary_Delete_From_List.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Order_Summary_Delete_From_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Order_Summary_Delete_From_List.Location = new System.Drawing.Point(3, 3);
-            this.btn_Order_Summary_Delete_From_List.Name = "btn_Order_Summary_Delete_From_List";
-            this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
-            this.btn_Order_Summary_Delete_From_List.TabIndex = 35;
-            this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
-            this.btn_Order_Summary_Delete_From_List.Click += new System.EventHandler(this.btn_Order_Summary_Delete_From_List_Click);
-            // 
             // txt_Order_Additional_Details
             // 
             this.txt_Order_Additional_Details.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1334,19 +1274,6 @@
             this.tbl_Edit_1st_Col_Customers_Search.Size = new System.Drawing.Size(285, 40);
             this.tbl_Edit_1st_Col_Customers_Search.TabIndex = 101;
             // 
-            // btn_Customer_Search
-            // 
-            this.btn_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Customer_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Search.Location = new System.Drawing.Point(250, 3);
-            this.btn_Customer_Search.Name = "btn_Customer_Search";
-            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Customer_Search.TabIndex = 102;
-            this.btn_Customer_Search.TabStop = false;
-            this.btn_Customer_Search.UseVisualStyleBackColor = true;
-            // 
             // txt_Customer_Search
             // 
             this.txt_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1376,45 +1303,6 @@
             this.tbl_Edit_1st_Col_Customers_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Edit_1st_Col_Customers_Buttons.Size = new System.Drawing.Size(285, 58);
             this.tbl_Edit_1st_Col_Customers_Buttons.TabIndex = 102;
-            // 
-            // btn_Customer_Delete
-            // 
-            this.btn_Customer_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Customer_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_Customer_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Delete.Location = new System.Drawing.Point(234, 7);
-            this.btn_Customer_Delete.Name = "btn_Customer_Delete";
-            this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Delete.TabIndex = 48;
-            this.btn_Customer_Delete.UseVisualStyleBackColor = true;
-            this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click);
-            // 
-            // btn_Customer_Edit
-            // 
-            this.btn_Customer_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Customer_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
-            this.btn_Customer_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Edit.Location = new System.Drawing.Point(118, 7);
-            this.btn_Customer_Edit.Name = "btn_Customer_Edit";
-            this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Edit.TabIndex = 46;
-            this.btn_Customer_Edit.UseVisualStyleBackColor = true;
-            this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click);
-            // 
-            // btn_Customer_Add
-            // 
-            this.btn_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Customer_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
-            this.btn_Customer_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Customer_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Customer_Add.Location = new System.Drawing.Point(3, 7);
-            this.btn_Customer_Add.Name = "btn_Customer_Add";
-            this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Customer_Add.TabIndex = 44;
-            this.btn_Customer_Add.UseVisualStyleBackColor = true;
-            this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click);
             // 
             // dgv_Customers_All
             // 
@@ -1522,44 +1410,6 @@
             this.tbl_Edit_2nd_Col_Offices_Buttons.Size = new System.Drawing.Size(279, 54);
             this.tbl_Edit_2nd_Col_Offices_Buttons.TabIndex = 52;
             // 
-            // btn_Office_Delete
-            // 
-            this.btn_Office_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Office_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_Office_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Delete.Location = new System.Drawing.Point(228, 3);
-            this.btn_Office_Delete.Name = "btn_Office_Delete";
-            this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Delete.TabIndex = 56;
-            this.btn_Office_Delete.UseVisualStyleBackColor = true;
-            this.btn_Office_Delete.Click += new System.EventHandler(this.btn_Office_Delete_Click);
-            // 
-            // btn_Office_Edit
-            // 
-            this.btn_Office_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Office_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
-            this.btn_Office_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Edit.Location = new System.Drawing.Point(114, 3);
-            this.btn_Office_Edit.Name = "btn_Office_Edit";
-            this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Edit.TabIndex = 54;
-            this.btn_Office_Edit.UseVisualStyleBackColor = true;
-            this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click);
-            // 
-            // btn_Office_Add
-            // 
-            this.btn_Office_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
-            this.btn_Office_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Office_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Office_Add.Location = new System.Drawing.Point(3, 3);
-            this.btn_Office_Add.Name = "btn_Office_Add";
-            this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Office_Add.TabIndex = 52;
-            this.btn_Office_Add.UseVisualStyleBackColor = true;
-            this.btn_Office_Add.Click += new System.EventHandler(this.btn_Office_Add_Click);
-            // 
             // tbl_Edit_Cottages
             // 
             this.tbl_Edit_Cottages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1602,19 +1452,6 @@
             this.tbl_Edit_3rd_Col_Cottages_Search.Size = new System.Drawing.Size(279, 38);
             this.tbl_Edit_3rd_Col_Cottages_Search.TabIndex = 101;
             // 
-            // btn_Cottages_Search
-            // 
-            this.btn_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottages_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Search.Location = new System.Drawing.Point(244, 3);
-            this.btn_Cottages_Search.Name = "btn_Cottages_Search";
-            this.btn_Cottages_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Cottages_Search.TabIndex = 102;
-            this.btn_Cottages_Search.TabStop = false;
-            this.btn_Cottages_Search.UseVisualStyleBackColor = true;
-            // 
             // txt_Cottages_Search
             // 
             this.txt_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1644,45 +1481,6 @@
             this.tbl_Edit_Cottages_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Edit_Cottages_Buttons.Size = new System.Drawing.Size(279, 58);
             this.tbl_Edit_Cottages_Buttons.TabIndex = 102;
-            // 
-            // btn_Cottages_Delete
-            // 
-            this.btn_Cottages_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cottages_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_Cottages_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Delete.Location = new System.Drawing.Point(228, 7);
-            this.btn_Cottages_Delete.Name = "btn_Cottages_Delete";
-            this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Delete.TabIndex = 66;
-            this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Delete.Click += new System.EventHandler(this.btn_Cottages_Delete_Click);
-            // 
-            // btn_Cottages_Edit
-            // 
-            this.btn_Cottages_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Cottages_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
-            this.btn_Cottages_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Edit.Location = new System.Drawing.Point(115, 7);
-            this.btn_Cottages_Edit.Name = "btn_Cottages_Edit";
-            this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Edit.TabIndex = 64;
-            this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click);
-            // 
-            // btn_Cottages_Add
-            // 
-            this.btn_Cottages_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Cottages_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
-            this.btn_Cottages_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cottages_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Cottages_Add.Location = new System.Drawing.Point(3, 7);
-            this.btn_Cottages_Add.Name = "btn_Cottages_Add";
-            this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Cottages_Add.TabIndex = 62;
-            this.btn_Cottages_Add.UseVisualStyleBackColor = true;
-            this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click);
             // 
             // dgv_Cottages_All
             // 
@@ -1774,45 +1572,6 @@
             this.tbl_Edit_Services_Buttons.Size = new System.Drawing.Size(285, 62);
             this.tbl_Edit_Services_Buttons.TabIndex = 102;
             // 
-            // btn_Services_Add
-            // 
-            this.btn_Services_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Services_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
-            this.btn_Services_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Add.Location = new System.Drawing.Point(3, 11);
-            this.btn_Services_Add.Name = "btn_Services_Add";
-            this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Add.TabIndex = 74;
-            this.btn_Services_Add.UseVisualStyleBackColor = true;
-            this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click);
-            // 
-            // btn_Services_Edit
-            // 
-            this.btn_Services_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Services_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
-            this.btn_Services_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Edit.Location = new System.Drawing.Point(118, 11);
-            this.btn_Services_Edit.Name = "btn_Services_Edit";
-            this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Edit.TabIndex = 76;
-            this.btn_Services_Edit.UseVisualStyleBackColor = true;
-            this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click);
-            // 
-            // btn_Services_Delete
-            // 
-            this.btn_Services_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Services_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_Services_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Delete.Location = new System.Drawing.Point(234, 11);
-            this.btn_Services_Delete.Name = "btn_Services_Delete";
-            this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
-            this.btn_Services_Delete.TabIndex = 78;
-            this.btn_Services_Delete.UseVisualStyleBackColor = true;
-            this.btn_Services_Delete.Click += new System.EventHandler(this.btn_Services_Delete_Click);
-            // 
             // tbl_Edit_2nd_Col_Services_Search
             // 
             this.tbl_Edit_2nd_Col_Services_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1829,19 +1588,6 @@
             this.tbl_Edit_2nd_Col_Services_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_Edit_2nd_Col_Services_Search.Size = new System.Drawing.Size(285, 39);
             this.tbl_Edit_2nd_Col_Services_Search.TabIndex = 101;
-            // 
-            // btn_Services_Search
-            // 
-            this.btn_Services_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Services_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Services_Search.Location = new System.Drawing.Point(250, 3);
-            this.btn_Services_Search.Name = "btn_Services_Search";
-            this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_Services_Search.TabIndex = 72;
-            this.btn_Services_Search.TabStop = false;
-            this.btn_Services_Search.UseVisualStyleBackColor = true;
             // 
             // txt_Services_Search
             // 
@@ -1967,19 +1713,6 @@
             this.tbl_History_Customer_Search.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbl_History_Customer_Search.Size = new System.Drawing.Size(276, 41);
             this.tbl_History_Customer_Search.TabIndex = 101;
-            // 
-            // btn_History_Customer_Search
-            // 
-            this.btn_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Customer_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_History_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Customer_Search.Location = new System.Drawing.Point(241, 3);
-            this.btn_History_Customer_Search.Name = "btn_History_Customer_Search";
-            this.btn_History_Customer_Search.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Customer_Search.TabIndex = 102;
-            this.btn_History_Customer_Search.TabStop = false;
-            this.btn_History_Customer_Search.UseVisualStyleBackColor = true;
             // 
             // txt_History_Customer_Search
             // 
@@ -2216,19 +1949,6 @@
             this.tbl_History_Order_Search.Size = new System.Drawing.Size(298, 36);
             this.tbl_History_Order_Search.TabIndex = 101;
             // 
-            // btn_History_Order_Search
-            // 
-            this.btn_History_Order_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_History_Order_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
-            this.btn_History_Order_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_Search.Location = new System.Drawing.Point(263, 3);
-            this.btn_History_Order_Search.Name = "btn_History_Order_Search";
-            this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
-            this.btn_History_Order_Search.TabIndex = 102;
-            this.btn_History_Order_Search.TabStop = false;
-            this.btn_History_Order_Search.UseVisualStyleBackColor = true;
-            // 
             // txt_History_Order_Search
             // 
             this.txt_History_Order_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -2380,8 +2100,8 @@
             this.tbl_History_Selected_Order_Basic_Details.Location = new System.Drawing.Point(8, 12);
             this.tbl_History_Selected_Order_Basic_Details.Name = "tbl_History_Selected_Order_Basic_Details";
             this.tbl_History_Selected_Order_Basic_Details.RowCount = 6;
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
@@ -2394,30 +2114,19 @@
             this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Details_Delete.ColumnCount = 2;
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.4767F));
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5233F));
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_History_Del, 0, 0);
+            this.tbl_History_Order_Details_Delete.ColumnCount = 3;
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tbl_History_Order_Details_Delete.Controls.Add(this.lbl_History_Selected_Order_Details, 0, 0);
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_Delete, 2, 0);
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_Print, 1, 0);
             this.tbl_History_Order_Details_Delete.Location = new System.Drawing.Point(3, 3);
             this.tbl_History_Order_Details_Delete.Name = "tbl_History_Order_Details_Delete";
             this.tbl_History_Order_Details_Delete.RowCount = 1;
-            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(270, 49);
+            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(270, 54);
             this.tbl_History_Order_Details_Delete.TabIndex = 107;
-            // 
-            // btn_History_Order_History_Del
-            // 
-            this.btn_History_Order_History_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_History_Del.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_History_Order_History_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_History_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_History_Del.Location = new System.Drawing.Point(235, 3);
-            this.btn_History_Order_History_Del.Name = "btn_History_Order_History_Del";
-            this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Order_History_Del.TabIndex = 100;
-            this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
-            this.btn_History_Order_History_Del.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
             // 
             // lbl_History_Selected_Order_Details
             // 
@@ -2470,7 +2179,7 @@
             // lbl_History_Order_varaus_id
             // 
             this.lbl_History_Order_varaus_id.AutoSize = true;
-            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 55);
+            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 60);
             this.lbl_History_Order_varaus_id.Name = "lbl_History_Order_varaus_id";
             this.lbl_History_Order_varaus_id.Size = new System.Drawing.Size(118, 20);
             this.lbl_History_Order_varaus_id.TabIndex = 108;
@@ -3387,6 +3096,313 @@
             this.btn_log_update_grid.UseVisualStyleBackColor = true;
             this.btn_log_update_grid.Click += new System.EventHandler(this.btn_log_update_grid_Click);
             // 
+            // btn_Order_Customers_Search
+            // 
+            this.btn_Order_Customers_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Order_Customers_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Customers_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Customers_Search.Location = new System.Drawing.Point(158, 3);
+            this.btn_Order_Customers_Search.Name = "btn_Order_Customers_Search";
+            this.btn_Order_Customers_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Order_Customers_Search.TabIndex = 102;
+            this.btn_Order_Customers_Search.TabStop = false;
+            this.btn_Order_Customers_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_Order_Cottages_Search
+            // 
+            this.btn_Order_Cottages_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Order_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Cottages_Search.Location = new System.Drawing.Point(194, 3);
+            this.btn_Order_Cottages_Search.Name = "btn_Order_Cottages_Search";
+            this.btn_Order_Cottages_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Order_Cottages_Search.TabIndex = 102;
+            this.btn_Order_Cottages_Search.TabStop = false;
+            this.btn_Order_Cottages_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_Order_Services_Search
+            // 
+            this.btn_Order_Services_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Order_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Services_Search.Location = new System.Drawing.Point(179, 3);
+            this.btn_Order_Services_Search.Name = "btn_Order_Services_Search";
+            this.btn_Order_Services_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Order_Services_Search.TabIndex = 102;
+            this.btn_Order_Services_Search.TabStop = false;
+            this.btn_Order_Services_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_Order_Summary_Next_Page
+            // 
+            this.btn_Order_Summary_Next_Page.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Order_Summary_Next_Page.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.next;
+            this.btn_Order_Summary_Next_Page.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Summary_Next_Page.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Summary_Next_Page.Location = new System.Drawing.Point(159, 3);
+            this.btn_Order_Summary_Next_Page.Name = "btn_Order_Summary_Next_Page";
+            this.btn_Order_Summary_Next_Page.Size = new System.Drawing.Size(48, 48);
+            this.btn_Order_Summary_Next_Page.TabIndex = 37;
+            this.btn_Order_Summary_Next_Page.UseVisualStyleBackColor = true;
+            this.btn_Order_Summary_Next_Page.Click += new System.EventHandler(this.btn_Order_Summary_Next_Page_Click);
+            // 
+            // btn_Order_Summary_Delete_From_List
+            // 
+            this.btn_Order_Summary_Delete_From_List.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.remove_close;
+            this.btn_Order_Summary_Delete_From_List.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Order_Summary_Delete_From_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Order_Summary_Delete_From_List.Location = new System.Drawing.Point(3, 3);
+            this.btn_Order_Summary_Delete_From_List.Name = "btn_Order_Summary_Delete_From_List";
+            this.btn_Order_Summary_Delete_From_List.Size = new System.Drawing.Size(48, 48);
+            this.btn_Order_Summary_Delete_From_List.TabIndex = 35;
+            this.btn_Order_Summary_Delete_From_List.UseVisualStyleBackColor = true;
+            this.btn_Order_Summary_Delete_From_List.Click += new System.EventHandler(this.btn_Order_Summary_Delete_From_List_Click);
+            // 
+            // btn_Customer_Search
+            // 
+            this.btn_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Customer_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Search.Location = new System.Drawing.Point(250, 3);
+            this.btn_Customer_Search.Name = "btn_Customer_Search";
+            this.btn_Customer_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Customer_Search.TabIndex = 102;
+            this.btn_Customer_Search.TabStop = false;
+            this.btn_Customer_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_Customer_Delete
+            // 
+            this.btn_Customer_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Customer_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_Customer_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Delete.Location = new System.Drawing.Point(234, 7);
+            this.btn_Customer_Delete.Name = "btn_Customer_Delete";
+            this.btn_Customer_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Delete.TabIndex = 48;
+            this.btn_Customer_Delete.UseVisualStyleBackColor = true;
+            this.btn_Customer_Delete.Click += new System.EventHandler(this.btn_Customer_Delete_Click);
+            // 
+            // btn_Customer_Edit
+            // 
+            this.btn_Customer_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Customer_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
+            this.btn_Customer_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Edit.Location = new System.Drawing.Point(118, 7);
+            this.btn_Customer_Edit.Name = "btn_Customer_Edit";
+            this.btn_Customer_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Edit.TabIndex = 46;
+            this.btn_Customer_Edit.UseVisualStyleBackColor = true;
+            this.btn_Customer_Edit.Click += new System.EventHandler(this.btn_Customer_Edit_Click);
+            // 
+            // btn_Customer_Add
+            // 
+            this.btn_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Customer_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
+            this.btn_Customer_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Customer_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Customer_Add.Location = new System.Drawing.Point(3, 7);
+            this.btn_Customer_Add.Name = "btn_Customer_Add";
+            this.btn_Customer_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Customer_Add.TabIndex = 44;
+            this.btn_Customer_Add.UseVisualStyleBackColor = true;
+            this.btn_Customer_Add.Click += new System.EventHandler(this.btn_Customer_Add_Click);
+            // 
+            // btn_Office_Delete
+            // 
+            this.btn_Office_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Office_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_Office_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Delete.Location = new System.Drawing.Point(228, 3);
+            this.btn_Office_Delete.Name = "btn_Office_Delete";
+            this.btn_Office_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Delete.TabIndex = 56;
+            this.btn_Office_Delete.UseVisualStyleBackColor = true;
+            this.btn_Office_Delete.Click += new System.EventHandler(this.btn_Office_Delete_Click);
+            // 
+            // btn_Office_Edit
+            // 
+            this.btn_Office_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Office_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
+            this.btn_Office_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Edit.Location = new System.Drawing.Point(114, 3);
+            this.btn_Office_Edit.Name = "btn_Office_Edit";
+            this.btn_Office_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Edit.TabIndex = 54;
+            this.btn_Office_Edit.UseVisualStyleBackColor = true;
+            this.btn_Office_Edit.Click += new System.EventHandler(this.btn_Office_Edit_Click);
+            // 
+            // btn_Office_Add
+            // 
+            this.btn_Office_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
+            this.btn_Office_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Office_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Office_Add.Location = new System.Drawing.Point(3, 3);
+            this.btn_Office_Add.Name = "btn_Office_Add";
+            this.btn_Office_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Office_Add.TabIndex = 52;
+            this.btn_Office_Add.UseVisualStyleBackColor = true;
+            this.btn_Office_Add.Click += new System.EventHandler(this.btn_Office_Add_Click);
+            // 
+            // btn_Cottages_Search
+            // 
+            this.btn_Cottages_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cottages_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Cottages_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Search.Location = new System.Drawing.Point(244, 3);
+            this.btn_Cottages_Search.Name = "btn_Cottages_Search";
+            this.btn_Cottages_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Cottages_Search.TabIndex = 102;
+            this.btn_Cottages_Search.TabStop = false;
+            this.btn_Cottages_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cottages_Delete
+            // 
+            this.btn_Cottages_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cottages_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_Cottages_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Delete.Location = new System.Drawing.Point(228, 7);
+            this.btn_Cottages_Delete.Name = "btn_Cottages_Delete";
+            this.btn_Cottages_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Delete.TabIndex = 66;
+            this.btn_Cottages_Delete.UseVisualStyleBackColor = true;
+            this.btn_Cottages_Delete.Click += new System.EventHandler(this.btn_Cottages_Delete_Click);
+            // 
+            // btn_Cottages_Edit
+            // 
+            this.btn_Cottages_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Cottages_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
+            this.btn_Cottages_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Edit.Location = new System.Drawing.Point(115, 7);
+            this.btn_Cottages_Edit.Name = "btn_Cottages_Edit";
+            this.btn_Cottages_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Edit.TabIndex = 64;
+            this.btn_Cottages_Edit.UseVisualStyleBackColor = true;
+            this.btn_Cottages_Edit.Click += new System.EventHandler(this.btn_Cottages_Edit_Click);
+            // 
+            // btn_Cottages_Add
+            // 
+            this.btn_Cottages_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Cottages_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
+            this.btn_Cottages_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cottages_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Cottages_Add.Location = new System.Drawing.Point(3, 7);
+            this.btn_Cottages_Add.Name = "btn_Cottages_Add";
+            this.btn_Cottages_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Cottages_Add.TabIndex = 62;
+            this.btn_Cottages_Add.UseVisualStyleBackColor = true;
+            this.btn_Cottages_Add.Click += new System.EventHandler(this.btn_Cottages_Add_Click);
+            // 
+            // btn_Services_Add
+            // 
+            this.btn_Services_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Services_Add.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.add;
+            this.btn_Services_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Add.Location = new System.Drawing.Point(3, 11);
+            this.btn_Services_Add.Name = "btn_Services_Add";
+            this.btn_Services_Add.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Add.TabIndex = 74;
+            this.btn_Services_Add.UseVisualStyleBackColor = true;
+            this.btn_Services_Add.Click += new System.EventHandler(this.btn_Services_Add_Click);
+            // 
+            // btn_Services_Edit
+            // 
+            this.btn_Services_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Services_Edit.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.edit;
+            this.btn_Services_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Edit.Location = new System.Drawing.Point(118, 11);
+            this.btn_Services_Edit.Name = "btn_Services_Edit";
+            this.btn_Services_Edit.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Edit.TabIndex = 76;
+            this.btn_Services_Edit.UseVisualStyleBackColor = true;
+            this.btn_Services_Edit.Click += new System.EventHandler(this.btn_Services_Edit_Click);
+            // 
+            // btn_Services_Delete
+            // 
+            this.btn_Services_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Services_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_Services_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Delete.Location = new System.Drawing.Point(234, 11);
+            this.btn_Services_Delete.Name = "btn_Services_Delete";
+            this.btn_Services_Delete.Size = new System.Drawing.Size(48, 48);
+            this.btn_Services_Delete.TabIndex = 78;
+            this.btn_Services_Delete.UseVisualStyleBackColor = true;
+            this.btn_Services_Delete.Click += new System.EventHandler(this.btn_Services_Delete_Click);
+            // 
+            // btn_Services_Search
+            // 
+            this.btn_Services_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Services_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_Services_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Services_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Services_Search.Location = new System.Drawing.Point(250, 3);
+            this.btn_Services_Search.Name = "btn_Services_Search";
+            this.btn_Services_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_Services_Search.TabIndex = 72;
+            this.btn_Services_Search.TabStop = false;
+            this.btn_Services_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_History_Customer_Search
+            // 
+            this.btn_History_Customer_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Customer_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_History_Customer_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Customer_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Customer_Search.Location = new System.Drawing.Point(241, 3);
+            this.btn_History_Customer_Search.Name = "btn_History_Customer_Search";
+            this.btn_History_Customer_Search.Size = new System.Drawing.Size(32, 32);
+            this.btn_History_Customer_Search.TabIndex = 102;
+            this.btn_History_Customer_Search.TabStop = false;
+            this.btn_History_Customer_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_History_Order_Search
+            // 
+            this.btn_History_Order_Search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_History_Order_Search.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.search;
+            this.btn_History_Order_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_Search.Location = new System.Drawing.Point(263, 3);
+            this.btn_History_Order_Search.Name = "btn_History_Order_Search";
+            this.btn_History_Order_Search.Size = new System.Drawing.Size(32, 30);
+            this.btn_History_Order_Search.TabIndex = 102;
+            this.btn_History_Order_Search.TabStop = false;
+            this.btn_History_Order_Search.UseVisualStyleBackColor = true;
+            // 
+            // btn_History_Order_Delete
+            // 
+            this.btn_History_Order_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_History_Order_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_Delete.Location = new System.Drawing.Point(235, 3);
+            this.btn_History_Order_Delete.Name = "btn_History_Order_Delete";
+            this.btn_History_Order_Delete.Size = new System.Drawing.Size(32, 32);
+            this.btn_History_Order_Delete.TabIndex = 100;
+            this.btn_History_Order_Delete.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Delete.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
+            // 
+            // btn_History_Order_Print
+            // 
+            this.btn_History_Order_Print.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_Print.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.print;
+            this.btn_History_Order_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_Print.Location = new System.Drawing.Point(181, 3);
+            this.btn_History_Order_Print.Name = "btn_History_Order_Print";
+            this.btn_History_Order_Print.Size = new System.Drawing.Size(48, 48);
+            this.btn_History_Order_Print.TabIndex = 101;
+            this.btn_History_Order_Print.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Print.Click += new System.EventHandler(this.btn_History_Order_Print_Click);
+            // 
             // btn_History_Order_History_Delete
             // 
             this.btn_History_Order_History_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3670,7 +3686,7 @@
         private System.Windows.Forms.Label lbl_History_Order_Services;
         private System.Windows.Forms.TextBox txt_History_Order_Additional_Details;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Details_Delete;
-        private System.Windows.Forms.Button btn_History_Order_History_Del;
+        private System.Windows.Forms.Button btn_History_Order_Delete;
         private System.Windows.Forms.Label lbl_History_Selected_Order_Details;
         private System.Windows.Forms.Button btn_History_Order_History_Delete;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Filter_Summary;
@@ -3750,5 +3766,6 @@
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
         private System.Windows.Forms.Label lbl_Common_Settings_History_Start_Date;
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_Start_Date;
+        private System.Windows.Forms.Button btn_History_Order_Print;
     }
 }
