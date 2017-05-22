@@ -681,13 +681,27 @@ namespace R3_VillagePeople_Mahtimokit
             if (dgv_Customers_All.SelectedRows.Count > 0)
             {
                 string asiakas_id = "";
+                string nimi = "";
                 // Haetaan valitun asiakkaan ID datagridviewistä.
                 foreach (DataGridViewRow row in dgv_Order_Customers_All.SelectedRows)
                 {
+                    // 0  = ID, 1 = Nimi.
                     asiakas_id = row.Cells[0].Value.ToString();
+                    nimi = row.Cells[1].Value.ToString();
+                }
+                // Vahvistus
+                Custom_messagebox.Yes = "Kyllä";
+                Custom_messagebox.No = "Ei";
+                Custom_messagebox.Register();
+                DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa asiakkaan: \"" + nimi +
+                    "\"?", "Asiakkaan poistaminen", MessageBoxButtons.YesNo);
+                Custom_messagebox.Unregister();
+                if (Confirm_delete == DialogResult.No)
+                {
+                    return;
                 }
                 // Tarkistetaan, onko asiakas yhdistetty uuteen varaukseen.
-                if(asiakas_id == Reservation_asiakas_id)
+                if (asiakas_id == Reservation_asiakas_id)
                 {
                     MessageBox.Show("Virhe! Olet luomassa asiakkaalle uutta varausta.\nJos haluat poista asiakkaan, muuta ensin varauksen asiakasta.");
                     return;
@@ -1155,7 +1169,7 @@ namespace R3_VillagePeople_Mahtimokit
         public string Varaus_id = "";
         private void btn_Order_Summary_Next_Page_Click(object sender, EventArgs e)
         {
-            if ((lsv_Order_Summary_Cottages.Items.Count == 0 && lsv_Order_Summary_Services.Items.Count == 0) || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
+            if (lsv_Order_Summary_Cottages.Items.Count == 0 || lbl_Order_Summary_Customer.Text == "Asiakas:" || lbl_Order_Summary_Office.Text == "Toimipiste:")
             {
                 MessageBox.Show("Virhe! Tilauksessa on oltava vähintään 1 mökki, asiakas ja toimipiste.");
                 return;
@@ -1283,8 +1297,19 @@ namespace R3_VillagePeople_Mahtimokit
                 // Haetaan valitun DataGridView kentän ID.
                 int selectedrowindex = dgv_Services_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Services_All.Rows[selectedrowindex];
+                string nimi = Convert.ToString(selectedRow.Cells["nimi"].Value);
+                // Vahvistus
+                Custom_messagebox.Yes = "Kyllä";
+                Custom_messagebox.No = "Ei";
+                Custom_messagebox.Register();
+                DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa palvelun: \"" + nimi +
+                    "\"?", "Palvelun poistaminen", MessageBoxButtons.YesNo);
+                Custom_messagebox.Unregister();
+                if (Confirm_delete == DialogResult.No)
+                {
+                    return;
+                }
                 string palvelu_id = Convert.ToString(selectedRow.Cells["palvelu_id"].Value);
-
                 // Tarkistetaan, onko palvelu yhdistetty uuteen varaukseen.
                 List<int> services_in_new_order = new List<int>();
                 foreach (ListViewItem service_rows in lsv_Order_Summary_Services.Items)
@@ -1348,6 +1373,18 @@ namespace R3_VillagePeople_Mahtimokit
                 // Haetaan valitun DataGridView kentän ID.
                 int selectedrowindex = dgv_Cottages_All.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_Cottages_All.Rows[selectedrowindex];
+                // Vahvistus
+                string nimi = Convert.ToString(selectedRow.Cells["nimi"].Value);
+                Custom_messagebox.Yes = "Kyllä";
+                Custom_messagebox.No = "Ei";
+                Custom_messagebox.Register();
+                DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa mökin: \"" + nimi +
+                    "\"?", "Mökin poistaminen", MessageBoxButtons.YesNo);
+                Custom_messagebox.Unregister();
+                if (Confirm_delete == DialogResult.No)
+                {
+                    return;
+                }
                 string majoitus_id = Convert.ToString(selectedRow.Cells["majoitus_id"].Value);
                 // Tarkistetaan, onko mökki yhdistetty uuteen varaukseen.
                 List<int> cottages_in_new_order = new List<int>();
@@ -1604,6 +1641,17 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos jokin varaus on valittuna:
             if (varaus_id_to_delete != "")
             {
+                // Vahvistus
+                Custom_messagebox.Yes = "Kyllä";
+                Custom_messagebox.No = "Ei";
+                Custom_messagebox.Register();
+                DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa varauksen nro.: \"" + varaus_id_to_delete +
+                    "\"?", "Varauksen poistaminen", MessageBoxButtons.YesNo);
+                Custom_messagebox.Unregister();
+                if (Confirm_delete == DialogResult.No)
+                {
+                    return;
+                }
                 // Varauksen_majoitus poisto
                 SqlCommand database_query_order_cottage_details = new SqlCommand("DELETE FROM Varauksen_majoitus WHERE varaus_id = @varaus_id");
                 database_query_order_cottage_details.Connection = database_connection;
@@ -1627,10 +1675,13 @@ namespace R3_VillagePeople_Mahtimokit
                 database_connection.Close();
             }
             // Päivitetään historia ja resetoidaan kentät.
+            lbl_History_Order_varaus_id.Text = "Varausnumero:";
             lbl_History_Order_Start.Text = "Alkamispäivä";
             lbl_History_Order_End.Text = "Päättymispäivä:";
             lbl_History_Selected_Order_Office.Text = "Toimipiste:";
             lbl_History_Selected_Order_Customer.Text = "Asiakas:";
+            lsv_History_Order_Cottages.Clear();
+            lsv_History_Order_Services.Clear();
             txt_History_Order_Additional_Details.Clear();
             Get_order_history_to_grid();
             // Lokin päivitys
@@ -1648,8 +1699,13 @@ namespace R3_VillagePeople_Mahtimokit
                 return;
             }
             string office_name = cbo_Office_Select.Text.ToString();
+            // Vahvistus
+            Custom_messagebox.Yes = "Kyllä";
+            Custom_messagebox.No = "Ei";
+            Custom_messagebox.Register();
             DialogResult Confirm_delete = MessageBox.Show("Haluatko varmasti poistaa toimipisteen: \"" + office_name +
                 "\"?", "Toimipisteen poistaminen", MessageBoxButtons.YesNo);
+            Custom_messagebox.Unregister();
             if (Confirm_delete == DialogResult.No)
             {
                 return;

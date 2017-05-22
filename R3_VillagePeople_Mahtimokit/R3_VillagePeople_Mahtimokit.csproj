@@ -85,6 +85,7 @@
     <Compile Include="Invoicing.Designer.cs">
       <DependentUpon>Invoicing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom_messagebox.cs" />
     <Compile Include="Office_popup.cs">
       <SubType>Form</SubType>
     </Compile>
