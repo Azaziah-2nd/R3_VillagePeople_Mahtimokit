@@ -65,8 +65,8 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_1 = new System.Windows.Forms.TextBox();
             this.txt_Invoicing_3rd_Row_Village_People_Info_2 = new System.Windows.Forms.TextBox();
             this.txt_Invoicing_3rd_Row_Village_People_Info_3 = new System.Windows.Forms.TextBox();
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4 = new System.Windows.Forms.TextBox();
             this.txt_Invoicing_3rd_Row_Village_People_Info_5 = new System.Windows.Forms.TextBox();
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4 = new System.Windows.Forms.TextBox();
             this.tbl_Invoicing_4th_Row_Virtual_Barcode = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Invoicing_Virtual_Barcode = new System.Windows.Forms.Label();
             this.txt_Invoicing_Virtual_Barcode = new System.Windows.Forms.TextBox();
@@ -720,22 +720,6 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.TabIndex = 2;
             this.txt_Invoicing_3rd_Row_Village_People_Info_3.Text = "Puhelin\r\n+358 40 123 456 789";
             // 
-            // txt_Invoicing_3rd_Row_Village_People_Info_4
-            // 
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Location = new System.Drawing.Point(453, 3);
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Multiline = true;
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Name = "txt_Invoicing_3rd_Row_Village_People_Info_4";
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.ReadOnly = true;
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Size = new System.Drawing.Size(144, 43);
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.TabIndex = 3;
-            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Text = "Fax\r\n+358 40 123 654 789";
-            // 
             // txt_Invoicing_3rd_Row_Village_People_Info_5
             // 
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -751,6 +735,22 @@
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Size = new System.Drawing.Size(146, 43);
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.TabIndex = 4;
             this.txt_Invoicing_3rd_Row_Village_People_Info_5.Text = "Pankki\r\nOP over powered\r\nIBAN FI17 681 737 1171\r\nBIC LULULUFIHH";
+            // 
+            // txt_Invoicing_3rd_Row_Village_People_Info_4
+            // 
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Location = new System.Drawing.Point(453, 3);
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Multiline = true;
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Name = "txt_Invoicing_3rd_Row_Village_People_Info_4";
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.ReadOnly = true;
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Size = new System.Drawing.Size(144, 43);
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.TabIndex = 3;
+            this.txt_Invoicing_3rd_Row_Village_People_Info_4.Text = "Fax\r\n+358 40 123 654 789";
             // 
             // tbl_Invoicing_4th_Row_Virtual_Barcode
             // 
@@ -1318,8 +1318,8 @@
             this.tbl_Invoicing_2nd_Row_Details.Name = "tbl_Invoicing_2nd_Row_Details";
             this.tbl_Invoicing_2nd_Row_Details.RowCount = 3;
             this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tbl_Invoicing_2nd_Row_Details.Size = new System.Drawing.Size(758, 424);
             this.tbl_Invoicing_2nd_Row_Details.TabIndex = 9;
             // 
@@ -1345,7 +1345,7 @@
             this.lst_Invoicing.Name = "lst_Invoicing";
             this.lst_Invoicing.Scrollable = false;
             this.lst_Invoicing.ShowGroups = false;
-            this.lst_Invoicing.Size = new System.Drawing.Size(752, 43);
+            this.lst_Invoicing.Size = new System.Drawing.Size(752, 70);
             this.lst_Invoicing.TabIndex = 4;
             this.lst_Invoicing.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing.View = System.Windows.Forms.View.Details;
@@ -1388,10 +1388,10 @@
             this.amount});
             this.lst_Invoicing_2nd_Row_Alv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing_2nd_Row_Alv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(446, 52);
+            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(382, 79);
             this.lst_Invoicing_2nd_Row_Alv.Name = "lst_Invoicing_2nd_Row_Alv";
             this.lst_Invoicing_2nd_Row_Alv.Scrollable = false;
-            this.lst_Invoicing_2nd_Row_Alv.Size = new System.Drawing.Size(309, 52);
+            this.lst_Invoicing_2nd_Row_Alv.Size = new System.Drawing.Size(373, 58);
             this.lst_Invoicing_2nd_Row_Alv.TabIndex = 6;
             this.lst_Invoicing_2nd_Row_Alv.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing_2nd_Row_Alv.View = System.Windows.Forms.View.Details;
@@ -1416,9 +1416,9 @@
             this.Total_label,
             this.Total_2});
             this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(225, 110);
+            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(190, 143);
             this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
-            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(530, 54);
+            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(565, 55);
             this.lsv_Invoicing_Details_Summary.TabIndex = 5;
             this.lsv_Invoicing_Details_Summary.UseCompatibleStateImageBehavior = false;
             this.lsv_Invoicing_Details_Summary.View = System.Windows.Forms.View.Details;
@@ -1490,7 +1490,7 @@
             this.ClientSize = new System.Drawing.Size(998, 744);
             this.Controls.Add(this.tbl_Invoicing_base);
             this.Name = "frm_Invoicing";
-            this.Text = "Invoicing";
+            this.Text = "Lasku";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Invoicing_Load);
             this.tbl_Invoicing_base.ResumeLayout(false);

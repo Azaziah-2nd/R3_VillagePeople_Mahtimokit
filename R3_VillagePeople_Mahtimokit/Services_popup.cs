@@ -13,6 +13,9 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Services_Popup : Form
     {
+        frm_Main_Window main_window = new frm_Main_Window();
+        Common_methods common_methods = new Common_methods();
+        Db_queries database = new Db_queries();
         public frm_Services_Popup()
         {
             InitializeComponent();
@@ -21,7 +24,6 @@ namespace R3_VillagePeople_Mahtimokit
         private void Services_popup_Load(object sender, EventArgs e)
         {
             // Haetaan toimipisteen comboboxiin tiedot tietokannasta.
-            frm_Main_Window main_window = new frm_Main_Window();
             SqlDataReader myReader = null;
             SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
             database_query_toimipiste.Connection = main_window.database_connection;
@@ -48,7 +50,6 @@ namespace R3_VillagePeople_Mahtimokit
         public bool Is_service_edited;
         private void btn_Service_Save_Click(object sender, EventArgs e)
         {
-            frm_Main_Window main_window = new frm_Main_Window();
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Service_Name.Text;
             string kuvaus = txt_Service_Description.Text;
@@ -56,7 +57,6 @@ namespace R3_VillagePeople_Mahtimokit
             string hinta = txt_Service_Price.Text;
             string alv = txt_Service_alv.Text;
             // Tietojen tarkistus
-            Common_methods common_methods = new Common_methods();
             if (string.IsNullOrWhiteSpace(nimi))
             {
                 MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
@@ -136,7 +136,7 @@ namespace R3_VillagePeople_Mahtimokit
                 lisatieto_loki = "Luotiin palvelu " + nimi + " toimipisteen nro.: " + toimipiste_id;
             }
             // Loki taulun päivitys
-            common_methods.Update_log(lisatieto_loki);
+            database.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }

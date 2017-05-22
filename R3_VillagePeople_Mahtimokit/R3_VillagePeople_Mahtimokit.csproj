@@ -78,6 +78,7 @@
     <Compile Include="Customer_popup.Designer.cs">
       <DependentUpon>Customer_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Db_queries.cs" />
     <Compile Include="Invoicing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +166,7 @@
     <None Include="Icons\edit.png" />
     <None Include="Icons\trash.png" />
     <None Include="Icons\search.png" />
+    <None Include="Icons\print.png" />
     <Content Include="VP_Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

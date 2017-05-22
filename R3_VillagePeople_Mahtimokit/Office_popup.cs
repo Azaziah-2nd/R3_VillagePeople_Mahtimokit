@@ -13,6 +13,9 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Office_Popup : Form
     {
+        frm_Main_Window main_window = new frm_Main_Window();
+        Common_methods common_methods = new Common_methods();
+        Db_queries database = new Db_queries();
         public frm_Office_Popup()
         {
             InitializeComponent();
@@ -40,7 +43,6 @@ namespace R3_VillagePeople_Mahtimokit
             string email = txt_Office_Email.Text;
             string puhelinnro = txt_Office_Phone.Text;
             // Tietojen tarkistus
-            Common_methods common_methods = new Common_methods();
             if (string.IsNullOrWhiteSpace(nimi))
             {
                 MessageBox.Show("Virhe! Nimi ei voi olla tyhjä!");
@@ -77,7 +79,6 @@ namespace R3_VillagePeople_Mahtimokit
                 }
             }
             // Määritellään tietokantayhteys.
-            frm_Main_Window main_window = new frm_Main_Window();
             SqlConnection database_connection = main_window.database_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Toimipiste] ([nimi], [lahiosoite], [postinro], [postitoimipaikka], " +
@@ -123,7 +124,7 @@ namespace R3_VillagePeople_Mahtimokit
             }
 
             // Loki taulun päivitys
-            common_methods.Update_log(lisatieto_loki);
+            database.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }

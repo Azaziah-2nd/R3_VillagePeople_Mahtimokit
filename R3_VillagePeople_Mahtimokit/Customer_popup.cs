@@ -14,6 +14,8 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Customer_Popup : Form
     {
+        Common_methods common_methods = new Common_methods();
+        Db_queries database = new Db_queries();
         public frm_Customer_Popup(frm_Main_Window frm)
         {
             InitializeComponent();
@@ -24,8 +26,8 @@ namespace R3_VillagePeople_Mahtimokit
             this.Close();
         }
 
-    // Apumuuttujat asiakastietojen muokkaukseen, arvot pääikkunasta.
-    public string Asiakas_id;
+        // Apumuuttujat asiakastietojen muokkaukseen, arvot pääikkunasta.
+        public string Asiakas_id;
         public bool is_customer_edited;
         public void btn_Customer_Save_Click(object sender, EventArgs e)
         {
@@ -40,7 +42,6 @@ namespace R3_VillagePeople_Mahtimokit
             string postitoimipaikka = txt_Customer_City.Text;
             string asuinmaa = txt_Customer_Country.Text;
             // Tietojen tarkastus
-            Common_methods common_methods = new Common_methods();
             if (string.IsNullOrWhiteSpace(etunimi))
             {
                 MessageBox.Show("Virhe! Etunimi ei voi olla tyhjä!");
@@ -134,7 +135,7 @@ namespace R3_VillagePeople_Mahtimokit
                 lisatieto_loki = "Luotiin asiakas: " + kokonimi;
             }
             // Loki taulun päivitys
-            common_methods.Update_log(lisatieto_loki);
+            database.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }

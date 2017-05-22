@@ -13,6 +13,9 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Cottage_Popup : Form
     {
+        frm_Main_Window main_window = new frm_Main_Window();
+        Db_queries database = new Db_queries();
+
         public frm_Cottage_Popup()
         {
             InitializeComponent();
@@ -25,7 +28,6 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void frm_Cottage_Popup_Load(object sender, EventArgs e)
         {
-            frm_Main_Window main_window = new frm_Main_Window();
             SqlDataReader myReader = null;
             SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
             database_query_toimipiste.Connection = main_window.database_connection;
@@ -46,7 +48,7 @@ namespace R3_VillagePeople_Mahtimokit
         public bool Is_Cottage_edited;
         private void btn_Cottage_Save_Click(object sender, EventArgs e)
         {
-            frm_Main_Window main_window = new frm_Main_Window();
+
             // Muunnetaan textbox kenttien arvot tekstimuotoon ja asetetaan ne muuttujiin.
             string nimi = txt_Cottage_Name.Text;
             string kuvaus = txt_Cottage_Description.Text;
@@ -151,8 +153,7 @@ namespace R3_VillagePeople_Mahtimokit
             }
 
             // Loki taulun päivitys
-            Common_methods common_methods = new Common_methods();
-            common_methods.Update_log(lisatieto_loki);
+            database.Update_log(lisatieto_loki);
             // Suljetaan formi.
             this.Close();
         }
