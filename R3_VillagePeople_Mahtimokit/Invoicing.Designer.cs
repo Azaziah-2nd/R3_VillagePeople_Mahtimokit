@@ -1317,9 +1317,9 @@
             this.tbl_Invoicing_2nd_Row_Details.Margin = new System.Windows.Forms.Padding(0);
             this.tbl_Invoicing_2nd_Row_Details.Name = "tbl_Invoicing_2nd_Row_Details";
             this.tbl_Invoicing_2nd_Row_Details.RowCount = 3;
-            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbl_Invoicing_2nd_Row_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tbl_Invoicing_2nd_Row_Details.Size = new System.Drawing.Size(758, 424);
             this.tbl_Invoicing_2nd_Row_Details.TabIndex = 9;
             // 
@@ -1345,7 +1345,7 @@
             this.lst_Invoicing.Name = "lst_Invoicing";
             this.lst_Invoicing.Scrollable = false;
             this.lst_Invoicing.ShowGroups = false;
-            this.lst_Invoicing.Size = new System.Drawing.Size(752, 43);
+            this.lst_Invoicing.Size = new System.Drawing.Size(752, 258);
             this.lst_Invoicing.TabIndex = 4;
             this.lst_Invoicing.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing.View = System.Windows.Forms.View.Details;
@@ -1388,10 +1388,10 @@
             this.amount});
             this.lst_Invoicing_2nd_Row_Alv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing_2nd_Row_Alv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(446, 52);
+            this.lst_Invoicing_2nd_Row_Alv.Location = new System.Drawing.Point(382, 267);
             this.lst_Invoicing_2nd_Row_Alv.Name = "lst_Invoicing_2nd_Row_Alv";
             this.lst_Invoicing_2nd_Row_Alv.Scrollable = false;
-            this.lst_Invoicing_2nd_Row_Alv.Size = new System.Drawing.Size(309, 52);
+            this.lst_Invoicing_2nd_Row_Alv.Size = new System.Drawing.Size(373, 74);
             this.lst_Invoicing_2nd_Row_Alv.TabIndex = 6;
             this.lst_Invoicing_2nd_Row_Alv.UseCompatibleStateImageBehavior = false;
             this.lst_Invoicing_2nd_Row_Alv.View = System.Windows.Forms.View.Details;
@@ -1409,16 +1409,16 @@
             // 
             // lsv_Invoicing_Details_Summary
             // 
-            this.lsv_Invoicing_Details_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsv_Invoicing_Details_Summary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lsv_Invoicing_Details_Summary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lsv_Invoicing_Details_Summary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ReferenceNumber,
             this.Total_label,
             this.Total_2});
             this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(225, 110);
+            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(190, 347);
             this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
-            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(530, 54);
+            this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(565, 74);
             this.lsv_Invoicing_Details_Summary.TabIndex = 5;
             this.lsv_Invoicing_Details_Summary.UseCompatibleStateImageBehavior = false;
             this.lsv_Invoicing_Details_Summary.View = System.Windows.Forms.View.Details;

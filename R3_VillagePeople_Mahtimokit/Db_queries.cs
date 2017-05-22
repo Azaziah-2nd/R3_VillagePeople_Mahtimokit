@@ -132,40 +132,37 @@ namespace R3_VillagePeople_Mahtimokit
                 ListViewItem itm_cottage;
                 itm_cottage = new ListViewItem(arr_cottage);
                 Invoice.lst_Invoicing.Items.Add(itm_cottage);
-                // Palveluiden haku
-                string[] arr_service = new string[6];
-                var service_ids_and_quantities = new Dictionary<int, int>();
-                SqlCommand database_query_order_service_details = new SqlCommand("SELECT * FROM Varauksen_palvelut WHERE varaus_id = @varaus_id");
-                database_query_order_service_details.Connection = main_window.database_connection;
-                main_window.database_connection.Open();
-                database_query_order_service_details.Parameters.AddWithValue("@varaus_id", Varaus_id);
-                database_query_order_service_details.ExecuteNonQuery();
-                myReader = database_query_order_service_details.ExecuteReader();
-                while (myReader.Read())
+            }
+            // Palveluiden haku
+            string[] arr_service = new string[6];
+            var service_ids_and_quantities = new Dictionary<int, int>();
+            SqlCommand database_query_order_service_details = new SqlCommand("SELECT * FROM Varauksen_palvelut WHERE varaus_id = @varaus_id");
+            database_query_order_service_details.Connection = main_window.database_connection;
+            main_window.database_connection.Open();
+            database_query_order_service_details.Parameters.AddWithValue("@varaus_id", Varaus_id);
+            database_query_order_service_details.ExecuteNonQuery();
+            myReader = database_query_order_service_details.ExecuteReader();
+            while (myReader.Read())
+            {
+                service_ids_and_quantities.Add(Convert.ToInt32((myReader["palvelu_id"])), Convert.ToInt32((myReader["lkm"])));
+            }
+            main_window.database_connection.Close();
+            List<int> order_services = new List<int>(service_ids_and_quantities.Keys);
+            // Lisätään varauksen palvelut varaushistorian yhteenvetoon
+            foreach (int service_id in order_services)
                 {
-                    service_ids_and_quantities.Add(Convert.ToInt32((myReader["palvelu_id"])), Convert.ToInt32((myReader["lkm"])));
-                }
-                main_window.database_connection.Close();
-                // Lisätään varauksen palvelut varaushistorian yhteenvetoon
-                List<int> order_services = new List<int>(service_ids_and_quantities.Keys);
-                // Käydään kaikki taulun arvot läpi.
-                foreach (int service_id in order_services)
-                {
-                    // Mökissä majoittuvien määrä
                     arr_service[4] = service_ids_and_quantities[service_id].ToString();
                     // Tietokantakomento on määriteltävä uudestaan jokaisessa silmukassa, muuten @majoitus_id ei ole uniikki ja johtaa virheeseen.
                     SqlCommand database_query_order_service_text_details = new SqlCommand("SELECT * FROM Palvelu WHERE palvelu_id = @palvelu_id");
                     database_query_order_service_text_details.Connection = main_window.database_connection;
                     main_window.database_connection.Open();
-                    // Haetaan majoitus_id:n perusteella majoituksen nimi.
-                    database_query_order_service_text_details.Parameters.AddWithValue("@palvelu_id", Varaus_id);
+                    database_query_order_service_text_details.Parameters.AddWithValue("@palvelu_id", service_id);
                     database_query_order_service_text_details.ExecuteNonQuery();
                     myReader = database_query_order_service_text_details.ExecuteReader();
                     while (myReader.Read())
                     {
                         arr_service[0] = (myReader["nimi"].ToString());
                         arr_service[3] = (myReader["hinta"].ToString());
-
                     }
                     main_window.database_connection.Close();
                     double sum = double.Parse(arr_service[3]) * double.Parse(arr_service[4]);
@@ -173,8 +170,13 @@ namespace R3_VillagePeople_Mahtimokit
                     ListViewItem itm_service;
                     itm_service = new ListViewItem(arr_service);
                     Invoice.lst_Invoicing.Items.Add(itm_service);
+                    MessageBox.Show("Palvelut!");
+
                 }
                 // Viimeistellään laskun tiedot
+
+                Invoice.Show();
+                MessageBox.Show("Viimeistely!");
                 double total = 0;
                 foreach (ListViewItem item in Invoice.lst_Invoicing.Items)
                 {
@@ -197,11 +199,7 @@ namespace R3_VillagePeople_Mahtimokit
                 Invoice.lsv_Invoicing_Details_Summary.Items.Add(total_row);
                 Invoice.reference_number = Varaus_id;
                 Invoice.total = total.ToString(".00");
-                Invoice.Show();
+
             }
         }
-
-
-
-    }
 }

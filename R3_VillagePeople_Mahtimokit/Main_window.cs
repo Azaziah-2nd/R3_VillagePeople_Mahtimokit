@@ -1249,6 +1249,10 @@ namespace R3_VillagePeople_Mahtimokit
                 // Päivitetään varaushistoria
                 Get_order_history_to_grid();
             }
+            // Resetoidaan kentät.
+            lsv_Order_Summary_Cottages.Clear();
+            lsv_Order_Summary_Services.Clear();
+            txt_Order_Additional_Details.Clear();
             // Laskun luonti
             database.Generate_invoice(Varaus_id);
         }

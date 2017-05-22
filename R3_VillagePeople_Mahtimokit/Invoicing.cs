@@ -68,7 +68,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Invoicing_Reference_Number.Text = reference_number;
             txt_Invoicing_Total.Text = total;
 
-            //tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
+            // Tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
             lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 16);
             
         }
