@@ -283,3 +283,4 @@ __pycache__/
 *.xsd.cs
 
 .vs/R3_VillagePeople_Mahtimokit/v15/.suo
+*.suo
