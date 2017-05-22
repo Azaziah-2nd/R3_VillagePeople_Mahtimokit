@@ -26,9 +26,9 @@ namespace R3_VillagePeople_Mahtimokit
             // Haetaan toimipisteen comboboxiin tiedot tietokannasta.
             SqlDataReader myReader = null;
             SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
-            database_query_toimipiste.Connection = database.db_connection;
+            database_query_toimipiste.Connection = database.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database.db_connection.Open();
+            database.database_connection.Open();
             myReader = database_query_toimipiste.ExecuteReader();
             while (myReader.Read())
             {
@@ -37,7 +37,7 @@ namespace R3_VillagePeople_Mahtimokit
                 item.Value = myReader[0].ToString();
                 cbo_Service_Office_Select.Items.Add(item);
             }
-            database.db_connection.Close();
+            database.database_connection.Close();
         }
 
         private void btn_Service_Cancel_Click(object sender, EventArgs e)
@@ -79,9 +79,9 @@ namespace R3_VillagePeople_Mahtimokit
             string chosen_office = cbo_Service_Office_Select.Text.ToString();
             string toimipiste_id = "";
             SqlCommand database_query = new SqlCommand("SELECT * FROM Toimipiste WHERE nimi = @chosen_office");
-            database_query.Connection = database.db_connection;
+            database_query.Connection = database.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database.db_connection.Open();
+            database.database_connection.Open();
             database_query.Parameters.AddWithValue("@chosen_office", chosen_office);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
@@ -92,9 +92,9 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 toimipiste_id = (myReader["toimipiste_id"].ToString());
             }
-            database.db_connection.Close();
+            database.database_connection.Close();
             // Määritellään tietokantayhteys.
-            SqlConnection database_connection = database.db_connection;
+            SqlConnection database_connection = database.database_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Palvelu] ([toimipiste_id], [nimi], [kuvaus], [max_osallistujat], " +
                 "[hinta], [alv]) VALUES (@toimipiste_id, @nimi, @kuvaus, @max_osallistujat, @hinta, @alv)");
@@ -105,7 +105,7 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos muokataan palvelua.
             if (this.Is_service_edited == true)
             {
-                database_query_update.Connection = database.db_connection;
+                database_query_update.Connection = database.database_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@palvelu_id", Service_id);
                 database_query_update.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
@@ -122,7 +122,7 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos luodaan uusi palvelu.
             else
             {
-                database_query_new.Connection = database.db_connection;
+                database_query_new.Connection = database.database_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query_new.Parameters.AddWithValue("@nimi", nimi);
