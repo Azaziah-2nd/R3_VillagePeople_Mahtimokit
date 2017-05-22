@@ -191,6 +191,17 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
             }
         }
         
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VP_Database.m" +
+            "df;Integrated Security=True;Connect Timeout=30")]
+        public string VP_DatabaseConnectionString {
+            get {
+                return ((string)(this["VP_DatabaseConnectionString"]));
+            }
+        }
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2017-05-01")]
@@ -200,17 +211,6 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
             }
             set {
                 this["default_history_start_date"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VP_Database.m" +
-            "df;Integrated Security=True;Connect Timeout=30")]
-        public string VP_DatabaseConnectionString {
-            get {
-                return ((string)(this["VP_DatabaseConnectionString"]));
             }
         }
     }

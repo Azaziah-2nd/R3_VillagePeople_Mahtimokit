@@ -30,9 +30,9 @@ namespace R3_VillagePeople_Mahtimokit
         {
             SqlDataReader myReader = null;
             SqlCommand database_query_toimipiste = new SqlCommand("SELECT toimipiste_id, nimi FROM Toimipiste");
-            database_query_toimipiste.Connection = database.db_connection;
+            database_query_toimipiste.Connection = main_window.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database.db_connection.Open();
+            main_window.database_connection.Open();
             myReader = database_query_toimipiste.ExecuteReader();
             while (myReader.Read())
             {
@@ -41,7 +41,7 @@ namespace R3_VillagePeople_Mahtimokit
                 item.Value = myReader[0].ToString();
                 cbo_Cottage_Office_Select.Items.Add(item);
             }
-            database.db_connection.Close();
+            main_window.database_connection.Close();
         }
 
         public string Cottage_id;
@@ -95,9 +95,9 @@ namespace R3_VillagePeople_Mahtimokit
             }
             // Jos tiedot olivat kelvollisia, siirrytään tietokantaan tallentamiseen.
             SqlCommand database_query = new SqlCommand("SELECT * FROM Toimipiste WHERE nimi = @selected_office");
-            database_query.Connection = database.db_connection;
+            database_query.Connection = main_window.database_connection;
             // Avataan yhteys tietokantaan ja asetetaan tallennettavat arvot.
-            database.db_connection.Open();
+            main_window.database_connection.Open();
             database_query.Parameters.AddWithValue("@selected_office", selected_office);
             // Suoritetaan kysely
             database_query.ExecuteNonQuery();
@@ -108,9 +108,9 @@ namespace R3_VillagePeople_Mahtimokit
             {
                 toimipiste_id = (myReader["toimipiste_id"].ToString());
             }
-            database.db_connection.Close();
+            main_window.database_connection.Close();
             // Määritellään tietokantayhteys.
-            SqlConnection database_connection = database.db_connection;
+            SqlConnection database_connection = main_window.database_connection;
             // Määritellään tietokantakyselyt majoituksen lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Majoitus] ([toimipiste_id], [nimi], [kuvaus], [hinta], " +
                 "[max_henkilot], [koko], [wlan]) VALUES (@toimipiste_id, @nimi, @kuvaus, @hinta, @max_henkilot, @koko, @wlan)");
@@ -119,7 +119,7 @@ namespace R3_VillagePeople_Mahtimokit
             string lisatieto_loki = "";
             if (this.Is_Cottage_edited == true)
             {
-                database_query_update.Connection = database.db_connection;
+                database_query_update.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@majoitus_id", Cottage_id);
                 database_query_update.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
@@ -137,7 +137,7 @@ namespace R3_VillagePeople_Mahtimokit
             // Jos luodaan uusi
             else
             {
-                database_query_new.Connection = database.db_connection;
+                database_query_new.Connection = main_window.database_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@toimipiste_id", toimipiste_id);
                 database_query_new.Parameters.AddWithValue("@nimi", nimi);
