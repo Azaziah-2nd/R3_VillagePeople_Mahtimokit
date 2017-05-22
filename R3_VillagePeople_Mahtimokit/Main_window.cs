@@ -1261,8 +1261,7 @@ namespace R3_VillagePeople_Mahtimokit
             myReader = database_query_Customer_invoicing.ExecuteReader();
             while (myReader.Read())
             {
-                Invoice.customer_firstname = (myReader["etunimi"].ToString());
-                Invoice.customer_secondname = (myReader["sukunimi"].ToString());
+                Invoice.customer_name = (myReader["kokonimi"].ToString());
                 Invoice.customer_email = (myReader["email"].ToString());
                 Invoice.customer_address = (myReader["lahiosoite"].ToString());
                 Invoice.customer_postal_code = (myReader["postinro"].ToString());
@@ -1279,8 +1278,8 @@ namespace R3_VillagePeople_Mahtimokit
             // Alustetaan tietojen lukija
             myReader = null;
             myReader = database_query_Reservation_invoicing.ExecuteReader();
-            DateTime Start = new DateTime(2000, 01, 01);
-            DateTime End = new DateTime(2001, 01, 01);
+            DateTime Start = new DateTime();
+            DateTime End = new DateTime();
             while (myReader.Read())
             {
                 DateTime.TryParse(myReader["varattu_alkupvm"].ToString(), out Start);
@@ -1552,7 +1551,7 @@ namespace R3_VillagePeople_Mahtimokit
 
         private void dgv_History_Orders_All_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_Order_Services_All.SelectedCells.Count > 0)
+            if (dgv_History_Orders_All.SelectedCells.Count > 0)
             {
                 // Tyhjennetään nykyiset palvelut ja mökit.
                 lsv_History_Order_Cottages.Clear();

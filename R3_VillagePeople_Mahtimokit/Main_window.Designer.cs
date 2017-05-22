@@ -3359,7 +3359,6 @@
             // 
             this.dgv_Log.AllowUserToAddRows = false;
             this.dgv_Log.AllowUserToDeleteRows = false;
-            this.dgv_Log.AllowUserToResizeColumns = false;
             this.dgv_Log.AllowUserToResizeRows = false;
             this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -3372,6 +3371,7 @@
             this.dgv_Log.ReadOnly = true;
             this.dgv_Log.RowHeadersVisible = false;
             this.dgv_Log.Size = new System.Drawing.Size(252, 457);
+            this.dgv_Log.StandardTab = true;
             this.dgv_Log.TabIndex = 1;
             // 
             // btn_log_update_grid

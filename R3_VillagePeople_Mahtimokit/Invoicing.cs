@@ -13,8 +13,7 @@ namespace R3_VillagePeople_Mahtimokit
 {
     public partial class frm_Invoicing : Form
     {
-        public string customer_firstname;
-        public string customer_secondname;
+        public string customer_name;
         public string customer_email;
         public string customer_address;
         public string customer_postal_code;
@@ -41,8 +40,8 @@ namespace R3_VillagePeople_Mahtimokit
         private void Invoicing_Load(object sender, EventArgs e)
         {
             // Laitettaan arvot kohilleen laskuun
-            txt_Invoicing_Customer_Name_1.Text = customer_firstname + " " + customer_secondname;
-            txt_Invoicing_Customer_Name_2.Text = customer_firstname + " " + customer_secondname;
+            txt_Invoicing_Customer_Name_1.Text = customer_name;
+            txt_Invoicing_Customer_Name_2.Text = customer_name;
             txt_Invoicing_Customer_Address_1.Text = customer_address;
             txt_Invoicing_Customer_Address_2.Text = customer_address;
             txt_Invoicing_Customer_Postal_Info_1.Text = customer_postal_code + " " + customer_post_office + " " + customer_country;
