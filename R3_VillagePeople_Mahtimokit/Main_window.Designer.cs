@@ -242,6 +242,8 @@
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.btn_log_update_grid = new System.Windows.Forms.Button();
             this.btn_History_Order_History_Delete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Invoicing_Testview = new System.Windows.Forms.Button();
             this.tab_Menu.SuspendLayout();
             this.tab_New_Order.SuspendLayout();
             this.tbl_Order_base.SuspendLayout();
@@ -318,6 +320,7 @@
             this.tbl_Settings_2nd_Col_UI_Settings_Base.SuspendLayout();
             this.tbl_Settings_2nd_Col_UI_Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Menu
@@ -2865,7 +2868,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbl_Settings_3rd_Col_Invoice_Settings.ColumnCount = 1;
             this.tbl_Settings_3rd_Col_Invoice_Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.btn_Options_Save_Invoicing, 0, 12);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_Receiver_lbl_txt, 0, 11);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_Infobox_txt_5_txt_BIC, 0, 9);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_Infobox_lbl_5_lbl_BIC, 0, 8);
@@ -2878,6 +2880,7 @@
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_Infobox_lbl_1_2, 0, 4);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_Infobox_txt_1_2, 0, 5);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tbl_Invoice_Settings_IBAN_lbl_txt, 0, 10);
+            this.tbl_Settings_3rd_Col_Invoice_Settings.Controls.Add(this.tableLayoutPanel1, 0, 12);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Location = new System.Drawing.Point(14, 20);
             this.tbl_Settings_3rd_Col_Invoice_Settings.Name = "tbl_Settings_3rd_Col_Invoice_Settings";
             this.tbl_Settings_3rd_Col_Invoice_Settings.RowCount = 13;
@@ -2902,9 +2905,9 @@
             this.btn_Options_Save_Invoicing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 501);
+            this.btn_Options_Save_Invoicing.Location = new System.Drawing.Point(3, 3);
             this.btn_Options_Save_Invoicing.Name = "btn_Options_Save_Invoicing";
-            this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(252, 34);
+            this.btn_Options_Save_Invoicing.Size = new System.Drawing.Size(120, 28);
             this.btn_Options_Save_Invoicing.TabIndex = 132;
             this.btn_Options_Save_Invoicing.Text = "Tallenna tiedot";
             this.btn_Options_Save_Invoicing.UseVisualStyleBackColor = true;
@@ -3415,6 +3418,36 @@
             this.btn_History_Order_History_Delete.TabIndex = 114;
             this.btn_History_Order_History_Delete.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_Options_Save_Invoicing, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Invoicing_Testview, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 501);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(252, 34);
+            this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // btn_Invoicing_Testview
+            // 
+            this.btn_Invoicing_Testview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Invoicing_Testview.Location = new System.Drawing.Point(129, 3);
+            this.btn_Invoicing_Testview.Name = "btn_Invoicing_Testview";
+            this.btn_Invoicing_Testview.Size = new System.Drawing.Size(120, 28);
+            this.btn_Invoicing_Testview.TabIndex = 133;
+            this.btn_Invoicing_Testview.Text = "Testinäkymä";
+            this.btn_Invoicing_Testview.UseVisualStyleBackColor = true;
+            this.btn_Invoicing_Testview.Click += new System.EventHandler(this.btn_Invoicing_Testview_Click);
+            // 
             // frm_Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3548,6 +3581,7 @@
             this.tbl_Settings_2nd_Col_UI_Settings.ResumeLayout(false);
             this.tbl_Settings_2nd_Col_UI_Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Log)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3767,5 +3801,7 @@
         private System.Windows.Forms.Label lbl_Common_Settings_History_Start_Date;
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_Start_Date;
         private System.Windows.Forms.Button btn_History_Order_Print;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btn_Invoicing_Testview;
     }
 }
