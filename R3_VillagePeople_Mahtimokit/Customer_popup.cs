@@ -86,7 +86,7 @@ namespace R3_VillagePeople_Mahtimokit
             }
             // Määritellään tietokantayhteys.
             frm_Main_Window main_window = new frm_Main_Window();
-            SqlConnection database_connection = database.database_connection;
+            SqlConnection database_connection = database.db_connection;
             // Määritellään tietokantakyselyt asiakkaiden lisäämiseksi ja muokkaamiseksi.
             SqlCommand database_query_new = new SqlCommand("INSERT INTO [Asiakas] ([etunimi], [sukunimi], [kokonimi], [lahiosoite], " +
                 "[postitoimipaikka], [postinro], [asuinmaa], [email], [puhelinnro]) VALUES (@etunimi, @sukunimi, @kokonimi, @lahiosoite, " +
@@ -99,7 +99,7 @@ namespace R3_VillagePeople_Mahtimokit
             if (this.is_customer_edited == true)
             {
                 // Käytetään asiakkaan muokkauksen yhteyttä.
-                database_query_update.Connection = database.database_connection;
+                database_query_update.Connection = database.db_connection;
                 database_connection.Open();
                 database_query_update.Parameters.AddWithValue("@asiakas_id", Asiakas_id);
                 database_query_update.Parameters.AddWithValue("@etunimi", etunimi);
@@ -119,7 +119,7 @@ namespace R3_VillagePeople_Mahtimokit
             else
             {
                 // Käytetään uuden asiakkaan luonnin yhteyttä.
-                database_query_new.Connection = database.database_connection;
+                database_query_new.Connection = database.db_connection;
                 database_connection.Open();
                 database_query_new.Parameters.AddWithValue("@etunimi", etunimi);
                 database_query_new.Parameters.AddWithValue("@sukunimi", sukunimi);
