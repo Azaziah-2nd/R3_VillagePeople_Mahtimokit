@@ -282,4 +282,5 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-.vs/R3_VillagePeople_Mahtimokit/v15/.suo
+*.suo
+*.suo

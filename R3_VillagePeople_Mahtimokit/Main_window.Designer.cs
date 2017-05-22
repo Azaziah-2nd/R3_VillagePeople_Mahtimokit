@@ -166,8 +166,9 @@
             this.tbl_History_3th_Col_Selected_Order_Details = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Selected_Order_Basic_Details = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_History_Order_Details_Delete = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_History_Order_History_Del = new System.Windows.Forms.Button();
             this.lbl_History_Selected_Order_Details = new System.Windows.Forms.Label();
+            this.btn_History_Order_Delete = new System.Windows.Forms.Button();
+            this.btn_History_Order_Print = new System.Windows.Forms.Button();
             this.lbl_History_Selected_Order_Customer = new System.Windows.Forms.Label();
             this.lbl_History_Selected_Order_Office = new System.Windows.Forms.Label();
             this.lbl_History_Order_Start = new System.Windows.Forms.Label();
@@ -2380,8 +2381,8 @@
             this.tbl_History_Selected_Order_Basic_Details.Location = new System.Drawing.Point(8, 12);
             this.tbl_History_Selected_Order_Basic_Details.Name = "tbl_History_Selected_Order_Basic_Details";
             this.tbl_History_Selected_Order_Basic_Details.RowCount = 6;
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tbl_History_Selected_Order_Basic_Details.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
@@ -2394,30 +2395,19 @@
             this.tbl_History_Order_Details_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_History_Order_Details_Delete.ColumnCount = 2;
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.4767F));
-            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5233F));
-            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_History_Del, 0, 0);
+            this.tbl_History_Order_Details_Delete.ColumnCount = 3;
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tbl_History_Order_Details_Delete.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tbl_History_Order_Details_Delete.Controls.Add(this.lbl_History_Selected_Order_Details, 0, 0);
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_Delete, 2, 0);
+            this.tbl_History_Order_Details_Delete.Controls.Add(this.btn_History_Order_Print, 1, 0);
             this.tbl_History_Order_Details_Delete.Location = new System.Drawing.Point(3, 3);
             this.tbl_History_Order_Details_Delete.Name = "tbl_History_Order_Details_Delete";
             this.tbl_History_Order_Details_Delete.RowCount = 1;
-            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(270, 49);
+            this.tbl_History_Order_Details_Delete.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbl_History_Order_Details_Delete.Size = new System.Drawing.Size(270, 54);
             this.tbl_History_Order_Details_Delete.TabIndex = 107;
-            // 
-            // btn_History_Order_History_Del
-            // 
-            this.btn_History_Order_History_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_History_Order_History_Del.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
-            this.btn_History_Order_History_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_History_Order_History_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_History_Order_History_Del.Location = new System.Drawing.Point(235, 3);
-            this.btn_History_Order_History_Del.Name = "btn_History_Order_History_Del";
-            this.btn_History_Order_History_Del.Size = new System.Drawing.Size(32, 32);
-            this.btn_History_Order_History_Del.TabIndex = 100;
-            this.btn_History_Order_History_Del.UseVisualStyleBackColor = true;
-            this.btn_History_Order_History_Del.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
             // 
             // lbl_History_Selected_Order_Details
             // 
@@ -2428,6 +2418,32 @@
             this.lbl_History_Selected_Order_Details.Size = new System.Drawing.Size(146, 20);
             this.lbl_History_Selected_Order_Details.TabIndex = 79;
             this.lbl_History_Selected_Order_Details.Text = "Varauksen tiedot";
+            // 
+            // btn_History_Order_Delete
+            // 
+            this.btn_History_Order_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_Delete.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.trash;
+            this.btn_History_Order_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_History_Order_Delete.Location = new System.Drawing.Point(235, 3);
+            this.btn_History_Order_Delete.Name = "btn_History_Order_Delete";
+            this.btn_History_Order_Delete.Size = new System.Drawing.Size(32, 32);
+            this.btn_History_Order_Delete.TabIndex = 100;
+            this.btn_History_Order_Delete.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Delete.Click += new System.EventHandler(this.btn_History_Order_History_Del_Click);
+            // 
+            // btn_History_Order_Print
+            // 
+            this.btn_History_Order_Print.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_History_Order_Print.BackgroundImage = global::R3_VillagePeople_Mahtimokit.Properties.Resources.print;
+            this.btn_History_Order_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_History_Order_Print.Location = new System.Drawing.Point(181, 3);
+            this.btn_History_Order_Print.Name = "btn_History_Order_Print";
+            this.btn_History_Order_Print.Size = new System.Drawing.Size(48, 48);
+            this.btn_History_Order_Print.TabIndex = 101;
+            this.btn_History_Order_Print.UseVisualStyleBackColor = true;
+            this.btn_History_Order_Print.Click += new System.EventHandler(this.btn_History_Order_Print_Click);
             // 
             // lbl_History_Selected_Order_Customer
             // 
@@ -2470,7 +2486,7 @@
             // lbl_History_Order_varaus_id
             // 
             this.lbl_History_Order_varaus_id.AutoSize = true;
-            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 55);
+            this.lbl_History_Order_varaus_id.Location = new System.Drawing.Point(3, 60);
             this.lbl_History_Order_varaus_id.Name = "lbl_History_Order_varaus_id";
             this.lbl_History_Order_varaus_id.Size = new System.Drawing.Size(118, 20);
             this.lbl_History_Order_varaus_id.TabIndex = 108;
@@ -3359,7 +3375,6 @@
             // 
             this.dgv_Log.AllowUserToAddRows = false;
             this.dgv_Log.AllowUserToDeleteRows = false;
-            this.dgv_Log.AllowUserToResizeColumns = false;
             this.dgv_Log.AllowUserToResizeRows = false;
             this.dgv_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -3372,6 +3387,7 @@
             this.dgv_Log.ReadOnly = true;
             this.dgv_Log.RowHeadersVisible = false;
             this.dgv_Log.Size = new System.Drawing.Size(252, 457);
+            this.dgv_Log.StandardTab = true;
             this.dgv_Log.TabIndex = 1;
             // 
             // btn_log_update_grid
@@ -3670,7 +3686,7 @@
         private System.Windows.Forms.Label lbl_History_Order_Services;
         private System.Windows.Forms.TextBox txt_History_Order_Additional_Details;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Details_Delete;
-        private System.Windows.Forms.Button btn_History_Order_History_Del;
+        private System.Windows.Forms.Button btn_History_Order_Delete;
         private System.Windows.Forms.Label lbl_History_Selected_Order_Details;
         private System.Windows.Forms.Button btn_History_Order_History_Delete;
         private System.Windows.Forms.TableLayoutPanel tbl_History_Order_Filter_Summary;
@@ -3750,5 +3766,6 @@
         private System.Windows.Forms.Label lbl_Common_Settings_History_End_Date;
         private System.Windows.Forms.Label lbl_Common_Settings_History_Start_Date;
         private System.Windows.Forms.DateTimePicker dtp_Common_Settings_History_Start_Date;
+        private System.Windows.Forms.Button btn_History_Order_Print;
     }
 }
