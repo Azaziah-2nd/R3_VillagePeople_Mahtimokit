@@ -167,10 +167,10 @@ namespace R3_VillagePeople_Mahtimokit
                     main_window.database_connection.Close();
                     double sum = double.Parse(arr_service[3]) * double.Parse(arr_service[4]);
                     arr_service[5] = sum.ToString(".00");
+                    arr_service[4] += " kpl";
                     ListViewItem itm_service;
                     itm_service = new ListViewItem(arr_service);
                     Invoice.lst_Invoicing.Items.Add(itm_service);
-
                 }
                 // Viimeistellään laskun tiedot
                 double total = 0;
