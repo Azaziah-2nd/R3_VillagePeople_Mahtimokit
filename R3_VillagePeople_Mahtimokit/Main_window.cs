@@ -1770,6 +1770,8 @@ namespace R3_VillagePeople_Mahtimokit
                 // Jos kyllä, muutetaan päättymispäiväksi alkamispäivä + 1 päivä.
                 dtp_History_Orders_Filter_Date_End.Value = dtp_History_Orders_Filter_Date_Start.Value.AddDays(1);
             }
+            // Lisätään alkamisaikaan 23:59:59, näin samana päivänä luodut varaukset mäytetään.
+            dtp_History_Orders_Filter_Date_Start.Value = dtp_History_Orders_Filter_Date_Start.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             Filter_history_orders();
         }
         //
