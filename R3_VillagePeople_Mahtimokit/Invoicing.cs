@@ -50,11 +50,11 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Invoicing_Invoice_Number.Text = "01";
             txt_Invoicing_Customer_Y_Id.Text = "";
             // Luetaan filestä viivästyskorko
-            txt_Invoicing_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString().Trim('%');
+            txt_Invoicing_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString();
             txt_Invoicing_Due_Date_1.Text = invoice_date.AddDays(30).ToString("dd.MM.yyyy");
             txt_Invoicing_Due_Date_2.Text = invoice_date.AddDays(30).ToString("dd.MM.yyyy");
             // Luetaan filestä huomautusaika
-            txt_Invoicing_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString().Trim(' ', 'p', 'v');
+            txt_Invoicing_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString();
             // Luetaan filestä infotekstejä laskuun
             txt_Invoicing_3rd_Row_Village_People_Info_1.Text = Properties.Settings.Default["default_infobox_1"].ToString();
             txt_Invoicing_3rd_Row_Village_People_Info_2.Text = Properties.Settings.Default["default_infobox_2"].ToString();
