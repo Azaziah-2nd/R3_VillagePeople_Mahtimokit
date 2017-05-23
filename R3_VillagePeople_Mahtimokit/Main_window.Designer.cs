@@ -2316,7 +2316,7 @@
             this.dtp_History_Orders_Filter_Date_End.Size = new System.Drawing.Size(140, 26);
             this.dtp_History_Orders_Filter_Date_End.TabIndex = 98;
             this.dtp_History_Orders_Filter_Date_End.Value = new System.DateTime(2017, 4, 8, 16, 25, 31, 0);
-            this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged_1);
+            this.dtp_History_Orders_Filter_Date_End.ValueChanged += new System.EventHandler(this.dtp_History_Orders_Filter_Date_End_ValueChanged);
             // 
             // dgv_History_Orders_All
             // 

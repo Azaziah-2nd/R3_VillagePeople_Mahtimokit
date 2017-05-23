@@ -7,6 +7,11 @@ using System.Security.Permissions;
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, UnmanagedCode = true)]
 namespace System.Windows.Forms
 {
+    /// <summary>
+    /// Tämä luokka mahdollistaa omien tekstien käyttämisen "Yes"/"No" Messageboxeissa.
+    /// Lähde:
+    /// https://www.codeproject.com/Articles/18399/Localizing-System-MessageBox
+    /// </summary>
 	public class Custom_messagebox
 	{
         private delegate IntPtr HookProc(int nCode, IntPtr wParam, IntPtr lParam);
