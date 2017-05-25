@@ -95,6 +95,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
             txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
             txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
+            txt_Cottage_Alv.Text = Properties.Settings.Default["default_cottage_alv"].ToString();
         }
 
         // DataGriedView elementtien tietojen päivitys.
@@ -1874,6 +1875,7 @@ namespace R3_VillagePeople_Mahtimokit
             Properties.Settings.Default["default_IBAN"] = txt_Options_IBAN.Text.ToString();
             Properties.Settings.Default["default_BIC"] = txt_Options_BIC.Text.ToString();
             Properties.Settings.Default["default_receiver"] = txt_Options_Receiver.Text.ToString();
+            Properties.Settings.Default["default_cottage_alv"] = txt_Cottage_Alv.Text.ToString();
             Properties.Settings.Default.Save();
             txt_Options_Penalty_Interest.Text = Properties.Settings.Default["default_penalty_interest"].ToString().Trim('%');
             txt_Options_Remark_Time.Text = Properties.Settings.Default["default_remark_time"].ToString().Trim(' ', 'p', 'v');
@@ -1885,6 +1887,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Options_IBAN.Text = Properties.Settings.Default["default_IBAN"].ToString();
             txt_Options_BIC.Text = Properties.Settings.Default["default_BIC"].ToString();
             txt_Options_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
+            txt_Cottage_Alv.Text = Properties.Settings.Default["default_cottage_alv"].ToString();
         }
 
         private void btn_Invoicing_Testview_Click(object sender, EventArgs e)

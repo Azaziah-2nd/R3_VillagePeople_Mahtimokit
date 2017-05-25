@@ -12,7 +12,7 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -211,6 +211,18 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         public string VP_DatabaseConnectionString {
             get {
                 return ((string)(this["VP_DatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("24.00")]
+        public string default_cottage_alv {
+            get {
+                return ((string)(this["default_cottage_alv"]));
+            }
+            set {
+                this["default_cottage_alv"] = value;
             }
         }
     }
