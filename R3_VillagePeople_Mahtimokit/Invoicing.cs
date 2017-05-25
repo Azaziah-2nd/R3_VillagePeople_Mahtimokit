@@ -30,6 +30,7 @@ namespace R3_VillagePeople_Mahtimokit
         public string receiver_bic;
         public string reference_number;
         public string total;
+        public string start_end_date;
 
         public frm_Invoicing()
         {
@@ -67,6 +68,7 @@ namespace R3_VillagePeople_Mahtimokit
             txt_Invoicing_Receiver.Text = Properties.Settings.Default["default_receiver"].ToString();
             txt_Invoicing_Reference_Number.Text = reference_number;
             txt_Invoicing_Total.Text = total;
+            txt_Invoicing_Order_Start_End_Date.Text = start_end_date;
 
             // Tekköö siitä details kohasta just sen korkusen ku tarvii, ainakii melkei
             lst_Invoicing.Height = lst_Invoicing.Height + (lst_Invoicing.Items.Count * 16);
