@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Selite", System.Windows.Forms.HorizontalAlignment.Left);
             this.tbl_Invoicing_base = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoice_Invoice = new System.Windows.Forms.TableLayoutPanel();
             this.tbl_Invoicing_1st_Row_Invoice_Info = new System.Windows.Forms.TableLayoutPanel();
@@ -1335,10 +1335,10 @@
             this.SummaryTotal});
             this.lst_Invoicing.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Invoicing.GridLines = true;
-            listViewGroup1.Header = "Selite";
-            listViewGroup1.Name = "Definition";
+            listViewGroup4.Header = "Selite";
+            listViewGroup4.Name = "Definition";
             this.lst_Invoicing.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup4});
             this.lst_Invoicing.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lst_Invoicing.Location = new System.Drawing.Point(3, 3);
             this.lst_Invoicing.MaximumSize = new System.Drawing.Size(913, 1000);
@@ -1416,7 +1416,9 @@
             this.Total_label,
             this.Total_2});
             this.lsv_Invoicing_Details_Summary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(190, 115);
+            this.lsv_Invoicing_Details_Summary.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lsv_Invoicing_Details_Summary.Location = new System.Drawing.Point(183, 142);
+            this.lsv_Invoicing_Details_Summary.Margin = new System.Windows.Forms.Padding(10, 30, 10, 10);
             this.lsv_Invoicing_Details_Summary.Name = "lsv_Invoicing_Details_Summary";
             this.lsv_Invoicing_Details_Summary.Size = new System.Drawing.Size(565, 55);
             this.lsv_Invoicing_Details_Summary.TabIndex = 5;
