@@ -191,6 +191,18 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
             }
         }
         
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-05-01")]
+        public global::System.DateTime default_history_start_date {
+            get {
+                return ((global::System.DateTime)(this["default_history_start_date"]));
+            }
+            set {
+                this["default_history_start_date"] = value;
+            }
+        }
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -204,13 +216,13 @@ namespace R3_VillagePeople_Mahtimokit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2017-05-01")]
-        public global::System.DateTime default_history_start_date {
+        [global::System.Configuration.DefaultSettingValueAttribute("24.00")]
+        public string default_cottage_alv {
             get {
-                return ((global::System.DateTime)(this["default_history_start_date"]));
+                return ((string)(this["default_cottage_alv"]));
             }
             set {
-                this["default_history_start_date"] = value;
+                this["default_cottage_alv"] = value;
             }
         }
     }
