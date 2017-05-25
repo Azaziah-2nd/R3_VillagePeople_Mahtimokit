@@ -33,7 +33,7 @@ namespace R3_VillagePeople_Mahtimokit
         public Db_queries database = new Db_queries();
         // Alustetaan tietojen lukija
         SqlDataReader myReader = null;
-        // Määritellään tietokantayhteyden muodostin.
+        // Määritellään tietokantayhteys.
         public SqlConnection database_connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
                           AttachDbFilename=|DataDirectory|\VP_Database.mdf;
                           Integrated Security=True;
@@ -45,7 +45,7 @@ namespace R3_VillagePeople_Mahtimokit
             Load_settings_and_dates();
             // Haetaan tiedot tietokannasta eri kenttiin.
             // Toimipisteiden haku täytyy suorittaa ensin, muuten mökkien ja palveluiden lisäys varaukseen ei toimi ennen
-            // kuin listasta valitaan manuaalisesti jokin kohde. (null error, liittyy filtteröintiin)
+            // kuin listasta valitaan manuaalisesti jokin kohde. (null error, liittyy tietojen filtteröintiin)
             Get_office_names_to_combo();
             Get_customer_names_to_grid();
             Get_service_names_to_grid();
@@ -346,7 +346,8 @@ namespace R3_VillagePeople_Mahtimokit
                 }
                 catch (NullReferenceException)
                 {
-                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin kaikki data ehtii lataantua.
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua täysin.
+                    // Tämä ei kuitenkaan vaikuta toiminnallisuuteen.
                 }
             }
         }
@@ -368,7 +369,8 @@ namespace R3_VillagePeople_Mahtimokit
                 }
                 catch (NullReferenceException)
                 {
-                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua.
+                    // Tämä voi joskus johtaa null erroriin, mikäli metodi kutsutaan ennen kuin data ehtii lataantua täysin.
+                    // Tämä ei kuitenkaan vaikuta toiminnallisuuteen.
                 }
             }
         }
