@@ -9,6 +9,7 @@ namespace System.Windows.Forms
 {
     /// <summary>
     /// Tämä luokka mahdollistaa omien tekstien käyttämisen "Yes"/"No" Messageboxeissa.
+    /// Oletuksena painikkeiden kieli tulee käyttöjärjestelmästä.
     /// Lähde:
     /// https://www.codeproject.com/Articles/18399/Localizing-System-MessageBox
     /// </summary>
